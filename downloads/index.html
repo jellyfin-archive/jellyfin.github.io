@@ -99,12 +99,12 @@
 						</script>
                         <div id="docker_stable" style="display:none;">
                             <pre><code>docker pull jellyfin/jellyfin:latest
-sudo mkdir -p /srv/jellyfin/{config,cache}
+mkdir -p /srv/jellyfin/{config,cache}
 docker run -d -v /srv/jellyfin/config:/config -v /srv/jellyfin/cache:/cache -v /media:/media --net=host jellyfin/jellyfin:latest</pre></code>
                         </div>
                         <div id="docker_nightly" style="display:none;">
                             <pre><code>docker pull jellyfin/jellyfin:nightly
-sudo mkdir -p /srv/jellyfin/{config,cache}
+mkdir -p /srv/jellyfin/{config,cache}
 docker run -d -v /srv/jellyfin/config:/config -v /srv/jellyfin/cache:/cache -v /media:/media --net=host jellyfin/jellyfin:nightly</pre></code>
                         </div>
                      </div>
