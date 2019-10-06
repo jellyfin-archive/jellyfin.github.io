@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -1023,10 +1023,11 @@ font-size: 2rem;
   .screenshots__inner {
     -js-display: flex;
     display: flex;
-    justify-content: space-around; } }
+    justify-content: space-around;
+    flex-wrap: wrap; } }
 
 .screenshot {
-  padding: 16pt 10pt 0 10pt;
+  padding: 16pt 10pt 10pt 10pt;
   text-align: center;
   width: 100%;
   border-top: 1px solid #eee;
