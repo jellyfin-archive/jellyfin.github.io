@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="contrib-release-procedure">
 <h1 id="release-procedure">Release Procedure</h1>
 
-<p>This document is a Core team guide, provided publicly to ensure transparancy in the release process.</p>
+<p>This document is a Core team guide, provided publicly to ensure transparency in the release process.</p>
 <h2 id="versioning">Versioning</h2>
 <p>Jellyfin uses <a href="https://semver.org">semantic versioning</a>. All releases will have versions in the <code>X.Y.Z</code> format, starting from <code>10.0.0</code>. Note however that the <code>10.Y.Z</code> release chain represents the &quot;cleanup&quot; of the codebase, so it should be accepted that <code>10.Y.Z</code> breaks all compatibility, at some point, with previous Emby-compatible interfaces, and may also break compatibility with previous <code>10.Y</code> releases if required for later cleanup work. Our versioning will typically follow the patterns below:</p>
 <h4 id="x---major-breaking-versions"><code>X</code> - Major breaking versions</h4>
@@ -96,62 +96,99 @@
 <li>Introduces critical bugfixes or otherwise changes <code>master</code> branch code since the last release.</li>
 </ul>
 <h2 id="general-release-philosophy">General Release Philosophy</h2>
-<h2 id="release-procedure-majorminor-version-releases">Release procedure (major/minor version releases)</h2>
+<p>Releases will generally be performed on Sundays &quot;when ready&quot;. For Major/Minor releases, the &quot;when ready&quot; is generally quite flexible and is whenever the release is truly ready without major breaking bugs. After a major release, each Sunday the Admin team should review the recently merged PRs and, if backports are required, perform a Hotfix release containing those PRs.</p>
+<h3 id="release-procedure-majorminor-version-releases">Release procedure (Major/Minor version releases)</h3>
+<h4 id="preparation">Preparation</h4>
 <ol>
-<li><p>Announce release in the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel at least a few hours before releasing, to put a temporary freeze on merges.</p>
+<li><p>Testing is ongoing via <code>master</code> nightly builds, so <code>master</code> should be generally unbroken before proceeding. The version of <code>master</code> should already reflect the upcoming major release version (i.e. <code>X.Y.0</code>).</p>
 </li>
-<li><p>Ensure any required PRs are merged into both the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> and <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repositories.</p>
+<li><p>Once <code>master</code> is in a generally stable state after extensive work, announce a &quot;golden nightly&quot; is incoming via the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel and/or Reddit.</p>
 </li>
-<li><p>Create a release branch for the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> and <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repositories with the format <code>release-X.Y.Z</code>, where <code>X.Y</code> is the new minor + major version number and <code>Z</code> is a literal <code>Z</code> character, for example <code>release-10.3.Z</code>, based off the current <code>master</code> branches. These will be somewhat long-lived branches to track particular releases and deal with hotfixes to those branches should they be required.</p>
+<li><p>Collect testing information and repeat as needed.</p>
 </li>
-<li><p>Execute the <code>bump_version</code> script inside the release branch in the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> local repository. Commit the resulting differences as <code>Bump version to X.Y.Z</code>, where <code>X.Y.Z</code> is the full version number.</p>
+<li><p>Once the release is considered stable and working, announce full PR freeze via the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel.</p>
 </li>
-<li><p>Perform initial testing builds and test the resulting binaries.</p>
-<p> Basic testing checklist:</p>
-<ol>
-<li>Run through setup wizard and import small library.  </li>
-<li>Test playback, navigation, and subtitles in the Web UI.  </li>
-<li>Test playback, navigation, and subtitles in the various client apps.  </li>
-</ol>
+<li><p>Allow one further &quot;golden nightly&quot; and at least 48 hours of testing time. Restart this process if major breaking bugs are found.</p>
 </li>
-<li><p>Call to <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> for any release-critical bug found; perform bugfix pull requests against the <code>release-X.Y.Z</code> branch.</p>
-</li>
-<li><p>Repeat the above two steps until no more RC bugs are found.</p>
-</li>
-<li><p>Perform the release.</p>
-<ol>
-<li>Create pull requests from release branch into <code>master</code> in both repositories.  </li>
-<li>Obtain approval from the Core team.  </li>
-<li>Merge release branch PR into <code>master</code> in <code>jellyfin-web</code>.</li>
-<li>Update submodule for <code>jellyfin-web</code> directly in release branch. Commit the resulting differences as <code>Update jellyfin-web submodule to X.Y.Z</code>, where <code>X.Y.Z</code> is the full version number:<br> <code>cd MediaBrowser.WebDashboard/jellyfin-web</code><br> <code>git fetch --all</code><br> <code>git checkout master</code><br> <code>cd ../..</code><br> <code>git add MediaBrowser.WebDashboard/jellyfin-web</code><br> <code>git commit</code>  </li>
-<li>Merge release branch PR into <code>master</code> in <code>jellyfin</code>.</li>
-<li>Create the GitHub release and tag from release branch to facilitate future point releases.  </li>
-<li>Build new releases packages off of release branch and upload to repositories.  </li>
-<li>Announce new release in the <a href="https://matrix.to/#/#jellyfin-announce:matrix.org">jellyfin-announce</a> Matrix/Riot channel and anywhere else required (e.g. Reddit, etc.).</li>
-</ol>
-</li>
-<li><p>Delete any previous minor release branches, as all future hotfix work should go against the new release branch, or master directly for inclusion in the next major release.</p>
+<li><p>Once all testing is complete and the release remains stable, proceed.</p>
 </li>
 </ol>
-<h2 id="release-procedure-hotfix-version-releases">Release procedure (Hotfix version releases)</h2>
+<h4 id="web-release">Web release</h4>
 <ol>
-<li><p>Discover a major, breaking bug in the current release which must be immediately fixed and cannot wait for the next full feature release; discuss and challenge any hotfixes (are they <em>really</em> needed and can&#39;t wait?) in the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel to coordinate hotfixes.</p>
+<li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
 </li>
-<li><p>Create all hotfix PRs against the <em>current minor release branch</em> in either the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> and <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repositories; merge when completed.</p>
+<li><p>Create a GitHub release for the new version, based on the newly-created <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> (i.e. <code>vX.Y.0</code>) and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</p>
+<pre><code>[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
+</code></pre></li>
+<li><p>Publish the release.</p>
 </li>
-<li><p>Execute the <code>bump_version</code> script inside the release branch in the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> local repository. Commit the resulting differences as <code>Bump version to X.Y.Z</code>, where <code>X.Y.Z</code> is the full version number.</p>
-</li>
-<li><p>Perform the release.</p>
-<ol>
-<li>Create pull requests from release branch into <code>master</code> in any required repositories.  </li>
-<li>Obtain approval from the Core team.  </li>
-<li>IF the hotfix applies to the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository, merge release branch PR into <code>master</code> in <code>jellyfin-web</code>.</li>
-<li>IF the hotfix applies to the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository, update submodule for <code>jellyfin-web</code> directly in the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> release branch. Commit the resulting differences as <code>Update jellyfin-web submodule to X.Y.Z</code>, where <code>X.Y.Z</code> is the full version number.<br> <code>cd MediaBrowser.WebDashboard/jellyfin-web</code><br> <code>git fetch --all</code><br> <code>git checkout master</code><br> <code>cd ../..</code><br> <code>git add MediaBrowser.WebDashboard/jellyfin-web</code><br> <code>git commit</code>  </li>
-<li>Merge release branch PR into <code>master</code> in <code>jellyfin</code>.</li>
-<li>Create the GitHub release and tag from release branch to facilitate future point releases. IF the hotfix did not affect the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository, still create a new release and tag targeting the same point on the release branch to facilitate consistent versioning between the repositories; the changelog may be empty with a &quot;new release to match main repository&quot;-type message.</li>
-<li>Build new releases packages off of release branch and upload to repositories.  </li>
-<li>Announce new release in the <a href="https://matrix.to/#/#jellyfin-announce:matrix.org">jellyfin-announce</a> Matrix/Riot channel and anywhere else required (e.g. Reddit, etc.).</li>
 </ol>
+<h4 id="main-release">Main release</h4>
+<ol>
+<li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
+</li>
+<li><p>Create a GitHub release for the new version, based on the newly-created <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> (i.e. <code>vX.Y.0</code>) and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following components:</p>
+<p>a. A quick top blurb under a <code># Jellyfin X.Y.Z</code> header.</p>
+<p>a. A list of features, including in-line links to Fider if available, under a <code>## New Features and Major Improvements</code> header.</p>
+<p>a. A list of known release notes, categorized by the relevant platform (e.g. <code>[All]</code> or <code>[Windows]</code>), under a <code>## Important Release Notes</code> header.</p>
+<p>a. If applicable, a set of release notes/comments about FFmpeg, under a <code>## FFmpeg</code> header.</p>
+<p>a. A full changelog, split by repository with <code>### [repo](https://github.com/jellyfin/repo)</code> subheaders, under a <code>## Changelog</code> header. Each element should be a PR number and the PR title.</p>
+</li>
+<li><p>Publish the release.</p>
+</li>
+<li><p>Wait for builds to complete.</p>
+</li>
+<li><p>Announce the new release in the <a href="https://matrix.to/#/#jellyfin-announce:matrix.org">jellyfin-announce</a> Matrix/Riot channel and anywhere else required (e.g. Reddit, etc.).</p>
+</li>
+</ol>
+<h3 id="release-procedure-hotfix-version-releases">Release procedure (Hotfix version releases)</h3>
+<ol>
+<li><p>During normal work on the <code>master</code> branch, select PRs suitable for backporting by tagging them with the <code>stable-backport</code> label during the PR lifecycle. All PRs will target <code>master</code> and thus bugfixes for the stable release must include this label to be included.</p>
+</li>
+<li><p>Collect the list of merged <code>stable-backport</code> PRs from all relevant repositories.</p>
+</li>
+<li><p>For each repository, perform stable branch reconciliation for the relevant PRs:</p>
+<ol>
+<li><p>For each PR slated for backport:</p>
+<ol>
+<li><p>Grab the <em>merge commit</em> hash for the PR from <code>master</code> branch.</p>
+</li>
+<li><p>Cherry-pick the merge commit into the <code>release-x.y.z</code> branch via: <code>git cherry-pick -sx -m1 &lt;merge-commit-hash&gt;</code>.</p>
+</li>
+<li><p>Fix any merge conflicts, generally keeping what&#39;s in the merge. If there are significant merge conflicts, this likely indicates that the fix is too large for backporting.</p>
+</li>
+<li><p>Finalize the cherry-pick via: <code>git add</code> and <code>git commit -v</code>.</p>
+</li>
+</ol>
+</li>
+<li><p>For the main <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> repository, bump the version of the repository to the new hotfix version with the <code>bump_version</code> script and commit the result with the message &quot;Bump version for X.Y.Z&quot;.</p>
+</li>
+<li><p>Push the updated release branch to GitHub.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="web-release-1">Web release</h4>
+<ol>
+<li><p>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</p>
+<pre><code>[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
+</code></pre></li>
+<li><p>Publish the release.</p>
+</li>
+</ol>
+<h4 id="main-release-1">Main release</h4>
+<ol>
+<li><p>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following components:</p>
+<p>a. A quick top blurb under a <code># Jellyfin X.Y.Z</code> header.</p>
+<p>a. A list of known release notes, categorized by the relevant platform (e.g. <code>[All]</code> or <code>[Windows]</code>), under a <code>## Important Release Notes</code> header.</p>
+<p>a. If applicable, a set of release notes/comments about FFmpeg, under a <code>## FFmpeg</code> header.</p>
+<p>a. A full changelog, split by repository with <code>### [repo](https://github.com/jellyfin/repo)</code> subheaders, under a <code>## Changelog</code> header. Each element should be a PR number and the PR title.</p>
+</li>
+<li><p>Publish the release.</p>
+</li>
+<li><p>Wait for builds to complete.</p>
+</li>
+<li><p>Announce the new release in the <a href="https://matrix.to/#/#jellyfin-announce:matrix.org">jellyfin-announce</a> Matrix/Riot channel and anywhere else required (e.g. Reddit, etc.).</p>
 </li>
 </ol>
 </article>
