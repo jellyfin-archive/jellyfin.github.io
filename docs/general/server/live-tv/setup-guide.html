@@ -77,8 +77,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="server-live-tv-setup-guide">
-<h1 id="add-a-tv-tuner-to-jellyfin-automatic-discovery">Add a TV tuner to Jellyfin (Automatic Discovery)</h1>
+<h1 id="live-tv-setup-guide">Live TV Setup Guide</h1>
 
+<h2 id="add-a-tv-tuner-to-jellyfin-automatic-discovery">Add a TV tuner to Jellyfin (Automatic Discovery)</h2>
 <p>Click on the Admin Panel Icon in the top right corner (1)
 Click &#39;Live TV&#39; (2) under the &#39;Live TV&#39; section
 Click the &#39;+&#39; button (3) next to &#39;Tuner Devices&#39;</p>
@@ -88,10 +89,10 @@ JF will search and hopefully find your tuner automatically:</p>
 <p><img src="../../../images/live-tv-setup-tuner2.png" alt=""></p>
 <p>Click on the device you&#39;d like to set up then set any options then click &#39;Save&#39;</p>
 <p><img src="../../../images/live-tv-setup-tuner3.png" alt=""></p>
-<h1 id="add-a-tv-tuner-to-jellyfin-manual-setup">Add a TV tuner to Jellyfin (Manual setup)</h1>
+<h2 id="add-a-tv-tuner-to-jellyfin-manual-setup">Add a TV tuner to Jellyfin (Manual setup)</h2>
 <p>You can set up your tuners manually if they were not automatically discovered.  Click the &#39;Tuner Type&#39; pull down.  Choose between &#39;HD Homerun&#39;, &#39;M3U Tuner&#39;, and &#39;Other&#39;</p>
 <p><img src="../../../images/live-tv-setup-tuner4.png" alt=""></p>
-<h2 id="hd-homerun-specific-options">HD Homerun specific options:</h2>
+<h3 id="hd-homerun-specific-options">HD Homerun specific options:</h3>
 <ul>
 <li><p>Tuner IP Address is the URL of your HD Homerun device.  Format will be <a href="http://YOUR.IP.ADDRESS">http://YOUR.IP.ADDRESS</a></p>
 </li>
@@ -102,7 +103,7 @@ JF will search and hopefully find your tuner automatically:</p>
 </ul>
 <p>To set a favorite, go to <a href="http://my.hdhomerun.com">http://my.hdhomerun.com</a> , select your tuner and then click on the grey star next to the channel name to change the star to yellow.  The yellow star indicates a favorited channel.  In this example, only the channels with yellow stars will be imported into Jellyfin</p>
 <p><img src="../../../images/live-tv-setup-hdhr_opt1.png" alt=""></p>
-<h2 id="m3u-tuner-specific-options">M3U Tuner specific options:</h2>
+<h3 id="m3u-tuner-specific-options">M3U Tuner specific options:</h3>
 <p>This tuner allows you to add IPTV channel to Jellyfin by using the appropriate M3U8 playlist file.</p>
 <ul>
 <li><p>File or URL is the location of the M3U8 playlist.  The file can either be stored online at a web (HTTP) address or stored locally.</p>
@@ -114,12 +115,12 @@ JF will search and hopefully find your tuner automatically:</p>
 <li><p>Auto-loop live streams is sometimes necessary for some IPTV channels.  Turn this on only if your streams are not playing correctly</p>
 </li>
 </ul>
-<h1 id="adding-guide-data">Adding guide data:</h1>
+<h2 id="adding-guide-data">Adding guide data:</h2>
 <p>Guide data is necessary for scheduling tv recordings and for browsing what&#39;s currently playing and what will air later.  Follow these steps once you have a tuner device set up.  Click on the Admin Panel Icon in the top right corner, Click &#39;Live TV&#39; (2) under the &#39;Live TV&#39; section, Click the &#39;+&#39; button next to &#39;TV Guide Data Providers&#39; :</p>
 <p><img src="../../../images/live-tv-setup-guide1.png" alt=""></p>
 <p>Choose between &#39;Schedules Direct&#39; and &#39;Xml TV&#39;</p>
 <p><strong>Schedules Direct:</strong></p>
-<p>Schedules Direct is a pay service that provides U.S./Canadian guide data for use in OSS projects.  The price is $25 a year and has not increased since it began in 2007.  The guide data is highly reliable.  Create an account at <a href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a></p>
+<p>Schedules Direct is a payed service that provides U.S./Canadian guide data for use in OSS projects.  The price is $25 a year and has not increased since it began in 2007.  The guide data is highly reliable.  Create an account at <a href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a></p>
 <p><strong>Xml TV:</strong></p>
 <p>Xml TV option allows for downloading of guide data in the XMLTV format ( <a href="http://wiki.xmltv.org/index.php/XMLTVFormat">http://wiki.xmltv.org/index.php/XMLTVFormat</a> )</p>
 <h1 id="mapping-channels">Mapping channels:</h1>

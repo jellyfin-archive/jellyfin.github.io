@@ -79,20 +79,20 @@
             <article class="content wrap" id="_content" data-uid="admin-connectivity">
 <h1 id="connectivity">Connectivity</h1>
 
-<h3 id="connect">Connect</h3>
+<h2 id="connect">Connect</h2>
 <p>Many clients will automatically discover servers running on the same LAN and display them on login. If you are outside the network when you connect you can type in the complete IP address or domain name in the server field with the correct port to continue to the login page. You can find the default ports below to access the web frontend.</p>
-<h3 id="troubleshooting">Troubleshooting</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
 <p>If you can access the web interface over HTTP but not HTTPS, then you likely have an error with the certificate. Jellyfin uses a PFX file to handle HTTPS traffic. If you created the file with a password, then you will have to enter that value on the <strong>Networking</strong> page in the settings.</p>
 <p>If you can access the server locally but not outside of your LAN, then you likely have an issue with the router configuration. Please see the <a href="xref:admin-port-forwarding">port forwarding</a> for more information.</p>
 <p>The easiest way to check for issues is by checking the logs, which can be accessed through the settings on the web frontend or in the log directory on your server. If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet. This would indicate either an incorrect address or an issue somewhere else on the network.</p>
-<h3 id="static-ports">Static Ports</h3>
+<h2 id="static-ports">Static Ports</h2>
 <p><strong>HTTP Traffic:</strong> 8096</p>
 <p>The web frontend can be accessed here for debugging SSL certificate issues on your local network. You can modify this setting from the <strong>Networking</strong> page in the settings.</p>
 <p><strong>HTTPS Traffic:</strong> 8920</p>
 <p>This setting can also be modified from the <strong>Networking</strong> page to use a different port.</p>
 <p><strong>Service Discovery:</strong> 1900</p>
 <p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time.</p>
-<h3 id="dynamic-ports">Dynamic Ports</h3>
+<h2 id="dynamic-ports">Dynamic Ports</h2>
 <p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
 </article>
           </div>
