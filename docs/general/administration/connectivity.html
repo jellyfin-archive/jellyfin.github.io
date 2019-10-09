@@ -94,6 +94,19 @@
 <p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time.</p>
 <h2 id="dynamic-ports">Dynamic Ports</h2>
 <p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
+<h2 id="base-url">Base URL</h2>
+<p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
+<p>The entered value on the configuration page will be normalized to include a leading<code>/</code> if this is missing.</p>
+<p>This setting requires a server restart to change, in order to avoid invalidating existing paths until the administrator is ready to.</p>
+<p>There are three main caveats to this setting:</p>
+<ol>
+<li><p>When setting a new Base URL (i.e. from <code>/</code> to <code>/baseurl</code>) or changing a Base URL (i.e. from <code>/baseurl</code> to <code>/newbaseurl</code>), the Jellyfin web server will automatically handle redirects to avoid displaying users invalid pages. For instance, accessing a server with a Base URL of <code>/jellyfin</code> on the <code>/</code> path will automatically append the <code>/jellyfin</code> Base URL. However, entirely removing a Base URL (i.e. from <code>/baseurl</code> to <code>/</code>, an empty value in the configuration) will not - all URLs with the old Base URL path will become invalid and throw 404 errors. This should be kept in mind when removing an existing Base URL.</p>
+</li>
+<li><p>Client applications generally, for now, do not handle the Base URL redirects implicitly. Therefore, for instance in the Android app, the <code>Host</code> setting <em>must</em> include the BaseURL as well (e.g. <code>http://myserver:8096/baseurl</code>), or the connection will fail.</p>
+</li>
+<li><p>Any reverse proxy configurations must be updated to handle a new Base URL. Generally, passing <code>/</code> back to the Jellyfin instance will work fine in all cases and the paths will be normalized, and this is the standard configuration in our examples. Keep this in mind however when doing more advanced routing.</p>
+</li>
+</ol>
 </article>
           </div>
           
