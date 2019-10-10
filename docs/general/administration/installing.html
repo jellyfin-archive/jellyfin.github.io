@@ -210,6 +210,39 @@ services:
 <li>Stop the currently running server either via the dashboard or using the application icon.</li>
 <li>Move the <code>.app</code> package to the Trash.</li>
 </ol>
+<p><strong>Deleting Configuation</strong></p>
+<p>This will delete all settings and user information. This Applies for the .app package and the Portable Version.</p>
+<ol>
+<li>Delete the folder <code>~/.config/jellyfin/</code></li>
+<li>Delete the folder <code>~/.local/share/jellyfin/</code></li>
+</ol>
+<p><strong>Portable Version</strong></p>
+<ol>
+<li>Download the latest version</li>
+<li>Extract it into the Applications folder</li>
+<li>Open Terminal and type <code>cd</code> followed with a space then drag the jellyfin folder into the terminal.</li>
+<li>Type <code>./jellyfin</code> to run jellyfin.</li>
+<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a></li>
+</ol>
+<p>Closing the terminal window will end jellyfin. Running jellyfin in screen or tmux can prevent this from happening.</p>
+<p><strong>Upgrading the Portable Version</strong></p>
+<ol>
+<li>Download the latest version.</li>
+<li>Stop the currently running server either via the dashboard or using CTRL+C in the terminal window.</li>
+<li>Extract the latest version into Applications</li>
+<li>Open Terminal and type <code>cd</code> followed with a space then drag the jellyfin folder into the terminal.</li>
+<li>Type <code>./jellyfin</code> to run jellyfin.</li>
+<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a></li>
+</ol>
+<p><strong>Uninstalling the Portable Version</strong></p>
+<ol>
+<li>Stop the currently running server either via the dashboard or using CTRL+C in the terminal window.</li>
+<li>Move <code>/Application/jellyfin-version</code> folder to the Trash. Replace version with the actual version number you are trying to delete.</li>
+</ol>
+<p><strong>Using FFmpeg with the Portable Version</strong></p>
+<p>The portable version doesn&#39;t come with FFmpeg by default. To install FFmpeg you can use homebrew or download the build from <a href="https://ffmpeg.zeranoe.com/builds/macos64/static/">Zeranoe</a> (Recommended).
+If using Zeranoe&#39;s build, extract it to the <code>/Applications/</code> folder.
+Navigate to Playback tab in the Dashboard and set the path to FFmpeg under FFmpeg Path.</p>
 <h2 id="linux-generic-amd64">Linux (generic amd64)</h2>
 <p>Generic amd64 Linux builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#linux">here</a>.</p>
 <h2 id="portable-dll">Portable DLL</h2>
