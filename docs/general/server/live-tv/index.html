@@ -8,7 +8,7 @@
     <title>Live TV | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Live TV | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.45.1.0">
+    <meta name="generator" content="docfx 2.46.0.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.png">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -79,24 +79,26 @@
             <article class="content wrap" id="_content" data-uid="server-live-tv-index">
 <h1 id="live-tv">Live TV</h1>
 
-<p>Jellyfin allows you to watch live television if you have the hardware to support it, and even handles DVR from the settings. The first step is setting up a tuner to send data to Jellyfin, and then configure a source for the guide data.
-<a class="xref" href="setup-guide.html">Click here</a> for the general setup guide.</p>
+<p>Jellyfin allows you to watch and record live television using supported hardware.  The first step is setting up a tuner to send data to Jellyfin, and then configure a source for the program guide data.</p>
+<p><a class="xref" href="setup-guide.html">Click here</a> for the general setup guide.</p>
 <h2 id="tuner">Tuner</h2>
-<p>Jellyfin has support for the following tuners but can support additional tuners through the plugin catalog.</p>
+<p>Jellyfin has support for the following tuners: </p>
 <ul>
 <li>HDHomerun</li>
 <li>M3U</li>
 </ul>
 <p>HDHomerun is a special case because they will usually get detected automatically by the server. Otherwise you can manually add tuners by navigating to <strong>Live TV</strong> in the settings and adding one there.</p>
 <p>Note:  Docker users using HDHomerun devices should set networking to host mode as Jellyfin needs to connect to a changing UDP port</p>
+<p>M3U allows you to add IPTV channel playlists which you can view and record in Jellyfin.</p>
+<p>Additional tuner types are available via plugins.</p>
 <h2 id="guide">Guide</h2>
-<p>The guides available below are included with the server but additional guides could eventually be installed through the plugin catalog.</p>
+<p>Guide data will need to be mapped to their corresponding channels after a guide data provider is configured.  The guide data formats below are included with the server:</p>
 <ul>
 <li>Schedules Direct</li>
-<li>XML TV</li>
+<li>XMLTV</li>
 </ul>
-<p>Guide data will need to be mapped to their corresponding channels after a guide data provider is configured.  This can be accessed by going to</p>
-<p>Admin Dashboard-&gt; Live TV -&gt; TV Guide Data Providers -&gt; Your Provider -&gt; ... -&gt; Map Channels</p>
+<p><a href="http://www.schedulesdirect.org">Schedules Direct</a> is a pay service providing electronic program guide data to the United States and Canada.</p>
+<p><a href="http://wiki.xmltv.org/index.php/Main_Page">XMLTV</a> is &quot;... an XML based file format for describing TV listings. IPTV providers use XMLTV as the base reference template in their systems, and extend it internally according to their business needs.&quot;</p>
 <h2 id="status">Status</h2>
 <p>You can view the status of each tuner connected to the server in the settings. There are also buttons to manually refresh the tuners if they experience problems.</p>
 <p>The guide data can be refreshed manually if you run into problems. This isn&#39;t normally required since the data is refreshed periodically.</p>
