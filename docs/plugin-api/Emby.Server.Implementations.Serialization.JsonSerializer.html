@@ -95,11 +95,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Serialization.html">Emby.Server.Implementations.Serialization</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Serialization_JsonSerializer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JsonSerializer : object, IJsonSerializer</code></pre>
+    <pre><code class="lang-csharp hljs">public class JsonSerializer : IJsonSerializer</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -139,13 +163,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromFile_Type_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromFile(Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromFile_System_Type_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromFile(System.Type%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L102">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromFile_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromFile*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromFile_Type_System_String_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromFile(Type,System.String)">DeserializeFromFile(Type, String)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromFile_System_Type_System_String_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromFile(System.Type,System.String)">DeserializeFromFile(Type, String)</h4>
   <div class="markdown level1 summary"><p>Deserializes from file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -164,7 +188,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td><p>The type.</p>
 </td>
@@ -189,6 +213,22 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><p>System.Object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>type</p>
 </td>
       </tr>
     </tbody>
@@ -259,15 +299,31 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>file</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_Stream_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream(Stream%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_System_IO_Stream_System_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream(System.IO.Stream%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L193">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_Stream_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream(Stream,Type)">DeserializeFromStream(Stream, Type)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_System_IO_Stream_System_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream(System.IO.Stream,System.Type)">DeserializeFromStream(Stream, Type)</h4>
   <div class="markdown level1 summary"><p>Deserializes from stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -286,13 +342,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The stream.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td><p>The type.</p>
 </td>
@@ -315,15 +371,31 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>stream</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream__1_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream%60%601(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream__1_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream%60%601(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L148">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream__1_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream``1(Stream)">DeserializeFromStream&lt;T&gt;(Stream)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStream__1_System_IO_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStream``1(System.IO.Stream)">DeserializeFromStream&lt;T&gt;(Stream)</h4>
   <div class="markdown level1 summary"><p>Deserializes from stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -342,7 +414,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The stream.</p>
 </td>
@@ -380,15 +452,31 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>stream</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_Stream_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync(Stream%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_System_IO_Stream_System_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync(System.IO.Stream%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L208">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_Stream_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync(Stream,Type)">DeserializeFromStreamAsync(Stream, Type)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_System_IO_Stream_System_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync(System.IO.Stream,System.Type)">DeserializeFromStreamAsync(Stream, Type)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -406,12 +494,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td></td>
       </tr>
@@ -427,20 +515,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync__1_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync%60%601(Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync__1_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync%60%601(System.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L158">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync__1_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync``1(Stream)">DeserializeFromStreamAsync&lt;T&gt;(Stream)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromStreamAsync__1_System_IO_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromStreamAsync``1(System.IO.Stream)">DeserializeFromStreamAsync&lt;T&gt;(Stream)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -458,7 +546,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td></td>
       </tr>
@@ -474,7 +562,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;T&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -496,13 +584,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromString_System_String_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromString(System.String%2CType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromString_System_String_System_Type_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromString(System.String%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L259">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromString_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromString*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromString_System_String_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromString(System.String,Type)">DeserializeFromString(String, Type)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_DeserializeFromString_System_String_System_Type_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.DeserializeFromString(System.String,System.Type)">DeserializeFromString(String, Type)</h4>
   <div class="markdown level1 summary"><p>Deserializes from string.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -527,7 +615,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><span class="parametername">type</span></td>
         <td><p>The type.</p>
 </td>
@@ -546,6 +634,22 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
         <td><p>System.Object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>json</p>
 </td>
       </tr>
     </tbody>
@@ -615,6 +719,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>text</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToFile_System_Object_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToFile(System.Object%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -655,15 +775,31 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_System_Object_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream(System.Object%2CStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_System_Object_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream(System.Object%2CSystem.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L30">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_System_Object_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream(System.Object,Stream)">SerializeToStream(Object, Stream)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_System_Object_System_IO_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream(System.Object,System.IO.Stream)">SerializeToStream(Object, Stream)</h4>
   <div class="markdown level1 summary"><p>Serializes to stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -688,22 +824,38 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The stream.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream__1___0_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream%60%601(%60%600%2CStream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream__1___0_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream%60%601(%60%600%2CSystem.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Serialization/JsonSerializer.cs/#L51">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream*"></a>
-  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream__1___0_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream``1(``0,Stream)">SerializeToStream&lt;T&gt;(T, Stream)</h4>
+  <h4 id="Emby_Server_Implementations_Serialization_JsonSerializer_SerializeToStream__1___0_System_IO_Stream_" data-uid="Emby.Server.Implementations.Serialization.JsonSerializer.SerializeToStream``1(``0,System.IO.Stream)">SerializeToStream&lt;T&gt;(T, Stream)</h4>
   <div class="markdown level1 summary"><p>Serializes to stream.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -728,7 +880,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
         <td><p>The stream.</p>
 </td>
@@ -747,6 +899,22 @@
       <tr>
         <td><span class="parametername">T</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>obj</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -800,9 +968,29 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>obj</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Emby.Server.Implementations.Data.SqliteExtensions.html#Emby_Server_Implementations_Data_SqliteExtensions_SerializeToBytes_MediaBrowser_Model_Serialization_IJsonSerializer_System_Object_">SqliteExtensions.SerializeToBytes(IJsonSerializer, Object)</a>
   </div>
 </article>
           </div>

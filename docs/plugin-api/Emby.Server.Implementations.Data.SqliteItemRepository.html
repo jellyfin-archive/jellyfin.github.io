@@ -94,6 +94,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Persistence.IItemRepository.html">IItemRepository</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Persistence.IRepository.html">IRepository</a></div>
     <div><span class="xref">IDisposable</span></div>
@@ -140,7 +141,7 @@
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareStatement_IDatabaseConnection_System_String_">BaseSqliteRepository.PrepareStatement(IDatabaseConnection, String)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareAll_IDatabaseConnection_IEnumerable_System_String__">BaseSqliteRepository.PrepareAll(IDatabaseConnection, IEnumerable&lt;String&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareAll_IDatabaseConnection_System_Collections_Generic_IEnumerable_System_String__">BaseSqliteRepository.PrepareAll(IDatabaseConnection, IEnumerable&lt;String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_TableExists_Emby_Server_Implementations_Data_ManagedConnection_System_String_">BaseSqliteRepository.TableExists(ManagedConnection, String)</a>
@@ -149,7 +150,7 @@
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_GetColumnNames_IDatabaseConnection_System_String_">BaseSqliteRepository.GetColumnNames(IDatabaseConnection, String)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_AddColumn_IDatabaseConnection_System_String_System_String_System_String_List_System_String__">BaseSqliteRepository.AddColumn(IDatabaseConnection, String, String, String, List&lt;String&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_AddColumn_IDatabaseConnection_System_String_System_String_System_String_System_Collections_Generic_List_System_String__">BaseSqliteRepository.AddColumn(IDatabaseConnection, String, String, String, List&lt;String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_CheckDisposed">BaseSqliteRepository.CheckDisposed()</a>
@@ -160,12 +161,33 @@
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_Dispose_System_Boolean_">BaseSqliteRepository.Dispose(Boolean)</a>
     </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Data.html">Emby.Server.Implementations.Data</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Data_SqliteItemRepository_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SqliteItemRepository : BaseSqliteRepository, IItemRepository, IRepository, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SqliteItemRepository : BaseSqliteRepository, IDisposable, IItemRepository, IRepository, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -292,8 +314,7 @@
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_Name_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.Name*"></a>
   <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_Name" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Gets the name of the repository</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -310,8 +331,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The name.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -353,13 +373,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_DeleteItem_Guid_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.DeleteItem(Guid%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_DeleteItem_System_Guid_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.DeleteItem(System.Guid%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L4911">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_DeleteItem_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.DeleteItem*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_DeleteItem_Guid_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.DeleteItem(Guid,CancellationToken)">DeleteItem(Guid, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_DeleteItem_System_Guid_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.DeleteItem(System.Guid,System.Threading.CancellationToken)">DeleteItem(Guid, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -377,12 +397,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -460,7 +480,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -615,6 +635,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>id</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_GetChapters_MediaBrowser_Controller_Entities_BaseItem_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.GetChapters(MediaBrowser.Controller.Entities.BaseItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -659,8 +695,24 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
         <td><p>IEnumerable{ChapterInfo}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>id</p>
 </td>
       </tr>
     </tbody>
@@ -737,7 +789,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -831,7 +883,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -878,7 +930,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -925,7 +977,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">Tuple</span>&lt;<span class="xref">Guid</span>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -972,7 +1024,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1066,7 +1118,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1096,7 +1148,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1190,7 +1242,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1237,7 +1289,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1267,7 +1319,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1406,13 +1458,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_RetrieveItem_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.RetrieveItem(Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_RetrieveItem_System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.RetrieveItem(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L1177">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_RetrieveItem_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.RetrieveItem*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_RetrieveItem_Guid_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.RetrieveItem(Guid)">RetrieveItem(Guid)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_RetrieveItem_System_Guid_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.RetrieveItem(System.Guid)">RetrieveItem(Guid)</h4>
   <div class="markdown level1 summary"><p>Internal retrieve from items or users table</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1431,7 +1483,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td><p>The id.</p>
 </td>
@@ -1454,15 +1506,35 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveChapters_Guid_List_MediaBrowser_Model_Entities_ChapterInfo__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveChapters(Guid%2CList%7BMediaBrowser.Model.Entities.ChapterInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveChapters_System_Guid_System_Collections_Generic_List_MediaBrowser_Model_Entities_ChapterInfo__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveChapters(System.Guid%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.Entities.ChapterInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L1978">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveChapters_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveChapters*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveChapters_Guid_List_MediaBrowser_Model_Entities_ChapterInfo__" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveChapters(Guid,List{MediaBrowser.Model.Entities.ChapterInfo})">SaveChapters(Guid, List&lt;ChapterInfo&gt;)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveChapters_System_Guid_System_Collections_Generic_List_MediaBrowser_Model_Entities_ChapterInfo__" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveChapters(System.Guid,System.Collections.Generic.List{MediaBrowser.Model.Entities.ChapterInfo})">SaveChapters(Guid, List&lt;ChapterInfo&gt;)</h4>
   <div class="markdown level1 summary"><p>Saves the chapters.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1481,12 +1553,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ChapterInfo.html">ChapterInfo</a>&gt;</td>
         <td><span class="parametername">chapters</span></td>
         <td></td>
       </tr>
@@ -1526,13 +1598,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveItem_MediaBrowser_Controller_Entities_BaseItem_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveItem(MediaBrowser.Controller.Entities.BaseItem%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveItem_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveItem(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L527">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItem_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItem*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItem_MediaBrowser_Controller_Entities_BaseItem_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItem(MediaBrowser.Controller.Entities.BaseItem,CancellationToken)">SaveItem(BaseItem, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItem_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItem(MediaBrowser.Controller.Entities.BaseItem,System.Threading.CancellationToken)">SaveItem(BaseItem, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Save a standard item in the repo</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1557,22 +1629,38 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>item</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveItems_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveItems(IEnumerable%7BMediaBrowser.Controller.Entities.BaseItem%7D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveItems_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveItems(System.Collections.Generic.IEnumerable%7BMediaBrowser.Controller.Entities.BaseItem%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L571">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItems_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItems*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItems_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItems(IEnumerable{MediaBrowser.Controller.Entities.BaseItem},CancellationToken)">SaveItems(IEnumerable&lt;BaseItem&gt;, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveItems_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveItems(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Entities.BaseItem},System.Threading.CancellationToken)">SaveItems(IEnumerable&lt;BaseItem&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Saves the items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1591,28 +1679,46 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td><span class="parametername">items</span></td>
         <td><p>The items.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>items
+or
+cancellationToken</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveMediaStreams_Guid_List_MediaBrowser_Model_Entities_MediaStream__CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveMediaStreams(Guid%2CList%7BMediaBrowser.Model.Entities.MediaStream%7D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_SaveMediaStreams_System_Guid_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.SaveMediaStreams(System.Guid%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.Entities.MediaStream%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L5840">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveMediaStreams_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveMediaStreams*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveMediaStreams_Guid_List_MediaBrowser_Model_Entities_MediaStream__CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveMediaStreams(Guid,List{MediaBrowser.Model.Entities.MediaStream},CancellationToken)">SaveMediaStreams(Guid, List&lt;MediaStream&gt;, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_SaveMediaStreams_System_Guid_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.SaveMediaStreams(System.Guid,System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.Threading.CancellationToken)">SaveMediaStreams(Guid, List&lt;MediaStream&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1630,17 +1736,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">id</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td><span class="parametername">streams</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -1695,13 +1801,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_UpdateInheritedValues_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.UpdateInheritedValues(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_UpdateInheritedValues_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.UpdateInheritedValues(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L4847">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdateInheritedValues_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdateInheritedValues*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdateInheritedValues_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdateInheritedValues(CancellationToken)">UpdateInheritedValues(CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdateInheritedValues_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdateInheritedValues(System.Threading.CancellationToken)">UpdateInheritedValues(CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1719,7 +1825,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -1727,13 +1833,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_UpdatePeople_Guid_List_MediaBrowser_Controller_Entities_PersonInfo__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.UpdatePeople(Guid%2CList%7BMediaBrowser.Controller.Entities.PersonInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteItemRepository_UpdatePeople_System_Guid_System_Collections_Generic_List_MediaBrowser_Controller_Entities_PersonInfo__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteItemRepository.UpdatePeople(System.Guid%2CSystem.Collections.Generic.List%7BMediaBrowser.Controller.Entities.PersonInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteItemRepository.cs/#L5681">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdatePeople_" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdatePeople*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdatePeople_Guid_List_MediaBrowser_Controller_Entities_PersonInfo__" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdatePeople(Guid,List{MediaBrowser.Controller.Entities.PersonInfo})">UpdatePeople(Guid, List&lt;PersonInfo&gt;)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteItemRepository_UpdatePeople_System_Guid_System_Collections_Generic_List_MediaBrowser_Controller_Entities_PersonInfo__" data-uid="Emby.Server.Implementations.Data.SqliteItemRepository.UpdatePeople(System.Guid,System.Collections.Generic.List{MediaBrowser.Controller.Entities.PersonInfo})">UpdatePeople(Guid, List&lt;PersonInfo&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1751,18 +1857,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">itemId</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.PersonInfo.html">PersonInfo</a>&gt;</td>
         <td><span class="parametername">people</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Persistence.IItemRepository.html">IItemRepository</a>
   </div>

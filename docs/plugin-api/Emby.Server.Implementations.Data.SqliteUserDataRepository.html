@@ -93,6 +93,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Persistence.IUserDataRepository.html">IUserDataRepository</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Persistence.IRepository.html">IRepository</a></div>
     <div><span class="xref">IDisposable</span></div>
@@ -145,7 +146,7 @@
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareStatement_IDatabaseConnection_System_String_">BaseSqliteRepository.PrepareStatement(IDatabaseConnection, String)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareAll_IDatabaseConnection_IEnumerable_System_String__">BaseSqliteRepository.PrepareAll(IDatabaseConnection, IEnumerable&lt;String&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_PrepareAll_IDatabaseConnection_System_Collections_Generic_IEnumerable_System_String__">BaseSqliteRepository.PrepareAll(IDatabaseConnection, IEnumerable&lt;String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_TableExists_Emby_Server_Implementations_Data_ManagedConnection_System_String_">BaseSqliteRepository.TableExists(ManagedConnection, String)</a>
@@ -154,7 +155,7 @@
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_GetColumnNames_IDatabaseConnection_System_String_">BaseSqliteRepository.GetColumnNames(IDatabaseConnection, String)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_AddColumn_IDatabaseConnection_System_String_System_String_System_String_List_System_String__">BaseSqliteRepository.AddColumn(IDatabaseConnection, String, String, String, List&lt;String&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_AddColumn_IDatabaseConnection_System_String_System_String_System_String_System_Collections_Generic_List_System_String__">BaseSqliteRepository.AddColumn(IDatabaseConnection, String, String, String, List&lt;String&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_CheckDisposed">BaseSqliteRepository.CheckDisposed()</a>
@@ -165,12 +166,33 @@
     <div>
       <a class="xref" href="Emby.Server.Implementations.Data.BaseSqliteRepository.html#Emby_Server_Implementations_Data_BaseSqliteRepository_Dispose_System_Boolean_">BaseSqliteRepository.Dispose(Boolean)</a>
     </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Data.html">Emby.Server.Implementations.Data</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SqliteUserDataRepository : BaseSqliteRepository, IUserDataRepository, IRepository, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class SqliteUserDataRepository : BaseSqliteRepository, IDisposable, IUserDataRepository, IRepository, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -290,20 +312,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.UserItemData.html">UserItemData</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.UserItemData.html">UserItemData</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_GetUserData_System_Int64_List_System_String__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.GetUserData(System.Int64%2CList%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_GetUserData_System_Int64_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.GetUserData(System.Int64%2CSystem.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteUserDataRepository.cs/#L298">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteUserDataRepository_GetUserData_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.GetUserData*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_GetUserData_System_Int64_List_System_String__" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.GetUserData(System.Int64,List{System.String})">GetUserData(Int64, List&lt;String&gt;)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_GetUserData_System_Int64_System_Collections_Generic_List_System_String__" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.GetUserData(System.Int64,System.Collections.Generic.List{System.String})">GetUserData(Int64, List&lt;String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -326,7 +348,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">keys</span></td>
         <td></td>
       </tr>
@@ -403,15 +425,33 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>userId
+or
+key</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_Initialize_MediaBrowser_Controller_Library_IUserManager_SemaphoreSlim_SQLiteDatabaseConnection_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.Initialize(MediaBrowser.Controller.Library.IUserManager%2CSemaphoreSlim%2CSQLiteDatabaseConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_Initialize_MediaBrowser_Controller_Library_IUserManager_System_Threading_SemaphoreSlim_SQLiteDatabaseConnection_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.Initialize(MediaBrowser.Controller.Library.IUserManager%2CSystem.Threading.SemaphoreSlim%2CSQLiteDatabaseConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteUserDataRepository.cs/#L35">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteUserDataRepository_Initialize_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.Initialize*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_Initialize_MediaBrowser_Controller_Library_IUserManager_SemaphoreSlim_SQLiteDatabaseConnection_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.Initialize(MediaBrowser.Controller.Library.IUserManager,SemaphoreSlim,SQLiteDatabaseConnection)">Initialize(IUserManager, SemaphoreSlim, SQLiteDatabaseConnection)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_Initialize_MediaBrowser_Controller_Library_IUserManager_System_Threading_SemaphoreSlim_SQLiteDatabaseConnection_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.Initialize(MediaBrowser.Controller.Library.IUserManager,System.Threading.SemaphoreSlim,SQLiteDatabaseConnection)">Initialize(IUserManager, SemaphoreSlim, SQLiteDatabaseConnection)</h4>
   <div class="markdown level1 summary"><p>Opens the connection to the database</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -435,7 +475,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">SemaphoreSlim</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim">SemaphoreSlim</a></td>
         <td><span class="parametername">dbLock</span></td>
         <td></td>
       </tr>
@@ -448,13 +488,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_PersistUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.PersistUserData(System.Int64%2CSystem.String%2CMediaBrowser.Controller.Entities.UserItemData%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_PersistUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.PersistUserData(System.Int64%2CSystem.String%2CMediaBrowser.Controller.Entities.UserItemData%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteUserDataRepository.cs/#L174">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteUserDataRepository_PersistUserData_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.PersistUserData*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_PersistUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.PersistUserData(System.Int64,System.String,MediaBrowser.Controller.Entities.UserItemData,CancellationToken)">PersistUserData(Int64, String, UserItemData, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_PersistUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.PersistUserData(System.Int64,System.String,MediaBrowser.Controller.Entities.UserItemData,System.Threading.CancellationToken)">PersistUserData(Int64, String, UserItemData, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Persists the user data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -491,7 +531,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -500,13 +540,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveAllUserData_System_Int64_MediaBrowser_Controller_Entities_UserItemData___CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveAllUserData(System.Int64%2CMediaBrowser.Controller.Entities.UserItemData%5B%5D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveAllUserData_System_Int64_MediaBrowser_Controller_Entities_UserItemData___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveAllUserData(System.Int64%2CMediaBrowser.Controller.Entities.UserItemData%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteUserDataRepository.cs/#L152">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveAllUserData_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveAllUserData*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveAllUserData_System_Int64_MediaBrowser_Controller_Entities_UserItemData___CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveAllUserData(System.Int64,MediaBrowser.Controller.Entities.UserItemData[],CancellationToken)">SaveAllUserData(Int64, UserItemData[], CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveAllUserData_System_Int64_MediaBrowser_Controller_Entities_UserItemData___System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveAllUserData(System.Int64,MediaBrowser.Controller.Entities.UserItemData[],System.Threading.CancellationToken)">SaveAllUserData(Int64, UserItemData[], CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -534,7 +574,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -542,13 +582,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveUserData(System.Int64%2CSystem.String%2CMediaBrowser.Controller.Entities.UserItemData%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveUserData(System.Int64%2CSystem.String%2CMediaBrowser.Controller.Entities.UserItemData%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Data/SqliteUserDataRepository.cs/#L134">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveUserData_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveUserData*"></a>
-  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveUserData(System.Int64,System.String,MediaBrowser.Controller.Entities.UserItemData,CancellationToken)">SaveUserData(Int64, String, UserItemData, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Data_SqliteUserDataRepository_SaveUserData_System_Int64_System_String_MediaBrowser_Controller_Entities_UserItemData_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Data.SqliteUserDataRepository.SaveUserData(System.Int64,System.String,MediaBrowser.Controller.Entities.UserItemData,System.Threading.CancellationToken)">SaveUserData(Int64, String, UserItemData, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Saves the user data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -582,13 +622,16 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Persistence.IUserDataRepository.html">IUserDataRepository</a>
   </div>

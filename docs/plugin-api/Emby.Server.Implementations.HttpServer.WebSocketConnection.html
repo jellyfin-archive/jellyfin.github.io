@@ -96,11 +96,35 @@
     <div><a class="xref" href="MediaBrowser.Controller.Net.IWebSocketConnection.html">IWebSocketConnection</a></div>
     <div><span class="xref">IDisposable</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.HttpServer.html">Emby.Server.Implementations.HttpServer</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WebSocketConnection : object, IWebSocketConnection, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class WebSocketConnection : IWebSocketConnection, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -156,6 +180,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>socket</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -184,7 +224,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The id.</p>
 </td>
       </tr>
@@ -216,7 +256,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>The last activity date.</p>
 </td>
       </tr>
@@ -248,7 +288,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Func</span>&lt;<a class="xref" href="MediaBrowser.Controller.Net.WebSocketMessageInfo.html">WebSocketMessageInfo</a>, <span class="xref">Task</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="MediaBrowser.Controller.Net.WebSocketMessageInfo.html">WebSocketMessageInfo</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>&gt;</td>
         <td><p>The receive action.</p>
 </td>
       </tr>
@@ -343,7 +383,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">WebSocketState</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.websockets.websocketstate">WebSocketState</a></td>
         <td><p>The state.</p>
 </td>
       </tr>
@@ -435,13 +475,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_Byte___CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.Byte%5B%5D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_Byte___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.Byte%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpServer/WebSocketConnection.cs/#L201">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync*"></a>
-  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_Byte___CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.Byte[],CancellationToken)">SendAsync(Byte[], CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_Byte___System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.Byte[],System.Threading.CancellationToken)">SendAsync(Byte[], CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sends a message asynchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -466,7 +506,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -483,7 +523,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -491,13 +531,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpServer/WebSocketConnection.cs/#L213">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync*"></a>
-  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_String_CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.String,CancellationToken)">SendAsync(String, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync(System.String,System.Threading.CancellationToken)">SendAsync(String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -520,7 +560,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -536,20 +576,20 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync__1_MediaBrowser_Model_Net_WebSocketMessage___0__CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync%60%601(MediaBrowser.Model.Net.WebSocketMessage%7B%60%600%7D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync__1_MediaBrowser_Model_Net_WebSocketMessage___0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync%60%601(MediaBrowser.Model.Net.WebSocketMessage%7B%60%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpServer/WebSocketConnection.cs/#L183">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync*"></a>
-  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync__1_MediaBrowser_Model_Net_WebSocketMessage___0__CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync``1(MediaBrowser.Model.Net.WebSocketMessage{``0},CancellationToken)">SendAsync&lt;T&gt;(WebSocketMessage&lt;T&gt;, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_HttpServer_WebSocketConnection_SendAsync__1_MediaBrowser_Model_Net_WebSocketMessage___0__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.HttpServer.WebSocketConnection.SendAsync``1(MediaBrowser.Model.Net.WebSocketMessage{``0},System.Threading.CancellationToken)">SendAsync&lt;T&gt;(WebSocketMessage&lt;T&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sends a message asynchronously.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -574,7 +614,7 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -591,7 +631,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td><p>Task.</p>
 </td>
       </tr>
@@ -609,6 +649,22 @@
       <tr>
         <td><span class="parametername">T</span></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>message</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -638,7 +694,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">EventHandler</span>&lt;<span class="xref">EventArgs</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

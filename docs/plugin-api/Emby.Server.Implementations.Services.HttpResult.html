@@ -96,23 +96,47 @@
     <div><a class="xref" href="MediaBrowser.Model.Services.IHasHeaders.html">IHasHeaders</a></div>
     <div><a class="xref" href="MediaBrowser.Model.Services.IAsyncStreamWriter.html">IAsyncStreamWriter</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Services.html">Emby.Server.Implementations.Services</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Services_HttpResult_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HttpResult : object, IHttpResult, IHasHeaders, IAsyncStreamWriter</code></pre>
+    <pre><code class="lang-csharp hljs">public class HttpResult : IHttpResult, IHasHeaders, IAsyncStreamWriter</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Services_HttpResult__ctor_System_Object_System_String_HttpStatusCode_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Services.HttpResult.%23ctor(System.Object%2CSystem.String%2CHttpStatusCode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Services_HttpResult__ctor_System_Object_System_String_System_Net_HttpStatusCode_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Services.HttpResult.%23ctor(System.Object%2CSystem.String%2CSystem.Net.HttpStatusCode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Services/HttpResult.cs/#L13">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Services_HttpResult__ctor_" data-uid="Emby.Server.Implementations.Services.HttpResult.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Services_HttpResult__ctor_System_Object_System_String_HttpStatusCode_" data-uid="Emby.Server.Implementations.Services.HttpResult.#ctor(System.Object,System.String,HttpStatusCode)">HttpResult(Object, String, HttpStatusCode)</h4>
+  <h4 id="Emby_Server_Implementations_Services_HttpResult__ctor_System_Object_System_String_System_Net_HttpStatusCode_" data-uid="Emby.Server.Implementations.Services.HttpResult.#ctor(System.Object,System.String,System.Net.HttpStatusCode)">HttpResult(Object, String, HttpStatusCode)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,7 +164,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">HttpStatusCode</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></td>
         <td><span class="parametername">statusCode</span></td>
         <td></td>
       </tr>
@@ -203,7 +227,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -323,7 +347,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">HttpStatusCode</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.httpstatuscode">HttpStatusCode</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -332,13 +356,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Services_HttpResult_WriteToAsync_Stream_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Services.HttpResult.WriteToAsync(Stream%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Services_HttpResult_WriteToAsync_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Services.HttpResult.WriteToAsync(System.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Services/HttpResult.cs/#L38">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Services_HttpResult_WriteToAsync_" data-uid="Emby.Server.Implementations.Services.HttpResult.WriteToAsync*"></a>
-  <h4 id="Emby_Server_Implementations_Services_HttpResult_WriteToAsync_Stream_CancellationToken_" data-uid="Emby.Server.Implementations.Services.HttpResult.WriteToAsync(Stream,CancellationToken)">WriteToAsync(Stream, CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Services_HttpResult_WriteToAsync_System_IO_Stream_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Services.HttpResult.WriteToAsync(System.IO.Stream,System.Threading.CancellationToken)">WriteToAsync(Stream, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -356,12 +380,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Stream</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">responseStream</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">System.Threading.CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -377,7 +401,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
