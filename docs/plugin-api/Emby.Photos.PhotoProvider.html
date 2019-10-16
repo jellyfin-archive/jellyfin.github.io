@@ -83,7 +83,8 @@
   
   <h1 id="Emby_Photos_PhotoProvider" data-uid="Emby.Photos.PhotoProvider" class="text-break">Class PhotoProvider
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Metadata provider for photos.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -109,18 +110,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider__ctor_ILogger_MediaBrowser_Controller_Drawing_IImageProcessor_.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider.%23ctor(ILogger%2CMediaBrowser.Controller.Drawing.IImageProcessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider__ctor_ILogger_Emby_Photos_PhotoProvider__MediaBrowser_Controller_Drawing_IImageProcessor_.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider.%23ctor(ILogger%7BEmby.Photos.PhotoProvider%7D%2CMediaBrowser.Controller.Drawing.IImageProcessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L36">View Source</a>
   </span>
   <a id="Emby_Photos_PhotoProvider__ctor_" data-uid="Emby.Photos.PhotoProvider.#ctor*"></a>
-  <h4 id="Emby_Photos_PhotoProvider__ctor_ILogger_MediaBrowser_Controller_Drawing_IImageProcessor_" data-uid="Emby.Photos.PhotoProvider.#ctor(ILogger,MediaBrowser.Controller.Drawing.IImageProcessor)">PhotoProvider(ILogger, IImageProcessor)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Emby_Photos_PhotoProvider__ctor_ILogger_Emby_Photos_PhotoProvider__MediaBrowser_Controller_Drawing_IImageProcessor_" data-uid="Emby.Photos.PhotoProvider.#ctor(ILogger{Emby.Photos.PhotoProvider},MediaBrowser.Controller.Drawing.IImageProcessor)">PhotoProvider(ILogger&lt;PhotoProvider&gt;, IImageProcessor)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Photos.PhotoProvider.html">PhotoProvider</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PhotoProvider(ILogger logger, IImageProcessor imageProcessor)</code></pre>
+    <pre><code class="lang-csharp hljs">public PhotoProvider(ILogger&lt;PhotoProvider&gt; logger, IImageProcessor imageProcessor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -133,14 +135,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ILogger</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Emby.Photos.PhotoProvider.html">PhotoProvider</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The logger.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Drawing.IImageProcessor.html">IImageProcessor</a></td>
         <td><span class="parametername">imageProcessor</span></td>
-        <td></td>
+        <td><p>The image processor.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -151,11 +155,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider_Name.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L43">View Source</a>
   </span>
   <a id="Emby_Photos_PhotoProvider_Name_" data-uid="Emby.Photos.PhotoProvider.Name*"></a>
   <h4 id="Emby_Photos_PhotoProvider_Name" data-uid="Emby.Photos.PhotoProvider.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -172,7 +177,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>The name.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -183,7 +189,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider_FetchAsync_MediaBrowser_Controller_Entities_Photo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider.FetchAsync(MediaBrowser.Controller.Entities.Photo%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L58">View Source</a>
   </span>
   <a id="Emby_Photos_PhotoProvider_FetchAsync_" data-uid="Emby.Photos.PhotoProvider.FetchAsync*"></a>
   <h4 id="Emby_Photos_PhotoProvider_FetchAsync_MediaBrowser_Controller_Entities_Photo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_" data-uid="Emby.Photos.PhotoProvider.FetchAsync(MediaBrowser.Controller.Entities.Photo,MediaBrowser.Controller.Providers.MetadataRefreshOptions,CancellationToken)">FetchAsync(Photo, MetadataRefreshOptions, CancellationToken)</h4>
@@ -240,11 +246,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider_HasChanged_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider.HasChanged(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L46">View Source</a>
   </span>
   <a id="Emby_Photos_PhotoProvider_HasChanged_" data-uid="Emby.Photos.PhotoProvider.HasChanged*"></a>
   <h4 id="Emby_Photos_PhotoProvider_HasChanged_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="Emby.Photos.PhotoProvider.HasChanged(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Providers.IDirectoryService)">HasChanged(BaseItem, IDirectoryService)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether the specified item has changed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -263,12 +270,14 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
         <td><span class="parametername">directoryService</span></td>
-        <td></td>
+        <td><p>The directory service.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -283,7 +292,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the specified item has changed; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -317,7 +327,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Photos_PhotoProvider.md&amp;value=---%0Auid%3A%20Emby.Photos.PhotoProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Photos/PhotoProvider.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
