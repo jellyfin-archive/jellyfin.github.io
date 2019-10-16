@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Adding/Managing Users | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Adding/Managing Users | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.46.0.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="server-users-adding-managing">
+<h1 id="addingmanaging-users">Adding/Managing Users</h1>
+
+<p>User management can be done under <code>Users</code> in the <code>Dashboard</code>. Here you can see your current users or add new ones. And manage your users&#39; settings.</p>
+<h2 id="adding-a-user">Adding a User</h2>
+<p>To add a new user, click the <code>+</code> symbol at the top of the page. This will open a new page where you can enter the user&#39;s name as it will be either displayed on, or has to be typed into login screen. By default, this will be displayed, but this can be changed at any point by modifying the user, explained further down.</p>
+<h4 id="library-access">Library Access</h4>
+<p>By default the <code>enables access to all libraries</code> option will be enabled, disabling this option will enable you to give the user access rights per library, libraries can consist of several folders. When adding new libraries any user that did not have access to <code>all libraries</code> will not receive the rights to open the new library, but this can be changed at any point by modifying the user, explained further down.</p>
+<h2 id="manage-a-user">Manage a User</h2>
+<p>To manage a user either click on their portrait to go straight to their <code>Profile</code> tab, or click the <code>...</code> symbol inside that user&#39;s portrait. The later will open a small submenu with the options <code>Open</code> <code>Library access</code> <code>Parental control</code>, and <code>delete</code>. Except for delete, which does the obvious, these options will lead to different tabs but are otherwise all on the same page. <code>Open</code> corresponds to the Profile tab, <code>Library access</code> to access, <code>Parental control</code> to Parental Control, and there is an additional fourth tab <code>Password</code> for Password control. Changes to any option on any of these tabs need to be saved using <code>Save</code> at the bottom of the page.</p>
+<h3 id="profile">Profile</h3>
+<p>Directly under the tabs you have a link to <code>Edit this user&#39;s profile, image and personal preferences.</code> Clicking that allows you to change the user&#39;s personal settings, any setting here can be changed by both user and admin. <!--These options are described [on their own docs page](https://linktopage?) (not written yet)--></p>
+<p>Under <code>name</code> you can change the user&#39;s name as it will be either displayed on, or has to be typed into login screen.</p>
+<p>Under <code>Authentication Provider</code> you have the option to change the backend that handles the login, by default the only option here will be <code>default</code> which means Jellyfin will handle this user, this option is sufficient for most use cases. Currently, the only other possibility is to have a LDAP server handle the login by installing the LDAP-Auth plugin. Note that if you wish to change a user&#39;s provider to LDAP after creating it in Jellyfin the username needs to be identical to the user&#39;s UID in LDAP, including capitalization.</p>
+<p><code>Allow remote connections to this Jellyfin Server.</code> Unchecking this option will block login attempts this user makes from outside the networks defined as local, by default this will only be the subnet assigned to your network. But more can be added. <!-- More information about this can be found [on the docs page for `Expert` » `Advanced`](https://linktopage?) (not written yet)--></p>
+<h4 id="feature-access">Feature Access</h4>
+<p>For the following options it should be noted that if you never set up Live TV, users are blocked regardless of the state. See <a class="xref" href="../live-tv/index.html">the docs page for <code>Live TV</code> » <code>Live TV</code></a> for more information.</p>
+<p><code>Allow Live TV access</code> Unchecking this option will block the user&#39;s access to watch Live TV.</p>
+<p><code>Allow Live TV recording management</code> Unchecking this option will block the user&#39;s access to set recording schedules.</p>
+<h4 id="media-playback">Media Playback</h4>
+<p><code>Allow media playback</code> Unchecking this option will block the user&#39;s access to media libraries, this does not include Live TV.</p>
+<div class="NOTE"><h5>Note</h5><p>More information about transcoding can be found on it&#39;s own page - <a class="xref" href="../transcoding.html">Transcoding</a>.</p>
+</div>
+<p><code>Allow audio/video playback that requires transcoding</code> Unchecking this option will block the user&#39;s access to video playback that requires transcoding.</p>
+<p><code>Allow video playback that requires conversion without re-encoding</code> Unchecking this option will block the user&#39;s access to video playback that requires conversion without re-encoding.</p>
+<p><code>Internet streaming bitrate limit (Mbps)</code> Under this option you can set an per stream bitrate limit for all out of network devices.</p>
+<h4 id="allow-media-deletion-from">Allow Media Deletion From</h4>
+<p>These checkboxes allow a user to remove media for either <code>All libraries</code>, or per Library. Be careful when enabling these as some plugins enable automatic removal of media after watching.</p>
+<h4 id="remote-control">Remote Control</h4>
+<p>These allow a user to control other devices that are currently logged into Jellyfin, for example if you run a separate client on a HTPC without remote control.</p>
+<p><code>Allow remote control of other users</code> Allows this user to control what other users are playing and send messages, but does not give them administrative rights.</p>
+<p><code>Allow remote control of shared devices</code> Allows this user to control unclaimed DLNA devices, and devices they are logged in to at the moment.</p>
+<h4 id="download--sync">Download &amp; Sync</h4>
+<p>These allow a user to download media. Syncing and Transcoding are currently not available.</p>
+<h4 id="additional-options">Additional options</h4>
+<p><code>Allow media conversion</code> This option is currently not available.</p>
+<p><code>Allow social media sharing</code> Allows this user to share the url to web pages containing media information, for example when viewing information about a movie, series, season, or episode.</p>
+<p><code>Disable this user</code> Blocks the user from logging in, existing connections will be abruptly terminated.</p>
+<p><code>Hide this user from login screens</code> Useful for private or hidden administrator accounts. The user will need to sign in manually by entering their username and password. All newly created users are hidden by default.</p>
+<p><code>Failed login attempts before user is locked out</code> Determines how many incorrect login attempts can be made before lockout occurs, disabling the user. 0 means inheriting the default of 3 for non-admin and 5 for admin, -1 disables lockout</p>
+<h3 id="library-access-1">Library Access</h3>
+<p>These options allow you to restrict access to libraries, or from devices.</p>
+<p><code>Enable access to all libraries</code> By default the <code>Enable access to all libraries</code> option will be enabled, disabling this option will enable you to give the user access rights per library, libraries can consist of several folders. When adding new libraries any user that did not have access to <code>all libraries</code> will not receive the rights to open the new library.</p>
+<p><code>Enable access from all devices</code> By default the <code>Enable access from all devices</code> option will be enabled, disabling this option will enable you to give the user access rights per device and logins from new devices are blocked until they&#39;ve been approved here.</p>
+<h3 id="parental-control">Parental Control</h3>
+<p>These options allow you to restrict access to specific content by this user or the timeframe in which they may access. Content that matches these restrictions will be hidden, while the timeframe effectively disables the user.</p>
+<p><code>Maximum allowed parental rating</code> Allows you to select the highest rating <strong>allowed to show up</strong> for this user.</p>
+<p><code>Block items with no or unrecognised rating information</code> Allows you to always hide items with no or unrecognised rating information.</p>
+<p><code>Block items with tags</code> Allows you to always hide items when they contain specific tags, you can add tags to items by editing their metadata.</p>
+<p><code>Access Schedule</code> Allows you to set the timeframe(s) where this user is allowed to login, media can only play during the timeframe and will be stopped past it.</p>
+<h3 id="password">Password</h3>
+<p>Allows you to set or change the user&#39;s password. Note that users can change their own passwords in their personal settings. <!--These options are described [on their own docs page](https://linktopage?) (not written yet) --></p>
+<p><code>Reset Password</code> will allow the user to log in without giving a password.</p>
+<p>If the user has a password, additional options are shown.</p>
+<p><code>Easy Pin Code</code> The user&#39;s easy pin code is used for offline access with supported Jellyfin apps, and can also be used for easy in-network sign in.</p>
+<p><code>Enable in-network sign in with my easy pin code</code> If enabled, the user will be able to use their easy pin code to sign in to Jellyfin apps from inside the local network. Their regular password will only be needed outside the local network. If the pin code is left blank, they won&#39;t need a password within the local network. By default, the local network will only be the subnet assigned to your network, but more can be added. <!--More information about this can be found [on the docs page for `Expert` » `Advanced`](https://linktopage?) (not written yet)--></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/server/users/adding-managing-users.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
