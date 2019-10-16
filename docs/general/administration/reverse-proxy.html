@@ -124,8 +124,8 @@ Ports 80 and 443 (pointing to the proxy server) need to be opened on your Firewa
 #    CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
 #&lt;/VirtualHost&gt;
 #&lt;/IfModule&gt;
-</code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code> or <code>mod_ssl</code> support manually.</p>
-<pre><code>$ sudo a2enmod proxy proxy_http ssl
+</code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code> or <code>proxy_wstunnel</code> support manually.</p>
+<pre><code>$ sudo a2enmod proxy proxy_http ssl proxy_wstunnel
 </code></pre><h2 id="haproxy">HAProxy</h2>
 <pre><code>frontend jellyfin_proxy
     bind *:80
