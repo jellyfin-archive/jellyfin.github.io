@@ -209,13 +209,26 @@
 </ul>
 </li>
 <li>Once you&#39;re succesfully authenticated with the Jellyfin server, you&#39;ll be asked about your preferences for this device<ul>
-<li>Choose your preferences for each option</li>
+<li>Choose your preferences for each options<ul>
+<li>Add-On mode requires no additional configuration</li>
+<li>To get Native mode to work, a few things must be done before the files are accessible, so skipping the initial import is necessary, skip the below steps and continue with the <strong>Native Mode Configuration</strong> steps</li>
+</ul>
+</li>
 <li>Select &quot;Proceed&quot; to configure libraries</li>
 <li>Select the libraries you would like to keep synced with this device</li>
 </ul>
 </li>
 <li>The first sync of the Jellyfin server to the local Kodi database may take some time depending on your device speed and library size</li>
 <li>Once the full sync is done, you can browse and play your media through Kodi, and syncs will be done periodically in the background</li>
+</ol>
+<h5 id="native-mode-configuration">Native Mode Configuration</h5>
+<p>The benefit of Native mode over Add-On mode is that nothing will be transcoded, currently Add-On mode doesn&#39;t support audio with more than 5.1 channels, which means no Dolby Atmos or DTS-X. Since no transcoding happens, files play instantly.</p>
+<ol>
+<li>You need to delete and re-add your libraries on your Jellyfin server in order to set the <strong>Optional Network Path</strong> to your share locations if you haven&#39;t already done so previously, SMB/Samba is preferred, and <strong>must be in the Windows format</strong> using backslashes, <em>even if both the client and server are using Unix-like OSes</em>, for example <strong>\\192.168.1.7\movies</strong>, wait for the import to finish on the server.</li>
+<li>If using a Unix-like OS you must create a local user and Samba user named <strong>guest</strong> (with no password) on your server and allow guest only access to your shares, if using Windows this may already be done for you by default, the <strong>guest</strong> user is hardcoded into the plugin.</li>
+<li>Add in your SMB/Samba shares into Kodi like you normally would when not using the Jellyfin plugin, setting the content type, but it is not necessary to import that data since this will be handled by the Jellyfin plugin.</li>
+<li>Select your libraries to add in using the Jellyfin plugin&#39;s menu, proceed to import your library.</li>
+<li>Your files should now be accessible in Kodi and function the same way as Add-On mode, if not, enable debug logging in the Jellyfin plugin in Kodi and if in a Unix-like OS, set the <strong>log level</strong> of Samba to 2 to see if there are issues authenticating.</li>
 </ol>
 <p><strong>Note: It&#39;s recommended to install the <code>Kodi Sync Queue</code> plugin into the Jellyfin server as well</strong></p>
 <p>This will help keep your media libraries up to date without waiting for a periodic resync from Kodi.</p>
