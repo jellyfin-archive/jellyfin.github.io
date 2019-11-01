@@ -109,11 +109,32 @@
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Entities.html">MediaBrowser.Controller.Entities</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_BaseItem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseItem : object, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseItem : IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -175,7 +196,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string BehindTheScenesFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string BehindTheScenesFolderName = &quot;behind the scenes&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,7 +225,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string DeletedScenesFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string DeletedScenesFolderName = &quot;deleted scenes&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,7 +266,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -262,7 +283,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string ExtrasFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string ExtrasFolderName = &quot;extras&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -291,7 +312,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string InterviewFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string InterviewFolderName = &quot;interviews&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -320,7 +341,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string SampleFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string SampleFolderName = &quot;samples&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -349,7 +370,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string SceneFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string SceneFolderName = &quot;scenes&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -466,7 +487,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string ThemeSongFilename = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string ThemeSongFilename = &quot;theme&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -495,7 +516,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string ThemeSongsFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string ThemeSongsFolderName = &quot;theme-music&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -524,7 +545,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string ThemeVideosFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string ThemeVideosFolderName = &quot;backdrops&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -554,7 +575,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string TrailerFolderName = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string TrailerFolderName = &quot;trailers&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -693,7 +714,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The channel identifier.</p>
 </td>
       </tr>
@@ -973,7 +994,7 @@ If the item is a folder, it returns the folder itself</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>The date created.</p>
 </td>
       </tr>
@@ -1004,7 +1025,7 @@ If the item is a folder, it returns the folder itself</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1034,7 +1055,7 @@ If the item is a folder, it returns the folder itself</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1065,7 +1086,7 @@ If the item is a folder, it returns the folder itself</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">DateTime</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>The date modified.</p>
 </td>
       </tr>
@@ -1126,7 +1147,7 @@ If the item is a folder, it returns the folder itself</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1158,7 +1179,7 @@ Default is based on the type for everything except actual generic folders.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The display prefs id.</p>
 </td>
       </tr>
@@ -1280,7 +1301,7 @@ Default is based on the type for everything except actual generic folders.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
         <td><p>The end date.</p>
 </td>
       </tr>
@@ -1404,7 +1425,7 @@ Default is based on the type for everything except actual generic folders.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -1711,7 +1732,7 @@ Default is based on the type for everything except actual generic folders.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The id.</p>
 </td>
       </tr>
@@ -2632,7 +2653,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2694,7 +2715,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -2909,7 +2930,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
         <td><p>The premiere date.</p>
 </td>
       </tr>
@@ -3065,7 +3086,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Dictionary</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><p>The provider ids.</p>
 </td>
       </tr>
@@ -3127,7 +3148,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaUrl.html">MediaUrl</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaUrl.html">MediaUrl</a>&gt;</td>
         <td><p>The remote trailers.</p>
 </td>
       </tr>
@@ -3798,7 +3819,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -3828,7 +3849,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Guid</span>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td></td>
       </tr>
     </tbody>
@@ -3959,15 +3980,30 @@ This could be episode number, album track number, etc.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_List_MediaBrowser_Model_IO_FileSystemMetadata__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.AddImages(MediaBrowser.Model.Entities.ImageType%2CList%7BMediaBrowser.Model.IO.FileSystemMetadata%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.AddImages(MediaBrowser.Model.Entities.ImageType%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2403">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_AddImages_" data-uid="MediaBrowser.Controller.Entities.BaseItem.AddImages*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_List_MediaBrowser_Model_IO_FileSystemMetadata__" data-uid="MediaBrowser.Controller.Entities.BaseItem.AddImages(MediaBrowser.Model.Entities.ImageType,List{MediaBrowser.Model.IO.FileSystemMetadata})">AddImages(ImageType, List&lt;FileSystemMetadata&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_AddImages_MediaBrowser_Model_Entities_ImageType_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__" data-uid="MediaBrowser.Controller.Entities.BaseItem.AddImages(MediaBrowser.Model.Entities.ImageType,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata})">AddImages(ImageType, List&lt;FileSystemMetadata&gt;)</h4>
   <div class="markdown level1 summary"><p>Adds the images.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -3992,7 +4028,7 @@ This could be episode number, album track number, etc.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td><span class="parametername">images</span></td>
         <td><p>The images.</p>
 </td>
@@ -4011,6 +4047,22 @@ This could be episode number, album track number, etc.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if XXXX, <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Cannot call AddImages with chapter images</p>
 </td>
       </tr>
     </tbody>
@@ -4046,6 +4098,21 @@ This could be episode number, album track number, etc.</p>
         <td><span class="parametername">name</span></td>
         <td><p>The name.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -4238,13 +4305,13 @@ This could be episode number, album track number, etc.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_List_MediaBrowser_Controller_Entities_Folder__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.User%2CList%7BMediaBrowser.Controller.Entities.Folder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.User%2CSystem.Collections.Generic.List%7BMediaBrowser.Controller.Entities.Folder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L516">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_List_MediaBrowser_Controller_Entities_Folder__" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.User,List{MediaBrowser.Controller.Entities.Folder})">CanDelete(User, List&lt;Folder&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_CanDelete_MediaBrowser_Controller_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__" data-uid="MediaBrowser.Controller.Entities.BaseItem.CanDelete(MediaBrowser.Controller.Entities.User,System.Collections.Generic.List{MediaBrowser.Controller.Entities.Folder})">CanDelete(User, List&lt;Folder&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4267,7 +4334,7 @@ This could be episode number, album track number, etc.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>&gt;</td>
         <td><span class="parametername">allCollectionFolders</span></td>
         <td></td>
       </tr>
@@ -4608,7 +4675,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<span class="xref">Tuple</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4638,7 +4705,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4809,7 +4876,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4839,7 +4906,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4933,7 +5000,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -4963,20 +5030,20 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_GetExtras_IReadOnlyCollection_MediaBrowser_Model_Entities_ExtraType__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.GetExtras(IReadOnlyCollection%7BMediaBrowser.Model.Entities.ExtraType%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Collections_Generic_IReadOnlyCollection_MediaBrowser_Model_Entities_ExtraType__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.GetExtras(System.Collections.Generic.IReadOnlyCollection%7BMediaBrowser.Model.Entities.ExtraType%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2888">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_IReadOnlyCollection_MediaBrowser_Model_Entities_ExtraType__" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras(IReadOnlyCollection{MediaBrowser.Model.Entities.ExtraType})">GetExtras(IReadOnlyCollection&lt;ExtraType&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Collections_Generic_IReadOnlyCollection_MediaBrowser_Model_Entities_ExtraType__" data-uid="MediaBrowser.Controller.Entities.BaseItem.GetExtras(System.Collections.Generic.IReadOnlyCollection{MediaBrowser.Model.Entities.ExtraType})">GetExtras(IReadOnlyCollection&lt;ExtraType&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4994,7 +5061,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyCollection</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
         <td><span class="parametername">extraTypes</span></td>
         <td></td>
       </tr>
@@ -5010,7 +5077,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5087,7 +5154,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<span class="xref">Guid</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5204,6 +5271,26 @@ This could be episode number, album track number, etc.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>item</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_GetImages_MediaBrowser_Model_Entities_ImageType_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.GetImages(MediaBrowser.Model.Entities.ImageType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -5246,7 +5333,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5306,7 +5393,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5509,7 +5596,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5613,7 +5700,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5643,7 +5730,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5793,7 +5880,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -5997,7 +6084,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.Providers.ExternalUrl.html">ExternalUrl</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.ExternalUrl.html">ExternalUrl</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6057,7 +6144,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6087,7 +6174,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6147,7 +6234,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6177,7 +6264,7 @@ This could be episode number, album track number, etc.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -6234,6 +6321,22 @@ This could be episode number, album track number, etc.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if the specified type has image; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Backdrops should be accessed using Item.Backdrops</p>
 </td>
       </tr>
     </tbody>
@@ -6300,13 +6403,13 @@ This could be episode number, album track number, etc.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_List_MediaBrowser_Controller_Entities_Folder__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User%2CList%7BMediaBrowser.Controller.Entities.Folder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User%2CSystem.Collections.Generic.List%7BMediaBrowser.Controller.Entities.Folder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L487">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_List_MediaBrowser_Controller_Entities_Folder__" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,List{MediaBrowser.Controller.Entities.Folder})">IsAuthorizedToDelete(User, List&lt;Folder&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_MediaBrowser_Controller_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__" data-uid="MediaBrowser.Controller.Entities.BaseItem.IsAuthorizedToDelete(MediaBrowser.Controller.Entities.User,System.Collections.Generic.List{MediaBrowser.Controller.Entities.Folder})">IsAuthorizedToDelete(User, List&lt;Folder&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -6329,7 +6432,7 @@ This could be episode number, album track number, etc.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>&gt;</td>
         <td><span class="parametername">allCollectionFolders</span></td>
         <td></td>
       </tr>
@@ -6598,6 +6701,22 @@ This could be episode number, album track number, etc.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.IsPathProtocol(MediaBrowser.Model.MediaInfo.MediaProtocol)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -6820,6 +6939,22 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>user</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_MediaBrowser_Controller_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.IsVisibleStandalone(MediaBrowser.Controller.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -6921,13 +7056,13 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_LoadExtras_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.LoadExtras(List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_LoadExtras_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.LoadExtras(System.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L1311">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_LoadExtras_" data-uid="MediaBrowser.Controller.Entities.BaseItem.LoadExtras*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_LoadExtras_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.BaseItem.LoadExtras(List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Controller.Providers.IDirectoryService)">LoadExtras(List&lt;FileSystemMetadata&gt;, IDirectoryService)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_LoadExtras_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.BaseItem.LoadExtras(System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},MediaBrowser.Controller.Providers.IDirectoryService)">LoadExtras(List&lt;FileSystemMetadata&gt;, IDirectoryService)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -6945,7 +7080,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td><span class="parametername">fileSystemChildren</span></td>
         <td></td>
       </tr>
@@ -6973,13 +7108,13 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_DateTime__System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.MarkPlayed(MediaBrowser.Controller.Entities.User%2CSystem.Nullable%7BDateTime%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTime__System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.MarkPlayed(MediaBrowser.Controller.Entities.User%2CSystem.Nullable%7BSystem.DateTime%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2137">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_" data-uid="MediaBrowser.Controller.Entities.BaseItem.MarkPlayed*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_DateTime__System_Boolean_" data-uid="MediaBrowser.Controller.Entities.BaseItem.MarkPlayed(MediaBrowser.Controller.Entities.User,System.Nullable{DateTime},System.Boolean)">MarkPlayed(User, Nullable&lt;DateTime&gt;, Boolean)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_MarkPlayed_MediaBrowser_Controller_Entities_User_System_Nullable_System_DateTime__System_Boolean_" data-uid="MediaBrowser.Controller.Entities.BaseItem.MarkPlayed(MediaBrowser.Controller.Entities.User,System.Nullable{System.DateTime},System.Boolean)">MarkPlayed(User, Nullable&lt;DateTime&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Marks the played.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -7004,7 +7139,7 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<span class="xref">DateTime</span>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
         <td><span class="parametername">datePlayed</span></td>
         <td><p>The date played.</p>
 </td>
@@ -7014,6 +7149,21 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
         <td><span class="parametername">resetPosition</span></td>
         <td><p>if set to <code>true</code> [reset position].</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -7051,6 +7201,21 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
       </tr>
     </tbody>
   </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_OnMetadataChanged.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.OnMetadataChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -7083,13 +7248,13 @@ Default is just parental allowed. Can be overridden for more functionality.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_List_MediaBrowser_Model_IO_FileSystemMetadata__CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CList%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L1427">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_List_MediaBrowser_Model_IO_FileSystemMetadata__CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions,List{MediaBrowser.Model.IO.FileSystemMetadata},CancellationToken)">RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Threading.CancellationToken)">RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Refreshes owned items such as trailers, theme videos, special features, etc.
 Returns true or false indicating if changes were found.</p>
 </div>
@@ -7114,12 +7279,12 @@ Returns true or false indicating if changes were found.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td><span class="parametername">fileSystemChildren</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -7135,67 +7300,20 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L1345">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(CancellationToken)">RefreshMetadata(CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RefreshMetadata(CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">CancellationToken</span></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">Task</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L1366">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(MediaBrowser.Controller.Providers.MetadataRefreshOptions,CancellationToken)">RefreshMetadata(MetadataRefreshOptions, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Threading.CancellationToken)">RefreshMetadata(MetadataRefreshOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Overrides the base implementation to refresh metadata for local trailers</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -7220,7 +7338,7 @@ Returns true or false indicating if changes were found.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -7237,7 +7355,7 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a>&gt;</td>
         <td><p>true if a provider reports we changed</p>
 </td>
       </tr>
@@ -7245,13 +7363,60 @@ Returns true or false indicating if changes were found.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedItem(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Boolean%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L1345">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadata(System.Threading.CancellationToken)">RefreshMetadata(CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task RefreshMetadata(CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedItem(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Boolean%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2654">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedItem*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedItem(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,CancellationToken)">RefreshMetadataForOwnedItem(BaseItem, Boolean, MetadataRefreshOptions, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedItem_MediaBrowser_Controller_Entities_BaseItem_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedItem(MediaBrowser.Controller.Entities.BaseItem,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Threading.CancellationToken)">RefreshMetadataForOwnedItem(BaseItem, Boolean, MetadataRefreshOptions, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7284,7 +7449,7 @@ Returns true or false indicating if changes were found.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -7300,20 +7465,20 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedVideo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedVideo(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Boolean%2CSystem.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedVideo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedVideo(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Boolean%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2709">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedVideo_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedVideo*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedVideo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_System_String_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedVideo(MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Boolean,System.String,CancellationToken)">RefreshMetadataForOwnedVideo(MetadataRefreshOptions, Boolean, String, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RefreshMetadataForOwnedVideo_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RefreshMetadataForOwnedVideo(MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Boolean,System.String,System.Threading.CancellationToken)">RefreshMetadataForOwnedVideo(MetadataRefreshOptions, Boolean, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7346,7 +7511,7 @@ Returns true or false indicating if changes were found.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -7362,7 +7527,7 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -7401,13 +7566,13 @@ Returns true or false indicating if changes were found.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RemoveImages_List_MediaBrowser_Controller_Entities_ItemImageInfo__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RemoveImages(List%7BMediaBrowser.Controller.Entities.ItemImageInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.RemoveImages(System.Collections.Generic.List%7BMediaBrowser.Controller.Entities.ItemImageInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2304">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_RemoveImages_" data-uid="MediaBrowser.Controller.Entities.BaseItem.RemoveImages*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RemoveImages_List_MediaBrowser_Controller_Entities_ItemImageInfo__" data-uid="MediaBrowser.Controller.Entities.BaseItem.RemoveImages(List{MediaBrowser.Controller.Entities.ItemImageInfo})">RemoveImages(List&lt;ItemImageInfo&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__" data-uid="MediaBrowser.Controller.Entities.BaseItem.RemoveImages(System.Collections.Generic.List{MediaBrowser.Controller.Entities.ItemImageInfo})">RemoveImages(List&lt;ItemImageInfo&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7425,7 +7590,7 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">List</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a>&gt;</td>
         <td><span class="parametername">deletedImages</span></td>
         <td></td>
       </tr>
@@ -7574,13 +7739,13 @@ Returns true or false indicating if changes were found.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_SetStudios_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.SetStudios(IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_SetStudios_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.SetStudios(System.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2103">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_SetStudios_" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetStudios*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SetStudios_IEnumerable_System_String__" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetStudios(IEnumerable{System.String})">SetStudios(IEnumerable&lt;String&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_SetStudios_System_Collections_Generic_IEnumerable_System_String__" data-uid="MediaBrowser.Controller.Entities.BaseItem.SetStudios(System.Collections.Generic.IEnumerable{System.String})">SetStudios(IEnumerable&lt;String&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7598,7 +7763,7 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
         <td><span class="parametername">names</span></td>
         <td></td>
       </tr>
@@ -7655,7 +7820,7 @@ Returns true or false indicating if changes were found.</p>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_ToString_" data-uid="MediaBrowser.Controller.Entities.BaseItem.ToString*"></a>
   <h4 id="MediaBrowser_Controller_Entities_BaseItem_ToString" data-uid="MediaBrowser.Controller.Entities.BaseItem.ToString">ToString()</h4>
-  <div class="markdown level1 summary"><p>Returns a <see cref="!:System.String"></see> that represents this instance.</p>
+  <div class="markdown level1 summary"><p>Returns a <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7673,11 +7838,13 @@ Returns true or false indicating if changes were found.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>A <see cref="!:System.String"></see> that represents this instance.</p>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a> that represents this instance.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_TriggerOnRefreshComplete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.TriggerOnRefreshComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -7710,13 +7877,13 @@ Returns true or false indicating if changes were found.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_IList_MediaBrowser_Controller_Entities_BaseItem__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.UpdateRatingToItems(IList%7BMediaBrowser.Controller.Entities.BaseItem%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_System_Collections_Generic_IList_MediaBrowser_Controller_Entities_BaseItem__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.UpdateRatingToItems(System.Collections.Generic.IList%7BMediaBrowser.Controller.Entities.BaseItem%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2848">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateRatingToItems*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_IList_MediaBrowser_Controller_Entities_BaseItem__" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateRatingToItems(IList{MediaBrowser.Controller.Entities.BaseItem})">UpdateRatingToItems(IList&lt;BaseItem&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateRatingToItems_System_Collections_Generic_IList_MediaBrowser_Controller_Entities_BaseItem__" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateRatingToItems(System.Collections.Generic.IList{MediaBrowser.Controller.Entities.BaseItem})">UpdateRatingToItems(IList&lt;BaseItem&gt;)</h4>
   <div class="markdown level1 summary"><p>Updates the official rating based on content and returns true or false indicating if it changed.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -7735,7 +7902,7 @@ Returns true or false indicating if changes were found.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IList</span>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
         <td><span class="parametername">children</span></td>
         <td></td>
       </tr>
@@ -7758,13 +7925,13 @@ Returns true or false indicating if changes were found.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/BaseItem.cs/#L2309">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType,CancellationToken)">UpdateToRepository(ItemUpdateType, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.BaseItem.UpdateToRepository(MediaBrowser.Controller.Library.ItemUpdateType,System.Threading.CancellationToken)">UpdateToRepository(ItemUpdateType, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -7787,7 +7954,7 @@ Returns true or false indicating if changes were found.</p>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>

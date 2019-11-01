@@ -83,92 +83,55 @@
   
   <h1 id="MediaBrowser_Common_Extensions_CollectionExtensions" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions" class="text-break">Class CollectionExtensions
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Provides <code>CopyTo</code> extensions methods for <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList&lt;T&gt;</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">CollectionExtensions</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Common.Extensions.html">MediaBrowser.Common.Extensions</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Common.dll</h6>
   <h5 id="MediaBrowser_Common_Extensions_CollectionExtensions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class CollectionExtensions : object</code></pre>
+    <pre><code class="lang-csharp hljs">public static class CollectionExtensions</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_IReadOnlyCollection___0__IList___0__System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo%60%601(IReadOnlyCollection%7B%60%600%7D%2CIList%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_System_Collections_Generic_IReadOnlyList___0__System_Collections_Generic_IList___0__System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo%60%601(System.Collections.Generic.IReadOnlyList%7B%60%600%7D%2CSystem.Collections.Generic.IList%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CollectionExtensions.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CopyToExtensions.cs/#L18">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo*"></a>
-  <h4 id="MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_IReadOnlyCollection___0__IList___0__System_Int32_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo``1(IReadOnlyCollection{``0},IList{``0},System.Int32)">CopyTo&lt;T&gt;(IReadOnlyCollection&lt;T&gt;, IList&lt;T&gt;, Int32)</h4>
-  <div class="markdown level1 summary"><p>Copies all the elements of the current collection to the specified list
-starting at the specified destination array index. The index is specified as a 32-bit integer.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static void CopyTo&lt;T&gt;(this IReadOnlyCollection&lt;T&gt; source, IList&lt;T&gt; destination, int index = 0)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyCollection</span>&lt;T&gt;</td>
-        <td><span class="parametername">source</span></td>
-        <td><p>The current collection that is the source of the elements.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IList</span>&lt;T&gt;</td>
-        <td><span class="parametername">destination</span></td>
-        <td><p>The list that is the destination of the elements copied from the current collection.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>A 32-bit integer that represents the index in <code>destination</code> at which copying begins.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">T</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_IReadOnlyList___0__IList___0__System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo%60%601(IReadOnlyList%7B%60%600%7D%2CIList%7B%60%600%7D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CollectionExtensions.cs/#L24">View Source</a>
-  </span>
-  <a id="MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo*"></a>
-  <h4 id="MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_IReadOnlyList___0__IList___0__System_Int32_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo``1(IReadOnlyList{``0},IList{``0},System.Int32)">CopyTo&lt;T&gt;(IReadOnlyList&lt;T&gt;, IList&lt;T&gt;, Int32)</h4>
+  <h4 id="MediaBrowser_Common_Extensions_CollectionExtensions_CopyTo__1_System_Collections_Generic_IReadOnlyList___0__System_Collections_Generic_IList___0__System_Int32_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.CopyTo``1(System.Collections.Generic.IReadOnlyList{``0},System.Collections.Generic.IList{``0},System.Int32)">CopyTo&lt;T&gt;(IReadOnlyList&lt;T&gt;, IList&lt;T&gt;, Int32)</h4>
   <div class="markdown level1 summary"><p>Copies all the elements of the current collection to the specified list
 starting at the specified destination array index. The index is specified as a 32-bit integer.</p>
 </div>
@@ -188,13 +151,13 @@ starting at the specified destination array index. The index is specified as a 3
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IReadOnlyList</span>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;T&gt;</td>
         <td><span class="parametername">source</span></td>
         <td><p>The current collection that is the source of the elements.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IList</span>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;T&gt;</td>
         <td><span class="parametername">destination</span></td>
         <td><p>The list that is the destination of the elements copied from the current collection.</p>
 </td>
@@ -222,77 +185,6 @@ starting at the specified destination array index. The index is specified as a 3
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Extensions_CollectionExtensions_GetValueOrDefault__2_IReadOnlyDictionary___0___1____0_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Extensions.CollectionExtensions.GetValueOrDefault%60%602(IReadOnlyDictionary%7B%60%600%2C%60%601%7D%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CollectionExtensions.cs/#L10">View Source</a>
-  </span>
-  <a id="MediaBrowser_Common_Extensions_CollectionExtensions_GetValueOrDefault_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.GetValueOrDefault*"></a>
-  <h4 id="MediaBrowser_Common_Extensions_CollectionExtensions_GetValueOrDefault__2_IReadOnlyDictionary___0___1____0_" data-uid="MediaBrowser.Common.Extensions.CollectionExtensions.GetValueOrDefault``2(IReadOnlyDictionary{``0,``1},``0)">GetValueOrDefault&lt;TKey, TValue&gt;(IReadOnlyDictionary&lt;TKey, TValue&gt;, TKey)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static TValue GetValueOrDefault&lt;TKey, TValue&gt;(this IReadOnlyDictionary&lt;TKey, TValue&gt; dictionary, TKey key)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IReadOnlyDictionary</span>&lt;TKey, TValue&gt;</td>
-        <td><span class="parametername">dictionary</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">TKey</span></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">TValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="typeParameters">Type Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="parametername">TKey</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="parametername">TValue</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
 </article>
           </div>
           
@@ -304,7 +196,7 @@ starting at the specified destination array index. The index is specified as a 3
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Extensions_CollectionExtensions.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Extensions.CollectionExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CollectionExtensions.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Extensions/CopyToExtensions.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -97,11 +97,35 @@
     <div><a class="xref" href="MediaBrowser.Controller.Library.IMetadataFileSaver.html">IMetadataFileSaver</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Library.IMetadataSaver.html">IMetadataSaver</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.LocalMetadata.Savers.html">MediaBrowser.LocalMetadata.Savers</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.LocalMetadata.dll</h6>
   <h5 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class BaseXmlSaver : object, IMetadataFileSaver, IMetadataSaver</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseXmlSaver : IMetadataFileSaver, IMetadataSaver</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -176,7 +200,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public const string DateAddedFormat = null</code></pre>
+    <pre><code class="lang-csharp hljs">public const string DateAddedFormat = &quot;yyyy-MM-dd HH:mm:ss&quot;</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -409,13 +433,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddCommonNodes(MediaBrowser.Controller.Entities.BaseItem%2CXmlWriter%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddCommonNodes(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Xml.XmlWriter%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L159">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddCommonNodes*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddCommonNodes(MediaBrowser.Controller.Entities.BaseItem,XmlWriter,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Configuration.IServerConfigurationManager)">AddCommonNodes(BaseItem, XmlWriter, ILibraryManager, IUserManager, IUserDataManager, IFileSystem, IServerConfigurationManager)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddCommonNodes(MediaBrowser.Controller.Entities.BaseItem,System.Xml.XmlWriter,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Configuration.IServerConfigurationManager)">AddCommonNodes(BaseItem, XmlWriter, ILibraryManager, IUserManager, IUserDataManager, IFileSystem, IServerConfigurationManager)</h4>
   <div class="markdown level1 summary"><p>Adds the common nodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -439,7 +463,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">XmlWriter</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
@@ -472,13 +496,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddLinkedChildren_MediaBrowser_Controller_Entities_Folder_XmlWriter_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddLinkedChildren(MediaBrowser.Controller.Entities.Folder%2CXmlWriter%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddLinkedChildren_MediaBrowser_Controller_Entities_Folder_System_Xml_XmlWriter_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddLinkedChildren(MediaBrowser.Controller.Entities.Folder%2CSystem.Xml.XmlWriter%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L451">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddLinkedChildren_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddLinkedChildren*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddLinkedChildren_MediaBrowser_Controller_Entities_Folder_XmlWriter_System_String_System_String_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddLinkedChildren(MediaBrowser.Controller.Entities.Folder,XmlWriter,System.String,System.String)">AddLinkedChildren(Folder, XmlWriter, String, String)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddLinkedChildren_MediaBrowser_Controller_Entities_Folder_System_Xml_XmlWriter_System_String_System_String_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddLinkedChildren(MediaBrowser.Controller.Entities.Folder,System.Xml.XmlWriter,System.String,System.String)">AddLinkedChildren(Folder, XmlWriter, String, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -501,7 +525,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">XmlWriter</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
@@ -519,13 +543,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddMediaInfo__1___0_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddMediaInfo%60%601(%60%600%2CXmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddMediaInfo__1___0_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddMediaInfo%60%601(%60%600%2CSystem.Xml.XmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L420">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddMediaInfo_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddMediaInfo*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddMediaInfo__1___0_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddMediaInfo``1(``0,XmlWriter)">AddMediaInfo&lt;T&gt;(T, XmlWriter)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddMediaInfo__1___0_System_Xml_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddMediaInfo``1(``0,System.Xml.XmlWriter)">AddMediaInfo&lt;T&gt;(T, XmlWriter)</h4>
   <div class="markdown level1 summary"><p>Appends the media info.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -550,7 +574,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">XmlWriter</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
@@ -573,13 +597,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_MediaBrowser_Controller_Entities_IHasShares_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddShares(MediaBrowser.Controller.Entities.IHasShares%2CXmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_MediaBrowser_Controller_Entities_IHasShares_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddShares(MediaBrowser.Controller.Entities.IHasShares%2CSystem.Xml.XmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L397">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddShares*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_MediaBrowser_Controller_Entities_IHasShares_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddShares(MediaBrowser.Controller.Entities.IHasShares,XmlWriter)">AddShares(IHasShares, XmlWriter)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_MediaBrowser_Controller_Entities_IHasShares_System_Xml_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.AddShares(MediaBrowser.Controller.Entities.IHasShares,System.Xml.XmlWriter)">AddShares(IHasShares, XmlWriter)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -602,7 +626,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">XmlWriter</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>
@@ -813,13 +837,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_MediaBrowser_Controller_Entities_BaseItem_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.Save(MediaBrowser.Controller.Entities.BaseItem%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.Save(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L74">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.Save*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_MediaBrowser_Controller_Entities_BaseItem_CancellationToken_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.Save(MediaBrowser.Controller.Entities.BaseItem,CancellationToken)">Save(BaseItem, CancellationToken)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.Save(MediaBrowser.Controller.Entities.BaseItem,System.Threading.CancellationToken)">Save(BaseItem, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -842,7 +866,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -850,13 +874,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem%2CXmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Xml.XmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BaseXmlSaver.cs/#L151">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_WriteCustomElements_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.WriteCustomElements*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem,XmlWriter)">WriteCustomElements(BaseItem, XmlWriter)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem,System.Xml.XmlWriter)">WriteCustomElements(BaseItem, XmlWriter)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -879,7 +903,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">XmlWriter</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
         <td></td>
       </tr>

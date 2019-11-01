@@ -94,11 +94,35 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.MediaEncoding.Subtitles.html">MediaBrowser.MediaEncoding.Subtitles</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.MediaEncoding.dll</h6>
   <h5 id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SubtitleEncoder : object, ISubtitleEncoder</code></pre>
+    <pre><code class="lang-csharp hljs">public class SubtitleEncoder : ISubtitleEncoder</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -178,13 +202,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_GetSubtitleFileCharacterSet_System_String_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.GetSubtitleFileCharacterSet(System.String%2CSystem.String%2CMediaBrowser.Model.MediaInfo.MediaProtocol%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_GetSubtitleFileCharacterSet_System_String_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.GetSubtitleFileCharacterSet(System.String%2CSystem.String%2CMediaBrowser.Model.MediaInfo.MediaProtocol%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/SubtitleEncoder.cs/#L724">View Source</a>
   </span>
   <a id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_GetSubtitleFileCharacterSet_" data-uid="MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.GetSubtitleFileCharacterSet*"></a>
-  <h4 id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_GetSubtitleFileCharacterSet_System_String_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_CancellationToken_" data-uid="MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.GetSubtitleFileCharacterSet(System.String,System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,CancellationToken)">GetSubtitleFileCharacterSet(String, String, MediaProtocol, CancellationToken)</h4>
+  <h4 id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_GetSubtitleFileCharacterSet_System_String_System_String_MediaBrowser_Model_MediaInfo_MediaProtocol_System_Threading_CancellationToken_" data-uid="MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.GetSubtitleFileCharacterSet(System.String,System.String,MediaBrowser.Model.MediaInfo.MediaProtocol,System.Threading.CancellationToken)">GetSubtitleFileCharacterSet(String, String, MediaProtocol, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -217,7 +241,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
@@ -233,7 +257,91 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="eii">Explicit Interface Implementations
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_MediaBrowser_Controller_Entities_BaseItem_System_String_System_Int32_System_String_System_Int64_System_Int64_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.MediaBrowser%23Controller%23MediaEncoding%23ISubtitleEncoder%23GetSubtitles(MediaBrowser.Controller.Entities.BaseItem%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Int64%2CSystem.Int64%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/SubtitleEncoder.cs/#L118">View Source</a>
+  </span>
+  <a id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_" data-uid="MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.MediaBrowser#Controller#MediaEncoding#ISubtitleEncoder#GetSubtitles*"></a>
+  <h4 id="MediaBrowser_MediaEncoding_Subtitles_SubtitleEncoder_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_GetSubtitles_MediaBrowser_Controller_Entities_BaseItem_System_String_System_Int32_System_String_System_Int64_System_Int64_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.MediaEncoding.Subtitles.SubtitleEncoder.MediaBrowser#Controller#MediaEncoding#ISubtitleEncoder#GetSubtitles(MediaBrowser.Controller.Entities.BaseItem,System.String,System.Int32,System.String,System.Int64,System.Int64,System.Boolean,System.Threading.CancellationToken)">ISubtitleEncoder.GetSubtitles(BaseItem, String, Int32, String, Int64, Int64, Boolean, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;Stream&gt; ISubtitleEncoder.GetSubtitles(BaseItem item, string mediaSourceId, int subtitleStreamIndex, string outputFormat, long startTimeTicks, long endTimeTicks, bool preserveOriginalTimestamps, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">subtitleStreamIndex</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">outputFormat</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">startTimeTicks</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">endTimeTicks</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">preserveOriginalTimestamps</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
