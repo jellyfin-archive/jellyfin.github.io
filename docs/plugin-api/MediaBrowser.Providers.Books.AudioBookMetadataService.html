@@ -110,9 +110,6 @@
       <a class="xref" href="MediaBrowser.Providers.Manager.MetadataService-2.html#MediaBrowser_Providers_Manager_MetadataService_2_FileSystem">MetadataService&lt;AudioBook, SongInfo&gt;.FileSystem</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Providers.Manager.MetadataService-2.html#MediaBrowser_Providers_Manager_MetadataService_2_UserDataManager">MetadataService&lt;AudioBook, SongInfo&gt;.UserDataManager</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Providers.Manager.MetadataService-2.html#MediaBrowser_Providers_Manager_MetadataService_2_LibraryManager">MetadataService&lt;AudioBook, SongInfo&gt;.LibraryManager</a>
     </div>
     <div>
@@ -186,18 +183,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Books_AudioBookMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_ILogger_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Books.AudioBookMetadataService.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CILogger%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Books_AudioBookMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_ILogger_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Books.AudioBookMetadataService.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CILogger%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Books/AudioBookMetadataService.cs/#L14">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Books_AudioBookMetadataService__ctor_" data-uid="MediaBrowser.Providers.Books.AudioBookMetadataService.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_Books_AudioBookMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_ILogger_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Providers.Books.AudioBookMetadataService.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,ILogger,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Library.ILibraryManager)">AudioBookMetadataService(IServerConfigurationManager, ILogger, IProviderManager, IFileSystem, IUserDataManager, ILibraryManager)</h4>
+  <h4 id="MediaBrowser_Providers_Books_AudioBookMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_ILogger_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Providers.Books.AudioBookMetadataService.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,ILogger,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">AudioBookMetadataService(IServerConfigurationManager, ILogger, IProviderManager, IFileSystem, ILibraryManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AudioBookMetadataService(IServerConfigurationManager serverConfigurationManager, ILogger logger, IProviderManager providerManager, IFileSystem fileSystem, IUserDataManager userDataManager, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public AudioBookMetadataService(IServerConfigurationManager serverConfigurationManager, ILogger logger, IProviderManager providerManager, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -230,11 +227,6 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
-        <td><span class="parametername">userDataManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
         <td></td>
@@ -248,7 +240,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Books_AudioBookMetadataService_MergeData_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_AudioBook__MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_AudioBook__MediaBrowser_Model_Entities_MetadataFields___System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Books.AudioBookMetadataService.MergeData(MediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Entities.AudioBook%7D%2CMediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Entities.AudioBook%7D%2CMediaBrowser.Model.Entities.MetadataFields%5B%5D%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Books/AudioBookMetadataService.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Books/AudioBookMetadataService.cs/#L25">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Books_AudioBookMetadataService_MergeData_" data-uid="MediaBrowser.Providers.Books.AudioBookMetadataService.MergeData*"></a>
   <h4 id="MediaBrowser_Providers_Books_AudioBookMetadataService_MergeData_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_AudioBook__MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_AudioBook__MediaBrowser_Model_Entities_MetadataFields___System_Boolean_System_Boolean_" data-uid="MediaBrowser.Providers.Books.AudioBookMetadataService.MergeData(MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.AudioBook},MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.AudioBook},MediaBrowser.Model.Entities.MetadataFields[],System.Boolean,System.Boolean)">MergeData(MetadataResult&lt;AudioBook&gt;, MetadataResult&lt;AudioBook&gt;, MetadataFields[], Boolean, Boolean)</h4>
