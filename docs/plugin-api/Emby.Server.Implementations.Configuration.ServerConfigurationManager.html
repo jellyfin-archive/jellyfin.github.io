@@ -83,7 +83,7 @@
   
   <h1 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager" class="text-break">Class ServerConfigurationManager
   </h1>
-  <div class="markdown level0 summary"><p>Class ServerConfigurationManager</p>
+  <div class="markdown level0 summary"><p>Class ServerConfigurationManager.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -121,6 +121,9 @@
       <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_CommonConfiguration">BaseConfigurationManager.CommonConfiguration</a>
     </div>
     <div>
+      <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__">BaseConfigurationManager.AddParts(IEnumerable&lt;IConfigurationFactory&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_SaveConfiguration">BaseConfigurationManager.SaveConfiguration()</a>
     </div>
     <div>
@@ -131,6 +134,9 @@
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_SaveConfiguration_System_String_System_Object_">BaseConfigurationManager.SaveConfiguration(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_OnNamedConfigurationUpdated_System_String_System_Object_">BaseConfigurationManager.OnNamedConfigurationUpdated(String, Object)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_GetConfigurationType_System_String_">BaseConfigurationManager.GetConfigurationType(String)</a>
@@ -170,7 +176,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_ILoggerFactory_MediaBrowser_Model_Serialization_IXmlSerializer_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.%23ctor(MediaBrowser.Common.Configuration.IApplicationPaths%2CILoggerFactory%2CMediaBrowser.Model.Serialization.IXmlSerializer%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L28">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager__ctor_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.#ctor*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_ILoggerFactory_MediaBrowser_Model_Serialization_IXmlSerializer_MediaBrowser_Model_IO_IFileSystem_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.#ctor(MediaBrowser.Common.Configuration.IApplicationPaths,ILoggerFactory,MediaBrowser.Model.Serialization.IXmlSerializer,MediaBrowser.Model.IO.IFileSystem)">ServerConfigurationManager(IApplicationPaths, ILoggerFactory, IXmlSerializer, IFileSystem)</h4>
@@ -224,7 +230,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_ApplicationPaths.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.ApplicationPaths%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L46">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ApplicationPaths_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ApplicationPaths*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ApplicationPaths" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ApplicationPaths">ApplicationPaths</h4>
@@ -256,7 +262,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_Configuration.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.Configuration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L52">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_Configuration_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.Configuration*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_Configuration" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.Configuration">Configuration</h4>
@@ -288,7 +294,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_ConfigurationType.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.ConfigurationType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L40">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ConfigurationType_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ConfigurationType*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ConfigurationType" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ConfigurationType">ConfigurationType</h4>
@@ -321,44 +327,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.AddParts(System.Collections.Generic.IEnumerable%7BMediaBrowser.Common.Configuration.IConfigurationFactory%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L65">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_AddParts_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.AddParts*"></a>
-  <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Common.Configuration.IConfigurationFactory})">AddParts(IEnumerable&lt;IConfigurationFactory&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void AddParts(IEnumerable&lt;IConfigurationFactory&gt; factories)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Common.Configuration.IConfigurationFactory.html">IConfigurationFactory</a>&gt;</td>
-        <td><span class="parametername">factories</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__">BaseConfigurationManager.AddParts(IEnumerable&lt;IConfigurationFactory&gt;)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnConfigurationUpdated.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnConfigurationUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L57">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnConfigurationUpdated_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnConfigurationUpdated*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnConfigurationUpdated" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnConfigurationUpdated">OnConfigurationUpdated()</h4>
@@ -373,49 +345,10 @@
   <div><a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_OnConfigurationUpdated">BaseConfigurationManager.OnConfigurationUpdated()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnNamedConfigurationUpdated_System_String_System_Object_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnNamedConfigurationUpdated(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L99">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnNamedConfigurationUpdated_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnNamedConfigurationUpdated*"></a>
-  <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_OnNamedConfigurationUpdated_System_String_System_Object_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.OnNamedConfigurationUpdated(System.String,System.Object)">OnNamedConfigurationUpdated(String, Object)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override void OnNamedConfigurationUpdated(string key, object configuration)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">key</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
-        <td><span class="parametername">configuration</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Emby.Server.Implementations.AppBase.BaseConfigurationManager.html#Emby_Server_Implementations_AppBase_BaseConfigurationManager_OnNamedConfigurationUpdated_System_String_System_Object_">BaseConfigurationManager.OnNamedConfigurationUpdated(String, Object)</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_ReplaceConfiguration_MediaBrowser_Model_Configuration_BaseApplicationConfiguration_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.ReplaceConfiguration(MediaBrowser.Model.Configuration.BaseApplicationConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L114">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L84">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ReplaceConfiguration_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ReplaceConfiguration*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ReplaceConfiguration_MediaBrowser_Model_Configuration_BaseApplicationConfiguration_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ReplaceConfiguration(MediaBrowser.Model.Configuration.BaseApplicationConfiguration)">ReplaceConfiguration(BaseApplicationConfiguration)</h4>
@@ -466,7 +399,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_SetOptimalValues.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.SetOptimalValues%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L171">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L140">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_SetOptimalValues_" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.SetOptimalValues*"></a>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_SetOptimalValues" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.SetOptimalValues">SetOptimalValues()</h4>
@@ -498,7 +431,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager_ConfigurationUpdating.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager.ConfigurationUpdating%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L34">View Source</a>
   </span>
   <h4 id="Emby_Server_Implementations_Configuration_ServerConfigurationManager_ConfigurationUpdating" data-uid="Emby.Server.Implementations.Configuration.ServerConfigurationManager.ConfigurationUpdating">ConfigurationUpdating</h4>
   <div class="markdown level1 summary"></div>
@@ -553,7 +486,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Configuration_ServerConfigurationManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Configuration.ServerConfigurationManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Configuration/ServerConfigurationManager.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
