@@ -129,6 +129,11 @@
 <li>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin:<br> <code>sudo usermod -a -G video jellyfin</code>
  <code>sudo systemctl restart jellyfin</code>   </li>
 <li>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard</li>
+<li><p>Change the amount of memory allocated to the GPU, as the Pi&#39;s GPU can&#39;t handle accelerated decoding and encoding simultaneously:
+ <code>sudo nano /boot/config.txt</code></p>
+<p> Find the line that starts with <code>gpu_mem=</code> and replace it with <code>gpu_mem=256</code>.</p>
+<p> You can set any value, but 256 was thoroughly tested to be the minimum recommended for the best results.</p>
+</li>
 </ol>
 <p>Note: In testing transcoding was not working fast enough to run in real time because the video was being resized. The Pi 3 is likely not fast enough to resize as part of the transcoding.</p>
 </article>
