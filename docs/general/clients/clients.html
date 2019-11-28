@@ -166,14 +166,14 @@
 <h2 id="kodi">Kodi</h2>
 <h3 id="jellyfin-for-kodi">Jellyfin for Kodi</h3>
 <p>The official Jellyfin Kodi plugin.</p>
-<p><strong>Status:</strong> ⭐ Receiving patches</p>
+<p><strong>Status:</strong> ⭐ Active</p>
 <p><strong>Links:</strong></p>
 <ul>
 <li><a href="https://github.com/jellyfin/jellyfin-kodi">GitHub</a></li>
 </ul>
 <h4 id="installing">Installing</h4>
 <ol>
-<li>Download the repository installer <a href="https://jellyfin.org/downloads/clients/#kodi-repository">here</a><ul>
+<li>Download the repository installer <a href="https://repo.jellyfin.org/releases/client/kodi/repository.jellyfin.kodi.zip">here</a><ul>
 <li>It will be saved as <code>repository.jellyfin.kodi.zip</code></li>
 </ul>
 </li>
@@ -197,10 +197,13 @@
 <li>Within a few seconds you should be prompted for your server-details.<ul>
 <li>If a Jellyfin server is detected on your local network, it will displayed in the popup</li>
 <li>If a Jellyfin server is not detected on your local network, select &quot;Manually add server&quot;<ul>
-<li>Enter the server name or IP address and the port number (default is 8096)</li>
+<li>Note that if you have a baseurl set, you should append that value to the end of the host field.  ie: <code>192.168.0.10:8096/jellyfin</code></li>
+<li>Enter the server name or IP address and the port number (default is 8096)<ul>
+<li>Host: <code>192.168.1.10:8096</code></li>
+</ul>
+</li>
 <li>If using SSL and a reverse proxy, enter the full URL scheme in the &quot;Host&quot; field<ul>
-<li>Host: <a href="https://jellyfin.example.com">https://jellyfin.example.com</a></li>
-<li>Port: 443</li>
+<li>Host: <code>https://jellyfin.example.com</code></li>
 </ul>
 </li>
 </ul>
