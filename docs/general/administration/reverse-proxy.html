@@ -320,38 +320,48 @@ service haproxy reload
 <p>Add a job to cron so the certificate will be renewed automatically:</p>
 <p><code>echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot</code></p>
 <h2 id="traefik-with-docker-compose">Traefik (with docker-compose)</h2>
-<p>Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. (<a href="https://traefik.io/">https://traefik.io/</a>)</p>
+<p>Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. (<a href="https://traefik.io/">https://traefik.io/</a>). </p>
 <p>Traefik needs 3 files in the SAME directory (or you must change pathes in the volume section) : docker-compose.yml, traefik.toml and acme.json.</p>
 <p>This configuration is A+ (SSLlabs)</p>
 <p>docker-compose.yml :</p>
 <pre><code>version: &#39;3&#39;
 
 services:
-  proxy:
-    container_name: Traefik
-    image: traefik:alpine
-    command: --web --docker --docker.domain=${DOMAIN} --logLevel=&quot;INFO&quot;
+  traefik:
+    container_name: traefik
+    hostname: traefik
+    image: traefik:traefik:v1.7.19
     networks:
       - traefik
     ports:
       - 80:80
       - 443:443
-    expose:
-      - 8080
+      - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./traefik.toml:/traefik.toml
       - ./acme.json:/acme.json
-    restart: unless-stopped
     labels:
-      - &quot;traefik.frontend.rule=Host:${DOMAIN_OF_THE_WEB_ADMIN_INTERFACE}&quot;
-      - &quot;traefik.port=8080&quot;
-      - &quot;traefik.backend=Traefik-Admin&quot;
-      - &quot;traefik.frontend.entryPoints=https&quot;
-      - &quot;traefik.frontend.headers.forceSTSHeader=true&quot;
-      - &quot;traefik.frontend.headers.STSSeconds=315360000&quot;
-      - &quot;traefik.frontend.headers.STSIncludeSubdomains=true&quot;
-      - &quot;traefik.frontend.headers.STSPreload=true&quot;
+      traefik.enable: &quot;true&quot;
+      traefik.backend: traefik
+      traefik.port: 8080
+      traefik.frontend.rule: Host:traefik.${DOMAINNAME},
+      traefik.frontend.entryPoints: http
+      traefik.frontend.passHostHeader: &quot;true&quot;
+      traefik.frontend.headers.SSLForceHost: &quot;true&quot;
+      traefik.frontend.headers.SSLHost: traefik.${DOMAINNAME}
+      traefik.frontend.headers.SSLRedirect: &quot;true&quot;
+      traefik.frontend.headers.browserXSSFilter: &quot;true&quot;
+      traefik.frontend.headers.contentTypeNosniff: &quot;true&quot;
+      traefik.frontend.headers.forceSTSHeader: &quot;true&quot;
+      traefik.frontend.headers.STSSeconds: 315360000
+      traefik.frontend.headers.STSIncludeSubdomains: &quot;true&quot;
+      traefik.frontend.headers.STSPreload: &quot;true&quot;
+      traefik.frontend.headers.customResponseHeaders: X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex
+      traefik.frontend.headers.frameDeny: &quot;true&quot;
+      traefik.frontend.headers.customFrameOptionsValue: &#39;allow-from https://${DOMAINNAME}&#39;
+    restart: unless-stopped
+
 networks:
   traefik:
     external: true
@@ -361,15 +371,12 @@ networks:
 <p> <code>&lt;USER&gt;:$$apr1$$ryHGa8yK$$5lRELezhgkUtJxiJ.XTfZ.</code></p>
 <p>This output needs to be placed in our docker-compose.yml now as a (traefik) label and add this label :</p>
 <p><code>- &quot;traefik.frontend.auth.basic=&lt;USER-PASSWORD-OUTPUT&gt;&quot;</code></p>
-<p> traefik.toml : </p>
+<p>Note: all dollar signs in the hash need to be doubled for escaping inside the yaml. If placed in a static file such as /etc/environment or an .env file, double escaping is not required.</p>
+<p>The toml can&#39;t support environment variables, ensure you don&#39;t attempt to use variables.</p>
+<p>traefik.toml : </p>
 <pre><code>
-
-logLevel = &quot;DEBUG&quot;
+logLevel = &quot;WARN&quot;
 defaultEntryPoints = [&quot;http&quot;, &quot;https&quot;]
-
-[docker]
-domain = &quot;${DOMAIN}&quot;
-watch = true
 
 [entryPoints]
   [entryPoints.http]
@@ -390,59 +397,89 @@ watch = true
       &quot;TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256&quot;,
       &quot;TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&quot;
     ]
+  [entryPoints.monitor]
+  address = &quot;:8080&quot;
+
+[retry]
 
 [acme]
-  email=&quot;yourmail@mail.com&quot;
-  storage=&quot;acme.json&quot;
-  entryPoint=&quot;https&quot;
-  acmeLogging=true
-  onDemand=false
-  OnHostRule=true
-[acme.httpChallenge]
-  entryPoint = &quot;http&quot;
+acmeLogging = true
+email = &quot;user@example.com&quot;
+storage = &quot;/acme.json&quot;
+entryPoint = &quot;https&quot;
+  [acme.dnsChallenge]
+    provider = &quot;provider&quot;
+    delayBeforeCheck = &quot;60&quot;
+#[acme.httpChallenge]
+#  entryPoint = &quot;http&quot;
 
+[[acme.domains]]
+  main = &quot;domain.tld&quot;
+[[acme.domains]]
+  main = &quot;*.domain.tld&quot;
+
+[docker]
+endpoint = &quot;unix:///var/run/docker.sock&quot;
+domain = &quot;domain.tld&quot;
+watch = true
+exposedbydefault = false
+network = &quot;traefik_network_name&quot;
 </code></pre><p>Finally, create an empty acme.json : <code>touch acme.json</code> <code>chmod 600 acme.json</code> </p>
-<p>IMPORTANT ! Change ${DOMAIN} by your domain / subdomain name, and change the mail of the acme (yourmail@mail.com in traefik.toml)</p>
+<p>IMPORTANT ! Change domain.tld by your domain / subdomain name, and change the mail of the acme (user@example.com in traefik.toml). Let&#39;s Encrypt does not require a valid email address however example.com will be flagged as not a proper email address.</p>
 <p>Launch Traefik : <code>docker-compose up -d</code></p>
 <p>Congratulation, your RP is UP !</p>
 <p>For Jellyfin, just launch your Jellyfin server with this docker-compose <code>docker-compose up -d</code>.</p>
-<p>Note you must change the ${JELLYFIN_DOMAIN} for your domain, like jellyfin.mydomain.xyz for exemple.</p>
+<p>Note you must change the ${JELLYFIN_DOMAIN} for your domain, like jellyfin.mydomain.xyz for example. If using an HDHomeRun, use network_mode: host, remove the traefik network information for proper building of the yaml.</p>
 <pre><code>
-version: &#39;2&#39;
+version: &#39;3&#39;
 
 services:
   jellyfin:
     image: jellyfin/jellyfin:latest
     container_name: Jellyfin
-    restart: always
-    labels:
-      - &quot;traefik.frontend.rule=Host:${JELLYFIN_DOMAIN}&quot;
-      - &quot;traefik.port=8096&quot;
-      - &quot;traefik.backend=JellyFin&quot;
-      - &quot;traefik.frontend.entryPoints=https&quot;
-      - &quot;traefik.frontend.headers.forceSTSHeader=true&quot;
-      - &quot;traefik.frontend.headers.STSSeconds=315360000&quot;
-      - &quot;traefik.frontend.headers.STSIncludeSubdomains=true&quot;
-      - &quot;traefik.frontend.headers.STSPreload=true&quot;
-    expose:
-      - 8096
+    hostname: jellyfin
+#    network_mode: host
+    networks:
+      - traefik
+    ports:
+      - &quot;8096:8096&quot;
+      - &quot;8920:8920&quot;
     volumes:
       - /path/to/data:/share:rw
       - ./conf:/config:rw
       - /etc/localtime:/etc/localtime:ro
     environment:
-      - APP_UID=1000
-      - APP_GID=100
-      - GIDLIST=100 #A comma-separated list of additional GIDs to run emby as (default 2)#
-      - TZ=Europe/Paris
-    networks:
-      - traefik
+      APP_UID: 1000
+      APP_UID: 1000
+      TZ: Europe/Paris
+      UMASK_SET: 022
+      GIDLIST=100 #A comma-separated list of additional GIDs to run emby as (default 2)#
+    labels:
+      traefik.enable: &quot;true&quot;
+      traefik.backend: jellyfin
+      traefik.port: 8096
+      traefik.frontend.rule: Host:jellyfin.${DOMAINNAME},
+      traefik.frontend.entryPoints: http
+      traefik.frontend.passHostHeader: &quot;true&quot;
+      traefik.frontend.headers.SSLForceHost: &quot;true&quot;
+      traefik.frontend.headers.SSLHost: jellyfin.${DOMAINNAME}
+      traefik.frontend.headers.SSLRedirect: &quot;true&quot;
+      traefik.frontend.headers.browserXSSFilter: &quot;true&quot;
+      traefik.frontend.headers.contentTypeNosniff: &quot;true&quot;
+      traefik.frontend.headers.forceSTSHeader: &quot;true&quot;
+      traefik.frontend.headers.STSSeconds: 315360000
+      traefik.frontend.headers.STSIncludeSubdomains: &quot;true&quot;
+      traefik.frontend.headers.STSPreload: &quot;true&quot;
+      traefik.frontend.headers.customResponseHeaders: X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex
+      traefik.frontend.headers.frameDeny: &quot;true&quot;
+      traefik.frontend.headers.customFrameOptionsValue: &#39;allow-from https://${DOMAINNAME}&#39;
+    restart: unless-stopped
 
 networks:
   traefik:
     external: true
 
-</code></pre><p>Go to jellyfin.mysite.xyz (in this case), and your Jellyfin is UP and HTTPS (AES 256).</p>
+</code></pre><p>Go to jellyfin.mysite.xyz (in this case), and your jellyfin is UP with HTTPS (AES 256).</p>
 <h1 id="final-steps">Final steps</h1>
 <p>It&#39;s strongly recommend that you check your SSL strength and server security at <a href="https://www.ssllabs.com/ssltest/analyze.html">SSLLabs</a></p>
 </article>
