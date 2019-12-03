@@ -87,7 +87,7 @@
 <ol>
 <li>Get the latest image:<br> <code>docker pull jellyfin/jellyfin</code></li>
 <li>Create directories on the host for persistent data storage:<br> <code>mkdir /path/to/config</code><br> <code>mkdir /path/to/cache</code></li>
-<li>Start the server:<br> <code>docker run -d \</code><br> <code>--volume /path/to/config:/config \</code><br> <code>--volume /path/to/cache:/cache \</code><br> <code>--volume /path/to/media:/media \</code><br> <code>--net=host \</code><br> <code>jellyfin/jellyfin</code>  </li>
+<li>Start the server:<br> <code>docker run -d \</code><br> <code>--volume /path/to/config:/config \</code><br> <code>--volume /path/to/cache:/cache \</code><br> <code>--volume /path/to/media:/media \</code><br> <code>--net=host \</code><br> <code>--restart=unless-stopped \</code><br> <code>jellyfin/jellyfin</code>  </li>
 </ol>
 <p>Alternatively, using docker-compose:  </p>
 <pre><code>version: &quot;3&quot;  
