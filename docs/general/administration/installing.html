@@ -260,7 +260,7 @@ Navigate to Playback tab in the Dashboard and set the path to FFmpeg under FFmpe
 <ol>
 <li><p>Install HTTPS transport for APT if you haven&#39;t already:<br> <code>sudo apt install apt-transport-https</code></p>
 </li>
-<li><p>Import the GPG signing key (signed by the Jellyfin Team):<br> <code>wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
+<li><p>Import the GPG signing key (signed by the Jellyfin Team):<br> <code>wget -qO - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
 </li>
 <li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:<br> <code>echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list</code></p>
 <p> <strong>NOTE:</strong> Supported releases are: <code>stretch</code> and <code>buster</code>.</p>
