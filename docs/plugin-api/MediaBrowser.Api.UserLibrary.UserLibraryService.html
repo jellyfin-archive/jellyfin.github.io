@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,18 +185,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserViewManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService__ctor_ILogger_MediaBrowser_Api_UserLibrary_UserLibraryService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.%23ctor(ILogger%7BMediaBrowser.Api.UserLibrary.UserLibraryService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserViewManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L273">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L275">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService__ctor_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserViewManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Net.IAuthorizationContext)">UserLibraryService(IUserManager, ILibraryManager, IUserDataManager, IDtoService, IUserViewManager, IFileSystem, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService__ctor_ILogger_MediaBrowser_Api_UserLibrary_UserLibraryService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.#ctor(ILogger{MediaBrowser.Api.UserLibrary.UserLibraryService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserViewManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Net.IAuthorizationContext)">UserLibraryService(ILogger&lt;UserLibraryService&gt;, IServerConfigurationManager, IHttpResultFactory, IUserManager, ILibraryManager, IUserDataManager, IDtoService, IUserViewManager, IFileSystem, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserLibraryService(IUserManager userManager, ILibraryManager libraryManager, IUserDataManager userDataRepository, IDtoService dtoService, IUserViewManager userViewManager, IFileSystem fileSystem, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserLibraryService(ILogger&lt;UserLibraryService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, ILibraryManager libraryManager, IUserDataManager userDataRepository, IDtoService dtoService, IUserViewManager userViewManager, IFileSystem fileSystem, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,6 +208,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.UserLibrary.UserLibraryService.html">UserLibraryService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
@@ -249,7 +267,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_MediaBrowser_Api_UserLibrary_DeleteUserItemRating_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Delete(MediaBrowser.Api.UserLibrary.DeleteUserItemRating)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L521">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L534">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Delete*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_MediaBrowser_Api_UserLibrary_DeleteUserItemRating_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Delete(MediaBrowser.Api.UserLibrary.DeleteUserItemRating)">Delete(DeleteUserItemRating)</h4>
@@ -298,7 +316,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_MediaBrowser_Api_UserLibrary_UnmarkFavoriteItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Delete(MediaBrowser.Api.UserLibrary.UnmarkFavoriteItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L487">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L500">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Delete*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Delete_MediaBrowser_Api_UserLibrary_UnmarkFavoriteItem_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Delete(MediaBrowser.Api.UserLibrary.UnmarkFavoriteItem)">Delete(UnmarkFavoriteItem)</h4>
@@ -347,7 +365,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetIntros_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetIntros)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L451">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L464">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetIntros_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetIntros)">Get(GetIntros)</h4>
@@ -397,7 +415,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L392">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L405">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetItem_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetItem)">Get(GetItem)</h4>
@@ -447,7 +465,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetLatestMedia_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetLatestMedia)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L296">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L309">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetLatestMedia_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetLatestMedia)">Get(GetLatestMedia)</h4>
@@ -494,7 +512,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetLocalTrailers_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetLocalTrailers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L362">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L375">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetLocalTrailers_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetLocalTrailers)">Get(GetLocalTrailers)</h4>
@@ -544,7 +562,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetRootFolder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetRootFolder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L433">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L446">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetRootFolder_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetRootFolder)">Get(GetRootFolder)</h4>
@@ -594,7 +612,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetSpecialFeatures_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetSpecialFeatures)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L289">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L302">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Get_MediaBrowser_Api_UserLibrary_GetSpecialFeatures_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Get(MediaBrowser.Api.UserLibrary.GetSpecialFeatures)">Get(GetSpecialFeatures)</h4>
@@ -644,7 +662,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Post_MediaBrowser_Api_UserLibrary_MarkFavoriteItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Post(MediaBrowser.Api.UserLibrary.MarkFavoriteItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L476">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L489">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Post_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Post_MediaBrowser_Api_UserLibrary_MarkFavoriteItem_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Post(MediaBrowser.Api.UserLibrary.MarkFavoriteItem)">Post(MarkFavoriteItem)</h4>
@@ -693,7 +711,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService_Post_MediaBrowser_Api_UserLibrary_UpdateUserItemRating_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService.Post(MediaBrowser.Api.UserLibrary.UpdateUserItemRating)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L532">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L545">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_UserLibraryService_Post_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_UserLibraryService_Post_MediaBrowser_Api_UserLibrary_UpdateUserItemRating_" data-uid="MediaBrowser.Api.UserLibrary.UserLibraryService.Post(MediaBrowser.Api.UserLibrary.UpdateUserItemRating)">Post(UpdateUserItemRating)</h4>
@@ -755,7 +773,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_UserLibraryService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.UserLibraryService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L262" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/UserLibraryService.cs/#L264" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

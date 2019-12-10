@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,19 +185,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.%23ctor(MediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService__ctor_ILogger_MediaBrowser_Api_LocalizationService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.%23ctor(ILogger%7BMediaBrowser.Api.LocalizationService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Api_LocalizationService__ctor_" data-uid="MediaBrowser.Api.LocalizationService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_LocalizationService__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Api.LocalizationService.#ctor(MediaBrowser.Model.Globalization.ILocalizationManager)">LocalizationService(ILocalizationManager)</h4>
+  <h4 id="MediaBrowser_Api_LocalizationService__ctor_ILogger_MediaBrowser_Api_LocalizationService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Api.LocalizationService.#ctor(ILogger{MediaBrowser.Api.LocalizationService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Model.Globalization.ILocalizationManager)">LocalizationService(ILogger&lt;LocalizationService&gt;, IServerConfigurationManager, IHttpResultFactory, ILocalizationManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Api.LocalizationService.html">LocalizationService</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LocalizationService(ILocalizationManager localization)</code></pre>
+    <pre><code class="lang-csharp hljs">public LocalizationService(ILogger&lt;LocalizationService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, ILocalizationManager localization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,6 +209,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.LocalizationService.html">LocalizationService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
         <td><span class="parametername">localization</span></td>
@@ -221,7 +239,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetCountries_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetCountries)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L91">View Source</a>
   </span>
   <a id="MediaBrowser_Api_LocalizationService_Get_" data-uid="MediaBrowser.Api.LocalizationService.Get*"></a>
   <h4 id="MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetCountries_" data-uid="MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetCountries)">Get(GetCountries)</h4>
@@ -271,7 +289,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetCultures_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetCultures)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L103">View Source</a>
   </span>
   <a id="MediaBrowser_Api_LocalizationService_Get_" data-uid="MediaBrowser.Api.LocalizationService.Get*"></a>
   <h4 id="MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetCultures_" data-uid="MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetCultures)">Get(GetCultures)</h4>
@@ -321,7 +339,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetLocalizationOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetLocalizationOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L72">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L79">View Source</a>
   </span>
   <a id="MediaBrowser_Api_LocalizationService_Get_" data-uid="MediaBrowser.Api.LocalizationService.Get*"></a>
   <h4 id="MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetLocalizationOptions_" data-uid="MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetLocalizationOptions)">Get(GetLocalizationOptions)</h4>
@@ -368,7 +386,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetParentalRatings_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetParentalRatings)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L72">View Source</a>
   </span>
   <a id="MediaBrowser_Api_LocalizationService_Get_" data-uid="MediaBrowser.Api.LocalizationService.Get*"></a>
   <h4 id="MediaBrowser_Api_LocalizationService_Get_MediaBrowser_Api_GetParentalRatings_" data-uid="MediaBrowser.Api.LocalizationService.Get(MediaBrowser.Api.GetParentalRatings)">Get(GetParentalRatings)</h4>
@@ -431,7 +449,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_LocalizationService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.LocalizationService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L43" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/LocalizationService.cs/#L45" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

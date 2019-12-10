@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,19 +185,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.%23ctor(MediaBrowser.Controller.IServerApplicationPaths%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.ILibraryMonitor%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService__ctor_ILogger_MediaBrowser_Api_Library_LibraryStructureService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.%23ctor(ILogger%7BMediaBrowser.Api.Library.LibraryStructureService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.ILibraryMonitor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L190">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L189">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService__ctor_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Library_LibraryStructureService__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.#ctor(MediaBrowser.Controller.IServerApplicationPaths,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.ILibraryMonitor,MediaBrowser.Model.IO.IFileSystem)">LibraryStructureService(IServerApplicationPaths, ILibraryManager, ILibraryMonitor, IFileSystem)</h4>
+  <h4 id="MediaBrowser_Api_Library_LibraryStructureService__ctor_ILogger_MediaBrowser_Api_Library_LibraryStructureService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.#ctor(ILogger{MediaBrowser.Api.Library.LibraryStructureService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.ILibraryMonitor)">LibraryStructureService(ILogger&lt;LibraryStructureService&gt;, IServerConfigurationManager, IHttpResultFactory, ILibraryManager, ILibraryMonitor)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Api.Library.LibraryStructureService.html">LibraryStructureService</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LibraryStructureService(IServerApplicationPaths appPaths, ILibraryManager libraryManager, ILibraryMonitor libraryMonitor, IFileSystem fileSystem)</code></pre>
+    <pre><code class="lang-csharp hljs">public LibraryStructureService(ILogger&lt;LibraryStructureService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, ILibraryManager libraryManager, ILibraryMonitor libraryMonitor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,8 +210,18 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationPaths.html">IServerApplicationPaths</a></td>
-        <td><span class="parametername">appPaths</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Library.LibraryStructureService.html">LibraryStructureService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
         <td></td>
       </tr>
       <tr>
@@ -221,11 +234,6 @@
         <td><span class="parametername">libraryMonitor</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -235,7 +243,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Delete_MediaBrowser_Api_Library_RemoveMediaPath_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Delete(MediaBrowser.Api.Library.RemoveMediaPath)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L382">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L381">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Delete_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Delete*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Delete_MediaBrowser_Api_Library_RemoveMediaPath_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Delete(MediaBrowser.Api.Library.RemoveMediaPath)">Delete(RemoveMediaPath)</h4>
@@ -269,7 +277,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Delete_MediaBrowser_Api_Library_RemoveVirtualFolder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Delete(MediaBrowser.Api.Library.RemoveVirtualFolder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L311">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L310">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Delete_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Delete*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Delete_MediaBrowser_Api_Library_RemoveVirtualFolder_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Delete(MediaBrowser.Api.Library.RemoveVirtualFolder)">Delete(RemoveVirtualFolder)</h4>
@@ -318,7 +326,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Get_MediaBrowser_Api_Library_GetVirtualFolders_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Get(MediaBrowser.Api.Library.GetVirtualFolders)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L208">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L207">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Get_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Get*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Get_MediaBrowser_Api_Library_GetVirtualFolders_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Get(MediaBrowser.Api.Library.GetVirtualFolders)">Get(GetVirtualFolders)</h4>
@@ -368,7 +376,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_AddMediaPath_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.AddMediaPath)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L320">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L319">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Post_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_AddMediaPath_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.AddMediaPath)">Post(AddMediaPath)</h4>
@@ -402,7 +410,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_AddVirtualFolder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.AddVirtualFolder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L226">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L225">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Post_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_AddVirtualFolder_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.AddVirtualFolder)">Post(AddVirtualFolder)</h4>
@@ -451,7 +459,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_RenameVirtualFolder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.RenameVirtualFolder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L242">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L241">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Post_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_RenameVirtualFolder_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.RenameVirtualFolder)">Post(RenameVirtualFolder)</h4>
@@ -485,7 +493,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_UpdateLibraryOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.UpdateLibraryOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L215">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L214">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Post_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_UpdateLibraryOptions_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.UpdateLibraryOptions)">Post(UpdateLibraryOptions)</h4>
@@ -517,7 +525,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_UpdateMediaPath_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.UpdateMediaPath)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L368">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L367">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Library_LibraryStructureService_Post_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post*"></a>
   <h4 id="MediaBrowser_Api_Library_LibraryStructureService_Post_MediaBrowser_Api_Library_UpdateMediaPath_" data-uid="MediaBrowser.Api.Library.LibraryStructureService.Post(MediaBrowser.Api.Library.UpdateMediaPath)">Post(UpdateMediaPath)</h4>
@@ -564,7 +572,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Library_LibraryStructureService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Library.LibraryStructureService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L170" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Library/LibraryStructureService.cs/#L171" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,18 +185,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CINetworkManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService__ctor_ILogger_MediaBrowser_Api_UserService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.%23ctor(ILogger%7BMediaBrowser.Api.UserService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Session.ISessionManager%2CINetworkManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L252">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L251">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService__ctor_" data-uid="MediaBrowser.Api.UserService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_UserService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserService.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,INetworkManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Net.IAuthorizationContext)">UserService(IUserManager, ISessionManager, IServerConfigurationManager, INetworkManager, IDeviceManager, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_UserService__ctor_ILogger_MediaBrowser_Api_UserService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserService.#ctor(ILogger{MediaBrowser.Api.UserService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Session.ISessionManager,INetworkManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Net.IAuthorizationContext)">UserService(ILogger&lt;UserService&gt;, IServerConfigurationManager, IHttpResultFactory, IUserManager, ISessionManager, INetworkManager, IDeviceManager, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserService(IUserManager userManager, ISessionManager sessionMananger, IServerConfigurationManager config, INetworkManager networkManager, IDeviceManager deviceManager, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserService(ILogger&lt;UserService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, ISessionManager sessionMananger, INetworkManager networkManager, IDeviceManager deviceManager, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,6 +209,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.UserService.html">UserService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
         <td></td>
@@ -213,11 +231,6 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a></td>
         <td><span class="parametername">sessionMananger</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">config</span></td>
         <td></td>
       </tr>
       <tr>
@@ -244,7 +257,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Delete_MediaBrowser_Api_DeleteUser_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Delete(MediaBrowser.Api.DeleteUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L360">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L361">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Delete_" data-uid="MediaBrowser.Api.UserService.Delete*"></a>
   <h4 id="MediaBrowser_Api_UserService_Delete_MediaBrowser_Api_DeleteUser_" data-uid="MediaBrowser.Api.UserService.Delete(MediaBrowser.Api.DeleteUser)">Delete(DeleteUser)</h4>
@@ -293,7 +306,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_DeleteAsync_MediaBrowser_Api_DeleteUser_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.DeleteAsync(MediaBrowser.Api.DeleteUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L365">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L366">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_DeleteAsync_" data-uid="MediaBrowser.Api.UserService.DeleteAsync*"></a>
   <h4 id="MediaBrowser_Api_UserService_DeleteAsync_MediaBrowser_Api_DeleteUser_" data-uid="MediaBrowser.Api.UserService.DeleteAsync(MediaBrowser.Api.DeleteUser)">DeleteAsync(DeleteUser)</h4>
@@ -340,7 +353,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetPublicUsers_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetPublicUsers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L268">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L269">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Get_" data-uid="MediaBrowser.Api.UserService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetPublicUsers_" data-uid="MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetPublicUsers)">Get(GetPublicUsers)</h4>
@@ -387,7 +400,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetUser_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L342">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L343">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Get_" data-uid="MediaBrowser.Api.UserService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetUser_" data-uid="MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetUser)">Get(GetUser)</h4>
@@ -437,7 +450,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetUsers_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetUsers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L292">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L293">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Get_" data-uid="MediaBrowser.Api.UserService.Get*"></a>
   <h4 id="MediaBrowser_Api_UserService_Get_MediaBrowser_Api_GetUsers_" data-uid="MediaBrowser.Api.UserService.Get(MediaBrowser.Api.GetUsers)">Get(GetUsers)</h4>
@@ -487,7 +500,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_AuthenticateUser_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.AuthenticateUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L383">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L384">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_AuthenticateUser_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.AuthenticateUser)">Post(AuthenticateUser)</h4>
@@ -536,7 +549,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_AuthenticateUserByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.AuthenticateUserByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L405">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L406">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_AuthenticateUserByName_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.AuthenticateUserByName)">Post(AuthenticateUserByName)</h4>
@@ -583,7 +596,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_CreateUserByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.CreateUserByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L526">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L527">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_CreateUserByName_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.CreateUserByName)">Post(CreateUserByName)</h4>
@@ -633,7 +646,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_ForgotPassword_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.ForgotPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L541">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L542">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_ForgotPassword_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.ForgotPassword)">Post(ForgotPassword)</h4>
@@ -680,7 +693,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_ForgotPasswordPin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.ForgotPasswordPin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L550">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L551">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_ForgotPasswordPin_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.ForgotPasswordPin)">Post(ForgotPasswordPin)</h4>
@@ -727,7 +740,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUser_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUser)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L498">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L499">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUser_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUser)">Post(UpdateUser)</h4>
@@ -776,7 +789,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L557">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L558">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserConfiguration_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserConfiguration)">Post(UpdateUserConfiguration)</h4>
@@ -808,7 +821,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserEasyPassword_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserEasyPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L473">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L474">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserEasyPassword_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserEasyPassword)">Post(UpdateUserEasyPassword)</h4>
@@ -840,7 +853,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserPassword_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L436">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L437">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserPassword_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserPassword)">Post(UpdateUserPassword)</h4>
@@ -889,7 +902,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserPolicy_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L565">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L566">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_Post_" data-uid="MediaBrowser.Api.UserService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserService_Post_MediaBrowser_Api_UpdateUserPolicy_" data-uid="MediaBrowser.Api.UserService.Post(MediaBrowser.Api.UpdateUserPolicy)">Post(UpdateUserPolicy)</h4>
@@ -921,7 +934,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserService_PostAsync_MediaBrowser_Api_UpdateUserPassword_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserService.PostAsync(MediaBrowser.Api.UpdateUserPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L441">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserService.cs/#L442">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserService_PostAsync_" data-uid="MediaBrowser.Api.UserService.PostAsync*"></a>
   <h4 id="MediaBrowser_Api_UserService_PostAsync_MediaBrowser_Api_UpdateUserPassword_" data-uid="MediaBrowser.Api.UserService.PostAsync(MediaBrowser.Api.UpdateUserPassword)">PostAsync(UpdateUserPassword)</h4>

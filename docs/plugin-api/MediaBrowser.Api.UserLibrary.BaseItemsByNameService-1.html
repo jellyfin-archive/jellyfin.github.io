@@ -109,6 +109,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -204,19 +207,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Persistence_IItemRepository_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Persistence.IItemRepository%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1__ctor_ILogger_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.%23ctor(ILogger%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L30">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1__ctor_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Persistence_IItemRepository_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Persistence.IItemRepository,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext)">BaseItemsByNameService(IUserManager, ILibraryManager, IUserDataManager, IItemRepository, IDtoService, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1__ctor_ILogger_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.#ctor(ILogger,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext)">BaseItemsByNameService(ILogger, IServerConfigurationManager, IHttpResultFactory, IUserManager, ILibraryManager, IUserDataManager, IDtoService, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Api.UserLibrary.BaseItemsByNameService-1.html">BaseItemsByNameService&lt;TItemType&gt;</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected BaseItemsByNameService(IUserManager userManager, ILibraryManager libraryManager, IUserDataManager userDataRepository, IItemRepository itemRepository, IDtoService dtoService, IAuthorizationContext authorizationContext)</code></pre>
+    <pre><code class="lang-csharp hljs">protected BaseItemsByNameService(ILogger logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, ILibraryManager libraryManager, IUserDataManager userDataRepository, IDtoService dtoService, IAuthorizationContext authorizationContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -228,6 +231,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
@@ -247,12 +265,6 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Persistence.IItemRepository.html">IItemRepository</a></td>
-        <td><span class="parametername">itemRepository</span></td>
-        <td><p>The item repository.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.IDtoService.html">IDtoService</a></td>
         <td><span class="parametername">dtoService</span></td>
         <td><p>The dto service.</p>
@@ -265,126 +277,6 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_ItemRepository.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.ItemRepository%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L31">View Source</a>
-  </span>
-  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_ItemRepository" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.ItemRepository">ItemRepository</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IItemRepository ItemRepository</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Persistence.IItemRepository.html">IItemRepository</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_LibraryManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.LibraryManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L29">View Source</a>
-  </span>
-  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_LibraryManager" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.LibraryManager">LibraryManager</h4>
-  <div class="markdown level1 summary"><p>The library manager</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly ILibraryManager LibraryManager</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserDataRepository.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.UserDataRepository%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L30">View Source</a>
-  </span>
-  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserDataRepository" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserDataRepository">UserDataRepository</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IUserDataManager UserDataRepository</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.UserManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L25">View Source</a>
-  </span>
-  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserManager" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserManager">UserManager</h4>
-  <div class="markdown level1 summary"><p>The _user manager</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected readonly IUserManager UserManager</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -392,7 +284,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_AuthorizationContext.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.AuthorizationContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L62">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_AuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.AuthorizationContext*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_AuthorizationContext" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.AuthorizationContext">AuthorizationContext</h4>
@@ -422,7 +314,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_DtoService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.DtoService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L60">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_DtoService_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.DtoService*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_DtoService" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.DtoService">DtoService</h4>
@@ -447,6 +339,98 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_LibraryManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.LibraryManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L56">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_LibraryManager_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.LibraryManager*"></a>
+  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_LibraryManager" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.LibraryManager">LibraryManager</h4>
+  <div class="markdown level1 summary"><p>Gets the library manager</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ILibraryManager LibraryManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserDataRepository.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.UserDataRepository%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L58">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserDataRepository_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserDataRepository*"></a>
+  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserDataRepository" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserDataRepository">UserDataRepository</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IUserDataManager UserDataRepository { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.UserManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L51">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserManager_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserManager*"></a>
+  <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_UserManager" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.UserManager">UserManager</h4>
+  <div class="markdown level1 summary"><p>Gets the _user manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IUserManager UserManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -454,7 +438,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetAllItems_MediaBrowser_Api_UserLibrary_GetItemsByName_System_Collections_Generic_IList_MediaBrowser_Controller_Entities_BaseItem__.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetAllItems(MediaBrowser.Api.UserLibrary.GetItemsByName%2CSystem.Collections.Generic.IList%7BMediaBrowser.Controller.Entities.BaseItem%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L373">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L384">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetAllItems_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetAllItems*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetAllItems_MediaBrowser_Api_UserLibrary_GetItemsByName_System_Collections_Generic_IList_MediaBrowser_Controller_Entities_BaseItem__" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetAllItems(MediaBrowser.Api.UserLibrary.GetItemsByName,System.Collections.Generic.IList{MediaBrowser.Controller.Entities.BaseItem})">GetAllItems(GetItemsByName, IList&lt;BaseItem&gt;)</h4>
@@ -510,7 +494,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetItems_MediaBrowser_Api_UserLibrary_GetItemsByName_MediaBrowser_Controller_Entities_InternalItemsQuery_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetItems(MediaBrowser.Api.UserLibrary.GetItemsByName%2CMediaBrowser.Controller.Entities.InternalItemsQuery)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L212">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L223">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetItems_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetItems*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetItems_MediaBrowser_Api_UserLibrary_GetItemsByName_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetItems(MediaBrowser.Api.UserLibrary.GetItemsByName,MediaBrowser.Controller.Entities.InternalItemsQuery)">GetItems(GetItemsByName, InternalItemsQuery)</h4>
@@ -562,7 +546,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItem_MediaBrowser_Api_UserLibrary_GetItemsByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetParentItem(MediaBrowser.Api.UserLibrary.GetItemsByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L64">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItem_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetParentItem*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItem_MediaBrowser_Api_UserLibrary_GetItemsByName_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetParentItem(MediaBrowser.Api.UserLibrary.GetItemsByName)">GetParentItem(GetItemsByName)</h4>
@@ -609,7 +593,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItemViewType_MediaBrowser_Api_UserLibrary_GetItemsByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetParentItemViewType(MediaBrowser.Api.UserLibrary.GetItemsByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L81">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItemViewType_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetParentItemViewType*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetParentItemViewType_MediaBrowser_Api_UserLibrary_GetItemsByName_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetParentItemViewType(MediaBrowser.Api.UserLibrary.GetItemsByName)">GetParentItemViewType(GetItemsByName)</h4>
@@ -656,7 +640,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResult_MediaBrowser_Api_UserLibrary_GetItemsByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetResult(MediaBrowser.Api.UserLibrary.GetItemsByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L235">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L246">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResult_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetResult*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResult_MediaBrowser_Api_UserLibrary_GetItemsByName_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetResult(MediaBrowser.Api.UserLibrary.GetItemsByName)">GetResult(GetItemsByName)</h4>
@@ -706,7 +690,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResultSlim_MediaBrowser_Api_UserLibrary_GetItemsByName_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601.GetResultSlim(MediaBrowser.Api.UserLibrary.GetItemsByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L94">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResultSlim_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetResultSlim*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1_GetResultSlim_MediaBrowser_Api_UserLibrary_GetItemsByName_" data-uid="MediaBrowser.Api.UserLibrary.BaseItemsByNameService`1.GetResultSlim(MediaBrowser.Api.UserLibrary.GetItemsByName)">GetResultSlim(GetItemsByName)</h4>
@@ -766,7 +750,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_BaseItemsByNameService_1.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.BaseItemsByNameService%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/BaseItemsByNameService.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

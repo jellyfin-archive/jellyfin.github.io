@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService__ctor_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService.%23ctor(MediaBrowser.Controller.Collections.ICollectionManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService__ctor_ILogger_MediaBrowser_Api_Movies_CollectionService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService.%23ctor(ILogger%7BMediaBrowser.Api.Movies.CollectionService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Collections.ICollectionManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L55">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_CollectionService__ctor_" data-uid="MediaBrowser.Api.Movies.CollectionService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Movies_CollectionService__ctor_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Movies.CollectionService.#ctor(MediaBrowser.Controller.Collections.ICollectionManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext)">CollectionService(ICollectionManager, IDtoService, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_Movies_CollectionService__ctor_ILogger_MediaBrowser_Api_Movies_CollectionService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Movies.CollectionService.#ctor(ILogger{MediaBrowser.Api.Movies.CollectionService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Collections.ICollectionManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext)">CollectionService(ILogger&lt;CollectionService&gt;, IServerConfigurationManager, IHttpResultFactory, ICollectionManager, IDtoService, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CollectionService(ICollectionManager collectionManager, IDtoService dtoService, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public CollectionService(ILogger&lt;CollectionService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, ICollectionManager collectionManager, IDtoService dtoService, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Movies.CollectionService.html">CollectionService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Collections.ICollectionManager.html">ICollectionManager</a></td>
         <td><span class="parametername">collectionManager</span></td>
@@ -228,7 +246,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService_Delete_MediaBrowser_Api_Movies_RemoveFromCollection_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService.Delete(MediaBrowser.Api.Movies.RemoveFromCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L91">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L100">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_CollectionService_Delete_" data-uid="MediaBrowser.Api.Movies.CollectionService.Delete*"></a>
   <h4 id="MediaBrowser_Api_Movies_CollectionService_Delete_MediaBrowser_Api_Movies_RemoveFromCollection_" data-uid="MediaBrowser.Api.Movies.CollectionService.Delete(MediaBrowser.Api.Movies.RemoveFromCollection)">Delete(RemoveFromCollection)</h4>
@@ -260,7 +278,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService_Post_MediaBrowser_Api_Movies_AddToCollection_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService.Post(MediaBrowser.Api.Movies.AddToCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L95">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_CollectionService_Post_" data-uid="MediaBrowser.Api.Movies.CollectionService.Post*"></a>
   <h4 id="MediaBrowser_Api_Movies_CollectionService_Post_MediaBrowser_Api_Movies_AddToCollection_" data-uid="MediaBrowser.Api.Movies.CollectionService.Post(MediaBrowser.Api.Movies.AddToCollection)">Post(AddToCollection)</h4>
@@ -292,7 +310,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService_Post_MediaBrowser_Api_Movies_CreateCollection_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService.Post(MediaBrowser.Api.Movies.CreateCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L60">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L69">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_CollectionService_Post_" data-uid="MediaBrowser.Api.Movies.CollectionService.Post*"></a>
   <h4 id="MediaBrowser_Api_Movies_CollectionService_Post_MediaBrowser_Api_Movies_CreateCollection_" data-uid="MediaBrowser.Api.Movies.CollectionService.Post(MediaBrowser.Api.Movies.CreateCollection)">Post(CreateCollection)</h4>
@@ -352,7 +370,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_CollectionService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.CollectionService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L46" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/CollectionService.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

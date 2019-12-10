@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService__ctor_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Playlists_IPlaylistManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.%23ctor(MediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Playlists.IPlaylistManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService__ctor_ILogger_MediaBrowser_Api_PlaylistService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Playlists_IPlaylistManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.%23ctor(ILogger%7BMediaBrowser.Api.PlaylistService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Playlists.IPlaylistManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L131">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L133">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService__ctor_" data-uid="MediaBrowser.Api.PlaylistService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_PlaylistService__ctor_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Playlists_IPlaylistManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.PlaylistService.#ctor(MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Playlists.IPlaylistManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Net.IAuthorizationContext)">PlaylistService(IDtoService, IPlaylistManager, IUserManager, ILibraryManager, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_PlaylistService__ctor_ILogger_MediaBrowser_Api_PlaylistService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Playlists_IPlaylistManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.PlaylistService.#ctor(ILogger{MediaBrowser.Api.PlaylistService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Playlists.IPlaylistManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Net.IAuthorizationContext)">PlaylistService(ILogger&lt;PlaylistService&gt;, IServerConfigurationManager, IHttpResultFactory, IDtoService, IPlaylistManager, IUserManager, ILibraryManager, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaylistService(IDtoService dtoService, IPlaylistManager playlistManager, IUserManager userManager, ILibraryManager libraryManager, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlaylistService(ILogger&lt;PlaylistService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IDtoService dtoService, IPlaylistManager playlistManager, IUserManager userManager, ILibraryManager libraryManager, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.PlaylistService.html">PlaylistService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.IDtoService.html">IDtoService</a></td>
         <td><span class="parametername">dtoService</span></td>
@@ -238,7 +256,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService_Delete_MediaBrowser_Api_RemoveFromPlaylist_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.Delete(MediaBrowser.Api.RemoveFromPlaylist)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L164">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L175">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService_Delete_" data-uid="MediaBrowser.Api.PlaylistService.Delete*"></a>
   <h4 id="MediaBrowser_Api_PlaylistService_Delete_MediaBrowser_Api_RemoveFromPlaylist_" data-uid="MediaBrowser.Api.PlaylistService.Delete(MediaBrowser.Api.RemoveFromPlaylist)">Delete(RemoveFromPlaylist)</h4>
@@ -270,7 +288,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService_Get_MediaBrowser_Api_GetPlaylistItems_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.Get(MediaBrowser.Api.GetPlaylistItems)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L169">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L180">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService_Get_" data-uid="MediaBrowser.Api.PlaylistService.Get*"></a>
   <h4 id="MediaBrowser_Api_PlaylistService_Get_MediaBrowser_Api_GetPlaylistItems_" data-uid="MediaBrowser.Api.PlaylistService.Get(MediaBrowser.Api.GetPlaylistItems)">Get(GetPlaylistItems)</h4>
@@ -317,7 +335,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_AddToPlaylist_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.AddToPlaylist)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L159">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L170">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService_Post_" data-uid="MediaBrowser.Api.PlaylistService.Post*"></a>
   <h4 id="MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_AddToPlaylist_" data-uid="MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.AddToPlaylist)">Post(AddToPlaylist)</h4>
@@ -349,7 +367,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_CreatePlaylist_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.CreatePlaylist)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L145">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L156">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService_Post_" data-uid="MediaBrowser.Api.PlaylistService.Post*"></a>
   <h4 id="MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_CreatePlaylist_" data-uid="MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.CreatePlaylist)">Post(CreatePlaylist)</h4>
@@ -396,7 +414,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_MoveItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.MoveItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L140">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L151">View Source</a>
   </span>
   <a id="MediaBrowser_Api_PlaylistService_Post_" data-uid="MediaBrowser.Api.PlaylistService.Post*"></a>
   <h4 id="MediaBrowser_Api_PlaylistService_Post_MediaBrowser_Api_MoveItem_" data-uid="MediaBrowser.Api.PlaylistService.Post(MediaBrowser.Api.MoveItem)">Post(MoveItem)</h4>
@@ -441,7 +459,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_PlaylistService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.PlaylistService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L122" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/PlaylistService.cs/#L124" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

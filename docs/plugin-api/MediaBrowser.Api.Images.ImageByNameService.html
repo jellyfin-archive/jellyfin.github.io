@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,19 +185,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IHttpResultFactory_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.%23ctor(MediaBrowser.Controller.IServerApplicationPaths%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Net.IHttpResultFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService__ctor_ILogger_MediaBrowser_Api_Images_ImageByNameService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.%23ctor(ILogger%7BMediaBrowser.Api.Images.ImageByNameService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L110">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService__ctor_" data-uid="MediaBrowser.Api.Images.ImageByNameService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Images_ImageByNameService__ctor_MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IHttpResultFactory_" data-uid="MediaBrowser.Api.Images.ImageByNameService.#ctor(MediaBrowser.Controller.IServerApplicationPaths,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Net.IHttpResultFactory)">ImageByNameService(IServerApplicationPaths, IFileSystem, IHttpResultFactory)</h4>
+  <h4 id="MediaBrowser_Api_Images_ImageByNameService__ctor_ILogger_MediaBrowser_Api_Images_ImageByNameService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Api.Images.ImageByNameService.#ctor(ILogger{MediaBrowser.Api.Images.ImageByNameService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Model.IO.IFileSystem)">ImageByNameService(ILogger&lt;ImageByNameService&gt;, IServerConfigurationManager, IHttpResultFactory, IFileSystem)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Api.Images.ImageByNameService.html">ImageByNameService</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ImageByNameService(IServerApplicationPaths appPaths, IFileSystem fileSystem, IHttpResultFactory resultFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public ImageByNameService(ILogger&lt;ImageByNameService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory resultFactory, IFileSystem fileSystem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -207,19 +210,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationPaths.html">IServerApplicationPaths</a></td>
-        <td><span class="parametername">appPaths</span></td>
-        <td><p>The app paths.</p>
-</td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Images.ImageByNameService.html">ImageByNameService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
         <td><span class="parametername">resultFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
+        <td><span class="parametername">fileSystem</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -231,7 +238,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetGeneralImage_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetGeneralImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L180">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L184">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetGeneralImage_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetGeneralImage)">Get(GetGeneralImage)</h4>
@@ -281,7 +288,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetGeneralImages_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetGeneralImages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L127">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L131">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetGeneralImages_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetGeneralImages)">Get(GetGeneralImages)</h4>
@@ -328,7 +335,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetMediaInfoImage_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetMediaInfoImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L239">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L243">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetMediaInfoImage_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetMediaInfoImage)">Get(GetMediaInfoImage)</h4>
@@ -378,7 +385,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetMediaInfoImages_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetMediaInfoImages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L121">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetMediaInfoImages_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetMediaInfoImages)">Get(GetMediaInfoImages)</h4>
@@ -425,7 +432,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetRatingImage_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetRatingImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L198">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L202">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetRatingImage_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetRatingImage)">Get(GetRatingImage)</h4>
@@ -475,7 +482,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetRatingImages_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetRatingImages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L122">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L126">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_ImageByNameService_Get_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_ImageByNameService_Get_MediaBrowser_Api_Images_GetRatingImages_" data-uid="MediaBrowser.Api.Images.ImageByNameService.Get(MediaBrowser.Api.Images.GetRatingImages)">Get(GetRatingImages)</h4>
@@ -535,7 +542,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_ImageByNameService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.ImageByNameService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L96" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/ImageByNameService.cs/#L98" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

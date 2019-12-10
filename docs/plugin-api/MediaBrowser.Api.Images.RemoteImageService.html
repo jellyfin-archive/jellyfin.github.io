@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_IServerApplicationPaths_IHttpClient_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.%23ctor(MediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.IServerApplicationPaths%2CIHttpClient%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService__ctor_ILogger_MediaBrowser_Api_Images_RemoteImageService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_IServerApplicationPaths_IHttpClient_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.%23ctor(ILogger%7BMediaBrowser.Api.Images.RemoteImageService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.IServerApplicationPaths%2CIHttpClient%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L114">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_RemoteImageService__ctor_" data-uid="MediaBrowser.Api.Images.RemoteImageService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Images_RemoteImageService__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_IServerApplicationPaths_IHttpClient_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Api.Images.RemoteImageService.#ctor(MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.IServerApplicationPaths,IHttpClient,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">RemoteImageService(IProviderManager, IDtoService, IServerApplicationPaths, IHttpClient, IFileSystem, ILibraryManager)</h4>
+  <h4 id="MediaBrowser_Api_Images_RemoteImageService__ctor_ILogger_MediaBrowser_Api_Images_RemoteImageService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_IServerApplicationPaths_IHttpClient_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Api.Images.RemoteImageService.#ctor(ILogger{MediaBrowser.Api.Images.RemoteImageService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.IServerApplicationPaths,IHttpClient,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">RemoteImageService(ILogger&lt;RemoteImageService&gt;, IServerConfigurationManager, IHttpResultFactory, IProviderManager, IServerApplicationPaths, IHttpClient, IFileSystem, ILibraryManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RemoteImageService(IProviderManager providerManager, IDtoService dtoService, IServerApplicationPaths appPaths, IHttpClient httpClient, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public RemoteImageService(ILogger&lt;RemoteImageService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IProviderManager providerManager, IServerApplicationPaths appPaths, IHttpClient httpClient, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,13 +208,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
-        <td><span class="parametername">providerManager</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Images.RemoteImageService.html">RemoteImageService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Dto.IDtoService.html">IDtoService</a></td>
-        <td><span class="parametername">dtoService</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
+        <td><span class="parametername">providerManager</span></td>
         <td></td>
       </tr>
       <tr>
@@ -243,7 +256,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImage_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L214">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L222">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_RemoteImageService_Get_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImage_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImage)">Get(GetRemoteImage)</h4>
@@ -293,7 +306,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImageProviders_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImageProviders)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L124">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L132">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_RemoteImageService_Get_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImageProviders_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImageProviders)">Get(GetRemoteImageProviders)</h4>
@@ -340,7 +353,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImages_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L146">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_RemoteImageService_Get_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get*"></a>
   <h4 id="MediaBrowser_Api_Images_RemoteImageService_Get_MediaBrowser_Api_Images_GetRemoteImages_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Get(MediaBrowser.Api.Images.GetRemoteImages)">Get(GetRemoteImages)</h4>
@@ -387,7 +400,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService_Post_MediaBrowser_Api_Images_DownloadRemoteImage_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService.Post(MediaBrowser.Api.Images.DownloadRemoteImage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L189">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L197">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Images_RemoteImageService_Post_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Post*"></a>
   <h4 id="MediaBrowser_Api_Images_RemoteImageService_Post_MediaBrowser_Api_Images_DownloadRemoteImage_" data-uid="MediaBrowser.Api.Images.RemoteImageService.Post(MediaBrowser.Api.Images.DownloadRemoteImage)">Post(DownloadRemoteImage)</h4>
@@ -449,7 +462,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Images_RemoteImageService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Images.RemoteImageService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L103" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Images/RemoteImageService.cs/#L104" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_ISessionContext_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Net.ISessionContext%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService__ctor_ILogger_MediaBrowser_Api_UserLibrary_PlaystateService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_ISessionContext_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.%23ctor(ILogger%7BMediaBrowser.Api.UserLibrary.PlaystateService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Net.ISessionContext%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L236">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L237">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService__ctor_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_ISessionContext_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Net.ISessionContext,MediaBrowser.Controller.Net.IAuthorizationContext)">PlaystateService(IUserManager, IUserDataManager, ILibraryManager, ISessionManager, ISessionContext, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService__ctor_ILogger_MediaBrowser_Api_UserLibrary_PlaystateService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_ISessionContext_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.#ctor(ILogger{MediaBrowser.Api.UserLibrary.PlaystateService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Net.ISessionContext,MediaBrowser.Controller.Net.IAuthorizationContext)">PlaystateService(ILogger&lt;PlaystateService&gt;, IServerConfigurationManager, IHttpResultFactory, IUserManager, IUserDataManager, ILibraryManager, ISessionManager, ISessionContext, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaystateService(IUserManager userManager, IUserDataManager userDataRepository, ILibraryManager libraryManager, ISessionManager sessionManager, ISessionContext sessionContext, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlaystateService(ILogger&lt;PlaystateService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, IUserDataManager userDataRepository, ILibraryManager libraryManager, ISessionManager sessionManager, ISessionContext sessionContext, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.UserLibrary.PlaystateService.html">PlaystateService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
@@ -243,7 +261,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Delete_MediaBrowser_Api_UserLibrary_MarkUnplayedItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Delete(MediaBrowser.Api.UserLibrary.MarkUnplayedItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L400">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L411">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Delete_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Delete*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Delete_MediaBrowser_Api_UserLibrary_MarkUnplayedItem_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Delete(MediaBrowser.Api.UserLibrary.MarkUnplayedItem)">Delete(MarkUnplayedItem)</h4>
@@ -292,7 +310,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Delete_MediaBrowser_Api_UserLibrary_OnPlaybackStopped_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Delete(MediaBrowser.Api.UserLibrary.OnPlaybackStopped)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L369">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L380">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Delete_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Delete*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Delete_MediaBrowser_Api_UserLibrary_OnPlaybackStopped_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Delete(MediaBrowser.Api.UserLibrary.OnPlaybackStopped)">Delete(OnPlaybackStopped)</h4>
@@ -341,7 +359,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_MarkPlayedItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.MarkPlayedItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L250">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L261">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_MarkPlayedItem_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.MarkPlayedItem)">Post(MarkPlayedItem)</h4>
@@ -390,7 +408,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_OnPlaybackProgress_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.OnPlaybackProgress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L330">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L341">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_OnPlaybackProgress_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.OnPlaybackProgress)">Post(OnPlaybackProgress)</h4>
@@ -424,7 +442,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_OnPlaybackStart_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.OnPlaybackStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L300">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L311">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_OnPlaybackStart_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.OnPlaybackStart)">Post(OnPlaybackStart)</h4>
@@ -458,7 +476,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_PingPlaybackSession_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.PingPlaybackSession)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L360">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L371">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_PingPlaybackSession_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.PingPlaybackSession)">Post(PingPlaybackSession)</h4>
@@ -490,7 +508,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackProgress_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackProgress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L349">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L360">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackProgress_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackProgress)">Post(ReportPlaybackProgress)</h4>
@@ -522,7 +540,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackStart_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackStart)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L315">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L326">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackStart_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackStart)">Post(ReportPlaybackStart)</h4>
@@ -554,7 +572,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackStopped_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackStopped)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L382">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L393">View Source</a>
   </span>
   <a id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post*"></a>
   <h4 id="MediaBrowser_Api_UserLibrary_PlaystateService_Post_MediaBrowser_Api_UserLibrary_ReportPlaybackStopped_" data-uid="MediaBrowser.Api.UserLibrary.PlaystateService.Post(MediaBrowser.Api.UserLibrary.ReportPlaybackStopped)">Post(ReportPlaybackStopped)</h4>
@@ -614,7 +632,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_UserLibrary_PlaystateService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.UserLibrary.PlaystateService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L226" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/UserLibrary/PlaystateService.cs/#L227" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService__ctor_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.%23ctor(MediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService__ctor_ILogger_MediaBrowser_Api_ConfigurationService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.%23ctor(ILogger%7BMediaBrowser.Api.ConfigurationService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L81">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService__ctor_" data-uid="MediaBrowser.Api.ConfigurationService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_ConfigurationService__ctor_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_" data-uid="MediaBrowser.Api.ConfigurationService.#ctor(MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder)">ConfigurationService(IJsonSerializer, IServerConfigurationManager, IFileSystem, IProviderManager, ILibraryManager, IMediaEncoder)</h4>
+  <h4 id="MediaBrowser_Api_ConfigurationService__ctor_ILogger_MediaBrowser_Api_ConfigurationService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_" data-uid="MediaBrowser.Api.ConfigurationService.#ctor(ILogger{MediaBrowser.Api.ConfigurationService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder)">ConfigurationService(ILogger&lt;ConfigurationService&gt;, IServerConfigurationManager, IHttpResultFactory, IJsonSerializer, IServerConfigurationManager, IMediaEncoder)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ConfigurationService(IJsonSerializer jsonSerializer, IServerConfigurationManager configurationManager, IFileSystem fileSystem, IProviderManager providerManager, ILibraryManager libraryManager, IMediaEncoder mediaEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public ConfigurationService(ILogger&lt;ConfigurationService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IJsonSerializer jsonSerializer, IServerConfigurationManager configurationManager, IMediaEncoder mediaEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,6 +208,21 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.ConfigurationService.html">ConfigurationService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></td>
         <td><span class="parametername">jsonSerializer</span></td>
         <td></td>
@@ -212,21 +230,6 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
         <td><span class="parametername">configurationManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
-        <td><span class="parametername">providerManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
-        <td><span class="parametername">libraryManager</span></td>
         <td></td>
       </tr>
       <tr>
@@ -243,7 +246,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L106">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L105">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Get_" data-uid="MediaBrowser.Api.ConfigurationService.Get*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetConfiguration_" data-uid="MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetConfiguration)">Get(GetConfiguration)</h4>
@@ -293,7 +296,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetDefaultMetadataOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetDefaultMetadataOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L142">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L141">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Get_" data-uid="MediaBrowser.Api.ConfigurationService.Get*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetDefaultMetadataOptions_" data-uid="MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetDefaultMetadataOptions)">Get(GetDefaultMetadataOptions)</h4>
@@ -340,7 +343,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetNamedConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetNamedConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L111">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L110">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Get_" data-uid="MediaBrowser.Api.ConfigurationService.Get*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Get_MediaBrowser_Api_GetNamedConfiguration_" data-uid="MediaBrowser.Api.ConfigurationService.Get(MediaBrowser.Api.GetNamedConfiguration)">Get(GetNamedConfiguration)</h4>
@@ -387,7 +390,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L122">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L121">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Post_" data-uid="MediaBrowser.Api.ConfigurationService.Post*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateConfiguration_" data-uid="MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateConfiguration)">Post(UpdateConfiguration)</h4>
@@ -421,7 +424,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateMediaEncoderPath_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateMediaEncoderPath)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L95">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Post_" data-uid="MediaBrowser.Api.ConfigurationService.Post*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateMediaEncoderPath_" data-uid="MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateMediaEncoderPath)">Post(UpdateMediaEncoderPath)</h4>
@@ -453,7 +456,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateNamedConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateNamedConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L132">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L131">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ConfigurationService_Post_" data-uid="MediaBrowser.Api.ConfigurationService.Post*"></a>
   <h4 id="MediaBrowser_Api_ConfigurationService_Post_MediaBrowser_Api_UpdateNamedConfiguration_" data-uid="MediaBrowser.Api.ConfigurationService.Post(MediaBrowser.Api.UpdateNamedConfiguration)">Post(UpdateNamedConfiguration)</h4>
@@ -513,7 +516,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ConfigurationService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ConfigurationService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L69" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ConfigurationService.cs/#L67" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

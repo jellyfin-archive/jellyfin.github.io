@@ -103,6 +103,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -182,18 +185,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_TrailersService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.TrailersService.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Collections.ICollectionManager%2CMediaBrowser.Model.Globalization.ILocalizationManager%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_TrailersService__ctor_ILogger_MediaBrowser_Api_Movies_TrailersService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.TrailersService.%23ctor(ILogger%7BMediaBrowser.Api.Movies.TrailersService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Model.Globalization.ILocalizationManager%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L45">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_TrailersService__ctor_" data-uid="MediaBrowser.Api.Movies.TrailersService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Movies_TrailersService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Collections_ICollectionManager_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Movies.TrailersService.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Collections.ICollectionManager,MediaBrowser.Model.Globalization.ILocalizationManager,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Net.IAuthorizationContext)">TrailersService(IUserManager, IUserDataManager, ILibraryManager, IDtoService, ICollectionManager, ILocalizationManager, IJsonSerializer, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_Movies_TrailersService__ctor_ILogger_MediaBrowser_Api_Movies_TrailersService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Movies.TrailersService.#ctor(ILogger{MediaBrowser.Api.Movies.TrailersService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Model.Globalization.ILocalizationManager,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Net.IAuthorizationContext)">TrailersService(ILogger&lt;TrailersService&gt;, IServerConfigurationManager, IHttpResultFactory, IUserManager, ILibraryManager, IDtoService, ILocalizationManager, IJsonSerializer, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TrailersService(IUserManager userManager, IUserDataManager userDataRepository, ILibraryManager libraryManager, IDtoService dtoService, ICollectionManager collectionManager, ILocalizationManager localizationManager, IJsonSerializer json, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public TrailersService(ILogger&lt;TrailersService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, ILibraryManager libraryManager, IDtoService dtoService, ILocalizationManager localizationManager, IJsonSerializer json, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,13 +209,23 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td><span class="parametername">userManager</span></td>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Movies.TrailersService.html">TrailersService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
-        <td><span class="parametername">userDataRepository</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td><span class="parametername">userManager</span></td>
         <td></td>
       </tr>
       <tr>
@@ -223,11 +236,6 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.IDtoService.html">IDtoService</a></td>
         <td><span class="parametername">dtoService</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Collections.ICollectionManager.html">ICollectionManager</a></td>
-        <td><span class="parametername">collectionManager</span></td>
         <td></td>
       </tr>
       <tr>
@@ -254,7 +262,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_TrailersService_Get_MediaBrowser_Api_Movies_Getrailers_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.TrailersService.Get(MediaBrowser.Api.Movies.Getrailers)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L57">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L61">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Movies_TrailersService_Get_" data-uid="MediaBrowser.Api.Movies.TrailersService.Get*"></a>
   <h4 id="MediaBrowser_Api_Movies_TrailersService_Get_MediaBrowser_Api_Movies_Getrailers_" data-uid="MediaBrowser.Api.Movies.TrailersService.Get(MediaBrowser.Api.Movies.Getrailers)">Get(Getrailers)</h4>
@@ -314,7 +322,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Movies_TrailersService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Movies.TrailersService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Movies/TrailersService.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

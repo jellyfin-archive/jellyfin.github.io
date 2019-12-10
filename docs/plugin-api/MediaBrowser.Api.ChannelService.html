@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService__ctor_ILogger_MediaBrowser_Api_ChannelService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.%23ctor(ILogger%7BMediaBrowser.Api.ChannelService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Channels.IChannelManager%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L191">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L193">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService__ctor_" data-uid="MediaBrowser.Api.ChannelService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_ChannelService__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_" data-uid="MediaBrowser.Api.ChannelService.#ctor(MediaBrowser.Controller.Channels.IChannelManager,MediaBrowser.Controller.Library.IUserManager)">ChannelService(IChannelManager, IUserManager)</h4>
+  <h4 id="MediaBrowser_Api_ChannelService__ctor_ILogger_MediaBrowser_Api_ChannelService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_" data-uid="MediaBrowser.Api.ChannelService.#ctor(ILogger{MediaBrowser.Api.ChannelService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Channels.IChannelManager,MediaBrowser.Controller.Library.IUserManager)">ChannelService(ILogger&lt;ChannelService&gt;, IServerConfigurationManager, IHttpResultFactory, IChannelManager, IUserManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ChannelService(IChannelManager channelManager, IUserManager userManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public ChannelService(ILogger&lt;ChannelService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IChannelManager channelManager, IUserManager userManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.ChannelService.html">ChannelService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Channels.IChannelManager.html">IChannelManager</a></td>
         <td><span class="parametername">channelManager</span></td>
@@ -223,7 +241,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetAllChannelFeatures_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetAllChannelFeatures)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L197">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L205">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService_Get_" data-uid="MediaBrowser.Api.ChannelService.Get*"></a>
   <h4 id="MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetAllChannelFeatures_" data-uid="MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetAllChannelFeatures)">Get(GetAllChannelFeatures)</h4>
@@ -270,7 +288,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannelFeatures_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannelFeatures)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L204">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L212">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService_Get_" data-uid="MediaBrowser.Api.ChannelService.Get*"></a>
   <h4 id="MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannelFeatures_" data-uid="MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannelFeatures)">Get(GetChannelFeatures)</h4>
@@ -317,7 +335,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannelItems_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannelItems)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L226">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L234">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService_Get_" data-uid="MediaBrowser.Api.ChannelService.Get*"></a>
   <h4 id="MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannelItems_" data-uid="MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannelItems)">Get(GetChannelItems)</h4>
@@ -364,7 +382,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannels_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannels)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L211">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L219">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService_Get_" data-uid="MediaBrowser.Api.ChannelService.Get*"></a>
   <h4 id="MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetChannels_" data-uid="MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetChannels)">Get(GetChannels)</h4>
@@ -411,7 +429,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetLatestChannelItems_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetLatestChannelItems)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L285">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L293">View Source</a>
   </span>
   <a id="MediaBrowser_Api_ChannelService_Get_" data-uid="MediaBrowser.Api.ChannelService.Get*"></a>
   <h4 id="MediaBrowser_Api_ChannelService_Get_MediaBrowser_Api_GetLatestChannelItems_" data-uid="MediaBrowser.Api.ChannelService.Get(MediaBrowser.Api.GetLatestChannelItems)">Get(GetLatestChannelItems)</h4>
@@ -471,7 +489,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_ChannelService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.ChannelService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L185" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/ChannelService.cs/#L187" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

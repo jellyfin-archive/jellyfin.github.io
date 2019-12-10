@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_VideosService__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Persistence_IItemRepository_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.VideosService.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Persistence.IItemRepository%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_VideosService__ctor_ILogger_MediaBrowser_Api_VideosService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.VideosService.%23ctor(ILogger%7BMediaBrowser.Api.VideosService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L55">View Source</a>
   </span>
   <a id="MediaBrowser_Api_VideosService__ctor_" data-uid="MediaBrowser.Api.VideosService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_VideosService__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Persistence_IItemRepository_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.VideosService.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Persistence.IItemRepository,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IAuthorizationContext)">VideosService(ILibraryManager, IUserManager, IDtoService, IItemRepository, IFileSystem, IServerConfigurationManager, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_VideosService__ctor_ILogger_MediaBrowser_Api_VideosService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.VideosService.#ctor(ILogger{MediaBrowser.Api.VideosService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext)">VideosService(ILogger&lt;VideosService&gt;, IServerConfigurationManager, IHttpResultFactory, ILibraryManager, IUserManager, IDtoService, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VideosService(ILibraryManager libraryManager, IUserManager userManager, IDtoService dtoService, IItemRepository itemRepo, IFileSystem fileSystem, IServerConfigurationManager config, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public VideosService(ILogger&lt;VideosService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, ILibraryManager libraryManager, IUserManager userManager, IDtoService dtoService, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.VideosService.html">VideosService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
@@ -217,21 +235,6 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.IDtoService.html">IDtoService</a></td>
         <td><span class="parametername">dtoService</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Persistence.IItemRepository.html">IItemRepository</a></td>
-        <td><span class="parametername">itemRepo</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">config</span></td>
         <td></td>
       </tr>
       <tr>
@@ -280,7 +283,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_VideosService_Get_MediaBrowser_Api_GetAdditionalParts_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.VideosService.Get(MediaBrowser.Api.GetAdditionalParts)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L75">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L76">View Source</a>
   </span>
   <a id="MediaBrowser_Api_VideosService_Get_" data-uid="MediaBrowser.Api.VideosService.Get*"></a>
   <h4 id="MediaBrowser_Api_VideosService_Get_MediaBrowser_Api_GetAdditionalParts_" data-uid="MediaBrowser.Api.VideosService.Get(MediaBrowser.Api.GetAdditionalParts)">Get(GetAdditionalParts)</h4>
@@ -375,7 +378,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_VideosService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.VideosService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L49" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/VideosService.cs/#L48" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

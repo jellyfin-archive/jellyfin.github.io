@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService__ctor_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Security_IAuthenticationRepository_MediaBrowser_Controller_Session_ISessionManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.%23ctor(MediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Security.IAuthenticationRepository%2CMediaBrowser.Controller.Session.ISessionManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService__ctor_ILogger_MediaBrowser_Api_Devices_DeviceService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Security_IAuthenticationRepository_MediaBrowser_Controller_Session_ISessionManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.%23ctor(ILogger%7BMediaBrowser.Api.Devices.DeviceService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Security.IAuthenticationRepository%2CMediaBrowser.Controller.Session.ISessionManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L85">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService__ctor_" data-uid="MediaBrowser.Api.Devices.DeviceService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Devices_DeviceService__ctor_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Security_IAuthenticationRepository_MediaBrowser_Controller_Session_ISessionManager_" data-uid="MediaBrowser.Api.Devices.DeviceService.#ctor(MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Security.IAuthenticationRepository,MediaBrowser.Controller.Session.ISessionManager)">DeviceService(IDeviceManager, IAuthenticationRepository, ISessionManager)</h4>
+  <h4 id="MediaBrowser_Api_Devices_DeviceService__ctor_ILogger_MediaBrowser_Api_Devices_DeviceService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Security_IAuthenticationRepository_MediaBrowser_Controller_Session_ISessionManager_" data-uid="MediaBrowser.Api.Devices.DeviceService.#ctor(ILogger{MediaBrowser.Api.Devices.DeviceService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Security.IAuthenticationRepository,MediaBrowser.Controller.Session.ISessionManager)">DeviceService(ILogger&lt;DeviceService&gt;, IServerConfigurationManager, IHttpResultFactory, IDeviceManager, IAuthenticationRepository, ISessionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DeviceService(IDeviceManager deviceManager, IAuthenticationRepository authRepo, ISessionManager sessionManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public DeviceService(ILogger&lt;DeviceService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IDeviceManager deviceManager, IAuthenticationRepository authRepo, ISessionManager sessionManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Devices.DeviceService.html">DeviceService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a></td>
         <td><span class="parametername">deviceManager</span></td>
@@ -228,7 +246,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Delete_MediaBrowser_Api_Devices_DeleteDevice_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Delete(MediaBrowser.Api.Devices.DeleteDevice)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L116">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L124">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Delete_" data-uid="MediaBrowser.Api.Devices.DeviceService.Delete*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Delete_MediaBrowser_Api_Devices_DeleteDevice_" data-uid="MediaBrowser.Api.Devices.DeviceService.Delete(MediaBrowser.Api.Devices.DeleteDevice)">Delete(DeleteDevice)</h4>
@@ -260,7 +278,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetCameraUploads_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetCameraUploads)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L111">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L119">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Get_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetCameraUploads_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetCameraUploads)">Get(GetCameraUploads)</h4>
@@ -307,7 +325,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDeviceInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDeviceInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L109">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Get_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDeviceInfo_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDeviceInfo)">Get(GetDeviceInfo)</h4>
@@ -354,7 +372,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDeviceOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDeviceOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L106">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L114">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Get_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDeviceOptions_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDeviceOptions)">Get(GetDeviceOptions)</h4>
@@ -401,7 +419,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDevices_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDevices)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L104">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Get_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Get_MediaBrowser_Api_Devices_GetDevices_" data-uid="MediaBrowser.Api.Devices.DeviceService.Get(MediaBrowser.Api.Devices.GetDevices)">Get(GetDevices)</h4>
@@ -448,7 +466,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Post_MediaBrowser_Api_Devices_PostCameraUpload_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Post(MediaBrowser.Api.Devices.PostCameraUpload)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L138">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Post_" data-uid="MediaBrowser.Api.Devices.DeviceService.Post*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Post_MediaBrowser_Api_Devices_PostCameraUpload_" data-uid="MediaBrowser.Api.Devices.DeviceService.Post(MediaBrowser.Api.Devices.PostCameraUpload)">Post(PostCameraUpload)</h4>
@@ -495,7 +513,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService_Post_MediaBrowser_Api_Devices_PostDeviceOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService.Post(MediaBrowser.Api.Devices.PostDeviceOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L91">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L99">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Devices_DeviceService_Post_" data-uid="MediaBrowser.Api.Devices.DeviceService.Post*"></a>
   <h4 id="MediaBrowser_Api_Devices_DeviceService_Post_MediaBrowser_Api_Devices_PostDeviceOptions_" data-uid="MediaBrowser.Api.Devices.DeviceService.Post(MediaBrowser.Api.Devices.PostDeviceOptions)">Post(PostDeviceOptions)</h4>
@@ -540,7 +558,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Devices_DeviceService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Devices.DeviceService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L78" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Devices/DeviceService.cs/#L79" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

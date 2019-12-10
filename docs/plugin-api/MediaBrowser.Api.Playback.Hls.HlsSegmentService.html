@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService__ctor_ILogger_MediaBrowser_Api_Playback_Hls_HlsSegmentService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.%23ctor(ILogger%7BMediaBrowser.Api.Playback.Hls.HlsSegmentService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L89">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Playback_Hls_HlsSegmentService__ctor_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem)">HlsSegmentService(IServerConfigurationManager, IFileSystem)</h4>
+  <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService__ctor_ILogger_MediaBrowser_Api_Playback_Hls_HlsSegmentService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.#ctor(ILogger{MediaBrowser.Api.Playback.Hls.HlsSegmentService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Model.IO.IFileSystem)">HlsSegmentService(ILogger&lt;HlsSegmentService&gt;, IServerConfigurationManager, IHttpResultFactory, IFileSystem)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HlsSegmentService(IServerConfigurationManager config, IFileSystem fileSystem)</code></pre>
+    <pre><code class="lang-csharp hljs">public HlsSegmentService(ILogger&lt;HlsSegmentService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IFileSystem fileSystem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,8 +208,18 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Playback.Hls.HlsSegmentService.html">HlsSegmentService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">config</span></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
         <td></td>
       </tr>
       <tr>
@@ -223,7 +236,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService_Delete_MediaBrowser_Api_Playback_Hls_StopEncodingProcess_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.Delete(MediaBrowser.Api.Playback.Hls.StopEncodingProcess)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L103">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L107">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Delete_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Delete*"></a>
   <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Delete_MediaBrowser_Api_Playback_Hls_StopEncodingProcess_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Delete(MediaBrowser.Api.Playback.Hls.StopEncodingProcess)">Delete(StopEncodingProcess)</h4>
@@ -270,7 +283,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsAudioSegmentLegacy_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsAudioSegmentLegacy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L132">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L137">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get*"></a>
   <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsAudioSegmentLegacy_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsAudioSegmentLegacy)">Get(GetHlsAudioSegmentLegacy)</h4>
@@ -320,7 +333,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsPlaylistLegacy_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsPlaylistLegacy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L95">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L99">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get*"></a>
   <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsPlaylistLegacy_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsPlaylistLegacy)">Get(GetHlsPlaylistLegacy)</h4>
@@ -367,7 +380,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsVideoSegmentLegacy_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsVideoSegmentLegacy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L117">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get*"></a>
   <h4 id="MediaBrowser_Api_Playback_Hls_HlsSegmentService_Get_MediaBrowser_Api_Playback_Hls_GetHlsVideoSegmentLegacy_" data-uid="MediaBrowser.Api.Playback.Hls.HlsSegmentService.Get(MediaBrowser.Api.Playback.Hls.GetHlsVideoSegmentLegacy)">Get(GetHlsVideoSegmentLegacy)</h4>
@@ -430,7 +443,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Playback_Hls_HlsSegmentService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Playback.Hls.HlsSegmentService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L84" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Playback/Hls/HlsSegmentService.cs/#L85" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -168,8 +168,52 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_BaseApiService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseApiService : IService, IRequiresRequest</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class BaseApiService : IService, IRequiresRequest</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService__ctor_ILogger_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.%23ctor(ILogger%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L23">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_BaseApiService__ctor_" data-uid="MediaBrowser.Api.BaseApiService.#ctor*"></a>
+  <h4 id="MediaBrowser_Api_BaseApiService__ctor_ILogger_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_" data-uid="MediaBrowser.Api.BaseApiService.#ctor(ILogger,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory)">BaseApiService(ILogger, IServerConfigurationManager, IHttpResultFactory)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BaseApiService(ILogger logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span></td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -177,16 +221,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_Logger.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.Logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L25">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L37">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_Logger_" data-uid="MediaBrowser.Api.BaseApiService.Logger*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_Logger" data-uid="MediaBrowser.Api.BaseApiService.Logger">Logger</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the logger.</p>
+  <div class="markdown level1 summary"><p>Gets the logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ILogger Logger { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected ILogger Logger { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -209,7 +253,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_Request.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.Request%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L37">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L55">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_Request_" data-uid="MediaBrowser.Api.BaseApiService.Request*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_Request" data-uid="MediaBrowser.Api.BaseApiService.Request">Request</h4>
@@ -241,16 +285,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_ResultFactory.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.ResultFactory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L49">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_ResultFactory_" data-uid="MediaBrowser.Api.BaseApiService.ResultFactory*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_ResultFactory" data-uid="MediaBrowser.Api.BaseApiService.ResultFactory">ResultFactory</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the HTTP result factory.</p>
+  <div class="markdown level1 summary"><p>Gets the HTTP result factory.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IHttpResultFactory ResultFactory { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected IHttpResultFactory ResultFactory { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,6 +312,38 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_ServerConfigurationManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.ServerConfigurationManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L43">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_BaseApiService_ServerConfigurationManager_" data-uid="MediaBrowser.Api.BaseApiService.ServerConfigurationManager*"></a>
+  <h4 id="MediaBrowser_Api_BaseApiService_ServerConfigurationManager" data-uid="MediaBrowser.Api.BaseApiService.ServerConfigurationManager">ServerConfigurationManager</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the server configuration manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected IServerConfigurationManager ServerConfigurationManager { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><p>The server configuration manager.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -275,7 +351,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_AssertCanUpdateUser_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_IUserManager_System_Guid_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.AssertCanUpdateUser(MediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Library.IUserManager%2CSystem.Guid%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L93">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_AssertCanUpdateUser_" data-uid="MediaBrowser.Api.BaseApiService.AssertCanUpdateUser*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_AssertCanUpdateUser_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_IUserManager_System_Guid_System_Boolean_" data-uid="MediaBrowser.Api.BaseApiService.AssertCanUpdateUser(MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Library.IUserManager,System.Guid,System.Boolean)">AssertCanUpdateUser(IAuthorizationContext, IUserManager, Guid, Boolean)</h4>
@@ -322,7 +398,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetArtist_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetArtist(System.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L184">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L199">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetArtist_" data-uid="MediaBrowser.Api.BaseApiService.GetArtist*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetArtist_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetArtist(System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetArtist(String, ILibraryManager, DtoOptions)</h4>
@@ -379,7 +455,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetDtoOptions_MediaBrowser_Controller_Net_IAuthorizationContext_System_Object_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetDtoOptions(MediaBrowser.Controller.Net.IAuthorizationContext%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L132">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetDtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetDtoOptions*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetDtoOptions_MediaBrowser_Controller_Net_IAuthorizationContext_System_Object_" data-uid="MediaBrowser.Api.BaseApiService.GetDtoOptions(MediaBrowser.Controller.Net.IAuthorizationContext,System.Object)">GetDtoOptions(IAuthorizationContext, Object)</h4>
@@ -431,7 +507,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetGenre_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetGenre(System.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L214">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L229">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetGenre_" data-uid="MediaBrowser.Api.BaseApiService.GetGenre*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetGenre_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetGenre(System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetGenre(String, ILibraryManager, DtoOptions)</h4>
@@ -488,7 +564,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetGuids_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetGuids(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L69">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetGuids_" data-uid="MediaBrowser.Api.BaseApiService.GetGuids*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetGuids_System_String_" data-uid="MediaBrowser.Api.BaseApiService.GetGuids(System.String)">GetGuids(String)</h4>
@@ -535,7 +611,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetHeader_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetHeader(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetHeader_" data-uid="MediaBrowser.Api.BaseApiService.GetHeader*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetHeader_System_String_" data-uid="MediaBrowser.Api.BaseApiService.GetHeader(System.String)">GetHeader(String)</h4>
@@ -582,7 +658,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetItemByName_System_String_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetItemByName(System.String%2CSystem.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L345">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L406">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetItemByName_" data-uid="MediaBrowser.Api.BaseApiService.GetItemByName*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetItemByName_System_String_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetItemByName(System.String,System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetItemByName(String, String, ILibraryManager, DtoOptions)</h4>
@@ -645,7 +721,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetMusicGenre_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetMusicGenre(System.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L229">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L244">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetMusicGenre_" data-uid="MediaBrowser.Api.BaseApiService.GetMusicGenre*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetMusicGenre_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetMusicGenre(System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetMusicGenre(String, ILibraryManager, DtoOptions)</h4>
@@ -702,15 +778,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetPathValue_System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetPathValue(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L295">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L317">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetPathValue_" data-uid="MediaBrowser.Api.BaseApiService.GetPathValue*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetPathValue_System_Int32_" data-uid="MediaBrowser.Api.BaseApiService.GetPathValue(System.Int32)">GetPathValue(Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the path segment at the specified index.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected string GetPathValue(int index)</code></pre>
+    <pre><code class="lang-csharp hljs">protected ReadOnlySpan&lt;char&gt; GetPathValue(int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -725,7 +802,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">index</span></td>
-        <td></td>
+        <td><p>The index of the path segment.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -739,8 +817,30 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><p>The path segment at the specified index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.indexoutofrangeexception">IndexOutOfRangeException</a></td>
+        <td><p>Path doesn&apos;t contain enough segments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.invaliddataexception">InvalidDataException</a></td>
+        <td><p>Path doesn&apos;t start with the base url.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -749,7 +849,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetPerson_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetPerson(System.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L244">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L259">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetPerson_" data-uid="MediaBrowser.Api.BaseApiService.GetPerson*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetPerson_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetPerson(System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetPerson(String, ILibraryManager, DtoOptions)</h4>
@@ -806,7 +906,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetSession_MediaBrowser_Controller_Net_ISessionContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetSession(MediaBrowser.Controller.Net.ISessionContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L105">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L120">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetSession_" data-uid="MediaBrowser.Api.BaseApiService.GetSession*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetSession_MediaBrowser_Controller_Net_ISessionContext_" data-uid="MediaBrowser.Api.BaseApiService.GetSession(MediaBrowser.Controller.Net.ISessionContext)">GetSession(ISessionContext)</h4>
@@ -855,7 +955,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_GetStudio_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.GetStudio(System.String%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L199">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L214">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_GetStudio_" data-uid="MediaBrowser.Api.BaseApiService.GetStudio*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_GetStudio_System_String_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Api.BaseApiService.GetStudio(System.String,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.DtoOptions)">GetStudio(String, ILibraryManager, DtoOptions)</h4>
@@ -912,7 +1012,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_SplitValue_System_String_System_Char_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.SplitValue(System.String%2CSystem.Char)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L59">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_SplitValue_" data-uid="MediaBrowser.Api.BaseApiService.SplitValue*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_SplitValue_System_String_System_Char_" data-uid="MediaBrowser.Api.BaseApiService.SplitValue(System.String,System.Char)">SplitValue(String, Char)</h4>
@@ -964,7 +1064,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService_ToOptimizedResult__1___0_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService.ToOptimizedResult%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L72">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L87">View Source</a>
   </span>
   <a id="MediaBrowser_Api_BaseApiService_ToOptimizedResult_" data-uid="MediaBrowser.Api.BaseApiService.ToOptimizedResult*"></a>
   <h4 id="MediaBrowser_Api_BaseApiService_ToOptimizedResult__1___0_" data-uid="MediaBrowser.Api.BaseApiService.ToOptimizedResult``1(``0)">ToOptimizedResult&lt;T&gt;(T)</h4>
@@ -1043,7 +1143,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_BaseApiService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.BaseApiService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/BaseApiService.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -102,6 +102,9 @@
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_Logger">BaseApiService.Logger</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ServerConfigurationManager">BaseApiService.ServerConfigurationManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Api.BaseApiService.html#MediaBrowser_Api_BaseApiService_ResultFactory">BaseApiService.ResultFactory</a>
     </div>
     <div>
@@ -181,18 +184,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IMusicManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IMusicManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService__ctor_ILogger_MediaBrowser_Api_Music_InstantMixService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IMusicManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.%23ctor(ILogger%7BMediaBrowser.Api.Music.InstantMixService%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Net.IHttpResultFactory%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IMusicManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L67">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService__ctor_" data-uid="MediaBrowser.Api.Music.InstantMixService.#ctor*"></a>
-  <h4 id="MediaBrowser_Api_Music_InstantMixService__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IMusicManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Music.InstantMixService.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IMusicManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Net.IAuthorizationContext)">InstantMixService(IUserManager, IDtoService, IMusicManager, ILibraryManager, IAuthorizationContext)</h4>
+  <h4 id="MediaBrowser_Api_Music_InstantMixService__ctor_ILogger_MediaBrowser_Api_Music_InstantMixService__MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Net_IHttpResultFactory_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IMusicManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="MediaBrowser.Api.Music.InstantMixService.#ctor(ILogger{MediaBrowser.Api.Music.InstantMixService},MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Net.IHttpResultFactory,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IMusicManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Net.IAuthorizationContext)">InstantMixService(ILogger&lt;InstantMixService&gt;, IServerConfigurationManager, IHttpResultFactory, IUserManager, IDtoService, IMusicManager, ILibraryManager, IAuthorizationContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public InstantMixService(IUserManager userManager, IDtoService dtoService, IMusicManager musicManager, ILibraryManager libraryManager, IAuthorizationContext authContext)</code></pre>
+    <pre><code class="lang-csharp hljs">public InstantMixService(ILogger&lt;InstantMixService&gt; logger, IServerConfigurationManager serverConfigurationManager, IHttpResultFactory httpResultFactory, IUserManager userManager, IDtoService dtoService, IMusicManager musicManager, ILibraryManager libraryManager, IAuthorizationContext authContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,6 +207,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Api.Music.InstantMixService.html">InstantMixService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
+        <td><span class="parametername">httpResultFactory</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
@@ -238,7 +256,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromAlbum_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromAlbum)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L126">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L137">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromAlbum_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromAlbum)">Get(GetInstantMixFromAlbum)</h4>
@@ -285,7 +303,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromArtistId_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromArtistId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L87">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L98">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromArtistId_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromArtistId)">Get(GetInstantMixFromArtistId)</h4>
@@ -332,7 +350,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L85">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromItem_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromItem)">Get(GetInstantMixFromItem)</h4>
@@ -379,7 +397,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromMusicGenre_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromMusicGenre)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L152">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L163">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromMusicGenre_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromMusicGenre)">Get(GetInstantMixFromMusicGenre)</h4>
@@ -426,7 +444,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromMusicGenreId_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromMusicGenreId)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L100">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L111">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromMusicGenreId_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromMusicGenreId)">Get(GetInstantMixFromMusicGenreId)</h4>
@@ -473,7 +491,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromPlaylist_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromPlaylist)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L150">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromPlaylist_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromPlaylist)">Get(GetInstantMixFromPlaylist)</h4>
@@ -520,7 +538,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromSong_.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromSong)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L124">View Source</a>
   </span>
   <a id="MediaBrowser_Api_Music_InstantMixService_Get_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get*"></a>
   <h4 id="MediaBrowser_Api_Music_InstantMixService_Get_MediaBrowser_Api_Music_GetInstantMixFromSong_" data-uid="MediaBrowser.Api.Music.InstantMixService.Get(MediaBrowser.Api.Music.GetInstantMixFromSong)">Get(GetInstantMixFromSong)</h4>
@@ -580,7 +598,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Music_InstantMixService.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Music.InstantMixService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L55" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Music/InstantMixService.cs/#L57" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
