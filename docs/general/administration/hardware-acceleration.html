@@ -79,7 +79,45 @@
             <article class="content wrap" id="_content" data-uid="admin-hardware-acceleration">
 <h1 id="hardware-acceleration">Hardware Acceleration</h1>
 
-<p>Jellyfin supports hardware acceleration of video encoding/decoding/transcoding using FFMpeg. It supports multiple acceleration types, including  AMD AMF, Intel Quick Sync, OpenMax OMX, nVidia NVENC, Intel/AMD VAAPI, and others.</p>
+<p>Jellyfin supports hardware acceleration of video encoding/decoding using FFMpeg. FFMpeg can support multiple hardware acceleration implementations like Intel Quicksync (QSV), AMD AMF, OpenMax OMX, nVidia NVENC/NVDEC through the Video Acceleration API (VAAPI), and others.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Recommended HW Acceleration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux/GNU</td>
+<td>VAAPI (recommended), NVENC</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>QSV, NVENC, AMF, VAAPI</td>
+</tr>
+<tr>
+<td>MacOS</td>
+<td>None (videotoolbox support coming)</td>
+</tr>
+<tr>
+<td>Android</td>
+<td>MediaCodec, OMX</td>
+</tr>
+<tr>
+<td>RPi</td>
+<td>OMX</td>
+</tr>
+</tbody>
+</table>
+<p>Here is the official list of supported Codecs for <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux/GNU and Windows.</p>
+<p>List of supported Codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
+<p>List of Intel Processors that support <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">QSV</a></p>
+<p>FFmpeg Hardware Acceleration support <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro">list</a>.</p>
+<p>Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a></p>
+<h4 id="known-issues">Known Issues</h4>
+<p><a href="https://github.com/jellyfin/jellyfin/issues/1546">RPi 3 failing to transcode</a> <br>
+<a href="https://trac.ffmpeg.org/ticket/8018">RPi 4 failing to transcode</a> <br></p>
 <h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
 <p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
 <p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>

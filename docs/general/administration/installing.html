@@ -81,6 +81,8 @@
 
 <p>The Jellyfin project and its contributors offer a number of pre-built binary packages to assist in getting Jellyfin up and running quickly on multiple systems.</p>
 <h2 id="containers">Containers</h2>
+<p>Note: There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> for read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable. </p>
+<p>Use host mode for networking in order to use DLNA or an HDHomeRun. </p>
 <h3 id="official-docker-hub">Official Docker Hub</h3>
 <p><a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a></p>
 <p>The Jellyfin Docker image is available on <a href="https://hub.docker.com/r/jellyfin/jellyfin/">Docker Hub</a> for multiple architectures.</p>
@@ -92,14 +94,14 @@
 <p>Alternatively, using docker-compose:  </p>
 <pre><code>version: &quot;3&quot;  
 services:  
-    jellyfin:  
-      image: jellyfin/jellyfin  
-      network_mode: &quot;host&quot;  
-      volumes:  
-        - /path/to/config:/config  
-        - /path/to/cache:/cache  
-        - /path/to/media:/media  
-</code></pre><h3 id="docker-hub-maintained-by-linuxserverio">Docker Hub maintained by LinuxServer.io</h3>
+  jellyfin:  
+    image: jellyfin/jellyfin
+    network_mode: &quot;host&quot;  
+    volumes:  
+      - /path/to/config:/config  
+      - /path/to/cache:/cache  
+      - /path/to/media:/media  
+</code></pre><h3 id="docker-hubhttpshubdockercomrlinuxserverjellyfin-image-maintained-by-linuxserverio"><a href="https://hub.docker.com/r/linuxserver/jellyfin">Docker Hub</a> image maintained by LinuxServer.io</h3>
 <p><a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a></p>
 <h3 id="unraid-docker">Unraid Docker</h3>
 <p>An Unraid Docker template is available in the repository.</p>
