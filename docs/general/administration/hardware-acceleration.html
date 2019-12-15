@@ -90,7 +90,7 @@
 <tbody>
 <tr>
 <td>Linux/GNU</td>
-<td>VAAPI (recommended), NVENC</td>
+<td>VAAPI (recommended), NVENC, QSV, AMF</td>
 </tr>
 <tr>
 <td>Windows</td>
@@ -110,14 +110,15 @@
 </tr>
 </tbody>
 </table>
-<p>Here is the official list of supported Codecs for <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux/GNU and Windows.</p>
-<p>List of supported Codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
-<p>List of Intel Processors that support <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">QSV</a></p>
+<p><a href="https://developer.nvidia.com/ffmpeg">NVIDIA using ffmpeg official list</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux/GNU and Windows. Here is the official list of <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a> for supported codecs. </p>
+<p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
+<p>List of Intel Processors that support <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">QSV</a>.</p>
 <p>FFmpeg Hardware Acceleration support <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro">list</a>.</p>
-<p>Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a></p>
+<p>Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a>.</p>
+<p>Here&#39;s <a href="https://github.com/jellyfin/jellyfin-docs/pull/169#issuecomment-565702145">additional information</a> to learn more. </p>
 <h4 id="known-issues">Known Issues</h4>
-<p><a href="https://github.com/jellyfin/jellyfin/issues/1546">RPi 3 failing to transcode</a> <br>
-<a href="https://trac.ffmpeg.org/ticket/8018">RPi 4 failing to transcode</a> <br></p>
+<p><a href="https://github.com/jellyfin/jellyfin/issues/1546">RPi 3 failing to transcode</a><br>
+<a href="https://trac.ffmpeg.org/ticket/8018">RPi 4 failing to transcode</a><br></p>
 <h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
 <p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
 <p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>
