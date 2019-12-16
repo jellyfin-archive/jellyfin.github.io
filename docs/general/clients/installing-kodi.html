@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installing Kodi | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installing Kodi | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="clients-installing-kodi">
+<h1 id="installing-kodi">Installing Kodi</h1>
+
+<h2 id="installation-process">Installation Process</h2>
+<ol>
+<li>Download the repository installer <a href="https://repo.jellyfin.org/releases/client/kodi/repository.jellyfin.kodi.zip">here</a><ul>
+<li>It will be saved as <code>repository.jellyfin.kodi.zip</code></li>
+</ul>
+</li>
+<li>Install the Jellyfin repository<ul>
+<li>Open Kodi and navigate to &quot;Add-on Browser&quot;</li>
+<li>Select &quot;Install from zip file&quot;<ul>
+<li>If prompted, enter settings and enable &quot;Unknown Sources&quot;, then go back</li>
+</ul>
+</li>
+<li>Select the newly downloaded file and it will be installed</li>
+</ul>
+</li>
+<li>Install Jellyfin for Kodi<ul>
+<li>From within Kodi, navigate back to &quot;Add-on Browser&quot;</li>
+<li>Select &quot;Install from repository&quot;</li>
+<li>Choose &quot;Kodi Jellyfin Addons&quot;</li>
+<li>&quot;Video Add-ons&quot;</li>
+<li>Select the Jellyfin add-on and choose install</li>
+</ul>
+</li>
+<li>Within a few seconds you should be prompted for your server-details.<ul>
+<li>If a Jellyfin server is detected on your local network, it will displayed in the popup</li>
+<li>If a Jellyfin server is not detected on your local network, select &quot;Manually add server&quot;<ul>
+<li>Note that if you have a baseurl set, you should append that value to the end of the host field.  ie: <code>192.168.0.10:8096/jellyfin</code></li>
+<li>Enter the server name or IP address and the port number (default is 8096)<ul>
+<li>Host: <code>192.168.1.10:8096</code></li>
+</ul>
+</li>
+<li>If using SSL and a reverse proxy, enter the full URL scheme in the &quot;Host&quot; field<ul>
+<li>Host: <code>https://jellyfin.example.com</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Select user account and input password</li>
+</ul>
+</li>
+<li>Once you&#39;re succesfully authenticated with the Jellyfin server, you&#39;ll be asked about your preferences for this device<ul>
+<li>Choose your preferences for each options<ul>
+<li>Add-On mode requires no additional configuration</li>
+<li>To get Native mode to work, a few things must be done before the files are accessible, so skipping the initial import is necessary, skip the below steps and continue with the <strong>Native Mode Configuration</strong> steps</li>
+</ul>
+</li>
+<li>Select &quot;Proceed&quot; to configure libraries</li>
+<li>Select the libraries you would like to keep synced with this device</li>
+</ul>
+</li>
+<li>The first sync of the Jellyfin server to the local Kodi database may take some time depending on your device speed and library size</li>
+<li>Once the full sync is done, you can browse and play your media through Kodi, and syncs will be done periodically in the background</li>
+</ol>
+<h3 id="native-mode-configuration">Native Mode Configuration</h3>
+<p>The benefit of Native mode over Add-On mode is that nothing will be transcoded, currently Add-On mode doesn&#39;t support audio with more than 5.1 channels, which means no Dolby Atmos or DTS-X. Since no transcoding happens, files play instantly.</p>
+<ol>
+<li>You need to delete and re-add your libraries on your Jellyfin server in order to set the <strong>Optional Network Path</strong> to your share locations if you haven&#39;t already done so previously, SMB/Samba is preferred, and <strong>must be in the Windows format</strong> using backslashes, <em>even if both the client and server are using Unix-like OSes</em>, for example <strong>\\192.168.1.7\movies</strong>, wait for the import to finish on the server.</li>
+<li>If using a Unix-like OS you must create a local user and Samba user named <strong>guest</strong> (with no password) on your server and allow guest only access to your shares, if using Windows this may already be done for you by default, the <strong>guest</strong> user is hardcoded into the plugin.</li>
+<li>Add in your SMB/Samba shares into Kodi like you normally would when not using the Jellyfin plugin, setting the content type, but it is not necessary to import that data since this will be handled by the Jellyfin plugin.</li>
+<li>Select your libraries to add in using the Jellyfin plugin&#39;s menu, proceed to import your library.</li>
+<li>Your files should now be accessible in Kodi and function the same way as Add-On mode, if not, enable debug logging in the Jellyfin plugin in Kodi and if in a Unix-like OS, set the <strong>log level</strong> of Samba to 2 to see if there are issues authenticating.</li>
+</ol>
+<p><strong>Note: It&#39;s recommended to install the <code>Kodi Sync Queue</code> plugin into the Jellyfin server as well</strong></p>
+<p>This will help keep your media libraries up to date without waiting for a periodic resync from Kodi.</p>
+<p><strong>Note: Kodi&#39;s default skin does not display all unicode characters. To display unicode characters the skin&#39;s font must be changed</strong></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/clients/installing-kodi.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
