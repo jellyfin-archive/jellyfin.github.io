@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_MediaEncoding_Subtitles_JsonWriter" data-uid="MediaBrowser.MediaEncoding.Subtitles.JsonWriter" class="text-break">Class JsonWriter
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>JSON subtitle writer.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -124,40 +125,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class JsonWriter : ISubtitleWriter</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_JsonWriter__ctor_MediaBrowser_Model_Serialization_IJsonSerializer_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.JsonWriter.%23ctor(MediaBrowser.Model.Serialization.IJsonSerializer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/JsonWriter.cs/#L13">View Source</a>
-  </span>
-  <a id="MediaBrowser_MediaEncoding_Subtitles_JsonWriter__ctor_" data-uid="MediaBrowser.MediaEncoding.Subtitles.JsonWriter.#ctor*"></a>
-  <h4 id="MediaBrowser_MediaEncoding_Subtitles_JsonWriter__ctor_MediaBrowser_Model_Serialization_IJsonSerializer_" data-uid="MediaBrowser.MediaEncoding.Subtitles.JsonWriter.#ctor(MediaBrowser.Model.Serialization.IJsonSerializer)">JsonWriter(IJsonSerializer)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JsonWriter(IJsonSerializer json)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></td>
-        <td><span class="parametername">json</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -165,11 +132,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_JsonWriter_Write_MediaBrowser_Model_MediaInfo_SubtitleTrackInfo_System_IO_Stream_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.JsonWriter.Write(MediaBrowser.Model.MediaInfo.SubtitleTrackInfo%2CSystem.IO.Stream%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/JsonWriter.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/JsonWriter.cs/#L14">View Source</a>
   </span>
   <a id="MediaBrowser_MediaEncoding_Subtitles_JsonWriter_Write_" data-uid="MediaBrowser.MediaEncoding.Subtitles.JsonWriter.Write*"></a>
   <h4 id="MediaBrowser_MediaEncoding_Subtitles_JsonWriter_Write_MediaBrowser_Model_MediaInfo_SubtitleTrackInfo_System_IO_Stream_System_Threading_CancellationToken_" data-uid="MediaBrowser.MediaEncoding.Subtitles.JsonWriter.Write(MediaBrowser.Model.MediaInfo.SubtitleTrackInfo,System.IO.Stream,System.Threading.CancellationToken)">Write(SubtitleTrackInfo, Stream, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Writes the specified information.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -188,17 +156,20 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.MediaInfo.SubtitleTrackInfo.html">SubtitleTrackInfo</a></td>
         <td><span class="parametername">info</span></td>
-        <td></td>
+        <td><p>The information.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">stream</span></td>
-        <td></td>
+        <td><p>The stream.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -217,7 +188,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Subtitles_JsonWriter.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Subtitles.JsonWriter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/JsonWriter.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Subtitles/JsonWriter.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
