@@ -1,4 +1,4 @@
-# Jellyfin.media
+# Jellyfin.org
 
 The official Jellyfin website.
 
