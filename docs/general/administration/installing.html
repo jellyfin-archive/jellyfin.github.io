@@ -293,15 +293,19 @@ sudo chmod u+x jellyfin.sh
 <h2 id="debian">Debian</h2>
 <h3 id="repository">Repository</h3>
 <p>The Jellyfin team provides a Debian repository for installation on Debian Stretch/Buster. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>.</p>
-<p><strong>NOTE:</strong> Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
+<div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
+</div>
 <ol>
 <li><p>Install HTTPS transport for APT if you haven&#39;t already:<br> <code>sudo apt install apt-transport-https</code></p>
 </li>
 <li><p>Import the GPG signing key (signed by the Jellyfin Team):<br> <code>wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
 </li>
 <li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:<br> <code>echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list</code></p>
-<p> <strong>NOTE:</strong> Supported releases are: <code>stretch</code> and <code>buster</code>.</p>
 </li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>Supported releases are <code>stretch</code> and <code>buster</code>.</p>
+</div>
+<ol>
 <li><p>Update APT repositories:<br> <code>sudo apt update</code></p>
 </li>
 <li><p>Install Jellyfin:<br> <code>sudo apt install jellyfin</code></p>
@@ -311,7 +315,8 @@ sudo chmod u+x jellyfin.sh
 </ol>
 <h3 id="packages">Packages</h3>
 <p>Raw Debian packages, including old versions, are available <a href="https://jellyfin.org/downloads/#debian">here</a>.</p>
-<p><strong>Note:</strong> The repository is the preferred way to obtain Jellyfin on Debian, as it contains several dependencies as well.</p>
+<div class="NOTE"><h5>Note</h5><p>The repository is the preferred way to obtain Jellyfin on Debian, as it contains several dependencies as well.</p>
+</div>
 <ol>
 <li><p>Download the desired <code>jellyfin</code> and <code>jellyfin-ffmpeg</code> <code>.deb</code> packages from the repository.</p>
 </li>
@@ -333,7 +338,8 @@ sudo chmod u+x jellyfin.sh
 </ol>
 <h3 id="repository-1">Repository</h3>
 <p>The Jellyfin team provides an Ubuntu repository for installation on Ubuntu Xenial/Bionic/Cosmic/Disco. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>. Only <code>amd64</code> is supported on Ubuntu Xenial.</p>
-<p><strong>NOTE:</strong> Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
+<div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
+</div>
 <ol>
 <li><p>Install HTTPS transport for APT if you haven&#39;t already:<br> <code>sudo apt install apt-transport-https</code></p>
 </li>
@@ -342,8 +348,11 @@ sudo chmod u+x jellyfin.sh
 <li><p>Import the GPG signing key (signed by the Jellyfin Team):<br> <code>wget -O - https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
 </li>
 <li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:<br> <code>echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list</code></p>
-<p> <strong>NOTE:</strong> Supported releases are: <code>xenial</code>, <code>bionic</code>, <code>cosmic</code>, and <code>disco</code>.</p>
 </li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>Supported releases are <code>xenial</code>, <code>bionic</code>, <code>cosmic</code>, and <code>disco</code>.</p>
+</div>
+<ol>
 <li><p>Update APT repositories:<br> <code>sudo apt update</code></p>
 </li>
 <li><p>Install Jellyfin:<br> <code>sudo apt install jellyfin</code></p>
@@ -353,7 +362,8 @@ sudo chmod u+x jellyfin.sh
 </ol>
 <h3 id="packages-1">Packages</h3>
 <p>Raw Ubuntu packages, including old versions, are available <a href="https://jellyfin.org/downloads/#ubuntu">here</a>.</p>
-<p><strong>Note:</strong> The repository is the preferred way to obtain Jellyfin on Ubuntu, as it contains several dependencies as well.</p>
+<div class="NOTE"><h5>Note</h5><p>The repository is the preferred way to install Jellyfin on Ubuntu, as it contains several dependencies as well.</p>
+</div>
 <ol>
 <li><p>Enable the Universe repository to obtain all the FFMpeg dependencies, and update repositories:<br> <code>sudo add-apt-repository universe</code><br> <code>sudo apt update</code></p>
 </li>

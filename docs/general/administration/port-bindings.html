@@ -77,16 +77,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="admin-port-bindings">
-<h1 id="server-port-bindings">Server port bindings</h1>
+<h1 id="port-bindings">Port Bindings</h1>
 
 <p>This document aims to provide an admin with knowledge on what ports Jellyfin binds and what purpose they serve.</p>
-<h3 id="static-ports">Static ports</h3>
+<h3 id="static-ports">Static Ports</h3>
 <ul>
 <li>8096/tcp is used by default for HTTP traffic. This is admin configurable.</li>
 <li>8920/tcp is used by default for HTTPS traffic. This is admin configurable.</li>
 <li>1900/udp is used for service autodiscovery. This is <em>not</em> admin configurable as it would break client autodiscover.</li>
 </ul>
-<h3 id="dynamic-ports">Dynamic ports</h3>
+<h3 id="dynamic-ports">Dynamic Ports</h3>
 <ul>
 <li>Completely random UDP port bind. It picks any UDP port that is unused on startup. It is used for specific LiveTV setups involving HD Homerun devices.</li>
 </ul>

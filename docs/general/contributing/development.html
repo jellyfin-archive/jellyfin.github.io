@@ -90,67 +90,78 @@
 <p>Once you&#39;ve found something you want to work on or improve, the next step is to make your changes in the code, test them, then submit a Pull Request (PR) on GitHub.</p>
 <p>For simplicity, all examples assume the developer is operating on Linux with SSH access to GitHub, however the general ideas can be applied to HTTP-based GitHub interfaces, and can be translated to Windows or MacOS.</p>
 <p>If you aren&#39;t familiar with Git, we recommend the <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">official documentation</a> to understand how this version control system works and how to use it.</p>
-<h2 id="set-up-your-copy-of-the-repo">Set up your copy of the repo</h2>
+<h3 id="set-up-your-copy-of-the-repo">Set up your copy of the repo</h3>
 <p>The first step is to set up a copy of the Git repository of the project you want to contribute tom. Jellyfin follows a &quot;fork, feature-branch, and PR&quot; model for contributions.</p>
 <ol>
 <li><p>On GitHub, &quot;Fork&quot; the Jellyfin repository you wish to contribute to, to your own user account using the &quot;Fork&quot; button in the relevant repository.</p>
 </li>
-<li><p>Clone your fork to your local machine and enter the directory:<br><code>git clone git@github.com:yourusername/projectname.git</code><br><code>cd projectname/</code></p>
+<li><p>Clone your fork to your local machine and enter the directory:<br> <code>git clone git@github.com:yourusername/projectname.git</code>
+ <code>cd projectname/</code></p>
 </li>
-<li><p>Add the &quot;upstream&quot; remote, which allows you to pull down changes from the main project easily:<br><code>git remote add upstream git@github.com:jellyfin/projectname.git</code></p>
+<li><p>Add the &quot;upstream&quot; remote, which allows you to pull down changes from the main project easily:<br> <code>git remote add upstream git@github.com:jellyfin/projectname.git</code></p>
 </li>
-<li><p>Initialize the Git submodules; most projects have at least one:<br><code>git submodule update --init</code></p>
-<p> <strong>NOTE:</strong> Avoid editing files inside of submodules; this may result in unintended side-effects including overwriting of your work. Always modify the submodule in its own cloned repository elsewhere.</p>
+<li><p>Initialize the Git submodules; most projects have at least one:<br> <code>git submodule update --init</code></p>
 </li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>Avoid editing files inside of submodules; this may result in unintended side-effects including overwriting of your work. Always modify the submodule in its own cloned repository elsewhere.</p>
+</div>
+<ol>
 <li><p>To get the <code>Jellyfin.Server</code> project to run successfully, checkout both the main <a href="https://github.com/jellyfin/jellyfin">Jellyfin project</a>, as well as the <a href="https://github.com/jellyfin/jellyfin-web">Jellyfin Web</a> project.</p>
 </li>
 <li><p>Build the Jellyfin Web project with Yarn or NPM, and copy the location of the resulting <code>dist</code> folder. In your <code>Jellyfin.Server</code> project add an environment variable named <code>JELLYFIN_WEB_DIR</code> with the value set to the full path of your <code>dist</code> folder.</p>
 </li>
 </ol>
 <p>You will now be ready to begin building or modifying the project.</p>
-<h2 id="make-changes-to-the-repo">Make changes to the repo</h2>
+<h3 id="make-changes-to-the-repo">Make changes to the repo</h3>
 <p>Once you have your repository, you can get to work.</p>
 <ol>
-<li><p>Rebase your local branches against upstream <code>master</code> so you are working off the latest changes:<br><code>git fetch --all</code><br><code>git rebase upstream/master</code></p>
+<li><p>Rebase your local branches against upstream <code>master</code> so you are working off the latest changes:<br> <code>git fetch --all</code>
+ <code>git rebase upstream/master</code></p>
 </li>
-<li><p>Create a local feature branch off of <code>master</code> to make your changes:<br><code>git checkout -b my-feature master</code></p>
+<li><p>Create a local feature branch off of <code>master</code> to make your changes:<br> <code>git checkout -b my-feature master</code></p>
 </li>
 <li><p>Make your changes and commits to this local feature branch.</p>
 </li>
 <li><p>Repeat step 1 on your local feature branch once you&#39;re done your work, to ensure you have no conflicts with other work done since you stated.</p>
 </li>
-<li><p>Push up your local feature branch to your GitHub fork:<br><code>git push --set-upstream origin my-feature</code></p>
+<li><p>Push up your local feature branch to your GitHub fork:<br> <code>git push --set-upstream origin my-feature</code></p>
 </li>
 <li><p>On GitHub, create a new PR against the upstream <code>master</code> branch following the advice below.</p>
 </li>
-<li><p>Once your PR is merged, ensure you keep your local branches up-to-date:<br><code>git fetch --all</code><br><code>git checkout master</code><br><code>git rebase upstream/master</code><br><code>git push -u origin master</code></p>
+<li><p>Once your PR is merged, ensure you keep your local branches up-to-date:<br> <code>git fetch --all</code>
+ <code>git checkout master</code>
+ <code>git rebase upstream/master</code>
+ <code>git push -u origin master</code></p>
 </li>
 <li><p>Delete your local feature branch if you no longer need it:
-<code>git branch -d my-feature</code></p>
+ <code>git branch -d my-feature</code></p>
 </li>
 </ol>
-<h2 id="contributorsmd">CONTRIBUTORS.md</h2>
+<h3 id="contributorsmd">CONTRIBUTORS.md</h3>
 <p>If it&#39;s your first time contributing code to a particular repository, please add yourself to the <code>CONTRIBUTORS.md</code> file at the bottom of the <code>Jellyfin Contributors</code> section. While GitHub does track this, having the written document makes things clearer if the code leaves GitHub and lets everyone quickly see who&#39;s worked on the project for copyright or praise!</p>
 <h2 id="official-branches">Official Branches</h2>
-<h3 id="feature-branches">Feature branches</h3>
+<h3 id="feature-branches">Feature Branches</h3>
 <p>From time to time, major projects may come up that require multiple PRs and contributions from multiple people. For these tasks, feature branches specific to the feature should be created, based off of <code>master</code>. This helps allow the work to progress without breaking <code>master</code> for long periods, and allowing those interested in that particular project the ability to work at their own pace instead of racing to fix a broken feature before the next release. To create a feature branch, please communicate with a Core team member and that can be arranged.</p>
 <p>Once the feature a feature branch was created for is ready, it can be merged in one shot into <code>master</code> and the feature branch removed. Alternatively, for very-long-lived features, certain &quot;stable&quot; snapshots can be merged into <code>master</code> as required.</p>
-<h3 id="the-master-branch">The Master branch</h3>
-<p>The <code>master</code> branch is the primary face of the project and main development branch. Except for emergency release hotfixes, all PRs should target <code>master</code>. As a general rule, no PR should break master and all PRs should be tested before merging to ensure this does not occurr. We&#39;re only human and this is still likely to happen, but you should generally be safe to build off of <code>master</code> if you want the latest and greatest version of Jellyfin.</p>
+<h3 id="the-master-branch">The Master Branch</h3>
+<p>The <code>master</code> branch is the primary face of the project and main development branch. Except for emergency release hotfixes, all PRs should target <code>master</code>. As a general rule, no PR should break master and all PRs should be tested before merging to ensure this does not occur. We&#39;re only human and this is still likely to happen, but you should generally be safe to build off of <code>master</code> if you want the latest and greatest version of Jellyfin.</p>
 <h2 id="testing-a-pull-request">Testing a Pull Request</h2>
-<p>To test someone else&#39;s pull request, you must import the changes to your local repository:</p>
+<p>To test someone else&#39;s pull request, you must import the changes to your local repository.</p>
 <ol>
-<li><p>Fetch the changes in a pull request and link them to a new local branch:
-<code>git fetch upstream pull/&lt;PR_ID&gt;/head:my-testing-branch</code></p>
-<p> <strong>NOTE:</strong> <code>&lt;PR_ID&gt;</code> is pull request ID number on GitHub.</p>
-</li>
-<li><p>Checkout the new local branch:<br><code>git checkout my-testing-branch</code></p>
+<li>Fetch the changes in a pull request and link them to a new local branch:
+ <code>git fetch upstream pull/&lt;PR_ID&gt;/head:my-testing-branch</code></li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p><code>&lt;PR_ID&gt;</code> is pull request number on GitHub.</p>
+</div>
+<ol>
+<li><p>Checkout the new local branch:<br> <code>git checkout my-testing-branch</code></p>
 </li>
 <li><p>Perform any testing or build required to test, then return to master and delete the branch:
-<code>git checkout master</code><br><code>git branch -D my-testing-branch</code></p>
+ <code>git checkout master</code>
+ <code>git branch -D my-testing-branch</code></p>
 </li>
 </ol>
-<h2 id="pull-request-guidelines">Pull Request guidelines</h2>
+<h2 id="pull-request-guidelines">Pull Request Guidelines</h2>
 <p>When submitting a new PR, please ensure you do the following things. If you haven&#39;t, please read <a href="https://chris.beams.io/posts/git-commit/">How to Write a Git Commit Message</a> as it is a great resource for writing useful commit messages.</p>
 <ul>
 <li><p>Before submitting a PR, squash &quot;junk&quot; commits together to keep the overall history clean. A single commit should cover a single significant change: avoid squashing all your changes together, especially for large PRs that touch many files, but also don&#39;t leave &quot;fixed this&quot;, &quot;whoops typo&quot; commits in your branch history as this is needless clutter in the final history of the project.</p>
@@ -159,19 +170,19 @@
 </li>
 <li><p>For anything but the most trivial changes that can be described fully in the (short) title, follow the PR template and write a PR body to describe, in as much detail as possible:</p>
 <ol>
-<li><p><em>Why</em> the changes are being made. Reference specific issues with keywords (<code>fixes</code>, <code>closes</code>, <code>addresses</code>, etc.) if at all possible.</p>
+<li><p>Why the changes are being made. Reference specific issues with keywords (<code>fixes</code>, <code>closes</code>, <code>addresses</code>, etc.) if at all possible.</p>
 </li>
-<li><p><em>How</em>, in broad strokes, you approached the issue (if applicable) and briefly describe the changes, especially for large PRs.</p>
+<li><p>How you approached the issue (if applicable) and briefly describe the changes, especially for large PRs.</p>
 </li>
 </ol>
 </li>
 <li><p>Tag any work-in-progress commits with <code>[WIP]</code>, <code>WIP -</code>, or some variation at the beginning of the title. While this tag is in place, the PR should <em>not</em> be merged, and reviews should remain as comments only. Once you&#39;re happy with the final state of your PR, please remove this tag; forgetting to do so might result in your PR being unintentionally ignored as still under active development! Inactive WIPs may occasionally elicit pings from the team inquiring on the status, and closed if there is no response.</p>
 </li>
-<li><p>Avoid force-pushing to large or complex non-WIP pull requests, if at all possible, and especially after review. Doing so forces unneccessary re-review to verify the changes are still OK.</p>
+<li><p>Avoid force-pushing to large or complex pull requests if at all possible, and especially after reviews. It forces unnecessary reviews to verify the changes are still okay and build properly.</p>
 </li>
 <li><p>Expect review and discussion. If you can&#39;t back up your changes with a good description and through review, please reconsider whether it should be done at all. All PRs to <code>dev</code> require at least one approving review from an administrative team member, however we welcome and encourage reviews from any contributor, especially if it&#39;s in an area you are knowledgeable about. More eyes are always better.</p>
 </li>
-<li><p>All PRs require review by at least 2 Core team members before being merged into <code>master</code>, though reviews from any contributor are welcome and helpful! After the second Core team member review, the PR may be merged immediately, or more review or feedback requested explicitly from other contributors if required.</p>
+<li><p>All PRs require review by at least two team members before being merged into <code>master</code>, though reviews from any contributor are welcome! After the second team member review the PR may be merged immediately, or more review or feedback requested explicitly from other contributors if required.</p>
 </li>
 </ul>
 </article>

@@ -84,15 +84,16 @@
 <h2 id="tuner">Tuner</h2>
 <p>Jellyfin has support for the following tuners: </p>
 <ul>
-<li>HDHomerun</li>
+<li>HDHomeRun</li>
 <li>M3U</li>
 </ul>
-<p>HDHomerun is a special case because they will usually get detected automatically by the server. Otherwise you can manually add tuners by navigating to <strong>Live TV</strong> in the settings and adding one there.</p>
-<p>Note:  Docker users using HDHomerun devices should set networking to host mode as Jellyfin needs to connect to a changing UDP port</p>
-<p>M3U allows you to add IPTV channel playlists which you can view and record in Jellyfin.</p>
+<p>HDHomeRun is a special case because they will usually get detected automatically by the server. Otherwise you can manually add tuners by navigating to <strong>Live TV</strong> in the settings and adding one there.</p>
+<div class="NOTE"><h5>Note</h5><p>Docker users using HDHomeRun devices should set networking to host mode as Jellyfin needs to connect to a changing UDP port.</p>
+</div>
+<p>M3U allows you to add IPTV channel playlists which you can view and record.</p>
 <p>Additional tuner types are available via plugins.</p>
 <h2 id="guide">Guide</h2>
-<p>Guide data will need to be mapped to their corresponding channels after a guide data provider is configured.  The guide data formats below are included with the server:</p>
+<p>Guide data will need to be mapped to their corresponding channels after a guide data provider is configured. The guide data formats below are included with the server:</p>
 <ul>
 <li>Schedules Direct</li>
 <li>XMLTV</li>
