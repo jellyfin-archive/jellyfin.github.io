@@ -12672,11 +12672,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.GuidConverter.yml",
+      "source_relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.JsonGuidConverter.yml",
       "output": {
         ".html": {
-          "relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.GuidConverter.html",
-          "hash": "X7Lh8XDTuDGP88FLzXcHFA=="
+          "relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.JsonGuidConverter.html",
+          "hash": "3iVXOkyeAIWqhPFJ+mq35g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.JsonInt32Converter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.JsonInt32Converter.html",
+          "hash": "HTiUdBuMCOCsr7dVh4W8Pw=="
         }
       },
       "is_incremental": false,
@@ -12688,7 +12700,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.Common.Json.Converters.html",
-          "hash": "40nxFg3cwtgXEuawxhkYdQ=="
+          "hash": "Y0OW7xgOqNo+HXLi7mCJVA=="
         }
       },
       "is_incremental": false,
@@ -17428,7 +17440,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Encoder.MediaEncoder.html",
-          "hash": "8XCvXV/YB242U2xf7YVwGQ=="
+          "hash": "Xp4fdqFZrQwvjNCygdSMVg=="
         }
       },
       "is_incremental": false,
@@ -17452,7 +17464,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.FFProbeHelpers.html",
-          "hash": "UzPSeEZOAfcIQEvgiTLY9Q=="
+          "hash": "NmJmDmEJ1pRXKkbdzXpzqg=="
         }
       },
       "is_incremental": false,
@@ -17464,7 +17476,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.html",
-          "hash": "s3zQpenFSfnlsNc6rFVHwQ=="
+          "hash": "GxKEntXdHnAElSgtzX0/kg=="
         }
       },
       "is_incremental": false,
@@ -17476,7 +17488,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.MediaChapter.html",
-          "hash": "rdj6vTk/Y9ptd2GVHnKU9w=="
+          "hash": "eD2Gg/0391Pg6tvAByJE/A=="
         }
       },
       "is_incremental": false,
@@ -17488,7 +17500,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.MediaFormatInfo.html",
-          "hash": "wU5sKzks6wi16mRtxLctPg=="
+          "hash": "snO5tomWdrB0XaVmK+kcpw=="
         }
       },
       "is_incremental": false,
@@ -17500,7 +17512,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.MediaStreamInfo.html",
-          "hash": "WbouFJtX/2aX6ZeqLqI/5A=="
+          "hash": "1G6qh0k1fSqvP7n+h+3T6g=="
         }
       },
       "is_incremental": false,
@@ -17512,7 +17524,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.ProbeResultNormalizer.html",
-          "hash": "0NLoR7wB+YrDx5fOURCjPA=="
+          "hash": "61ppUp7ZDrQsbJk42Gkz5w=="
         }
       },
       "is_incremental": false,
@@ -17524,7 +17536,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/MediaBrowser.MediaEncoding.Probing.html",
-          "hash": "GszapDB1bn4tIt/Ijo4Wsw=="
+          "hash": "bCvglGHn5KF/xeirGSgP4g=="
         }
       },
       "is_incremental": false,
@@ -24856,7 +24868,7 @@
       "output": {
         ".html": {
           "relative_path": "plugin-api/toc.html",
-          "hash": "JiEzDF39Yv8qj7S4f6RW4w=="
+          "hash": "VHLb8dXf6oYylewOmWnpkg=="
         }
       },
       "is_incremental": false,
@@ -24886,6 +24898,18 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 40,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2020,
+          "skipped_file_count": 0
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -24893,23 +24917,11 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 40,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 2019,
           "skipped_file_count": 0
         }
       }

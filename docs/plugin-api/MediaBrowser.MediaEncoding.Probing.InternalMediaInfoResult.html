@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult" class="text-break">Class InternalMediaInfoResult
   </h1>
-  <div class="markdown level0 summary"><p>Class MediaInfoResult</p>
+  <div class="markdown level0 summary"><p>Class MediaInfoResult.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Chapters.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Chapters%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L29">View Source</a>
   </span>
   <a id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Chapters_" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Chapters*"></a>
   <h4 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Chapters" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Chapters">Chapters</h4>
@@ -137,7 +137,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaChapter[] Chapters { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MediaChapter&gt; Chapters { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,7 +149,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.MediaEncoding.Probing.MediaChapter.html">MediaChapter</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="MediaBrowser.MediaEncoding.Probing.MediaChapter.html">MediaChapter</a>&gt;</td>
         <td><p>The chapters.</p>
 </td>
       </tr>
@@ -157,19 +157,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_format.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.format%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Format.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Format%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L22">View Source</a>
   </span>
-  <a id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_format_" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.format*"></a>
-  <h4 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_format" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.format">format</h4>
+  <a id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Format_" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Format*"></a>
+  <h4 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Format" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Format">Format</h4>
   <div class="markdown level1 summary"><p>Gets or sets the format.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaFormatInfo format { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public MediaFormatInfo Format { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,19 +189,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_streams.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.streams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Streams.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Streams%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L15">View Source</a>
   </span>
-  <a id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_streams_" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.streams*"></a>
-  <h4 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_streams" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.streams">streams</h4>
+  <a id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Streams_" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Streams*"></a>
+  <h4 id="MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult_Streams" data-uid="MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult.Streams">Streams</h4>
   <div class="markdown level1 summary"><p>Gets or sets the streams.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaStreamInfo[] streams { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MediaStreamInfo&gt; Streams { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,7 +213,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.MediaEncoding.Probing.MediaStreamInfo.html">MediaStreamInfo</a>[]</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="MediaBrowser.MediaEncoding.Probing.MediaStreamInfo.html">MediaStreamInfo</a>&gt;</td>
         <td><p>The streams.</p>
 </td>
       </tr>
@@ -230,7 +230,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Probing_InternalMediaInfoResult.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Probing.InternalMediaInfoResult%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Probing/InternalMediaInfoResult.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
