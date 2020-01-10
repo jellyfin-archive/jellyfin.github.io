@@ -182,7 +182,7 @@
   </span>
   <a id="MediaBrowser_Common_Hex_Encode_" data-uid="MediaBrowser.Common.Hex.Encode*"></a>
   <h4 id="MediaBrowser_Common_Hex_Encode_System_ReadOnlySpan_System_Byte__System_Boolean_" data-uid="MediaBrowser.Common.Hex.Encode(System.ReadOnlySpan{System.Byte},System.Boolean)">Encode(ReadOnlySpan&lt;Byte&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Encodes <code>bytes</code> as a hex string.</p>
+  <div class="markdown level1 summary"><p>Encodes each element of the specified bytes as its hexadecimal string representation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -202,12 +202,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>&gt;</td>
         <td><span class="parametername">bytes</span></td>
-        <td></td>
+        <td><p>An array of bytes.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">lowercase</span></td>
-        <td></td>
+        <td><p><code>true</code> to use lowercase hexadecimal characters; otherwise <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
