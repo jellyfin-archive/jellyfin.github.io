@@ -80,8 +80,8 @@
 <h1 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h1>
 
 <p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
-<p>Some popular options for reverse proxy systems are <a href="https://httpd.apache.org/">Apache</a>, <a href="https://www.haproxy.com/">Haproxy</a>, <a href="https://www.nginx.com/">Nginx</a>, <a href="https://caddyserver.com/">Caddy</a> and <a href="https://traefik.io/">Traefik</a>.</p>
-<p><strong>Important:</strong> In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired. Running Jellyfin in a subpath (example.com/jellyfin/) is supported by the Android and Web clients.</p>
+<p>Some popular options for reverse proxy systems are <a href="https://httpd.apache.org/">Apache</a>, <a href="https://www.haproxy.com/">Haproxy</a>, <a href="https://www.nginx.com/">Nginx</a>, <a href="https://caddyserver.com/">Caddy</a> and <a href="https://traefik.io/">Traefik</a>.
+<strong>Important:</strong> In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired. Running Jellyfin in a subpath (example.com/jellyfin/) is supported by the Android and Web clients.</p>
 <p>When following this guide, be sure to replace the following variables with your information:</p>
 <ul>
 <li><code>DOMAIN_NAME</code> - Your public domain name to access Jellyfin on (e.g. jellyfin.example.com)</li>
@@ -126,7 +126,7 @@ Ports 80 and 443 (pointing to the proxy server) need to be opened on your Firewa
 #&lt;/VirtualHost&gt;
 #&lt;/IfModule&gt;
 </code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code> or <code>proxy_wstunnel</code> support manually.</p>
-<pre><code>$ sudo a2enmod proxy proxy_http ssl proxy_wstunnel
+<pre><code class="lang-bash">$ sudo a2enmod proxy proxy_http ssl proxy_wstunnel
 </code></pre><h2 id="haproxy">HAProxy</h2>
 <pre><code>frontend jellyfin_proxy
     bind *:80
@@ -155,7 +155,7 @@ backend jellyfin
 #backend letsencrypt
 #    server letsencrypt 127.0.0.1:8888
 </code></pre><h2 id="nginx">Nginx</h2>
-<p>Create the following file <code>/etc/nginx/conf.d/jellyfin.conf</code></p>
+<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code>.</p>
 <pre><code>server {
     listen 80;
     server_name DOMAIN_NAME;
@@ -283,7 +283,7 @@ DOMAIN_NAME/jellyfin/ {
 <p>Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. (<a href="https://traefik.io/">https://traefik.io/</a>). </p>
 <p>Create these 3 files in the SAME directory (or change their paths in the volume section) : docker-compose.yml, traefik.toml and acme.json.</p>
 <p>This configuration is A+ (SSLlabs)</p>
-<p>docker-compose.yml :</p>
+<p>docker-compose.yml:</p>
 <pre><code>version: &#39;3.5&#39;
 
 services:
@@ -335,7 +335,7 @@ networks:
   traefik:
     name: traefik
 </code></pre><p>This toml file can&#39;t support environment variables, ensure you don&#39;t attempt to use variables.</p>
-<p>traefik.toml : </p>
+<p>traefik.toml:</p>
 <pre><code>logLevel = &quot;WARN&quot;
 defaultEntryPoints = [&quot;http&quot;, &quot;https&quot;]
 
@@ -405,13 +405,15 @@ exposedbydefault = false
       browserXSSFilter = true
       customResponseHeaders = &quot;X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex&quot;
       customFrameOptionsValue = &quot;allow-from https://example.com&quot;
-</code></pre><p>Finally, create an empty acme.json : <code>touch acme.json</code> <code>chmod 600 acme.json</code> </p>
-<p>IMPORTANT ! Change example.com to your domain / subdomain name, and change the mail of the acme (user@example.com in traefik.toml). Let&#39;s Encrypt does not require a valid email address however example.com will be flagged as not being a proper email address.</p>
+</code></pre><p>Finally, create an empty acme.json.</p>
+<pre><code class="lang-bash">touch acme.json
+chmod 600 acme.json
+</code></pre><p>IMPORTANT ! Change example.com to your domain / subdomain name, and change the mail of the acme (user@example.com in traefik.toml). Let&#39;s Encrypt does not require a valid email address however example.com will be flagged as not being a proper email address.</p>
 <p>Launch your Traefik/Jellyfin services : <code>docker-compose up -d</code></p>
-<p>Congratulations, your stack with Traefik and Jellyfin is UP !</p>
+<p>Congratulations, your stack with Traefik and Jellyfin is running!</p>
 <div class="NOTE"><h5>Note</h5><p>Due to a <a href="https://github.com/containous/traefik/issues/5559">bug</a> in Traefik, you cannot dynamically route to containers when network_mode=host, so we have created a static route to the docker host (172.17.0.1:8096) in <code>traefik.toml</code>. Using host networking (or macvlan) is required to use DLNA or an HdHomeRun as it supports multicast networking.</p>
 </div>
-<p>Go to jellyfin.example.com (in this case), and your jellyfin is UP with HTTPS (AES 256).</p>
+<p>Go to jellyfin.example.com (in this case), and your jellyfin is running with HTTPS (AES 256).</p>
 <h2 id="letsencrypt-with-certbot">LetsEncrypt with Certbot</h2>
 <p>LetsEncrypt is a service that provides free SSL/TLS certificates to users.  Certbot is a client that makes this easy to accomplish and automate.  In addition, it has plugins for Apache and Nginx that make automating certificate generation even easier.</p>
 <p>Installation instructions for most Linux distributions can be found on the <a href="https://certbot.eff.org/docs/install.html#operating-system-packages">Certbot website</a>.</p>

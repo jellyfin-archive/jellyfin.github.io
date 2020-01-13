@@ -90,7 +90,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Linux/GNU</td>
+<td>Linux</td>
 <td>QSV, NVENC, VAAPI</td>
 </tr>
 <tr>
@@ -112,7 +112,7 @@
 </tbody>
 </table>
 <p><a href="https://www.elpamsoft.com/?p=Plex-Hardware-Transcoding">Graphics Cards comparison using HWA</a></p>
-<p><a href="https://developer.nvidia.com/ffmpeg">NVIDIA using ffmpeg official list</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux/GNU and Windows. Here is the official list of <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a> for supported codecs. Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a>.</p>
+<p><a href="https://developer.nvidia.com/ffmpeg">NVIDIA using ffmpeg official list</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux and Windows. Here is the official list of <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a> for supported codecs. Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a>.</p>
 <p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
 <p>AMF Linux Support still <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF/issues/4">not official</a> and AMD GFX Cards are required to use VAAPI on linux.</p>
 <p>Zen is CPU only. No hardware acceleration for any form of video decoding/encoding. You need an APU or dGPU for hardware acceleration.</p>
@@ -130,8 +130,16 @@
 <div class="NOTE"><h5>Note</h5><p><a href="https://github.com/docker/compose/issues/6691">NVIDIA GPUs</a> aren&#39;t currently supported in docker-compose.</p>
 </div>
 <p>Docker run configuration example:</p>
-<p>   <code>docker run -d \</code><br>    <code>--volume /path/to/config:/config \</code><br>    <code>--volume /path/to/cache:/cache \</code><br>    <code>--volume /path/to/media:/media \</code><br>    <code>--net=host \</code><br>    <code>--restart=unless-stopped \</code><br>    <code>--device /dev/dri/renderD128:/dev/dri/renderD128 \</code><br>    <code>--device /dev/dri/card0:/dev/dri/card0 \</code><br>    <code>jellyfin/jellyfin</code></p>
-<p>Alternatively, using docker-compose:  </p>
+<pre><code class="lang-bash">docker run -d \
+ --volume /path/to/config:/config \
+ --volume /path/to/cache:/cache \
+ --volume /path/to/media:/media \
+ --net=host \
+ --restart=unless-stopped \
+ --device /dev/dri/renderD128:/dev/dri/renderD128 \
+ --device /dev/dri/card0:/dev/dri/card0 \
+ jellyfin/jellyfin
+</code></pre><p>Alternatively, using docker-compose:  </p>
 <pre><code class="lang-yaml">version: &quot;3&quot;  
 services:  
   jellyfin:  
@@ -149,13 +157,22 @@ services:
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
 <p>To check information about VAAPI on your system install and run <code>vainfo</code></p>
 <ol>
-<li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:<br> <code>$ ls -l /dev/dri</code><br> <code>total 0</code><br> <code>drwxr-xr-x 2 root root        100 Apr 13 16:37 by-path</code><br> <code>crw-rw---- 1 root video  226,   0 Apr 13 16:37 card0</code><br> <code>crw-rw---- 1 root video  226,   1 Apr 13 16:37 card1</code><br> <code>crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128</code>  </li>
+<li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:  </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>On some releases, the group may be <code>video</code> instead of <code>render</code>.</p>
+<pre><code class="lang-bash">$ ls -l /dev/dri
+total 0
+drwxr-xr-x 2 root root        100 Apr 13 16:37 by-path
+crw-rw---- 1 root video  226,   0 Apr 13 16:37 card0
+crw-rw---- 1 root video  226,   1 Apr 13 16:37 card1
+crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
+</code></pre><div class="NOTE"><h5>Note</h5><p>On some releases, the group may be <code>video</code> instead of <code>render</code>.</p>
 </div>
 <ol>
-<li><p>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin:<br> <code>sudo usermod -aG render jellyfin</code><br> <code>sudo systemctl restart jellyfin</code>  </p>
-</li>
+<li>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin:  </li>
+</ol>
+<pre><code class="lang-bash">sudo usermod -aG render jellyfin
+sudo systemctl restart jellyfin
+</code></pre><ol>
 <li><p>Configure VAAPI acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
 </li>
 <li><p>Watch a movie, and verify that transcoding is occurring by watching the <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code> and using <code>radeontop</code> or similar tools.</p>
@@ -165,37 +182,42 @@ services:
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
-<li><p>Add your GPU to the container:
- <code>$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;</code></p>
+<li>Add your GPU to the container:</li>
+</ol>
+<p><code>$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;</code></p>
+<ol>
+<li>Make sure you have the card within the container:</li>
+</ol>
+<pre><code class="lang-bash">$ lxc exec jellyfin -- ls -l /dev/dri
+total 0
+crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0
+crw-rw---- 1 root video 226,   0 Jun  4 02:13 controlD64
+crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
+</code></pre><ol>
+<li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
 </li>
-<li><p>Make sure you have the card within the container:
- <code>$ lxc exec jellyfin -- ls -l /dev/dri</code>
- <code>total 0</code>
- <code>crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0</code>
- <code>crw-rw---- 1 root video 226,   0 Jun  4 02:13 controlD64</code>
- <code>crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128</code></p>
-</li>
-<li><p>Configure Jellyfin to use video acceleration, point it at the right device if the default option is wrong.</p>
-</li>
-<li><p>Try and play a video that requires transcoding and run the following, you should get a hit:
- <code>$ ps aux | grep ffmpeg | grep accel</code></p>
-</li>
-<li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
+<li><p>Try and play a video that requires transcoding and run the following, you should get a hit:</p>
 </li>
 </ol>
-<p>Useful resources:</p>
+<p><code>$ ps aux | grep ffmpeg | grep accel</code></p>
+<ol>
+<li>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</li>
+</ol>
+<p>Useful Resources:</p>
 <ul>
 <li><a href="https://github.com/lxc/lxd/blob/master/doc/containers.md#type-gpu">https://github.com/lxc/lxd/blob/master/doc/containers.md#type-gpu</a></li>
 <li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">https://stgraber.org/2017/03/21/cuda-in-lxd/</a></li>
 </ul>
 <h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
 <ol>
-<li>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
+<li><p>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
  <code>sudo usermod -aG video jellyfin</code>
  <code>sudo systemctl restart jellyfin</code>
  On Rpi4, update the firmware and kernel.
- <code>sudo rpi-update</code></li>
-<li>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard.</li>
+ <code>sudo rpi-update</code></p>
+</li>
+<li><p>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard.</p>
+</li>
 <li><p>Change the amount of memory allocated to the GPU. The GPU can&#39;t handle accelerated decoding and encoding simultaneously.
  <code>sudo nano /boot/config.txt</code></p>
 <p> For RPi4, add the line <code>gpu_mem=320</code> <a href="https://www.raspberrypi.org/documentation/configuration/config-txt/">See more Here</a></p>
@@ -214,7 +236,7 @@ services:
 <pre><code class="lang-bash">Stream mapping:
 Stream #0:0 -&gt; #0:0 (hevc (native) -&gt; h264 (h264_omx))
 Stream #0:1 -&gt; #0:1 (aac (native) -&gt; mp3 (libmp3lame))
-</code></pre><p>Stream #0:0 used software to decode hevc and used HWA to encode.</p>
+</code></pre><p>Stream #0:0 used software to decode HEVC and used HWA to encode.</p>
 <p>Stream #0:1 had the same results. Decoding is easier than encoding so these are good results overall. HWA decoding is a work in progress.</p>
 </article>
           </div>

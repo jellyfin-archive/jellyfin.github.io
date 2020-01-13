@@ -103,10 +103,10 @@
 <li><p>Initialize the Git submodules; most projects have at least one:<br> <code>git submodule update --init</code></p>
 </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>Avoid editing files inside of submodules; this may result in unintended side-effects including overwriting of your work. Always modify the submodule in its own cloned repository elsewhere.</p>
+<div class="NOTE"><h5>Note</h5><p>Avoid editing files inside of submodules. Doing so may result in unintended side effects, including overwriting of your work. Always modify the submodule in its own cloned repository elsewhere.</p>
 </div>
 <ol>
-<li><p>To get the <code>Jellyfin.Server</code> project to run successfully, checkout both the main <a href="https://github.com/jellyfin/jellyfin">Jellyfin project</a>, as well as the <a href="https://github.com/jellyfin/jellyfin-web">Jellyfin Web</a> project.</p>
+<li><p>To get the <code>Jellyfin.Server</code> project to run successfully, checkout both the <a href="https://github.com/jellyfin/jellyfin">server</a>, as well as the <a href="https://github.com/jellyfin/jellyfin-web">web client</a> project.</p>
 </li>
 <li><p>Build the Jellyfin Web project with Yarn or NPM, and copy the location of the resulting <code>dist</code> folder. In your <code>Jellyfin.Server</code> project add an environment variable named <code>JELLYFIN_WEB_DIR</code> with the value set to the full path of your <code>dist</code> folder.</p>
 </li>
@@ -176,9 +176,9 @@
 </li>
 </ol>
 </li>
-<li><p>Tag any work-in-progress commits with <code>[WIP]</code>, <code>WIP -</code>, or some variation at the beginning of the title. While this tag is in place, the PR should <em>not</em> be merged, and reviews should remain as comments only. Once you&#39;re happy with the final state of your PR, please remove this tag; forgetting to do so might result in your PR being unintentionally ignored as still under active development! Inactive WIPs may occasionally elicit pings from the team inquiring on the status, and closed if there is no response.</p>
+<li><p>Tag any work-in-progress commits with <code>[WIP]</code>, <code>WIP -</code>, or some variation at the beginning of the title, or mark your PR as &quot;draft&quot; using Github Web UI. While this tag is in place, the PR should <em>not</em> be merged, and reviews should remain as comments only. Once you&#39;re happy with the final state of your PR, please remove this tag; forgetting to do so might result in your PR being unintentionally ignored as still under active development! Inactive WIPs may occasionally elicit pings from the team inquiring on the status, and closed if there is no response.</p>
 </li>
-<li><p>Avoid force-pushing to large or complex pull requests if at all possible, and especially after reviews. It forces unnecessary reviews to verify the changes are still okay and build properly.</p>
+<li><p>Avoid rebasing and force-pushing to large or complex pull requests if at all possible, and especially after reviews. It forces unnecessary reviews to verify the changes are still okay and build properly.</p>
 </li>
 <li><p>Expect review and discussion. If you can&#39;t back up your changes with a good description and through review, please reconsider whether it should be done at all. All PRs to <code>dev</code> require at least one approving review from an administrative team member, however we welcome and encourage reviews from any contributor, especially if it&#39;s in an area you are knowledgeable about. More eyes are always better.</p>
 </li>

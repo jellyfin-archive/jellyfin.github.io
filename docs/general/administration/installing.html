@@ -91,16 +91,16 @@
 <li>Create directories on the host for persistent data storage:<br> <code>mkdir /path/to/config</code><br> <code>mkdir /path/to/cache</code></li>
 <li>Start the server:<br> <code>docker run -d \</code><br> <code>--volume /path/to/config:/config \</code><br> <code>--volume /path/to/cache:/cache \</code><br> <code>--volume /path/to/media:/media \</code><br> <code>--net=host \</code><br> <code>--restart=unless-stopped \</code><br> <code>jellyfin/jellyfin</code>  </li>
 </ol>
-<p>Alternatively, using docker-compose:  </p>
-<pre><code>version: &quot;3&quot;  
-services:  
-  jellyfin:  
+<p>Alternatively, using docker-compose:</p>
+<pre><code>version: &quot;3&quot;
+services:
+  jellyfin:
     image: jellyfin/jellyfin
-    network_mode: &quot;host&quot;  
-    volumes:  
-      - /path/to/config:/config  
-      - /path/to/cache:/cache  
-      - /path/to/media:/media  
+    network_mode: &quot;host&quot;
+    volumes:
+      - /path/to/config:/config
+      - /path/to/cache:/cache
+      - /path/to/media:/media
 </code></pre><h3 id="docker-hubhttpshubdockercomrlinuxserverjellyfin-image-maintained-by-linuxserverio"><a href="https://hub.docker.com/r/linuxserver/jellyfin">Docker Hub</a> image maintained by LinuxServer.io</h3>
 <p><a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a></p>
 <h3 id="unraid-docker">Unraid Docker</h3>
@@ -108,8 +108,11 @@ services:
 <ol>
 <li><p>Open the unRaid GUI (at least unRaid 6.5) and click on the &quot;Docker&quot; tab.</p>
 </li>
-<li><p>Add the following line under &quot;Template Repositories&quot; and click &quot;Save&quot;:<br> <code>https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates</code></p>
+<li><p>Add the following line under &quot;Template Repositories&quot; and click &quot;Save&quot;:  </p>
 </li>
+</ol>
+<p><code>https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates</code></p>
+<ol>
 <li><p>Click &quot;Add Container&quot; and select &quot;jellyfin&quot;.</p>
 </li>
 <li><p>Adjust any required paths and save.</p>
@@ -125,7 +128,7 @@ services:
 <p>[!WARNING]</p>
 <blockquote><p>The 32-bit or x86 version is not recommended. <code>ffmpeg</code> and its video encoders generally perform better as a 64-bit executable due to the extra registers provided. This means that the 32-bit version of Jellyfin is deprecated.</p>
 </blockquote>
-<h3 id="install-using-installer-x64">Install using installer (x64)</h3>
+<h3 id="install-using-installer-x64">Install using Installer (x64)</h3>
 <p>Only available for versions 10.4.0+.</p>
 <p><strong>Install</strong></p>
 <ol>
@@ -147,7 +150,7 @@ services:
 <li>Search for Jellyfin</li>
 <li>Click Uninstall</li>
 </ol>
-<h3 id="manual-installation-x86x64">Manual installation (x86/x64)</h3>
+<h3 id="manual-installation-x86x64">Manual Installation (x86/x64)</h3>
 <p><strong>Install</strong></p>
 <ol>
 <li>Download and extract the latest version</li>
@@ -249,22 +252,21 @@ Navigate to Playback tab in the Dashboard and set the path to FFmpeg under FFmpe
 <p>Generic amd64 Linux builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#linux">here</a>.</p>
 <h3 id="installation-process">Installation Process</h3>
 <p>Create a directory in /opt for jellyfin and its files, and enter that directory.</p>
-<pre><code class="lang-bash">sudo mkdir /opt/jellyfin 
+<pre><code class="lang-bash">sudo mkdir /opt/jellyfin
 cd /opt/jellyfin
-</code></pre><p>Download the latest generic linux build from the <a href="https://github.com/jellyfin/jellyfin/releases">Jellyfin release page</a>. The generic linux build ends with &quot;linux-amd64.tar.gz&quot;. The rest of these instructions assume version 10.4.3 is being installed (i.e. jellyfin_10.4.3_linux-amd64.tar.gz). Download the generic build, then extract the archive:</p>
+</code></pre><p>Download the latest generic Linux build from the <a href="https://github.com/jellyfin/jellyfin/releases">release page</a>. The generic Linux build ends with &quot;linux-amd64.tar.gz&quot;. The rest of these instructions assume version 10.4.3 is being installed (i.e. <code>jellyfin_10.4.3_linux-amd64.tar.gz</code>). Download the generic build, then extract the archive:</p>
 <pre><code class="lang-bash">sudo wget https://github.com/jellyfin/jellyfin/releases/download/v10.4.3/jellyfin_10.4.3_linux-amd64.tar.gz
 sudo tar xvzf jellyfin_10.4.3_linux-amd64.tar.gz
 </code></pre><p>Create a symbolic link to the Jellyfin 10.4.3 directory. This allows an upgrade by repeating the above steps and enabling it by simply re-creating the symbolic link to the new version.</p>
 <pre><code class="lang-bash">sudo ln -s jellyfin_10.4.3 jellyfin
-</code></pre><p>Create four sub-directories for Jellyfin data:</p>
+</code></pre><p>Create four sub-directories for Jellyfin data.</p>
 <pre><code class="lang-bash">sudo mkdir data cache config log
 </code></pre><p>If you are running Debian or a derivative, you can also download and install an ffmpeg release built specifically for Jellyfin. Be sure to download the latest release that matches your OS (4.2.1-3 for Debian Stretch assumed below).</p>
 <pre><code class="lang-bash">sudo wget https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v4.2.1-3/jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
 sudo dpkg --install jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
-</code></pre><p>If you run into any dependency errors, run this and it will install them and jellyfin-ffmpeg:</p>
+</code></pre><p>If you run into any dependency errors, run this and it will install them and jellyfin-ffmpeg.</p>
 <pre><code class="lang-bash">sudo apt install -f
 </code></pre><p>Due to the number of command line options that must be passed, it is easiest to create a small script (here called jellyfin.sh) to run Jellyfin.</p>
-<p>Type:</p>
 <pre><code class="lang-bash">sudo nano jellyfin.sh
 </code></pre><p>Then paste the following commands and modify as needed.</p>
 <pre><code class="lang-bash">#!/bin/bash
@@ -276,7 +278,7 @@ $JELLYFINDIR/jellyfin/jellyfin \
 -C $JELLYFINDIR/cache \
 -c $JELLYFINDIR/config \
 -l $JELLYFINDIR/log \
---ffmpeg $FFMPEGDIR/ffmpeg 
+--ffmpeg $FFMPEGDIR/ffmpeg
 </code></pre><p>Assuming you desire Jellyfin to run as a non-root user, chmod all files and directories to your normal login user and group. Also make the startup script above executable.</p>
 <pre><code class="lang-bash">sudo chown -R user:group *
 sudo chmod u+x jellyfin.sh
@@ -337,7 +339,7 @@ sudo chmod u+x jellyfin.sh
 </li>
 </ol>
 <h3 id="repository-1">Repository</h3>
-<p>The Jellyfin team provides an Ubuntu repository for installation on Ubuntu Xenial/Bionic/Cosmic/Disco. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>. Only <code>amd64</code> is supported on Ubuntu Xenial.</p>
+<p>The Jellyfin team provides an Ubuntu repository for installation on Ubuntu Xenial, Bionic, Cosmic, and Disco. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>. Only <code>amd64</code> is supported on Ubuntu Xenial.</p>
 <div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
 </div>
 <ol>
