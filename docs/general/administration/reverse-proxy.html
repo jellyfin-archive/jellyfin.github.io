@@ -409,7 +409,8 @@ exposedbydefault = false
 <p>IMPORTANT ! Change example.com to your domain / subdomain name, and change the mail of the acme (user@example.com in traefik.toml). Let&#39;s Encrypt does not require a valid email address however example.com will be flagged as not being a proper email address.</p>
 <p>Launch your Traefik/Jellyfin services : <code>docker-compose up -d</code></p>
 <p>Congratulations, your stack with Traefik and Jellyfin is UP !</p>
-<p>Note: Due to a <a href="https://github.com/containous/traefik/issues/5559">bug</a> in Traefik, you cannot dynamically route to containers when network_mode=host, so we have created a static route to the docker host (172.17.0.1:8096) in <code>traefik.toml</code>. Using host networking (or macvlan) is required to use DLNA or an HdHomeRun as it supports multicast networking.</p>
+<div class="NOTE"><h5>Note</h5><p>Due to a <a href="https://github.com/containous/traefik/issues/5559">bug</a> in Traefik, you cannot dynamically route to containers when network_mode=host, so we have created a static route to the docker host (172.17.0.1:8096) in <code>traefik.toml</code>. Using host networking (or macvlan) is required to use DLNA or an HdHomeRun as it supports multicast networking.</p>
+</div>
 <p>Go to jellyfin.example.com (in this case), and your jellyfin is UP with HTTPS (AES 256).</p>
 <h2 id="letsencrypt-with-certbot">LetsEncrypt with Certbot</h2>
 <p>LetsEncrypt is a service that provides free SSL/TLS certificates to users.  Certbot is a client that makes this easy to accomplish and automate.  In addition, it has plugins for Apache and Nginx that make automating certificate generation even easier.</p>
