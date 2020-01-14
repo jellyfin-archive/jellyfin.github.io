@@ -185,7 +185,32 @@
 <li><p>All PRs require review by at least two team members before being merged into <code>master</code>, though reviews from any contributor are welcome! After the second team member review the PR may be merged immediately, or more review or feedback requested explicitly from other contributors if required.</p>
 </li>
 </ul>
-</article>
+<h2 id="building-and-testing-inside-a-docker-container">Building and Testing Inside a Docker Container</h2>
+<p>We need to install all development dependencies and pull down the code inside the container before we can compile and run.</p>
+<div class="NOTE"><h5>Note</h5><p>Run each commmand on a separate line. The container we&#39;ll test in is named <code>jftest</code>. Within Docker, anytime the entrypoint executable is terminated, the session restarts, so just exec into it again to continue. This is also why we explicitly kill it to reload the new version.</p>
+</div>
+<h3 id="master-branch">Master Branch</h3>
+<pre><code class="lang-bash">docker exec -ti jftest bash
+apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.asc.gpg &amp;&amp; mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
+wget -q https://packages.microsoft.com/config/debian/10/prod.list &amp;&amp; mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list
+apt-get update &amp;&amp; apt-get install dotnet-sdk-3.1 yarn
+cd /opt &amp;&amp; git clone https://github.com/jellyfin/jellyfin.git &amp;&amp; git clone https://github.com/jellyfin/jellyfin-web.git
+mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish Jellyfin.Server --configuration Release --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; yarn build &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
+kill -15 6
+</code></pre><h3 id="pull-request">Pull Request</h3>
+<p>First, complete the steps above to setup your container to build the master branch.</p>
+<div class="NOTE"><h5>Note</h5><p><code>&lt;PR_ID&gt;</code> is pull request number on GitHub.</p>
+</div>
+<pre><code class="lang-bash">docker exec -ti jftest bash
+cd /opt/jellyfin
+git fetch upstream pull/&lt;PR_ID&gt;/head:my-testing-branch
+git merge my-testing-branch
+dotnet publish Jellyfin.Server --configuration Release --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+kill -15 6
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
