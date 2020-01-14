@@ -81,21 +81,36 @@
 
 <p>The Jellyfin project and its contributors offer a number of pre-built binary packages to assist in getting Jellyfin up and running quickly on multiple systems.</p>
 <h2 id="containers">Containers</h2>
-<p>Note: There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> for read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable. </p>
-<p>Use host mode for networking in order to use DLNA or an HDHomeRun. </p>
+<div class="NOTE"><h5>Note</h5><p>There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> with read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable.</p>
+</div>
+<p>Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
 <h3 id="official-docker-hub">Official Docker Hub</h3>
 <p><a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a></p>
 <p>The Jellyfin Docker image is available on <a href="https://hub.docker.com/r/jellyfin/jellyfin/">Docker Hub</a> for multiple architectures.</p>
 <ol>
-<li>Get the latest image:<br> <code>docker pull jellyfin/jellyfin</code></li>
-<li>Create directories on the host for persistent data storage:<br> <code>mkdir /path/to/config</code><br> <code>mkdir /path/to/cache</code></li>
-<li>Start the server:<br> <code>docker run -d \</code><br> <code>--volume /path/to/config:/config \</code><br> <code>--volume /path/to/cache:/cache \</code><br> <code>--volume /path/to/media:/media \</code><br> <code>--net=host \</code><br> <code>--restart=unless-stopped \</code><br> <code>jellyfin/jellyfin</code>  </li>
+<li><p>Get the latest image.
+ <code>docker pull jellyfin/jellyfin</code></p>
+</li>
+<li><p>Create directories on the host for persistent data storage.
+ <code>mkdir /path/to/config</code><br> <code>mkdir /path/to/cache</code></p>
+</li>
+<li><p>Start the server.</p>
+</li>
 </ol>
-<p>Alternatively, using docker-compose:</p>
+<pre><code>docker run -d \
+ --volume /path/to/config:/config \
+ --volume /path/to/cache:/cache \
+ --volume /path/to/media:/media \
+ --user 1000:1000 \
+ --net=host \
+ --restart=unless-stopped \
+ jellyfin/jellyfin
+</code></pre><p>Alternatively, using docker-compose:</p>
 <pre><code>version: &quot;3&quot;
 services:
   jellyfin:
     image: jellyfin/jellyfin
+    user: 1000:1000
     network_mode: &quot;host&quot;
     volumes:
       - /path/to/config:/config
@@ -108,7 +123,7 @@ services:
 <ol>
 <li><p>Open the unRaid GUI (at least unRaid 6.5) and click on the &quot;Docker&quot; tab.</p>
 </li>
-<li><p>Add the following line under &quot;Template Repositories&quot; and click &quot;Save&quot;:  </p>
+<li><p>Add the following line under &quot;Template Repositories&quot; and save the options.</p>
 </li>
 </ol>
 <p><code>https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates</code></p>
@@ -122,40 +137,38 @@ services:
 <p>A community project to deploy Jellyfin on Kubernetes-based platforms exists <a href="https://github.com/home-cluster/jellyfin-openshift">at their repository</a>. Any issues or feature requests related to deployment on Kubernetes-based platforms should be filed there.</p>
 <h2 id="windows-x86x64">Windows (x86/x64)</h2>
 <p>Windows installers and builds in ZIP archive format are available <a href="https://jellyfin.org/downloads/#windows">here</a>.</p>
-<p>[!WARNING]</p>
-<blockquote><p>If you installed a version prior to 10.4.0 using a PowerShell script, you will need to manually remove the service using the command <code>nssm remove Jellyfin</code> and uninstall the server by remove all the files manually. Also one might need to move the data files to the correct location, or point the installer at the old location.</p>
-</blockquote>
-<p>[!WARNING]</p>
-<blockquote><p>The 32-bit or x86 version is not recommended. <code>ffmpeg</code> and its video encoders generally perform better as a 64-bit executable due to the extra registers provided. This means that the 32-bit version of Jellyfin is deprecated.</p>
-</blockquote>
+<div class="WARNING"><h5>Warning</h5><p>If you installed a version prior to 10.4.0 using a PowerShell script, you will need to manually remove the service using the command <code>nssm remove Jellyfin</code> and uninstall the server by remove all the files manually. Also one might need to move the data files to the correct location, or point the installer at the old location.</p>
+</div>
+<div class="WARNING"><h5>Warning</h5><p>The 32-bit or x86 version is not recommended. <code>ffmpeg</code> and its video encoders generally perform better as a 64-bit executable due to the extra registers provided. This means that the 32-bit version of Jellyfin is deprecated.</p>
+</div>
 <h3 id="install-using-installer-x64">Install using Installer (x64)</h3>
 <p>Only available for versions 10.4.0+.</p>
 <p><strong>Install</strong></p>
 <ol>
-<li>Download the latest version</li>
-<li>Run the installer</li>
-<li>(optional) When installing as a service, pick the service account type.</li>
-<li>If everything was completed successfully, the Jellyfin service is now running</li>
-<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a> to finish setting up Jellyfin</li>
+<li>Download the latest version.</li>
+<li>Run the installer.</li>
+<li>(Optional) When installing as a service, pick the service account type.</li>
+<li>If everything was completed successfully, the Jellyfin service is now running.</li>
+<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a> to finish setting up Jellyfin.</li>
 </ol>
 <p><strong>Update</strong></p>
 <ol>
-<li>Download the latest version</li>
-<li>Run the installer</li>
+<li>Download the latest version.</li>
+<li>Run the installer.</li>
 <li>If everything was completed successfully, the Jellyfin service is now running as the new version.</li>
 </ol>
 <p><strong>Uninstall</strong></p>
 <ol>
-<li>Go to <code>Add or remove programs</code> in Windows</li>
-<li>Search for Jellyfin</li>
-<li>Click Uninstall</li>
+<li>Go to <code>Add or remove programs</code> in Windows.</li>
+<li>Search for Jellyfin.</li>
+<li>Click Uninstall.</li>
 </ol>
 <h3 id="manual-installation-x86x64">Manual Installation (x86/x64)</h3>
 <p><strong>Install</strong></p>
 <ol>
-<li>Download and extract the latest version</li>
-<li>Create a folder <code>jellyfin</code> at your preferred install location</li>
-<li>Copy the extracted folder into the <code>jellyfin</code> folder and rename it to <code>system</code></li>
+<li>Download and extract the latest version.</li>
+<li>Create a folder <code>jellyfin</code> at your preferred install location.</li>
+<li>Copy the extracted folder into the <code>jellyfin</code> folder and rename it to <code>system</code>.</li>
 <li>Create <code>jellyfin.bat</code> within your <code>jellyfin</code> folder containing:<ul>
 <li>To use the default library/data location at <code>%localappdata%</code>:<br><code>&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe</code></li>
 <li>To use a custom library/data location (Path after the -d parameter):<br><code>&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe -d &lt;--Your install path--&gt;\jellyfin\data</code></li>
@@ -175,22 +188,22 @@ services:
 </ol>
 <p><strong>Rollback</strong></p>
 <ol>
-<li>Stop Jellyfin</li>
-<li>Delete the <code>system</code> folder</li>
-<li>Rename <code>system-bak</code> to <code>system</code></li>
-<li>Run <code>jellyfin.bat</code> to start the server again</li>
+<li>Stop Jellyfin.</li>
+<li>Delete the <code>system</code> folder.</li>
+<li>Rename <code>system-bak</code> to <code>system</code>.</li>
+<li>Run <code>jellyfin.bat</code> to start the server again.</li>
 </ol>
 <h3 id="install-using-legacy-script-x86x64">Install using legacy script (x86/x64)</h3>
 <p>Only for versions 10.3.x and earlier.</p>
 <ol>
 <li>Download and extract the latest version</li>
 <li>Run <code>install.bat</code> or <code>install-jellyfin.ps1</code></li>
-<li>(optional) Enter a custom install location (default is <code>%appdata%</code>)</li>
-<li>(optional) Enter a custom library/data location (default is <code>%localappdata%</code>) - Currently not working</li>
-<li>(optional) Select to install Jellyfin as a service</li>
-<li>(optional) Import old library - Not compatible with newer Emby versions</li>
-<li>(optional) Create a shortcut on your desktop</li>
-<li>(optional) Run Jellyfin after installation</li>
+<li>(Optional) Enter a custom install location (default is <code>%appdata%</code>)</li>
+<li>(Optional) Enter a custom library/data location (default is <code>%localappdata%</code>) - Currently not working</li>
+<li>(Optional) Select to install Jellyfin as a service</li>
+<li>(Optional) Import old library - Not compatible with newer Emby versions</li>
+<li>(Optional) Create a shortcut on your desktop</li>
+<li>(Optional) Run Jellyfin after installation</li>
 <li>Press <code>Install</code></li>
 </ol>
 <h2 id="macos">MacOS</h2>
@@ -198,25 +211,25 @@ services:
 <p><strong>Install</strong></p>
 <ol>
 <li>Download the latest version.</li>
-<li>Drag the <code>.app</code> package into the Applications folder</li>
-<li>Start the application</li>
-<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a></li>
+<li>Drag the <code>.app</code> package into the Applications folder.</li>
+<li>Start the application.</li>
+<li>Open your browser at <code>http://127.0.0.1:8096</code>.</li>
 </ol>
 <p><strong>Upgrade</strong></p>
 <ol>
 <li>Download the latest version.</li>
 <li>Stop the currently running server either via the dashboard or using the application icon.</li>
 <li>Drag the new <code>.app</code> package into the Applications folder and click yes to replace the files.</li>
-<li>Start the application</li>
-<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a></li>
+<li>Start the application.</li>
+<li>Open your browser at <code>http://127.0.0.1:8096</code>.</li>
 </ol>
 <p><strong>Uninstall</strong></p>
 <ol>
 <li>Stop the currently running server either via the dashboard or using the application icon.</li>
-<li>Move the <code>.app</code> package to the Trash.</li>
+<li>Move the <code>.app</code> package to the trash.</li>
 </ol>
 <p><strong>Deleting Configuation</strong></p>
-<p>This will delete all settings and user information. This Applies for the .app package and the Portable Version.</p>
+<p>This will delete all settings and user information. This applies for the .app package and the portable version.</p>
 <ol>
 <li>Delete the folder <code>~/.config/jellyfin/</code></li>
 <li>Delete the folder <code>~/.local/share/jellyfin/</code></li>
@@ -229,7 +242,7 @@ services:
 <li>Type <code>./jellyfin</code> to run jellyfin.</li>
 <li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a></li>
 </ol>
-<p>Closing the terminal window will end jellyfin. Running jellyfin in screen or tmux can prevent this from happening.</p>
+<p>Closing the terminal window will end Jellyfin. Running Jellyfin in screen or tmux can prevent this from happening.</p>
 <p><strong>Upgrading the Portable Version</strong></p>
 <ol>
 <li>Download the latest version.</li>
@@ -245,9 +258,9 @@ services:
 <li>Move <code>/Application/jellyfin-version</code> folder to the Trash. Replace version with the actual version number you are trying to delete.</li>
 </ol>
 <p><strong>Using FFmpeg with the Portable Version</strong></p>
-<p>The portable version doesn&#39;t come with FFmpeg by default. To install FFmpeg you can use homebrew or download the build from <a href="https://ffmpeg.zeranoe.com/builds/macos64/static/">Zeranoe</a> (Recommended).
-If using Zeranoe&#39;s build, extract it to the <code>/Applications/</code> folder.
-Navigate to Playback tab in the Dashboard and set the path to FFmpeg under FFmpeg Path.</p>
+<p>The portable version doesn&#39;t come with FFmpeg by default. To install FFmpeg you can use homebrew or download the build from <a href="https://ffmpeg.zeranoe.com/builds/macos64/static/">Zeranoe</a>.</p>
+<p>If using Zeranoe&#39;s build, extract it to the <code>/Applications/</code> folder.</p>
+<p>Navigate to the Playback tab in the Dashboard and set the path to FFmpeg under FFmpeg Path.</p>
 <h2 id="linux-generic-amd64">Linux (generic amd64)</h2>
 <p>Generic amd64 Linux builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#linux">here</a>.</p>
 <h3 id="installation-process">Installation Process</h3>
@@ -266,7 +279,7 @@ sudo tar xvzf jellyfin_10.4.3_linux-amd64.tar.gz
 sudo dpkg --install jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
 </code></pre><p>If you run into any dependency errors, run this and it will install them and jellyfin-ffmpeg.</p>
 <pre><code class="lang-bash">sudo apt install -f
-</code></pre><p>Due to the number of command line options that must be passed, it is easiest to create a small script (here called jellyfin.sh) to run Jellyfin.</p>
+</code></pre><p>Due to the number of command line options that must be passed, it is easiest to create a small script to run Jellyfin.</p>
 <pre><code class="lang-bash">sudo nano jellyfin.sh
 </code></pre><p>Then paste the following commands and modify as needed.</p>
 <pre><code class="lang-bash">#!/bin/bash
@@ -274,11 +287,11 @@ JELLYFINDIR=&quot;/opt/jellyfin&quot;
 FFMPEGDIR=&quot;/usr/share/jellyfin-ffmpeg&quot;
 
 $JELLYFINDIR/jellyfin/jellyfin \
--d $JELLYFINDIR/data \
--C $JELLYFINDIR/cache \
--c $JELLYFINDIR/config \
--l $JELLYFINDIR/log \
---ffmpeg $FFMPEGDIR/ffmpeg
+ -d $JELLYFINDIR/data \
+ -C $JELLYFINDIR/cache \
+ -c $JELLYFINDIR/config \
+ -l $JELLYFINDIR/log \
+ --ffmpeg $FFMPEGDIR/ffmpeg
 </code></pre><p>Assuming you desire Jellyfin to run as a non-root user, chmod all files and directories to your normal login user and group. Also make the startup script above executable.</p>
 <pre><code class="lang-bash">sudo chown -R user:group *
 sudo chmod u+x jellyfin.sh

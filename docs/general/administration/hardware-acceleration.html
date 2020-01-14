@@ -116,46 +116,50 @@
 <p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
 <p>AMF Linux Support still <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF/issues/4">not official</a> and AMD GFX Cards are required to use VAAPI on linux.</p>
 <p>Zen is CPU only. No hardware acceleration for any form of video decoding/encoding. You need an APU or dGPU for hardware acceleration.</p>
-<p>Intel QSV Benchmarks on <a href="https://www.intel.com/content/www/us/en/cloud-computing/cloud-computing-quicksync-video-ffmpeg-white-paper.html">Linux</a></p>
-<p>On Windows you can use DXVA2/D3D11VA libraries for decoding instead of libmfx and HWA encoding on Windows requires libmfx. The DXVA2/D3D11VA libraries are currently not supported by of Jellyfin. </p>
-<p>CentOS may require <a href="https://www.getpagespeed.com/server-setup/how-to-enable-intel-hardware-acceleration-for-video-playback-in-rhel-centos-8">additional drivers</a> for QSV</p>
-<p>Here&#39;s <a href="https://github.com/Artiume/jellyfin-docs/blob/master/general/wiki/main.md">additional information</a> to learn more. </p>
+<p>Intel QSV Benchmarks on <a href="https://www.intel.com/content/www/us/en/cloud-computing/cloud-computing-quicksync-video-ffmpeg-white-paper.html">Linux</a>.</p>
+<p>On Windows you can use DXVA2/D3D11VA libraries for decoding instead of libmfx and HWA encoding on Windows requires libmfx. The DXVA2/D3D11VA libraries are currently not supported by of Jellyfin.</p>
+<p>CentOS may require <a href="https://www.getpagespeed.com/server-setup/how-to-enable-intel-hardware-acceleration-for-video-playback-in-rhel-centos-8">additional drivers</a> for QSV.</p>
+<p>Here&#39;s <a href="https://github.com/Artiume/jellyfin-docs/blob/master/general/wiki/main.md">additional information</a> to learn more.</p>
 <h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
 <p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
 <p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>
 <h2 id="setup">Setup</h2>
 <p>Each hardware acceleration type, as well as each Jellyfin installation type, requires different setup options before it can be used. It is always best to consult the FFMpeg documentation on the acceleration type you choose for the latest information.</p>
 <h3 id="acceleration-on-docker">Acceleration on Docker</h3>
-<p>In order to use Hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code></p>
+<p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine.</p>
 <div class="NOTE"><h5>Note</h5><p><a href="https://github.com/docker/compose/issues/6691">NVIDIA GPUs</a> aren&#39;t currently supported in docker-compose.</p>
 </div>
-<p>Docker run configuration example:</p>
+<p>You can use <code>docker run</code> to start the server with a command like the one below.</p>
 <pre><code class="lang-bash">docker run -d \
  --volume /path/to/config:/config \
  --volume /path/to/cache:/cache \
  --volume /path/to/media:/media \
+ --user 1000:1000 \
  --net=host \
  --restart=unless-stopped \
  --device /dev/dri/renderD128:/dev/dri/renderD128 \
  --device /dev/dri/card0:/dev/dri/card0 \
  jellyfin/jellyfin
-</code></pre><p>Alternatively, using docker-compose:  </p>
-<pre><code class="lang-yaml">version: &quot;3&quot;  
-services:  
-  jellyfin:  
+</code></pre><p>Alternatively, you can use docker-compose with a configuration file so you don&#39;t need to run a long command every time you restart your server.</p>
+<pre><code class="lang-yaml">version: &quot;3&quot;
+services:
+  jellyfin:
     image: jellyfin/jellyfin
-    network_mode: &quot;host&quot;  
-    volumes:  
-      - /path/to/config:/config  
-      - /path/to/cache:/cache  
-      - /path/to/media:/media  
-    devices: 
-      - /dev/dri/renderD128:/dev/dri/renderD128 # VAAPI devices, may be D128, D129, etc.
+    user: 1000:1000
+    network_mode: &quot;host&quot;
+    volumes:
+      - /path/to/config:/config
+      - /path/to/cache:/cache
+      - /path/to/media:/media
+    devices:
+      # VAAPI Devices
+      - /dev/dri/renderD128:/dev/dri/renderD128
       - /dev/dri/card0:/dev/dri/card0
-      - /dev/vchiq:/dev/qchiq  # Rpi4
+      # RPi 4
+      - /dev/vchiq:/dev/qchiq
 </code></pre><h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
-<p>To check information about VAAPI on your system install and run <code>vainfo</code></p>
+<p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
 <ol>
 <li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:  </li>
 </ol>
@@ -168,7 +172,7 @@ crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
 </code></pre><div class="NOTE"><h5>Note</h5><p>On some releases, the group may be <code>video</code> instead of <code>render</code>.</p>
 </div>
 <ol>
-<li>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin:  </li>
+<li>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</li>
 </ol>
 <pre><code class="lang-bash">sudo usermod -aG render jellyfin
 sudo systemctl restart jellyfin
@@ -182,7 +186,7 @@ sudo systemctl restart jellyfin
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
-<li>Add your GPU to the container:</li>
+<li>Add your GPU to the container.</li>
 </ol>
 <p><code>$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;</code></p>
 <ol>
@@ -196,7 +200,7 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 </code></pre><ol>
 <li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
 </li>
-<li><p>Try and play a video that requires transcoding and run the following, you should get a hit:</p>
+<li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
 </li>
 </ol>
 <p><code>$ ps aux | grep ffmpeg | grep accel</code></p>
@@ -210,12 +214,13 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 </ul>
 <h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
 <ol>
-<li><p>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
+<li>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
  <code>sudo usermod -aG video jellyfin</code>
- <code>sudo systemctl restart jellyfin</code>
- On Rpi4, update the firmware and kernel.
- <code>sudo rpi-update</code></p>
-</li>
+ <code>sudo systemctl restart jellyfin</code></li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>If you are using a Raspberry Pi 4, you might need to run <code>sudo rpi-update</code> for kernel and firmware updates.</p>
+</div>
+<ol>
 <li><p>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard.</p>
 </li>
 <li><p>Change the amount of memory allocated to the GPU. The GPU can&#39;t handle accelerated decoding and encoding simultaneously.
@@ -227,7 +232,7 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <p> Use <code>vcgencmd measure_temp &amp;&amp; vcgencmd measure_clock arm</code> to monitor the temperature and clock speed of the CPU.</p>
 </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA decoding, only HWA encoding of H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. For Rpi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
+<div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA decoding, only HWA encoding of H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
 </div>
 <h3 id="verifying-transcodes">Verifying Transcodes</h3>
 <p>To verify that you are using the proper libraries, run this command against your transcoding log. This can be found at Admin Dashboard &gt; Logs, and /var/log/jellyfin if instead via the repository.</p>

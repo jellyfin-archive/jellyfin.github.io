@@ -79,25 +79,25 @@
             <article class="content wrap" id="_content" data-uid="contrib-release-procedure">
 <h1 id="release-procedure">Release Procedure</h1>
 
-<p>This document is a Core team guide, provided publicly to ensure transparency in the release process.</p>
+<p>This document is a guide for the core team, provided publicly to ensure transparency in the release process.</p>
 <h2 id="versioning">Versioning</h2>
 <p>Jellyfin uses <a href="https://semver.org">semantic versioning</a>. All releases will have versions in the <code>X.Y.Z</code> format, starting from <code>10.0.0</code>. Note however that the <code>10.Y.Z</code> release chain represents the &quot;cleanup&quot; of the codebase, so it should be accepted that <code>10.Y.Z</code> breaks all compatibility, at some point, with previous Emby-compatible interfaces, and may also break compatibility with previous <code>10.Y</code> releases if required for later cleanup work. Our versioning will typically follow the patterns below:</p>
-<h4 id="x---major-breaking-versions"><code>X</code> - Major breaking versions</h4>
+<h4 id="x---major-versions"><code>X</code> - Major Versions</h4>
 <ul>
 <li>Breaks compatibility with the HTTP and/or plugin APIs.</li>
 </ul>
-<h4 id="y---minor-versions"><code>Y</code> - Minor versions</h4>
+<h4 id="y---minor-versions"><code>Y</code> - Minor Versions</h4>
 <ul>
 <li>Introduces new features.</li>
 <li>Makes minor backwards-compatible API changes.</li>
 </ul>
-<h4 id="z---hotfix-versions"><code>Z</code> - Hotfix versions</h4>
+<h4 id="z---hotfix-versions"><code>Z</code> - Hotfix Versions</h4>
 <ul>
 <li>Introduces critical bugfixes or otherwise changes <code>master</code> branch code since the last release.</li>
 </ul>
 <h2 id="general-release-philosophy">General Release Philosophy</h2>
 <p>Releases will generally be performed on Sundays &quot;when ready&quot;. For Major/Minor releases, the &quot;when ready&quot; is generally quite flexible and is whenever the release is truly ready without major breaking bugs. After a major release, each Sunday the Admin team should review the recently merged PRs and, if backports are required, perform a Hotfix release containing those PRs.</p>
-<h3 id="release-procedure-majorminor-version-releases">Release procedure (Major/Minor version releases)</h3>
+<h3 id="major-release-procedure">Major Release Procedure</h3>
 <h4 id="preparation">Preparation</h4>
 <ol>
 <li><p>Testing is ongoing via <code>master</code> nightly builds, so <code>master</code> should be generally unbroken before proceeding. The version of <code>master</code> should already reflect the upcoming major release version (i.e. <code>X.Y.0</code>).</p>
@@ -113,7 +113,7 @@
 <li><p>Once all testing is complete and the release remains stable, proceed.</p>
 </li>
 </ol>
-<h4 id="web-release">Web release</h4>
+<h4 id="web-client">Web Client</h4>
 <ol>
 <li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
 </li>
@@ -124,7 +124,7 @@
 </code></pre><ol>
 <li>Publish the release.</li>
 </ol>
-<h4 id="main-release">Main release</h4>
+<h4 id="server">Server</h4>
 <ol>
 <li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
 </li>
@@ -142,7 +142,7 @@
 <li><p>Announce the new release in the <a href="https://matrix.to/#/#jellyfin-announce:matrix.org">jellyfin-announce</a> Matrix/Riot channel and anywhere else required (e.g. Reddit, etc.).</p>
 </li>
 </ol>
-<h3 id="release-procedure-hotfix-version-releases">Release procedure (Hotfix version releases)</h3>
+<h3 id="hotfix-release-procedure">Hotfix Release Procedure</h3>
 <ol>
 <li><p>During normal work on the <code>master</code> branch, select PRs suitable for backporting by tagging them with the <code>stable-backport</code> label during the PR lifecycle. All PRs will target <code>master</code> and thus bugfixes for the stable release must include this label to be included.</p>
 </li>
@@ -169,7 +169,7 @@
 </ol>
 </li>
 </ol>
-<h4 id="web-release-1">Web release</h4>
+<h4 id="web-client-1">Web Client</h4>
 <ol>
 <li>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</li>
 </ol>
@@ -177,7 +177,7 @@
 </code></pre><ol>
 <li>Publish the release.</li>
 </ol>
-<h4 id="main-release-1">Main release</h4>
+<h4 id="server-1">Server</h4>
 <ol>
 <li><p>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following components:</p>
 <p>a. A quick top blurb under a <code># Jellyfin X.Y.Z</code> header.</p>
