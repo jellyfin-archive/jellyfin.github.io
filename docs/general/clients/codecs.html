@@ -1,0 +1,525 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Codec Compatibility | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Codec Compatibility | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="codecs">
+<h1 id="codec-tableshttpsenwikipediaorgwikilistofcodecs-wikipedias-list-of-all-codecs"><a href="https://en.wikipedia.org/wiki/List_of_codecs" title="Wikipedia&#39;s list of all codecs">Codec Tables</a></h1>
+
+<p>The goal is to Direct Play all media. This means the container, video, audio and subtitles are all compatible with the client. Direct Stream will occur if the audio, container or subtitles happen to not be supported. Subtitles can be tricky because they can cause Direct Stream (subtitles are remuxed) or video transcoding (burning in subtitles) to occur. If the video codec is unsupported, this will result in video transcoding. This is the most intensive CPU component of transcoding. Decoding is less intensive than encoding.</p>
+<h2 id="video-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformats-wikipedias-video-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats" title="Wikipedia&#39;s video codec tables">Video Compatibility</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs">Breakdown of video codecs.</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Chrome</th>
+<th style="text-align:center">Firefox</th>
+<th style="text-align:center">Safari</th>
+<th style="text-align:center">Android</th>
+<th style="text-align:center">iOS</th>
+<th style="text-align:center">AndroidTV</th>
+<th style="text-align:center"><a href="https://developer.roku.com/docs/specs/streaming.md">Roku</a></th>
+<th style="text-align:center">Kodi</th>
+<th style="text-align:center"><a href="https://jellyfin.org/docs/general/clients/index.html#jellyfin-mpv-shim">MPV Shim</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/DivX">MPEG-4 Part 2/SP</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2#Advanced_Simple_Profile_(ASP)">MPEG-4 Part 2/ASP</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 8Bit</a></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 10Bit</a></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://caniuse.com/#feat=hevc" title="HEVC Browser Support Reference">H.265</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌<sup>1</sup></td>
+<td style="text-align:center">🔶<sup>2</sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://caniuse.com/#search=vp9" title="V9 Browser Support Reference">VP9</a></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>HEVC support is potentially available by offloading to the operating system, but this has not been tested.</p>
+<p><sup>2</sup>Android playback is currently broken. Client reports that HEVC is supported and attempts to Direct Stream.</p>
+<p><a href="https://en.wikipedia.org/wiki/MPEG-4#MPEG-4_Parts">Format Cheetsheet:</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/H.262/MPEG-2_Part_2">MPEG-2<br>Part 2</a></th>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2">MPEG-4<br>Part-2</a><sup>1</sup></th>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/Advanced_Video_Coding">MPEG-4<br>Part-10</a></th>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_14">MPEG-4<br>Part-14</a></th>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding">MPEG-H<br>Part 2</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">H.262</td>
+<td style="text-align:center">MPEG4 SP/ASP</td>
+<td style="text-align:center">H.264</td>
+<td style="text-align:center">MP4 Container<sup>2</sup></td>
+<td style="text-align:center">H.265</td>
+</tr>
+<tr>
+<td style="text-align:center">MPEG-2 Video</td>
+<td style="text-align:center">DivX</td>
+<td style="text-align:center">MPEG-4 AVC</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">HEVC</td>
+</tr>
+<tr>
+<td style="text-align:center">DVD-Video</td>
+<td style="text-align:center">DX50</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup><a href="https://www.afterdawn.com/glossary/term.cfm/mpeg_4_part_10">MPEG-4 Part-2 vs Part-10</a></p>
+<p><sup>2</sup><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_17">MPEG-4 Part 17: MP4TT Subtitles</a></p>
+<h2 id="audio-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformatsaudiocodingformatssupport-wikipedias-audio-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Audio_coding_formats_support" title="Wikipedia&#39;s audio codec tables">Audio Compatibility</a></h2>
+<p>If the audio codec is unsupported or incompatible (such as playing a 5.1 channel stream on a stereo device), the audio codec must be transcoded. This is not nearly as intensive as video coding.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Chrome</th>
+<th style="text-align:center">Firefox</th>
+<th style="text-align:center">Safari</th>
+<th style="text-align:center">Android</th>
+<th style="text-align:center">AndroidTV</th>
+<th style="text-align:center">iOS</th>
+<th style="text-align:center">Roku</th>
+<th style="text-align:center">Kodi</th>
+<th style="text-align:center">MPV Shim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">FLAC</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">MP3</td>
+<td style="text-align:center">🔶<sup>1</sup></td>
+<td style="text-align:center">🔶</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">AAC</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">AC3</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">EAC3<sup>2</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">VORBIS<sup>3</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center">DTS<sup>4</sup></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://en.wikipedia.org/wiki/Moving_Picture_Experts_Group#External_links">Format Cheetsheet:</a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-1">MPEG-1</a></th>
+<th style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-2">MPEG-2</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-1_Audio_Layer_II">MP2 (layer 2)</a></td>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Advanced_Audio_Coding">AAC (Part 7)</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MP3">MP3 (layer 3)</a></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>MP3 Mono is incorrectly reported as unsupported and will transcode to AAC.</p>
+<p><sup>2</sup>Only EAC3 2.0 has been tested.</p>
+<p><sup>3</sup>OGG containers are not supported and will cause VORBIS to convert.</p>
+<p><sup>4</sup>Only DTS Mono has been tested.</p>
+<h2 id="subtitle-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformatssubtitlecaptionformatssupport-wikipedias-subtitle-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Subtitle/caption_formats_support" title="Wikipedia&#39;s subtitle codec tables">Subtitle Compatibility</a></h2>
+<p>Subtiles can be a subtle issue for transcoding. Containers have a limited number of subtitles that are supported. If subtitles need to be transcoded, it will happen one of two ways. They can be converted into another supported format (text-based subtitles) or burned into the video (image/lossless based and ASS based) due to the subtitles transcoding not being supported. This is the most intenstive method of transcoding due to two transcodings happening at once; applying the subtitle layer on top of the video layer.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Format</th>
+<th style="text-align:center">TS</th>
+<th style="text-align:center">MP4</th>
+<th style="text-align:center">MKV</th>
+<th style="text-align:center">AVI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/SubRip">SubRip Text (SRT)</a></td>
+<td style="text-align:center">Text</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">🔶</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">🔶</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebVTT">WebVTT (VTT)</a></td>
+<td style="text-align:center">Text</td>
+<td style="text-align:center">❌<sup>1</sup></td>
+<td style="text-align:center">❌<sup>1</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">🔶</td>
+</tr>
+<tr>
+<td style="text-align:center">ASS/SSA<sup>1</sup></td>
+<td style="text-align:center">Formatted Text</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">🔶</td>
+</tr>
+<tr>
+<td style="text-align:center">VobSub</td>
+<td style="text-align:center">Picture</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">🔶</td>
+</tr>
+<tr>
+<td style="text-align:center">DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX</a></td>
+<td style="text-align:center">Picture</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:center">MP4TT/TXTT</td>
+<td style="text-align:center">XML</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+</tr>
+<tr>
+<td style="text-align:center">PGSSUB</td>
+<td style="text-align:center">Picture</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>VTT are supported in an <a href="https://helpx.adobe.com/adobe-media-server/dev/webvtt-subtitles-captions.html">HLS Stream</a>.</p>
+<p><sup>2</sup>ASS Subtitles are only supported by MKV files. MKV files aren&#39;t supported by Firefox. They will always inherently be burned into the video. This is not a limitation of Jellyfin.</p>
+<h2 id="container-compatibilityhttpsdevelopermozillaorgen-usdocswebmediaformatscontainers"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers">Container Compatibility</a></h2>
+<p>If the container is unsupported, this will result in remuxing. The video and audio codec will remain intact, but wrapped in a supported container. This is the least intensive process. Most video containers will be remuxed to use the HLS streaming protocol and TS containers. Remuxing shouldn&#39;t be a concern even for an RPi3.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">Chrome</th>
+<th style="text-align:center">Firefox</th>
+<th style="text-align:center">Safari</th>
+<th style="text-align:center">Android</th>
+<th style="text-align:center">AndroidTV</th>
+<th style="text-align:center">Kodi</th>
+<th style="text-align:center">Roku</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_14">MP4</a><sup>1</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Matroska">MKV</a><sup>2, 3</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebM">WebM</a><sup>3</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG_transport_stream">TS</a><sup>4</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Ogg">OGG</a></td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">❌</td>
+</tr>
+</tbody>
+</table>
+<p><sup>1</sup>MP4 containers are one of the few containers that will not remux.</p>
+<p><sup>2</sup>MKV containers can hold nearly any codec, but are not compatible with streaming in Firefox and will remux.</p>
+<p><sup>3</sup>MKV containers are improperly labeled as WebM in Firefox during playback.</p>
+<p><sup>4</sup>TS is one of the primary containers for streaming for Jellyfin. </p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/clients/codecs.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
