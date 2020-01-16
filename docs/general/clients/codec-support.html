@@ -346,7 +346,7 @@
 <th style="text-align:center"></th>
 <th style="text-align:center">Format</th>
 <th style="text-align:center">TS</th>
-<th style="text-align:center">MP4</th>
+<th style="text-align:center">MP4<sup>3</sup></th>
 <th style="text-align:center">MKV</th>
 <th style="text-align:center">AVI</th>
 </tr>
@@ -385,10 +385,10 @@
 <td style="text-align:center">🔶</td>
 </tr>
 <tr>
-<td style="text-align:center">DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX</a></td>
+<td style="text-align:center">DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX)</a></td>
 <td style="text-align:center">Picture</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">❌</td>
 </tr>
@@ -412,6 +412,7 @@
 </table>
 <p><sup>1</sup>VTT are supported in an <a href="https://helpx.adobe.com/adobe-media-server/dev/webvtt-subtitles-captions.html">HLS Stream</a>.</p>
 <p><sup>2</sup>ASS Subtitles are only supported by MKV files. MKV files aren&#39;t supported by Firefox. They will always inherently be burned into the video. This is not a limitation of Jellyfin.</p>
+<p><sup>3</sup>MP4 containers can only support one embedded subtitle stream. This does not affect external subtitles.</p>
 <h2 id="container-compatibilityhttpsdevelopermozillaorgen-usdocswebmediaformatscontainers"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers">Container Compatibility</a></h2>
 <p>If the container is unsupported, this will result in remuxing. The video and audio codec will remain intact, but wrapped in a supported container. This is the least intensive process. Most video containers will be remuxed to use the HLS streaming protocol and TS containers. Remuxing shouldn&#39;t be a concern even for an RPi3.</p>
 <table>
