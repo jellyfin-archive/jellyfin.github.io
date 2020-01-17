@@ -100,6 +100,8 @@
 <p>This setting can also be modified from the <strong>Networking</strong> page to use a different port.</p>
 <p><strong>Service Discovery:</strong> 1900</p>
 <p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time.</p>
+<p><strong>Client Discovery:</strong> 7359 UDP</p>
+<p>Allows clients to discover the Jellyfin Server on the local network.  A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a json response that includes the server Address, ID and Name.</p>
 <h2 id="dynamic-ports">Dynamic Ports</h2>
 <p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
 <h2 id="base-url">Base URL</h2>
