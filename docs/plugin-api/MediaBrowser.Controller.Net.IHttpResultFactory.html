@@ -520,19 +520,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpResultFactory_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_String_MediaBrowser_Model_IO_FileShareMode_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpResultFactory.GetStaticFileResult(MediaBrowser.Model.Services.IRequest%2CSystem.String%2CMediaBrowser.Model.IO.FileShareMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpResultFactory_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_String_System_IO_FileShare_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpResultFactory.GetStaticFileResult(MediaBrowser.Model.Services.IRequest%2CSystem.String%2CSystem.IO.FileShare)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpResultFactory.cs/#L69">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IHttpResultFactory_GetStaticFileResult_" data-uid="MediaBrowser.Controller.Net.IHttpResultFactory.GetStaticFileResult*"></a>
-  <h4 id="MediaBrowser_Controller_Net_IHttpResultFactory_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_String_MediaBrowser_Model_IO_FileShareMode_" data-uid="MediaBrowser.Controller.Net.IHttpResultFactory.GetStaticFileResult(MediaBrowser.Model.Services.IRequest,System.String,MediaBrowser.Model.IO.FileShareMode)">GetStaticFileResult(IRequest, String, FileShareMode)</h4>
+  <h4 id="MediaBrowser_Controller_Net_IHttpResultFactory_GetStaticFileResult_MediaBrowser_Model_Services_IRequest_System_String_System_IO_FileShare_" data-uid="MediaBrowser.Controller.Net.IHttpResultFactory.GetStaticFileResult(MediaBrowser.Model.Services.IRequest,System.String,System.IO.FileShare)">GetStaticFileResult(IRequest, String, FileShare)</h4>
   <div class="markdown level1 summary"><p>Gets the static file result.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task&lt;object&gt; GetStaticFileResult(IRequest requestContext, string path, FileShareMode fileShare = default(FileShareMode))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;object&gt; GetStaticFileResult(IRequest requestContext, string path, FileShare fileShare = FileShare.Read)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -557,7 +557,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.FileShareMode.html">FileShareMode</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.fileshare">FileShare</a></td>
         <td><span class="parametername">fileShare</span></td>
         <td><p>The file share.</p>
 </td>
