@@ -206,7 +206,7 @@ kill -15 6
 </div>
 <pre><code class="lang-bash">docker exec -ti jftest bash
 cd /opt/jellyfin
-git fetch upstream pull/&lt;PR_ID&gt;/head:my-testing-branch
+git fetch origin pull/&lt;PR_ID&gt;/head:my-testing-branch
 git merge my-testing-branch
 dotnet publish Jellyfin.Server --configuration Release --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
 kill -15 6
