@@ -132,7 +132,9 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Images_PostUserImage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PostUserImage : DeleteImageRequest, IRequiresRequestStream, IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Users/{Id}/Images/{Type}&quot;, &quot;POST&quot;)]
+[Route(&quot;/Users/{Id}/Images/{Type}/{Index}&quot;, &quot;POST&quot;)]
+public class PostUserImage : DeleteImageRequest, IRequiresRequestStream, IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

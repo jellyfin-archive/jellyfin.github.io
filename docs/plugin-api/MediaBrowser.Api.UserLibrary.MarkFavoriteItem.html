@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UserLibrary_MarkFavoriteItem_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MarkFavoriteItem : IReturn&lt;UserItemDataDto&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Users/{UserId}/FavoriteItems/{Id}&quot;, &quot;POST&quot;, Summary = &quot;Marks an item as a favorite&quot;)]
+public class MarkFavoriteItem : IReturn&lt;UserItemDataDto&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

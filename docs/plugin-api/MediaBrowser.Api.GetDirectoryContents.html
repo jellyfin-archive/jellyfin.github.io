@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_GetDirectoryContents_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetDirectoryContents : IReturn&lt;List&lt;FileSystemEntryInfo&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Environment/DirectoryContents&quot;, &quot;GET&quot;, Summary = &quot;Gets the contents of a given directory in the file system&quot;)]
+public class GetDirectoryContents : IReturn&lt;List&lt;FileSystemEntryInfo&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

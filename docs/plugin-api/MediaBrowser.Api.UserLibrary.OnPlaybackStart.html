@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UserLibrary_OnPlaybackStart_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class OnPlaybackStart : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Users/{UserId}/PlayingItems/{Id}&quot;, &quot;POST&quot;, Summary = &quot;Reports that a user has begun playing an item&quot;)]
+public class OnPlaybackStart : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

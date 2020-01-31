@@ -118,7 +118,9 @@
   <h6><strong>Assembly</strong>: Emby.Dlna.dll</h6>
   <h5 id="Emby_Dlna_Api_GetMediaReceiverRegistrar_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetMediaReceiverRegistrar</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Dlna/{UuId}/mediareceiverregistrar/mediareceiverregistrar.xml&quot;, &quot;GET&quot;, Summary = &quot;Gets dlna mediareceiverregistrar xml&quot;)]
+[Route(&quot;/Dlna/{UuId}/mediareceiverregistrar/mediareceiverregistrar&quot;, &quot;GET&quot;, Summary = &quot;Gets dlna mediareceiverregistrar xml&quot;)]
+public class GetMediaReceiverRegistrar</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

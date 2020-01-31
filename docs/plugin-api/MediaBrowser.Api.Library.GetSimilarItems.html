@@ -154,7 +154,13 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Library_GetSimilarItems_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetSimilarItems : BaseGetSimilarItemsFromItem, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn, IHasDtoOptions, IHasItemFields</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Artists/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Finds albums similar to a given album.&quot;)]
+[Route(&quot;/Items/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Gets similar items&quot;)]
+[Route(&quot;/Albums/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Finds albums similar to a given album.&quot;)]
+[Route(&quot;/Shows/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Finds tv shows similar to a given one.&quot;)]
+[Route(&quot;/Movies/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Finds movies and trailers similar to a given movie.&quot;)]
+[Route(&quot;/Trailers/{Id}/Similar&quot;, &quot;GET&quot;, Summary = &quot;Finds movies and trailers similar to a given trailer.&quot;)]
+public class GetSimilarItems : BaseGetSimilarItemsFromItem, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn, IHasDtoOptions, IHasItemFields</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

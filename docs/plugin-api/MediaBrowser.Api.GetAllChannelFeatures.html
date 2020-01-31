@@ -123,7 +123,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_GetAllChannelFeatures_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetAllChannelFeatures : IReturn&lt;ChannelFeatures[]&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Channels/Features&quot;, &quot;GET&quot;, Summary = &quot;Gets features for a channel&quot;)]
+public class GetAllChannelFeatures : IReturn&lt;ChannelFeatures[]&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

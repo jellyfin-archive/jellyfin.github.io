@@ -286,7 +286,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Hls_GetLiveHlsStream_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetLiveHlsStream : VideoStreamRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Videos/{Id}/live.m3u8&quot;, &quot;GET&quot;)]
+public class GetLiveHlsStream : VideoStreamRequest</code></pre>
   </div>
 </article>
           </div>

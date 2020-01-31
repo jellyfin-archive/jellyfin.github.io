@@ -287,7 +287,47 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Progressive_GetVideoStream_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetVideoStream : VideoStreamRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Videos/{Id}/stream.mpegts&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.ts&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.webm&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.asf&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wmv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.ogv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mp4&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.m4v&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mkv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mpeg&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mpg&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.avi&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.m2ts&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.3gp&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wmv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wtv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mov&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.iso&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.flv&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.rm&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream&quot;, &quot;GET&quot;)]
+[Route(&quot;/Videos/{Id}/stream.ts&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.webm&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.asf&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wmv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.ogv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mp4&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.m4v&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mkv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mpeg&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mpg&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.avi&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.3gp&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wmv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.wtv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.m2ts&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.mov&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.iso&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream.flv&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Videos/{Id}/stream&quot;, &quot;HEAD&quot;)]
+public class GetVideoStream : VideoStreamRequest</code></pre>
   </div>
 </article>
           </div>

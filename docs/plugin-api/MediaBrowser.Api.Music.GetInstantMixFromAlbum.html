@@ -154,7 +154,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Music_GetInstantMixFromAlbum_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetInstantMixFromAlbum : BaseGetSimilarItemsFromItem, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn, IHasDtoOptions, IHasItemFields</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Albums/{Id}/InstantMix&quot;, &quot;GET&quot;, Summary = &quot;Creates an instant playlist based on a given album&quot;)]
+public class GetInstantMixFromAlbum : BaseGetSimilarItemsFromItem, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn, IHasDtoOptions, IHasItemFields</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

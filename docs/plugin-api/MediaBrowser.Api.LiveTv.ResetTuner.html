@@ -123,7 +123,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_LiveTv_ResetTuner_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ResetTuner : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/LiveTv/Tuners/{Id}/Reset&quot;, &quot;POST&quot;, Summary = &quot;Resets a tv tuner&quot;)]
+public class ResetTuner : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

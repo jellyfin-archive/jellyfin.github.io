@@ -172,7 +172,27 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Images_GetItemByNameImage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetItemByNameImage : ImageRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Artists/{Name}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Artists/{Name}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Genres/{Name}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Genres/{Name}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/MusicGenres/{Name}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/MusicGenres/{Name}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Persons/{Name}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Persons/{Name}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Studios/{Name}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Studios/{Name}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Artists/{Name}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Artists/{Name}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Genres/{Name}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Genres/{Name}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/MusicGenres/{Name}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/MusicGenres/{Name}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Persons/{Name}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Persons/{Name}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Studios/{Name}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Studios/{Name}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+public class GetItemByNameImage : ImageRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

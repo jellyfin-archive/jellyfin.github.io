@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Library_GetVirtualFolders_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetVirtualFolders : IReturn&lt;List&lt;VirtualFolderInfo&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Library/VirtualFolders&quot;, &quot;GET&quot;)]
+public class GetVirtualFolders : IReturn&lt;List&lt;VirtualFolderInfo&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

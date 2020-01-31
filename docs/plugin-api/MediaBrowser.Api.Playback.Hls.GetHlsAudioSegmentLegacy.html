@@ -119,7 +119,9 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Hls_GetHlsAudioSegmentLegacy_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetHlsAudioSegmentLegacy</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Audio/{Id}/hls/{SegmentId}/stream.mp3&quot;, &quot;GET&quot;)]
+[Route(&quot;/Audio/{Id}/hls/{SegmentId}/stream.aac&quot;, &quot;GET&quot;)]
+public class GetHlsAudioSegmentLegacy</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

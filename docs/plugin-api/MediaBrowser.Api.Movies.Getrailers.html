@@ -414,7 +414,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Movies_Getrailers_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Getrailers : BaseItemsRequest, IHasDtoOptions, IHasItemFields, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Trailers&quot;, &quot;GET&quot;, Summary = &quot;Finds movies and trailers similar to a given trailer.&quot;)]
+public class Getrailers : BaseItemsRequest, IHasDtoOptions, IHasItemFields, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

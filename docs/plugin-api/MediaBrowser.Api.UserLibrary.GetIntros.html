@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UserLibrary_GetIntros_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetIntros : IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Users/{UserId}/Items/{Id}/Intros&quot;, &quot;GET&quot;, Summary = &quot;Gets intros to play before the main media item plays&quot;)]
+public class GetIntros : IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

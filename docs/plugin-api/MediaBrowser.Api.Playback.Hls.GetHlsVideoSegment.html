@@ -286,7 +286,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Hls_GetHlsVideoSegment_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetHlsVideoSegment : VideoStreamRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Videos/{Id}/hls1/{PlaylistId}/{SegmentId}.{SegmentContainer}&quot;, &quot;GET&quot;)]
+public class GetHlsVideoSegment : VideoStreamRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

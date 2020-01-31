@@ -328,7 +328,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_ScheduledTasks_UpdateScheduledTaskTriggers_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpdateScheduledTaskTriggers : List&lt;TaskTriggerInfo&gt;, IList&lt;TaskTriggerInfo&gt;, ICollection&lt;TaskTriggerInfo&gt;, IReadOnlyList&lt;TaskTriggerInfo&gt;, IReadOnlyCollection&lt;TaskTriggerInfo&gt;, IEnumerable&lt;TaskTriggerInfo&gt;, IList, ICollection, IEnumerable, IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/ScheduledTasks/{Id}/Triggers&quot;, &quot;POST&quot;, Summary = &quot;Updates the triggers for a scheduled task&quot;)]
+public class UpdateScheduledTaskTriggers : List&lt;TaskTriggerInfo&gt;, IList&lt;TaskTriggerInfo&gt;, ICollection&lt;TaskTriggerInfo&gt;, IReadOnlyList&lt;TaskTriggerInfo&gt;, IReadOnlyCollection&lt;TaskTriggerInfo&gt;, IEnumerable&lt;TaskTriggerInfo&gt;, IList, ICollection, IEnumerable, IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

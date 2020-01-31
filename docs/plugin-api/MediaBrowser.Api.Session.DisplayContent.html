@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Session_DisplayContent_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DisplayContent : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Sessions/{Id}/Viewing&quot;, &quot;POST&quot;, Summary = &quot;Instructs a session to browse to an item or view&quot;)]
+public class DisplayContent : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

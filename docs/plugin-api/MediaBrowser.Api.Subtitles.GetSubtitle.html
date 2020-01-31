@@ -118,7 +118,9 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Subtitles_GetSubtitle_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetSubtitle</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/Stream.{Format}&quot;, &quot;GET&quot;, Summary = &quot;Gets subtitles in a specified format.&quot;)]
+[Route(&quot;/Videos/{Id}/{MediaSourceId}/Subtitles/{Index}/{StartPositionTicks}/Stream.{Format}&quot;, &quot;GET&quot;, Summary = &quot;Gets subtitles in a specified format.&quot;)]
+public class GetSubtitle</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

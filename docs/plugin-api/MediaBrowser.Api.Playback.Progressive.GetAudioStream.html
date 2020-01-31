@@ -280,7 +280,11 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Progressive_GetAudioStream_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetAudioStream : StreamRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Audio/{Id}/stream.{Container}&quot;, &quot;GET&quot;, Summary = &quot;Gets an audio stream&quot;)]
+[Route(&quot;/Audio/{Id}/stream&quot;, &quot;GET&quot;, Summary = &quot;Gets an audio stream&quot;)]
+[Route(&quot;/Audio/{Id}/stream.{Container}&quot;, &quot;HEAD&quot;, Summary = &quot;Gets an audio stream&quot;)]
+[Route(&quot;/Audio/{Id}/stream&quot;, &quot;HEAD&quot;, Summary = &quot;Gets an audio stream&quot;)]
+public class GetAudioStream : StreamRequest</code></pre>
   </div>
 </article>
           </div>

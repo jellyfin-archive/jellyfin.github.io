@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_System_GetSystemInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetSystemInfo : IReturn&lt;SystemInfo&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/System/Info&quot;, &quot;GET&quot;, Summary = &quot;Gets information about the server&quot;)]
+public class GetSystemInfo : IReturn&lt;SystemInfo&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

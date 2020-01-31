@@ -131,7 +131,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UpdatePluginSecurityInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class UpdatePluginSecurityInfo : PluginSecurityInfo, IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Plugins/SecurityInfo&quot;, &quot;POST&quot;, Summary = &quot;Updates plugin registration information&quot;, IsHidden = true)]
+public class UpdatePluginSecurityInfo : PluginSecurityInfo, IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

@@ -123,7 +123,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Session_ReportSessionEnded_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ReportSessionEnded : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Sessions/Logout&quot;, &quot;POST&quot;, Summary = &quot;Reports that a session has ended&quot;)]
+public class ReportSessionEnded : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

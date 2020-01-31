@@ -118,7 +118,9 @@
   <h6><strong>Assembly</strong>: Emby.Dlna.dll</h6>
   <h5 id="Emby_Dlna_Api_GetContentDirectory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetContentDirectory</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Dlna/{UuId}/contentdirectory/contentdirectory.xml&quot;, &quot;GET&quot;, Summary = &quot;Gets dlna content directory xml&quot;)]
+[Route(&quot;/Dlna/{UuId}/contentdirectory/contentdirectory&quot;, &quot;GET&quot;, Summary = &quot;Gets dlna content directory xml&quot;)]
+public class GetContentDirectory</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

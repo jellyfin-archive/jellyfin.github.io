@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_GetParentalRatings_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetParentalRatings : IReturn&lt;ParentalRating[]&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Localization/ParentalRatings&quot;, &quot;GET&quot;, Summary = &quot;Gets known parental ratings&quot;)]
+public class GetParentalRatings : IReturn&lt;ParentalRating[]&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

@@ -118,7 +118,9 @@
   <h6><strong>Assembly</strong>: Emby.Dlna.dll</h6>
   <h5 id="Emby_Dlna_Api_ProcessConnectionManagerEventRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ProcessConnectionManagerEventRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Dlna/{UuId}/connectionmanager/events&quot;, &quot;SUBSCRIBE&quot;, Summary = &quot;Processes an event subscription request&quot;)]
+[Route(&quot;/Dlna/{UuId}/connectionmanager/events&quot;, &quot;UNSUBSCRIBE&quot;, Summary = &quot;Processes an event subscription request&quot;)]
+public class ProcessConnectionManagerEventRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

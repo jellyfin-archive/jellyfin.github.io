@@ -279,7 +279,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Playback_Hls_GetVariantHlsAudioPlaylist_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetVariantHlsAudioPlaylist : StreamRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Audio/{Id}/main.m3u8&quot;, &quot;GET&quot;, Summary = &quot;Gets an audio stream using HTTP live streaming.&quot;)]
+public class GetVariantHlsAudioPlaylist : StreamRequest</code></pre>
   </div>
 </article>
           </div>

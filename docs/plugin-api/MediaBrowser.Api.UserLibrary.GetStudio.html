@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UserLibrary_GetStudio_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetStudio : IReturn&lt;BaseItemDto&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Studios/{Name}&quot;, &quot;GET&quot;, Summary = &quot;Gets a studio, by name&quot;)]
+public class GetStudio : IReturn&lt;BaseItemDto&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

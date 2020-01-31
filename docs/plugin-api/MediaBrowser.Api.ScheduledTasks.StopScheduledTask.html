@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_ScheduledTasks_StopScheduledTask_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StopScheduledTask : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/ScheduledTasks/Running/{Id}&quot;, &quot;DELETE&quot;, Summary = &quot;Stops a scheduled task&quot;)]
+public class StopScheduledTask : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

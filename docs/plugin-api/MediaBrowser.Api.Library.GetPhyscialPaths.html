@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Library_GetPhyscialPaths_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetPhyscialPaths : IReturn&lt;List&lt;string&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Library/PhysicalPaths&quot;, &quot;GET&quot;, Summary = &quot;Gets a list of physical paths from virtual folders&quot;)]
+public class GetPhyscialPaths : IReturn&lt;List&lt;string&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

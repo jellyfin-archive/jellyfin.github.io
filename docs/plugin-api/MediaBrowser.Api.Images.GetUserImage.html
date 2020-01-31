@@ -172,7 +172,11 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Images_GetUserImage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetUserImage : ImageRequest</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Users/{Id}/Images/{Type}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Users/{Id}/Images/{Type}/{Index}&quot;, &quot;GET&quot;)]
+[Route(&quot;/Users/{Id}/Images/{Type}&quot;, &quot;HEAD&quot;)]
+[Route(&quot;/Users/{Id}/Images/{Type}/{Index}&quot;, &quot;HEAD&quot;)]
+public class GetUserImage : ImageRequest</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

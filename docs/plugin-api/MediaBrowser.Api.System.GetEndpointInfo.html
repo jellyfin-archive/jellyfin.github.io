@@ -123,7 +123,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_System_GetEndpointInfo_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetEndpointInfo : IReturn&lt;EndPointInfo&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/System/Endpoint&quot;, &quot;GET&quot;, Summary = &quot;Gets information about the request endpoint&quot;)]
+public class GetEndpointInfo : IReturn&lt;EndPointInfo&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>

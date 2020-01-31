@@ -415,7 +415,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_UserLibrary_GetMusicGenres_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetMusicGenres : GetItemsByName, IHasDtoOptions, IHasItemFields, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/MusicGenres&quot;, &quot;GET&quot;, Summary = &quot;Gets all music genres from a given item, folder, or the entire library&quot;)]
+public class GetMusicGenres : GetItemsByName, IHasDtoOptions, IHasItemFields, IReturn&lt;QueryResult&lt;BaseItemDto&gt;&gt;, IReturn</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>

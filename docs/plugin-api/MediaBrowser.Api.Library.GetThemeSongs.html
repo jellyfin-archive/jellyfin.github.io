@@ -124,7 +124,8 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_Library_GetThemeSongs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class GetThemeSongs : IReturn&lt;ThemeMediaResult&gt;, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Items/{Id}/ThemeSongs&quot;, &quot;GET&quot;, Summary = &quot;Gets theme songs for an item&quot;)]
+public class GetThemeSongs : IReturn&lt;ThemeMediaResult&gt;, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
