@@ -197,7 +197,7 @@ wget -q https://packages.microsoft.com/config/debian/10/prod.list &amp;&amp; mv 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list
 apt-get update &amp;&amp; apt-get install dotnet-sdk-3.1 yarn
 cd /opt &amp;&amp; git clone https://github.com/jellyfin/jellyfin.git &amp;&amp; git clone https://github.com/jellyfin/jellyfin-web.git
-mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish Jellyfin.Server --configuration Release --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
 cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; yarn build &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
 kill -15 6
 </code></pre><h3 id="pull-request">Pull Request</h3>
@@ -208,7 +208,7 @@ kill -15 6
 cd /opt/jellyfin
 git fetch origin pull/&lt;PR_ID&gt;/head:my-testing-branch
 git merge my-testing-branch
-dotnet publish Jellyfin.Server --configuration Release --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+dotnet publish Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
 kill -15 6
 </code></pre></article>
           </div>
