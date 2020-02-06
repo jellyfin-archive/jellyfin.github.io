@@ -127,15 +127,25 @@
 </ul>
 </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>By default the the <em>TVHeadend Hostname or IP Address</em> section is configured by default with the hostname <em>localhost</em>, it is preferable to use the IP address <em>127.0.0.1</em> instead of <em>localhost</em>. <a href="https://emby.media/community/index.php?/topic/55768-tv-headend-plugin-where-does-it-store-data/">Reference</a></p>
+<div class="NOTE"><h5>Note</h5><p>By default the the <em>TVHeadend Hostname or IP Address</em> section is configured by default with the hostname <em>localhost</em>, it is preferable to use the IP address <em>127.0.0.1</em> instead of <em>localhost</em>. <a href="https://emby.media/community/index.php?/topic/55768-tv-headend-plugin-where-does-it-store-data/#entry542181">Reference</a></p>
 </div>
 <ol>
-<li><p>Configure the channels for viewing in Jellyfin: even if Jellyfin manages to connect to TVHeadend, the guide will not be synchronized because there has to be a number assigned to the channels in TVHeadend. <a href="https://emby.media/community/index.php?/topic/64583-no-channels-with-tvheadend-plugin/#ipboard_body">Reference</a></p>
+<li><p>Configure the channels for viewing in Jellyfin: even if Jellyfin manages to connect to TVHeadend, the guide will not be synchronized because there has to be a number assigned to the channels in TVHeadend. <a href="https://emby.media/community/index.php?/topic/64583-no-channels-with-tvheadend-plugin/#entry642268">Reference</a></p>
 <ul>
+<li>Manual mode<ul>
 <li>Go to Configuration &gt; Channel/EPG &gt; Channels</li>
 <li>Select the channel to be changed and press Edit</li>
-<li>In the option Number we enter the number that we are going to assign to the channel (for example: 1)</li>
+<li>In the option <em>Number</em> we enter the number that we are going to assign to the channel (for example: 1), this number must be nonzero</li>
 <li>Press save</li>
+</ul>
+</li>
+<li>Automatic mode<ul>
+<li>Go to Configuration &gt; DVB Inputs &gt; Networks</li>
+<li>Select the network you want and press Edit</li>
+<li>In the option <em>Channel numbers from</em> we enter the number so we want the numbering of the channels to start (for example: 1), this number must be nonzero</li>
+<li>Press save</li>
+</ul>
+</li>
 </ul>
 </li>
 <li><p>Update the data from the TVHeadend guide to Jellyfin</p>
@@ -145,6 +155,8 @@
 </ul>
 </li>
 </ol>
+<div class="NOTE"><h5>Note</h5><p>If the guide is not updated, restart the Jellyfin server.</p>
+</div>
 <p>Once the update of the guide is finished, the Live TV will already be able to see the guide related to the synchronized channels and will be able to visualize the content.</p>
 </article>
           </div>
