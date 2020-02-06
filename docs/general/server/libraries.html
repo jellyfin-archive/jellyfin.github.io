@@ -86,6 +86,7 @@
 <p>You can add multiple paths that will all be shown under the same library. The path selection dialog will allow you to select folders visually, but if you can&#39;t find the exact location you can also just enter the path manually.</p>
 <h2 id="real-time-monitoring">Real Time Monitoring</h2>
 <p>This will let Jellyfin automatically update libraries when files are added or modified. Unfortunately this feature is only supported on certain filesystems.</p>
+<p>For Linux systems, this is performed by <a href="https://en.wikipedia.org/wiki/Inotify">inotify</a>. NFS and rclone do not support inotify, but support can be provided by using a union file system such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a> with your networked file systems.</p>
 </article>
           </div>
           
