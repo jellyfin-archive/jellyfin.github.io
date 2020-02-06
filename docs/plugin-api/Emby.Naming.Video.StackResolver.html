@@ -161,7 +161,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_StackResolver_Resolve_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.StackResolver.Resolve(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.IO.FileSystemMetadata%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/StackResolver.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/StackResolver.cs/#L64">View Source</a>
   </span>
   <a id="Emby_Naming_Video_StackResolver_Resolve_" data-uid="Emby.Naming.Video.StackResolver.Resolve*"></a>
   <h4 id="Emby_Naming_Video_StackResolver_Resolve_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__" data-uid="Emby.Naming.Video.StackResolver.Resolve(System.Collections.Generic.IEnumerable{MediaBrowser.Model.IO.FileSystemMetadata})">Resolve(IEnumerable&lt;FileSystemMetadata&gt;)</h4>
@@ -169,7 +169,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackResult Resolve(IEnumerable&lt;FileSystemMetadata&gt; files)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStack&gt; Resolve(IEnumerable&lt;FileSystemMetadata&gt; files)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -198,7 +198,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Emby.Naming.Video.StackResult.html">StackResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Emby.Naming.Video.FileStack.html">FileStack</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -216,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackResult ResolveAudioBooks(IEnumerable&lt;FileSystemMetadata&gt; files)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStack&gt; ResolveAudioBooks(IEnumerable&lt;FileSystemMetadata&gt; files)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,7 +245,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Emby.Naming.Video.StackResult.html">StackResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Emby.Naming.Video.FileStack.html">FileStack</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -263,7 +263,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackResult ResolveDirectories(IEnumerable&lt;string&gt; files)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStack&gt; ResolveDirectories(IEnumerable&lt;string&gt; files)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -292,7 +292,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Emby.Naming.Video.StackResult.html">StackResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Emby.Naming.Video.FileStack.html">FileStack</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -310,7 +310,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StackResult ResolveFiles(IEnumerable&lt;string&gt; files)</code></pre>
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;FileStack&gt; ResolveFiles(IEnumerable&lt;string&gt; files)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,7 +339,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Emby.Naming.Video.StackResult.html">StackResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Emby.Naming.Video.FileStack.html">FileStack</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
