@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS Customization | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="CSS Customization | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="css-customization">
+<h1 id="css-customization">CSS Customization</h1>
+
+<p><a href="https://www.w3schools.com/cssref/css3_browsersupport.asp">Custom CSS</a> provides interface customization such as changing colors or modifying behavior. Here are a collection of community scripts available. Currently, the CSS modifications only work on the web client. To implement these changes, go to Dashboard &gt; General &gt; Custom CSS.</p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73392971-d1cc7d80-42a8-11ea-8552-3d311655ea37.png" alt="image"></p>
+<h2 id="color-modifications">Color Modifications</h2>
+<h3 id="colors-codes">Colors Codes:</h3>
+<p>Here are a few examples, see <a href="https://htmlcolorcodes.com/color-picker/">here</a> for a hex color chart.</p>
+<p>Green: <code>#5dd000</code><br>
+Blue: <code>#0000d0</code><br>
+Red: <code>#d00000</code><br></p>
+<h4 id="played-indicator">Played Indicator:</h4>
+<p><code>.playedIndicator { background: #5dd000 !important; }</code></p>
+<p>Before:</p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73392328-97aeac00-42a7-11ea-817f-7234b8a78783.png" alt="image"></p>
+<p>Green Mod:</p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73392302-86659f80-42a7-11ea-9a9a-222cbbe466c6.png" alt="image"></p>
+<h4 id="background-color">Background Color:</h4>
+<p><code>.backgroundContainer, .dialog, html { background-color: #0fd0d0 !important; }</code></p>
+<h4 id="header-color">Header Color</h4>
+<p><code>.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {   background: #ff9475 !important; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73949397-5f6f2500-48c8-11ea-9eca-bc1eb61f1281.png" alt="image"></p>
+<h4 id="border-color">Border Color</h4>
+<p><code>.emby-input, .emby-textarea, .emby-select { border-color:#fdbe7d !important; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73950017-39965000-48c9-11ea-9c0e-7687420a282e.png" alt="image"></p>
+<h4 id="hotdogs-and-catsup">Hotdogs and Catsup:</h4>
+<pre><code>.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {
+    background: #ff9475 !important;
+}
+.emby-input, .emby-textarea, .emby-select {
+    border-color:#fdbe7d !important;
+}
+
+.backgroundContainer.withBackdrop, .backdropContainer, .backgroundContainer{
+    background: #fdbe7d !important;
+}
+
+#myPreferencesMenuPage .listItemBodyText,
+.emby-tab-button[data-index=&quot;0&quot;],
+#myPreferencesMenuPage &gt; div &gt; div &gt; div &gt; a:nth-child(odd),
+.button-submit,
+.mainAnimatedPage *:nth-child(odd),
+.dashboardGeneralForm *:nth-child(odd),
+.mainDrawer-scrollContainer *:nth-child(odd),
+.headerRight *:nth-child(odd) {
+    color: red;
+}
+
+#myPreferencesMenuPage .listItemIcon,
+.emby-tab-button[data-index=&quot;1&quot;],
+#myPreferencesMenuPage &gt; div &gt; div &gt; div &gt; a:nth-child(even),
+.mainAnimatedPage *:nth-child(even),
+.dashboardGeneralForm *:nth-child(even),
+.mainDrawer-scrollContainer *:nth-child(even),
+.headerRight *:nth-child(even)
+.cancel {
+    color: yellow;
+}
+</code></pre><p>Sample:
+<img src="https://user-images.githubusercontent.com/20715731/73948929-a3adf580-48c7-11ea-8bf1-eaaba2873be7.png" alt="image"></p>
+<p>More Community Links:</p>
+<p><a href="https://www.reddit.com/r/jellyfin/comments/bqa065/sharing_my_custom_css_for_modifying_the_ui/">https://www.reddit.com/r/jellyfin/comments/bqa065/sharing_my_custom_css_for_modifying_the_ui/</a></p>
+<p><a href="https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css/">https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css/</a></p>
+<p><a href="https://emby.media/community/index.php?/topic/18046-custom-css-with-emby-web-app/">https://emby.media/community/index.php?/topic/18046-custom-css-with-emby-web-app/</a></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/clients/skins.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
