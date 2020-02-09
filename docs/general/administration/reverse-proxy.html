@@ -287,9 +287,13 @@ server {
     }
 }
 </code></pre><h2 id="traefik-with-docker-compose">Traefik (with docker-compose)</h2>
-<p>Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. (<a href="https://traefik.io/">https://traefik.io/</a>). </p>
+<p>Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. (<a href="https://traefik.io/">https://traefik.io/</a>). This configuration is A+. Test your setup here at <a href="https://www.ssllabs.com/ssltest/">SSLlabs</a>.</p>
 <p>Create these 3 files in the SAME directory (or change their paths in the volume section) : docker-compose.yml, traefik.toml and acme.json.</p>
-<p>This configuration is A+ (SSLlabs)</p>
+<div class="NOTE"><h5>Note</h5><p>Ensure you enable Basic Auth protection for Traefik or disable its Dashboard. Otherwise your Dashboard will be accessible from the internet. </p>
+</div>
+<pre><code>sudo apt install apache2-utils
+echo $(htpasswd -nb username mystrongpassword) | sed -e s/\\$/\\$\\$/g
+</code></pre><p>This command automatically escapes all $ inside the password for the yml. If using an environmental file, it does not need the $ escaped since it will not be interpreted by the shell</p>
 <p>docker-compose.yml:</p>
 <pre><code>version: &#39;3.5&#39;
 
@@ -326,6 +330,7 @@ services:
       traefik.frontend.headers.customResponseHeaders: X-Robots-Tag:noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex
       traefik.frontend.headers.frameDeny: &quot;true&quot;
       traefik.frontend.headers.customFrameOptionsValue: &#39;allow-from https://example.com&#39;
+      traefik.frontend.auth.basic.users: &quot;user:passwordwithe$$capedha$$he$$&quot;
     restart: unless-stopped
 
   jellyfin:
