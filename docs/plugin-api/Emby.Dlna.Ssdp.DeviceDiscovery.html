@@ -93,6 +93,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Dlna.IDeviceDiscovery.html">IDeviceDiscovery</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -122,7 +123,7 @@
   <h6><strong>Assembly</strong>: Emby.Dlna.dll</h6>
   <h5 id="Emby_Dlna_Ssdp_DeviceDiscovery_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DeviceDiscovery : IDeviceDiscovery</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class DeviceDiscovery : IDeviceDiscovery, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -131,7 +132,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L57">View Source</a>
   </span>
   <a id="Emby_Dlna_Ssdp_DeviceDiscovery__ctor_" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.#ctor*"></a>
   <h4 id="Emby_Dlna_Ssdp_DeviceDiscovery__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager)">DeviceDiscovery(IServerConfigurationManager)</h4>
@@ -165,7 +166,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery_Dispose.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L133">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L138">View Source</a>
   </span>
   <a id="Emby_Dlna_Ssdp_DeviceDiscovery_Dispose_" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.Dispose*"></a>
   <h4 id="Emby_Dlna_Ssdp_DeviceDiscovery_Dispose" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.Dispose">Dispose()</h4>
@@ -180,7 +181,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery_Start_Rssdp_Infrastructure_ISsdpCommunicationsServer_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery.Start(Rssdp.Infrastructure.ISsdpCommunicationsServer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L63">View Source</a>
   </span>
   <a id="Emby_Dlna_Ssdp_DeviceDiscovery_Start_" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.Start*"></a>
   <h4 id="Emby_Dlna_Ssdp_DeviceDiscovery_Start_Rssdp_Infrastructure_ISsdpCommunicationsServer_" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.Start(Rssdp.Infrastructure.ISsdpCommunicationsServer)">Start(ISsdpCommunicationsServer)</h4>
@@ -214,7 +215,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery_DeviceDiscovered.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery.DeviceDiscovered%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L24">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L27">View Source</a>
   </span>
   <h4 id="Emby_Dlna_Ssdp_DeviceDiscovery_DeviceDiscovered" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.DeviceDiscovered">DeviceDiscovered</h4>
   <div class="markdown level1 summary"></div>
@@ -243,7 +244,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery_DeviceLeft.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery.DeviceLeft%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L51">View Source</a>
   </span>
   <h4 id="Emby_Dlna_Ssdp_DeviceDiscovery_DeviceLeft" data-uid="Emby.Dlna.Ssdp.DeviceDiscovery.DeviceLeft">DeviceLeft</h4>
   <div class="markdown level1 summary"></div>
@@ -271,6 +272,9 @@
   <div>
       <a class="xref" href="MediaBrowser.Model.Dlna.IDeviceDiscovery.html">IDeviceDiscovery</a>
   </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
 </article>
           </div>
           
@@ -282,7 +286,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Ssdp_DeviceDiscovery.md&amp;value=---%0Auid%3A%20Emby.Dlna.Ssdp.DeviceDiscovery%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Ssdp/DeviceDiscovery.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
