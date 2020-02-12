@@ -107,12 +107,16 @@
 <p>The config file for mopidy is divided into sections in an INI format.  An example for Jellyfin is shown here.</p>
 <pre><code class="lang-ini">[jellyfin]
 hostname = Jellyfin server hostname
-port = Jellyfin server port
 username = username
 password = password
-# Optional: will default to &quot;Music&quot; if left undefined
-libraries = Library1, Library2
-</code></pre><p>The <code>libraries</code> option determines what is populated into Mopidy&#39;s internal library.  All of your audio libraries will be available from the browse menu regardless of what is entered here.</p>
+libraries = Library1, Library2 (Optional: will default to &quot;Music&quot; if left undefined)
+albumartistsort = False (Optional: will default to True if left undefined)
+album_format = {ProductionYear} - {Name} (Optional: will default to &quot;{Name}&quot; if left undefined)
+</code></pre><ul>
+<li><code>libraries</code> determines what is populated into Mopidy&#39;s internal library (view by Artists/Album/etc).  Using the file browser will show all music or book libraries in the Jellyfin server</li>
+<li><code>albumartistsort</code> changes whether the media library populates based on &quot;Artist&quot; or &quot;Album Artist&quot; metadata</li>
+<li><code>album_format</code> can be used to change the display format of music albums when using the file browser view.  Currently the only really usable fields are ProductionYear and Name</li>
+</ul>
 <p>Other options that may be useful to include:</p>
 <pre><code class="lang-ini">[mpd]
 enabled = true
