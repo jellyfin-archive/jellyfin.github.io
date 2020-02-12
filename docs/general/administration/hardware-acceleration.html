@@ -157,6 +157,92 @@ services:
       - /dev/dri/card0:/dev/dri/card0
       # RPi 4
       - /dev/vchiq:/dev/qchiq
+</code></pre><h2 id="debian-docker-nvidia">Debian Docker Nvidia:</h2>
+<p>In order to achieve Hardware acceleration using docker, some steps are needed:</p>
+<p>Prerequisites:
+<a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0">https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0</a>)</p>
+<pre><code>GNU/Linux x86_64 with kernel version &gt; 3.10
+Docker &gt;= 1.12
+NVIDIA GPU with Architecture &gt; Fermi (2.1)
+NVIDIA drivers ~= 361.93 (untested on older versions)
+</code></pre><p>Double check your GPU show on debian:
+<code>lspci | grep VGA</code></p>
+<p>Update your host:
+<code>apt-get update &amp;&amp; apt-get dist-upgrade -y</code></p>
+<p>Install curl:
+<code>apt-get install curl</code></p>
+<p>Edit sources.list in /ect/apt/sources.list:
+Add &quot;non-free contrib&quot; to every sources already configured when needed:</p>
+<p><code>deb http://ftp.ch.debian.org/debian/ stretch main</code></p>
+<p>become</p>
+<p><code>deb http://ftp.ch.debian.org/debian/ stretch main non-free contrib</code></p>
+<p>Add sources for Nvidia-container:</p>
+<pre><code>curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+</code></pre><p>Update your package list:
+<code>apt-get update</code></p>
+<p>Install linux-headers:
+<code>apt-get install linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)</code>
+Else to use stretch-backports:
+<code>apt-get install -t stretch-backports linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)</code></p>
+<p>Install Nvidia docker2:
+<code>apt-get install nvidia-docker2</code>
+When prompted to choose to keep or install the maintainer package file say &quot;y&quot; to install maintainer version</p>
+<p>OPTIONAL: After install you may want to add nvidia as default runtime: editing /etc/docker/daemon.json like this:</p>
+<pre><code>{
+    &quot;default-runtime&quot;: &quot;nvidia&quot;,
+    &quot;runtimes&quot;: {
+        &quot;nvidia&quot;: {
+            &quot;path&quot;: &quot;nvidia-container-runtime&quot;,
+            &quot;runtimeArgs&quot;: []
+        }
+    }
+}
+</code></pre><p>Restart docker services
+<code>sudo pkill -SIGHUP docker</code></p>
+<p>Install nvidia drivers and dependencies:
+<code>apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi</code></p>
+<p>Reboot your host:
+<code>reboot now</code></p>
+<p>Validate your driver and docker are correctly setted up
+Driver test from host and docker side:</p>
+<pre><code>nvidia-smi
+docker run --gpus 0 nvidia/cuda:9.0-base nvidia-smi
+</code></pre><p>Validate access to needed ressources from host and docker:</p>
+<pre><code>ldconfig -p | grep cuvid
+ldconfig -p | grep libnvidia-encode.so.1
+</code></pre><p>Start your Jellyfin container adding thoses environement parameters:</p>
+<pre><code>-e &quot;NVIDIA_DRIVER_CAPABILITIES=all&quot; \
+-e NVIDIA_VISIBLE_DEVICES=all \
+--runtime=nvidia \
+--gpus all \
+</code></pre><p>A complete run command would looks like:</p>
+<pre><code>docker run -d \
+--name=jellyfin \
+-e NVIDIA_DRIVER_CAPABILITIES=all \
+-e NVIDIA_VISIBLE_DEVICES=all \
+--gpus all \
+--runtime=nvidia \
+-p 8096:8096 \
+-p 8920:8920 \
+-v /config:/config \
+-v /media:/media \
+-v /cache:/cache \
+--restart unless-stopped \
+jellyfin/jellyfin
+</code></pre><p>If using user env parameters as:</p>
+<pre><code>--user 1000:1000
+</code></pre><p>You may need to add this user to the video group:</p>
+<pre><code>usermod -aG video user
+</code></pre><p>Once container is started you can again validate access to host ressources:</p>
+<pre><code>docker exec -it jellyfin ldconfig -p | grep cuvid
+docker exec -it jellyfin ldconfig -p | grep libnvidia-encode.so.1
+</code></pre><p>Now go in Jellyfin playback settings, enable Nvidia NVENC and select target codecs depending on what your GPU support
+try to play any file needing a transcode (change bitrate is a good way to try)</p>
+<p>check Jellyfin transcode logs to check again everything is working proprely:</p>
+<pre><code>Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
+Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 </code></pre><h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
 <p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
