@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Source Tree | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Source Tree | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="contrib-source">
+<h1 id="source-tree">Source Tree</h1>
+
+<p>Jellyfin is a maze of clients, plugins, and other useful projects. These source trees can serve as an excellent tool to inform new developers about the structure of several projects.</p>
+<h3 id="jellyfin-serverhttpsgithubcomjellyfinjellyfin"><a href="https://github.com/jellyfin/jellyfin">Jellyfin Server</a></h3>
+<ol>
+<li>BDInfo: <code>Blu-Ray Analyzer</code><ul>
+<li>Properties: <code>Assembly Info</code></li>
+</ul>
+</li>
+<li>DvdLib: <code>DVD Anaylzer</code><ul>
+<li>Ifo: </li>
+<li>Properties:</li>
+</ul>
+</li>
+<li>Emby.Dlna: <ul>
+<li>Profiles: <code>DLNA Profiles for clients</code></li>
+</ul>
+</li>
+<li>Emby.Drawing:</li>
+<li>Emby.Naming:</li>
+<li>Emby.Notifications:</li>
+<li>Emby.Photos:</li>
+<li>Emby.Server.Implementations:<ul>
+<li>ScheduledTasks: <code>all scheduled tasks can be found here</code></li>
+</ul>
+</li>
+<li>Jellyfin.Api:</li>
+<li>Jellyfin.Drawing.Skia:</li>
+<li>Jellyfin.Server:</li>
+<li>MediaBrowser.Api:<ul>
+<li>Playback:<ul>
+<li>BaseStreamingService.cs: <code>receives client information and reads media info and feeds this info to MediaInfoService</code></li>
+<li>MediaInfoService.cs: <code>logic for the stream builder that determines method of playback such as Direct Play or Transcoding</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>MediaBrowser.Common:</li>
+<li>MediaBrowser.Controller:</li>
+<li>MediaBrowser.LocalMetadata:</li>
+<li>MediaBrowser.MediaEncoding:</li>
+<li>MediaBrowser.Model:</li>
+<li>MediaBrowser.Providers:</li>
+<li>MediaBrowser.WebDashboard:</li>
+<li>MediaBrowser.XbmcMetadata:</li>
+<li>RSSDP:</li>
+<li>benches/Jellyfin.Common.Benches:</li>
+</ol>
+<h3 id="web-clienthttpsgithubcomjellyfinjellyfin-web"><a href="https://github.com/jellyfin/jellyfin-web">Web Client</a></h3>
+<ol>
+<li>src: <ul>
+<li>assets: <code>images, styles, splash screens, and any other static assets</code><ul>
+<li>css: <code>all global stylesheets used throughout the client</code></li>
+<li>img: <code>images for things like device icons and logos</code></li>
+<li>splash: <code>progressive web apps will show these splash screens</code></li>
+</ul>
+</li>
+<li>components: <code>custom elements used for different sections of the user interface</code><ul>
+<li>playerstats:<ul>
+<li>playerstats.js: <code>display playback info in browsers and other clients that include the web source</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>controllers: <code>scripts that handle the logic for different pages</code></li>
+<li>elements: <code>custom UI components that are used globally such as buttons or menus</code></li>
+<li>legacy: <code>currently used for all polyfills and scripts related to backwards compatibility</code></li>
+<li>libraries: <code>dependencies that we eventually want to remove and include during the build step</code></li>
+<li>scripts: <code>any script that isn&#39;t tied to a UI element or page but rather general functionality</code></li>
+<li>strings: <code>translations for the entire interface</code></li>
+<li>themes: <code>custom and bundled themes can be found here in their own directories</code></li>
+</ul>
+</li>
+</ol>
+<h3 id="androidhttpsgithubcomjellyfinjellyfin-android"><a href="https://github.com/jellyfin/jellyfin-android">Android</a></h3>
+<ol>
+<li>res:<ul>
+<li>android:</li>
+</ul>
+</li>
+<li>src:<ul>
+<li>NativeShell:<ul>
+<li>res:</li>
+<li>src:<ul>
+<li>RemotePlayerService.java: <code>handles the notification tile that can control playback</code></li>
+</ul>
+</li>
+<li>www:</li>
+</ul>
+</li>
+<li>cordova:</li>
+</ul>
+</li>
+</ol>
+<h3 id="android-tvhttpsgithubcomjellyfinjellyfin-androidtv"><a href="https://github.com/jellyfin/jellyfin-androidtv">Android-tv</a></h3>
+<ol>
+<li>app:<ul>
+<li>src:<ul>
+<li>main:<ul>
+<li>assets/fonts:</li>
+<li>java/org/jellyfin/androidtv:</li>
+<li>res:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="jellyfin-for-kodihttpsgithubcomjellyfinjellyfin-kodi"><a href="https://github.com/jellyfin/jellyfin-kodi">Jellyfin for Kodi</a></h3>
+<ol>
+<li>jellyfin_kodi<ul>
+<li>database: <code>manipulating the local Jellyfin sqlite database</code></li>
+<li>dialogs: <code>code behind popup menus for user interaction</code></li>
+<li>entrypoint: <code>main addon settings page</code></li>
+<li>helper: <code>small helper functions, mostly formatting or reused functions</code></li>
+<li>jellyfin: <code>interacting with the server</code></li>
+<li>objects:<ul>
+<li>kodi: <code>handling local Kodi media types and database</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>resources:<ul>
+<li>language: <code>string files for localization</code></li>
+<li>skins: <code>design of popup menus for user interaction</code></li>
+</ul>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/contributing/sourcetree.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

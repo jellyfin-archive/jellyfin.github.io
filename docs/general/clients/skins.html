@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="css-customization">
 <h1 id="css-customization">CSS Customization</h1>
 
-<p><a href="https://www.w3schools.com/cssref/css3_browsersupport.asp">Custom CSS</a> provides interface customization such as changing colors or modifying behavior. Here are a collection of community scripts available. Currently, the CSS modifications only work on the web client. To implement these changes, go to Dashboard &gt; General &gt; Custom CSS.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Custom CSS</a> provides interface customization such as changing colors or modifying behavior. Here are a collection of community scripts available. Currently, the CSS modifications only work on the web client. The code will apply the code in order that it is written so code can override previously stated custom CSS. To learn more see <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity">CSS Specificity</a>. To implement these changes, go to Dashboard &gt; General &gt; Custom CSS. An additional source for specificity is <a href="https://specifishity.com/">specifishity</a>.</p>
 <p><img src="https://user-images.githubusercontent.com/20715731/73392971-d1cc7d80-42a8-11ea-8552-3d311655ea37.png" alt="image"></p>
 <h2 id="color-modifications">Color Modifications</h2>
 <h3 id="colors-codes">Colors Codes:</h3>
@@ -88,29 +88,40 @@
 Blue: <code>#0000d0</code><br>
 Red: <code>#d00000</code><br></p>
 <h4 id="played-indicator">Played Indicator:</h4>
-<p><code>.playedIndicator { background: #5dd000 !important; }</code></p>
+<p><code>.playedIndicator { background: #5dd000; }</code></p>
 <p>Before:</p>
 <p><img src="https://user-images.githubusercontent.com/20715731/73392328-97aeac00-42a7-11ea-817f-7234b8a78783.png" alt="image"></p>
 <p>Green Mod:</p>
 <p><img src="https://user-images.githubusercontent.com/20715731/73392302-86659f80-42a7-11ea-9a9a-222cbbe466c6.png" alt="image"></p>
 <h4 id="background-color">Background Color:</h4>
-<p><code>.backgroundContainer, .dialog, html { background-color: #0fd0d0 !important; }</code></p>
-<h4 id="header-color">Header Color</h4>
-<p><code>.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {   background: #ff9475 !important; }</code></p>
-<p><img src="https://user-images.githubusercontent.com/20715731/73949397-5f6f2500-48c8-11ea-9eca-bc1eb61f1281.png" alt="image"></p>
+<p><code>.backgroundContainer, .dialog, html { background-color: #0fd0d0; }</code></p>
+<h4 id="right-header">Right Header</h4>
+<p><code>.headerRight { color: yellow; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73962770-0d84ca00-48dd-11ea-9b50-563f8b4aa33b.png" alt="image"></p>
+<h4 id="console-panel">Console Panel</h4>
+<p><code>.mainDrawer-scrollContainer { color: yellow; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73963663-c13a8980-48de-11ea-9342-d1e89690e7b1.png" alt="image"></p>
+<h4 id="general-page">General Page</h4>
+<p><code>.dashboardGeneralForm { color: yellow; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73964979-49ba2980-48e1-11ea-8ddf-51e1c54e32d4.png" alt="image"></p>
+<h3 id="css-chaining">CSS Chaining</h3>
+<p>CSS can be chained together to modify different sections together. </p>
 <h4 id="border-color">Border Color</h4>
-<p><code>.emby-input, .emby-textarea, .emby-select { border-color:#fdbe7d !important; }</code></p>
+<p><code>.emby-input, .emby-textarea, .emby-select { border-color:#fdbe7d; }</code></p>
 <p><img src="https://user-images.githubusercontent.com/20715731/73950017-39965000-48c9-11ea-9c0e-7687420a282e.png" alt="image"></p>
+<h4 id="full-header-mod">Full Header Mod</h4>
+<p><code>.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {   background: #ff9475; }</code></p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73949397-5f6f2500-48c8-11ea-9eca-bc1eb61f1281.png" alt="image"></p>
 <h4 id="hotdogs-and-catsup">Hotdogs and Catsup:</h4>
 <pre><code>.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {
-    background: #ff9475 !important;
+    background: #ff9475;
 }
 .emby-input, .emby-textarea, .emby-select {
-    border-color:#fdbe7d !important;
+    border-color:#fdbe7d;
 }
 
 .backgroundContainer.withBackdrop, .backdropContainer, .backgroundContainer{
-    background: #fdbe7d !important;
+    background: #fdbe7d;
 }
 
 #myPreferencesMenuPage .listItemBodyText,
