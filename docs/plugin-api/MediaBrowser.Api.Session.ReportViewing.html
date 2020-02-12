@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ReportSessionEnded
+    <title>Class ReportViewing
    | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ReportSessionEnded
+    <meta name="title" content="Class ReportViewing
    | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -78,17 +78,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="MediaBrowser.Api.Session.ReportSessionEnded">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Api.Session.ReportViewing">
   
   
-  <h1 id="MediaBrowser_Api_Session_ReportSessionEnded" data-uid="MediaBrowser.Api.Session.ReportSessionEnded" class="text-break">Class ReportSessionEnded
+  <h1 id="MediaBrowser_Api_Session_ReportViewing" data-uid="MediaBrowser.Api.Session.ReportViewing" class="text-break">Class ReportViewing
   </h1>
   <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ReportSessionEnded</span></div>
+    <div class="level1"><span class="xref">ReportViewing</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -121,11 +121,73 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Api.Session.html">MediaBrowser.Api.Session</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
-  <h5 id="MediaBrowser_Api_Session_ReportSessionEnded_syntax">Syntax</h5>
+  <h5 id="MediaBrowser_Api_Session_ReportViewing_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Route(&quot;/Sessions/Logout&quot;, &quot;POST&quot;, Summary = &quot;Reports that a session has ended&quot;)]
-public class ReportSessionEnded : IReturnVoid, IReturn</code></pre>
+    <pre><code class="lang-csharp hljs">[Route(&quot;/Sessions/Viewing&quot;, &quot;POST&quot;, Summary = &quot;Reports that a session is viewing an item&quot;)]
+public class ReportViewing : IReturnVoid, IReturn</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Session_ReportViewing_ItemId.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Session.ReportViewing.ItemId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Session/SessionsService.cs/#L240">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_Session_ReportViewing_ItemId_" data-uid="MediaBrowser.Api.Session.ReportViewing.ItemId*"></a>
+  <h4 id="MediaBrowser_Api_Session_ReportViewing_ItemId" data-uid="MediaBrowser.Api.Session.ReportViewing.ItemId">ItemId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ItemId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Session_ReportViewing_SessionId.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Session.ReportViewing.SessionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Session/SessionsService.cs/#L237">View Source</a>
+  </span>
+  <a id="MediaBrowser_Api_Session_ReportViewing_SessionId_" data-uid="MediaBrowser.Api.Session.ReportViewing.SessionId*"></a>
+  <h4 id="MediaBrowser_Api_Session_ReportViewing_SessionId" data-uid="MediaBrowser.Api.Session.ReportViewing.SessionId">SessionId</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string SessionId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Services.IReturnVoid.html">IReturnVoid</a>
@@ -141,10 +203,10 @@ public class ReportSessionEnded : IReturnVoid, IReturn</code></pre>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Session_ReportSessionEnded.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Session.ReportSessionEnded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_Session_ReportViewing.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.Session.ReportViewing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Session/SessionsService.cs/#L244" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/Session/SessionsService.cs/#L233" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
