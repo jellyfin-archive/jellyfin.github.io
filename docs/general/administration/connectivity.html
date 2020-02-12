@@ -106,6 +106,8 @@
 <h2 id="dynamic-ports">Dynamic Ports</h2>
 <p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
 <h2 id="base-url">Base URL</h2>
+<div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HD HomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
+</div>
 <p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
 <p>The entered value on the configuration page will be normalized to include a leading<code>/</code> if this is missing.</p>
 <p>This setting requires a server restart to change, in order to avoid invalidating existing paths until the administrator is ready to.</p>
