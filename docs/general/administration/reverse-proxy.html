@@ -198,7 +198,7 @@ backend jellyfin
 #
 #    location / {
 #        # Proxy main Jellyfin traffic
-#        proxy_pass http://SERVER_IP_ADDRESS:8096;
+#        proxy_pass http://SERVER_IP_ADDRESS:8096/;
 #        proxy_set_header Host $host;
 #        proxy_set_header X-Real-IP $remote_addr;
 #        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -211,7 +211,7 @@ backend jellyfin
 #    }
 #    location /socket {
 #        # Proxy Jellyfin Websockets traffic
-#        proxy_pass http://SERVER_IP_ADDRESS:8096;
+#        proxy_pass http://SERVER_IP_ADDRESS:8096/socket;
 #        proxy_http_version 1.1;
 #        proxy_set_header Upgrade $http_upgrade;
 #        proxy_set_header Connection &quot;upgrade&quot;;
@@ -224,8 +224,8 @@ backend jellyfin
 #    }
 #}
 </code></pre><h2 id="nginx-with-subpath">Nginx with subpath</h2>
-<p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field, and <strong>clear the port field</strong>.
-Not all clients may handle this properly, but this is currently working for the web and Android clients.</p>
+<p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
+<p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the Jellyfin Web UI.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
 <pre><code># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
 
 server {
@@ -251,8 +251,11 @@ server {
 
     location /jellyfin/ {
         # Proxy main Jellyfin traffic
+
         # The / at the end is significant.
-        proxy_pass http://SERVER_IP_ADDRESS:8096/;
+        # https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/
+
+        proxy_pass http://SERVER_IP_ADDRESS:8096/jellyfin/;
 
         proxy_pass_request_headers on;
 
