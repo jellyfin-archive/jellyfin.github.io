@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Codec Support | Documentation - Jellyfin Project </title>
+    <title>Codec Compatibility | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Codec Support | Documentation - Jellyfin Project ">
+    <meta name="title" content="Codec Compatibility | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -76,7 +76,7 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="clients-codec-support">
+            <article class="content wrap" id="_content" data-uid="codec-support">
 <h1 id="codec-tableshttpsenwikipediaorgwikilistofcodecs-wikipedias-list-of-all-codecs"><a href="https://en.wikipedia.org/wiki/List_of_codecs" title="Wikipedia&#39;s list of all codecs">Codec Tables</a></h1>
 
 <p>The goal is to Direct Play all media. This means the container, video, audio and subtitles are all compatible with the client. If the media is incompatible for any reason, Jellyfin will use FFmpeg to <a href="http://howto-pages.org/ffmpeg/">convert the media</a>. Direct Stream will occur if the audio, container or subtitles happen to not be supported. If the video codec is unsupported, this will result in video transcoding. Subtitles can be tricky because they can cause Direct Stream (subtitles are remuxed) or video transcoding (burning in subtitles) to occur. This is the most intensive CPU component of transcoding. Decoding is less intensive than encoding. </p>
