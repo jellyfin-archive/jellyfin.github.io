@@ -191,7 +191,7 @@
 </div>
 <h3 id="master-branch">Master Branch</h3>
 <pre><code class="lang-bash">docker exec -ti jftest bash
-apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https
+apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https curl
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.asc.gpg &amp;&amp; mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/debian/10/prod.list &amp;&amp; mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list
