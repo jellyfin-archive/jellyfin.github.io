@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Let's Encrypt | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Let's Encrypt | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="network-letsencrypt">
+<h2 id="letsencrypt-with-certbot">LetsEncrypt with Certbot</h2>
+
+<p>LetsEncrypt is a service that provides free SSL/TLS certificates to users.  Certbot is a client that makes this easy to accomplish and automate.  In addition, it has plugins for Apache and Nginx that make automating certificate generation even easier.</p>
+<p>Installation instructions for most Linux distributions can be found on the <a href="https://certbot.eff.org/docs/install.html#operating-system-packages">Certbot</a> website.</p>
+<p>Once the packages are installed, you&#39;re ready to generate a new certificate.</p>
+<h3 id="apache">Apache</h3>
+<p>After installing Certbot and the Apache plugin, certificate generation is accomplished by:</p>
+<p><code>certbot certonly --apache --noninteractive --agree-tos --email YOUR_EMAIL -d DOMAIN_NAME</code></p>
+<p>Update the &#39;SSLCertificateFile&#39; and &#39;SSLCertificateKeyFile&#39; sections, then restart the service.</p>
+<p>Add a job to cron so the certificate will be renwed automatically:</p>
+<p><code>echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload apache2&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot</code></p>
+<h3 id="haproxy">HAProxy</h3>
+<p>HAProxy doesn&#39;t currently have a certbot plugin.  To get around this, run certbot in standalone mode and proxy traffic back to it.  </p>
+<p>Enable the frontend and backend in the config above, and then run:</p>
+<p><code>certbot certonly --standalone --preferred-challenges http-01 --http-01-port 8888 --noninteractive --agree-tos --email YOUR_EMAIL -d DOMAIN_NAME</code></p>
+<p>The port can be changed to anything you like, but be sure that the HAProxy config and your certbot command match.</p>
+<p>Haproxy needs to have the certificate and key files concatenated into the same file to read it correctly.  This can be accomplished with the following command.</p>
+<p><code>cat /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem &gt; /etc/ssl/DOMAIN_NAME.pem</code></p>
+<p>Uncomment <code>bind *:443</code> and the redirect section in the configuration, then reload the service.</p>
+<h4 id="automatic-certificate-renewal">Automatic Certificate Renewal</h4>
+<p>Place the following script in <code>/usr/local/bin/</code> to automatically update your SSL certificate:</p>
+<pre><code>SITE=DOMAIN_NAME
+
+# move to the correct let&#39;s encrypt directory
+cd /etc/letsencrypt/live/$SITE
+
+# cat files to make combined .pem for haproxy
+cat fullchain.pem privkey.pem &gt; /etc/ssl/$SITE.pem
+
+# reload haproxy
+service haproxy reload
+</code></pre><p>Make sure the script is executable</p>
+<p> <code>chmod u+x /usr/local/bin/letsencrypt-renew.sh</code></p>
+<p>Add a job to cron so the certificate will be renewed automatically:</p>
+<p> <code>@monthly /usr/bin/certbot renew --renew-hook &quot;/usr/local/bin/letsencrypt-renew.sh&quot; &gt;&gt; /var/log/letsencrypt-renewal.log</code></p>
+<h3 id="nginx">Nginx</h3>
+<p>After installing certbot and the Nginx plugin with <code>sudo apt install certbot python3-certbot-nginx</code>, certificate generation is accomplished by:</p>
+<p><code>sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d YOUR_DOMAIN</code>
+(Add the <code>--rsa-key-size 4096</code> parameter if you want a 4096 bit key instead)</p>
+<p>Copy and paste the whole Nginx sample configuration file from above, changing the parameters according to your setup and uncommenting the lines.</p>
+<p>Add a job to cron so the certificate will be renewed automatically:</p>
+<p><code>echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot</code></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/networking/letsencrypt.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

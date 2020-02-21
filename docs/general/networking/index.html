@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Networking | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Networking | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="network-index">
+<h1 id="connectivity">Connectivity</h1>
+
+<p>Many clients will automatically discover servers running on the same LAN and display them on login. If you are outside the network when you connect you can type in the complete IP address or domain name in the server field with the correct port to continue to the login page. You can find the default ports below to access the web frontend.</p>
+<h2 id="port-bindings">Port Bindings</h2>
+<p>This document aims to provide an administrator with knowledge on what ports Jellyfin binds to and what purpose they serve.</p>
+<h3 id="static-ports">Static Ports</h3>
+<ul>
+<li>8096/tcp is used by default for HTTP traffic. This is admin configurable.</li>
+<li>8920/tcp is used by default for HTTPS traffic. This is admin configurable.</li>
+<li>1900/udp is used for service autodiscovery. This is <em>not</em> admin configurable as it would break client autodiscover.</li>
+</ul>
+<p><strong>HTTP Traffic:</strong> 8096</p>
+<p>The web frontend can be accessed here for debugging SSL certificate issues on your local network. You can modify this setting from the <strong>Networking</strong> page in the settings.</p>
+<p><strong>HTTPS Traffic:</strong> 8920</p>
+<p>This setting can also be modified from the <strong>Networking</strong> page to use a different port.</p>
+<p><strong>Service Discovery:</strong> 1900</p>
+<p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time. DLNA also uses this port and is required to be in the local subnet.</p>
+<p><strong>Client Discovery:</strong> 7359 UDP</p>
+<p>Allows clients to discover the Jellyfin Server on the local network.  A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a json response that includes the server Address, ID and Name.</p>
+<h3 id="dynamic-ports">Dynamic Ports</h3>
+<p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
+<h1 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h1>
+<p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
+<div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired. </p>
+</div>
+<p>Some popular options for reverse proxy systems are <a href="https://httpd.apache.org/">Apache</a>, <a href="https://caddyserver.com/">Caddy</a>, <a href="https://www.haproxy.com/">Haproxy</a>, <a href="https://www.nginx.com/">Nginx</a> and <a href="https://traefik.io/">Traefik</a>.</p>
+<ul>
+<li><a class="xref" href="apache.html">Apache</a></li>
+<li><a class="xref" href="caddy.html">Caddy</a></li>
+<li><a class="xref" href="haproxy.html">HAProxy</a></li>
+<li><a class="xref" href="nginx.html">Nginx</a></li>
+<li><a href="xref:network-reverse-proxy-traefik">Traefik</a></li>
+</ul>
+<p>While not a reverse proxy, Let&#39;s Encrypt can be used independently or with a Reverse Proxy to provide SSL certificates.</p>
+<ul>
+<li><a class="xref" href="letsencrypt.html">Let&#39;s Encrypt</a></li>
+</ul>
+<p>When following this guide, be sure to replace the following variables with your information:</p>
+<ul>
+<li><code>DOMAIN_NAME</code> - Your public domain name to access Jellyfin on (e.g. jellyfin.example.com)</li>
+<li><code>example.com</code> - The domain name Jellyfin services will run under (e.g. example.com)</li>
+<li><code>SERVER_IP_ADDRESS</code> - The IP address of your Jellyfin server (if the reverse proxy is on the same server use 127.0.0.1)</li>
+</ul>
+<p>In addition, the examples are configured for use with LetsEncrypt certificates.  If you have a certificate from another source, change the ssl configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
+<p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
+<h2 id="base-url">Base URL</h2>
+<p>Running Jellyfin with a path (<a href="https://example.com/jellyfin">https://example.com/jellyfin</a>) is supported by the Android and web clients.</p>
+<div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HD HomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
+</div>
+<p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
+<p>The entered value on the configuration page will be normalized to include a leading<code>/</code> if this is missing.</p>
+<p>This setting requires a server restart to change, in order to avoid invalidating existing paths until the administrator is ready to.</p>
+<p>There are three main caveats to this setting:</p>
+<ol>
+<li><p>When setting a new Base URL (i.e. from <code>/</code> to <code>/baseurl</code>) or changing a Base URL (i.e. from <code>/baseurl</code> to <code>/newbaseurl</code>), the Jellyfin web server will automatically handle redirects to avoid displaying users invalid pages. For instance, accessing a server with a Base URL of <code>/jellyfin</code> on the <code>/</code> path will automatically append the <code>/jellyfin</code> Base URL. However, entirely removing a Base URL (i.e. from <code>/baseurl</code> to <code>/</code>, an empty value in the configuration) will not - all URLs with the old Base URL path will become invalid and throw 404 errors. This should be kept in mind when removing an existing Base URL.</p>
+</li>
+<li><p>Client applications generally, for now, do not handle the Base URL redirects implicitly. Therefore, for instance in the Android app, the <code>Host</code> setting <em>must</em> include the BaseURL as well (e.g. <code>http://myserver:8096/baseurl</code>), or the connection will fail.</p>
+</li>
+<li><p>Any reverse proxy configurations must be updated to handle a new Base URL. Generally, passing <code>/</code> back to the Jellyfin instance will work fine in all cases and the paths will be normalized, and this is the standard configuration in our examples. Keep this in mind however when doing more advanced routing.</p>
+</li>
+</ol>
+<h2 id="final-steps">Final Steps</h2>
+<p>It&#39;s strongly recommend that you check your SSL strength and server security at <a href="https://www.ssllabs.com/ssltest/analyze.html">SSLLabs</a> if you are exposing these service to the internet.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/networking/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

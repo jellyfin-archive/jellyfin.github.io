@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Nginx Reverse Proxy | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Nginx Reverse Proxy | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="network-reverse-proxy-nginx">
+<h2 id="nginx">Nginx</h2>
+
+<p>&quot;<a href="https://www.nginx.com/">Nginx</a> (pronounced &quot;engine X&quot;) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004.[9] A company of the same name was founded in 2011 to provide support and Nginx plus paid software.&quot; - <a href="https://en.wikipedia.org/wiki/Nginx">Wikipedia</a></p>
+<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code>.</p>
+<pre><code>server {
+    listen 80;
+    server_name DOMAIN_NAME;
+
+    # Uncomment to redirect HTTP to HTTPS
+    # return 301 https://$host$request_uri;
+}
+
+# Uncomment this section after you have acquired a SSL Certificate
+#server {
+#    listen 443 ssl http2;
+#    server_name DOMAIN_NAME;
+#    ssl_certificate /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem;
+#    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem;
+#    include /etc/letsencrypt/options-ssl-nginx.conf;
+#    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+#    add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
+#    ssl_trusted_certificate /etc/letsencrypt/live/DOMAIN_NAME/chain.pem;
+#    ssl_stapling on;
+#    ssl_stapling_verify on;
+#
+#    # Security / XSS Mitigation Headers
+#    add_header X-Frame-Options &quot;SAMEORIGIN&quot;;
+#    add_header X-XSS-Protection &quot;1; mode=block&quot;;
+#    add_header X-Content-Type-Options &quot;nosniff&quot;;
+#
+#    # Content Security Policy
+#    # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+#    # Enforces https content and restricts JS/CSS to origin
+#    # External Javascript (such as cast_sender.js for Chromecast) must be whitelisted.
+#    add_header Content-Security-Policy &quot;default-src https: data: blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://www.gstatic.com/cv/js/sender/v1/cast_sender.js; worker-src &#39;self&#39; blob:; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;self&#39;&quot;;
+#
+#    location / {
+#        # Proxy main Jellyfin traffic
+#        proxy_pass http://SERVER_IP_ADDRESS:8096/;
+#        proxy_set_header Host $host;
+#        proxy_set_header X-Real-IP $remote_addr;
+#        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#        proxy_set_header X-Forwarded-Proto $scheme;
+#        proxy_set_header X-Forwarded-Protocol $scheme;
+#        proxy_set_header X-Forwarded-Host $http_host;
+#
+#        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+#        proxy_buffering off;
+#    }
+#    location /socket {
+#        # Proxy Jellyfin Websockets traffic
+#        proxy_pass http://SERVER_IP_ADDRESS:8096/socket;
+#        proxy_http_version 1.1;
+#        proxy_set_header Upgrade $http_upgrade;
+#        proxy_set_header Connection &quot;upgrade&quot;;
+#        proxy_set_header Host $host;
+#        proxy_set_header X-Real-IP $remote_addr;
+#        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+#        proxy_set_header X-Forwarded-Proto $scheme;
+#        proxy_set_header X-Forwarded-Protocol $scheme;
+#        proxy_set_header X-Forwarded-Host $http_host;
+#    }
+#}
+</code></pre><h2 id="nginx-with-subpath">Nginx with subpath</h2>
+<p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
+<p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the Jellyfin Web UI.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
+<pre><code># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
+
+server {
+    listen 80;
+    listen [::]:80;
+
+    server_name DOMAIN_NAME;
+    # You can specify multiple domain names if you want
+    #server_name jellyfin.local;
+
+    # Uncomment and create directory to also host static content
+    #root /srv/http/media;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Jellyfin
+    location /jellyfin {
+        return 302 $scheme://$host/jellyfin/;
+    }
+
+    location /jellyfin/ {
+        # Proxy main Jellyfin traffic
+
+        # The / at the end is significant.
+        # https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/
+
+        proxy_pass http://SERVER_IP_ADDRESS:8096/jellyfin/;
+
+        proxy_pass_request_headers on;
+
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+
+        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+        proxy_buffering off;
+    }
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/networking/nginx.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
