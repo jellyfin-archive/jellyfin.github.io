@@ -199,7 +199,7 @@ apt-get update &amp;&amp; apt-get install dotnet-sdk-3.1 yarn
 cd /opt &amp;&amp; git clone https://github.com/jellyfin/jellyfin.git &amp;&amp; git clone https://github.com/jellyfin/jellyfin-web.git
 mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
 cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; yarn build &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
-kill -15 6
+kill -15 $(pidof jellyfin)
 </code></pre><h3 id="pull-request">Pull Request</h3>
 <p>First, complete the steps above to setup your container to build the master branch.</p>
 <div class="NOTE"><h5>Note</h5><p><code>&lt;PR_ID&gt;</code> is pull request number on GitHub.</p>
@@ -209,7 +209,7 @@ cd /opt/jellyfin
 git fetch origin pull/&lt;PR_ID&gt;/head:my-testing-branch
 git merge my-testing-branch
 dotnet publish Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
-kill -15 6
+kill -15 $(pidof jellyfin)
 </code></pre></article>
           </div>
           
