@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="network-dlna">
 <h2 id="dlna">DLNA</h2>
 
-<p>DLNA is based on uPnP. DLNA will send a broadcast signal from Jellyfin. This broadcast is limited to Jellyfin&#39;s current subnet. If using Docker, the network should use Host Mode, otherwise the broadcast signal will only be sent in the bridged network inside of docker. </p>
+<p>DLNA is based on uPnP. DLNA will send a broadcast signal from Jellyfin. This broadcast is limited to Jellyfin&#39;s current subnet. If using Docker, the network should use Host Mode, otherwise the broadcast signal will only be sent in the bridged network inside of docker.</p>
 <p>If DLNA fails to bind properly, the message <code>[ERR] Failed to bind to port 1900: &quot;Address already in use&quot;. DLNA will be unavailable</code> should appear in the logs.</p>
 <p>Setting <code>Alive message interval (seconds)</code> to 30 seconds also appears to help discovery for some clients.</p>
 <p>If a base URL is set, try removing the base URL and restarting the server.</p>

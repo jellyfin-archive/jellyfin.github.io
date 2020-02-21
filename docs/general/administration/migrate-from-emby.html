@@ -89,21 +89,28 @@
 <ol>
 <li><p>Upgrade to Emby version 3.5.2, so that the database schema is fully up-to-date and consistent. While this is not required, it can help reduce the possibility of obscure bugs in the database.</p>
 </li>
-<li><p>Stop the <code>emby-server</code> daemon:<br> <code>sudo service emby-server stop</code></p>
+<li><p>Stop the <code>emby-server</code> daemon:
+ <code>sudo service emby-server stop</code></p>
 </li>
-<li><p>Move your existing Emby data directory out of the way:<br> <code>sudo mv /var/lib/emby /var/lib/emby.backup</code></p>
+<li><p>Move your existing Emby data directory out of the way:
+ <code>sudo mv /var/lib/emby /var/lib/emby.backup</code></p>
 </li>
-<li><p>Remove or purge the <code>emby-server</code> package:<br> <code>sudo apt purge emby-server</code></p>
+<li><p>Remove or purge the <code>emby-server</code> package:
+ <code>sudo apt purge emby-server</code></p>
 </li>
 <li><p>Install the <code>jellyfin</code> package using the <a class="xref" href="installing.html">installaton instructions</a>.</p>
 </li>
-<li><p>Stop the <code>jellyfin</code> daemon:<br> <code>sudo service jellyfin stop</code></p>
+<li><p>Stop the <code>jellyfin</code> daemon:
+ <code>sudo service jellyfin stop</code></p>
 </li>
-<li><p>Copy over all the data files from the Emby backup data directory:<br> <code>sudo cp -a /var/lib/emby.backup/* /var/lib/jellyfin/</code></p>
+<li><p>Copy over all the data files from the Emby backup data directory:
+ <code>sudo cp -a /var/lib/emby.backup/* /var/lib/jellyfin/</code></p>
 </li>
-<li><p>Correct ownership on the new data directory:<br> <code>sudo chown -R jellyfin:jellyfin /var/lib/jellyfin</code></p>
+<li><p>Correct ownership on the new data directory:
+ <code>sudo chown -R jellyfin:jellyfin /var/lib/jellyfin</code></p>
 </li>
-<li><p>Start the <code>jellyfin</code> daemon:<br> <code>sudo service jellyfin start</code></p>
+<li><p>Start the <code>jellyfin</code> daemon:
+ <code>sudo service jellyfin start</code></p>
 </li>
 </ol>
 </article>

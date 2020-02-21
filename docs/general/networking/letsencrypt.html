@@ -89,7 +89,7 @@
 <p>Add a job to cron so the certificate will be renwed automatically:</p>
 <p><code>echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload apache2&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot</code></p>
 <h3 id="haproxy">HAProxy</h3>
-<p>HAProxy doesn&#39;t currently have a certbot plugin.  To get around this, run certbot in standalone mode and proxy traffic back to it.  </p>
+<p>HAProxy doesn&#39;t currently have a certbot plugin.  To get around this, run certbot in standalone mode and proxy traffic back to it.</p>
 <p>Enable the frontend and backend in the config above, and then run:</p>
 <p><code>certbot certonly --standalone --preferred-challenges http-01 --http-01-port 8888 --noninteractive --agree-tos --email YOUR_EMAIL -d DOMAIN_NAME</code></p>
 <p>The port can be changed to anything you like, but be sure that the HAProxy config and your certbot command match.</p>

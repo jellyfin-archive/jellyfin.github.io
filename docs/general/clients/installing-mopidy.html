@@ -84,9 +84,12 @@
 <p>For general use computers, such as workstations or laptops, it&#39;s recommended to install Mopidy plugins in user mode.  Installing python packages from pip using sudo or root permissions can lead to conflicts with your package manager in the future.</p>
 <ol>
 <li>Install Mopidy using your method of choice using the <a href="https://docs.mopidy.com/en/latest/installation/">official documentation</a></li>
-<li>Install the Jellyfin plugin for Mopidy:<br> <code>pip3 install --user mopidy-jellyfin</code></li>
-<li>(Optional) Install other mopidy related packages:<br> <code>pip3 install --user mopidy-mpd mopidy-musicbox-webclient</code></li>
-<li>Configure your <code>mopidy.conf</code> located at <code>$HOME/.config/mopidy/mopidy.conf</code><br> See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
+<li>Install the Jellyfin plugin for Mopidy:
+ <code>pip3 install --user mopidy-jellyfin</code></li>
+<li>(Optional) Install other mopidy related packages:
+ <code>pip3 install --user mopidy-mpd mopidy-musicbox-webclient</code></li>
+<li>Configure your <code>mopidy.conf</code> located at <code>$HOME/.config/mopidy/mopidy.conf</code>
+ See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
 <li>There may be a need to install extra gstreamer codecs if they&#39;re not already on your system, but these are highly variable and depend on your hardware and distro</li>
 <li>Start the program by running <code>mopidy</code> from a terminal</li>
 <li>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></li>
@@ -97,10 +100,14 @@
 <li>Grab the latest <a href="https://www.raspberrypi.org/downloads/raspbian/">raspbian image</a>.  Unless you have a need for a GUI, the &#39;Lite&#39; image is plenty for this project.</li>
 <li>Install the image to the SD card (See the <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">official documentation</a>)</li>
 <li>Install Mopidy from their <a href="https://docs.mopidy.com/en/latest/installation/debian/#install-from-apt-mopidy-com">apt repo</a> to ensure we get the latest version</li>
-<li>Install required OS packages:<br> <code>sudo apt install mopidy mopidy-mpd gstreamer1.0-plugins-bad python3-pip</code></li>
-<li>Install the Jellyfin plugin and any other Mopidy related packages you may want:<br> <code>sudo pip3 install mopidy-jellyfin mopidy-musicbox-webclient</code></li>
-<li>Configure your <code>mopidy.conf</code> located at <code>/etc/mopidy/mopidy.conf</code>:<br> See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
-<li>Enable and start the mopidy service:<br> <code>sudo systemctl enable --now mopidy</code></li>
+<li>Install required OS packages:
+ <code>sudo apt install mopidy mopidy-mpd gstreamer1.0-plugins-bad python3-pip</code></li>
+<li>Install the Jellyfin plugin and any other Mopidy related packages you may want:
+ <code>sudo pip3 install mopidy-jellyfin mopidy-musicbox-webclient</code></li>
+<li>Configure your <code>mopidy.conf</code> located at <code>/etc/mopidy/mopidy.conf</code>:
+ See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
+<li>Enable and start the mopidy service:
+ <code>sudo systemctl enable --now mopidy</code></li>
 <li>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></li>
 </ol>
 <h2 id="config-file">Config File</h2>
@@ -134,7 +141,10 @@ port = 6680
 <h2 id="usage">Usage</h2>
 <p>Once Mopidy is running, you can connect and control it with your client of choice.  MPD clients will connect using port 6600 by default.  Tested MPD clients include <a href="https://github.com/arybczak/ncmpcpp">ncmpcpp</a> and <a href="https://play.google.com/store/apps/details?id=org.gateshipone.malp">M.A.L.P</a>.  Web clients can be reached at <code>http://localhost:6680</code>, or <code>http://$IP_ADDRESS:6680</code> if this is a remote system.</p>
 <h2 id="upgrading">Upgrading</h2>
-<p>When a new version of Mopidy Jellyfin is released, you can upgrade via pip using the <code>--upgrade</code> flag.  Using the install examples from above:<br>    <code>pip3 install --user --upgrade mopidy-jellyfin</code><br>or<br>    <code>sudo pip3 install --upgrade mopidy-jellyfin</code></p>
+<p>When a new version of Mopidy Jellyfin is released, you can upgrade via pip using the <code>--upgrade</code> flag.  Using the install examples from above:
+    <code>pip3 install --user --upgrade mopidy-jellyfin</code><br>
+or
+    <code>sudo pip3 install --upgrade mopidy-jellyfin</code></p>
 </article>
           </div>
           

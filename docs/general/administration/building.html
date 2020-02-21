@@ -83,16 +83,21 @@
 <p>Jellyfin supports several methods of building for different platforms and instructions for all supported platforms are below.</p>
 <p>All package builds begin with these two steps:</p>
 <ol>
-<li><p>Clone the repository:<br> <code>git clone https://github.com/jellyfin/jellyfin.git</code><br> <code>cd jellyfin</code></p>
+<li><p>Clone the repository:
+ <code>git clone https://github.com/jellyfin/jellyfin.git</code><br>
+ <code>cd jellyfin</code></p>
 </li>
-<li><p>Initialize the submodules:<br> <code>git submodule update --init</code></p>
+<li><p>Initialize the submodules:
+ <code>git submodule update --init</code></p>
 </li>
 </ol>
 <h2 id="docker">Docker</h2>
 <ol>
-<li><p>Build the Docker image:<br> <code>docker build -t $USERNAME/jellyfin .</code></p>
+<li><p>Build the Docker image:
+ <code>docker build -t $USERNAME/jellyfin .</code></p>
 </li>
-<li><p>Run the container:<br> <code>docker run -d -p 8096:8096 $USERNAME/jellyfin</code></p>
+<li><p>Run the container:
+ <code>docker run -d -p 8096:8096 $USERNAME/jellyfin</code></p>
 </li>
 </ol>
 <h2 id="linux-or-macos">Linux or MacOS</h2>

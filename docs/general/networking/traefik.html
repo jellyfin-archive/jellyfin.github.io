@@ -81,7 +81,7 @@
 
 <p><a href="https://traefik.io/">Traefik</a> is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (Docker, Swarm mode, Kubernetes, Marathon, Consul, Etcd, Rancher, Amazon ECS, ...) and configures itself automatically and dynamically. Pointing Traefik at your orchestrator should be the only configuration step you need. This configuration is A+. Test your setup here at <a href="https://www.ssllabs.com/ssltest/">SSLlabs</a>.</p>
 <p>Create these 3 files in the SAME directory (or change their paths in the volume section) : docker-compose.yml, traefik.toml and acme.json.</p>
-<div class="NOTE"><h5>Note</h5><p>Ensure you enable Basic Auth protection for Traefik or disable its Dashboard. Otherwise your Dashboard will be accessible from the internet. </p>
+<div class="NOTE"><h5>Note</h5><p>Ensure you enable Basic Auth protection for Traefik or disable its Dashboard. Otherwise your Dashboard will be accessible from the internet.</p>
 </div>
 <pre><code>sudo apt install apache2-utils
 echo $(htpasswd -nb username mystrongpassword) | sed -e s/\\$/\\$\\$/g

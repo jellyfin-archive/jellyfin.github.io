@@ -247,7 +247,7 @@ Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
 <p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
 <ol>
-<li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:  </li>
+<li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</li>
 </ol>
 <pre><code class="lang-bash">$ ls -l /dev/dri
 total 0
@@ -301,7 +301,7 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
 <ol>
 <li>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
- <code>sudo usermod -aG video jellyfin</code>
+ <code>sudo usermod -aG video jellyfin</code><br>
  <code>sudo systemctl restart jellyfin</code></li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>If you are using a Raspberry Pi 4, you might need to run <code>sudo rpi-update</code> for kernel and firmware updates.</p>
