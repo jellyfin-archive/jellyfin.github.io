@@ -124,7 +124,7 @@
   <h6><strong>Assembly</strong>: Emby.Drawing.dll</h6>
   <h5 id="Emby_Drawing_ImageProcessor_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ImageProcessor : IImageProcessor, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class ImageProcessor : IImageProcessor, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -133,11 +133,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor__ctor_ILogger_Emby_Drawing_ImageProcessor__MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Drawing_IImageEncoder_System_Func_MediaBrowser_Controller_Library_ILibraryManager__System_Func_MediaBrowser_Controller_MediaEncoding_IMediaEncoder__.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.%23ctor(ILogger%7BEmby.Drawing.ImageProcessor%7D%2CMediaBrowser.Controller.IServerApplicationPaths%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Drawing.IImageEncoder%2CSystem.Func%7BMediaBrowser.Controller.Library.ILibraryManager%7D%2CSystem.Func%7BMediaBrowser.Controller.MediaEncoding.IMediaEncoder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L50">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor__ctor_" data-uid="Emby.Drawing.ImageProcessor.#ctor*"></a>
   <h4 id="Emby_Drawing_ImageProcessor__ctor_ILogger_Emby_Drawing_ImageProcessor__MediaBrowser_Controller_IServerApplicationPaths_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Drawing_IImageEncoder_System_Func_MediaBrowser_Controller_Library_ILibraryManager__System_Func_MediaBrowser_Controller_MediaEncoding_IMediaEncoder__" data-uid="Emby.Drawing.ImageProcessor.#ctor(ILogger{Emby.Drawing.ImageProcessor},MediaBrowser.Controller.IServerApplicationPaths,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Drawing.IImageEncoder,System.Func{MediaBrowser.Controller.Library.ILibraryManager},System.Func{MediaBrowser.Controller.MediaEncoding.IMediaEncoder})">ImageProcessor(ILogger&lt;ImageProcessor&gt;, IServerApplicationPaths, IFileSystem, IImageEncoder, Func&lt;ILibraryManager&gt;, Func&lt;IMediaEncoder&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Drawing.ImageProcessor.html">ImageProcessor</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -156,32 +157,38 @@
       <tr>
         <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Emby.Drawing.ImageProcessor.html">ImageProcessor</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The logger.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationPaths.html">IServerApplicationPaths</a></td>
         <td><span class="parametername">appPaths</span></td>
-        <td></td>
+        <td><p>The server application paths.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td></td>
+        <td><p>The filesystem.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Drawing.IImageEncoder.html">IImageEncoder</a></td>
         <td><span class="parametername">imageEncoder</span></td>
-        <td></td>
+        <td><p>The image encoder.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a>&gt;</td>
         <td><span class="parametername">libraryManager</span></td>
-        <td></td>
+        <td><p>The library manager.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a>&gt;</td>
         <td><span class="parametername">mediaEncoder</span></td>
-        <td></td>
+        <td><p>The media encoder.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -189,72 +196,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_ImageEncoder.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.ImageEncoder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L120">View Source</a>
-  </span>
-  <a id="Emby_Drawing_ImageProcessor_ImageEncoder_" data-uid="Emby.Drawing.ImageProcessor.ImageEncoder*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_ImageEncoder" data-uid="Emby.Drawing.ImageProcessor.ImageEncoder">ImageEncoder</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IImageEncoder ImageEncoder { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Drawing.IImageEncoder.html">IImageEncoder</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_ImageEnhancers.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.ImageEnhancers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L114">View Source</a>
-  </span>
-  <a id="Emby_Drawing_ImageProcessor_ImageEnhancers_" data-uid="Emby.Drawing.ImageProcessor.ImageEnhancers*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_ImageEnhancers" data-uid="Emby.Drawing.ImageProcessor.ImageEnhancers">ImageEnhancers</h4>
-  <div class="markdown level1 summary"><p>Gets the image enhancers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;IImageEnhancer&gt; ImageEnhancers { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IImageEnhancer.html">IImageEnhancer</a>&gt;</td>
-        <td><p>The image enhancers.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_SupportedInputFormats.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.SupportedInputFormats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L81">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L69">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_SupportedInputFormats_" data-uid="Emby.Drawing.ImageProcessor.SupportedInputFormats*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_SupportedInputFormats" data-uid="Emby.Drawing.ImageProcessor.SupportedInputFormats">SupportedInputFormats</h4>
@@ -286,7 +231,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_SupportsImageCollageCreation.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.SupportsImageCollageCreation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L100">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_SupportsImageCollageCreation_" data-uid="Emby.Drawing.ImageProcessor.SupportsImageCollageCreation*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_SupportsImageCollageCreation" data-uid="Emby.Drawing.ImageProcessor.SupportsImageCollageCreation">SupportsImageCollageCreation</h4>
@@ -320,7 +265,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L702">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L477">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_CreateImageCollage_" data-uid="Emby.Drawing.ImageProcessor.CreateImageCollage*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_" data-uid="Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions)">CreateImageCollage(ImageCollageOptions)</h4>
@@ -354,7 +299,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_Dispose.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L763">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L487">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_Dispose_" data-uid="Emby.Drawing.ImageProcessor.Dispose*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_Dispose" data-uid="Emby.Drawing.ImageProcessor.Dispose">Dispose()</h4>
@@ -369,7 +314,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetCachePath_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetCachePath(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L685">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L459">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetCachePath_" data-uid="Emby.Drawing.ImageProcessor.GetCachePath*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetCachePath_System_String_System_String_" data-uid="Emby.Drawing.ImageProcessor.GetCachePath(System.String,System.String)">GetCachePath(String, String)</h4>
@@ -433,7 +378,7 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
         <td><p>path
 or
-filename</p>
+filename.</p>
 </td>
       </tr>
     </tbody>
@@ -443,7 +388,7 @@ filename</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetCachePath_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetCachePath(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L652">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L426">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetCachePath_" data-uid="Emby.Drawing.ImageProcessor.GetCachePath*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetCachePath_System_String_System_String_System_String_" data-uid="Emby.Drawing.ImageProcessor.GetCachePath(System.String,System.String,System.String)">GetCachePath(String, String, String)</h4>
@@ -515,69 +460,7 @@ filename</p>
 or
 uniqueName
 or
-fileExtension</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetEnhancedImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_System_Int32_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetEnhancedImage(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L491">View Source</a>
-  </span>
-  <a id="Emby_Drawing_ImageProcessor_GetEnhancedImage_" data-uid="Emby.Drawing.ImageProcessor.GetEnhancedImage*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_GetEnhancedImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_System_Int32_" data-uid="Emby.Drawing.ImageProcessor.GetEnhancedImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Entities.ImageType,System.Int32)">GetEnhancedImage(BaseItem, ImageType, Int32)</h4>
-  <div class="markdown level1 summary"><p>Gets the enhanced image.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;string&gt; GetEnhancedImage(BaseItem item, ImageType imageType, int imageIndex)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">item</span></td>
-        <td><p>The item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
-        <td><span class="parametername">imageType</span></td>
-        <td><p>Type of the image.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">imageIndex</span></td>
-        <td><p>Index of the image.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p>Task{System.String}.</p>
+fileExtension.</p>
 </td>
       </tr>
     </tbody>
@@ -587,7 +470,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Entities.ItemImageInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L402">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L348">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetImageCacheTag_" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.ItemImageInfo)">GetImageCacheTag(BaseItem, ItemImageInfo)</h4>
@@ -640,72 +523,10 @@ fileExtension</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_System_Collections_Generic_IReadOnlyCollection_MediaBrowser_Controller_Providers_IImageEnhancer__.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Entities.ItemImageInfo%2CSystem.Collections.Generic.IReadOnlyCollection%7BMediaBrowser.Controller.Providers.IImageEnhancer%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L428">View Source</a>
-  </span>
-  <a id="Emby_Drawing_ImageProcessor_GetImageCacheTag_" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_System_Collections_Generic_IReadOnlyCollection_MediaBrowser_Controller_Providers_IImageEnhancer__" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.ItemImageInfo,System.Collections.Generic.IReadOnlyCollection{MediaBrowser.Controller.Providers.IImageEnhancer})">GetImageCacheTag(BaseItem, ItemImageInfo, IReadOnlyCollection&lt;IImageEnhancer&gt;)</h4>
-  <div class="markdown level1 summary"><p>Gets the image cache tag.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetImageCacheTag(BaseItem item, ItemImageInfo image, IReadOnlyCollection&lt;IImageEnhancer&gt; imageEnhancers)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">item</span></td>
-        <td><p>The item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.ItemImageInfo.html">ItemImageInfo</a></td>
-        <td><span class="parametername">image</span></td>
-        <td><p>The image.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IImageEnhancer.html">IImageEnhancer</a>&gt;</td>
-        <td><span class="parametername">imageEnhancers</span></td>
-        <td><p>The image enhancers.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>Guid.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ChapterInfo_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Entities.ChapterInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L410">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L352">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetImageCacheTag_" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetImageCacheTag_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ChapterInfo_" data-uid="Emby.Drawing.ImageProcessor.GetImageCacheTag(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Entities.ChapterInfo)">GetImageCacheTag(BaseItem, ChapterInfo)</h4>
@@ -757,7 +578,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageDimensions_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageDimensions(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Entities.ItemImageInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L368">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L314">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetImageDimensions_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetImageDimensions_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.ItemImageInfo)">GetImageDimensions(BaseItem, ItemImageInfo)</h4>
@@ -813,7 +634,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageDimensions_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageDimensions(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Entities.ItemImageInfo%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L372">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L318">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetImageDimensions_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetImageDimensions_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Entities_ItemImageInfo_System_Boolean_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Entities.ItemImageInfo,System.Boolean)">GetImageDimensions(BaseItem, ItemImageInfo, Boolean)</h4>
@@ -875,7 +696,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetImageDimensions_System_String_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetImageDimensions(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L398">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L344">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetImageDimensions_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetImageDimensions_System_String_" data-uid="Emby.Drawing.ImageProcessor.GetImageDimensions(System.String)">GetImageDimensions(String)</h4>
@@ -922,66 +743,10 @@ fileExtension</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetSupportedEnhancers_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetSupportedEnhancers(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Entities.ImageType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L712">View Source</a>
-  </span>
-  <a id="Emby_Drawing_ImageProcessor_GetSupportedEnhancers_" data-uid="Emby.Drawing.ImageProcessor.GetSupportedEnhancers*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_GetSupportedEnhancers_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_" data-uid="Emby.Drawing.ImageProcessor.GetSupportedEnhancers(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Entities.ImageType)">GetSupportedEnhancers(BaseItem, ImageType)</h4>
-  <div class="markdown level1 summary"><p>Gets the supported enhancers.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;IImageEnhancer&gt; GetSupportedEnhancers(BaseItem item, ImageType imageType)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
-        <td><span class="parametername">item</span></td>
-        <td><p>The item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
-        <td><span class="parametername">imageType</span></td>
-        <td><p>Type of the image.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.IImageEnhancer.html">IImageEnhancer</a>&gt;</td>
-        <td><p>IEnumerable{IImageEnhancer}.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_GetSupportedImageOutputFormats.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.GetSupportedImageOutputFormats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L114">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_GetSupportedImageOutputFormats_" data-uid="Emby.Drawing.ImageProcessor.GetSupportedImageOutputFormats*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_GetSupportedImageOutputFormats" data-uid="Emby.Drawing.ImageProcessor.GetSupportedImageOutputFormats">GetSupportedImageOutputFormats()</h4>
@@ -1013,7 +778,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_ProcessImage_MediaBrowser_Controller_Drawing_ImageProcessingOptions_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.ProcessImage(MediaBrowser.Controller.Drawing.ImageProcessingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L146">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L122">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_ProcessImage_" data-uid="Emby.Drawing.ImageProcessor.ProcessImage*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_ProcessImage_MediaBrowser_Controller_Drawing_ImageProcessingOptions_" data-uid="Emby.Drawing.ImageProcessor.ProcessImage(MediaBrowser.Controller.Drawing.ImageProcessingOptions)">ProcessImage(ImageProcessingOptions)</h4>
@@ -1063,7 +828,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_ProcessImage_MediaBrowser_Controller_Drawing_ImageProcessingOptions_System_IO_Stream_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.ProcessImage(MediaBrowser.Controller.Drawing.ImageProcessingOptions%2CSystem.IO.Stream)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L127">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L103">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_ProcessImage_" data-uid="Emby.Drawing.ImageProcessor.ProcessImage*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_ProcessImage_MediaBrowser_Controller_Drawing_ImageProcessingOptions_System_IO_Stream_" data-uid="Emby.Drawing.ImageProcessor.ProcessImage(MediaBrowser.Controller.Drawing.ImageProcessingOptions,System.IO.Stream)">ProcessImage(ImageProcessingOptions, Stream)</h4>
@@ -1119,7 +884,7 @@ fileExtension</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_SupportsTransparency_System_String_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.SupportsTransparency(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L142">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L118">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_SupportsTransparency_" data-uid="Emby.Drawing.ImageProcessor.SupportsTransparency*"></a>
   <h4 id="Emby_Drawing_ImageProcessor_SupportsTransparency_System_String_" data-uid="Emby.Drawing.ImageProcessor.SupportsTransparency(System.String)">SupportsTransparency(String)</h4>
@@ -1179,7 +944,7 @@ fileExtension</p>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L26" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
