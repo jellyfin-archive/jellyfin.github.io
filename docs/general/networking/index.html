@@ -86,7 +86,7 @@
 <ul>
 <li>8096/tcp is used by default for HTTP traffic. This is admin configurable.</li>
 <li>8920/tcp is used by default for HTTPS traffic. This is admin configurable.</li>
-<li>1900/udp is used for service autodiscovery. This is <em>not</em> admin configurable as it would break client autodiscover.</li>
+<li>1900/udp is used for service autodiscovery. This is not admin configurable since it would break client auto-discover.</li>
 </ul>
 <p><strong>HTTP Traffic:</strong> 8096</p>
 <p>The web frontend can be accessed here for debugging SSL certificate issues on your local network. You can modify this setting from the <strong>Networking</strong> page in the settings.</p>
@@ -97,7 +97,7 @@
 <p><strong>Client Discovery:</strong> 7359 UDP</p>
 <p>Allows clients to discover the Jellyfin Server on the local network.  A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a json response that includes the server Address, ID and Name.</p>
 <h3 id="dynamic-ports">Dynamic Ports</h3>
-<p>Live TV devices will often use a random UDP port for HD Homerun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
+<p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
 <h1 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h1>
 <p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
 <div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired.</p>
@@ -116,20 +116,20 @@
 </ul>
 <p>When following this guide, be sure to replace the following variables with your information:</p>
 <ul>
-<li><code>DOMAIN_NAME</code> - Your public domain name to access Jellyfin on (e.g. jellyfin.example.com)</li>
-<li><code>example.com</code> - The domain name Jellyfin services will run under (e.g. example.com)</li>
-<li><code>SERVER_IP_ADDRESS</code> - The IP address of your Jellyfin server (if the reverse proxy is on the same server use 127.0.0.1)</li>
+<li><code>DOMAIN_NAME</code>: Your public domain name to access Jellyfin on (e.g. jellyfin.example.com)</li>
+<li><code>example.com</code>: The domain name Jellyfin services will run under (e.g. example.com)</li>
+<li><code>SERVER_IP_ADDRESS</code>: The IP address of your Jellyfin server (if the reverse proxy is on the same server use 127.0.0.1)</li>
 </ul>
-<p>In addition, the examples are configured for use with LetsEncrypt certificates.  If you have a certificate from another source, change the ssl configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
+<p>In addition, the examples are configured for use with LetsEncrypt certificates.  If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
 <h2 id="base-url">Base URL</h2>
 <p>Running Jellyfin with a path (<a href="https://example.com/jellyfin">https://example.com/jellyfin</a>) is supported by the Android and web clients.</p>
-<div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HD HomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
+<div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HDHomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
 </div>
 <p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
-<p>The entered value on the configuration page will be normalized to include a leading<code>/</code> if this is missing.</p>
-<p>This setting requires a server restart to change, in order to avoid invalidating existing paths until the administrator is ready to.</p>
-<p>There are three main caveats to this setting:</p>
+<p>The entered value on the configuration page will be normalized to include a leading <code>/</code> if this is missing.</p>
+<p>This setting requires a server restart to change, in order to avoid invalidating existing paths until the administrator is ready.</p>
+<p>There are three main caveats to this setting.</p>
 <ol>
 <li><p>When setting a new Base URL (i.e. from <code>/</code> to <code>/baseurl</code>) or changing a Base URL (i.e. from <code>/baseurl</code> to <code>/newbaseurl</code>), the Jellyfin web server will automatically handle redirects to avoid displaying users invalid pages. For instance, accessing a server with a Base URL of <code>/jellyfin</code> on the <code>/</code> path will automatically append the <code>/jellyfin</code> Base URL. However, entirely removing a Base URL (i.e. from <code>/baseurl</code> to <code>/</code>, an empty value in the configuration) will not - all URLs with the old Base URL path will become invalid and throw 404 errors. This should be kept in mind when removing an existing Base URL.</p>
 </li>

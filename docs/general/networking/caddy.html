@@ -87,8 +87,8 @@
         websocket
     }
 }
-</code></pre><p>Using DOMAIN_NAME only, or sub.DOMAIN_NAME would also work, as would using multiple at once.</p>
-<p>Caddy will automatically attempt to obtain a free HTTPS certificate if possible, and handle renewal, making the below section unecessary.</p>
+</code></pre><p>Using DOMAIN_NAME or sub.DOMAIN_NAME would also work, as would using multiple at once.</p>
+<p>Caddy will automatically attempt to obtain a free HTTPS certificate and handle renewals, making the section below unecessary.</p>
 <p>If using a subpath, note that <code>DOMAIN_NAME/jellyfin</code> will not resolve, the ending slash is needed. To get around this, you can add the following to your <code>Caddyfile</code>. This is only helpful for the web client, just one less character to type in the browser.</p>
 <pre><code>DOMAIN_NAME {
     redir {

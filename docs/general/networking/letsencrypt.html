@@ -109,13 +109,13 @@ cat fullchain.pem privkey.pem &gt; /etc/ssl/$SITE.pem
 # reload haproxy
 service haproxy reload
 </code></pre><p>Make sure the script is executable</p>
-<p> <code>chmod u+x /usr/local/bin/letsencrypt-renew.sh</code></p>
+<p><code>chmod u+x /usr/local/bin/letsencrypt-renew.sh</code></p>
 <p>Add a job to cron so the certificate will be renewed automatically:</p>
-<p> <code>@monthly /usr/bin/certbot renew --renew-hook &quot;/usr/local/bin/letsencrypt-renew.sh&quot; &gt;&gt; /var/log/letsencrypt-renewal.log</code></p>
+<p><code>@monthly /usr/bin/certbot renew --renew-hook &quot;/usr/local/bin/letsencrypt-renew.sh&quot; &gt;&gt; /var/log/letsencrypt-renewal.log</code></p>
 <h3 id="nginx">Nginx</h3>
 <p>After installing certbot and the Nginx plugin with <code>sudo apt install certbot python3-certbot-nginx</code>, certificate generation is accomplished by:</p>
-<p><code>sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d YOUR_DOMAIN</code>
-(Add the <code>--rsa-key-size 4096</code> parameter if you want a 4096 bit key instead)</p>
+<p><code>sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d YOUR_DOMAIN</code></p>
+<p>(Add the <code>--rsa-key-size 4096</code> parameter if you want a 4096 bit key instead)</p>
 <p>Copy and paste the whole Nginx sample configuration file from above, changing the parameters according to your setup and uncommenting the lines.</p>
 <p>Add a job to cron so the certificate will be renewed automatically:</p>
 <p><code>echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot</code></p>
