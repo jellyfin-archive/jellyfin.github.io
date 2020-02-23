@@ -95,7 +95,7 @@
 <p><strong>Service Discovery:</strong> 1900</p>
 <p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time. DLNA also uses this port and is required to be in the local subnet.</p>
 <p><strong>Client Discovery:</strong> 7359 UDP</p>
-<p>Allows clients to discover the Jellyfin Server on the local network.  A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a json response that includes the server Address, ID and Name.</p>
+<p>Allows clients to discover Jellyfin on the local network. A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a JSON response that includes the server address, ID, and name.</p>
 <h3 id="dynamic-ports">Dynamic Ports</h3>
 <p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
 <h1 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h1>
@@ -114,13 +114,13 @@
 <ul>
 <li><a class="xref" href="letsencrypt.html">Let&#39;s Encrypt</a></li>
 </ul>
-<p>When following this guide, be sure to replace the following variables with your information:</p>
+<p>When following this guide, be sure to replace the following variables with your information.</p>
 <ul>
 <li><code>DOMAIN_NAME</code>: Your public domain name to access Jellyfin on (e.g. jellyfin.example.com)</li>
 <li><code>example.com</code>: The domain name Jellyfin services will run under (e.g. example.com)</li>
 <li><code>SERVER_IP_ADDRESS</code>: The IP address of your Jellyfin server (if the reverse proxy is on the same server use 127.0.0.1)</li>
 </ul>
-<p>In addition, the examples are configured for use with LetsEncrypt certificates.  If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
+<p>In addition, the examples are configured for use with Let&#39;s Encrypt certificates. If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
 <h2 id="base-url">Base URL</h2>
 <p>Running Jellyfin with a path (<a href="https://example.com/jellyfin">https://example.com/jellyfin</a>) is supported by the Android and web clients.</p>
@@ -139,7 +139,7 @@
 </li>
 </ol>
 <h2 id="final-steps">Final Steps</h2>
-<p>It&#39;s strongly recommend that you check your SSL strength and server security at <a href="https://www.ssllabs.com/ssltest/analyze.html">SSLLabs</a> if you are exposing these service to the internet.</p>
+<p>It&#39;s strongly recommend that you check your SSL strength and server security at <a href="https://www.ssllabs.com/ssltest/analyze.html">SSLLabs</a> if you are exposing these services to the internet.</p>
 </article>
           </div>
           

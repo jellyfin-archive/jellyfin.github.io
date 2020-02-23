@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Release Procedure | Documentation - Jellyfin Project </title>
+    <title>Releases | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Release Procedure | Documentation - Jellyfin Project ">
+    <meta name="title" content="Releases | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -84,16 +84,16 @@
 <p>Jellyfin uses <a href="https://semver.org">semantic versioning</a>. All releases will have versions in the <code>X.Y.Z</code> format, starting from <code>10.0.0</code>. Note however that the <code>10.Y.Z</code> release chain represents the &quot;cleanup&quot; of the codebase, so it should be accepted that <code>10.Y.Z</code> breaks all compatibility, at some point, with previous Emby-compatible interfaces, and may also break compatibility with previous <code>10.Y</code> releases if required for later cleanup work. Our versioning will typically follow the patterns below:</p>
 <h4 id="x---major-versions"><code>X</code> - Major Versions</h4>
 <ul>
-<li>Breaks compatibility with the HTTP and/or plugin APIs.</li>
+<li>Breaks compatibility with the HTTP or plugin APIs</li>
 </ul>
 <h4 id="y---minor-versions"><code>Y</code> - Minor Versions</h4>
 <ul>
-<li>Introduces new features.</li>
-<li>Makes minor backwards-compatible API changes.</li>
+<li>Introduces new features</li>
+<li>Makes minor backwards-compatible API changes</li>
 </ul>
 <h4 id="z---hotfix-versions"><code>Z</code> - Hotfix Versions</h4>
 <ul>
-<li>Introduces critical bugfixes or otherwise changes <code>master</code> branch code since the last release.</li>
+<li>Critical bug fixes or minor changes</li>
 </ul>
 <h2 id="general-release-philosophy">General Release Philosophy</h2>
 <p>Releases will generally be performed on Sundays &quot;when ready&quot;. For Major/Minor releases, the &quot;when ready&quot; is generally quite flexible and is whenever the release is truly ready without major breaking bugs. After a major release, each Sunday the Admin team should review the recently merged PRs and, if backports are required, perform a Hotfix release containing those PRs.</p>
@@ -102,7 +102,7 @@
 <ol>
 <li><p>Testing is ongoing via <code>master</code> nightly builds, so <code>master</code> should be generally unbroken before proceeding. The version of <code>master</code> should already reflect the upcoming major release version (i.e. <code>X.Y.0</code>).</p>
 </li>
-<li><p>Once <code>master</code> is in a generally stable state after extensive work, announce a &quot;golden nightly&quot; is incoming via the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel and/or Reddit.</p>
+<li><p>Once <code>master</code> is in a generally stable state after extensive work, announce a &quot;golden nightly&quot; is incoming via the <a href="https://matrix.to/#/#jellyfin-dev:matrix.org">jellyfin-dev</a> Matrix/Riot channel and Reddit.</p>
 </li>
 <li><p>Collect testing information and repeat as needed.</p>
 </li>
@@ -175,7 +175,7 @@
 </ol>
 <pre><code>[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
 </code></pre><ol>
-<li>Publish the release.</li>
+<li>Publish the release on GitHub and the archive repository.</li>
 </ol>
 <h4 id="server-1">Server</h4>
 <ol>

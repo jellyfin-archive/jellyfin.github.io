@@ -80,7 +80,7 @@
 <h2 id="caddy">Caddy</h2>
 
 <p>&quot;<a href="https://caddyserver.com/">Caddy</a>, sometimes clarified as the Caddy web server, is an open source, HTTP/2-enabled web server written in Go. It uses the Go standard library for its HTTP functionality.&quot; - <a href="https://en.wikipedia.org/wiki/Caddy_(web_server)">Wikipedia</a></p>
-<p>Add this to your <code>Caddyfile</code>:</p>
+<h3 id="caddyfile">Caddyfile</h3>
 <pre><code>DOMAIN_NAME/jellyfin/ {
     proxy / localhost:8096 {
         transparent
@@ -88,7 +88,7 @@
     }
 }
 </code></pre><p>Using DOMAIN_NAME or sub.DOMAIN_NAME would also work, as would using multiple at once.</p>
-<p>Caddy will automatically attempt to obtain a free HTTPS certificate and handle renewals, making the section below unecessary.</p>
+<p>Caddy will automatically attempt to obtain a free HTTPS certificate and handle renewals, making the section below unnecessary.</p>
 <p>If using a subpath, note that <code>DOMAIN_NAME/jellyfin</code> will not resolve, the ending slash is needed. To get around this, you can add the following to your <code>Caddyfile</code>. This is only helpful for the web client, just one less character to type in the browser.</p>
 <pre><code>DOMAIN_NAME {
     redir {

@@ -80,7 +80,7 @@
 <h2 id="nginx">Nginx</h2>
 
 <p>&quot;<a href="https://www.nginx.com/">Nginx</a> (pronounced &quot;engine X&quot;) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004.[9] A company of the same name was founded in 2011 to provide support and Nginx plus paid software.&quot; - <a href="https://en.wikipedia.org/wiki/Nginx">Wikipedia</a></p>
-<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code>.</p>
+<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code> which will forward requests to Jellyfin.</p>
 <pre><code>server {
     listen 80;
     server_name DOMAIN_NAME;
@@ -142,7 +142,7 @@
 #}
 </code></pre><h2 id="nginx-with-subpath">Nginx with Subpath</h2>
 <p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
-<p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the Jellyfin Web UI.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
+<p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
 <pre><code># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
 
 server {
