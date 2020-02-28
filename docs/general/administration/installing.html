@@ -89,17 +89,15 @@
 <p><a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a></p>
 <p>The Jellyfin Docker image is available on <a href="https://hub.docker.com/r/jellyfin/jellyfin/">Docker Hub</a> for multiple architectures.</p>
 <ol>
-<li><p>Get the latest image.
- <code>docker pull jellyfin/jellyfin</code></p>
-</li>
-<li><p>Create directories on the host for persistent data storage.
- <code>mkdir /path/to/config</code><br>
- <code>mkdir /path/to/cache</code></p>
-</li>
+<li><p>Get the latest image.</p>
+<pre><code class="lang-sh">docker pull jellyfin/jellyfin
+</code></pre></li>
+<li><p>Create directories on the host for persistent data storage.</p>
+<pre><code class="lang-sh">mkdir /path/to/config
+mkdir /path/to/cache
+</code></pre></li>
 <li><p>Start the server.</p>
-</li>
-</ol>
-<pre><code class="lang-bash">docker run -d \
+<pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
  --volume /path/to/cache:/cache \
  --volume /path/to/media:/media \
@@ -107,7 +105,7 @@
  --net=host \
  --restart=unless-stopped \
  jellyfin/jellyfin
-</code></pre><p>Alternatively, using docker-compose:</p>
+</code></pre><p> Alternatively, using docker-compose:</p>
 <pre><code class="lang-json">version: &quot;3&quot;
 services:
   jellyfin:
@@ -118,7 +116,9 @@ services:
       - /path/to/config:/config
       - /path/to/cache:/cache
       - /path/to/media:/media
-</code></pre><h3 id="docker-hubhttpshubdockercomrlinuxserverjellyfin-image-maintained-by-linuxserverio"><a href="https://hub.docker.com/r/linuxserver/jellyfin">Docker Hub</a> image maintained by LinuxServer.io</h3>
+</code></pre></li>
+</ol>
+<h3 id="docker-hubhttpshubdockercomrlinuxserverjellyfin-image-maintained-by-linuxserverio"><a href="https://hub.docker.com/r/linuxserver/jellyfin">Docker Hub</a> image maintained by LinuxServer.io</h3>
 <p><a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a></p>
 <h3 id="unraid-docker">Unraid Docker</h3>
 <p>An Unraid Docker template is available in the repository.</p>
@@ -126,10 +126,8 @@ services:
 <li><p>Open the unRaid GUI (at least unRaid 6.5) and click on the &quot;Docker&quot; tab.</p>
 </li>
 <li><p>Add the following line under &quot;Template Repositories&quot; and save the options.</p>
-</li>
-</ol>
-<p><code>https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates</code></p>
-<ol>
+<pre><code class="lang-data">https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates
+</code></pre></li>
 <li><p>Click &quot;Add Container&quot; and select &quot;jellyfin&quot;.</p>
 </li>
 <li><p>Adjust any required paths and save.</p>
@@ -171,17 +169,23 @@ services:
 <li>Download and extract the latest version.</li>
 <li>Create a folder <code>jellyfin</code> at your preferred install location.</li>
 <li>Copy the extracted folder into the <code>jellyfin</code> folder and rename it to <code>system</code>.</li>
-<li>Create <code>jellyfin.bat</code> within your <code>jellyfin</code> folder containing:<ul>
-<li>To use the default library/data location at <code>%localappdata%</code>:
-<code>&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe</code></li>
-<li>To use a custom library/data location (Path after the -d parameter):
-<code>&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe -d &lt;--Your install path--&gt;\jellyfin\data</code></li>
-<li>To use a custom library/data location (Path after the -d parameter) and disable the auto-start of the webapp:
-<code>&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe -d &lt;--Your install path--&gt;\jellyfin\data -noautorunwebapp</code></li>
+<li><p>Create <code>jellyfin.bat</code> within your <code>jellyfin</code> folder containing:</p>
+<ul>
+<li><p>To use the default library/data location at <code>%localappdata%</code>:</p>
+<pre><code class="lang-cmd">&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe
+</code></pre></li>
+<li><p>To use a custom library/data location (Path after the -d parameter):</p>
+<pre><code class="lang-cmd">&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe -d &lt;--Your install path--&gt;\jellyfin\data
+</code></pre></li>
+<li><p>To use a custom library/data location (Path after the -d parameter) and disable the auto-start of the webapp:</p>
+<pre><code class="lang-cmd">&lt;--Your install path--&gt;\jellyfin\system\jellyfin.exe -d &lt;--Your install path--&gt;\jellyfin\data -noautorunwebapp
+</code></pre></li>
 </ul>
 </li>
-<li>Run <code>jellyfin.bat</code></li>
-<li>Open your browser at http://&lt;--Server-IP--&gt;:8096 (if auto-start of webapp is disabled)</li>
+<li>Run
+ <code>cmd
+ jellyfin.bat</code></li>
+<li>Open your browser at <code>http://&lt;--Server-IP--&gt;:8096</code> (if auto-start of webapp is disabled)</li>
 </ol>
 <p><strong>Update</strong></p>
 <ol>
@@ -238,7 +242,7 @@ services:
 <p><strong>Upgrading the Portable Version</strong></p>
 <ol>
 <li>Download the latest version.</li>
-<li>Stop the currently running server either via the dashboard or using CTRL+C in the terminal window.</li>
+<li>Stop the currently running server either via the dashboard or using <code>CTRL+C</code> in the terminal window.</li>
 <li>Extract the latest version into Applications</li>
 <li>Open Terminal and type <code>cd</code> followed with a space then drag the jellyfin folder into the terminal.</li>
 <li>Type <code>./jellyfin</code> to run jellyfin.</li>
@@ -246,7 +250,7 @@ services:
 </ol>
 <p><strong>Uninstalling the Portable Version</strong></p>
 <ol>
-<li>Stop the currently running server either via the dashboard or using CTRL+C in the terminal window.</li>
+<li>Stop the currently running server either via the dashboard or using <code>CTRL+C</code> in the terminal window.</li>
 <li>Move <code>/Application/jellyfin-version</code> folder to the Trash. Replace version with the actual version number you are trying to delete.</li>
 </ol>
 <p><strong>Using FFmpeg with the Portable Version</strong></p>
@@ -256,25 +260,25 @@ services:
 <h2 id="linux-generic-amd64">Linux (generic amd64)</h2>
 <p>Generic amd64 Linux builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#linux">here</a>.</p>
 <h3 id="installation-process">Installation Process</h3>
-<p>Create a directory in /opt for jellyfin and its files, and enter that directory.</p>
-<pre><code class="lang-bash">sudo mkdir /opt/jellyfin
+<p>Create a directory in <code>/opt</code> for jellyfin and its files, and enter that directory.</p>
+<pre><code class="lang-sh">sudo mkdir /opt/jellyfin
 cd /opt/jellyfin
-</code></pre><p>Download the latest generic Linux build from the <a href="https://github.com/jellyfin/jellyfin/releases">release page</a>. The generic Linux build ends with &quot;linux-amd64.tar.gz&quot;. The rest of these instructions assume version 10.4.3 is being installed (i.e. <code>jellyfin_10.4.3_linux-amd64.tar.gz</code>). Download the generic build, then extract the archive:</p>
-<pre><code class="lang-bash">sudo wget https://github.com/jellyfin/jellyfin/releases/download/v10.4.3/jellyfin_10.4.3_linux-amd64.tar.gz
+</code></pre><p>Download the latest generic Linux build from the <a href="https://github.com/jellyfin/jellyfin/releases">release page</a>. The generic Linux build ends with &quot;<code>linux-amd64.tar.gz</code>&quot;. The rest of these instructions assume version 10.4.3 is being installed (i.e. <code>jellyfin_10.4.3_linux-amd64.tar.gz</code>). Download the generic build, then extract the archive:</p>
+<pre><code class="lang-sh">sudo wget https://github.com/jellyfin/jellyfin/releases/download/v10.4.3/jellyfin_10.4.3_linux-amd64.tar.gz
 sudo tar xvzf jellyfin_10.4.3_linux-amd64.tar.gz
 </code></pre><p>Create a symbolic link to the Jellyfin 10.4.3 directory. This allows an upgrade by repeating the above steps and enabling it by simply re-creating the symbolic link to the new version.</p>
-<pre><code class="lang-bash">sudo ln -s jellyfin_10.4.3 jellyfin
+<pre><code class="lang-sh">sudo ln -s jellyfin_10.4.3 jellyfin
 </code></pre><p>Create four sub-directories for Jellyfin data.</p>
-<pre><code class="lang-bash">sudo mkdir data cache config log
+<pre><code class="lang-sh">sudo mkdir data cache config log
 </code></pre><p>If you are running Debian or a derivative, you can also download and install an ffmpeg release built specifically for Jellyfin. Be sure to download the latest release that matches your OS (4.2.1-3 for Debian Stretch assumed below).</p>
-<pre><code class="lang-bash">sudo wget https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v4.2.1-3/jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
+<pre><code class="lang-sh">sudo wget https://github.com/jellyfin/jellyfin-ffmpeg/releases/download/v4.2.1-3/jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
 sudo dpkg --install jellyfin-ffmpeg_4.2.1-3-stretch_amd64.deb
 </code></pre><p>If you run into any dependency errors, run this and it will install them and jellyfin-ffmpeg.</p>
-<pre><code class="lang-bash">sudo apt install -f
+<pre><code class="lang-sh">sudo apt install -f
 </code></pre><p>Due to the number of command line options that must be passed, it is easiest to create a small script to run Jellyfin.</p>
-<pre><code class="lang-bash">sudo nano jellyfin.sh
+<pre><code class="lang-sh">sudo nano jellyfin.sh
 </code></pre><p>Then paste the following commands and modify as needed.</p>
-<pre><code class="lang-bash">#!/bin/bash
+<pre><code class="lang-sh">#!/bin/bash
 JELLYFINDIR=&quot;/opt/jellyfin&quot;
 FFMPEGDIR=&quot;/usr/share/jellyfin-ffmpeg&quot;
 
@@ -284,11 +288,11 @@ $JELLYFINDIR/jellyfin/jellyfin \
  -c $JELLYFINDIR/config \
  -l $JELLYFINDIR/log \
  --ffmpeg $FFMPEGDIR/ffmpeg
-</code></pre><p>Assuming you desire Jellyfin to run as a non-root user, chmod all files and directories to your normal login user and group. Also make the startup script above executable.</p>
-<pre><code class="lang-bash">sudo chown -R user:group *
+</code></pre><p>Assuming you desire Jellyfin to run as a non-root user, <code>chmod</code> all files and directories to your normal login user and group. Also make the startup script above executable.</p>
+<pre><code class="lang-sh">sudo chown -R user:group *
 sudo chmod u+x jellyfin.sh
 </code></pre><p>Finally you can run it. You will see lots of log information when run, this is normal. Setup is as usual in the web browser.</p>
-<pre><code class="lang-bash">./jellyfin.sh
+<pre><code class="lang-sh">./jellyfin.sh
 </code></pre><h2 id="portable-dll">Portable DLL</h2>
 <p>Platform-agnostic .NET Core DLL builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#portable">here</a>. These builds use the binary <code>jellyfin.dll</code> and must be loaded with <code>dotnet</code>.</p>
 <h2 id="arch">Arch</h2>
@@ -303,30 +307,28 @@ sudo chmod u+x jellyfin.sh
 <div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
 </div>
 <ol>
-<li><p>Install HTTPS transport for APT if you haven&#39;t already:
- <code>sudo apt install apt-transport-https</code></p>
-</li>
-<li><p>Import the GPG signing key (signed by the Jellyfin Team):
- <code>wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
-</li>
-<li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:
- <code>echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list</code></p>
-</li>
-</ol>
-<div class="NOTE"><h5>Note</h5><p>Supported releases are <code>stretch</code> and <code>buster</code>.</p>
+<li><p>Install HTTPS transport for APT if you haven&#39;t already:</p>
+<pre><code class="lang-sh">sudo apt install apt-transport-https
+</code></pre></li>
+<li><p>Import the GPG signing key (signed by the Jellyfin Team):</p>
+<pre><code class="lang-sh">wget -O - https://repo.jellyfin.org/debian/jellyfin_team.gpg.key | sudo apt-key add -
+</code></pre></li>
+<li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:</p>
+<pre><code class="lang-sh">echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list
+</code></pre><div class="NOTE"><h5>Note</h5><p>Supported releases are <code>stretch</code> and <code>buster</code>.</p>
 </div>
-<ol>
-<li><p>Update APT repositories:
- <code>sudo apt update</code></p>
 </li>
-<li><p>Install Jellyfin:
- <code>sudo apt install jellyfin</code></p>
-</li>
-<li><p>Manage the Jellyfin system service with your tool of choice:
- <code>sudo service jellyfin status</code><br>
- <code>sudo systemctl restart jellyfin</code><br>
- <code>sudo /etc/init.d/jellyfin stop</code></p>
-</li>
+<li><p>Update APT repositories:</p>
+<pre><code class="lang-sh">sudo apt update
+</code></pre></li>
+<li><p>Install Jellyfin:</p>
+<pre><code class="lang-sh">sudo apt install jellyfin
+</code></pre></li>
+<li><p>Manage the Jellyfin system service with your tool of choice:</p>
+<pre><code class="lang-sh">sudo service jellyfin status
+sudo systemctl restart jellyfin
+sudo /etc/init.d/jellyfin stop
+</code></pre></li>
 </ol>
 <h3 id="packages">Packages</h3>
 <p>Raw Debian packages, including old versions, are available <a href="https://jellyfin.org/downloads/#debian">here</a>.</p>
@@ -335,25 +337,25 @@ sudo chmod u+x jellyfin.sh
 <ol>
 <li><p>Download the desired <code>jellyfin</code> and <code>jellyfin-ffmpeg</code> <code>.deb</code> packages from the repository.</p>
 </li>
-<li><p>Install the downloaded <code>.deb</code> packages:
- <code>sudo dpkg -i jellyfin_*.deb jellyfin-ffmpeg_*.deb</code></p>
-</li>
-<li><p>Use <code>apt</code> to install any missing dependencies:
- <code>sudo apt -f install</code></p>
-</li>
-<li><p>Manage the Jellyfin system service with your tool of choice:
- <code>sudo service jellyfin status</code><br>
- <code>sudo systemctl restart jellyfin</code><br>
- <code>sudo /etc/init.d/jellyfin stop</code></p>
-</li>
+<li><p>Install the downloaded <code>.deb</code> packages:</p>
+<pre><code class="lang-sh">sudo dpkg -i jellyfin_*.deb jellyfin-ffmpeg_*.deb
+</code></pre></li>
+<li><p>Use <code>apt</code> to install any missing dependencies:</p>
+<pre><code class="lang-sh">sudo apt -f install
+</code></pre></li>
+<li><p>Manage the Jellyfin system service with your tool of choice:</p>
+<pre><code class="lang-sh">sudo service jellyfin status
+sudo systemctl restart jellyfin
+sudo /etc/init.d/jellyfin stop
+</code></pre></li>
 </ol>
 <h2 id="ubuntu">Ubuntu</h2>
 <h3 id="migrating-to-the-new-repository">Migrating to the new repository</h3>
 <p>Previous versions of Jellyfin included Ubuntu under the Debian repository. This has now been split out into its own repository to better handle the separate binary packages. If you encounter errors about the <code>ubuntu</code> release not being found and you previously configured an <code>ubuntu</code> <code>jellyfin.list</code> file, please follow these steps.</p>
 <ol>
-<li><p>Remove the old <code>/etc/apt/sources.list.d/jellyfin.list</code> file:
- <code>sudo rm /etc/apt/sources.list.d/jellyfin.list</code></p>
-</li>
+<li><p>Remove the old <code>/etc/apt/sources.list.d/jellyfin.list</code> file:</p>
+<pre><code class="lang-sh">sudo rm /etc/apt/sources.list.d/jellyfin.list
+</code></pre></li>
 <li><p>Proceed with the following section as written.</p>
 </li>
 </ol>
@@ -362,59 +364,57 @@ sudo chmod u+x jellyfin.sh
 <div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
 </div>
 <ol>
-<li><p>Install HTTPS transport for APT if you haven&#39;t already:
- <code>sudo apt install apt-transport-https</code></p>
-</li>
-<li><p>Enable the Universe repository to obtain all the FFMpeg dependencies:
- <code>sudo add-apt-repository universe</code></p>
-</li>
-<li><p>Import the GPG signing key (signed by the Jellyfin Team):
- <code>wget -O - https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo apt-key add -</code></p>
-</li>
-<li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:
- <code>echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list</code></p>
-</li>
-</ol>
-<div class="NOTE"><h5>Note</h5><p>Supported releases are <code>xenial</code>, <code>bionic</code>, <code>cosmic</code>, and <code>disco</code>.</p>
+<li><p>Install HTTPS transport for APT if you haven&#39;t already:</p>
+<pre><code class="lang-sh">sudo apt install apt-transport-https
+</code></pre></li>
+<li><p>Enable the Universe repository to obtain all the FFMpeg dependencies:</p>
+<pre><code class="lang-sh">sudo add-apt-repository universe
+</code></pre></li>
+<li><p>Import the GPG signing key (signed by the Jellyfin Team):</p>
+<pre><code class="lang-sh">wget -O - https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key | sudo apt-key add -
+</code></pre></li>
+<li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:</p>
+<pre><code class="lang-sh">echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/ubuntu $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list
+</code></pre><div class="NOTE"><h5>Note</h5><p>Supported releases are <code>xenial</code>, <code>bionic</code>, <code>cosmic</code>, and <code>disco</code>.</p>
 </div>
-<ol>
-<li><p>Update APT repositories:
- <code>sudo apt update</code></p>
 </li>
-<li><p>Install Jellyfin:
- <code>sudo apt install jellyfin</code></p>
-</li>
-<li><p>Manage the Jellyfin system service with your tool of choice:
- <code>sudo service jellyfin status</code><br>
- <code>sudo systemctl restart jellyfin</code><br>
- <code>sudo /etc/init.d/jellyfin stop</code></p>
-</li>
+<li><p>Update APT repositories:</p>
+<pre><code class="lang-sh">sudo apt update
+</code></pre></li>
+<li><p>Install Jellyfin:</p>
+<pre><code class="lang-sh">sudo apt install jellyfin
+</code></pre></li>
+<li><p>Manage the Jellyfin system service with your tool of choice:</p>
+<pre><code class="lang-sh">sudo service jellyfin status
+sudo systemctl restart jellyfin
+sudo /etc/init.d/jellyfin stop
+</code></pre></li>
 </ol>
 <h3 id="packages-1">Packages</h3>
 <p>Raw Ubuntu packages, including old versions, are available <a href="https://jellyfin.org/downloads/#ubuntu">here</a>.</p>
 <div class="NOTE"><h5>Note</h5><p>The repository is the preferred way to install Jellyfin on Ubuntu, as it contains several dependencies as well.</p>
 </div>
 <ol>
-<li><p>Enable the Universe repository to obtain all the FFMpeg dependencies, and update repositories:
- <code>sudo add-apt-repository universe</code><br>
- <code>sudo apt update</code></p>
-</li>
+<li><p>Enable the Universe repository to obtain all the FFMpeg dependencies, and update repositories:</p>
+<pre><code class="lang-sh">sudo add-apt-repository universe
+sudo apt update
+</code></pre></li>
 <li><p>Download the desired <code>jellyfin</code> and <code>jellyfin-ffmpeg</code> <code>.deb</code> packages from the repository.</p>
 </li>
-<li><p>Install the required dependencies:
- <code>sudo apt install at libsqlite3-0 libfontconfig1 libfreetype6 libssl1.0.0</code></p>
-</li>
-<li><p>Install the downloaded <code>.deb</code> packages:
- <code>sudo dpkg -i jellyfin_*.deb jellyfin-ffmpeg_*.deb</code></p>
-</li>
-<li><p>Use <code>apt</code> to install any missing dependencies:
- <code>sudo apt -f install</code></p>
-</li>
-<li><p>Manage the Jellyfin system service with your tool of choice:
- <code>sudo service jellyfin status</code><br>
- <code>sudo systemctl restart jellyfin</code><br>
- <code>sudo /etc/init.d/jellyfin stop</code></p>
-</li>
+<li><p>Install the required dependencies:</p>
+<pre><code class="lang-sh">sudo apt install at libsqlite3-0 libfontconfig1 libfreetype6 libssl1.0.0
+</code></pre></li>
+<li><p>Install the downloaded <code>.deb</code> packages:</p>
+<pre><code class="lang-sh">sudo dpkg -i jellyfin_*.deb jellyfin-ffmpeg_*.deb
+</code></pre></li>
+<li><p>Use <code>apt</code> to install any missing dependencies:</p>
+<pre><code class="lang-sh">sudo apt -f install
+</code></pre></li>
+<li><p>Manage the Jellyfin system service with your tool of choice:</p>
+<pre><code class="lang-sh">sudo service jellyfin status
+sudo systemctl restart jellyfin
+sudo /etc/init.d/jellyfin stop
+</code></pre></li>
 </ol>
 </article>
           </div>

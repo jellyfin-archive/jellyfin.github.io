@@ -130,7 +130,7 @@
 <div class="NOTE"><h5>Note</h5><p><a href="https://github.com/docker/compose/issues/6691">NVIDIA GPUs</a> aren&#39;t currently supported in docker-compose.</p>
 </div>
 <p>You can use <code>docker run</code> to start the server with a command like the one below.</p>
-<pre><code class="lang-bash">docker run -d \
+<pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
  --volume /path/to/cache:/cache \
  --volume /path/to/media:/media \
@@ -166,30 +166,30 @@ Docker &gt;= 1.12
 NVIDIA GPU with Architecture &gt; Fermi (2.1)
 NVIDIA drivers ~= 361.93 (untested on older versions)
 </code></pre><p>Double check your GPU show on debian:</p>
-<p><code>lspci | grep VGA</code></p>
-<p>Update your host:</p>
-<p><code>apt-get update &amp;&amp; apt-get dist-upgrade -y</code></p>
-<p>Install curl:</p>
-<p><code>apt-get install curl</code></p>
-<p>Edit sources.list in /etc/apt/sources.list:
-Add &quot;non-free contrib&quot; to every sources already configured when needed:</p>
-<p><code>deb http://ftp.ch.debian.org/debian/ stretch main</code></p>
-<p>become</p>
-<p><code>deb http://ftp.ch.debian.org/debian/ stretch main non-free contrib</code></p>
-<p>Add sources for Nvidia-container:</p>
-<pre><code>curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
+<pre><code class="lang-sh">lspci | grep VGA
+</code></pre><p>Update your host:</p>
+<pre><code class="lang-sh">apt-get update &amp;&amp; apt-get dist-upgrade -y
+</code></pre><p>Install curl:</p>
+<pre><code class="lang-sh">apt-get install curl
+</code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code>:
+Add &quot;<code>non-free contrib</code>&quot; to every sources already configured when needed:</p>
+<pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main
+</code></pre><p>become</p>
+<pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main non-free contrib
+</code></pre><p>Add sources for Nvidia-container:</p>
+<pre><code class="lang-sh">curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
 </code></pre><p>Update your package list:</p>
-<p><code>apt-get update</code></p>
-<p>Install linux-headers:</p>
-<p><code>apt-get install linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)</code></p>
-<p>Else to use stretch-backports:</p>
-<p><code>apt-get install -t stretch-backports linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)</code></p>
-<p>Install Nvidia docker2:</p>
-<p><code>apt-get install nvidia-docker2</code></p>
-<p>When prompted to choose to keep or install the maintainer package file say &quot;y&quot; to install the maintainer version.</p>
-<p>After the install you may want to add nvidia as default runtime: editing /etc/docker/daemon.json like this:</p>
+<pre><code class="lang-sh">apt-get update
+</code></pre><p>Install linux-headers:</p>
+<pre><code class="lang-sh">apt-get install linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)
+</code></pre><p>Else to use stretch-backports:</p>
+<pre><code class="lang-sh">apt-get install -t stretch-backports linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)
+</code></pre><p>Install Nvidia docker2:</p>
+<pre><code class="lang-sh">apt-get install nvidia-docker2
+</code></pre><p>When prompted to choose to keep or install the maintainer package file say &quot;<code>y</code>&quot; to install the maintainer version.</p>
+<p>After the install you may want to add nvidia as default runtime: editing <code>/etc/docker/daemon.json</code> like this:</p>
 <pre><code class="lang-json">{
     &quot;default-runtime&quot;: &quot;nvidia&quot;,
     &quot;runtimes&quot;: {
@@ -200,25 +200,25 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
     }
 }
 </code></pre><p>Restart docker services</p>
-<p><code>sudo pkill -SIGHUP docker</code></p>
-<p>Install nvidia drivers and dependencies:</p>
-<p><code>apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi</code></p>
-<p>Reboot your host:</p>
-<p><code>reboot now</code></p>
-<p>Validate your driver and docker are correctly set up.
+<pre><code class="lang-sh">sudo pkill -SIGHUP docker
+</code></pre><p>Install nvidia drivers and dependencies:</p>
+<pre><code class="lang-sh">apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
+</code></pre><p>Reboot your host:</p>
+<pre><code class="lang-sh">reboot now
+</code></pre><p>Validate your driver and docker are correctly set up.
 Driver test from host and docker side:</p>
-<pre><code>nvidia-smi
+<pre><code class="lang-sh">nvidia-smi
 docker run --gpus 0 nvidia/cuda:9.0-base nvidia-smi
 </code></pre><p>Validate access to needed ressources from host and docker:</p>
-<pre><code>ldconfig -p | grep cuvid
+<pre><code class="lang-sh">ldconfig -p | grep cuvid
 ldconfig -p | grep libnvidia-encode.so.1
 </code></pre><p>Start your Jellyfin container adding thoses environement parameters:</p>
-<pre><code>-e &quot;NVIDIA_DRIVER_CAPABILITIES=all&quot; \
+<pre><code class="lang-sh">-e &quot;NVIDIA_DRIVER_CAPABILITIES=all&quot; \
 -e NVIDIA_VISIBLE_DEVICES=all \
 --runtime=nvidia \
 --gpus all \
 </code></pre><p>A complete run command would looks like:</p>
-<pre><code>docker run -d \
+<pre><code class="lang-sh">docker run -d \
 --name=jellyfin \
 -e NVIDIA_DRIVER_CAPABILITIES=all \
 -e NVIDIA_VISIBLE_DEVICES=all \
@@ -232,24 +232,23 @@ ldconfig -p | grep libnvidia-encode.so.1
 --restart unless-stopped \
 jellyfin/jellyfin
 </code></pre><p>If using user env parameters as:</p>
-<pre><code>--user 1000:1000
+<pre><code class="lang-sh">--user 1000:1000
 </code></pre><p>You may need to add this user to the video group:</p>
-<pre><code>usermod -aG video user
+<pre><code class="lang-sh">usermod -aG video user
 </code></pre><p>Once container is started you can again validate access to host ressources:</p>
-<pre><code>docker exec -it jellyfin ldconfig -p | grep cuvid
+<pre><code class="lang-sh">docker exec -it jellyfin ldconfig -p | grep cuvid
 docker exec -it jellyfin ldconfig -p | grep libnvidia-encode.so.1
 </code></pre><p>Now go in Jellyfin playback settings, enable Nvidia NVENC and select target codecs depending on what your GPU support
 try to play any file needing a transcode (change bitrate is a good way to try)</p>
 <p>Check the transcode logs to make sure everything is working proprely.</p>
-<pre><code>Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
+<pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 </code></pre><h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
 <p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
 <ol>
-<li>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</li>
-</ol>
-<pre><code class="lang-bash">$ ls -l /dev/dri
+<li><p>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</p>
+<pre><code class="lang-sh">$ ls -l /dev/dri
 total 0
 drwxr-xr-x 2 root root        100 Apr 13 16:37 by-path
 crw-rw---- 1 root video  226,   0 Apr 13 16:37 card0
@@ -257,12 +256,11 @@ crw-rw---- 1 root video  226,   1 Apr 13 16:37 card1
 crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
 </code></pre><div class="NOTE"><h5>Note</h5><p>On some releases, the group may be <code>video</code> instead of <code>render</code>.</p>
 </div>
-<ol>
-<li>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</li>
-</ol>
-<pre><code class="lang-bash">sudo usermod -aG render jellyfin
+</li>
+<li><p>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</p>
+<pre><code class="lang-sh">sudo usermod -aG render jellyfin
 sudo systemctl restart jellyfin
-</code></pre><ol>
+</code></pre></li>
 <li><p>Configure VAAPI acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
 </li>
 <li><p>Watch a movie, and verify that transcoding is occurring by watching the <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code> and using <code>radeontop</code> or similar tools.</p>
@@ -272,26 +270,23 @@ sudo systemctl restart jellyfin
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
-<li>Add your GPU to the container.</li>
-</ol>
-<pre><code class="lang-bash">$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
-</code></pre><ol>
-<li>Make sure you have the card within the container:</li>
-</ol>
-<pre><code class="lang-bash">$ lxc exec jellyfin -- ls -l /dev/dri
+<li><p>Add your GPU to the container.</p>
+<pre><code class="lang-sh">$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
+</code></pre></li>
+<li><p>Make sure you have the card within the container:</p>
+<pre><code class="lang-sh">$ lxc exec jellyfin -- ls -l /dev/dri
 total 0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 controlD64
 crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
-</code></pre><ol>
+</code></pre></li>
 <li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
 </li>
 <li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
+<pre><code class="lang-sh">$ ps aux | grep ffmpeg | grep accel
+</code></pre></li>
+<li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
 </li>
-</ol>
-<pre><code class="lang-bash">$ ps aux | grep ffmpeg | grep accel
-</code></pre><ol>
-<li>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</li>
 </ol>
 <p>Useful Resources:</p>
 <ul>
@@ -300,35 +295,36 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 </ul>
 <h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
 <ol>
-<li>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.
- <code>sudo usermod -aG video jellyfin</code><br>
- <code>sudo systemctl restart jellyfin</code></li>
-</ol>
-<div class="NOTE"><h5>Note</h5><p>If you are using a Raspberry Pi 4, you might need to run <code>sudo rpi-update</code> for kernel and firmware updates.</p>
+<li><p>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.</p>
+<pre><code class="lang-sh">sudo usermod -aG video jellyfin
+sudo systemctl restart jellyfin
+</code></pre><div class="NOTE"><h5>Note</h5><p>If you are using a Raspberry Pi 4, you might need to run <code>sudo rpi-update</code> for kernel and firmware updates.</p>
 </div>
-<ol>
+</li>
 <li><p>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard.</p>
 </li>
-<li><p>Change the amount of memory allocated to the GPU. The GPU can&#39;t handle accelerated decoding and encoding simultaneously.
- <code>sudo nano /boot/config.txt</code></p>
-<p> For RPi4, add the line <code>gpu_mem=320</code> <a href="https://www.raspberrypi.org/documentation/configuration/config-txt/">See more Here</a></p>
+<li><p>Change the amount of memory allocated to the GPU. The GPU can&#39;t handle accelerated decoding and encoding simultaneously.</p>
+<pre><code class="lang-sh">sudo nano /boot/config.txt
+</code></pre><p> For RPi4, add the line <code>gpu_mem=320</code> <a href="https://www.raspberrypi.org/documentation/configuration/config-txt/">See more Here</a></p>
 <p> For RPi3, add the line <code>gpu_mem=256</code></p>
 <p> You can set any value, but 320 is recommended amount for <a href="https://github.com/CoreELEC/CoreELEC/blob/coreelec-9.2/projects/RPi/devices/RPi4/config/config.txt">4K HEVC</a>.</p>
-<p> Use <code>vcgencmd get_mem arm &amp;&amp; vcgencmd get_mem gpu</code> to verify the split between CPU and GPU memory.</p>
-<p> Use <code>vcgencmd measure_temp &amp;&amp; vcgencmd measure_clock arm</code> to monitor the temperature and clock speed of the CPU.</p>
-</li>
+<p> Verify the split between CPU and GPU memory:</p>
+<pre><code class="lang-sh">vcgencmd get_mem arm &amp;&amp; vcgencmd get_mem gpu
+</code></pre><p> Monitor the temperature and clock speed of the CPU:</p>
+<pre><code class="lang-sh">vcgencmd measure_temp &amp;&amp; vcgencmd measure_clock arm
+</code></pre></li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA decoding, only HWA encoding of H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
 </div>
 <h3 id="verifying-transcodes">Verifying Transcodes</h3>
 <p>To verify that you are using the proper libraries, run this command against your transcoding log. This can be found at Admin Dashboard &gt; Logs, and /var/log/jellyfin if instead via the repository.</p>
-<pre><code class="lang-bash">grep -A2 &#39;Stream mapping:&#39; /var/log/jellyfin/ffmpeg-transcode-85a68972-7129-474c-9c5d-2d9949021b44.txt
+<pre><code class="lang-sh">grep -A2 &#39;Stream mapping:&#39; /var/log/jellyfin/ffmpeg-transcode-85a68972-7129-474c-9c5d-2d9949021b44.txt
 </code></pre><p>This returned the following results.</p>
-<pre><code class="lang-bash">Stream mapping:
+<pre><code class="lang-data">Stream mapping:
 Stream #0:0 -&gt; #0:0 (hevc (native) -&gt; h264 (h264_omx))
 Stream #0:1 -&gt; #0:1 (aac (native) -&gt; mp3 (libmp3lame))
-</code></pre><p>Stream #0:0 used software to decode HEVC and used HWA to encode.</p>
-<p>Stream #0:1 had the same results. Decoding is easier than encoding so these are good results overall. HWA decoding is a work in progress.</p>
+</code></pre><p><code>Stream #0:0</code> used software to decode HEVC and used HWA to encode.</p>
+<p><code>Stream #0:1</code> had the same results. Decoding is easier than encoding so these are good results overall. HWA decoding is a work in progress.</p>
 </article>
           </div>
           

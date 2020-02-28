@@ -89,29 +89,29 @@
 <ol>
 <li><p>Upgrade to Emby version 3.5.2, so that the database schema is fully up-to-date and consistent. While this is not required, it can help reduce the possibility of obscure bugs in the database.</p>
 </li>
-<li><p>Stop the <code>emby-server</code> daemon:
- <code>sudo service emby-server stop</code></p>
-</li>
-<li><p>Move your existing Emby data directory out of the way:
- <code>sudo mv /var/lib/emby /var/lib/emby.backup</code></p>
-</li>
-<li><p>Remove or purge the <code>emby-server</code> package:
- <code>sudo apt purge emby-server</code></p>
-</li>
+<li><p>Stop the <code>emby-server</code> daemon:</p>
+<pre><code class="lang-sh">sudo service emby-server stop
+</code></pre></li>
+<li><p>Move your existing Emby data directory out of the way:</p>
+<pre><code class="lang-sh">sudo mv /var/lib/emby /var/lib/emby.backup
+</code></pre></li>
+<li><p>Remove or purge the <code>emby-server</code> package:</p>
+<pre><code class="lang-sh">sudo apt purge emby-server
+</code></pre></li>
 <li><p>Install the <code>jellyfin</code> package using the <a class="xref" href="installing.html">installaton instructions</a>.</p>
 </li>
-<li><p>Stop the <code>jellyfin</code> daemon:
- <code>sudo service jellyfin stop</code></p>
-</li>
-<li><p>Copy over all the data files from the Emby backup data directory:
- <code>sudo cp -a /var/lib/emby.backup/* /var/lib/jellyfin/</code></p>
-</li>
-<li><p>Correct ownership on the new data directory:
- <code>sudo chown -R jellyfin:jellyfin /var/lib/jellyfin</code></p>
-</li>
-<li><p>Start the <code>jellyfin</code> daemon:
- <code>sudo service jellyfin start</code></p>
-</li>
+<li><p>Stop the <code>jellyfin</code> daemon:</p>
+<pre><code class="lang-sh">sudo service jellyfin stop
+</code></pre></li>
+<li><p>Copy over all the data files from the Emby backup data directory:</p>
+<pre><code class="lang-sh">sudo cp -a /var/lib/emby.backup/* /var/lib/jellyfin/
+</code></pre></li>
+<li><p>Correct ownership on the new data directory:</p>
+<pre><code class="lang-sh">sudo chown -R jellyfin:jellyfin /var/lib/jellyfin
+</code></pre></li>
+<li><p>Start the <code>jellyfin</code> daemon:</p>
+<pre><code class="lang-sh">sudo service jellyfin start
+</code></pre></li>
 </ol>
 </article>
           </div>

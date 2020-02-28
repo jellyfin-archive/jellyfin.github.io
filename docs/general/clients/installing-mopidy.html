@@ -83,32 +83,47 @@
 <h2 id="general">General</h2>
 <p>For general use computers, such as workstations or laptops, it&#39;s recommended to install Mopidy plugins in user mode.  Installing python packages from pip using sudo or root permissions can lead to conflicts with your package manager in the future.</p>
 <ol>
-<li>Install Mopidy using your method of choice using the <a href="https://docs.mopidy.com/en/latest/installation/">official documentation</a></li>
-<li>Install the Jellyfin plugin for Mopidy:
- <code>pip3 install --user mopidy-jellyfin</code></li>
-<li>(Optional) Install other mopidy related packages:
- <code>pip3 install --user mopidy-mpd mopidy-musicbox-webclient</code></li>
-<li>Configure your <code>mopidy.conf</code> located at <code>$HOME/.config/mopidy/mopidy.conf</code>
- See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
-<li>There may be a need to install extra gstreamer codecs if they&#39;re not already on your system, but these are highly variable and depend on your hardware and distro</li>
-<li>Start the program by running <code>mopidy</code> from a terminal</li>
-<li>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></li>
+<li><p>Install Mopidy using your method of choice using the <a href="https://docs.mopidy.com/en/latest/installation/">official documentation</a></p>
+</li>
+<li><p>Install the Jellyfin plugin for Mopidy:</p>
+<pre><code class="lang-sh">pip3 install --user mopidy-jellyfin
+</code></pre></li>
+<li><p>(Optional) Install other mopidy related packages:</p>
+<pre><code class="lang-sh">pip3 install --user mopidy-mpd mopidy-musicbox-webclient
+</code></pre></li>
+<li><p>Configure your <code>mopidy.conf</code> located at <code>$HOME/.config/mopidy/mopidy.conf</code>
+ See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></p>
+</li>
+<li><p>There may be a need to install extra <code>gstreamer</code> codecs if they&#39;re not already on your system, but these are highly variable and depend on your hardware and distro</p>
+</li>
+<li><p>Start the program by running <code>mopidy</code> from a terminal</p>
+</li>
+<li><p>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></p>
+</li>
 </ol>
 <h2 id="raspberry-pi-remote-controlled-speakers">Raspberry Pi (Remote Controlled Speakers)</h2>
 <p>Utilizing a Raspberry Pi (or other small form factor computer) it&#39;s possible to use Mopidy to build a set of standalone smart speakers connected to your Jellyfin server.</p>
 <ol>
-<li>Grab the latest <a href="https://www.raspberrypi.org/downloads/raspbian/">raspbian image</a>.  Unless you have a need for a GUI, the &#39;Lite&#39; image is plenty for this project.</li>
-<li>Install the image to the SD card (See the <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">official documentation</a>)</li>
-<li>Install Mopidy from their <a href="https://docs.mopidy.com/en/latest/installation/debian/#install-from-apt-mopidy-com">apt repo</a> to ensure we get the latest version</li>
-<li>Install required OS packages:
- <code>sudo apt install mopidy mopidy-mpd gstreamer1.0-plugins-bad python3-pip</code></li>
-<li>Install the Jellyfin plugin and any other Mopidy related packages you may want:
- <code>sudo pip3 install mopidy-jellyfin mopidy-musicbox-webclient</code></li>
-<li>Configure your <code>mopidy.conf</code> located at <code>/etc/mopidy/mopidy.conf</code>:
- See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></li>
-<li>Enable and start the mopidy service:
- <code>sudo systemctl enable --now mopidy</code></li>
-<li>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></li>
+<li><p>Grab the latest <a href="https://www.raspberrypi.org/downloads/raspbian/">raspbian image</a>.  Unless you have a need for a GUI, the &#39;Lite&#39; image is plenty for this project.</p>
+</li>
+<li><p>Install the image to the SD card (See the <a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">official documentation</a>)</p>
+</li>
+<li><p>Install Mopidy from their <a href="https://docs.mopidy.com/en/latest/installation/debian/#install-from-apt-mopidy-com">apt repo</a> to ensure we get the latest version</p>
+</li>
+<li><p>Install required OS packages:</p>
+<pre><code class="lang-sh">sudo apt install mopidy mopidy-mpd gstreamer1.0-plugins-bad python3-pip
+</code></pre></li>
+<li><p>Install the Jellyfin plugin and any other Mopidy related packages you may want:</p>
+<pre><code class="lang-sh">sudo pip3 install mopidy-jellyfin mopidy-musicbox-webclient
+</code></pre></li>
+<li><p>Configure your <code>mopidy.conf</code> located at <code>/etc/mopidy/mopidy.conf</code>:
+ See <a class="xref" href="installing-mopidy.html#config-file">Config File</a></p>
+</li>
+<li><p>Enable and start the mopidy service:</p>
+<pre><code class="lang-sh">sudo systemctl enable --now mopidy
+</code></pre></li>
+<li><p>See <a class="xref" href="installing-mopidy.html#usage">Usage</a></p>
+</li>
 </ol>
 <h2 id="config-file">Config File</h2>
 <p>The config file for mopidy is divided into sections in an INI format. An example for Jellyfin is shown here.</p>
