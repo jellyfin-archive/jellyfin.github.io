@@ -100,6 +100,7 @@
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.ItemLookupInfo.html">ItemLookupInfo</a>&gt;</div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasAspectRatio.html">IHasAspectRatio</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.ISupportsPlaceHolders.html">ISupportsPlaceHolders</a></div>
     <div><a class="xref" href="MediaBrowser.Controller.Entities.IHasMediaSources.html">IHasMediaSources</a></div>
@@ -722,13 +723,16 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExternalTransfer">BaseItem.SupportsExternalTransfer</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Equals_System_Object_">BaseItem.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Equals_MediaBrowser_Controller_Entities_BaseItem_">BaseItem.Equals(BaseItem)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetHashCode">BaseItem.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
@@ -744,7 +748,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Entities_Video_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Video : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IHasAspectRatio, ISupportsPlaceHolders, IHasMediaSources</code></pre>
+    <pre><code class="lang-csharp hljs">public class Video : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IEquatable&lt;BaseItem&gt;, IHasAspectRatio, ISupportsPlaceHolders, IHasMediaSources</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -2303,6 +2307,9 @@
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iequatable-1">System.IEquatable&lt;T&gt;</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.IHasAspectRatio.html">IHasAspectRatio</a>
