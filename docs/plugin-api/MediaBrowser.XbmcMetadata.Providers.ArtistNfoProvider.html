@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider" class="text-break">Class ArtistNfoProvider
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Nfo provider for artists.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -102,13 +103,13 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
+      <a class="xref" href="MediaBrowser.XbmcMetadata.Providers.BaseNfoProvider-1.html#MediaBrowser_XbmcMetadata_Providers_BaseNfoProvider_1_Name">BaseNfoProvider&lt;MusicArtist&gt;.Name</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.XbmcMetadata.Providers.BaseNfoProvider-1.html#MediaBrowser_XbmcMetadata_Providers_BaseNfoProvider_1_GetMetadata_MediaBrowser_Controller_Providers_ItemInfo_MediaBrowser_Controller_Providers_IDirectoryService_System_Threading_CancellationToken_">BaseNfoProvider&lt;MusicArtist&gt;.GetMetadata(ItemInfo, IDirectoryService, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.XbmcMetadata.Providers.BaseNfoProvider-1.html#MediaBrowser_XbmcMetadata_Providers_BaseNfoProvider_1_HasChanged_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Providers_IDirectoryService_">BaseNfoProvider&lt;MusicArtist&gt;.HasChanged(BaseItem, IDirectoryService)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.XbmcMetadata.Providers.BaseNfoProvider-1.html#MediaBrowser_XbmcMetadata_Providers_BaseNfoProvider_1_Name">BaseNfoProvider&lt;MusicArtist&gt;.Name</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
@@ -145,11 +146,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider__ctor_MediaBrowser_Model_IO_IFileSystem_ILogger_MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider__IConfigurationManager_MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.%23ctor(MediaBrowser.Model.IO.IFileSystem%2CILogger%7BMediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider%7D%2CIConfigurationManager%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L28">View Source</a>
   </span>
   <a id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider__ctor_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.#ctor*"></a>
   <h4 id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider__ctor_MediaBrowser_Model_IO_IFileSystem_ILogger_MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider__IConfigurationManager_MediaBrowser_Controller_Providers_IProviderManager_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.#ctor(MediaBrowser.Model.IO.IFileSystem,ILogger{MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider},IConfigurationManager,MediaBrowser.Controller.Providers.IProviderManager)">ArtistNfoProvider(IFileSystem, ILogger&lt;ArtistNfoProvider&gt;, IConfigurationManager, IProviderManager)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.html">ArtistNfoProvider</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -168,22 +170,26 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td></td>
+        <td><p>The file system.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.html">ArtistNfoProvider</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The logger.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IConfigurationManager</span></td>
         <td><span class="parametername">config</span></td>
-        <td></td>
+        <td><p>the configuration manager.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
         <td><span class="parametername">providerManager</span></td>
-        <td></td>
+        <td><p>The provider manager.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -194,7 +200,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_Fetch_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_Audio_MusicArtist__System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.Fetch(MediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Entities.Audio.MusicArtist%7D%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_Fetch_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.Fetch*"></a>
   <h4 id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_Fetch_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_Audio_MusicArtist__System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.Fetch(MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.Audio.MusicArtist},System.String,System.Threading.CancellationToken)">Fetch(MetadataResult&lt;MusicArtist&gt;, String, CancellationToken)</h4>
@@ -238,7 +244,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_GetXmlFile_MediaBrowser_Controller_Providers_ItemInfo_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.GetXmlFile(MediaBrowser.Controller.Providers.ItemInfo%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L37">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L47">View Source</a>
   </span>
   <a id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_GetXmlFile_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.GetXmlFile*"></a>
   <h4 id="MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider_GetXmlFile_MediaBrowser_Controller_Providers_ItemInfo_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider.GetXmlFile(MediaBrowser.Controller.Providers.ItemInfo,MediaBrowser.Controller.Providers.IDirectoryService)">GetXmlFile(ItemInfo, IDirectoryService)</h4>
@@ -314,7 +320,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_XbmcMetadata_Providers_ArtistNfoProvider.md&amp;value=---%0Auid%3A%20MediaBrowser.XbmcMetadata.Providers.ArtistNfoProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.XbmcMetadata/Providers/ArtistNfoProvider.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

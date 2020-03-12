@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_WebDashboard_Api_DashboardService" data-uid="MediaBrowser.WebDashboard.Api.DashboardService" class="text-break">Class DashboardService
   </h1>
-  <div class="markdown level0 summary"><p>Class DashboardService</p>
+  <div class="markdown level0 summary"><p>Class DashboardService.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -105,19 +105,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService__ctor_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_IResourceFileManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_IFileSystem_ILogger_MediaBrowser_WebDashboard_Api_DashboardService__MediaBrowser_Controller_Net_IHttpResultFactory_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.%23ctor(MediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.IResourceFileManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CIFileSystem%2CILogger%7BMediaBrowser.WebDashboard.Api.DashboardService%7D%2CMediaBrowser.Controller.Net.IHttpResultFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService__ctor_ILogger_MediaBrowser_WebDashboard_Api_DashboardService__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_IResourceFileManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_IFileSystem_MediaBrowser_Controller_Net_IHttpResultFactory_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.%23ctor(ILogger%7BMediaBrowser.WebDashboard.Api.DashboardService%7D%2CMediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.IResourceFileManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CIFileSystem%2CMediaBrowser.Controller.Net.IHttpResultFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L120">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L118">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService__ctor_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.#ctor*"></a>
-  <h4 id="MediaBrowser_WebDashboard_Api_DashboardService__ctor_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_IResourceFileManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_IFileSystem_ILogger_MediaBrowser_WebDashboard_Api_DashboardService__MediaBrowser_Controller_Net_IHttpResultFactory_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.#ctor(MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.IResourceFileManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,IFileSystem,ILogger{MediaBrowser.WebDashboard.Api.DashboardService},MediaBrowser.Controller.Net.IHttpResultFactory)">DashboardService(IServerApplicationHost, IResourceFileManager, IServerConfigurationManager, IFileSystem, ILogger&lt;DashboardService&gt;, IHttpResultFactory)</h4>
+  <h4 id="MediaBrowser_WebDashboard_Api_DashboardService__ctor_ILogger_MediaBrowser_WebDashboard_Api_DashboardService__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_IResourceFileManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_IFileSystem_MediaBrowser_Controller_Net_IHttpResultFactory_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.#ctor(ILogger{MediaBrowser.WebDashboard.Api.DashboardService},MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.IResourceFileManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,IFileSystem,MediaBrowser.Controller.Net.IHttpResultFactory)">DashboardService(ILogger&lt;DashboardService&gt;, IServerApplicationHost, IResourceFileManager, IServerConfigurationManager, IFileSystem, IHttpResultFactory)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.WebDashboard.Api.DashboardService.html">DashboardService</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DashboardService(IServerApplicationHost appHost, IResourceFileManager resourceFileManager, IServerConfigurationManager serverConfigurationManager, IFileSystem fileSystem, ILogger&lt;DashboardService&gt; logger, IHttpResultFactory resultFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public DashboardService(ILogger&lt;DashboardService&gt; logger, IServerApplicationHost appHost, IResourceFileManager resourceFileManager, IServerConfigurationManager serverConfigurationManager, IFileSystem fileSystem, IHttpResultFactory resultFactory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -130,34 +130,40 @@
     </thead>
     <tbody>
       <tr>
+        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.WebDashboard.Api.DashboardService.html">DashboardService</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></td>
         <td><span class="parametername">appHost</span></td>
-        <td></td>
+        <td><p>The application host.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.IResourceFileManager.html">IResourceFileManager</a></td>
         <td><span class="parametername">resourceFileManager</span></td>
-        <td></td>
+        <td><p>The resource file manager.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
         <td><span class="parametername">serverConfigurationManager</span></td>
-        <td></td>
+        <td><p>The server configuration manager.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">IFileSystem</span></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.WebDashboard.Api.DashboardService.html">DashboardService</a>&gt;</td>
-        <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The file system.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Net.IHttpResultFactory.html">IHttpResultFactory</a></td>
         <td><span class="parametername">resultFactory</span></td>
-        <td></td>
+        <td><p>The result factory.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -168,7 +174,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_DashboardUIPath.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.DashboardUIPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L140">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L144">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_DashboardUIPath_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.DashboardUIPath*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_DashboardUIPath" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.DashboardUIPath">DashboardUIPath</h4>
@@ -200,7 +206,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Request.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Request%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L102">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L138">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Request_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Request*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Request" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Request">Request</h4>
@@ -234,7 +240,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardConfigurationPage_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardConfigurationPage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L166">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L171">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardConfigurationPage_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardConfigurationPage)">Get(GetDashboardConfigurationPage)</h4>
@@ -284,7 +290,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardConfigurationPages_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardConfigurationPages)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L217">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L223">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardConfigurationPages_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardConfigurationPages)">Get(GetDashboardConfigurationPages)</h4>
@@ -334,7 +340,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardPackage_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardPackage)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L373">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L379">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardPackage_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardPackage)">Get(GetDashboardPackage)</h4>
@@ -381,7 +387,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardResource_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardResource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L302">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L308">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetDashboardResource_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetDashboardResource)">Get(GetDashboardResource)</h4>
@@ -431,7 +437,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetFavIcon_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetFavIcon)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L153">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L157">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetFavIcon_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetFavIcon)">Get(GetFavIcon)</h4>
@@ -478,7 +484,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetRobotsTxt_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetRobotsTxt)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L289">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L294">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_DashboardService_Get_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_DashboardService_Get_MediaBrowser_WebDashboard_Api_GetRobotsTxt_" data-uid="MediaBrowser.WebDashboard.Api.DashboardService.Get(MediaBrowser.WebDashboard.Api.GetRobotsTxt)">Get(GetRobotsTxt)</h4>
@@ -535,7 +541,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_DashboardService.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.DashboardService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L84" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/DashboardService.cs/#L91" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
