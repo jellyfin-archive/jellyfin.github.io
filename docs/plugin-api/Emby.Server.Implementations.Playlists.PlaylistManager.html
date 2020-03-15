@@ -128,18 +128,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryMonitor_ILogger_Emby_Server_Implementations_Playlists_PlaylistManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryMonitor%2CILogger%7BEmby.Server.Implementations.Playlists.PlaylistManager%7D%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryMonitor_ILogger_Emby_Server_Implementations_Playlists_PlaylistManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Providers_IProviderManager_IConfiguration_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryMonitor%2CILogger%7BEmby.Server.Implementations.Playlists.PlaylistManager%7D%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Providers.IProviderManager%2CIConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L35">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager__ctor_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryMonitor_ILogger_Emby_Server_Implementations_Playlists_PlaylistManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Providers_IProviderManager_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryMonitor,ILogger{Emby.Server.Implementations.Playlists.PlaylistManager},MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Providers.IProviderManager)">PlaylistManager(ILibraryManager, IFileSystem, ILibraryMonitor, ILogger&lt;PlaylistManager&gt;, IUserManager, IProviderManager)</h4>
+  <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryMonitor_ILogger_Emby_Server_Implementations_Playlists_PlaylistManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Providers_IProviderManager_IConfiguration_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryMonitor,ILogger{Emby.Server.Implementations.Playlists.PlaylistManager},MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Providers.IProviderManager,IConfiguration)">PlaylistManager(ILibraryManager, IFileSystem, ILibraryMonitor, ILogger&lt;PlaylistManager&gt;, IUserManager, IProviderManager, IConfiguration)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaylistManager(ILibraryManager libraryManager, IFileSystem fileSystem, ILibraryMonitor iLibraryMonitor, ILogger&lt;PlaylistManager&gt; logger, IUserManager userManager, IProviderManager providerManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlaylistManager(ILibraryManager libraryManager, IFileSystem fileSystem, ILibraryMonitor iLibraryMonitor, ILogger&lt;PlaylistManager&gt; logger, IUserManager userManager, IProviderManager providerManager, IConfiguration appConfig)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,24 +181,29 @@
         <td><span class="parametername">providerManager</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="parametername">appConfig</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_IEnumerable_System_Guid__System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.AddToPlaylist(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Guid%7D%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_ICollection_System_Guid__System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.AddToPlaylist(System.String%2CSystem.Collections.Generic.ICollection%7BSystem.Guid%7D%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L180">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L185">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_AddToPlaylist_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.AddToPlaylist*"></a>
-  <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_IEnumerable_System_Guid__System_Guid_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.AddToPlaylist(System.String,System.Collections.Generic.IEnumerable{System.Guid},System.Guid)">AddToPlaylist(String, IEnumerable&lt;Guid&gt;, Guid)</h4>
+  <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_ICollection_System_Guid__System_Guid_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.AddToPlaylist(System.String,System.Collections.Generic.ICollection{System.Guid},System.Guid)">AddToPlaylist(String, ICollection&lt;Guid&gt;, Guid)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddToPlaylist(string playlistId, IEnumerable&lt;Guid&gt; itemIds, Guid userId)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddToPlaylist(string playlistId, ICollection&lt;Guid&gt; itemIds, Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -216,7 +221,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td><span class="parametername">itemIds</span></td>
         <td></td>
       </tr>
@@ -232,7 +237,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_CreatePlaylist_MediaBrowser_Model_Playlists_PlaylistCreationRequest_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.CreatePlaylist(MediaBrowser.Model.Playlists.PlaylistCreationRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L60">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_CreatePlaylist_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.CreatePlaylist*"></a>
   <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_CreatePlaylist_MediaBrowser_Model_Playlists_PlaylistCreationRequest_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.CreatePlaylist(MediaBrowser.Model.Playlists.PlaylistCreationRequest)">CreatePlaylist(PlaylistCreationRequest)</h4>
@@ -279,7 +284,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylists_System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylists(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L53">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylists_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylists*"></a>
   <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylists_System_Guid_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylists(System.Guid)">GetPlaylists(Guid)</h4>
@@ -326,7 +331,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylistsFolder_System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylistsFolder(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L522">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L549">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylistsFolder_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylistsFolder*"></a>
   <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_GetPlaylistsFolder_System_Guid_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.GetPlaylistsFolder(System.Guid)">GetPlaylistsFolder(Guid)</h4>
@@ -373,7 +378,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_MoveItem_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.MoveItem(System.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L263">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L290">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_MoveItem_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.MoveItem*"></a>
   <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_MoveItem_System_String_System_String_System_Int32_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.MoveItem(System.String,System.String,System.Int32)">MoveItem(String, String, Int32)</h4>
@@ -415,7 +420,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager_RemoveFromPlaylist_System_String_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager.RemoveFromPlaylist(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L230">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L257">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Playlists_PlaylistManager_RemoveFromPlaylist_" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.RemoveFromPlaylist*"></a>
   <h4 id="Emby_Server_Implementations_Playlists_PlaylistManager_RemoveFromPlaylist_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="Emby.Server.Implementations.Playlists.PlaylistManager.RemoveFromPlaylist(System.String,System.Collections.Generic.IEnumerable{System.String})">RemoveFromPlaylist(String, IEnumerable&lt;String&gt;)</h4>
@@ -462,7 +467,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Playlists_PlaylistManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Playlists.PlaylistManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Playlists/PlaylistManager.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

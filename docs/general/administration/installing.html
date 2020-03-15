@@ -128,11 +128,13 @@ services:
 <li><p>Open the unRaid GUI (at least unRaid 6.5) and click on the &quot;Docker&quot; tab.</p>
 </li>
 <li><p>Add the following line under &quot;Template Repositories&quot; and save the options.</p>
+</li>
+</ol>
 <pre><code class="lang-data">https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates
-</code></pre></li>
+</code></pre><ol>
 <li><p>Click &quot;Add Container&quot; and select &quot;jellyfin&quot;.</p>
 </li>
-<li><p>Adjust any required paths and save.</p>
+<li><p>Adjust any required paths and save your changes.</p>
 </li>
 </ol>
 <h3 id="kubernetes">Kubernetes</h3>
@@ -144,7 +146,6 @@ services:
 <div class="WARNING"><h5>Warning</h5><p>The 32-bit or x86 version is not recommended. <code>ffmpeg</code> and its video encoders generally perform better as a 64-bit executable due to the extra registers provided. This means that the 32-bit version of Jellyfin is deprecated.</p>
 </div>
 <h3 id="install-using-installer-x64">Install using Installer (x64)</h3>
-<p>Only available for versions 10.4.0+.</p>
 <p><strong>Install</strong></p>
 <ol>
 <li>Download the latest version.</li>

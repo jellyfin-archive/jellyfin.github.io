@@ -131,7 +131,7 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L18">View Source</a>
   </span>
   <h4 id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_FfmpegAnalyzeDurationKey" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.FfmpegAnalyzeDurationKey">FfmpegAnalyzeDurationKey</h4>
-  <div class="markdown level1 summary"><p>The key for the FFmpeg analyse duration option.</p>
+  <div class="markdown level1 summary"><p>The key for the FFmpeg analyze duration option.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -183,18 +183,98 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Extensions_ConfigurationExtensions_PlaylistsAllowDuplicatesKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Extensions.ConfigurationExtensions.PlaylistsAllowDuplicatesKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L23">View Source</a>
+  </span>
+  <h4 id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_PlaylistsAllowDuplicatesKey" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.PlaylistsAllowDuplicatesKey">PlaylistsAllowDuplicatesKey</h4>
+  <div class="markdown level1 summary"><p>The key for a setting that indicates whether playlists should allow duplicate entries.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string PlaylistsAllowDuplicatesKey = &quot;playlists:allowDuplicates&quot;</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Extensions_ConfigurationExtensions_DoPlaylistsAllowDuplicates_IConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Extensions.ConfigurationExtensions.DoPlaylistsAllowDuplicates(IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L46">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_DoPlaylistsAllowDuplicates_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.DoPlaylistsAllowDuplicates*"></a>
+  <h4 id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_DoPlaylistsAllowDuplicates_IConfiguration_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.DoPlaylistsAllowDuplicates(IConfiguration)">DoPlaylistsAllowDuplicates(IConfiguration)</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether playlists should allow duplicate entries from the <see cref="!:IConfiguration"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool DoPlaylistsAllowDuplicates(this IConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The configuration to read the setting from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if playlists should allow duplicates, otherwise false.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegAnalyzeDuration_IConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegAnalyzeDuration(IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L38">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegAnalyzeDuration_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegAnalyzeDuration*"></a>
   <h4 id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegAnalyzeDuration_IConfiguration_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegAnalyzeDuration(IConfiguration)">GetFFmpegAnalyzeDuration(IConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Retrieves the FFmpeg analyse duration from the <see cref="!:IConfiguration"></see>.</p>
+  <div class="markdown level1 summary"><p>Gets the FFmpeg analyze duration from the <see cref="!:IConfiguration"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -214,7 +294,7 @@
       <tr>
         <td><span class="xref">IConfiguration</span></td>
         <td><span class="parametername">configuration</span></td>
-        <td><p>This configuration.</p>
+        <td><p>The configuration to read the setting from.</p>
 </td>
       </tr>
     </tbody>
@@ -230,7 +310,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The FFmpeg analyse duration option.</p>
+        <td><p>The FFmpeg analyze duration option.</p>
 </td>
       </tr>
     </tbody>
@@ -240,11 +320,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegProbeSize_IConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegProbeSize(IConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L25">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Extensions/ConfigurationExtensions.cs/#L30">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegProbeSize_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegProbeSize*"></a>
   <h4 id="MediaBrowser_Controller_Extensions_ConfigurationExtensions_GetFFmpegProbeSize_IConfiguration_" data-uid="MediaBrowser.Controller.Extensions.ConfigurationExtensions.GetFFmpegProbeSize(IConfiguration)">GetFFmpegProbeSize(IConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Retrieves the FFmpeg probe size from the <see cref="!:IConfiguration"></see>.</p>
+  <div class="markdown level1 summary"><p>Gets the FFmpeg probe size from the <see cref="!:IConfiguration"></see>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -264,7 +344,7 @@
       <tr>
         <td><span class="xref">IConfiguration</span></td>
         <td><span class="parametername">configuration</span></td>
-        <td><p>This configuration.</p>
+        <td><p>The configuration to read the setting from.</p>
 </td>
       </tr>
     </tbody>

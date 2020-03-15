@@ -99,7 +99,7 @@
 </tr>
 <tr>
 <td>MacOS</td>
-<td>None (videotoolbox support coming)</td>
+<td>None (VideoToolbox Coming Soon)</td>
 </tr>
 <tr>
 <td>Android</td>
@@ -114,8 +114,8 @@
 <p><a href="https://www.elpamsoft.com/?p=Plex-Hardware-Transcoding">Graphics Cards comparison using HWA</a></p>
 <p><a href="https://developer.nvidia.com/ffmpeg">NVIDIA using ffmpeg official list</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux and Windows. Here is the official list of <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a> for supported codecs. Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a>. H264 10-bit is <a href="https://devtalk.nvidia.com/default/topic/1039388/video-codec-and-optical-flow-sdk/is-there-nvidia-encoder-decoder-which-supports-hdr-10-bpp-for-avc-h-264-/">not supported</a> by NVIDIA acceleration.</p>
 <p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>.</p>
-<p>AMF Linux Support still <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF/issues/4">not official</a> and AMD GFX Cards are required to use VAAPI on linux.</p>
-<p>Zen is CPU only. No hardware acceleration for any form of video decoding/encoding. You need an APU or dGPU for hardware acceleration.</p>
+<p>AMF Linux Support still <a href="https://github.com/GPUOpen-LibrariesAndSDKs/AMF/issues/4">not official</a> and AMD GFX Cards are required to use VAAPI on Linux.</p>
+<p>Zen is CPU only. No hardware acceleration for any form of video decoding/encoding. You will need an APU or dGPU for hardware acceleration.</p>
 <p>Intel QSV Benchmarks on <a href="https://www.intel.com/content/www/us/en/cloud-computing/cloud-computing-quicksync-video-ffmpeg-white-paper.html">Linux</a>.</p>
 <p>On Windows, you can use the DXVA2/D3D11VA libraries for decoding and the libmfx library for encoding.</p>
 <p>CentOS may require <a href="https://www.getpagespeed.com/server-setup/how-to-enable-intel-hardware-acceleration-for-video-playback-in-rhel-centos-8">additional drivers</a> for QSV.</p>
@@ -157,38 +157,37 @@ services:
       - /dev/dri/card0:/dev/dri/card0
       # RPi 4
       - /dev/vchiq:/dev/qchiq
-</code></pre><h2 id="debian-docker-nvidia">Debian Docker Nvidia:</h2>
-<p>In order to achieve Hardware acceleration using docker, some steps are needed:</p>
+</code></pre><h2 id="debian-docker-nvidia">Debian Docker Nvidia</h2>
+<p>In order to achieve hardware acceleration using docker, several steps are required.</p>
 <p>Prerequisites:</p>
 <p><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0">https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0</a>)</p>
 <pre><code>GNU/Linux x86_64 with kernel version &gt; 3.10
 Docker &gt;= 1.12
 NVIDIA GPU with Architecture &gt; Fermi (2.1)
 NVIDIA drivers ~= 361.93 (untested on older versions)
-</code></pre><p>Double check your GPU show on debian:</p>
+</code></pre><p>Confirm that your GPU shows up with this command.</p>
 <pre><code class="lang-sh">lspci | grep VGA
-</code></pre><p>Update your host:</p>
+</code></pre><p>Update your host so there is no chance of outdated software causing issues.</p>
 <pre><code class="lang-sh">apt-get update &amp;&amp; apt-get dist-upgrade -y
-</code></pre><p>Install curl:</p>
+</code></pre><p>Install curl which will be used to download the required files.</p>
 <pre><code class="lang-sh">apt-get install curl
-</code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code>:
-Add &quot;<code>non-free contrib</code>&quot; to every sources already configured when needed:</p>
+</code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code> and add <code>non-free contrib</code> to each source as required.</p>
 <pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main
-</code></pre><p>become</p>
+</code></pre><p>The line above should be modified to match the following line as an example.</p>
 <pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main non-free contrib
-</code></pre><p>Add sources for Nvidia-container:</p>
+</code></pre><p>Download and add the sources for the Nvidia docker container.</p>
 <pre><code class="lang-sh">curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-</code></pre><p>Update your package list:</p>
+</code></pre><p>Update your package list again to download the latest software available from the new repository.</p>
 <pre><code class="lang-sh">apt-get update
-</code></pre><p>Install linux-headers:</p>
-<pre><code class="lang-sh">apt-get install linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)
-</code></pre><p>Else to use stretch-backports:</p>
-<pre><code class="lang-sh">apt-get install -t stretch-backports linux-headers-$(uname -r|sed &#39;s/[^-]*-[^-]*-//&#39;)
-</code></pre><p>Install Nvidia docker2:</p>
+</code></pre><p>Install linux-headers and run the following command.</p>
+<pre><code class="lang-sh">apt-get install linux-headers-$(uname -r | sed &#39;s/[^-]*-[^-]*-//&#39;)
+</code></pre><p>Alternatively, run this command if you are on stretch for compatibility.</p>
+<pre><code class="lang-sh">apt-get install -t stretch-backports linux-headers-$(uname -r | sed &#39;s/[^-]*-[^-]*-//&#39;)
+</code></pre><p>Install Nvidia docker2 from the repository.</p>
 <pre><code class="lang-sh">apt-get install nvidia-docker2
-</code></pre><p>When prompted to choose to keep or install the maintainer package file say &quot;<code>y</code>&quot; to install the maintainer version.</p>
+</code></pre><p>When prompted to choose to keep or install the maintainer package file type <code>y</code> to install the maintainer version.</p>
 <p>After the install you may want to add nvidia as default runtime: editing <code>/etc/docker/daemon.json</code> like this:</p>
 <pre><code class="lang-json">{
     &quot;default-runtime&quot;: &quot;nvidia&quot;,
@@ -199,48 +198,47 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
         }
     }
 }
-</code></pre><p>Restart docker services</p>
+</code></pre><p>Restart any docker services currently running.</p>
 <pre><code class="lang-sh">sudo pkill -SIGHUP docker
-</code></pre><p>Install nvidia drivers and dependencies:</p>
+</code></pre><p>Install nvidia drivers and dependencies.</p>
 <pre><code class="lang-sh">apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
-</code></pre><p>Reboot your host:</p>
+</code></pre><p>Reboot your host to apply all changes.</p>
 <pre><code class="lang-sh">reboot now
-</code></pre><p>Validate your driver and docker are correctly set up.
-Driver test from host and docker side:</p>
+</code></pre><p>Validate that your driver and docker are correctly set up with this driver test.</p>
 <pre><code class="lang-sh">nvidia-smi
 docker run --gpus 0 nvidia/cuda:9.0-base nvidia-smi
-</code></pre><p>Validate access to needed ressources from host and docker:</p>
+</code></pre><p>Validate access to needed ressources from host and docker.</p>
 <pre><code class="lang-sh">ldconfig -p | grep cuvid
 ldconfig -p | grep libnvidia-encode.so.1
-</code></pre><p>Start your Jellyfin container adding thoses environement parameters:</p>
+</code></pre><p>Start your container adding those environement parameters.</p>
 <pre><code class="lang-sh">-e &quot;NVIDIA_DRIVER_CAPABILITIES=all&quot; \
 -e NVIDIA_VISIBLE_DEVICES=all \
 --runtime=nvidia \
 --gpus all \
-</code></pre><p>A complete run command would looks like:</p>
+</code></pre><p>A complete run command would look like this.</p>
 <pre><code class="lang-sh">docker run -d \
---name=jellyfin \
--e NVIDIA_DRIVER_CAPABILITIES=all \
--e NVIDIA_VISIBLE_DEVICES=all \
---gpus all \
---runtime=nvidia \
--p 8096:8096 \
--p 8920:8920 \
--v /config:/config \
--v /media:/media \
--v /cache:/cache \
---restart unless-stopped \
-jellyfin/jellyfin
-</code></pre><p>If using user env parameters as:</p>
+ --name=jellyfin \
+ -e NVIDIA_DRIVER_CAPABILITIES=all \
+ -e NVIDIA_VISIBLE_DEVICES=all \
+ --gpus all \
+ --runtime=nvidia \
+ -p 8096:8096 \
+ -p 8920:8920 \
+ -v /config:/config \
+ -v /media:/media \
+ -v /cache:/cache \
+ --restart unless-stopped \
+ jellyfin/jellyfin
+</code></pre><p>There are some special steps when running with the following option.</p>
 <pre><code class="lang-sh">--user 1000:1000
-</code></pre><p>You may need to add this user to the video group:</p>
+</code></pre><p>You may need to add this user to the video group.</p>
 <pre><code class="lang-sh">usermod -aG video user
-</code></pre><p>Once container is started you can again validate access to host ressources:</p>
+</code></pre><p>Once the container is started you can again validate access to the host ressources.</p>
 <pre><code class="lang-sh">docker exec -it jellyfin ldconfig -p | grep cuvid
 docker exec -it jellyfin ldconfig -p | grep libnvidia-encode.so.1
 </code></pre><p>Now go in Jellyfin playback settings, enable Nvidia NVENC and select target codecs depending on what your GPU support
-try to play any file needing a transcode (change bitrate is a good way to try)</p>
-<p>Check the transcode logs to make sure everything is working proprely.</p>
+try to play any file needing a transcode. Changing the bitrate is a good way to try this.</p>
+<p>Check the transcode logs to make sure everything is working properly.</p>
 <pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 </code></pre><h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
@@ -258,9 +256,11 @@ crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
 </div>
 </li>
 <li><p>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</p>
+</li>
+</ol>
 <pre><code class="lang-sh">sudo usermod -aG render jellyfin
 sudo systemctl restart jellyfin
-</code></pre></li>
+</code></pre><ol>
 <li><p>Configure VAAPI acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
 </li>
 <li><p>Watch a movie, and verify that transcoding is occurring by watching the <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code> and using <code>radeontop</code> or similar tools.</p>
@@ -270,23 +270,26 @@ sudo systemctl restart jellyfin
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
-<li><p>Add your GPU to the container.</p>
+<li>Add your GPU to the container.</li>
+</ol>
 <pre><code class="lang-sh">$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
-</code></pre></li>
-<li><p>Make sure you have the card within the container:</p>
+</code></pre><ol>
+<li>Make sure you have the card within the container:</li>
+</ol>
 <pre><code class="lang-sh">$ lxc exec jellyfin -- ls -l /dev/dri
 total 0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 controlD64
 crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
-</code></pre></li>
+</code></pre><ol>
 <li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
 </li>
 <li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
-<pre><code class="lang-sh">$ ps aux | grep ffmpeg | grep accel
-</code></pre></li>
-<li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
 </li>
+</ol>
+<pre><code class="lang-sh">$ ps aux | grep ffmpeg | grep accel
+</code></pre><ol>
+<li>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</li>
 </ol>
 <p>Useful Resources:</p>
 <ul>
