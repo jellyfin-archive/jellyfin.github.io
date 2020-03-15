@@ -192,6 +192,7 @@
 </code></pre><p><img src="https://user-images.githubusercontent.com/20715731/73949397-5f6f2500-48c8-11ea-9eca-bc1eb61f1281.png" alt="image"></p>
 <h4 id="hotdogs-and-catsup">Hotdogs and Catsup</h4>
 <p>An example of a color theme.</p>
+<p><img src="https://user-images.githubusercontent.com/20715731/73948929-a3adf580-48c7-11ea-8bf1-eaaba2873be7.png" alt="image"></p>
 <pre><code class="lang-css">.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {
     background: #ff9475;
 }
@@ -225,9 +226,95 @@
 .cancel {
     color: yellow;
 }
-</code></pre><p><strong>Sample:</strong></p>
-<p><img src="https://user-images.githubusercontent.com/20715731/73948929-a3adf580-48c7-11ea-8bf1-eaaba2873be7.png" alt="image"></p>
-<h2 id="community-links">Community Links</h2>
+</code></pre><h4 id="floating-now-playing-controls">Floating Now Playing Controls</h4>
+<p><img src="../../images/custom-css-floatingnowplaying.png" alt=""></p>
+<pre><code>/* fixed height for the bottom row */
+:root {
+  --element-fixed-top: 95px;
+}
+
+/* Now playing bar in the footer */
+.nowPlayingBar {
+       width: 650px; 
+       z-index: 10; 
+       position: fixed;
+       top: 300px; 
+       height: 120px;
+      border-style: solid;
+      border-color: white;
+      background-color: black;
+      margin-left: 50%;
+}
+
+/* Only child of nowPlayingBar */
+.nowPlayingBarTop {
+     height: 5px !important;
+     max-width: 500px
+     top: 10px;
+}
+
+/* Song progress seekbar */
+.nowPlayingBarPositionContainer {
+     position: relative;
+     top: 1.0em !important;
+}
+
+/* Container that holds album thumbnail, artist and album name */
+.nowPlayingBarInfoContainer {
+     position: fixed !important;
+     left: 12px;
+     top: 34px;
+     height: 60px;
+     width: 1100px;
+}
+
+/* Holds the next, previous track, play/pause, next and time elements */
+.nowPlayingBarCenter {
+     position: relative !important;
+     left: 32px;
+     top: var(--element-fixed-top);
+     min-width: 500px;
+}
+
+/* Hold mute, volume slider container, repeat, favorite and remote control buttons */
+.nowPlayingBarRight {
+     width: 402px !important;
+     left: -60px;
+}
+
+/* Mute button */
+.muteButton {
+    position: relative;
+    top: var(--element-fixed-top);
+}
+
+/* Volume slider */
+.nowPlayingBarVolumeSliderContainer {
+     position: relative;
+     left: -4px;
+     top: var(--element-fixed-top);
+}
+
+/* Toggle repeat */
+.toggleRepeatButton {
+     position: relative !important;
+     left: -20px;
+     top: var(--element-fixed-top);
+}
+
+/* Favorite */
+.nowPlayingBarUserDataButtons {
+     position: relative;
+     left: -4px;
+     top: var(--element-fixed-top);
+}
+
+/* Remote control */
+.remoteControlButton {
+     left: -110px;
+     top: var(--element-fixed-top);
+}
+</code></pre><h2 id="community-links">Community Links</h2>
 <p>Some links to places where custom CSS has been discussed and shared.</p>
 <p><a href="https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050/">https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050/</a></p>
 <p><a href="https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css/">https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css/</a></p>
