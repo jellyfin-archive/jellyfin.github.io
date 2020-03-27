@@ -179,13 +179,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_IIsoMounter_Mount_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.IIsoMounter.Mount(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_IIsoMounter_Mount_System_String_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.IIsoMounter.Mount(System.String%2CCancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/IIsoMounter.cs/#L20">View Source</a>
   </span>
   <a id="MediaBrowser_Model_IO_IIsoMounter_Mount_" data-uid="MediaBrowser.Model.IO.IIsoMounter.Mount*"></a>
-  <h4 id="MediaBrowser_Model_IO_IIsoMounter_Mount_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Model.IO.IIsoMounter.Mount(System.String,System.Threading.CancellationToken)">Mount(String, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Model_IO_IIsoMounter_Mount_System_String_CancellationToken_" data-uid="MediaBrowser.Model.IO.IIsoMounter.Mount(System.String,CancellationToken)">Mount(String, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Mounts the specified iso path.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -210,7 +210,7 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="xref">CancellationToken</span></td>
         <td><span class="parametername">cancellationToken</span></td>
         <td><p>The cancellation token.</p>
 </td>
@@ -227,29 +227,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.IIsoMount.html">IIsoMount</a>&gt;</td>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="MediaBrowser.Model.IO.IIsoMount.html">IIsoMount</a>&gt;</td>
         <td><p>IsoMount.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>isoPath</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.ioexception">IOException</a></td>
-        <td><p>Unable to create mount.</p>
 </td>
       </tr>
     </tbody>

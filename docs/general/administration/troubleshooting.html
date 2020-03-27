@@ -77,15 +77,23 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="admin-troubleshoot">
-<h2 id="troubleshooting">Troubleshooting</h2>
+<h1 id="troubleshooting">Troubleshooting</h1>
 
+<p>This page outlines some solutions to common issues beginners may encounter when running a Jellyfin server.</p>
+<h2 id="connection-issues">Connection Issues</h2>
 <p>If you can access the web interface over HTTP but not HTTPS, then you likely have an error with the certificate. Jellyfin uses a PFX file to handle HTTPS traffic. If you created the file with a password, then you will have to enter that value on the <strong>Networking</strong> page in the settings.</p>
 <p>If you can access the server locally but not outside of your LAN, then you likely have an issue with the router configuration. Please see the <a href="xref:admin-port-forwarding">port forwarding</a> page for more information.</p>
 <p>The easiest way to check for issues is by checking the logs, which can be accessed through the settings on the web client or in the log directory on your server. If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet. This would indicate either an incorrect address or an issue somewhere else on the network.</p>
 <h2 id="debug-logging">Debug Logging</h2>
 <p>To enable debug (much more verbose) logging, it is currently required to manually edit config files since no options exist yet on the frontend. Go to the Jellyfin configuration directory, find the <code>logging.json</code> file, and change the minimum level to debug as seen below.</p>
-<p><code>&quot;MinimumLevel&quot;: &quot;Debug&quot;</code></p>
-<p>Jellyfin 10.4.1 and above will automatically reload the new configuration. The debug messages show up in the log with the <code>DBG</code> tag.</p>
+<pre><code class="lang-json">{
+    &quot;Serilog&quot;: {
+        &quot;MinimumLevel&quot;: {
+            &quot;Default&quot;: &quot;Debug&quot;
+        }
+    }
+}
+</code></pre><p>Jellyfin 10.4.1 and above will automatically reload the new configuration. The debug messages show up in the log with the <code>DBG</code> tag.</p>
 </article>
           </div>
           
