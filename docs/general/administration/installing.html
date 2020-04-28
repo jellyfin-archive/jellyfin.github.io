@@ -78,25 +78,105 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="admin-installing">
 <h1 id="installing">Installing</h1>
+<!-- markdownlint-disable MD036 no-emphasis-as-heading -->
 
 <p>The Jellyfin project and its contributors offer a number of pre-built binary packages to assist in getting Jellyfin up and running quickly on multiple systems.</p>
+<ul>
+<li><a href="#installing">Installing</a><ul>
+<li><a href="#containers">Containers</a><ul>
+<li><a href="#official-docker-hub">Official Docker Hub</a><ul>
+<li><a href="#installing-docker">Installing Docker</a></li>
+<li><a href="#preparing-the-folders">Preparing the Folders</a></li>
+<li><a href="#running-the-container">Running the Container</a></li>
+<li><a href="#hardware-transcoding-with-nvidia-ubuntu">Hardware Transcoding with Nvidia (Ubuntu)</a></li>
+</ul>
+</li>
+<li><a href="#docker-hub-image-maintained-by-linuxserverio">Docker Hub image maintained by LinuxServer.io</a></li>
+<li><a href="#unraid-docker">Unraid Docker</a></li>
+<li><a href="#kubernetes">Kubernetes</a></li>
+</ul>
+</li>
+<li><a href="#windows-x86x64">Windows (x86/x64)</a><ul>
+<li><a href="#install-using-installer-x64">Install using Installer (x64)</a></li>
+<li><a href="#manual-installation-x86x64">Manual Installation (x86/x64)</a></li>
+</ul>
+</li>
+<li><a href="#macos">MacOS</a></li>
+<li><a href="#linux">Linux</a><ul>
+<li><a href="#linux-generic-amd64">Linux (generic amd64)</a><ul>
+<li><a href="#installation-process">Installation Process</a></li>
+</ul>
+</li>
+<li><a href="#portable-dll">Portable DLL</a></li>
+<li><a href="#arch-linux">Arch Linux</a></li>
+<li><a href="#fedora">Fedora</a></li>
+<li><a href="#centos">CentOS</a></li>
+<li><a href="#debian">Debian</a><ul>
+<li><a href="#repository">Repository</a></li>
+<li><a href="#packages">Packages</a></li>
+</ul>
+</li>
+<li><a href="#ubuntu">Ubuntu</a><ul>
+<li><a href="#migrating-to-the-new-repository">Migrating to the new repository</a></li>
+<li><a href="#ubuntu-repository">Ubuntu Repository</a></li>
+<li><a href="#ubuntu-packages">Ubuntu Packages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="containers">Containers</h2>
 <p><a href="https://stackoverflow.com/questions/31213126/libcontainer-vs-docker-vs-ocf-vs-runc#31219102">Open Container Initiative</a> is a form of virtualization. An image is similar to an ISO while a container is akin to a running VM.</p>
 <div class="NOTE"><h5>Note</h5><p>There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> with read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable.</p>
 </div>
-<p>Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
+<div class="NOTE"><h5>Note</h5><p>Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
+</div>
 <h3 id="official-docker-hub">Official Docker Hub</h3>
 <p><a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a></p>
 <p>The Jellyfin Docker image is available on <a href="https://hub.docker.com/r/jellyfin/jellyfin/">Docker Hub</a> for multiple architectures.</p>
+<h4 id="installing-docker">Installing Docker</h4>
+<p>There are multiple platforms that Docker can run on. Below are guides for Ubuntu, Windows and MacOS</p>
+<p><strong>Ubuntu</strong></p>
+<p>Lets start with Ubuntu, to install the basic Docker Daemon you will need to run the following 2 commands:</p>
+<pre><code class="lang-sh">curl -fsSL https://get.docker.com -o get-docker.sh
+sh get-docker.sh
+</code></pre><p>And to install Docker Compose you will need to run the following command:</p>
+<pre><code class="lang-sh">apt-get install docker-compose
+</code></pre><p>Now test the installation by running the following command in your terminal:</p>
+<pre><code class="lang-sh">sudo docker run hello-world
+</code></pre><p>You should see a message that states:</p>
+<pre><code class="lang-sh">Hello from Docker! This message shows that your installation appears to be working correctly.
+</code></pre><p><strong>Windows/MacOS</strong></p>
+<p>For windows and MacOS you can use the following link to install Docker for Desktop:</p>
+<p><a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></p>
+<p>Now test the installation by running the following command in your terminal(MacOS) or Powershell(Windows):</p>
+<pre><code class="lang-sh">docker run hello-world
+</code></pre><p>You should see a message that states:</p>
+<pre><code class="lang-sh">Hello from Docker! This message shows that your installation appears to be working correctly.
+</code></pre><h4 id="preparing-the-folders">Preparing the Folders</h4>
+<p>Before running the Jellyfin Container. We need to make 3 folders:</p>
+<ul>
+<li>Config</li>
+<li>Cache</li>
+<li>Media</li>
+</ul>
+<p><strong>Ubuntu/Mac</strong></p>
+<pre><code class="lang-sh">mkdir -p Path/To/Config
+mkdir -p Path/To/Cache
+mkdir -p Path/To/Media
+</code></pre><p><strong>Windows</strong>
+Make a folder called Jellyfin, and create the 3 folders inside the Jellyfin Folder.</p>
+<p>These folders will be used by Jellyfin to store data in. By default everything inside a Docker container gets removed once you delete the container. By making these folders you are able to delete the Jellyfin container while keeping your data. Amazing!</p>
+<h4 id="running-the-container">Running the Container</h4>
 <ol>
 <li><p>Get the latest image.</p>
 <pre><code class="lang-sh">docker pull jellyfin/jellyfin
 </code></pre></li>
-<li><p>Create directories on the host for persistent data storage.</p>
-<pre><code class="lang-sh">mkdir /path/to/config
-mkdir /path/to/cache
-</code></pre></li>
-<li><p>Start the server.</p>
+<li><p>Start the server in one of the following ways</p>
+<p> <strong>Docker</strong></p>
+<p> Running a Container is very easy (as you might have noticed while running the Hello world! Container). However when running a service you&#39;ll need to add some options to your docker run Command. Below is the full command and then it will be explained what the different parts mean.</p>
 <pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
  --volume /path/to/cache:/cache \
@@ -105,33 +185,97 @@ mkdir /path/to/cache
  --net=host \
  --restart=unless-stopped \
  jellyfin/jellyfin
-</code></pre><p> Alternatively, using docker-compose:</p>
-<pre><code class="lang-json">version: &quot;3&quot;
+</code></pre><ul>
+<li><p><code>-d</code>: This means that the Docker Container will run in the background. This can also be changed to -it this will make the container interactive allowing you to execute commands directly inside the container.</p>
+</li>
+<li><p><code>--volume</code> /path/to/config:/config: This option connects the &quot;/path/to/config&quot; folder on your Host to the &quot;/config&quot; inside the container. You do not need to have any config present in /path/to/config as during the run command of the container Jellyfin will generate all of the necessary files. Everything in front of the colon is the of the config folder you&#39;ve created in the previous step.</p>
+</li>
+<li><p><code>--volume</code> /path/to/cache:/cache: This option connects the &quot;/path/to/cache&quot; folder on your Host to the &quot;/cache&quot; inside the container.</p>
+</li>
+<li><p><code>--volume</code> /path/to/media:/media: This option connects the &quot;/path/to/media&quot; folder on your Host to the &quot;/media&quot; inside the container. This option has to be added in order for Jellyfin to find your media files. It is also possible that you have your media files spread across different places. In that case you can keep adding more volumes by using:</p>
+</li>
+<li><p><code>--volume</code> /path/to/anothermedia:/media2 &amp; --volume /path/to/differentmedia:/media3 etc. add as many as you like!</p>
+</li>
+<li><p><code>--user 1000:1000</code>: Is option for Ubuntu to specify that you want to run the Container as the current user. This command is not necessary if you are using Docker for Desktop</p>
+</li>
+<li><p><code>--net=host</code>: This option will tell the container to use the same network as the computer that it is running on. This means that if you have this running on your windows machine, you will be able to access jellyfin by using <a href="http://localhost:8096">http://localhost:8096</a> instead of a different IP</p>
+</li>
+<li><p>Alternatively you can use different options for the <code>--restart=unless-stopped</code> if you do not want the Jellyfin server to start whenever Docker starts. The following options are available:</p>
+<ul>
+<li><p><code>--restart=no</code> Do not automaticallu restart the container</p>
+</li>
+<li><p><code>--restart=on-failure</code> Restart the container if it exits due to an error</p>
+</li>
+<li><p><code>--restart=always</code> Always restart the container when it stops</p>
+</li>
+</ul>
+</li>
+<li><p><code>jellyfin/jellyfin</code>: This specifies what &quot;image&quot; to use to start the container with.</p>
+<p><strong>Docker-Compose</strong></p>
+<p>Create a <code>docker-compose.yml</code> file with the following contents:</p>
+<pre><code class="lang-yml">version: &quot;3&quot;
 services:
-  jellyfin:
+jellyfin:
+  image: jellyfin/jellyfin
+  user: 1000:1000
+  network_mode: &quot;host&quot;
+  volumes:
+    - /path/to/config:/config
+    - /path/to/cache:/cache
+    - /path/to/media:/media
+</code></pre><p>Then while in the same folder as the <code>docker-compose.yml</code> run:</p>
+<pre><code class="lang-sh">docker-compose up
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<h4 id="hardware-transcoding-with-nvidia-ubuntu">Hardware Transcoding with Nvidia (Ubuntu)</h4>
+<p>You are able to use hardware encoding with Nvidia, but it requires some additional configuration. These steps require basic knowledge of Ubuntu but nothing too special.</p>
+<p><strong>Adding Package Repositories</strong>
+First off you&#39;ll need to add the Nvidia package repositories to your Ubuntu installation. This can be done by running the following commands:</p>
+<pre><code class="lang-sh">distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+</code></pre><p><strong>Installing Nvidia container toolkit</strong>
+Next we&#39;ll need to install the Nvidia container toolkit. This can be done by running the following commands:</p>
+<pre><code class="lang-sh">sudo apt-get update -y
+sudo apt-get install nvidia-container-toolkit -y
+</code></pre><p>After installing the Nvidia Container Toolkit, you&#39;ll need to restart the Docker Daemon in order to let Docker use your Nvidia GPU:</p>
+<pre><code class="lang-sh">sudo systemctl restart docker
+</code></pre><p><strong>Changing the <code>docker-compose.yml</code></strong>
+Now that all the packages are in order, let&#39;s change the <code>docker-compose.yml</code> to let the Jellyfin container make user of the Nvidia GPU.
+The following lines need to be added to the file:</p>
+<pre><code class="lang-sh">runtime: nvidia
+environment:
+- NVIDIA_VISIBLE_DEVICES=all
+</code></pre><p>Your completed <code>docker-compose.yml</code> file should look something like this:</p>
+<pre><code class="lang-yml">version: &quot;2.3&quot;
+services:
+  jellyfin-test:
     image: jellyfin/jellyfin
     user: 1000:1000
     network_mode: &quot;host&quot;
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - /path/to/config:/config
       - /path/to/cache:/cache
       - /path/to/media:/media
-</code></pre></li>
-</ol>
-<h3 id="docker-hubhttpshubdockercomrlinuxserverjellyfin-image-maintained-by-linuxserverio"><a href="https://hub.docker.com/r/linuxserver/jellyfin">Docker Hub</a> image maintained by LinuxServer.io</h3>
+</code></pre><div class="NOTE"><h5>Note</h5><p>For Nvidia Hardware encoding the minimum version of docker-compose needs to be 2. However we recommend sticking with version 2.3 as it has proven to work with nvenc encoding.</p>
+</div>
+<h3 id="docker-hub-image-maintained-by-linuxserverio">Docker Hub image maintained by LinuxServer.io</h3>
 <p><a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a></p>
 <p>The intent of the Jellyfin image is to provide the capability of building from source using Docker. The native image is <a href="https://github.com/jellyfin/jellyfin/blob/master/Dockerfile">compiled</a> inside the container whereas the LinuxServer image <a href="https://github.com/linuxserver/docker-jellyfin/blob/master/Dockerfile">installs</a> Jellyfin as a package. This can lead to larger image size and more space consumption since there isn&#39;t a common base image for the official Jellyfin image, <a href="https://hub.docker.com/r/jellyfin/jellyfin/tags">Jellyfin</a> vs <a href="https://hub.docker.com/r/linuxserver/jellyfin/tags">LinuxServer</a> sizes. The Jellyfin image does not support environmentals except for $TZ. No other environmental parameter works. If switching between images, the folder locations are not the same, so you have to move config folders around before spinning up the alternative image.</p>
-<p>For ARM hardware and RPi, it is recommended to use the LinuxServer image since hardware acceleration support is not yet available on the native image. </p>
+<p>For ARM hardware and RPi, it is recommended to use the LinuxServer image since hardware acceleration support is not yet available on the native image.</p>
 <h3 id="unraid-docker">Unraid Docker</h3>
 <p>An Unraid Docker template is available in the repository.</p>
 <ol>
 <li><p>Open the unRaid GUI (at least unRaid 6.5) and click on the &quot;Docker&quot; tab.</p>
 </li>
 <li><p>Add the following line under &quot;Template Repositories&quot; and save the options.</p>
-</li>
-</ol>
 <pre><code class="lang-data">https://github.com/jellyfin/jellyfin/blob/master/deployment/unraid/docker-templates
-</code></pre><ol>
+</code></pre></li>
 <li><p>Click &quot;Add Container&quot; and select &quot;jellyfin&quot;.</p>
 </li>
 <li><p>Adjust any required paths and save your changes.</p>
@@ -185,10 +329,11 @@ services:
 </code></pre></li>
 </ul>
 </li>
-<li>Run
- <code>cmd
- jellyfin.bat</code></li>
-<li>Open your browser at <code>http://&lt;--Server-IP--&gt;:8096</code> (if auto-start of webapp is disabled)</li>
+<li><p>Run</p>
+<pre><code class="lang-cmd">jellyfin.bat
+</code></pre></li>
+<li><p>Open your browser at <code>http://&lt;--Server-IP--&gt;:8096</code> (if auto-start of webapp is disabled)</p>
+</li>
 </ol>
 <p><strong>Update</strong></p>
 <ol>
@@ -260,9 +405,10 @@ services:
 <p>The portable version doesn&#39;t come with FFmpeg by default. To install FFmpeg you can use homebrew or download the build from <a href="https://ffmpeg.zeranoe.com/builds/macos64/static/">Zeranoe</a>.</p>
 <p>If using Zeranoe&#39;s build, extract it to the <code>/Applications/</code> folder.</p>
 <p>Navigate to the Playback tab in the Dashboard and set the path to FFmpeg under FFmpeg Path.</p>
-<h2 id="linux-generic-amd64">Linux (generic amd64)</h2>
+<h2 id="linux">Linux</h2>
+<h3 id="linux-generic-amd64">Linux (generic amd64)</h3>
 <p>Generic amd64 Linux builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#linux">here</a>.</p>
-<h3 id="installation-process">Installation Process</h3>
+<h4 id="installation-process">Installation Process</h4>
 <p>Create a directory in <code>/opt</code> for jellyfin and its files, and enter that directory.</p>
 <pre><code class="lang-sh">sudo mkdir /opt/jellyfin
 cd /opt/jellyfin
@@ -296,16 +442,18 @@ $JELLYFINDIR/jellyfin/jellyfin \
 sudo chmod u+x jellyfin.sh
 </code></pre><p>Finally you can run it. You will see lots of log information when run, this is normal. Setup is as usual in the web browser.</p>
 <pre><code class="lang-sh">./jellyfin.sh
-</code></pre><h2 id="portable-dll">Portable DLL</h2>
+</code></pre><h3 id="portable-dll">Portable DLL</h3>
 <p>Platform-agnostic .NET Core DLL builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#portable">here</a>. These builds use the binary <code>jellyfin.dll</code> and must be loaded with <code>dotnet</code>.</p>
-<h2 id="arch-linux">Arch Linux</h2>
+<h3 id="arch-linux">Arch Linux</h3>
 <p>Jellyfin can be found in the AUR as <a href="https://aur.archlinux.org/packages/jellyfin/"><code>jellyfin</code></a> and <a href="https://aur.archlinux.org/packages/jellyfin-git/"><code>jellyfin-git</code></a>.</p>
-<h2 id="fedora">Fedora</h2>
+<h3 id="fedora">Fedora</h3>
 <p>Fedora 29 builds in RPM package format are available <a href="https://jellyfin.org/downloads/#fedora">here</a> for now but an official Fedora repository is coming soon.</p>
-<h2 id="centos">CentOS</h2>
+<h3 id="centos">CentOS</h3>
 <p>CentOS/RHEL 7 builds in RPM package format are available <a href="https://jellyfin.org/downloads/#centos">here</a> and an official CentOS/RHEL repository is planned for the future.</p>
-<h2 id="debian">Debian</h2>
-<h3 id="repository">Repository</h3>
+<p>The default CentOS/RHEL repositories don&#39;t carry FFmpeg, which the RPM requires. You will need to add a third-party repository which carries FFmpeg, such as <a href="https://rpmfusion.org/Configuration">RPM Fusion&#39;s Free repository</a>.</p>
+<p>You can also build <a href="https://github.com/jellyfin/jellyfin-ffmpeg">Jellyfin&#39;s version</a> on your own. This includes gathering the dependencies and compiling and installing them. Instructions can be found at <a href="https://trac.ffmpeg.org/wiki/CompilationGuide/Centos">the FFmpeg wiki</a>.</p>
+<h3 id="debian">Debian</h3>
+<h4 id="repository">Repository</h4>
 <p>The Jellyfin team provides a Debian repository for installation on Debian Stretch/Buster. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>.</p>
 <div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
 </div>
@@ -333,7 +481,7 @@ sudo systemctl restart jellyfin
 sudo /etc/init.d/jellyfin stop
 </code></pre></li>
 </ol>
-<h3 id="packages">Packages</h3>
+<h4 id="packages">Packages</h4>
 <p>Raw Debian packages, including old versions, are available <a href="https://jellyfin.org/downloads/#debian">here</a>.</p>
 <div class="NOTE"><h5>Note</h5><p>The repository is the preferred way to obtain Jellyfin on Debian, as it contains several dependencies as well.</p>
 </div>
@@ -352,8 +500,8 @@ sudo systemctl restart jellyfin
 sudo /etc/init.d/jellyfin stop
 </code></pre></li>
 </ol>
-<h2 id="ubuntu">Ubuntu</h2>
-<h3 id="migrating-to-the-new-repository">Migrating to the new repository</h3>
+<h3 id="ubuntu">Ubuntu</h3>
+<h4 id="migrating-to-the-new-repository">Migrating to the new repository</h4>
 <p>Previous versions of Jellyfin included Ubuntu under the Debian repository. This has now been split out into its own repository to better handle the separate binary packages. If you encounter errors about the <code>ubuntu</code> release not being found and you previously configured an <code>ubuntu</code> <code>jellyfin.list</code> file, please follow these steps.</p>
 <ol>
 <li><p>Remove the old <code>/etc/apt/sources.list.d/jellyfin.list</code> file:</p>
@@ -362,7 +510,7 @@ sudo /etc/init.d/jellyfin stop
 <li><p>Proceed with the following section as written.</p>
 </li>
 </ol>
-<h3 id="repository-1">Repository</h3>
+<h4 id="ubuntu-repository">Ubuntu Repository</h4>
 <p>The Jellyfin team provides an Ubuntu repository for installation on Ubuntu Xenial, Bionic, Cosmic, Disco, and Eoan. Supported architectures are <code>amd64</code>, <code>arm64</code>, and <code>armhf</code>. Only <code>amd64</code> is supported on Ubuntu Xenial.</p>
 <div class="NOTE"><h5>Note</h5><p>Microsoft does not provide a .NET for 32-bit x86 Linux systems, and hence Jellyfin is not supported on the <code>i386</code> architecture.</p>
 </div>
@@ -393,7 +541,7 @@ sudo systemctl restart jellyfin
 sudo /etc/init.d/jellyfin stop
 </code></pre></li>
 </ol>
-<h3 id="packages-1">Packages</h3>
+<h4 id="ubuntu-packages">Ubuntu Packages</h4>
 <p>Raw Ubuntu packages, including old versions, are available <a href="https://jellyfin.org/downloads/#ubuntu">here</a>.</p>
 <div class="NOTE"><h5>Note</h5><p>The repository is the preferred way to install Jellyfin on Ubuntu, as it contains several dependencies as well.</p>
 </div>

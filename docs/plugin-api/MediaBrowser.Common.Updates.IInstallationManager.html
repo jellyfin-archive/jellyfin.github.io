@@ -137,7 +137,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_CancelInstallation_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.CancelInstallation(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L116">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L112">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_CancelInstallation_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.CancelInstallation*"></a>
   <h4 id="MediaBrowser_Common_Updates_IInstallationManager_CancelInstallation_System_Guid_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.CancelInstallation(System.Guid)">CancelInstallation(Guid)</h4>
@@ -299,7 +299,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_GetAvailablePluginUpdates_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.GetAvailablePluginUpdates(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L95">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L91">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_GetAvailablePluginUpdates_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetAvailablePluginUpdates*"></a>
   <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetAvailablePluginUpdates_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetAvailablePluginUpdates(System.Threading.CancellationToken)">GetAvailablePluginUpdates(CancellationToken)</h4>
@@ -308,7 +308,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IAsyncEnumerable&lt;PackageVersionInfo&gt; GetAvailablePluginUpdates(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task&lt;IEnumerable&lt;VersionInfo&gt;&gt; GetAvailablePluginUpdates(CancellationToken cancellationToken = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -338,7 +338,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;&gt;</td>
         <td><p>The available plugin updates.</p>
 </td>
       </tr>
@@ -346,19 +346,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageInfo__System_String_System_Guid_System_Version_MediaBrowser_Model_Updates_PackageVersionClass_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.Updates.PackageInfo%7D%2CSystem.String%2CSystem.Guid%2CSystem.Version%2CMediaBrowser.Model.Updates.PackageVersionClass)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageInfo__System_String_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.Updates.PackageInfo%7D%2CSystem.String%2CSystem.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L80">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions*"></a>
-  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageInfo__System_String_System_Guid_System_Version_MediaBrowser_Model_Updates_PackageVersionClass_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable{MediaBrowser.Model.Updates.PackageInfo},System.String,System.Guid,System.Version,MediaBrowser.Model.Updates.PackageVersionClass)">GetCompatibleVersions(IEnumerable&lt;PackageInfo&gt;, String, Guid, Version, PackageVersionClass)</h4>
+  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageInfo__System_String_System_Guid_System_Version_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable{MediaBrowser.Model.Updates.PackageInfo},System.String,System.Guid,System.Version)">GetCompatibleVersions(IEnumerable&lt;PackageInfo&gt;, String, Guid, Version)</h4>
   <div class="markdown level1 summary"><p>Returns all compatible versions ordered from newest to oldest.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;PackageVersionInfo&gt; GetCompatibleVersions(IEnumerable&lt;PackageInfo&gt; availablePackages, string name = null, Guid guid = default(Guid), Version minVersion = null, PackageVersionClass classification = PackageVersionClass.Release)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;VersionInfo&gt; GetCompatibleVersions(IEnumerable&lt;PackageInfo&gt; availablePackages, string name = null, Guid guid = default(Guid), Version minVersion = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -394,12 +394,6 @@
         <td><p>The minimum required version of the plugin.</p>
 </td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Updates.PackageVersionClass.html">PackageVersionClass</a></td>
-        <td><span class="parametername">classification</span></td>
-        <td><p>The classification.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -412,7 +406,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;</td>
         <td><p>All compatible versions ordered from newest to oldest.</p>
 </td>
       </tr>
@@ -420,19 +414,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageVersionInfo__System_Version_MediaBrowser_Model_Updates_PackageVersionClass_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.Updates.PackageVersionInfo%7D%2CSystem.Version%2CMediaBrowser.Model.Updates.PackageVersionClass)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_VersionInfo__System_Version_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.Updates.VersionInfo%7D%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L69">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L68">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions*"></a>
-  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_PackageVersionInfo__System_Version_MediaBrowser_Model_Updates_PackageVersionClass_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable{MediaBrowser.Model.Updates.PackageVersionInfo},System.Version,MediaBrowser.Model.Updates.PackageVersionClass)">GetCompatibleVersions(IEnumerable&lt;PackageVersionInfo&gt;, Version, PackageVersionClass)</h4>
+  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_GetCompatibleVersions_System_Collections_Generic_IEnumerable_MediaBrowser_Model_Updates_VersionInfo__System_Version_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.GetCompatibleVersions(System.Collections.Generic.IEnumerable{MediaBrowser.Model.Updates.VersionInfo},System.Version)">GetCompatibleVersions(IEnumerable&lt;VersionInfo&gt;, Version)</h4>
   <div class="markdown level1 summary"><p>Returns all compatible versions ordered from newest to oldest.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;PackageVersionInfo&gt; GetCompatibleVersions(IEnumerable&lt;PackageVersionInfo&gt; availableVersions, Version minVersion = null, PackageVersionClass classification = PackageVersionClass.Release)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;VersionInfo&gt; GetCompatibleVersions(IEnumerable&lt;VersionInfo&gt; availableVersions, Version minVersion = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -445,7 +439,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;</td>
         <td><span class="parametername">availableVersions</span></td>
         <td><p>The available version of the plugin.</p>
 </td>
@@ -456,12 +450,6 @@
         <td><p>The minimum required version of the plugin.</p>
 </td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Updates.PackageVersionClass.html">PackageVersionClass</a></td>
-        <td><span class="parametername">classification</span></td>
-        <td><p>The classification of updates.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h5 class="returns">Returns</h5>
@@ -474,7 +462,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;</td>
         <td><p>All compatible versions ordered from newest to oldest.</p>
 </td>
       </tr>
@@ -482,19 +470,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_InstallPackage_MediaBrowser_Model_Updates_PackageVersionInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.InstallPackage(MediaBrowser.Model.Updates.PackageVersionInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_InstallPackage_MediaBrowser_Model_Updates_VersionInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.InstallPackage(MediaBrowser.Model.Updates.VersionInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L103">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L99">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_InstallPackage_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.InstallPackage*"></a>
-  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_InstallPackage_MediaBrowser_Model_Updates_PackageVersionInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.InstallPackage(MediaBrowser.Model.Updates.PackageVersionInfo,System.Threading.CancellationToken)">InstallPackage(PackageVersionInfo, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Common_Updates_IInstallationManager_InstallPackage_MediaBrowser_Model_Updates_VersionInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.InstallPackage(MediaBrowser.Model.Updates.VersionInfo,System.Threading.CancellationToken)">InstallPackage(VersionInfo, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Installs the package.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task InstallPackage(PackageVersionInfo package, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
+    <pre><code class="lang-csharp hljs">Task InstallPackage(VersionInfo package, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -507,7 +495,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a></td>
         <td><span class="parametername">package</span></td>
         <td><p>The package.</p>
 </td>
@@ -541,7 +529,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Updates_IInstallationManager_UninstallPlugin_MediaBrowser_Common_Plugins_IPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Updates.IInstallationManager.UninstallPlugin(MediaBrowser.Common.Plugins.IPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L109">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Updates/IInstallationManager.cs/#L105">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Updates_IInstallationManager_UninstallPlugin_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.UninstallPlugin*"></a>
   <h4 id="MediaBrowser_Common_Updates_IInstallationManager_UninstallPlugin_MediaBrowser_Common_Plugins_IPlugin_" data-uid="MediaBrowser.Common.Updates.IInstallationManager.UninstallPlugin(MediaBrowser.Common.Plugins.IPlugin)">UninstallPlugin(IPlugin)</h4>
@@ -701,7 +689,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;PackageVersionInfo&gt;&gt; PluginInstalled</code></pre>
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;VersionInfo&gt;&gt; PluginInstalled</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -713,7 +701,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -761,7 +749,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;(IPlugin, PackageVersionInfo)&gt;&gt; PluginUpdated</code></pre>
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;GenericEventArgs&lt;(IPlugin, VersionInfo)&gt;&gt; PluginUpdated</code></pre>
   </div>
   <h5 class="eventType">Event Type</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -773,7 +761,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a>, <a class="xref" href="MediaBrowser.Model.Updates.PackageVersionInfo.html">PackageVersionInfo</a>&gt;&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MediaBrowser.Model.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">ValueTuple</a>&lt;<a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a>, <a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a>&gt;&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>

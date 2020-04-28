@@ -693,9 +693,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtras">BaseItem.GetDisplayExtras()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
     </div>
     <div>
@@ -844,7 +841,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ContainingFolderPath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override string ContainingFolderPath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -908,7 +906,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool EnableDefaultVideoUserDataKeys { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+protected virtual bool EnableDefaultVideoUserDataKeys { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -938,7 +937,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string FileNameWithoutExtension { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override string FileNameWithoutExtension { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -970,7 +970,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool HasLocalAlternateVersions { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool HasLocalAlternateVersions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1035,7 +1036,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Is3D { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public bool Is3D { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1066,7 +1068,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsCompleteMedia { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public bool IsCompleteMedia { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1158,7 +1161,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsStacked { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public bool IsStacked { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1278,7 +1282,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int MediaSourceCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public int MediaSourceCount { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1309,7 +1314,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string MediaType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override string MediaType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1342,7 +1348,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string PrimaryVersionId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public string PrimaryVersionId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1372,7 +1379,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override SourceType SourceType { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override SourceType SourceType { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1436,7 +1444,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsAddingToPlaylist { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsAddingToPlaylist { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1468,7 +1477,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsInheritedParentImages { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsInheritedParentImages { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1500,7 +1510,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPeople { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPeople { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1532,7 +1543,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPlayedStatus { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1564,7 +1576,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPositionTicksResume { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPositionTicksResume { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1596,7 +1609,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsThemeMedia { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsThemeMedia { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -83,7 +83,8 @@
   
   <h1 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask" class="text-break">Class RefreshChannelsScheduledTask
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The &quot;Refresh Channels&quot; scheduled task.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -129,18 +130,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_ILogger_Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMediaBrowser.Controller.Library.IUserManager%2CILogger%7BEmby.Server.Implementations.Channels.RefreshChannelsScheduledTask%7D%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMicrosoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Channels.RefreshChannelsScheduledTask%7D%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L31">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__ctor_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_ILogger_Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.#ctor(MediaBrowser.Controller.Channels.IChannelManager,MediaBrowser.Controller.Library.IUserManager,ILogger{Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask},MediaBrowser.Controller.Library.ILibraryManager)">RefreshChannelsScheduledTask(IChannelManager, IUserManager, ILogger&lt;RefreshChannelsScheduledTask&gt;, ILibraryManager)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask__MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.#ctor(MediaBrowser.Controller.Channels.IChannelManager,Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask},MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.Globalization.ILocalizationManager)">RefreshChannelsScheduledTask(IChannelManager, ILogger&lt;RefreshChannelsScheduledTask&gt;, ILibraryManager, ILocalizationManager)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.html">RefreshChannelsScheduledTask</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public RefreshChannelsScheduledTask(IChannelManager channelManager, IUserManager userManager, ILogger&lt;RefreshChannelsScheduledTask&gt; logger, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public RefreshChannelsScheduledTask(IChannelManager channelManager, ILogger&lt;RefreshChannelsScheduledTask&gt; logger, ILibraryManager libraryManager, ILocalizationManager localization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,22 +157,26 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Channels.IChannelManager.html">IChannelManager</a></td>
         <td><span class="parametername">channelManager</span></td>
-        <td></td>
+        <td><p>The channel manager.</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td><span class="parametername">userManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.html">RefreshChannelsScheduledTask</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.html">RefreshChannelsScheduledTask</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The logger.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
-        <td></td>
+        <td><p>The library manager.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localization</span></td>
+        <td><p>The localization manager.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -181,7 +187,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Category.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L50">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Category_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Category*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Category" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Category">Category</h4>
@@ -213,7 +219,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Description.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L47">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Description_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Description*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Description" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Description">Description</h4>
@@ -245,7 +251,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsEnabled.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L56">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsEnabled_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsEnabled*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsEnabled" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsEnabled">IsEnabled</h4>
@@ -277,7 +283,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsHidden.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsHidden%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L53">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsHidden_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsHidden*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsHidden" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsHidden">IsHidden</h4>
@@ -309,7 +315,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsLogged.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsLogged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L50">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L59">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsLogged_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsLogged*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_IsLogged" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.IsLogged">IsLogged</h4>
@@ -339,7 +345,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Key.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L62">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Key_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Key*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Key" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Key">Key</h4>
@@ -369,7 +375,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Name.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L44">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Name_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Name*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Name" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Name">Name</h4>
@@ -403,11 +409,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Execute(System.Threading.CancellationToken%2CSystem.IProgress%7BSystem.Double%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L65">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Execute_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Execute*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.Execute(System.Threading.CancellationToken,System.IProgress{System.Double})">Execute(CancellationToken, IProgress&lt;Double&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Executes the task</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -426,12 +433,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
-        <td></td>
+        <td><p>The progress.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -446,7 +455,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -455,7 +465,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_GetDefaultTriggers.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.GetDefaultTriggers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L76">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_GetDefaultTriggers_" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.GetDefaultTriggers*"></a>
   <h4 id="Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask_GetDefaultTriggers" data-uid="Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask.GetDefaultTriggers">GetDefaultTriggers()</h4>
@@ -500,7 +510,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_RefreshChannelsScheduledTask.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.RefreshChannelsScheduledTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/RefreshChannelsScheduledTask.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

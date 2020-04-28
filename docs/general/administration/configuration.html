@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Configuration | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Configuration | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="admin-configuration">
+<h1 id="configuration">Configuration</h1>
+
+<p>There are several entry points available for administrators to manage the configuration of their server. This section aims to outline all those configuration methods, explain what options are available, and what each option does.</p>
+<div class="NOTE"><h5>Note</h5><p>The configuration options here are distinct from the <a class="xref" href="../server/settings.html">runtime settings</a> available from the Administrator Dashboard in the web client. The configuration options here are generally meant to be static and set before starting the server.</p>
+</div>
+<h2 id="command-line-options">Command Line Options</h2>
+<p>Documentation for the available command line options can be obtained by adding the <code>--help</code> flag when running the Jellyfin executable.</p>
+<h2 id="server-paths">Server Paths</h2>
+<p>The file paths used by the server are determined according the rules outline below. In general, the <a href="https://specifications.freedesktop.org/basedir-spec/basedir-spec-latest.html">XDG specification</a> is followed by default for non-Windows systems.</p>
+<h3 id="data-directory">Data Directory</h3>
+<p>This is the directory that will hold all Jellyfin data, and is also used as a default base directory for some other paths below. It is set from the following sources in order of decreasing precedence.</p>
+<ol>
+<li>Command line option <code>--datadir</code>, if specified</li>
+<li>Environment variable <code>JELLYFIN_DATA_DIR</code>, if specified</li>
+<li><code>&lt;%APPDATA%&gt;/jellyfin</code>, if running on Windows</li>
+<li><code>$XDG_DATA_HOME/jellyfin</code>, if <code>$XDG_DATA_HOME</code> exists</li>
+<li><code>$HOME/.local/share/jellyfin</code></li>
+</ol>
+<h3 id="configuration-directory">Configuration Directory</h3>
+<p>This is the directory containing the server configuration files. It is set from the following sources in order of decreasing precedence.</p>
+<ol>
+<li>Command line option <code>--configdir</code>, if specified</li>
+<li>Environment variable <code>JELLYFIN_CONFIG_DIR</code>, if specified</li>
+<li><code>&lt;Data Directory&gt;/config</code>, if it exists or if running on Windows</li>
+<li><code>$XDG_CONFIG_HOME/jellyfin</code> if <code>$XDG_CONFIG_HOME</code> exists</li>
+<li><code>$HOME/.config/jellyfin</code></li>
+</ol>
+<h3 id="cache-directory">Cache Directory</h3>
+<p>This is the directory containing the server cache. It is set from the following sources in order of decreasing precedence.</p>
+<ol>
+<li>Command line option <code>--cachedir</code>, if specified</li>
+<li>Environment variable <code>$JELLYFIN_CACHE_DIR</code>, if specified</li>
+<li><code>&lt;Data Directory&gt;/cache</code>, if Windows</li>
+<li><code>$XDG_CACHE_HOME/jellyfin</code> if <code>$XDG_CACHE_HOME</code> exists</li>
+<li><code>$HOME/.cache/jellyfin</code></li>
+</ol>
+<h3 id="web-directory">Web Directory</h3>
+<p>This is the directory containing the built files from a <a href="https://github.com/jellyfin/jellyfin-web">web client</a> release. It is set from the following sources in order of decreasing precedence.</p>
+<ol>
+<li>Command line option <code>--webdir</code>, if specified</li>
+<li>Environment variable <code>$JELLYFIN_WEB_DIR</code>, if specified</li>
+<li><code>&lt;Binary Directory&gt;/jellyfin-web</code>, where <code>&lt;Binary Directory&gt;</code> is the directory containing the Jellyfin executable</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>This setting is only used when the server is configured to host the web client. See the <code>hostwebclient</code> option in the <a href="#main-configuration-options">Main Configuration Options</a> section below for additional details.</p>
+</div>
+<h3 id="log-directory">Log Directory</h3>
+<p>This is the directory where the Jellyfin logs will be stored. It is set from the following sources in order of decreasing precedence.</p>
+<ol>
+<li>Command line option <code>--logdir</code>, if specified</li>
+<li>Environment variable <code>$JELLYFIN_LOG_DIR</code>, if specified</li>
+<li><code>&lt;Data Directory&gt;/log</code></li>
+</ol>
+<h2 id="main-configuration">Main Configuration</h2>
+<p>The main server configuration is built upon the ASP .NET <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1">configuration framework</a>, which provides a tiered approach to loading configuration. The base directory to locate the configuration files is set using the <a href="#configuration-directory">configuration directory</a> setting. The configuration sources are as follows, with later sources having higher priority and overwriting the values in earlier sources.</p>
+<ol>
+<li><strong>Hard-coded default values</strong>: These defaults are specified specified in the Jellyfin <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ConfigurationOptions.cs">source code</a> and cannot be changed.</li>
+<li><strong>Default logging configuration file</strong> (<code>logging.default.json</code>): This file should not be modified manually by users. It is reserved by the server to be overwritten with new settings on each new release.</li>
+<li><p><strong>System-specific logging configuration file</strong> (<code>logging.json</code>): This is the file you should change if you want to have a custom logging setup. Jellyfin uses the <a href="https://serilog.net/">Serilog</a> logging framework, and you can read about the configuration options available in their <a href="https://github.com/serilog/serilog-settings-configuration">documentation</a>.</p>
+<div class="NOTE"><h5>Note</h5><p>This file can be changed at runtime, which will automatically reload the configuration and apply the changes immediately.</p>
+</div>
+</li>
+<li><p><strong>Environment variables</strong>: The <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.1#environment-variables">documentation</a> provided by Microsoft explains how to set these configuration options via environment variables. Jellyfin uses its own custom <code>JELLYFIN_</code> prefix for these variables. For example, to set a value for the <code>HttpListenerHost:DefaultRedirectPath</code> setting, you would set a value for the <code>JELLYFIN_HttpListenerHost__DefaultRedirectPath</code> environment variable.</p>
+</li>
+<li><p><strong>Command line options</strong>: Certain command line options are loaded into the configuration system and have the highest priority. The following command line options are mapped to associated configuration options.</p>
+<ul>
+<li><code>--nowebcontent</code> sets the <code>hostwebclient</code> configuration setting to false</li>
+<li><code>--plugin-manifest-url</code> sets a value for the <code>InstallationManager:PluginManifestUrl</code> configuration setting</li>
+</ul>
+</li>
+</ol>
+<h3 id="main-configuration-options">Main Configuration Options</h3>
+<p>This section lists all the configuration options available and explains their function.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Default Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hostwebclient</code></td>
+<td><code>True</code></td>
+<td>Set to <code>True</code> if the server should host the web client.</td>
+</tr>
+<tr>
+<td><code>HttpListenerHost:DefaultRedirectPath</code></td>
+<td><code>&quot;web/index.html&quot;</code> if <code>hostwebclient</code> is true; <code>&quot;swagger/index.html&quot;</code> if <code>hostwebclient</code> is false</td>
+<td>The default redirect path to use for requests where the URL base prefix is invalid or missing</td>
+</tr>
+<tr>
+<td><code>InstallationManager:PluginManifestUrl</code></td>
+<td><code>&quot;https://repo.jellyfin.org/releases/plugin/manifest.json&quot;</code></td>
+<td>The URL for the plugin repository JSON manifest.</td>
+</tr>
+<tr>
+<td><code>FFmpeg:probesize</code></td>
+<td><code>&quot;1G&quot;</code></td>
+<td>Value to set for the FFmpeg <code>probesize</code> format option. See the FFmpg <a href="https://ffmpeg.org/ffmpeg-formats.html#Format-Options">documentation</a> for more details.</td>
+</tr>
+<tr>
+<td><code>FFmpeg:analyzeduration</code></td>
+<td><code>&quot;200M&quot;</code></td>
+<td>The value to set for the FFmpeg <code>analyzeduration</code> format option. See the FFmpg <a href="https://ffmpeg.org/ffmpeg-formats.html#Format-Options">documentation</a> for more details.</td>
+</tr>
+<tr>
+<td><code>playlists:allowDuplicates</code></td>
+<td><code>True</code></td>
+<td>Whether playlists should allow duplicate items or automatically filter out duplicates.</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/administration/configuration.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

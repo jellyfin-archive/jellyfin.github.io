@@ -161,7 +161,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_PlayTo_SsdpHttpClient_GetDataAsync_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Dlna.PlayTo.SsdpHttpClient.GetDataAsync(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/PlayTo/SsdpHttpClient.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/PlayTo/SsdpHttpClient.cs/#L98">View Source</a>
   </span>
   <a id="Emby_Dlna_PlayTo_SsdpHttpClient_GetDataAsync_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.GetDataAsync*"></a>
   <h4 id="Emby_Dlna_PlayTo_SsdpHttpClient_GetDataAsync_System_String_System_Threading_CancellationToken_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.GetDataAsync(System.String,System.Threading.CancellationToken)">GetDataAsync(String, CancellationToken)</h4>
@@ -210,18 +210,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_PlayTo_SsdpHttpClient_SendCommandAsync_System_String_Emby_Dlna_Common_DeviceService_System_String_System_String_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20Emby.Dlna.PlayTo.SsdpHttpClient.SendCommandAsync(System.String%2CEmby.Dlna.Common.DeviceService%2CSystem.String%2CSystem.String%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_PlayTo_SsdpHttpClient_SendCommandAsync_System_String_Emby_Dlna_Common_DeviceService_System_String_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Dlna.PlayTo.SsdpHttpClient.SendCommandAsync(System.String%2CEmby.Dlna.Common.DeviceService%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/PlayTo/SsdpHttpClient.cs/#L30">View Source</a>
   </span>
   <a id="Emby_Dlna_PlayTo_SsdpHttpClient_SendCommandAsync_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.SendCommandAsync*"></a>
-  <h4 id="Emby_Dlna_PlayTo_SsdpHttpClient_SendCommandAsync_System_String_Emby_Dlna_Common_DeviceService_System_String_System_String_System_Boolean_System_String_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.SendCommandAsync(System.String,Emby.Dlna.Common.DeviceService,System.String,System.String,System.Boolean,System.String)">SendCommandAsync(String, DeviceService, String, String, Boolean, String)</h4>
+  <h4 id="Emby_Dlna_PlayTo_SsdpHttpClient_SendCommandAsync_System_String_Emby_Dlna_Common_DeviceService_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.SendCommandAsync(System.String,Emby.Dlna.Common.DeviceService,System.String,System.String,System.String,System.Threading.CancellationToken)">SendCommandAsync(String, DeviceService, String, String, String, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;XDocument&gt; SendCommandAsync(string baseUrl, DeviceService service, string command, string postData, bool logRequest = true, string header = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task&lt;XDocument&gt; SendCommandAsync(string baseUrl, DeviceService service, string command, string postData, string header = null, CancellationToken cancellationToken = default(CancellationToken))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,13 +254,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">logRequest</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">header</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">header</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -285,7 +285,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_PlayTo_SsdpHttpClient_SubscribeAsync_System_String_System_String_System_Int32_System_String_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Emby.Dlna.PlayTo.SsdpHttpClient.SubscribeAsync(System.String%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/PlayTo/SsdpHttpClient.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/PlayTo/SsdpHttpClient.cs/#L71">View Source</a>
   </span>
   <a id="Emby_Dlna_PlayTo_SsdpHttpClient_SubscribeAsync_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.SubscribeAsync*"></a>
   <h4 id="Emby_Dlna_PlayTo_SsdpHttpClient_SubscribeAsync_System_String_System_String_System_Int32_System_String_System_Int32_System_Int32_" data-uid="Emby.Dlna.PlayTo.SsdpHttpClient.SubscribeAsync(System.String,System.String,System.Int32,System.String,System.Int32,System.Int32)">SubscribeAsync(String, String, Int32, String, Int32, Int32)</h4>

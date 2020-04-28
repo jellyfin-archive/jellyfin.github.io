@@ -83,26 +83,26 @@
 <p>Click on the Admin Panel Icon in the top right corner (1)
 Click &#39;Live TV&#39; (2) under the &#39;Live TV&#39; section
 Click the &#39;+&#39; button (3) next to &#39;Tuner Devices&#39;</p>
-<p><img src="../../../images/live-tv-setup-tuner1.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-tuner1.png" alt="How to access the &#39;Tuner Devices&#39; page"></p>
 <p>Click &#39;Detect My Devices&#39; from the &#39;Live TV Tuner Setup&#39; page that opens
 Jellyfin will search and hopefully find your tuner automatically:</p>
-<p><img src="../../../images/live-tv-setup-tuner2.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-tuner2.png" alt="An example of detected TV tuner devices"></p>
 <p>Click on the device you&#39;d like to set up then set any options then click &#39;Save&#39;</p>
-<p><img src="../../../images/live-tv-setup-tuner3.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-tuner3.png" alt="Saving TV tuner setup"></p>
 <h2 id="add-a-tv-tuner-to-jellyfin-manual-setup">Add a TV Tuner to Jellyfin (Manual Setup)</h2>
 <p>You can set up your tuners manually if they were not automatically discovered.  Click the &#39;Tuner Type&#39; pull down.  Choose between &#39;HD Homerun&#39;, &#39;M3U Tuner&#39;, and &#39;Other&#39;</p>
-<p><img src="../../../images/live-tv-setup-tuner4.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-tuner4.png" alt="Manually adding a TV tuner"></p>
 <h3 id="hdhomerun-specific-options">HDHomeRun Specific Options</h3>
 <ul>
-<li><p>Tuner IP Address is the URL of your HDHomeRun device. The format will be <a href="http://YOUR.IP.ADDRESS">http://YOUR.IP.ADDRESS</a></p>
+<li><p>Tuner IP Address is the URL of your HDHomeRun device. The format will be <code>http://YOUR.IP.ADDRESS</code></p>
 </li>
 <li><p>Allow hardware transcoding will allow the tuner to transcode the video on the fly which can reduce server load.  Not all HDHomeRun devices support hardware transcoding.</p>
 </li>
 <li><p>Restrict to channels marked as favorite will only import channels that are designated as favorite channels on the tuner.  This helps if your tuner autoscans and adds new channels that you do not want and/or adds channels that you are able to receive due to atmospheric conditions but later are not accessible.</p>
 </li>
 </ul>
-<p>To set a favorite, go to <a href="http://my.hdhomerun.com">http://my.hdhomerun.com</a>, select your tuner and then click on the grey star next to the channel name to change the star to yellow.  The yellow star indicates a favorited channel.  In this example, only the channels with yellow stars will be imported into Jellyfin</p>
-<p><img src="../../../images/live-tv-setup-hdhr_opt1.png" alt=""></p>
+<p>To set a favorite, go to the <a href="http://my.hdhomerun.com">HDHomeRun website</a>, select your tuner and then click on the grey star next to the channel name to change the star to yellow.  The yellow star indicates a favorited channel.  In this example, only the channels with yellow stars will be imported into Jellyfin</p>
+<p><img src="../../../images/live-tv-setup-hdhr_opt1.png" alt="Selecting favorites in HDHomeRun"></p>
 <h3 id="m3u-tuner-specific-options">M3U Tuner Specific Options</h3>
 <p>This tuner allows you to add IPTV channel to Jellyfin by using the appropriate M3U8 playlist file.</p>
 <ul>
@@ -116,11 +116,11 @@ Jellyfin will search and hopefully find your tuner automatically:</p>
 </li>
 </ul>
 <div class="NOTE"><h5>Note</h5><p>Here is a list of legal samples to use to test connectivity.</p>
-<p><a href="https://raw.githubusercontent.com/notanewbie/LegalStream/master/packages/news/live.m3u8">https://raw.githubusercontent.com/notanewbie/LegalStream/master/packages/news/live.m3u8</a></p>
+<p><a href="https://raw.githubusercontent.com/notanewbie/LegalStream/master/packages/news/live.m3u8">LegalStream Live News Playlist</a></p>
 </div>
 <h2 id="adding-guide-data">Adding Guide Data</h2>
 <p>Guide data is necessary for scheduling tv recordings and for browsing what&#39;s currently playing and what will air later.  Follow these steps once you have a tuner device set up.  Click on the Admin Panel Icon in the top right corner, Click &#39;Live TV&#39; (2) under the &#39;Live TV&#39; section, Click the &#39;+&#39; button next to &#39;TV Guide Data Providers&#39; :</p>
-<p><img src="../../../images/live-tv-setup-guide1.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-guide1.png" alt="How to add guide data"></p>
 <p>Choose between &#39;Schedules Direct&#39; and &#39;XMLTV&#39;. You currently cannot use both at the same time.</p>
 <p><strong>Schedules Direct:</strong></p>
 <p>Schedules Direct is a paid service that provides U.S. and Canadian guide data for use in OSS projects. The price is $25 a year and has not increased since it began in 2007. The guide data is highly reliable. You will have to create an account at their <a href="http://www.schedulesdirect.org">website</a>.</p>
@@ -128,9 +128,9 @@ Jellyfin will search and hopefully find your tuner automatically:</p>
 <p>This option allows for downloading of guide data in the <a href="http://wiki.xmltv.org/index.php/XMLTVFormat">XMLTV</a> format.</p>
 <h2 id="mapping-channels">Mapping Channels</h2>
 <p>Guide data from the &#39;TV Guide Data Providers&#39; will need to be mapped to the physical channel from the tuner. Click the &#39;...&#39; next to the guide provider you set up and select &#39;Map Channels&#39;</p>
-<p><img src="../../../images/live-tv-setup-channels1.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-channels1.png" alt="Step 1 of mapping channels"></p>
 <p>The list of physical channels will be displayed. Click the pencil icon to the right of the channel and then select the corresponding channel from the guide provider to map the channel. Do this for all channels. Click the left arrow at the top left of the window to exit and save the information.</p>
-<p><img src="../../../images/live-tv-setup-channels2.png" alt=""></p>
+<p><img src="../../../images/live-tv-setup-channels2.png" alt="Step 2 of mapping channels"></p>
 <p>The guide data will now automatically imported. You can check that the data has been imported correctly by going to the &#39;Live TV Guide&#39; page from the main Jellyfin web page on your server.</p>
 </article>
           </div>

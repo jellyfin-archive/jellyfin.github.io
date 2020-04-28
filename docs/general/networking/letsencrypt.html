@@ -83,11 +83,21 @@
 <p>Installation instructions for most Linux distributions can be found on the <a href="https://certbot.eff.org/docs/install.html#operating-system-packages">Certbot</a> website.</p>
 <p>Once the packages are installed, you&#39;re ready to generate a new certificate.</p>
 <h3 id="apache">Apache</h3>
+<h4 id="certbot-apache-plugin">Certbot Apache Plugin</h4>
 <p>After installing Certbot and the Apache plugin, certificate generation is accomplished by with the following command.</p>
 <pre><code class="lang-sh">certbot certonly --apache --noninteractive --agree-tos --email YOUR_EMAIL -d DOMAIN_NAME
 </code></pre><p>Update the &#39;SSLCertificateFile&#39; and &#39;SSLCertificateKeyFile&#39; sections, then restart the service.</p>
 <p>Add a job to cron so the certificate will be renewed automatically.</p>
 <pre><code class="lang-sh">echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload apache2&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot
+</code></pre><h4 id="certbot-webroot">Certbot Webroot</h4>
+<h5 id="debian">Debian</h5>
+<p>If the certbot apache plugin doesn&#39;t work with your config, use webroot instead.</p>
+<p>Add the following to your <virtualhost> section after configuring it a reverse proxy:<p>
+<pre><code class="lang-conf">DocumentRoot /var/www/html/
+#Do not pass the .well-known directory when using certbot and webroot
+ProxyPass /.well-known !
+</code></pre><p>Run the certbot command as root:</p>
+<pre><code class="lang-sh">sudo certbot certonly --webroot -w /var/www/html --agree-tos --email YOUR_EMAIL -d DOMAIN_NAME
 </code></pre><h3 id="haproxy">HAProxy</h3>
 <p>HAProxy doesn&#39;t currently have a Certbot plugin. To get around this, run Certbot in standalone mode and proxy traffic through your network.</p>
 <p>Enable the frontend and backend in the config above, and then run Certbot.</p>
@@ -114,12 +124,12 @@ service haproxy reload
 <pre><code class="lang-data">@monthly /usr/bin/certbot renew --renew-hook &quot;/usr/local/bin/letsencrypt-renew.sh&quot; &gt;&gt; /var/log/letsencrypt-renewal.log
 </code></pre><h3 id="nginx">Nginx</h3>
 <p>After installing Certbot and the Nginx plugin with <code>sudo apt install certbot python3-certbot-nginx</code>, generate the certificate.</p>
-<pre><code class="lang-sh">sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d YOUR_DOMAIN
+<pre><code class="lang-sh">sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d DOMAIN_NAME
 </code></pre><p>Add the <code>--rsa-key-size 4096</code> parameter if you want a 4096 bit key instead.</p>
 <p>Copy and paste the whole Nginx sample configuration file from above, changing the parameters according to your setup and uncommenting the lines.</p>
 <p>Add a job to cron so the certificate will be renewed automatically.</p>
 <pre><code class="lang-sh">echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot
-</code></pre></article>
+</code></pre></virtualhost></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

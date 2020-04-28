@@ -95,10 +95,14 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></div>
+    <div><a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_CanSelfRestart">ApplicationHost.CanSelfRestart</a>
+    </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_CanLaunchWebBrowser">ApplicationHost.CanLaunchWebBrowser</a>
     </div>
@@ -127,12 +131,6 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ConfigurationManager">ApplicationHost.ConfigurationManager</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_FileSystemManager">ApplicationHost.FileSystemManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_SystemUpdateLevel">ApplicationHost.SystemUpdateLevel</a>
-    </div>
-    <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ServiceProvider">ApplicationHost.ServiceProvider</a>
     </div>
     <div>
@@ -142,52 +140,7 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_HttpsPort">ApplicationHost.HttpsPort</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ContentRoot">ApplicationHost.ContentRoot</a>
-    </div>
-    <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ServerConfigurationManager">ApplicationHost.ServerConfigurationManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_UserManager">ApplicationHost.UserManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ImageProcessor">ApplicationHost.ImageProcessor</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_LocalizationManager">ApplicationHost.LocalizationManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_InstallationManager">ApplicationHost.InstallationManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_AuthService">ApplicationHost.AuthService</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_StartupOptions">ApplicationHost.StartupOptions</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ProcessFactory">ApplicationHost.ProcessFactory</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_XmlSerializer">ApplicationHost.XmlSerializer</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_SocketFactory">ApplicationHost.SocketFactory</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_TaskManager">ApplicationHost.TaskManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_HttpClient">ApplicationHost.HttpClient</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_NetworkManager">ApplicationHost.NetworkManager</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_JsonSerializer">ApplicationHost.JsonSerializer</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_IsoManager">ApplicationHost.IsoManager</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExpandVirtualPath_System_String_">ApplicationHost.ExpandVirtualPath(String)</a>
@@ -238,31 +191,25 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_RunStartupTasksAsync">ApplicationHost.RunStartupTasksAsync()</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_InitAsync_IServiceCollection_IConfiguration_">ApplicationHost.InitAsync(IServiceCollection, IConfiguration)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_Init_Microsoft_Extensions_DependencyInjection_IServiceCollection_">ApplicationHost.Init(IServiceCollection)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteWebsocketHandlerAsync_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteWebsocketHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteWebsocketHandlerAsync_Microsoft_AspNetCore_Http_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteWebsocketHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteHttpHandlerAsync_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteHttpHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteHttpHandlerAsync_Microsoft_AspNetCore_Http_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteHttpHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_RegisterResources_IServiceCollection_IConfiguration_">ApplicationHost.RegisterResources(IServiceCollection, IConfiguration)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_InitializeServices">ApplicationHost.InitializeServices()</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_LogEnvironmentInfo_ILogger_MediaBrowser_Common_Configuration_IApplicationPaths_">ApplicationHost.LogEnvironmentInfo(ILogger, IApplicationPaths)</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_FindParts">ApplicationHost.FindParts()</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_LogEnvironmentInfo_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Common_Configuration_IApplicationPaths_">ApplicationHost.LogEnvironmentInfo(ILogger, IApplicationPaths)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_DiscoverTypes">ApplicationHost.DiscoverTypes()</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_Certificate">ApplicationHost.Certificate</a>
-    </div>
-    <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_CreateHttpListener">ApplicationHost.CreateHttpListener()</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_OnConfigurationUpdated_System_Object_System_EventArgs_">ApplicationHost.OnConfigurationUpdated(Object, EventArgs)</a>
@@ -292,13 +239,13 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_SupportsHttps">ApplicationHost.SupportsHttps</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Threading_CancellationToken_">ApplicationHost.GetLocalApiUrl(CancellationToken)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Threading_CancellationToken_System_Boolean_">ApplicationHost.GetLocalApiUrl(CancellationToken, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Net_IPAddress_">ApplicationHost.GetLocalApiUrl(IPAddress)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Net_IPAddress_System_Boolean_">ApplicationHost.GetLocalApiUrl(IPAddress, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_ReadOnlySpan_System_Char__">ApplicationHost.GetLocalApiUrl(ReadOnlySpan&lt;Char&gt;)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_ReadOnlySpan_System_Char__System_Boolean_">ApplicationHost.GetLocalApiUrl(ReadOnlySpan&lt;Char&gt;, Boolean)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalIpAddresses_System_Threading_CancellationToken_">ApplicationHost.GetLocalIpAddresses(CancellationToken)</a>
@@ -359,25 +306,25 @@
   <h6><strong>Assembly</strong>: jellyfin.dll</h6>
   <h5 id="Jellyfin_Server_CoreAppHost_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class CoreAppHost : ApplicationHost, IServerApplicationHost, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class CoreAppHost : ApplicationHost, IServerApplicationHost, IApplicationHost, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_IFileSystem_IImageEncoder_INetworkManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.%23ctor(Emby.Server.Implementations.ServerApplicationPaths%2CMicrosoft.Extensions.Logging.ILoggerFactory%2CJellyfin.Server.StartupOptions%2CIFileSystem%2CIImageEncoder%2CINetworkManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Net_INetworkManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.%23ctor(Emby.Server.Implementations.ServerApplicationPaths%2CMicrosoft.Extensions.Logging.ILoggerFactory%2CJellyfin.Server.StartupOptions%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Common.Net.INetworkManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L28">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost__ctor_" data-uid="Jellyfin.Server.CoreAppHost.#ctor*"></a>
-  <h4 id="Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_IFileSystem_IImageEncoder_INetworkManager_" data-uid="Jellyfin.Server.CoreAppHost.#ctor(Emby.Server.Implementations.ServerApplicationPaths,Microsoft.Extensions.Logging.ILoggerFactory,Jellyfin.Server.StartupOptions,IFileSystem,IImageEncoder,INetworkManager)">CoreAppHost(ServerApplicationPaths, ILoggerFactory, StartupOptions, IFileSystem, IImageEncoder, INetworkManager)</h4>
+  <h4 id="Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Net_INetworkManager_" data-uid="Jellyfin.Server.CoreAppHost.#ctor(Emby.Server.Implementations.ServerApplicationPaths,Microsoft.Extensions.Logging.ILoggerFactory,Jellyfin.Server.StartupOptions,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Common.Net.INetworkManager)">CoreAppHost(ServerApplicationPaths, ILoggerFactory, StartupOptions, IFileSystem, INetworkManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CoreAppHost(ServerApplicationPaths applicationPaths, ILoggerFactory loggerFactory, StartupOptions options, IFileSystem fileSystem, IImageEncoder imageEncoder, INetworkManager networkManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public CoreAppHost(ServerApplicationPaths applicationPaths, ILoggerFactory loggerFactory, StartupOptions options, IFileSystem fileSystem, INetworkManager networkManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -408,61 +355,19 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IFileSystem</span></td>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td><p>The <see cref="!:IFileSystem"></see> to be used by the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a>.</p>
+        <td><p>The <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a> to be used by the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a>.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IImageEncoder</span></td>
-        <td><span class="parametername">imageEncoder</span></td>
-        <td><p>The <see cref="!:IImageEncoder"></see> to be used by the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">INetworkManager</span></td>
+        <td><a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></td>
         <td><span class="parametername">networkManager</span></td>
-        <td><p>The <see cref="!:INetworkManager"></see> to be used by the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a>.</p>
+        <td><p>The <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a> to be used by the <a class="xref" href="Jellyfin.Server.CoreAppHost.html">CoreAppHost</a>.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h3 id="properties">Properties
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_CanSelfRestart.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.CanSelfRestart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L44">View Source</a>
-  </span>
-  <a id="Jellyfin_Server_CoreAppHost_CanSelfRestart_" data-uid="Jellyfin.Server.CoreAppHost.CanSelfRestart*"></a>
-  <h4 id="Jellyfin_Server_CoreAppHost_CanSelfRestart" data-uid="Jellyfin.Server.CoreAppHost.CanSelfRestart">CanSelfRestart</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance can self restart.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool CanSelfRestart { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if this instance can self restart; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_CanSelfRestart">ApplicationHost.CanSelfRestart</a></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -470,7 +375,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L50">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L66">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal_" data-uid="Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal" data-uid="Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal">GetAssembliesWithPartsInternal()</h4>
@@ -499,10 +404,45 @@
   <div><a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetAssembliesWithPartsInternal">ApplicationHost.GetAssembliesWithPartsInternal()</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L44">View Source</a>
+  </span>
+  <a id="Jellyfin_Server_CoreAppHost_RegisterServices_" data-uid="Jellyfin.Server.CoreAppHost.RegisterServices*"></a>
+  <h4 id="Jellyfin_Server_CoreAppHost_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Jellyfin.Server.CoreAppHost.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">RegisterServices(IServiceCollection)</h4>
+  <div class="markdown level1 summary"><p>Registers services/resources with the service collection that will be available via DI.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void RegisterServices(IServiceCollection serviceCollection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_">ApplicationHost.RegisterServices(IServiceCollection)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_RestartInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.RestartInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_RestartInternal_" data-uid="Jellyfin.Server.CoreAppHost.RestartInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_RestartInternal" data-uid="Jellyfin.Server.CoreAppHost.RestartInternal">RestartInternal()</h4>
@@ -519,7 +459,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_ShutdownInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.ShutdownInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L72">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_ShutdownInternal_" data-uid="Jellyfin.Server.CoreAppHost.ShutdownInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_ShutdownInternal" data-uid="Jellyfin.Server.CoreAppHost.ShutdownInternal">ShutdownInternal()</h4>
@@ -536,6 +476,9 @@
       <a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a>
   </div>
   <div>
+      <a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a>
+  </div>
+  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 </article>
@@ -549,7 +492,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

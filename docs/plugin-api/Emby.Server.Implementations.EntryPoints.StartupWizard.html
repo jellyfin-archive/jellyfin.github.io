@@ -130,19 +130,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_EntryPoints_StartupWizard__ctor_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.EntryPoints.StartupWizard.%23ctor(MediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_EntryPoints_StartupWizard__ctor_MediaBrowser_Controller_IServerApplicationHost_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Emby_Server_Implementations_IStartupOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.EntryPoints.StartupWizard.%23ctor(MediaBrowser.Controller.IServerApplicationHost%2CMicrosoft.Extensions.Configuration.IConfiguration%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CEmby.Server.Implementations.IStartupOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L25">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L28">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_EntryPoints_StartupWizard__ctor_" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_EntryPoints_StartupWizard__ctor_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.#ctor(MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.Configuration.IServerConfigurationManager)">StartupWizard(IServerApplicationHost, IServerConfigurationManager)</h4>
+  <h4 id="Emby_Server_Implementations_EntryPoints_StartupWizard__ctor_MediaBrowser_Controller_IServerApplicationHost_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Emby_Server_Implementations_IStartupOptions_" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.#ctor(MediaBrowser.Controller.IServerApplicationHost,Microsoft.Extensions.Configuration.IConfiguration,MediaBrowser.Controller.Configuration.IServerConfigurationManager,Emby.Server.Implementations.IStartupOptions)">StartupWizard(IServerApplicationHost, IConfiguration, IServerConfigurationManager, IStartupOptions)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.EntryPoints.StartupWizard.html">StartupWizard</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StartupWizard(IServerApplicationHost appHost, IServerConfigurationManager config)</code></pre>
+    <pre><code class="lang-csharp hljs">public StartupWizard(IServerApplicationHost appHost, IConfiguration appConfig, IServerConfigurationManager config, IStartupOptions startupOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -161,9 +161,21 @@
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">appConfig</span></td>
+        <td><p>The application configuration.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
         <td><span class="parametername">config</span></td>
         <td><p>The configuration manager.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Server.Implementations.IStartupOptions.html">IStartupOptions</a></td>
+        <td><span class="parametername">startupOptions</span></td>
+        <td><p>The application startup options.</p>
 </td>
       </tr>
     </tbody>
@@ -175,7 +187,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_EntryPoints_StartupWizard_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.EntryPoints.StartupWizard.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L57">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L79">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_EntryPoints_StartupWizard_Dispose_" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_EntryPoints_StartupWizard_Dispose" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.Dispose">Dispose()</h4>
@@ -190,7 +202,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_EntryPoints_StartupWizard_RunAsync.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.EntryPoints.StartupWizard.RunAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L41">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_EntryPoints_StartupWizard_RunAsync_" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.RunAsync*"></a>
   <h4 id="Emby_Server_Implementations_EntryPoints_StartupWizard_RunAsync" data-uid="Emby.Server.Implementations.EntryPoints.StartupWizard.RunAsync">RunAsync()</h4>
@@ -234,7 +246,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_EntryPoints_StartupWizard.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.EntryPoints.StartupWizard%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/EntryPoints/StartupWizard.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

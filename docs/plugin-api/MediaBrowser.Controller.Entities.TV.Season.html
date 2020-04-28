@@ -104,9 +104,6 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserManager">Folder.UserManager</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserViewManager">Folder.UserViewManager</a>
     </div>
     <div>
@@ -830,9 +827,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtras">BaseItem.GetDisplayExtras()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
     </div>
     <div>
@@ -902,7 +896,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Guid DisplayParentId { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override Guid DisplayParentId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -934,7 +929,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsPreSorted { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool IsPreSorted { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -967,7 +963,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Series Series { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Series Series { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -998,7 +995,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Guid SeriesId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public Guid SeriesId { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1028,7 +1026,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SeriesName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public string SeriesName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1058,7 +1057,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SeriesPath { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public string SeriesPath { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1088,7 +1088,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SeriesPresentationUniqueKey { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public string SeriesPresentationUniqueKey { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1118,7 +1119,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsAddingToPlaylist { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsAddingToPlaylist { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1150,7 +1152,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsDateLastMediaAdded { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsDateLastMediaAdded { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1182,7 +1185,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsInheritedParentImages { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsInheritedParentImages { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1214,7 +1218,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPeople { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPeople { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -83,7 +83,8 @@
   
   <h1 id="Emby_Server_Implementations_Channels_ChannelPostScanTask" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask" class="text-break">Class ChannelPostScanTask
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A task to remove all non-installed channels from the database.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -124,18 +125,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_ChannelPostScanTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_ILogger_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.ChannelPostScanTask.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMediaBrowser.Controller.Library.IUserManager%2CILogger%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_ChannelPostScanTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.ChannelPostScanTask.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMicrosoft.Extensions.Logging.ILogger%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L21">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L27">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_ChannelPostScanTask__ctor_" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Channels_ChannelPostScanTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_ILogger_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask.#ctor(MediaBrowser.Controller.Channels.IChannelManager,MediaBrowser.Controller.Library.IUserManager,ILogger,MediaBrowser.Controller.Library.ILibraryManager)">ChannelPostScanTask(IChannelManager, IUserManager, ILogger, ILibraryManager)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Emby_Server_Implementations_Channels_ChannelPostScanTask__ctor_MediaBrowser_Controller_Channels_IChannelManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask.#ctor(MediaBrowser.Controller.Channels.IChannelManager,Microsoft.Extensions.Logging.ILogger,MediaBrowser.Controller.Library.ILibraryManager)">ChannelPostScanTask(IChannelManager, ILogger, ILibraryManager)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Channels.ChannelPostScanTask.html">ChannelPostScanTask</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ChannelPostScanTask(IChannelManager channelManager, IUserManager userManager, ILogger logger, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public ChannelPostScanTask(IChannelManager channelManager, ILogger logger, ILibraryManager libraryManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,22 +152,20 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Channels.IChannelManager.html">IChannelManager</a></td>
         <td><span class="parametername">channelManager</span></td>
-        <td></td>
+        <td><p>The channel manager.</p>
+</td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td><span class="parametername">userManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">ILogger</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>The logger.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
-        <td></td>
+        <td><p>The library manager.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -176,11 +176,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_ChannelPostScanTask_Run_System_IProgress_System_Double__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.ChannelPostScanTask.Run(System.IProgress%7BSystem.Double%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L40">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Channels_ChannelPostScanTask_Run_" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask.Run*"></a>
   <h4 id="Emby_Server_Implementations_Channels_ChannelPostScanTask_Run_System_IProgress_System_Double__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Channels.ChannelPostScanTask.Run(System.IProgress{System.Double},System.Threading.CancellationToken)">Run(IProgress&lt;Double&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Runs this task.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -199,12 +200,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iprogress-1">IProgress</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
         <td><span class="parametername">progress</span></td>
-        <td></td>
+        <td><p>The progress.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -219,7 +222,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>The completed task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -234,7 +238,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Channels_ChannelPostScanTask.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Channels.ChannelPostScanTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Channels/ChannelPostScanTask.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -82,16 +82,16 @@
 <p>This document is a guide for the core team, provided publicly to ensure transparency in the release process.</p>
 <h2 id="versioning">Versioning</h2>
 <p>Jellyfin uses <a href="https://semver.org">semantic versioning</a>. All releases will have versions in the <code>X.Y.Z</code> format, starting from <code>10.0.0</code>. Note however that the <code>10.Y.Z</code> release chain represents the &quot;cleanup&quot; of the codebase, so it should be accepted that <code>10.Y.Z</code> breaks all compatibility, at some point, with previous Emby-compatible interfaces, and may also break compatibility with previous <code>10.Y</code> releases if required for later cleanup work. Our versioning will typically follow the patterns below:</p>
-<h4 id="x---major-versions"><code>X</code> - Major Versions</h4>
+<h3 id="x---major-versions"><code>X</code> - Major Versions</h3>
 <ul>
 <li>Breaks compatibility with the HTTP or plugin APIs</li>
 </ul>
-<h4 id="y---minor-versions"><code>Y</code> - Minor Versions</h4>
+<h3 id="y---minor-versions"><code>Y</code> - Minor Versions</h3>
 <ul>
 <li>Introduces new features</li>
 <li>Makes minor backwards-compatible API changes</li>
 </ul>
-<h4 id="z---hotfix-versions"><code>Z</code> - Hotfix Versions</h4>
+<h3 id="z---hotfix-versions"><code>Z</code> - Hotfix Versions</h3>
 <ul>
 <li>Critical bug fixes or minor changes</li>
 </ul>
@@ -113,18 +113,17 @@
 <li><p>Once all testing is complete and the release remains stable, proceed.</p>
 </li>
 </ol>
-<h4 id="web-client">Web Client</h4>
+<h4 id="release-web-client">Release Web Client</h4>
 <ol>
 <li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin-web">jellyfin-web</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
 </li>
 <li><p>Create a GitHub release for the new version, based on the newly-created <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> (i.e. <code>vX.Y.0</code>) and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</p>
+<pre><code class="lang-md">[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
+</code></pre></li>
+<li><p>Publish the release.</p>
 </li>
 </ol>
-<pre><code>[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
-</code></pre><ol>
-<li>Publish the release.</li>
-</ol>
-<h4 id="server">Server</h4>
+<h4 id="release-server">Release Server</h4>
 <ol>
 <li><p>Create a release branch on the <a href="https://github.com/jellyfin/jellyfin">jellyfin</a> repository via CLI from <code>master</code>, named <code>release-X.Y.z</code>, where <code>X</code> and <code>Y</code> are the new version number, and <code>z</code> is a literal <code>z</code>. Push the new branch to GitHub.</p>
 </li>
@@ -169,15 +168,15 @@
 </ol>
 </li>
 </ol>
-<h4 id="web-client-1">Web Client</h4>
+<h4 id="web-client">Web Client</h4>
 <ol>
-<li>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</li>
+<li><p>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following link only, replacing the version as required:</p>
+<pre><code class="lang-md">[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
+</code></pre></li>
+<li><p>Publish the release on GitHub and the archive repository.</p>
+</li>
 </ol>
-<pre><code>[Please see the release announcement on the main repository.](https://github.com/jellyfin/jellyfin/releases/tag/vX.Y.Z)
-</code></pre><ol>
-<li>Publish the release on GitHub and the archive repository.</li>
-</ol>
-<h4 id="server-1">Server</h4>
+<h4 id="server">Server</h4>
 <ol>
 <li><p>Create a GitHub release for the new version, based on the relevant <code>release-X.Y.z</code> branch. The tag should be named <code>vX.Y.Z</code> and the release named &quot;Release X.Y.Z&quot;. The release body should contain the following components:</p>
 <p>a. A quick top blurb under a <code># Jellyfin X.Y.Z</code> header.</p>

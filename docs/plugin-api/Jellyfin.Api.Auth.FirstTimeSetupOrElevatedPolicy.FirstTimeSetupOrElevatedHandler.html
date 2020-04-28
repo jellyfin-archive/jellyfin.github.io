@@ -89,25 +89,57 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">FirstTimeSetupOrElevatedHandler</span></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandler-1">AuthorizationHandler</a>&lt;<a class="xref" href="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement.html">FirstTimeSetupOrElevatedRequirement</a>&gt;</div>
+    <div class="level2"><span class="xref">FirstTimeSetupOrElevatedHandler</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationhandler">IAuthorizationHandler</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandler-1.handleasync#Microsoft_AspNetCore_Authorization_AuthorizationHandler_1_HandleAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_">AuthorizationHandler&lt;FirstTimeSetupOrElevatedRequirement&gt;.HandleAsync(AuthorizationHandlerContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.html">Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy</a></h6>
   <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
   <h5 id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class FirstTimeSetupOrElevatedHandler : AuthorizationHandler&lt;FirstTimeSetupOrElevatedRequirement&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class FirstTimeSetupOrElevatedHandler : AuthorizationHandler&lt;FirstTimeSetupOrElevatedRequirement&gt;, IAuthorizationHandler</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler__ctor_IConfigurationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.%23ctor(IConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler__ctor_MediaBrowser_Common_Configuration_IConfigurationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.%23ctor(MediaBrowser.Common.Configuration.IConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/FirstTimeSetupOrElevatedPolicy/FirstTimeSetupOrElevatedHandler.cs/#L19">View Source</a>
   </span>
   <a id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler__ctor_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler__ctor_IConfigurationManager_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.#ctor(IConfigurationManager)">FirstTimeSetupOrElevatedHandler(IConfigurationManager)</h4>
+  <h4 id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler__ctor_MediaBrowser_Common_Configuration_IConfigurationManager_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.#ctor(MediaBrowser.Common.Configuration.IConfigurationManager)">FirstTimeSetupOrElevatedHandler(IConfigurationManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.html">FirstTimeSetupOrElevatedHandler</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -126,7 +158,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IConfigurationManager</span></td>
+        <td><a class="xref" href="MediaBrowser.Common.Configuration.IConfigurationManager.html">IConfigurationManager</a></td>
         <td><span class="parametername">configurationManager</span></td>
         <td><p>The jellyfin configuration manager.</p>
 </td>
@@ -137,13 +169,13 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_HandleRequirementAsync_AuthorizationHandlerContext_Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedRequirement_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.HandleRequirementAsync(AuthorizationHandlerContext%2CJellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedRequirement_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext%2CJellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/FirstTimeSetupOrElevatedPolicy/FirstTimeSetupOrElevatedHandler.cs/#L25">View Source</a>
   </span>
   <a id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_HandleRequirementAsync_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.HandleRequirementAsync*"></a>
-  <h4 id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_HandleRequirementAsync_AuthorizationHandlerContext_Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedRequirement_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.HandleRequirementAsync(AuthorizationHandlerContext,Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement)">HandleRequirementAsync(AuthorizationHandlerContext, FirstTimeSetupOrElevatedRequirement)</h4>
+  <h4 id="Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedHandler_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_Jellyfin_Api_Auth_FirstTimeSetupOrElevatedPolicy_FirstTimeSetupOrElevatedRequirement_" data-uid="Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement)">HandleRequirementAsync(AuthorizationHandlerContext, FirstTimeSetupOrElevatedRequirement)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -161,7 +193,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">AuthorizationHandlerContext</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandlercontext">AuthorizationHandlerContext</a></td>
         <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
@@ -187,6 +219,12 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Microsoft.AspNetCore.Authorization.AuthorizationHandler&lt;Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement&gt;.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext, Jellyfin.Api.Auth.FirstTimeSetupOrElevatedPolicy.FirstTimeSetupOrElevatedRequirement)</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.iauthorizationhandler">Microsoft.AspNetCore.Authorization.IAuthorizationHandler</a>
+  </div>
 </article>
           </div>
           

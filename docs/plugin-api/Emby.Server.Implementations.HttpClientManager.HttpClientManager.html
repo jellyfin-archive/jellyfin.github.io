@@ -129,19 +129,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_ILogger_Emby_Server_Implementations_HttpClientManager_HttpClientManager__MediaBrowser_Model_IO_IFileSystem_System_Func_System_String__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.%23ctor(MediaBrowser.Common.Configuration.IApplicationPaths%2CILogger%7BEmby.Server.Implementations.HttpClientManager.HttpClientManager%7D%2CMediaBrowser.Model.IO.IFileSystem%2CSystem.Func%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_HttpClientManager_HttpClientManager__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_IApplicationHost_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.%23ctor(MediaBrowser.Common.Configuration.IApplicationPaths%2CMicrosoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.HttpClientManager.HttpClientManager%7D%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Common.IApplicationHost)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L40">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager__ctor_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_ILogger_Emby_Server_Implementations_HttpClientManager_HttpClientManager__MediaBrowser_Model_IO_IFileSystem_System_Func_System_String__" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.#ctor(MediaBrowser.Common.Configuration.IApplicationPaths,ILogger{Emby.Server.Implementations.HttpClientManager.HttpClientManager},MediaBrowser.Model.IO.IFileSystem,System.Func{System.String})">HttpClientManager(IApplicationPaths, ILogger&lt;HttpClientManager&gt;, IFileSystem, Func&lt;String&gt;)</h4>
+  <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager__ctor_MediaBrowser_Common_Configuration_IApplicationPaths_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_HttpClientManager_HttpClientManager__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_IApplicationHost_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.#ctor(MediaBrowser.Common.Configuration.IApplicationPaths,Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.HttpClientManager.HttpClientManager},MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Common.IApplicationHost)">HttpClientManager(IApplicationPaths, ILogger&lt;HttpClientManager&gt;, IFileSystem, IApplicationHost)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.HttpClientManager.HttpClientManager.html">HttpClientManager</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClientManager(IApplicationPaths appPaths, ILogger&lt;HttpClientManager&gt; logger, IFileSystem fileSystem, Func&lt;string&gt; defaultUserAgentFn)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpClientManager(IApplicationPaths appPaths, ILogger&lt;HttpClientManager&gt; logger, IFileSystem fileSystem, IApplicationHost appHost)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -159,7 +159,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Emby.Server.Implementations.HttpClientManager.HttpClientManager.html">HttpClientManager</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.HttpClientManager.HttpClientManager.html">HttpClientManager</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -169,8 +169,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">defaultUserAgentFn</span></td>
+        <td><a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a></td>
+        <td><span class="parametername">appHost</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -182,7 +182,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager_Get_MediaBrowser_Common_Net_HttpRequestOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.Get(MediaBrowser.Common.Net.HttpRequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L146">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L147">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_Get_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.Get*"></a>
   <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_Get_MediaBrowser_Common_Net_HttpRequestOptions_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.Get(MediaBrowser.Common.Net.HttpRequestOptions)">Get(HttpRequestOptions)</h4>
@@ -232,7 +232,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager_GetResponse_MediaBrowser_Common_Net_HttpRequestOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.GetResponse(MediaBrowser.Common.Net.HttpRequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L139">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_GetResponse_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.GetResponse*"></a>
   <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_GetResponse_MediaBrowser_Common_Net_HttpRequestOptions_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.GetResponse(MediaBrowser.Common.Net.HttpRequestOptions)">GetResponse(HttpRequestOptions)</h4>
@@ -282,7 +282,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager_Post_MediaBrowser_Common_Net_HttpRequestOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.Post(MediaBrowser.Common.Net.HttpRequestOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L286">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L282">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_Post_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.Post*"></a>
   <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_Post_MediaBrowser_Common_Net_HttpRequestOptions_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.Post(MediaBrowser.Common.Net.HttpRequestOptions)">Post(HttpRequestOptions)</h4>
@@ -332,7 +332,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_MediaBrowser_Common_Net_HttpRequestOptions_System_Net_Http_HttpMethod_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(MediaBrowser.Common.Net.HttpRequestOptions%2CSystem.Net.Http.HttpMethod)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L167">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L168">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync*"></a>
   <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_MediaBrowser_Common_Net_HttpRequestOptions_System_Net_Http_HttpMethod_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(MediaBrowser.Common.Net.HttpRequestOptions,System.Net.Http.HttpMethod)">SendAsync(HttpRequestOptions, HttpMethod)</h4>
@@ -388,7 +388,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_MediaBrowser_Common_Net_HttpRequestOptions_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(MediaBrowser.Common.Net.HttpRequestOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L158">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L159">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync*"></a>
   <h4 id="Emby_Server_Implementations_HttpClientManager_HttpClientManager_SendAsync_MediaBrowser_Common_Net_HttpRequestOptions_System_String_" data-uid="Emby.Server.Implementations.HttpClientManager.HttpClientManager.SendAsync(MediaBrowser.Common.Net.HttpRequestOptions,System.String)">SendAsync(HttpRequestOptions, String)</h4>
@@ -454,7 +454,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_HttpClientManager_HttpClientManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.HttpClientManager.HttpClientManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/HttpClientManager/HttpClientManager.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

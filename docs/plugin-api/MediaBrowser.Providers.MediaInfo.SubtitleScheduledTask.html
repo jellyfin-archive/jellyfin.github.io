@@ -128,18 +128,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_ILogger_MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__MediaBrowser_Controller_Library_IMediaSourceManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Subtitles.ISubtitleManager%2CILogger%7BMediaBrowser.Providers.MediaInfo.SubtitleScheduledTask%7D%2CMediaBrowser.Controller.Library.IMediaSourceManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Subtitles.ISubtitleManager%2CMicrosoft.Extensions.Logging.ILogger%7BMediaBrowser.Providers.MediaInfo.SubtitleScheduledTask%7D%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L31">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__ctor_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_ILogger_MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__MediaBrowser_Controller_Library_IMediaSourceManager_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Subtitles.ISubtitleManager,ILogger{MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask},MediaBrowser.Controller.Library.IMediaSourceManager)">SubtitleScheduledTask(ILibraryManager, IJsonSerializer, IServerConfigurationManager, ISubtitleManager, ILogger&lt;SubtitleScheduledTask&gt;, IMediaSourceManager)</h4>
+  <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask__MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Subtitles.ISubtitleManager,Microsoft.Extensions.Logging.ILogger{MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask},MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Model.Globalization.ILocalizationManager)">SubtitleScheduledTask(ILibraryManager, IJsonSerializer, IServerConfigurationManager, ISubtitleManager, ILogger&lt;SubtitleScheduledTask&gt;, IMediaSourceManager, ILocalizationManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SubtitleScheduledTask(ILibraryManager libraryManager, IJsonSerializer json, IServerConfigurationManager config, ISubtitleManager subtitleManager, ILogger&lt;SubtitleScheduledTask&gt; logger, IMediaSourceManager mediaSourceManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public SubtitleScheduledTask(ILibraryManager libraryManager, IJsonSerializer json, IServerConfigurationManager config, ISubtitleManager subtitleManager, ILogger&lt;SubtitleScheduledTask&gt; logger, IMediaSourceManager mediaSourceManager, ILocalizationManager localization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,13 +172,18 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.html">SubtitleScheduledTask</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.html">SubtitleScheduledTask</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
         <td><span class="parametername">mediaSourceManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localization</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -190,7 +195,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Category.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L211">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L215">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Category_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Category*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Category" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Category">Category</h4>
@@ -220,7 +225,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Description.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L209">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L213">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Description_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Description*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Description" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Description">Description</h4>
@@ -250,7 +255,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsEnabled.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L217">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L221">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsEnabled_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsEnabled*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsEnabled" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsEnabled">IsEnabled</h4>
@@ -280,7 +285,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsHidden.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsHidden%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L215">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L219">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsHidden_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsHidden*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsHidden" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsHidden">IsHidden</h4>
@@ -310,7 +315,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsLogged.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsLogged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L219">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L223">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsLogged_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsLogged*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_IsLogged" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.IsLogged">IsLogged</h4>
@@ -340,7 +345,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Key.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L213">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L217">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Key_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Key*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Key" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Key">Key</h4>
@@ -370,7 +375,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L207">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L211">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Name_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Name*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Name" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Name">Name</h4>
@@ -402,7 +407,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Execute(System.Threading.CancellationToken%2CSystem.IProgress%7BSystem.Double%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L50">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L54">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Execute_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Execute*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.Execute(System.Threading.CancellationToken,System.IProgress{System.Double})">Execute(CancellationToken, IProgress&lt;Double&gt;)</h4>
@@ -454,7 +459,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_GetDefaultTriggers.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.GetDefaultTriggers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L198">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L202">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_GetDefaultTriggers_" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.GetDefaultTriggers*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask_GetDefaultTriggers" data-uid="MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask.GetDefaultTriggers">GetDefaultTriggers()</h4>
@@ -494,7 +499,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_SubtitleScheduledTask.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.SubtitleScheduledTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/SubtitleScheduledTask.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

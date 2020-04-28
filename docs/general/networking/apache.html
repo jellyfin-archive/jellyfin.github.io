@@ -80,7 +80,7 @@
 <h2 id="apache-http-server-project">Apache HTTP Server Project</h2>
 
 <p>&quot;The <a href="https://httpd.apache.org/">Apache HTTP Server Project</a> is an effort to develop and maintain an open-source HTTP server for modern operating systems including UNIX and Windows. The goal of this project is to provide a secure, efficient and extensible server that provides HTTP services in sync with the current HTTP standards.&quot;</p>
-<pre><code>&lt;VirtualHost *:80&gt;
+<pre><code class="lang-conf">&lt;VirtualHost *:80&gt;
     ServerName DOMAIN_NAME
 
     # Uncomment for HTTP to HTTPS redirect
@@ -122,7 +122,7 @@
 #&lt;/VirtualHost&gt;
 #&lt;/IfModule&gt;
 </code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code>, or <code>proxy_wstunnel</code> support manually.</p>
-<pre><code class="lang-bash">$ sudo a2enmod proxy proxy_http ssl proxy_wstunnel
+<pre><code class="lang-bash">sudo a2enmod proxy proxy_http ssl proxy_wstunnel
 </code></pre></article>
           </div>
           

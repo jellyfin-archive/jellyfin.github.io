@@ -95,7 +95,7 @@
 </tr>
 <tr>
 <td>Windows</td>
-<td>QSV, NVENC, AMF, VAAPI</td>
+<td>QSV, NVENC, AMF</td>
 </tr>
 <tr>
 <td>MacOS</td>
@@ -160,21 +160,23 @@ services:
 </code></pre><h2 id="debian-docker-nvidia">Debian Docker Nvidia</h2>
 <p>In order to achieve hardware acceleration using docker, several steps are required.</p>
 <p>Prerequisites:</p>
-<p><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0">https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0</a>)</p>
-<pre><code>GNU/Linux x86_64 with kernel version &gt; 3.10
-Docker &gt;= 1.12
-NVIDIA GPU with Architecture &gt; Fermi (2.1)
-NVIDIA drivers ~= 361.93 (untested on older versions)
-</code></pre><p>Confirm that your GPU shows up with this command.</p>
+<p><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)">NVIDIA Docker Installation</a></p>
+<ul>
+<li>GNU/Linux x86_64 with kernel version &gt; 3.10</li>
+<li>Docker &gt;= 1.12</li>
+<li>NVIDIA GPU with Architecture &gt; Fermi (2.1)</li>
+<li>NVIDIA drivers ~= 361.93 (untested on older versions)</li>
+</ul>
+<p>Confirm that your GPU shows up with this command.</p>
 <pre><code class="lang-sh">lspci | grep VGA
 </code></pre><p>Update your host so there is no chance of outdated software causing issues.</p>
 <pre><code class="lang-sh">apt-get update &amp;&amp; apt-get dist-upgrade -y
 </code></pre><p>Install curl which will be used to download the required files.</p>
 <pre><code class="lang-sh">apt-get install curl
 </code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code> and add <code>non-free contrib</code> to each source as required.</p>
-<pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main
+<pre><code class="lang-data">deb http://deb.debian.org/debian/ stretch main
 </code></pre><p>The line above should be modified to match the following line as an example.</p>
-<pre><code class="lang-data">deb http://ftp.ch.debian.org/debian/ stretch main non-free contrib
+<pre><code class="lang-data">deb http://deb.debian.org/debian/ stretch main non-free contrib
 </code></pre><p>Download and add the sources for the Nvidia docker container.</p>
 <pre><code class="lang-sh">curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -201,7 +203,10 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 </code></pre><p>Restart any docker services currently running.</p>
 <pre><code class="lang-sh">sudo pkill -SIGHUP docker
 </code></pre><p>Install nvidia drivers and dependencies.</p>
-<pre><code class="lang-sh">apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
+<pre><code class="lang-sh"># Debian 9 Stretch
+apt-get install -t stretch-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
+# Debian 10 Buster
+apt-get install -t buster-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
 </code></pre><p>Reboot your host to apply all changes.</p>
 <pre><code class="lang-sh">reboot now
 </code></pre><p>Validate that your driver and docker are correctly set up with this driver test.</p>
@@ -233,11 +238,12 @@ ldconfig -p | grep libnvidia-encode.so.1
 <pre><code class="lang-sh">--user 1000:1000
 </code></pre><p>You may need to add this user to the video group.</p>
 <pre><code class="lang-sh">usermod -aG video user
-</code></pre><p>Once the container is started you can again validate access to the host ressources.</p>
-<pre><code class="lang-sh">docker exec -it jellyfin ldconfig -p | grep cuvid
-docker exec -it jellyfin ldconfig -p | grep libnvidia-encode.so.1
-</code></pre><p>Now go in Jellyfin playback settings, enable Nvidia NVENC and select target codecs depending on what your GPU support
-try to play any file needing a transcode. Changing the bitrate is a good way to try this.</p>
+</code></pre><p>Once the container is started you can again validate access to the host resources.</p>
+<pre><code class="lang-sh">docker exec -it jellyfin nvidia-smi
+</code></pre><p>If you get driver information, everything is fine but if you get an error like <code>couldn&#39;t find libnvidia-ml.so library in your system</code> you need to run the following command.</p>
+<pre><code class="lang-sh">docker exec -it jellyfin ldconfig
+</code></pre><p>After that, you should ensure the Nvidia driver loads correctly.</p>
+<p>Now go to the Jellyfin playback settings, enable Nvidia NVENC and select your target codecs depending on what your GPU supports. Try to play any file needing a transcode by changing the bitrate.</p>
 <p>Check the transcode logs to make sure everything is working properly.</p>
 <pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
@@ -256,11 +262,9 @@ crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
 </div>
 </li>
 <li><p>Add the Jellyfin service user to the above group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</p>
-</li>
-</ol>
 <pre><code class="lang-sh">sudo usermod -aG render jellyfin
 sudo systemctl restart jellyfin
-</code></pre><ol>
+</code></pre></li>
 <li><p>Configure VAAPI acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
 </li>
 <li><p>Watch a movie, and verify that transcoding is occurring by watching the <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code> and using <code>radeontop</code> or similar tools.</p>
@@ -270,31 +274,28 @@ sudo systemctl restart jellyfin
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
-<li>Add your GPU to the container.</li>
-</ol>
-<pre><code class="lang-sh">$ lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
-</code></pre><ol>
-<li>Make sure you have the card within the container:</li>
-</ol>
+<li><p>Add your GPU to the container.</p>
+<pre><code class="lang-sh">lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
+</code></pre></li>
+<li><p>Make sure you have the card within the container:</p>
 <pre><code class="lang-sh">$ lxc exec jellyfin -- ls -l /dev/dri
 total 0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 controlD64
 crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
-</code></pre><ol>
+</code></pre></li>
 <li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
 </li>
 <li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
+<pre><code class="lang-sh">ps aux | grep ffmpeg | grep accel
+</code></pre></li>
+<li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
 </li>
-</ol>
-<pre><code class="lang-sh">$ ps aux | grep ffmpeg | grep accel
-</code></pre><ol>
-<li>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</li>
 </ol>
 <p>Useful Resources:</p>
 <ul>
-<li><a href="https://github.com/lxc/lxd/blob/master/doc/containers.md#type-gpu">https://github.com/lxc/lxd/blob/master/doc/containers.md#type-gpu</a></li>
-<li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">https://stgraber.org/2017/03/21/cuda-in-lxd/</a></li>
+<li><a href="https://github.com/lxc/lxd/blob/master/doc/instances.md#type-gpu">LXD Documentation - GPU instance configuration</a></li>
+<li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">NVidia CUDA inside a LXD container</a></li>
 </ul>
 <h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
 <ol>

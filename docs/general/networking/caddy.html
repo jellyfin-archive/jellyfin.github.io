@@ -77,26 +77,46 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="network-reverse-proxy-caddy">
-<h2 id="caddy">Caddy</h2>
+<h1 id="caddy">Caddy</h1>
 
 <p>&quot;<a href="https://caddyserver.com/">Caddy</a>, sometimes clarified as the Caddy web server, is an open source, HTTP/2-enabled web server written in Go. It uses the Go standard library for its HTTP functionality.&quot; - <a href="https://en.wikipedia.org/wiki/Caddy_(web_server)">Wikipedia</a></p>
-<h3 id="caddyfile">Caddyfile</h3>
-<pre><code>DOMAIN_NAME/jellyfin/ {
-    proxy / localhost:8096 {
-        transparent
-        websocket
-    }
-}
-</code></pre><p>Using DOMAIN_NAME or sub.DOMAIN_NAME would also work, as would using multiple at once.</p>
-<p>Caddy will automatically attempt to obtain a free HTTPS certificate and handle renewals, making the section below unnecessary.</p>
-<p>If using a subpath, note that <code>DOMAIN_NAME/jellyfin</code> will not resolve, the ending slash is needed. To get around this, you can add the following to your <code>Caddyfile</code>. This is only helpful for the web client, just one less character to type in the browser.</p>
-<pre><code>DOMAIN_NAME {
-    redir {
-        /jellyfin /jellyfin/
-    }
-}
-</code></pre><p>Community Links:</p>
-<p><a href="https://www.reddit.com/r/jellyfin/comments/ek8ugr/windows_reverse_proxy_guide/">https://www.reddit.com/r/jellyfin/comments/ek8ugr/windows_reverse_proxy_guide/</a></p>
+<p>You can reverse proxy to Jellyfin either with or without a config file, and either method offers automatic HTTPS if you want to use your public domain name.</p>
+<p><strong>If you want HTTPS, make sure your domain name&#39;s A/AAAA records are pointed at your public IP address.</strong></p>
+<p>If you aren&#39;t familiar with Caddy yet, check out its <a href="https://caddyserver.com/docs/getting-started">Getting Started</a> guide.</p>
+<h2 id="one-liners">One-liners</h2>
+<p>The easiest way to reverse proxy to Jellyfin is with the <code>reverse-proxy</code> command:</p>
+<pre><code class="lang-bash">caddy reverse-proxy --from :5001 --to 127.0.0.1:8096
+</code></pre><p>That is a simple but production-ready plaintext HTTP reverse proxy.</p>
+<p>If you have:</p>
+<ul>
+<li>permission to bind to low ports, and</li>
+<li>a public domain name&#39;s DNS records pointed at your machine,</li>
+</ul>
+<p>then you can serve over HTTPS just as easily:</p>
+<pre><code class="lang-bash">caddy reverse-proxy --from example.com --to 127.0.0.1:8096
+</code></pre><p>You will see Caddy provision a TLS certificate for your site and, if it succeeds, you can then access your Jellyfin server over HTTPS with your domain name.</p>
+<h2 id="caddyfile">Caddyfile</h2>
+<p>If you want to use a config file, create a file called <code>Caddyfile</code>, where we will put our configuration.</p>
+<p>The first <code>reverse-proxy</code> command above is equivalent to:</p>
+<pre><code class="lang-txt">:5001
+
+reverse_proxy 127.0.0.1:8096
+</code></pre><p>To get HTTPS, simply change the first line to your domain name:</p>
+<pre><code class="lang-txt">example.com
+
+reverse_proxy 127.0.0.1:8096
+</code></pre><h3 id="subpath">Subpath</h3>
+<p>You can serve Jellyfin only at a particular base path and not proxy all other requests.</p>
+<p>To do this, first configure Jellyfin to use a base path: go to Admin -&gt; Networking and in the &quot;Base URL&quot; field, enter a path like <code>/jellyfin</code>. You might have to restart the Jellyfin server for this to take effect.</p>
+<p>Then simply give the <code>reverse_proxy</code> directive a path matcher:</p>
+<pre><code class="lang-txt">example.com
+
+reverse_proxy /jellyfin/* 127.0.0.1:8096
+</code></pre><p>With that config, Caddy will only proxy requests that start with <code>/jellyfin/</code> (note the trailing slash -- that is optional, but recommended).</p>
+<h2 id="community-links">Community Links</h2>
+<ul>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/ek8ugr/windows_reverse_proxy_guide/">Windows Reverse Proxy Guide</a> (for Caddy v1, which is obsolete)</li>
+</ul>
 </article>
           </div>
           

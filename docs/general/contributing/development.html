@@ -198,7 +198,7 @@ git branch -D my-testing-branch
 </ul>
 <h2 id="building-and-testing-inside-a-docker-container">Building and Testing Inside a Docker Container</h2>
 <p>We need to install all development dependencies and pull down the code inside the container before we can compile and run.</p>
-<div class="NOTE"><h5>Note</h5><p>Run each commmand on a separate line. The container we&#39;ll test in is named <code>jftest</code>. Within Docker, anytime the entrypoint executable is terminated, the session restarts, so just exec into it again to continue. This is also why we explicitly kill it to reload the new version.</p>
+<div class="NOTE"><h5>Note</h5><p>Run each command on a separate line. The container we&#39;ll test in is named <code>jftest</code>. Within Docker, anytime the entrypoint executable is terminated, the session restarts, so just exec into it again to continue. This is also why we explicitly kill it to reload the new version.</p>
 </div>
 <h3 id="master-branch">Master Branch</h3>
 <pre><code class="lang-sh">docker exec -ti jftest bash

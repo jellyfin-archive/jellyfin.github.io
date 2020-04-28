@@ -130,19 +130,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__ctor_ILogger_Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Configuration_IConfigurationManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.%23ctor(ILogger%7BEmby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask%7D%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Common.Configuration.IConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Configuration_IConfigurationManager_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask%7D%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Common.Configuration.IConfigurationManager%2CMediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L28">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__ctor_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__ctor_ILogger_Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Configuration_IConfigurationManager_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.#ctor(ILogger{Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask},MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Common.Configuration.IConfigurationManager)">DeleteTranscodeFileTask(ILogger&lt;DeleteTranscodeFileTask&gt;, IFileSystem, IConfigurationManager)</h4>
+  <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Configuration_IConfigurationManager_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask},MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Common.Configuration.IConfigurationManager,MediaBrowser.Model.Globalization.ILocalizationManager)">DeleteTranscodeFileTask(ILogger&lt;DeleteTranscodeFileTask&gt;, IFileSystem, IConfigurationManager, ILocalizationManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.html">DeleteTranscodeFileTask</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DeleteTranscodeFileTask(ILogger&lt;DeleteTranscodeFileTask&gt; logger, IFileSystem fileSystem, IConfigurationManager configurationManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public DeleteTranscodeFileTask(ILogger&lt;DeleteTranscodeFileTask&gt; logger, IFileSystem fileSystem, IConfigurationManager configurationManager, ILocalizationManager localization)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,7 +155,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.html">DeleteTranscodeFileTask</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.html">DeleteTranscodeFileTask</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -169,6 +169,11 @@
         <td><span class="parametername">configurationManager</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localization</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -178,7 +183,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Category.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Category%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L135">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L139">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Category_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Category*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Category" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Category">Category</h4>
@@ -208,7 +213,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Description.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L133">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L137">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Description_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Description*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Description" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Description">Description</h4>
@@ -238,7 +243,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsEnabled.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L141">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L145">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsEnabled_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsEnabled*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsEnabled" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsEnabled">IsEnabled</h4>
@@ -268,7 +273,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsHidden.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsHidden%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L143">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsHidden_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsHidden*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsHidden" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsHidden">IsHidden</h4>
@@ -298,7 +303,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsLogged.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsLogged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L143">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L147">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsLogged_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsLogged*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_IsLogged" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.IsLogged">IsLogged</h4>
@@ -328,7 +333,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Key.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L137">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L141">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Key_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Key*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Key" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Key">Key</h4>
@@ -358,7 +363,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Name.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L131">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L135">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Name_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Name*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Name" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Name">Name</h4>
@@ -390,7 +395,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Execute(System.Threading.CancellationToken%2CSystem.IProgress%7BSystem.Double%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L52">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Execute_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Execute*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_Execute_System_Threading_CancellationToken_System_IProgress_System_Double__" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.Execute(System.Threading.CancellationToken,System.IProgress{System.Double})">Execute(CancellationToken, IProgress&lt;Double&gt;)</h4>
@@ -446,7 +451,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_GetDefaultTriggers.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.GetDefaultTriggers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L44">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_GetDefaultTriggers_" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.GetDefaultTriggers*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask_GetDefaultTriggers" data-uid="Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask.GetDefaultTriggers">GetDefaultTriggers()</h4>
@@ -491,7 +496,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Tasks_DeleteTranscodeFileTask.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Tasks.DeleteTranscodeFileTask%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Tasks/DeleteTranscodeFileTask.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

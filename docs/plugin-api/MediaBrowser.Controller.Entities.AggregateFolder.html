@@ -103,9 +103,6 @@ Used for our RootFolder so plug-ins can add items.</p>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserManager">Folder.UserManager</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_UserViewManager">Folder.UserViewManager</a>
     </div>
     <div>
@@ -847,9 +844,6 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtras">BaseItem.GetDisplayExtras()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
     </div>
     <div>
@@ -936,7 +930,8 @@ Used for our RootFolder so plug-ins can add items.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsPhysicalRoot { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool IsPhysicalRoot { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -968,7 +963,8 @@ Used for our RootFolder so plug-ins can add items.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string[] PhysicalLocations { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override string[] PhysicalLocations { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1030,7 +1026,8 @@ Used for our RootFolder so plug-ins can add items.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPlayedStatus { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

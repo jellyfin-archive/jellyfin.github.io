@@ -77,12 +77,14 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="network-index">
-<h1 id="connectivity">Connectivity</h1>
+<h1 id="networking">Networking</h1>
 
+<p>This section describes how to get basic connectivity to a Jellyfin server, and also some more advanced networking scenarios.</p>
+<h2 id="connectivity">Connectivity</h2>
 <p>Many clients will automatically discover servers running on the same LAN and display them on login. If you are outside the network when you connect you can type in the complete IP address or domain name in the server field with the correct port to continue to the login page. You can find the default ports below to access the web frontend.</p>
-<h2 id="port-bindings">Port Bindings</h2>
+<h3 id="port-bindings">Port Bindings</h3>
 <p>This document aims to provide an administrator with knowledge on what ports Jellyfin binds to and what purpose they serve.</p>
-<h3 id="static-ports">Static Ports</h3>
+<h4 id="static-ports">Static Ports</h4>
 <ul>
 <li>8096/tcp is used by default for HTTP traffic. You can change this in the dashboard.</li>
 <li>8920/tcp is used by default for HTTPS traffic. You can change this in the dashboard.</li>
@@ -96,9 +98,9 @@
 <p>Since client auto-discover would break if this option were configurable, you cannot change this in the settings at this time. DLNA also uses this port and is required to be in the local subnet.</p>
 <p><strong>Client Discovery:</strong> 7359 UDP</p>
 <p>Allows clients to discover Jellyfin on the local network. A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a JSON response that includes the server address, ID, and name.</p>
-<h3 id="dynamic-ports">Dynamic Ports</h3>
+<h4 id="dynamic-ports">Dynamic Ports</h4>
 <p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
-<h1 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h1>
+<h2 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h2>
 <p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
 <div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired.</p>
 </div>
@@ -122,8 +124,8 @@
 </ul>
 <p>In addition, the examples are configured for use with Let&#39;s Encrypt certificates. If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
-<h2 id="base-url">Base URL</h2>
-<p>Running Jellyfin with a path (<a href="https://example.com/jellyfin">https://example.com/jellyfin</a>) is supported by the Android and web clients.</p>
+<h3 id="base-url">Base URL</h3>
+<p>Running Jellyfin with a path (<code>https://example.com/jellyfin</code>) is supported by the Android and web clients.</p>
 <div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HDHomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
 </div>
 <p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
@@ -138,7 +140,7 @@
 <li><p>Any reverse proxy configurations must be updated to handle a new Base URL. Generally, passing <code>/</code> back to the Jellyfin instance will work fine in all cases and the paths will be normalized, and this is the standard configuration in our examples. Keep this in mind however when doing more advanced routing.</p>
 </li>
 </ol>
-<h2 id="final-steps">Final Steps</h2>
+<h3 id="final-steps">Final Steps</h3>
 <p>It&#39;s strongly recommend that you check your SSL strength and server security at <a href="https://www.ssllabs.com/ssltest/analyze.html">SSLLabs</a> if you are exposing these services to the internet.</p>
 </article>
           </div>

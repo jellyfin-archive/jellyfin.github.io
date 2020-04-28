@@ -82,7 +82,7 @@
 <p>User management can be done under <code>Users</code> in the <code>Dashboard</code>. Here you can see your current users or add new ones. And manage your users&#39; settings.</p>
 <h2 id="adding-a-user">Adding a User</h2>
 <p>To add a new user, click the <code>+</code> symbol at the top of the page. This will open a new page where you can enter the user&#39;s name as it will be either displayed on, or has to be typed into login screen. By default, this will be displayed, but this can be changed at any point by modifying the user, explained further down.</p>
-<h4 id="library-access">Library Access</h4>
+<h3 id="manage-user-library-access">Manage User Library Access</h3>
 <p>By default the <code>enables access to all libraries</code> option will be enabled, disabling this option will enable you to give the user access rights per library, libraries can consist of several folders. When adding new libraries any user that did not have access to <code>all libraries</code> will not receive the rights to open the new library, but this can be changed at any point by modifying the user, explained further down.</p>
 <h2 id="manage-a-user">Manage a User</h2>
 <p>To manage a user either click on their portrait to go straight to their <code>Profile</code> tab, or click the <code>...</code> symbol inside that user&#39;s portrait. The later will open a small submenu with the options <code>Open</code> <code>Library access</code> <code>Parental control</code>, and <code>delete</code>. Except for delete, which does the obvious, these options will lead to different tabs but are otherwise all on the same page. <code>Open</code> corresponds to the Profile tab, <code>Library access</code> to access, <code>Parental control</code> to Parental Control, and there is an additional fourth tab <code>Password</code> for Password control. Changes to any option on any of these tabs need to be saved using <code>Save</code> at the bottom of the page.</p>
@@ -115,8 +115,18 @@
 <p><code>Allow social media sharing</code> Allows this user to share the url to web pages containing media information, for example when viewing information about a movie, series, season, or episode.</p>
 <p><code>Disable this user</code> Blocks the user from logging in, existing connections will be abruptly terminated.</p>
 <p><code>Hide this user from login screens</code> Useful for private or hidden administrator accounts. The user will need to sign in manually by entering their username and password. All newly created users are hidden by default.</p>
+<h4 id="locking-and-unlocking-users">Locking and Unlocking users</h4>
+<p>Locking</p>
 <p><code>Failed login attempts before user is locked out</code> Determines how many incorrect login attempts can be made before lockout occurs, disabling the user. 0 means inheriting the default of 3 for non-admin and 5 for admin, -1 disables lockout</p>
-<h3 id="library-access-1">Library Access</h3>
+<p>When a user is locked out after the set amout of attempts the admin has determined for that account, the user will recieve the following message when trying to login to the Jellyfin instance:</p>
+<pre><code class="lang-sh">Connection Failure
+We\&#39;re unable to connect to the selected server right now. Please ensure it is running and try again.
+</code></pre><p>Unlocking</p>
+<p>The unlocking of a user is a manual process for the Jellyfin administrator. When a user is locked out a message of the lockout appears on the activity feed on the administrator dashboard. To unlock the user, the administrator needs to navigate to the profile of the locked out user. When on the profile of the locked out user, the following message should appear:</p>
+<pre><code class="lang-sh">This user is currently disabled
+See below to reenable
+</code></pre><p>To reenable the user the administrator must navigate to the <code>Disable this user</code> option in the Additional options section uncheck the checkmark and hit <code>Save</code>. The disabled user should be able to login again.</p>
+<h3 id="library-access">Library Access</h3>
 <p>These options allow you to restrict access to libraries, or from devices.</p>
 <p><code>Enable access to all libraries</code> By default the <code>Enable access to all libraries</code> option will be enabled, disabling this option will enable you to give the user access rights per library, libraries can consist of several folders. When adding new libraries any user that did not have access to <code>all libraries</code> will not receive the rights to open the new library.</p>
 <p><code>Enable access from all devices</code> By default the <code>Enable access from all devices</code> option will be enabled, disabling this option will enable you to give the user access rights per device and logins from new devices are blocked until they&#39;ve been approved here.</p>

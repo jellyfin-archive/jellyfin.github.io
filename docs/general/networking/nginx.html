@@ -83,7 +83,7 @@
 <p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code> which will forward requests to Jellyfin.</p>
 <div class="WARNING"><h5>Warning</h5><p>This is just an example! Please read up on networking and port forwarding before you expose anything past your router.</p>
 </div>
-<pre><code>server {
+<pre><code class="lang-conf">server {
     listen 80;
     server_name DOMAIN_NAME;
 
@@ -145,7 +145,7 @@
 </code></pre><h2 id="nginx-with-subpath">Nginx with Subpath</h2>
 <p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
 <p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
-<pre><code># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
+<pre><code class="lang-conf"># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
 
 server {
     listen 80;

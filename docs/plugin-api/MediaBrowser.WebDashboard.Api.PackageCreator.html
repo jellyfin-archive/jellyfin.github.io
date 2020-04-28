@@ -228,7 +228,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_PackageCreator_IsCoreHtml_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.PackageCreator.IsCoreHtml(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/PackageCreator.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/PackageCreator.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_PackageCreator_IsCoreHtml_" data-uid="MediaBrowser.WebDashboard.Api.PackageCreator.IsCoreHtml*"></a>
   <h4 id="MediaBrowser_WebDashboard_Api_PackageCreator_IsCoreHtml_System_String_" data-uid="MediaBrowser.WebDashboard.Api.PackageCreator.IsCoreHtml(System.String)">IsCoreHtml(String)</h4>
@@ -272,18 +272,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_PackageCreator_ModifyHtml_System_String_System_IO_Stream_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.PackageCreator.ModifyHtml(System.String%2CSystem.IO.Stream%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_WebDashboard_Api_PackageCreator_ModifyHtml_System_Boolean_System_IO_Stream_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.WebDashboard.Api.PackageCreator.ModifyHtml(System.Boolean%2CSystem.IO.Stream%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/PackageCreator.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.WebDashboard/Api/PackageCreator.cs/#L63">View Source</a>
   </span>
   <a id="MediaBrowser_WebDashboard_Api_PackageCreator_ModifyHtml_" data-uid="MediaBrowser.WebDashboard.Api.PackageCreator.ModifyHtml*"></a>
-  <h4 id="MediaBrowser_WebDashboard_Api_PackageCreator_ModifyHtml_System_String_System_IO_Stream_System_String_System_String_System_String_" data-uid="MediaBrowser.WebDashboard.Api.PackageCreator.ModifyHtml(System.String,System.IO.Stream,System.String,System.String,System.String)">ModifyHtml(String, Stream, String, String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="MediaBrowser_WebDashboard_Api_PackageCreator_ModifyHtml_System_Boolean_System_IO_Stream_System_String_System_String_System_String_" data-uid="MediaBrowser.WebDashboard.Api.PackageCreator.ModifyHtml(System.Boolean,System.IO.Stream,System.String,System.String,System.String)">ModifyHtml(Boolean, Stream, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Modifies the source HTML stream by adding common meta tags, css and js.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; ModifyHtml(string path, Stream sourceStream, string mode, string appVersion, string localizationCulture)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Task&lt;Stream&gt; ModifyHtml(bool isMainIndexPage, Stream sourceStream, string mode, string appVersion, string localizationCulture)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,29 +297,34 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isMainIndexPage</span></td>
+        <td><p>True if the stream contains content for the main index page.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
         <td><span class="parametername">sourceStream</span></td>
-        <td></td>
+        <td><p>The stream whose content should be modified.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">mode</span></td>
-        <td></td>
+        <td><p>The client mode (&apos;cordova&apos;, &apos;android&apos;, etc).</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">appVersion</span></td>
-        <td></td>
+        <td><p>The application version.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">localizationCulture</span></td>
-        <td></td>
+        <td><p>The localization culture.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -333,7 +339,9 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a>&gt;</td>
-        <td></td>
+        <td><p>A task that represents the async operation to read and modify the input stream.
+The task result contains a stream containing the modified HTML content.</p>
+</td>
       </tr>
     </tbody>
   </table>

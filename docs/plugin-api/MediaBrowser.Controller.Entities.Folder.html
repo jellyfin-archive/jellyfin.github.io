@@ -699,9 +699,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDisplayExtras">BaseItem.GetDisplayExtras()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
     </div>
     <div>
@@ -763,7 +760,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L45">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L46">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder__ctor_" data-uid="MediaBrowser.Controller.Entities.Folder.#ctor*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder__ctor" data-uid="MediaBrowser.Controller.Entities.Folder.#ctor">Folder()</h4>
@@ -780,7 +777,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_Children.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L165">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L166">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_Children_" data-uid="MediaBrowser.Controller.Entities.Folder.Children*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_Children" data-uid="MediaBrowser.Controller.Entities.Folder.Children">Children</h4>
@@ -789,7 +786,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual IEnumerable&lt;BaseItem&gt; Children { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual IEnumerable&lt;BaseItem&gt; Children { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -842,7 +840,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_DateLastMediaAdded.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.DateLastMediaAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L43">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_DateLastMediaAdded_" data-uid="MediaBrowser.Controller.Entities.Folder.DateLastMediaAdded*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_DateLastMediaAdded" data-uid="MediaBrowser.Controller.Entities.Folder.DateLastMediaAdded">DateLastMediaAdded</h4>
@@ -850,7 +848,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? DateLastMediaAdded { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public DateTime? DateLastMediaAdded { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -872,7 +871,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.FileNameWithoutExtension%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L103">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L104">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension_" data-uid="MediaBrowser.Controller.Entities.Folder.FileNameWithoutExtension*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension" data-uid="MediaBrowser.Controller.Entities.Folder.FileNameWithoutExtension">FileNameWithoutExtension</h4>
@@ -880,7 +879,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string FileNameWithoutExtension { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override string FileNameWithoutExtension { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -934,7 +934,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsDisplayedAsFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L72">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L73">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder_" data-uid="MediaBrowser.Controller.Entities.Folder.IsDisplayedAsFolder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsDisplayedAsFolder" data-uid="MediaBrowser.Controller.Entities.Folder.IsDisplayedAsFolder">IsDisplayedAsFolder</h4>
@@ -942,7 +942,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsDisplayedAsFolder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool IsDisplayedAsFolder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -966,7 +967,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsFolder.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L69">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L70">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsFolder_" data-uid="MediaBrowser.Controller.Entities.Folder.IsFolder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsFolder" data-uid="MediaBrowser.Controller.Entities.Folder.IsFolder">IsFolder</h4>
@@ -975,7 +976,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool IsFolder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool IsFolder { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1000,7 +1002,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsPhysicalRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot_" data-uid="MediaBrowser.Controller.Entities.Folder.IsPhysicalRoot*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsPhysicalRoot" data-uid="MediaBrowser.Controller.Entities.Folder.IsPhysicalRoot">IsPhysicalRoot</h4>
@@ -1008,7 +1010,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsPhysicalRoot { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual bool IsPhysicalRoot { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1030,7 +1033,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsPreSorted.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsPreSorted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L54">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsPreSorted_" data-uid="MediaBrowser.Controller.Entities.Folder.IsPreSorted*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsPreSorted" data-uid="MediaBrowser.Controller.Entities.Folder.IsPreSorted">IsPreSorted</h4>
@@ -1038,7 +1041,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool IsPreSorted { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual bool IsPreSorted { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1060,7 +1064,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsRoot.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L39">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsRoot_" data-uid="MediaBrowser.Controller.Entities.Folder.IsRoot*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsRoot" data-uid="MediaBrowser.Controller.Entities.Folder.IsRoot">IsRoot</h4>
@@ -1092,7 +1096,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_LinkedChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.LinkedChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_LinkedChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.LinkedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_LinkedChildren" data-uid="MediaBrowser.Controller.Entities.Folder.LinkedChildren">LinkedChildren</h4>
@@ -1122,7 +1126,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_RecursiveChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.RecursiveChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L172">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L173">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_RecursiveChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.RecursiveChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_RecursiveChildren" data-uid="MediaBrowser.Controller.Entities.Folder.RecursiveChildren">RecursiveChildren</h4>
@@ -1131,7 +1135,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;BaseItem&gt; RecursiveChildren { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public IEnumerable&lt;BaseItem&gt; RecursiveChildren { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1154,7 +1159,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsCumulativeRunTimeTicks.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsCumulativeRunTimeTicks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L75">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L76">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsCumulativeRunTimeTicks_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsCumulativeRunTimeTicks*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsCumulativeRunTimeTicks" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsCumulativeRunTimeTicks">SupportsCumulativeRunTimeTicks</h4>
@@ -1162,7 +1167,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool SupportsCumulativeRunTimeTicks { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual bool SupportsCumulativeRunTimeTicks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1184,7 +1190,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsDateLastMediaAdded.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsDateLastMediaAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L79">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsDateLastMediaAdded_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsDateLastMediaAdded*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsDateLastMediaAdded" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsDateLastMediaAdded">SupportsDateLastMediaAdded</h4>
@@ -1192,7 +1198,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool SupportsDateLastMediaAdded { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual bool SupportsDateLastMediaAdded { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1214,7 +1221,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsInheritedParentImages.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsInheritedParentImages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L60">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsInheritedParentImages_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsInheritedParentImages*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsInheritedParentImages" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsInheritedParentImages">SupportsInheritedParentImages</h4>
@@ -1222,7 +1229,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsInheritedParentImages { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsInheritedParentImages { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1254,7 +1262,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override bool SupportsOwnedItems { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+protected override bool SupportsOwnedItems { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1278,7 +1287,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsPlayedStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L62">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L63">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsPlayedStatus">SupportsPlayedStatus</h4>
@@ -1286,7 +1295,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsPlayedStatus { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1310,7 +1320,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsShortcutChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L131">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsShortcutChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsShortcutChildren">SupportsShortcutChildren</h4>
@@ -1318,7 +1328,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected virtual bool SupportsShortcutChildren { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+protected virtual bool SupportsShortcutChildren { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1340,7 +1351,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_SupportsThemeMedia.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.SupportsThemeMedia%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L50">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_SupportsThemeMedia_" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsThemeMedia*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_SupportsThemeMedia" data-uid="MediaBrowser.Controller.Entities.Folder.SupportsThemeMedia">SupportsThemeMedia</h4>
@@ -1348,7 +1359,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool SupportsThemeMedia { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public override bool SupportsThemeMedia { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1380,7 +1392,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual bool SupportsUserDataFromChildren { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public virtual bool SupportsUserDataFromChildren { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1399,40 +1412,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_UserManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.UserManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L31">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_Folder_UserManager_" data-uid="MediaBrowser.Controller.Entities.Folder.UserManager*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Folder_UserManager" data-uid="MediaBrowser.Controller.Entities.Folder.UserManager">UserManager</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IUserManager UserManager { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_UserViewManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.UserViewManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_UserViewManager_" data-uid="MediaBrowser.Controller.Entities.Folder.UserViewManager*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_UserViewManager" data-uid="MediaBrowser.Controller.Entities.Folder.UserViewManager">UserViewManager</h4>
@@ -1464,7 +1447,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.AddChild(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L140">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L141">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_AddChild_" data-uid="MediaBrowser.Controller.Entities.Folder.AddChild*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.Folder.AddChild(MediaBrowser.Controller.Entities.BaseItem,System.Threading.CancellationToken)">AddChild(BaseItem, CancellationToken)</h4>
@@ -1520,7 +1503,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_CanDelete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.CanDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L81">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L82">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_CanDelete_" data-uid="MediaBrowser.Controller.Entities.Folder.CanDelete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_CanDelete" data-uid="MediaBrowser.Controller.Entities.Folder.CanDelete">CanDelete()</h4>
@@ -1653,7 +1636,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_GetCachedChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.GetCachedChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L575">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L576">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_GetCachedChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.GetCachedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_GetCachedChildren" data-uid="MediaBrowser.Controller.Entities.Folder.GetCachedChildren">GetCachedChildren()</h4>
@@ -1685,7 +1668,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.GetChildCount(MediaBrowser.Controller.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L585">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L586">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_GetChildCount_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_GetChildCount_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Folder.GetChildCount(MediaBrowser.Controller.Entities.User)">GetChildCount(User)</h4>
@@ -2140,7 +2123,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L563">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L564">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.GetNonCachedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Folder.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)">GetNonCachedChildren(IDirectoryService)</h4>
@@ -2189,7 +2172,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.GetRecursiveChildCount(MediaBrowser.Controller.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L610">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L611">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRecursiveChildCount*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_GetRecursiveChildCount_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRecursiveChildCount(MediaBrowser.Controller.Entities.User)">GetRecursiveChildCount(User)</h4>
@@ -2537,7 +2520,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_GetRefreshProgress.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.GetRefreshProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L212">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L213">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_GetRefreshProgress_" data-uid="MediaBrowser.Controller.Entities.Folder.GetRefreshProgress*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_GetRefreshProgress" data-uid="MediaBrowser.Controller.Entities.Folder.GetRefreshProgress">GetRefreshProgress()</h4>
@@ -2569,7 +2552,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsAllowTagFilterEnforced%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L118">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced_" data-uid="MediaBrowser.Controller.Entities.Folder.IsAllowTagFilterEnforced*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced" data-uid="MediaBrowser.Controller.Entities.Folder.IsAllowTagFilterEnforced">IsAllowTagFilterEnforced()</h4>
@@ -2699,7 +2682,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_IsVisible_MediaBrowser_Controller_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.IsVisible(MediaBrowser.Controller.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L175">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L176">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_IsVisible_" data-uid="MediaBrowser.Controller.Entities.Folder.IsVisible*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_IsVisible_MediaBrowser_Controller_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Folder.IsVisible(MediaBrowser.Controller.Entities.User)">IsVisible(User)</h4>
@@ -2748,7 +2731,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_LoadChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.LoadChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L205">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L206">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_LoadChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.LoadChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_LoadChildren" data-uid="MediaBrowser.Controller.Entities.Folder.LoadChildren">LoadChildren()</h4>
@@ -3076,7 +3059,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_RequiresRefresh.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.RequiresRefresh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L91">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L92">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_RequiresRefresh_" data-uid="MediaBrowser.Controller.Entities.Folder.RequiresRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_RequiresRefresh" data-uid="MediaBrowser.Controller.Entities.Folder.RequiresRefresh">RequiresRefresh()</h4>
@@ -3108,7 +3091,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L263">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L264">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete_" data-uid="MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshComplete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshComplete" data-uid="MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshComplete">TriggerOnRefreshComplete()</h4>
@@ -3125,7 +3108,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshStart.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L259">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L260">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshStart_" data-uid="MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshStart*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_TriggerOnRefreshStart" data-uid="MediaBrowser.Controller.Entities.Folder.TriggerOnRefreshStart">TriggerOnRefreshStart()</h4>
@@ -3142,7 +3125,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.ValidateChildren(System.IProgress%7BSystem.Double%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L217">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L218">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_ValidateChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildren(System.IProgress{System.Double},System.Threading.CancellationToken)">ValidateChildren(IProgress&lt;Double&gt;, CancellationToken)</h4>
@@ -3194,7 +3177,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.ValidateChildren(System.IProgress%7BSystem.Double%7D%2CSystem.Threading.CancellationToken%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L230">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L231">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_ValidateChildren_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_ValidateChildren_System_IProgress_System_Double__System_Threading_CancellationToken_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildren(System.IProgress{System.Double},System.Threading.CancellationToken,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Boolean)">ValidateChildren(IProgress&lt;Double&gt;, CancellationToken, MetadataRefreshOptions, Boolean)</h4>
@@ -3262,7 +3245,7 @@ We want this sychronous.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal(System.IProgress%7BSystem.Double%7D%2CSystem.Threading.CancellationToken%2CSystem.Boolean%2CSystem.Boolean%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L277">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L278">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Folder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Folder.ValidateChildrenInternal(System.IProgress{System.Double},System.Threading.CancellationToken,System.Boolean,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</h4>
@@ -3383,7 +3366,7 @@ We want this sychronous.</p>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Folder.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Folder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Folder.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
