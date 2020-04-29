@@ -77,12 +77,11 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="admin-installing">
-<h1 id="installing">Installing</h1>
+<h1 id="installing----omit-in-toc---">Installing <!-- omit in toc --></h1>
 <!-- markdownlint-disable MD036 no-emphasis-as-heading -->
 
 <p>The Jellyfin project and its contributors offer a number of pre-built binary packages to assist in getting Jellyfin up and running quickly on multiple systems.</p>
 <ul>
-<li><a href="#installing">Installing</a><ul>
 <li><a href="#containers">Containers</a><ul>
 <li><a href="#official-docker-hub">Official Docker Hub</a><ul>
 <li><a href="#installing-docker">Installing Docker</a></li>
@@ -94,6 +93,7 @@
 <li><a href="#docker-hub-image-maintained-by-linuxserverio">Docker Hub image maintained by LinuxServer.io</a></li>
 <li><a href="#unraid-docker">Unraid Docker</a></li>
 <li><a href="#kubernetes">Kubernetes</a></li>
+<li><a href="#podman">Podman</a></li>
 </ul>
 </li>
 <li><a href="#windows-x86x64">Windows (x86/x64)</a><ul>
@@ -120,8 +120,6 @@
 <li><a href="#migrating-to-the-new-repository">Migrating to the new repository</a></li>
 <li><a href="#ubuntu-repository">Ubuntu Repository</a></li>
 <li><a href="#ubuntu-packages">Ubuntu Packages</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -283,6 +281,33 @@ services:
 </ol>
 <h3 id="kubernetes">Kubernetes</h3>
 <p>A community project to deploy Jellyfin on Kubernetes-based platforms exists <a href="https://github.com/home-cluster/jellyfin-openshift">at their repository</a>. Any issues or feature requests related to deployment on Kubernetes-based platforms should be filed there.</p>
+<h3 id="podman">Podman</h3>
+<p><a href="https://podman.io/">Podman</a> allows you to run containers as non-root. It&#39;s also the offically supported container solution on RHEL and CentOS.</p>
+<p>Steps to run Jellyfin using Podman are almost identical to Docker steps:</p>
+<ol>
+<li><p>Download the latest container image:</p>
+<pre><code class="lang-sh">podman pull jellyfin/jellyfin
+</code></pre></li>
+<li><p>Create directories on the host for persistent data storage:</p>
+<pre><code class="lang-sh">mkdir /path/to/config
+mkdir /path/to/cache
+</code></pre></li>
+<li><p>Run jellyfin:</p>
+<pre><code class="lang-sh">podman run \
+--cgroup-manager=systemd \
+--privileged \
+--volume /path/to/config:/config \
+--volume /path/to/cache:/cache \
+--volume /path/to/media:/media \
+--net=host \
+jellyfin/jellyfin
+</code></pre></li>
+</ol>
+<p>Note that Podman doesn&#39;t require root access and it&#39;s recommended to run the Jellyfin container as a separate non-root user for security.</p>
+<p>If SELinux is enabled you need to use either <code>--privileged</code> or supply <code>z</code> volume option to allow Jellyfin to access the volumes.</p>
+<p>To mount your media library read-only append &#39;:ro&#39; to the media volume:</p>
+<pre><code class="lang-sh">--volume /path/to/media:/media:ro
+</code></pre><p>To run as a systemd service see <a href="https://www.redhat.com/sysadmin/podman-shareable-systemd-services">Running containers with Podman and shareable systemd services</a>.</p>
 <h2 id="windows-x86x64">Windows (x86/x64)</h2>
 <p>Windows installers and builds in ZIP archive format are available <a href="https://jellyfin.org/downloads/#windows">here</a>.</p>
 <div class="WARNING"><h5>Warning</h5><p>If you installed a version prior to 10.4.0 using a PowerShell script, you will need to manually remove the service using the command <code>nssm remove Jellyfin</code> and uninstall the server by remove all the files manually. Also one might need to move the data files to the correct location, or point the installer at the old location.</p>
