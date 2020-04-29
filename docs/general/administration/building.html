@@ -92,13 +92,15 @@ cd jellyfin
 <pre><code class="lang-sh">git submodule update --init
 </code></pre></li>
 </ol>
-<h2 id="docker">Docker</h2>
+<h2 id="container-image">Container image</h2>
 <ol>
-<li><p>Build the Docker image:</p>
+<li><p>Build the container image using Docker:</p>
 <pre><code class="lang-sh">docker build -t $USERNAME/jellyfin .
 </code></pre></li>
-<li><p>Run the container:</p>
+<li><p>Run Jellyfin in a new container using Docker or Podman from the built container image:</p>
 <pre><code class="lang-sh">docker run -d -p 8096:8096 $USERNAME/jellyfin
+</code></pre><p> or</p>
+<pre><code class="lang-sh">podman run -d -p 8096:8096 $USERNAME/jellyfin
 </code></pre></li>
 </ol>
 <h2 id="linux-or-macos">Linux or MacOS</h2>
