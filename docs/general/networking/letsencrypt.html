@@ -129,7 +129,100 @@ service haproxy reload
 <p>Copy and paste the whole Nginx sample configuration file from above, changing the parameters according to your setup and uncommenting the lines.</p>
 <p>Add a job to cron so the certificate will be renewed automatically.</p>
 <pre><code class="lang-sh">echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot
-</code></pre></virtualhost></article>
+</code></pre><h3 id="lets-encrypt-and-docker">Let&#39;s Encrypt and Docker</h3>
+<p>This section assumes that Jellyfin is running in a Docker container (on Linux). This section also assumes that you wish to run Let&#39;s Encrypt in a Docker container as well. The Linuxserver/letsencrypt Docker container has a built-in nginx webserver to handle the reverse proxy.</p>
+<p>First, you need to determine a few things.</p>
+<div class="NOTE"><h5>Note</h5><p>Make sure you have a CNAME for Jellyfin with your DNS provider before proceeding.</p>
+</div>
+<ol>
+<li>Where you wish to store information regarding Let&#39;s Encrypt (docker calls these &quot;volumes&quot;)</li>
+<li>What subdomain or subfolder you wish to use with Let&#39;s Encrypt (ex. jellyfin.example.com)</li>
+<li>What timezone you wish to use</li>
+<li>If you&#39;ll be using either HTTP-01 or DNS-01 for challenges.</li>
+<li>What network you&#39;ll be running on (I&#39;d recommend the default macvlan network called &quot;br0&quot;)</li>
+<li>What IP you want your container running on</li>
+<li>What ports you&#39;ll be using (ex. 180 for port 80, and 1443 for 443)</li>
+<li>Make sure ports 80 (if using http validation) and 443 are forwarded to the docker container from your router (instructions vary upon manufacturer)</li>
+<li>What user will the container be running as (you can determine the PUID and PGID by running <code>id</code> (replacing &quot;user&quot; with the username of the user the container will be running as)</li>
+</ol>
+<p>List of DNS Plugins <a href="https://certbot.eff.org/docs/using.html#dns-plugins">here</a> if using DNS-01 challenge.</p>
+<p>Then, depending on what those settings are, you&#39;ll need to adjust the values below as needed.</p>
+<p>For example, the docker create command from the LinuxServer team for the Let&#39;s Encrypt Docker container:</p>
+<pre><code class="lang-sh">docker create \
+  --name=letsencrypt \
+  --cap-add=NET_ADMIN \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/London \
+  -e URL=example.com \
+  -e SUBDOMAINS=www, \
+  -e VALIDATION=http \
+  -e DNSPLUGIN=cloudflare `#optional` \
+  -e DUCKDNSTOKEN=&lt;token&gt; `#optional` \
+  -e EMAIL=&lt;e-mail&gt; `#optional` \
+  -e DHLEVEL=2048 `#optional` \
+  -e ONLY_SUBDOMAINS=false `#optional` \
+  -e EXTRA_DOMAINS=&lt;extradomains&gt; `#optional` \
+  -e STAGING=false `#optional` \
+  -p 443:443 \
+  -p 80:80 `#optional` \
+  -v &lt;/path/to/appdata/config&gt;:/config \
+  --restart unless-stopped \
+  linuxserver/letsencrypt
+</code></pre><p>Assuming I follow this template and adjust for my region, ports, and path, it would look like this (with personal information redacted):</p>
+<pre><code class="lang-sh">docker create --name=letsencrypt --cap-add=NET_ADMIN -e PUID=1000 -e PGID=1000 -e TZ=America/Chicago -e URL=example.com -e SUBDOMAINS=jellyfin -e VALIDATION=http -e EMAIL=email@email.com -e DHLEVEL=2048 -e ONLY_SUBDOMAINS=false -e STAGING=false -p 443:443 -p 80:80 -v /path/to/appdata/lets-encrypt/:/config --restart unless-stopped linuxserver/letsencrypt
+</code></pre><p>This will pull down the linuxserver/letsencrypt container, and then create it with the variables specified. You&#39;ll then want to start the docker container with <code>docker start letsencrypt</code>. You can verify this is started by running <code>docker ps</code>, which will produce an output like this:</p>
+<pre><code class="lang-sh">CONTAINER ID        IMAGE                     COMMAND             CREATED             STATUS              PORTS                                      NAMES
+09346434b8ea        linuxserver/letsencrypt   &quot;/init&quot;             2 minutes ago       Up 5 seconds        0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp   letsencrypt
+</code></pre><p>At this point, navigate to what volume you selected (in my example, it&#39;s <code>/mnt/lets-encrypt</code>). You&#39;ll then need to navigate to <code>nginx/proxy-confs</code> within that directory. If you list the contents of that directory, you&#39;ll see a lot of files.</p>
+<p>The one we&#39;re interested in for jellyfin is <code>jellyfin.subdomain.conf.sample</code> (if using a subdomain) or <code>jellyfin.subfolder.conf.sample</code> (if using a subfolder). You&#39;ll want to copy the file needed, removing the .sample (ex. <code>cp jellyfin.subdomain.conf.sample jellyfin.subdomain.conf</code>). Open the file in your text editor of choice.</p>
+<p>It should look like this (this file is <code>jellyfin.subdomain.conf</code>, although <code>jellyfin.subfolder.conf</code> looks very similar):</p>
+<pre><code class="lang-sh">server {
+    listen 443 ssl;
+    listen [::]:443 ssl;
+
+    server_name jellyfin.*;
+
+    include /config/nginx/ssl.conf;
+
+    client_max_body_size 0;
+
+    location / {
+        include /config/nginx/proxy.conf;
+        resolver 127.0.0.11 valid=30s;
+        set $upstream_app jellyfin;
+        set $upstream_port 8096;
+        set $upstream_proto http;
+        proxy_pass $upstream_proto://$upstream_app:$upstream_port;
+
+        proxy_set_header Range $http_range;
+        proxy_set_header If-Range $http_if_range;
+    }
+
+    location ~ (/jellyfin)?/socket/ {
+        include /config/nginx/proxy.conf;
+        resolver 127.0.0.11 valid=30s;
+        set $upstream_app jellyfin;
+        set $upstream_port 8096;
+        set $upstream_proto http;
+        proxy_pass $upstream_proto://$upstream_app:$upstream_port;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+   }
+}
+</code></pre><p>The lines we&#39;re interested in are <code>set $upstream_app jellyfin</code> for this check.
+Assuming Jellyfin and Let&#39;s Encrypt are on the same network within Docker, it <em>should</em> see it and start handling the reverse proxy without much of an issue.
+If it doesn&#39;t, you&#39;ll need to change <code>jellyfin</code> in that line to the IP of your Jellyfin server.
+We&#39;ll also look at the line <code>location ~ (/jellyfin)?/socket</code> and add a slash after socket.</p>
+<p>Within Jellyfin settings (Dashboard -&gt; Networking), scroll down to &quot;Public HTTP port number&quot; and &quot;Public HTTPS port number&quot; in the middle of the page.
+Make sure the HTTP port number is 8096, while HTTPS port number is 8920.
+Then, click the &quot;Secure Connection Mode&quot; dropdown, and select the option to force a secure connection.</p>
+<p>Restart your Let&#39;s Encrypt docker container by running <code>docker restart letsencrypt</code> on the host machine.
+You can follow the logs with <code>docker logs -f letsencrypt</code> and scrolling through the output.
+Assuming everything works, you should see <code>Server Ready</code> at the very end of the logs.
+This tells you Let&#39;s Encrypt is running without issue.</p>
+</virtualhost></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
