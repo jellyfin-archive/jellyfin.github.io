@@ -318,7 +318,9 @@ sudo systemctl restart jellyfin
 <pre><code class="lang-sh">vcgencmd measure_temp &amp;&amp; vcgencmd measure_clock arm
 </code></pre></li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA decoding, only HWA encoding of H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
+<div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA HEVC decoding, only encode and decode H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. Only Raspbian OS works so far. For docker, only the linuxserver image works. For more tips see <a href="https://www.reddit.com/r/jellyfin/comments/ei6ew6/rpi4_hardware_acceleration_guide/">here</a>.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
 </div>
 <h3 id="verifying-transcodes">Verifying Transcodes</h3>
 <p>To verify that you are using the proper libraries, run this command against your transcoding log. This can be found at Admin Dashboard &gt; Logs, and /var/log/jellyfin if instead via the repository.</p>
@@ -327,8 +329,11 @@ sudo systemctl restart jellyfin
 <pre><code class="lang-data">Stream mapping:
 Stream #0:0 -&gt; #0:0 (hevc (native) -&gt; h264 (h264_omx))
 Stream #0:1 -&gt; #0:1 (aac (native) -&gt; mp3 (libmp3lame))
-</code></pre><p><code>Stream #0:0</code> used software to decode HEVC and used HWA to encode.</p>
-<p><code>Stream #0:1</code> had the same results. Decoding is easier than encoding so these are good results overall. HWA decoding is a work in progress.</p>
+</code></pre><p><code>Stream #0:0</code> used software (VAAPI Decode can also say native) to decode HEVC and used HWA to encode.</p>
+<pre><code class="lang-data">Stream mapping:
+Stream #0:0 -&gt; #0:0 (h264 (h264_mmal) -&gt; h264 (h264_omx))
+Stream #0:1 -&gt; #0:1 (flac (native) -&gt; mp3 (libmp3lame))
+</code></pre><p><code>Stream #0:0</code> used HWA for both. h264_mmal to decode and h264_omx to encode.</p>
 </article>
           </div>
           
