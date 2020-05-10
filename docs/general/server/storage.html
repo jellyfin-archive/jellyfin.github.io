@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Storage | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Storage | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="server-storage">
+<h2 id="storage">Storage</h2>
+
+<p>Jellyfin is designed to directly read media from the filesystem. This means to pass a network storage device that is using samba or NFS must be directly mounted to the OS. The Jellyfin database also should be stored locally and not on a network storage device.</p>
+<h2 id="dockervms">Docker/VM&#39;s</h2>
+<p>For storage, a moderate size library database can grow anywhere from 10 to 100 GB. The <a class="xref" href="transcoding.html">transcoding</a> folder needs roughly the same size as the original media if it&#39;s being transcoded at the same bitrate. A single 50GB Blu-Ray Remux by itself can take up to approximately 60GB or as little as 15GB, depending on the quality selected. If the transcoding folder is held on the same storage as the database, this must be taken into consideration.</p>
+<h2 id="cloud">Cloud</h2>
+<p>A popular choice for cloud storage has been the program <a href="https://rclone.org/downloads/">rclone</a>. It is supported on most Operating Systems. To prevent API bans, rclone is typically paired with another program such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a>. For cloud storage, it is recommended to disable image extraction as this requires downloading the entire file to perform this task.</p>
+<div class="NOTE"><h5>Note</h5><p>The image extractor can&#39;t be <a href="https://github.com/jellyfin/jellyfin/issues/2355">turned off</a> in Jellyfin at the moment which is causing <a href="https://github.com/jellyfin/jellyfin/issues/2600">performance issues</a>.</p>
+</div>
+<ul>
+<li><p>animostiy22&#39;s <a href="https://github.com/animosity22/homescripts">repo</a> about rclone and mergerfs.</p>
+</li>
+<li><p>animosity22&#39;s <a href="https://github.com/animosity22/homescripts/blob/master/systemd/rclone.service">rclone config</a>.</p>
+</li>
+</ul>
+<h3 id="mergerfs">MergerFS</h3>
+<p>For best performance with rclone and mergerfs, it is ideal to establish a rclone <a href="https://rclone.org/cache">cache</a>. Mergerfs isn&#39;t meant for everything, <a href="https://github.com/trapexit/mergerfs#what-should-mergerfs-not-be-used-for">see here</a> for more.</p>
+<ul>
+<li><p>rclone recommended <a href="https://forum.rclone.org/t/my-best-rclone-config-mount-for-plex/7441">config</a>.</p>
+</li>
+<li><p>animosity22&#39;s <a href="https://github.com/animosity22/homescripts/blob/master/systemd/gmedia.service">mergerfs config</a>.</p>
+</li>
+</ul>
+<p>To modify and examine your mergerfs mount, here&#39;s a quick <a href="https://zackreed.me/mergerfs-neat-tricks/">guide</a>.</p>
+<p>To create a crypt drive with a cache, there&#39;s a specific manner that it has to been done. See this <a href="https://rclone.org/cache/#cache-and-crypt">section</a> for more.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/server/storage.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
