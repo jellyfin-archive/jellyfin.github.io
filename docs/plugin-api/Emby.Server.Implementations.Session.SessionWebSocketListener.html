@@ -124,25 +124,25 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Session_SessionWebSocketListener_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SessionWebSocketListener : IWebSocketListener, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class SessionWebSocketListener : IWebSocketListener, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_SessionWebSocketListener__ctor_MediaBrowser_Controller_Session_ISessionManager_Microsoft_Extensions_Logging_ILoggerFactory_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IHttpServer_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.SessionWebSocketListener.%23ctor(MediaBrowser.Controller.Session.ISessionManager%2CMicrosoft.Extensions.Logging.ILoggerFactory%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Controller.Net.IHttpServer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_SessionWebSocketListener__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Session_SessionWebSocketListener__MediaBrowser_Controller_Session_ISessionManager_Microsoft_Extensions_Logging_ILoggerFactory_MediaBrowser_Controller_Net_IHttpServer_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.SessionWebSocketListener.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Session.SessionWebSocketListener%7D%2CMediaBrowser.Controller.Session.ISessionManager%2CMicrosoft.Extensions.Logging.ILoggerFactory%2CMediaBrowser.Controller.Net.IHttpServer)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L36">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_SessionWebSocketListener__ctor_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Session_SessionWebSocketListener__ctor_MediaBrowser_Controller_Session_ISessionManager_Microsoft_Extensions_Logging_ILoggerFactory_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Controller_Net_IHttpServer_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.#ctor(MediaBrowser.Controller.Session.ISessionManager,Microsoft.Extensions.Logging.ILoggerFactory,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Controller.Net.IHttpServer)">SessionWebSocketListener(ISessionManager, ILoggerFactory, IJsonSerializer, IHttpServer)</h4>
+  <h4 id="Emby_Server_Implementations_Session_SessionWebSocketListener__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Session_SessionWebSocketListener__MediaBrowser_Controller_Session_ISessionManager_Microsoft_Extensions_Logging_ILoggerFactory_MediaBrowser_Controller_Net_IHttpServer_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Session.SessionWebSocketListener},MediaBrowser.Controller.Session.ISessionManager,Microsoft.Extensions.Logging.ILoggerFactory,MediaBrowser.Controller.Net.IHttpServer)">SessionWebSocketListener(ILogger&lt;SessionWebSocketListener&gt;, ISessionManager, ILoggerFactory, IHttpServer)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Session.SessionWebSocketListener.html">SessionWebSocketListener</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SessionWebSocketListener(ISessionManager sessionManager, ILoggerFactory loggerFactory, IJsonSerializer json, IHttpServer httpServer)</code></pre>
+    <pre><code class="lang-csharp hljs">public SessionWebSocketListener(ILogger&lt;SessionWebSocketListener&gt; logger, ISessionManager sessionManager, ILoggerFactory loggerFactory, IHttpServer httpServer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,6 +155,12 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.Session.SessionWebSocketListener.html">SessionWebSocketListener</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The logger.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a></td>
         <td><span class="parametername">sessionManager</span></td>
         <td><p>The session manager.</p>
@@ -164,12 +170,6 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></td>
         <td><span class="parametername">loggerFactory</span></td>
         <td><p>The logger factory.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></td>
-        <td><span class="parametername">json</span></td>
-        <td><p>The json.</p>
 </td>
       </tr>
       <tr>
@@ -187,7 +187,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_SessionWebSocketListener_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.SessionWebSocketListener.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L82">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L81">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_SessionWebSocketListener_Dispose_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionWebSocketListener_Dispose" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.Dispose">Dispose()</h4>
@@ -202,7 +202,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_SessionWebSocketListener_ProcessMessageAsync_MediaBrowser_Controller_Net_WebSocketMessageInfo_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.SessionWebSocketListener.ProcessMessageAsync(MediaBrowser.Controller.Net.WebSocketMessageInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L92">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L91">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_SessionWebSocketListener_ProcessMessageAsync_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.ProcessMessageAsync*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionWebSocketListener_ProcessMessageAsync_MediaBrowser_Controller_Net_WebSocketMessageInfo_" data-uid="Emby.Server.Implementations.Session.SessionWebSocketListener.ProcessMessageAsync(MediaBrowser.Controller.Net.WebSocketMessageInfo)">ProcessMessageAsync(WebSocketMessageInfo)</h4>
@@ -265,7 +265,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_SessionWebSocketListener.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.SessionWebSocketListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/SessionWebSocketListener.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

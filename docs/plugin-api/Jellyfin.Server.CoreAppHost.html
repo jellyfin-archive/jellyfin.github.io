@@ -194,9 +194,6 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_Init_Microsoft_Extensions_DependencyInjection_IServiceCollection_">ApplicationHost.Init(IServiceCollection)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteWebsocketHandlerAsync_Microsoft_AspNetCore_Http_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteWebsocketHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
-    </div>
-    <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ExecuteHttpHandlerAsync_Microsoft_AspNetCore_Http_HttpContext_System_Func_System_Threading_Tasks_Task__">ApplicationHost.ExecuteHttpHandlerAsync(HttpContext, Func&lt;Task&gt;)</a>
     </div>
     <div>
@@ -233,19 +230,19 @@
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetPublicSystemInfo_System_Threading_CancellationToken_">ApplicationHost.GetPublicSystemInfo(CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_EnableHttps">ApplicationHost.EnableHttps</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_ListenWithHttps">ApplicationHost.ListenWithHttps</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_SupportsHttps">ApplicationHost.SupportsHttps</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Threading_CancellationToken_">ApplicationHost.GetLocalApiUrl(CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Threading_CancellationToken_System_Boolean_">ApplicationHost.GetLocalApiUrl(CancellationToken, Boolean)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Net_IPAddress_">ApplicationHost.GetLocalApiUrl(IPAddress)</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_Net_IPAddress_System_Boolean_">ApplicationHost.GetLocalApiUrl(IPAddress, Boolean)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLoopbackHttpApiUrl">ApplicationHost.GetLoopbackHttpApiUrl()</a>
     </div>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_ReadOnlySpan_System_Char__System_Boolean_">ApplicationHost.GetLocalApiUrl(ReadOnlySpan&lt;Char&gt;, Boolean)</a>
+      <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalApiUrl_System_ReadOnlySpan_System_Char__System_String_System_Nullable_System_Int32__">ApplicationHost.GetLocalApiUrl(ReadOnlySpan&lt;Char&gt;, String, Nullable&lt;Int32&gt;)</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.ApplicationHost.html#Emby_Server_Implementations_ApplicationHost_GetLocalIpAddresses_System_Threading_CancellationToken_">ApplicationHost.GetLocalIpAddresses(CancellationToken)</a>
@@ -315,7 +312,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Net_INetworkManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.%23ctor(Emby.Server.Implementations.ServerApplicationPaths%2CMicrosoft.Extensions.Logging.ILoggerFactory%2CJellyfin.Server.StartupOptions%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Common.Net.INetworkManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L33">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost__ctor_" data-uid="Jellyfin.Server.CoreAppHost.#ctor*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost__ctor_Emby_Server_Implementations_ServerApplicationPaths_Microsoft_Extensions_Logging_ILoggerFactory_Jellyfin_Server_StartupOptions_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Common_Net_INetworkManager_" data-uid="Jellyfin.Server.CoreAppHost.#ctor(Emby.Server.Implementations.ServerApplicationPaths,Microsoft.Extensions.Logging.ILoggerFactory,Jellyfin.Server.StartupOptions,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Common.Net.INetworkManager)">CoreAppHost(ServerApplicationPaths, ILoggerFactory, StartupOptions, IFileSystem, INetworkManager)</h4>
@@ -375,7 +372,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L66">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L80">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal_" data-uid="Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_GetAssembliesWithPartsInternal" data-uid="Jellyfin.Server.CoreAppHost.GetAssembliesWithPartsInternal">GetAssembliesWithPartsInternal()</h4>
@@ -407,7 +404,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L49">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_RegisterServices_" data-uid="Jellyfin.Server.CoreAppHost.RegisterServices*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Jellyfin.Server.CoreAppHost.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">RegisterServices(IServiceCollection)</h4>
@@ -442,7 +439,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_RestartInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.RestartInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L77">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_RestartInternal_" data-uid="Jellyfin.Server.CoreAppHost.RestartInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_RestartInternal" data-uid="Jellyfin.Server.CoreAppHost.RestartInternal">RestartInternal()</h4>
@@ -459,7 +456,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost_ShutdownInternal.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost.ShutdownInternal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L72">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L86">View Source</a>
   </span>
   <a id="Jellyfin_Server_CoreAppHost_ShutdownInternal_" data-uid="Jellyfin.Server.CoreAppHost.ShutdownInternal*"></a>
   <h4 id="Jellyfin_Server_CoreAppHost_ShutdownInternal" data-uid="Jellyfin.Server.CoreAppHost.ShutdownInternal">ShutdownInternal()</h4>
@@ -492,7 +489,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_CoreAppHost.md&amp;value=---%0Auid%3A%20Jellyfin.Server.CoreAppHost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/CoreAppHost.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -123,24 +123,24 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Session_WebSocketController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class WebSocketController : ISessionController, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class WebSocketController : ISessionController, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController__ctor_MediaBrowser_Controller_Session_SessionInfo_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Session_ISessionManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.%23ctor(MediaBrowser.Controller.Session.SessionInfo%2CMicrosoft.Extensions.Logging.ILogger%2CMediaBrowser.Controller.Session.ISessionManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Session_WebSocketController__MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_Session_ISessionManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Session.WebSocketController%7D%2CMediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Controller.Session.ISessionManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L27">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController__ctor_" data-uid="Emby.Server.Implementations.Session.WebSocketController.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Session_WebSocketController__ctor_MediaBrowser_Controller_Session_SessionInfo_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Session_ISessionManager_" data-uid="Emby.Server.Implementations.Session.WebSocketController.#ctor(MediaBrowser.Controller.Session.SessionInfo,Microsoft.Extensions.Logging.ILogger,MediaBrowser.Controller.Session.ISessionManager)">WebSocketController(SessionInfo, ILogger, ISessionManager)</h4>
+  <h4 id="Emby_Server_Implementations_Session_WebSocketController__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Session_WebSocketController__MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_Session_ISessionManager_" data-uid="Emby.Server.Implementations.Session.WebSocketController.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Session.WebSocketController},MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.Session.ISessionManager)">WebSocketController(ILogger&lt;WebSocketController&gt;, SessionInfo, ISessionManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public WebSocketController(SessionInfo session, ILogger logger, ISessionManager sessionManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public WebSocketController(ILogger&lt;WebSocketController&gt; logger, SessionInfo session, ISessionManager sessionManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,13 +153,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
-        <td><span class="parametername">session</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.Session.WebSocketController.html">WebSocketController</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
-        <td><span class="parametername">logger</span></td>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
         <td></td>
       </tr>
       <tr>
@@ -176,11 +176,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_IsSessionActive.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.IsSessionActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L44">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController_IsSessionActive_" data-uid="Emby.Server.Implementations.Session.WebSocketController.IsSessionActive*"></a>
   <h4 id="Emby_Server_Implementations_Session_WebSocketController_IsSessionActive" data-uid="Emby.Server.Implementations.Session.WebSocketController.IsSessionActive">IsSessionActive</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this instance is session active.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -197,67 +198,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_Session.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.Session%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L16">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_Session_WebSocketController_Session_" data-uid="Emby.Server.Implementations.Session.WebSocketController.Session*"></a>
-  <h4 id="Emby_Server_Implementations_Session_WebSocketController_Session" data-uid="Emby.Server.Implementations.Session.WebSocketController.Session">Session</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SessionInfo Session { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_Sockets.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.Sockets%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L17">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_Session_WebSocketController_Sockets_" data-uid="Emby.Server.Implementations.Session.WebSocketController.Sockets*"></a>
-  <h4 id="Emby_Server_Implementations_Session_WebSocketController_Sockets" data-uid="Emby.Server.Implementations.Session.WebSocketController.Sockets">Sockets</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;IWebSocketConnection&gt; Sockets { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="MediaBrowser.Controller.Net.IWebSocketConnection.html">IWebSocketConnection</a>&gt;</td>
-        <td></td>
+        <td><p><code>true</code> if this instance is session active; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -266,11 +208,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_SupportsMediaControl.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.SupportsMediaControl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L41">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController_SupportsMediaControl_" data-uid="Emby.Server.Implementations.Session.WebSocketController.SupportsMediaControl*"></a>
   <h4 id="Emby_Server_Implementations_Session_WebSocketController_SupportsMediaControl" data-uid="Emby.Server.Implementations.Session.WebSocketController.SupportsMediaControl">SupportsMediaControl</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [supports media remote control].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -287,7 +230,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if [supports media remote control]; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -298,7 +242,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_AddWebSocket_MediaBrowser_Controller_Net_IWebSocketConnection_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.AddWebSocket(MediaBrowser.Controller.Net.IWebSocketConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L49">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController_AddWebSocket_" data-uid="Emby.Server.Implementations.Session.WebSocketController.AddWebSocket*"></a>
   <h4 id="Emby_Server_Implementations_Session_WebSocketController_AddWebSocket_MediaBrowser_Controller_Net_IWebSocketConnection_" data-uid="Emby.Server.Implementations.Session.WebSocketController.AddWebSocket(MediaBrowser.Controller.Net.IWebSocketConnection)">AddWebSocket(IWebSocketConnection)</h4>
@@ -330,7 +274,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L93">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController_Dispose_" data-uid="Emby.Server.Implementations.Session.WebSocketController.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_Session_WebSocketController_Dispose" data-uid="Emby.Server.Implementations.Session.WebSocketController.Dispose">Dispose()</h4>
@@ -342,18 +286,18 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_SendMessage__1_System_String_System_String___0_MediaBrowser_Controller_Session_ISessionController___System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.SendMessage%60%601(System.String%2CSystem.String%2C%60%600%2CMediaBrowser.Controller.Session.ISessionController%5B%5D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController_SendMessage__1_System_String_System_Guid___0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController.SendMessage%60%601(System.String%2CSystem.Guid%2C%60%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L67">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Session_WebSocketController_SendMessage_" data-uid="Emby.Server.Implementations.Session.WebSocketController.SendMessage*"></a>
-  <h4 id="Emby_Server_Implementations_Session_WebSocketController_SendMessage__1_System_String_System_String___0_MediaBrowser_Controller_Session_ISessionController___System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.WebSocketController.SendMessage``1(System.String,System.String,``0,MediaBrowser.Controller.Session.ISessionController[],System.Threading.CancellationToken)">SendMessage&lt;T&gt;(String, String, T, ISessionController[], CancellationToken)</h4>
+  <h4 id="Emby_Server_Implementations_Session_WebSocketController_SendMessage__1_System_String_System_Guid___0_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.WebSocketController.SendMessage``1(System.String,System.Guid,``0,System.Threading.CancellationToken)">SendMessage&lt;T&gt;(String, Guid, T, CancellationToken)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SendMessage&lt;T&gt;(string name, string messageId, T data, ISessionController[] allControllers, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task SendMessage&lt;T&gt;(string name, Guid messageId, T data, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -371,18 +315,13 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">messageId</span></td>
         <td></td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionController.html">ISessionController</a>[]</td>
-        <td><span class="parametername">allControllers</span></td>
         <td></td>
       </tr>
       <tr>
@@ -440,7 +379,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Session_WebSocketController.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Session.WebSocketController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Session/WebSocketController.cs/#L18" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -83,20 +83,14 @@
   
   <h1 id="MediaBrowser_Controller_Net_IHttpServer" data-uid="MediaBrowser.Controller.Net.IHttpServer" class="text-break">Interface IHttpServer
   </h1>
-  <div class="markdown level0 summary"><p>Interface IHttpServer</p>
+  <div class="markdown level0 summary"><p>Interface IHttpServer.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable.dispose#System_IDisposable_Dispose">IDisposable.Dispose()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.Net.html">MediaBrowser.Controller.Net</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Net_IHttpServer_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public interface IHttpServer : IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public interface IHttpServer</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -105,7 +99,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_GlobalResponse.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.GlobalResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IHttpServer_GlobalResponse_" data-uid="MediaBrowser.Controller.Net.IHttpServer.GlobalResponse*"></a>
   <h4 id="MediaBrowser_Controller_Net_IHttpServer_GlobalResponse" data-uid="MediaBrowser.Controller.Net.IHttpServer.GlobalResponse">GlobalResponse</h4>
@@ -136,7 +130,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_UrlPrefixes.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.UrlPrefixes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L19">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IHttpServer_UrlPrefixes_" data-uid="MediaBrowser.Controller.Net.IHttpServer.UrlPrefixes*"></a>
   <h4 id="MediaBrowser_Controller_Net_IHttpServer_UrlPrefixes" data-uid="MediaBrowser.Controller.Net.IHttpServer.UrlPrefixes">UrlPrefixes</h4>
@@ -167,10 +161,58 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_GetDefaultCorsHeaders_MediaBrowser_Model_Services_IRequest_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.GetDefaultCorsHeaders(MediaBrowser.Model.Services.IRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L48">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Net_IHttpServer_GetDefaultCorsHeaders_" data-uid="MediaBrowser.Controller.Net.IHttpServer.GetDefaultCorsHeaders*"></a>
+  <h4 id="MediaBrowser_Controller_Net_IHttpServer_GetDefaultCorsHeaders_MediaBrowser_Model_Services_IRequest_" data-uid="MediaBrowser.Controller.Net.IHttpServer.GetDefaultCorsHeaders(MediaBrowser.Model.Services.IRequest)">GetDefaultCorsHeaders(IRequest)</h4>
+  <div class="markdown level1 summary"><p>Get the default CORS headers</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;string, string&gt; GetDefaultCorsHeaders(IRequest req)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Services.IRequest.html">IRequest</a></td>
+        <td><span class="parametername">req</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_Init_System_Collections_Generic_IEnumerable_System_Type__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Net_IWebSocketListener__System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.Init(System.Collections.Generic.IEnumerable%7BSystem.Type%7D%2CSystem.Collections.Generic.IEnumerable%7BMediaBrowser.Controller.Net.IWebSocketListener%7D%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L29">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IHttpServer_Init_" data-uid="MediaBrowser.Controller.Net.IHttpServer.Init*"></a>
   <h4 id="MediaBrowser_Controller_Net_IHttpServer_Init_System_Collections_Generic_IEnumerable_System_Type__System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Net_IWebSocketListener__System_Collections_Generic_IEnumerable_System_String__" data-uid="MediaBrowser.Controller.Net.IHttpServer.Init(System.Collections.Generic.IEnumerable{System.Type},System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Net.IWebSocketListener},System.Collections.Generic.IEnumerable{System.String})">Init(IEnumerable&lt;Type&gt;, IEnumerable&lt;IWebSocketListener&gt;, IEnumerable&lt;String&gt;)</h4>
@@ -210,19 +252,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_ProcessWebSocketRequest_Microsoft_AspNetCore_Http_HttpContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.ProcessWebSocketRequest(Microsoft.AspNetCore.Http.HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_RequestHandler_Microsoft_AspNetCore_Http_HttpContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.RequestHandler(Microsoft.AspNetCore.Http.HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L41">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_Net_IHttpServer_ProcessWebSocketRequest_" data-uid="MediaBrowser.Controller.Net.IHttpServer.ProcessWebSocketRequest*"></a>
-  <h4 id="MediaBrowser_Controller_Net_IHttpServer_ProcessWebSocketRequest_Microsoft_AspNetCore_Http_HttpContext_" data-uid="MediaBrowser.Controller.Net.IHttpServer.ProcessWebSocketRequest(Microsoft.AspNetCore.Http.HttpContext)">ProcessWebSocketRequest(HttpContext)</h4>
-  <div class="markdown level1 summary"><p>Sends the http context to the socket listener</p>
+  <a id="MediaBrowser_Controller_Net_IHttpServer_RequestHandler_" data-uid="MediaBrowser.Controller.Net.IHttpServer.RequestHandler*"></a>
+  <h4 id="MediaBrowser_Controller_Net_IHttpServer_RequestHandler_Microsoft_AspNetCore_Http_HttpContext_" data-uid="MediaBrowser.Controller.Net.IHttpServer.RequestHandler(Microsoft.AspNetCore.Http.HttpContext)">RequestHandler(HttpContext)</h4>
+  <div class="markdown level1 summary"><p>The HTTP request handler</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ProcessWebSocketRequest(HttpContext ctx)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RequestHandler(HttpContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,7 +278,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext">HttpContext</a></td>
-        <td><span class="parametername">ctx</span></td>
+        <td><span class="parametername">context</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -256,90 +298,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_RequestHandler_MediaBrowser_Model_Services_IHttpRequest_System_String_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.RequestHandler(MediaBrowser.Model.Services.IHttpRequest%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L58">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Net_IHttpServer_RequestHandler_" data-uid="MediaBrowser.Controller.Net.IHttpServer.RequestHandler*"></a>
-  <h4 id="MediaBrowser_Controller_Net_IHttpServer_RequestHandler_MediaBrowser_Model_Services_IHttpRequest_System_String_System_String_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Net.IHttpServer.RequestHandler(MediaBrowser.Model.Services.IHttpRequest,System.String,System.String,System.String,System.Threading.CancellationToken)">RequestHandler(IHttpRequest, String, String, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>The HTTP request handler</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task RequestHandler(IHttpRequest httpReq, string urlString, string host, string localPath, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Services.IHttpRequest.html">IHttpRequest</a></td>
-        <td><span class="parametername">httpReq</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">urlString</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">host</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">localPath</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_Stop.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L25">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Net_IHttpServer_Stop_" data-uid="MediaBrowser.Controller.Net.IHttpServer.Stop*"></a>
-  <h4 id="MediaBrowser_Controller_Net_IHttpServer_Stop" data-uid="MediaBrowser.Controller.Net.IHttpServer.Stop">Stop()</h4>
-  <div class="markdown level1 summary"><p>Stops this instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void Stop()</code></pre>
-  </div>
   <h3 id="events">Events
   </h3>
   <span class="small pull-right mobile-hide">
@@ -347,7 +305,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer_WebSocketConnected.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer.WebSocketConnected%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L30">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L24">View Source</a>
   </span>
   <h4 id="MediaBrowser_Controller_Net_IHttpServer_WebSocketConnected" data-uid="MediaBrowser.Controller.Net.IHttpServer.WebSocketConnected">WebSocketConnected</h4>
   <div class="markdown level1 summary"><p>Occurs when [web socket connected].</p>
@@ -383,7 +341,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IHttpServer.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IHttpServer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IHttpServer.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

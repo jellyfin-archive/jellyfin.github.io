@@ -127,7 +127,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L14">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream__ctor_" data-uid="Jellyfin.Data.Entities.MediaFileStream.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream__ctor" data-uid="Jellyfin.Data.Entities.MediaFileStream.#ctor">MediaFileStream()</h4>
@@ -143,7 +143,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream__ctor_System_Int32_Jellyfin_Data_Entities_MediaFile_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.%23ctor(System.Int32%2CJellyfin.Data.Entities.MediaFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L49">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L32">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream__ctor_" data-uid="Jellyfin.Data.Entities.MediaFileStream.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream__ctor_System_Int32_Jellyfin_Data_Entities_MediaFile_" data-uid="Jellyfin.Data.Entities.MediaFileStream.#ctor(System.Int32,Jellyfin.Data.Entities.MediaFile)">MediaFileStream(Int32, MediaFile)</h4>
@@ -183,7 +183,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream__StreamNumber.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream._StreamNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L114">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L98">View Source</a>
   </span>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream__StreamNumber" data-uid="Jellyfin.Data.Entities.MediaFileStream._StreamNumber">_StreamNumber</h4>
   <div class="markdown level1 summary"><p>Backing field for StreamNumber</p>
@@ -215,7 +215,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L90">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L73">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream_Id_" data-uid="Jellyfin.Data.Entities.MediaFileStream.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream_Id" data-uid="Jellyfin.Data.Entities.MediaFileStream.Id">Id</h4>
@@ -226,6 +226,7 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Key]
 [Required]
+[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 public int Id { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -245,10 +246,43 @@ public int Id { get; protected set; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L134">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_MediaFileStream_RowVersion_" data-uid="Jellyfin.Data.Entities.MediaFileStream.RowVersion*"></a>
+  <h4 id="Jellyfin_Data_Entities_MediaFileStream_RowVersion" data-uid="Jellyfin.Data.Entities.MediaFileStream.RowVersion">RowVersion</h4>
+  <div class="markdown level1 summary"><p>Required, ConcurrenyToken</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[ConcurrencyCheck]
+[Required]
+public uint RowVersion { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.uint32">UInt32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_StreamNumber.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.StreamNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L127">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L111">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream_StreamNumber_" data-uid="Jellyfin.Data.Entities.MediaFileStream.StreamNumber*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream_StreamNumber" data-uid="Jellyfin.Data.Entities.MediaFileStream.StreamNumber">StreamNumber</h4>
@@ -275,39 +309,6 @@ public int StreamNumber { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_Timestamp.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L150">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_MediaFileStream_Timestamp_" data-uid="Jellyfin.Data.Entities.MediaFileStream.Timestamp*"></a>
-  <h4 id="Jellyfin_Data_Entities_MediaFileStream_Timestamp" data-uid="Jellyfin.Data.Entities.MediaFileStream.Timestamp">Timestamp</h4>
-  <div class="markdown level1 summary"><p>Required</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ConcurrencyCheck]
-[Required]
-public byte[] Timestamp { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -315,7 +316,7 @@ public byte[] Timestamp { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_Create_System_Int32_Jellyfin_Data_Entities_MediaFile_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.Create(System.Int32%2CJellyfin.Data.Entities.MediaFile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream_Create_" data-uid="Jellyfin.Data.Entities.MediaFileStream.Create*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream_Create_System_Int32_Jellyfin_Data_Entities_MediaFile_" data-uid="Jellyfin.Data.Entities.MediaFileStream.Create(System.Int32,Jellyfin.Data.Entities.MediaFile)">Create(Int32, MediaFile)</h4>
@@ -368,7 +369,7 @@ public byte[] Timestamp { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_CreateMediaFileStreamUnsafe.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.CreateMediaFileStreamUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L22">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_MediaFileStream_CreateMediaFileStreamUnsafe_" data-uid="Jellyfin.Data.Entities.MediaFileStream.CreateMediaFileStreamUnsafe*"></a>
   <h4 id="Jellyfin_Data_Entities_MediaFileStream_CreateMediaFileStreamUnsafe" data-uid="Jellyfin.Data.Entities.MediaFileStream.CreateMediaFileStreamUnsafe">CreateMediaFileStreamUnsafe()</h4>
@@ -394,6 +395,21 @@ public byte[] Timestamp { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L138">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_MediaFileStream_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.MediaFileStream.OnSavingChanges*"></a>
+  <h4 id="Jellyfin_Data_Entities_MediaFileStream_OnSavingChanges" data-uid="Jellyfin.Data.Entities.MediaFileStream.OnSavingChanges">OnSavingChanges()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnSavingChanges()</code></pre>
+  </div>
 </article>
           </div>
           
@@ -405,7 +421,7 @@ public byte[] Timestamp { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_MediaFileStream.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.MediaFileStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/MediaFileStream.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

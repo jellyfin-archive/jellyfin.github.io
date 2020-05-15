@@ -106,7 +106,10 @@
       <a class="xref" href="Jellyfin.Data.Entities.LibraryItem.html#Jellyfin_Data_Entities_LibraryItem_DateAdded">LibraryItem.DateAdded</a>
     </div>
     <div>
-      <a class="xref" href="Jellyfin.Data.Entities.LibraryItem.html#Jellyfin_Data_Entities_LibraryItem_Timestamp">LibraryItem.Timestamp</a>
+      <a class="xref" href="Jellyfin.Data.Entities.LibraryItem.html#Jellyfin_Data_Entities_LibraryItem_RowVersion">LibraryItem.RowVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.LibraryItem.html#Jellyfin_Data_Entities_LibraryItem_OnSavingChanges">LibraryItem.OnSavingChanges()</a>
     </div>
     <div>
       <a class="xref" href="Jellyfin.Data.Entities.LibraryItem.html#Jellyfin_Data_Entities_LibraryItem_LibraryRoot">LibraryItem.LibraryRoot</a>
@@ -146,7 +149,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L14">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem__ctor_" data-uid="Jellyfin.Data.Entities.CustomItem.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem__ctor" data-uid="Jellyfin.Data.Entities.CustomItem.#ctor">CustomItem()</h4>
@@ -162,7 +165,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem__ctor_System_Guid_System_DateTime_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.%23ctor(System.Guid%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L34">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem__ctor_" data-uid="Jellyfin.Data.Entities.CustomItem.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem__ctor_System_Guid_System_DateTime_" data-uid="Jellyfin.Data.Entities.CustomItem.#ctor(System.Guid,System.DateTime)">CustomItem(Guid, DateTime)</h4>
@@ -203,7 +206,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem_CustomItemMetadata.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.CustomItemMetadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L60">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem_CustomItemMetadata_" data-uid="Jellyfin.Data.Entities.CustomItem.CustomItemMetadata*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem_CustomItemMetadata" data-uid="Jellyfin.Data.Entities.CustomItem.CustomItemMetadata">CustomItemMetadata</h4>
@@ -211,7 +214,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;CustomItemMetadata&gt; CustomItemMetadata { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;CustomItemMetadata_CustomItemMetadata_Id&quot;)]
+public virtual ICollection&lt;CustomItemMetadata&gt; CustomItemMetadata { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +237,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem_Releases.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.Releases%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L80">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem_Releases_" data-uid="Jellyfin.Data.Entities.CustomItem.Releases*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem_Releases" data-uid="Jellyfin.Data.Entities.CustomItem.Releases">Releases</h4>
@@ -241,7 +245,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Release&gt; Releases { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Release_Releases_Id&quot;)]
+public virtual ICollection&lt;Release&gt; Releases { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -265,7 +270,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem_Create_System_Guid_System_DateTime_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.Create(System.Guid%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem_Create_" data-uid="Jellyfin.Data.Entities.CustomItem.Create*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem_Create_System_Guid_System_DateTime_" data-uid="Jellyfin.Data.Entities.CustomItem.Create(System.Guid,System.DateTime)">Create(Guid, DateTime)</h4>
@@ -319,7 +324,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem_CreateCustomItemUnsafe.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem.CreateCustomItemUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L25">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItem_CreateCustomItemUnsafe_" data-uid="Jellyfin.Data.Entities.CustomItem.CreateCustomItemUnsafe*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItem_CreateCustomItemUnsafe" data-uid="Jellyfin.Data.Entities.CustomItem.CreateCustomItemUnsafe">CreateCustomItemUnsafe()</h4>
@@ -356,7 +361,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItem.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItem.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

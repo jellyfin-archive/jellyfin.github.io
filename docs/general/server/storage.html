@@ -83,7 +83,7 @@
 <h2 id="dockervms">Docker/VM&#39;s</h2>
 <p>For storage, a moderate size library database can grow anywhere from 10 to 100 GB. The <a class="xref" href="transcoding.html">transcoding</a> folder needs roughly the same size as the original media if it&#39;s being transcoded at the same bitrate. A single 50GB Blu-Ray Remux by itself can take up to approximately 60GB or as little as 15GB, depending on the quality selected. If the transcoding folder is held on the same storage as the database, this must be taken into consideration.</p>
 <h2 id="cloud">Cloud</h2>
-<p>A popular choice for cloud storage has been the program <a href="https://rclone.org/downloads/">rclone</a>. It is supported on most Operating Systems. To prevent API bans, rclone is typically paired with another program such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a>. For cloud storage, it is recommended to disable image extraction as this requires downloading the entire file to perform this task.</p>
+<p>A popular choice for cloud storage has been the program <a href="https://rclone.org/downloads/">rclone</a>. It is supported on most Operating Systems. To facilitate combining local and cloud filesystems, rclone can be paired with another program such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a>. For cloud storage, it is recommended to disable image extraction as this requires downloading the entire file to perform this task.</p>
 <div class="NOTE"><h5>Note</h5><p>The image extractor can&#39;t be <a href="https://github.com/jellyfin/jellyfin/issues/2355">turned off</a> in Jellyfin at the moment which is causing <a href="https://github.com/jellyfin/jellyfin/issues/2600">performance issues</a>.</p>
 </div>
 <ul>
@@ -93,7 +93,7 @@
 </li>
 </ul>
 <h3 id="mergerfs">MergerFS</h3>
-<p>For best performance with rclone and mergerfs, it is ideal to establish a rclone <a href="https://rclone.org/cache">cache</a>. Mergerfs isn&#39;t meant for everything, <a href="https://github.com/trapexit/mergerfs#what-should-mergerfs-not-be-used-for">see here</a> for more.</p>
+<p>Mergerfs isn&#39;t meant for everything, <a href="https://github.com/trapexit/mergerfs#what-should-mergerfs-not-be-used-for">see here</a> for more.</p>
 <ul>
 <li><p>rclone recommended <a href="https://forum.rclone.org/t/my-best-rclone-config-mount-for-plex/7441">config</a>.</p>
 </li>
@@ -101,7 +101,6 @@
 </li>
 </ul>
 <p>To modify and examine your mergerfs mount, here&#39;s a quick <a href="https://zackreed.me/mergerfs-neat-tricks/">guide</a>.</p>
-<p>To create a crypt drive with a cache, there&#39;s a specific manner that it has to been done. See this <a href="https://rclone.org/cache/#cache-and-crypt">section</a> for more.</p>
 </article>
           </div>
           
