@@ -103,14 +103,14 @@
 <h3 id="played-indicator">Played Indicator</h3>
 <p>This will affect the played/watched indicator. Replace the color hex with any value you like.</p>
 <h4 id="indicators-without-mod">Indicators Without Mod</h4>
-<p><img src="/images/custom-css-normalwatched.png" alt="Screenshot of the default watched indicators"></p>
+<p><img src="../../images/custom-css-normalwatched.png" alt="Screenshot of the default watched indicators"></p>
 <h4 id="green-indicators">Green Indicators</h4>
 <pre><code class="lang-css">.playedIndicator { background: #5dd000; }
-</code></pre><p><img src="/images/custom-css-greenwatched.png" alt="Screenshot of watched indicators with a custom green color applied"></p>
+</code></pre><p><img src="../../images/custom-css-greenwatched.png" alt="Screenshot of watched indicators with a custom green color applied"></p>
 <h4 id="transparent-and-dark-indicators-using-rgba-hex-value">Transparent And Dark Indicators (using RGBA hex value)</h4>
 <pre><code class="lang-css">/* Make watched icon dark and transparent */
 .playedIndicator {background: #00000058;}
-</code></pre><p><img src="/images/custom-css-transparentwatched.png" alt="Screenshot of watched indicators with a custom transparent color applied"></p>
+</code></pre><p><img src="../../images/custom-css-transparentwatched.png" alt="Screenshot of watched indicators with a custom transparent color applied"></p>
 <h4 id="remove-live-tv-channel-listings">Remove Live TV Channel Listings</h4>
 <pre><code class="lang-css">.guideChannelNumber { display: none; }
 </code></pre><h4 id="reduce-live-tv-channel-width">Reduce Live TV Channel Width</h4>
@@ -120,6 +120,11 @@
 <pre><code class="lang-css">/* Top menu transparency */
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {background:none; background-color:rgba(0, 0, 0, 0);}
 .skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {background:none; background-color:rgba(0, 0, 0, 0);}
+</code></pre><h3 id="images-edge-rounded">Images Edge Rounded</h3>
+<pre><code class="lang-css">.cardContent-button,
+.itemDetailImage {
+  border-radius: 0.25em;
+}
 </code></pre><h3 id="enlarge-tab-buttons">Enlarge Tab Buttons</h3>
 <p>Enlarges the tab buttons, suggested, genres, etc. By default they are really damn tiny, especially on mobile.</p>
 <pre><code class="lang-css">/* Adjust both &quot;size-adjust&quot; and &quot;size&quot; to modify size */
@@ -127,7 +132,7 @@
 .pageTitle {margin-top: auto; margin-bottom: auto;}
 .emby-tab-button {padding: 1.75em 1.7em;}
 </code></pre><p><strong>The enlarged tab buttons and transparent menu look like this:</strong>
-<img src="/images/custom-css-transparenttopbarenlargedtabs.png" alt="Screenshot of enlarged tab buttons and transparent menu"></p>
+<img src="../../images/custom-css-transparenttopbarenlargedtabs.png" alt="Screenshot of enlarged tab buttons and transparent menu"></p>
 <h3 id="minimalistic-login-page">Minimalistic Login Page</h3>
 <p>This looks even better together with the transparent top menu.</p>
 <pre><code class="lang-css">/* Narrow the login form */
@@ -140,14 +145,14 @@
 /* Hide &quot;manual&quot; and &quot;forgot&quot; buttons */
 #loginPage .raised.cancel.block.btnManual.emby-button {display: none}
 #loginPage .raised.cancel.block.btnForgotPassword.emby-button {display: none}
-</code></pre><p><img src="/images/custom-css-minimallogin.png" alt="Screenshot of the minimalistic login page"></p>
+</code></pre><p><img src="../../images/custom-css-minimallogin.png" alt="Screenshot of the minimalistic login page"></p>
 <h3 id="stylized-episode-previews">Stylized Episode Previews</h3>
 <p>The episode previews in season view are sized based on horizontal resolution, this leads to a lot of wasted space on the episode summary and a high vertical page requiring a lot of scrolling to browse. This code reduces the height of episode entries to reduce the need for vertical scrolling on large screens.</p>
 <pre><code class="lang-css">/* Size episode preview images in a more compact way */
 .listItemImage.listItemImage-large.itemAction.lazy {height: 110px;}
 .listItem-content {height: 115px;}
 .secondary.listItem-overview.listItemBodyText {height: 61px; margin: 0;}
-</code></pre><p><img src="/images/custom-css-episodepreview.png" alt="Screenshot of a TV show page with stylized episode previews"></p>
+</code></pre><p><img src="../../images/custom-css-episodepreview.png" alt="Screenshot of a TV show page with stylized episode previews"></p>
 <h3 id="stylized-and-smaller-cast-info">Stylized and Smaller Cast Info</h3>
 <p>This will drastically change the style of cast info into something very similar to how plex does it. The Purple Haze theme already has rounded cast info, but at the same large size as everything else, this override will lead to somewhat smaller thumbnails, and also works with all other themes.</p>
 <pre><code class="lang-css">/* Shrink and square (or round) cast thumnails */
@@ -167,7 +172,7 @@
 /* Center the mouseover buttons */
 #castContent .cardOverlayButton-br {bottom: 4%; right: 15%; width: 70%;}
 #castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {margin:auto;}
-</code></pre><p><img src="/images/custom-css-stylizedcast.png" alt="Screenshot of stylized and smaller cast and crew info"></p>
+</code></pre><p><img src="../../images/custom-css-stylizedcast.png" alt="Screenshot of stylized and smaller cast and crew info"></p>
 <h3 id="custom-background-color">Custom Background Color</h3>
 <pre><code class="lang-css">.backgroundContainer, .dialog, html { background-color: #0fd0d0; }
 </code></pre><h3 id="darken-the-background">Darken the Background</h3>
@@ -177,23 +182,23 @@
 </code></pre><h3 id="right-header-color">Right Header Color</h3>
 <p>This modifies the colors of the cast, search and user buttons in the top right.</p>
 <pre><code class="lang-css">.headerRight { color: yellow; }
-</code></pre><p><img src="/images/custom-css-rightheader.png" alt="Screenshot of a custom yellow color for the icon buttons in the top right of the screen"></p>
+</code></pre><p><img src="../../images/custom-css-rightheader.png" alt="Screenshot of a custom yellow color for the icon buttons in the top right of the screen"></p>
 <h3 id="console-panel-custom-color">Console Panel Custom Color</h3>
 <p>Modifies the color of the left menu panel.</p>
 <pre><code class="lang-css">.mainDrawer-scrollContainer { color: yellow; }
-</code></pre><p><img src="/images/custom-css-consolepanel.png" alt="Screenshot of a custom yellow color on the left menu panel"></p>
+</code></pre><p><img src="../../images/custom-css-consolepanel.png" alt="Screenshot of a custom yellow color on the left menu panel"></p>
 <h3 id="general-page-custom-color">General Page Custom Color</h3>
 <pre><code class="lang-css">.dashboardGeneralForm { color: yellow; }
-</code></pre><p><img src="/images/custom-css-generalcolor.png" alt="Screenshot of a custom yellow color on the General Page"></p>
+</code></pre><p><img src="../../images/custom-css-generalcolor.png" alt="Screenshot of a custom yellow color on the General Page"></p>
 <h3 id="custom-border-color">Custom Border Color</h3>
 <p>This will change the border color for text fields and drop down menus.</p>
 <pre><code class="lang-css">.emby-input, .emby-textarea, .emby-select { border-color: #d00000; }
 </code></pre><p>This will affect the border color of highlighet(selected) text fields and drop down menus.</p>
 <pre><code class="lang-css">.emby-input:focus, .emby-textarea:focus, .emby-select-withcolor { border-color: #ffffff !important; }
-</code></pre><p><img src="/images/custom-css-bordercolor.png" alt="Screenshot of a custom red border color"></p>
+</code></pre><p><img src="../../images/custom-css-bordercolor.png" alt="Screenshot of a custom red border color"></p>
 <h3 id="full-header-mod">Full Header Mod</h3>
 <pre><code class="lang-css">.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList { background: #ff9475; }
-</code></pre><p><img src="https://user-images.githubusercontent.com/20715731/73949397-5f6f2500-48c8-11ea-9eca-bc1eb61f1281.png" alt="Screenshot of the full header mod"></p>
+</code></pre><p><img src="../../images/custom-css-full-header-mod.png" alt="Screenshot of the full header mod"></p>
 <h3 id="scrollerless-libraries">Scrollerless Libraries</h3>
 <p>This will make it so libraries and media fits neatly onto the homepage with no left to right scrolling required.</p>
 <pre><code class="lang-css">@media all and (min-width: 50em) {
@@ -207,9 +212,23 @@
     flex-wrap: wrap;
   }
 }
+</code></pre><h3 id="shift-scroller-buttons">Shift Scroller Buttons</h3>
+<pre><code class="lang-css">.emby-scrollbuttons {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.emby-scrollbuttons-button {
+    pointer-events: initial;
+}
 </code></pre><h3 id="hotdogs-and-catsup">Hotdogs and Catsup</h3>
 <p>An example of a color theme.</p>
-<p><img src="https://user-images.githubusercontent.com/20715731/73948929-a3adf580-48c7-11ea-8bf1-eaaba2873be7.png" alt="Screenshot of a hotdog and catsup color theme"></p>
+<p><img src="../../images/custom-css-hotdog-and-catsup.png" alt="Screenshot of a hotdog and catsup color theme"></p>
 <pre><code class="lang-css">.skinHeader, .mainDrawer, .emby-input, .emby-textarea, .emby-select, .navMenuOption-selected, .cardBox, .paperList {
     background: #ff9475;
 }
@@ -244,7 +263,7 @@
     color: yellow;
 }
 </code></pre><h3 id="floating-now-playing-controls">Floating Now Playing Controls</h3>
-<p><img src="/images/custom-css-floatingnowplaying.png" alt="Screenshot of the floating &quot;Now Playing&quot; controls"></p>
+<p><img src="../../images/custom-css-floatingnowplaying.png" alt="Screenshot of the floating &quot;Now Playing&quot; controls"></p>
 <pre><code class="lang-css">/* fixed height for the bottom row */
 :root {
   --element-fixed-top: 95px;
