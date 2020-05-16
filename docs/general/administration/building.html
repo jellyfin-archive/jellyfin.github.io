@@ -94,8 +94,10 @@ cd jellyfin
 </ol>
 <h2 id="container-image">Container image</h2>
 <ol>
-<li><p>Build the container image using Docker:</p>
+<li><p>Build the container image using Docker or Podman:</p>
 <pre><code class="lang-sh">docker build -t $USERNAME/jellyfin .
+</code></pre><p> or</p>
+<pre><code class="lang-sh">podman build -t $USERNAME/jellyfin .
 </code></pre></li>
 <li><p>Run Jellyfin in a new container using Docker or Podman from the built container image:</p>
 <pre><code class="lang-sh">docker run -d -p 8096:8096 $USERNAME/jellyfin
