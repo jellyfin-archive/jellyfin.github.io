@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class LibraryMonitorStartup
+    <title>Class IgnorePatterns
    | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class LibraryMonitorStartup
+    <meta name="title" content="Class IgnorePatterns
    | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -78,22 +78,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup">
+            <article class="content wrap" id="_content" data-uid="Emby.Server.Implementations.Library.IgnorePatterns">
   
   
-  <h1 id="Emby_Server_Implementations_IO_LibraryMonitorStartup" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup" class="text-break">Class LibraryMonitorStartup
+  <h1 id="Emby_Server_Implementations_Library_IgnorePatterns" data-uid="Emby.Server.Implementations.Library.IgnorePatterns" class="text-break">Class IgnorePatterns
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Glob patterns for files to ignore</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">LibraryMonitorStartup</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="MediaBrowser.Controller.Plugins.IServerEntryPoint.html">IServerEntryPoint</a></div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div class="level1"><span class="xref">IgnorePatterns</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -119,28 +115,61 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
     </div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.IO.html">Emby.Server.Implementations.IO</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Library.html">Emby.Server.Implementations.Library</a></h6>
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
-  <h5 id="Emby_Server_Implementations_IO_LibraryMonitorStartup_syntax">Syntax</h5>
+  <h5 id="Emby_Server_Implementations_Library_IgnorePatterns_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LibraryMonitorStartup : IServerEntryPoint, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public static class IgnorePatterns</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_IO_LibraryMonitorStartup__ctor_MediaBrowser_Controller_Library_ILibraryMonitor_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.IO.LibraryMonitorStartup.%23ctor(MediaBrowser.Controller.Library.ILibraryMonitor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_IgnorePatterns_Patterns.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.IgnorePatterns.Patterns%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/IO/LibraryMonitor.cs/#L532">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/IgnorePatterns.cs/#L14">View Source</a>
   </span>
-  <a id="Emby_Server_Implementations_IO_LibraryMonitorStartup__ctor_" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_IO_LibraryMonitorStartup__ctor_MediaBrowser_Controller_Library_ILibraryMonitor_" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.#ctor(MediaBrowser.Controller.Library.ILibraryMonitor)">LibraryMonitorStartup(ILibraryMonitor)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Emby_Server_Implementations_Library_IgnorePatterns_Patterns" data-uid="Emby.Server.Implementations.Library.IgnorePatterns.Patterns">Patterns</h4>
+  <div class="markdown level1 summary"><p>Files matching these glob patterns will be ignored</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LibraryMonitorStartup(ILibraryMonitor monitor)</code></pre>
+    <pre><code class="lang-csharp hljs">public static readonly string[] Patterns</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_IgnorePatterns_ShouldIgnore_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.IgnorePatterns.ShouldIgnore(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/IgnorePatterns.cs/#L68">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Library_IgnorePatterns_ShouldIgnore_" data-uid="Emby.Server.Implementations.Library.IgnorePatterns.ShouldIgnore*"></a>
+  <h4 id="Emby_Server_Implementations_Library_IgnorePatterns_ShouldIgnore_System_String_" data-uid="Emby.Server.Implementations.Library.IgnorePatterns.ShouldIgnore(System.String)">ShouldIgnore(String)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the supplied path should be ignored</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ShouldIgnore(string path)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,44 +182,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryMonitor.html">ILibraryMonitor</a></td>
-        <td><span class="parametername">monitor</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_IO_LibraryMonitorStartup_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.IO.LibraryMonitorStartup.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/IO/LibraryMonitor.cs/#L543">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_IO_LibraryMonitorStartup_Dispose_" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.Dispose*"></a>
-  <h4 id="Emby_Server_Implementations_IO_LibraryMonitorStartup_Dispose" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_IO_LibraryMonitorStartup_RunAsync.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.IO.LibraryMonitorStartup.RunAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/IO/LibraryMonitor.cs/#L537">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_IO_LibraryMonitorStartup_RunAsync_" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.RunAsync*"></a>
-  <h4 id="Emby_Server_Implementations_IO_LibraryMonitorStartup_RunAsync" data-uid="Emby.Server.Implementations.IO.LibraryMonitorStartup.RunAsync">RunAsync()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task RunAsync()</code></pre>
-  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -201,18 +198,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="MediaBrowser.Controller.Plugins.IServerEntryPoint.html">IServerEntryPoint</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
 </article>
           </div>
           
@@ -221,10 +211,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_IO_LibraryMonitorStartup.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.IO.LibraryMonitorStartup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_IgnorePatterns.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.IgnorePatterns%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/IO/LibraryMonitor.cs/#L528" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/IgnorePatterns.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
