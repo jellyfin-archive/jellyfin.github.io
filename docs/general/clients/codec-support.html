@@ -85,7 +85,7 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center"></th>
+<th style="text-align:center">Sorted by efficency (excluding bit depth)</th>
 <th style="text-align:center">Chrome</th>
 <th style="text-align:center">Firefox</th>
 <th style="text-align:center">Safari</th>
@@ -171,9 +171,21 @@
 <td style="text-align:center">✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://caniuse.com/#search=vp9" title="V9 Browser Support Reference">VP9</a></td>
+<td style="text-align:center"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#VP9" title="V9 Browser Support Reference">VP9</a></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">✅<sup>3</sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">🔶<sup>3</sup></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#AV1" title="AV1 Browser Support Reference">AV1</a><sup>4</sup></td>
+<td style="text-align:center">🔶</td>
+<td style="text-align:center">🔶</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
@@ -186,6 +198,8 @@
 </table>
 <p><sup>1</sup>HEVC support is potentially available by offloading to the operating system, but this has not been tested.</p>
 <p><sup>2</sup>Android playback is currently broken. Client reports that HEVC is supported and attempts to Direct Stream.</p>
+<p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). On Android most new Phones in the higher price range and many &quot;4K&quot; AndroidTV devices have VP9 hardwaredecoding support. Refer to you manufacturer for supported codecs.</p>
+<p><sup>4</sup>AV1 support is experimental and often too slow for CPU decoding and as of writing this (05.2020) there is no hardware support on most devices yet. Support on jellyfin is tracked in <a href="https://github.com/jellyfin/jellyfin/issues/3129">jellyfin#3129</a>.</p>
 <p><a href="https://en.wikipedia.org/wiki/MPEG-4#MPEG-4_Parts">Format Cheetsheet:</a></p>
 <table>
 <thead>
@@ -325,8 +339,21 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 </tr>
+<tr>
+<td style="text-align:center">OPUS</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅<sup>1</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+</tr>
 </tbody>
 </table>
+<p><sup>1</sup>Safari only supports opus in <code>.caf</code> files</p>
 <p><a href="https://en.wikipedia.org/wiki/Moving_Picture_Experts_Group#External_links">Format Cheetsheet:</a></p>
 <table>
 <thead>
@@ -462,7 +489,7 @@
 <td style="text-align:center"></td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebM">WebM</a><sup>3</sup></td>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebM">WebM</a><sup>3, 5</sup></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
@@ -482,14 +509,14 @@
 <td style="text-align:center">✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Ogg">OGG</a></td>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/Ogg">OGG</a><sup>5</sup></td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
 </tr>
 </tbody>
 </table>
@@ -497,6 +524,7 @@
 <p><sup>2</sup>MKV containers can hold nearly any codec, but are not compatible with streaming in Firefox and will remux.</p>
 <p><sup>3</sup>MKV containers are improperly labeled as WebM in Firefox during playback.</p>
 <p><sup>4</sup>TS is one of the primary containers for streaming for Jellyfin.</p>
+<p><sup>5</sup>WebM and Ogg have limited codec support (by design) refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#WebM">this</a> for WebM and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#Ogg">this</a> for Ogg</p>
 </article>
           </div>
           
