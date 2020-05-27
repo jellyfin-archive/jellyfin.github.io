@@ -1,0 +1,655 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class SyncPlayManager
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class SyncPlayManager
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager">
+  
+  
+  <h1 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager" class="text-break">Class SyncPlayManager
+  </h1>
+  <div class="markdown level0 summary"><p>Class SyncPlayManager.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">SyncPlayManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Controller.SyncPlay.ISyncPlayManager.html">ISyncPlayManager</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.SyncPlay.html">Emby.Server.Implementations.SyncPlay</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
+  <h5 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class SyncPlayManager : ISyncPlayManager, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_SyncPlay_SyncPlayManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.SyncPlay.SyncPlayManager%7D%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L60">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager__ctor_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.#ctor*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_SyncPlay_SyncPlayManager__MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.SyncPlay.SyncPlayManager},MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Library.ILibraryManager)">SyncPlayManager(ILogger&lt;SyncPlayManager&gt;, IUserManager, ISessionManager, ILibraryManager)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SyncPlayManager(ILogger&lt;SyncPlayManager&gt; logger, IUserManager userManager, ISessionManager sessionManager, ILibraryManager libraryManager)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.SyncPlay.SyncPlayManager.html">SyncPlayManager</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td><span class="parametername">userManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a></td>
+        <td><span class="parametername">sessionManager</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_Groups.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.Groups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L79">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Groups_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Groups*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Groups" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Groups">Groups</h4>
+  <div class="markdown level1 summary"><p>Gets all groups.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;ISyncPlayController&gt; Groups { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Controller.SyncPlay.ISyncPlayController.html">ISyncPlayController</a>&gt;</td>
+        <td><p>All groups.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_AddSessionToGroup_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_SyncPlay_ISyncPlayController_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.AddSessionToGroup(MediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Controller.SyncPlay.ISyncPlayController)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L371">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_AddSessionToGroup_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.AddSessionToGroup*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_AddSessionToGroup_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_SyncPlay_ISyncPlayController_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.AddSessionToGroup(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.SyncPlay.ISyncPlayController)">AddSessionToGroup(SessionInfo, ISyncPlayController)</h4>
+  <div class="markdown level1 summary"><p>Maps a session to a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddSessionToGroup(SessionInfo session, ISyncPlayController group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.SyncPlay.ISyncPlayController.html">ISyncPlayController</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L82">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L92">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_Dispose_System_Boolean_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases unmanaged and optionally managed resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_HandleRequest_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_PlaybackRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.HandleRequest(MediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Model.SyncPlay.PlaybackRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L333">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_HandleRequest_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.HandleRequest*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_HandleRequest_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_PlaybackRequest_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.HandleRequest(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.SyncPlay.PlaybackRequest,System.Threading.CancellationToken)">HandleRequest(SessionInfo, PlaybackRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Handle a request by a session in a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void HandleRequest(SessionInfo session, PlaybackRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.PlaybackRequest.html">PlaybackRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_JoinGroup_MediaBrowser_Controller_Session_SessionInfo_System_Guid_MediaBrowser_Model_SyncPlay_JoinGroupRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.JoinGroup(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Guid%2CMediaBrowser.Model.SyncPlay.JoinGroupRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L211">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_JoinGroup_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.JoinGroup*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_JoinGroup_MediaBrowser_Controller_Session_SessionInfo_System_Guid_MediaBrowser_Model_SyncPlay_JoinGroupRequest_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.JoinGroup(MediaBrowser.Controller.Session.SessionInfo,System.Guid,MediaBrowser.Model.SyncPlay.JoinGroupRequest,System.Threading.CancellationToken)">JoinGroup(SessionInfo, Guid, JoinGroupRequest, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Adds the session to a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void JoinGroup(SessionInfo session, Guid groupId, JoinGroupRequest request, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">groupId</span></td>
+        <td><p>The group id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.JoinGroupRequest.html">JoinGroupRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_LeaveGroup_MediaBrowser_Controller_Session_SessionInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.LeaveGroup(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L272">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_LeaveGroup_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.LeaveGroup*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_LeaveGroup_MediaBrowser_Controller_Session_SessionInfo_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.LeaveGroup(MediaBrowser.Controller.Session.SessionInfo,System.Threading.CancellationToken)">LeaveGroup(SessionInfo, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Removes the session from a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void LeaveGroup(SessionInfo session, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_ListGroups_MediaBrowser_Controller_Session_SessionInfo_System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.ListGroups(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L303">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_ListGroups_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.ListGroups*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_ListGroups_MediaBrowser_Controller_Session_SessionInfo_System_Guid_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.ListGroups(MediaBrowser.Controller.Session.SessionInfo,System.Guid)">ListGroups(SessionInfo, Guid)</h4>
+  <div class="markdown level1 summary"><p>Gets list of available groups for a session.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;GroupInfoView&gt; ListGroups(SessionInfo session, Guid filterItemId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">filterItemId</span></td>
+        <td><p>The item id to filter by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.SyncPlay.GroupInfoView.html">GroupInfoView</a>&gt;</td>
+        <td><p>The list of available groups.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_NewGroup_MediaBrowser_Controller_Session_SessionInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.NewGroup(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L180">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_NewGroup_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.NewGroup*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_NewGroup_MediaBrowser_Controller_Session_SessionInfo_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.NewGroup(MediaBrowser.Controller.Session.SessionInfo,System.Threading.CancellationToken)">NewGroup(SessionInfo, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Creates a new group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NewGroup(SessionInfo session, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session that&apos;s creating the group.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager_RemoveSessionFromGroup_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_SyncPlay_ISyncPlayController_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager.RemoveSessionFromGroup(MediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Controller.SyncPlay.ISyncPlayController)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L382">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_RemoveSessionFromGroup_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.RemoveSessionFromGroup*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_SyncPlayManager_RemoveSessionFromGroup_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Controller_SyncPlay_ISyncPlayController_" data-uid="Emby.Server.Implementations.SyncPlay.SyncPlayManager.RemoveSessionFromGroup(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Controller.SyncPlay.ISyncPlayController)">RemoveSessionFromGroup(SessionInfo, ISyncPlayController)</h4>
+  <div class="markdown level1 summary"><p>Unmaps a session from a group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveSessionFromGroup(SessionInfo session, ISyncPlayController group)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.SyncPlay.ISyncPlayController.html">ISyncPlayController</a></td>
+        <td><span class="parametername">group</span></td>
+        <td><p>The group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.invalidoperationexception">InvalidOperationException</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Controller.SyncPlay.ISyncPlayManager.html">ISyncPlayManager</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_SyncPlayManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.SyncPlayManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/SyncPlayManager.cs/#L19" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
