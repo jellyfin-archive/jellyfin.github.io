@@ -82,15 +82,11 @@
 
 <p>The Jellyfin project and its contributors offer a number of pre-built binary packages to assist in getting Jellyfin up and running quickly on multiple systems.</p>
 <ul>
-<li><a href="#containers">Containers</a><ul>
-<li><a href="#official-docker-hub">Official Docker Hub</a><ul>
-<li><a href="#installing-docker">Installing Docker</a></li>
-<li><a href="#preparing-the-folders">Preparing the Folders</a></li>
-<li><a href="#running-the-container">Running the Container</a></li>
+<li><a href="#container-images">Container images</a><ul>
+<li><a href="#docker">Docker</a><ul>
 <li><a href="#hardware-transcoding-with-nvidia-ubuntu">Hardware Transcoding with Nvidia (Ubuntu)</a></li>
 </ul>
 </li>
-<li><a href="#docker-hub-image-maintained-by-linuxserverio">Docker Hub image maintained by LinuxServer.io</a></li>
 <li><a href="#unraid-docker">Unraid Docker</a></li>
 <li><a href="#kubernetes">Kubernetes</a></li>
 <li><a href="#podman">Podman</a></li>
@@ -125,56 +121,36 @@
 </ul>
 </li>
 </ul>
-<h2 id="containers">Containers</h2>
-<p><a href="https://stackoverflow.com/questions/31213126/libcontainer-vs-docker-vs-ocf-vs-runc#31219102">Open Container Initiative</a> is a form of virtualization. An image is similar to an ISO while a container is akin to a running VM.</p>
-<div class="NOTE"><h5>Note</h5><p>There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> with read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable.</p>
+<h2 id="container-images">Container images</h2>
+<p>Official container image: <code>jellyfin/jellyfin</code> <a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a>.</p>
+<p>LinuxServer.io image: <code>linuxserver/jellyfin</code> <a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a>.</p>
+<p>Jellyfin distributes <a href="https://hub.docker.com/r/jellyfin/jellyfin/">official container images on Docker Hub</a> for multiple architectures. These images are based on Debian and <a href="https://github.com/jellyfin/jellyfin/blob/master/Dockerfile">built directly from the Jellyfin source code</a>.</p>
+<p>Additionally the <a href="https://www.linuxserver.io/">LinuxServer.io</a> project distributes images <a href="https://github.com/linuxserver/docker-jellyfin/blob/master/Dockerfile">based on Ubuntu and the official Jellyfin Ubuntu binary packages</a>.</p>
+<div class="NOTE"><h5>Note</h5><p>For ARM hardware and RPi, it is recommended to use the LinuxServer.io image since hardware acceleration support is not yet available on the native image.</p>
 </div>
-<div class="NOTE"><h5>Note</h5><p>Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
-</div>
-<h3 id="official-docker-hub">Official Docker Hub</h3>
-<p><a href="https://hub.docker.com/r/jellyfin/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"></a></p>
-<p>The Jellyfin Docker image is available on <a href="https://hub.docker.com/r/jellyfin/jellyfin/">Docker Hub</a> for multiple architectures.</p>
-<h4 id="installing-docker">Installing Docker</h4>
-<p>There are multiple platforms that Docker can run on. Below are guides for Ubuntu, Windows and MacOS</p>
-<p><strong>Ubuntu</strong></p>
-<p>Lets start with Ubuntu, to install the basic Docker Daemon you will need to run the following 2 commands:</p>
-<pre><code class="lang-sh">curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
-</code></pre><p>And to install Docker Compose you will need to run the following command:</p>
-<pre><code class="lang-sh">apt-get install docker-compose
-</code></pre><p>Now test the installation by running the following command in your terminal:</p>
-<pre><code class="lang-sh">sudo docker run hello-world
-</code></pre><p>You should see a message that states:</p>
-<pre><code class="lang-sh">Hello from Docker! This message shows that your installation appears to be working correctly.
-</code></pre><p><strong>Windows/MacOS</strong></p>
-<p>For windows and MacOS you can use the following link to install Docker for Desktop:</p>
-<p><a href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></p>
-<p>Now test the installation by running the following command in your terminal(MacOS) or Powershell(Windows):</p>
-<pre><code class="lang-sh">docker run hello-world
-</code></pre><p>You should see a message that states:</p>
-<pre><code class="lang-sh">Hello from Docker! This message shows that your installation appears to be working correctly.
-</code></pre><h4 id="preparing-the-folders">Preparing the Folders</h4>
-<p>Before running the Jellyfin Container. We need to make 3 folders:</p>
-<ul>
-<li>Config</li>
-<li>Cache</li>
-<li>Media</li>
-</ul>
-<p><strong>Ubuntu/Mac</strong></p>
-<pre><code class="lang-sh">mkdir -p Path/To/Config
-mkdir -p Path/To/Cache
-mkdir -p Path/To/Media
-</code></pre><p><strong>Windows</strong>
-Make a folder called Jellyfin, and create the 3 folders inside the Jellyfin Folder.</p>
-<p>These folders will be used by Jellyfin to store data in. By default everything inside a Docker container gets removed once you delete the container. By making these folders you are able to delete the Jellyfin container while keeping your data. Amazing!</p>
-<h4 id="running-the-container">Running the Container</h4>
+<h3 id="docker">Docker</h3>
+<p><a href="https://www.docker.com/">Docker</a> allows you to run containers on Linux, Windows and MacOS.</p>
+<p>The basic steps to create and run a Jellyfin container using Docker are as follows:</p>
 <ol>
-<li><p>Get the latest image.</p>
+<li><p>Follow the <a href="https://docs.docker.com/engine/install/">offical installation guide to install Docker</a>.</p>
+</li>
+<li><p>Download the latest container image:</p>
 <pre><code class="lang-sh">docker pull jellyfin/jellyfin
 </code></pre></li>
-<li><p>Start the server in one of the following ways</p>
-<p> <strong>Docker</strong></p>
-<p> Running a Container is very easy (as you might have noticed while running the Hello world! Container). However when running a service you&#39;ll need to add some options to your docker run Command. Below is the full command and then it will be explained what the different parts mean.</p>
+<li><p>Create persistent storage for configuration and cache data:</p>
+<p>Either create two persistent volumes:</p>
+<pre><code class="lang-sh">docker volume create jellyfin-config
+docker volume create jellyfin-cache
+</code></pre><p>Or create two directories on the host and use bind mounts:</p>
+<pre><code class="lang-sh">mkdir /path/to/config
+mkdir /path/to/cache
+</code></pre></li>
+<li><p>Create and run a container in one of the following ways:</p>
+</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
+</div>
+<p><strong>Using Docker command line interface:</strong></p>
 <pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
  --volume /path/to/cache:/cache \
@@ -183,50 +159,31 @@ Make a folder called Jellyfin, and create the 3 folders inside the Jellyfin Fold
  --net=host \
  --restart=unless-stopped \
  jellyfin/jellyfin
-</code></pre><ul>
-<li><p><code>-d</code>: This means that the Docker Container will run in the background. This can also be changed to -it this will make the container interactive allowing you to execute commands directly inside the container.</p>
-</li>
-<li><p><code>--volume</code> /path/to/config:/config: This option connects the &quot;/path/to/config&quot; folder on your Host to the &quot;/config&quot; inside the container. You do not need to have any config present in /path/to/config as during the run command of the container Jellyfin will generate all of the necessary files. Everything in front of the colon is the of the config folder you&#39;ve created in the previous step.</p>
-</li>
-<li><p><code>--volume</code> /path/to/cache:/cache: This option connects the &quot;/path/to/cache&quot; folder on your Host to the &quot;/cache&quot; inside the container.</p>
-</li>
-<li><p><code>--volume</code> /path/to/media:/media: This option connects the &quot;/path/to/media&quot; folder on your Host to the &quot;/media&quot; inside the container. This option has to be added in order for Jellyfin to find your media files. It is also possible that you have your media files spread across different places. In that case you can keep adding more volumes by using:</p>
-</li>
-<li><p><code>--volume</code> /path/to/anothermedia:/media2 &amp; --volume /path/to/differentmedia:/media3 etc. add as many as you like!</p>
-</li>
-<li><p><code>--user 1000:1000</code>: Is option for Ubuntu to specify that you want to run the Container as the current user. This command is not necessary if you are using Docker for Desktop</p>
-</li>
-<li><p><code>--net=host</code>: This option will tell the container to use the same network as the computer that it is running on. This means that if you have this running on your windows machine, you will be able to access jellyfin by using <a href="http://localhost:8096">http://localhost:8096</a> instead of a different IP</p>
-</li>
-<li><p>Alternatively you can use different options for the <code>--restart=unless-stopped</code> if you do not want the Jellyfin server to start whenever Docker starts. The following options are available:</p>
-<ul>
-<li><p><code>--restart=no</code> Do not automaticallu restart the container</p>
-</li>
-<li><p><code>--restart=on-failure</code> Restart the container if it exits due to an error</p>
-</li>
-<li><p><code>--restart=always</code> Always restart the container when it stops</p>
-</li>
-</ul>
-</li>
-<li><p><code>jellyfin/jellyfin</code>: This specifies what &quot;image&quot; to use to start the container with.</p>
-<p><strong>Docker-Compose</strong></p>
+</code></pre><p>Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts.</p>
+<p>To mount your media library read-only append &#39;:ro&#39; to the media volume:</p>
+<pre><code class="lang-sh">--volume /path/to/media:/media:ro
+</code></pre><div class="NOTE"><h5>Note</h5><p>There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> with read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable.</p>
+</div>
+<p>Multiple media libraries can be bind mounted if needed:</p>
+<pre><code class="lang-sh">--volume /path/to/media1:/media/media1
+--volume /path/to/media2:/media/media2
+...etc
+</code></pre><p>Using host networking (<code>--net=host</code>) is optional but required in order to use DLNA or HDHomeRun.</p>
+<p><strong>Using Docker Compose:</strong></p>
 <p>Create a <code>docker-compose.yml</code> file with the following contents:</p>
 <pre><code class="lang-yml">version: &quot;3&quot;
 services:
-jellyfin:
-  image: jellyfin/jellyfin
-  user: 1000:1000
-  network_mode: &quot;host&quot;
-  volumes:
-    - /path/to/config:/config
-    - /path/to/cache:/cache
-    - /path/to/media:/media
+  jellyfin:
+    image: jellyfin/jellyfin
+    user: 1000:1000
+    network_mode: &quot;host&quot;
+    volumes:
+      - /path/to/config:/config
+      - /path/to/cache:/cache
+      - /path/to/media:/media
 </code></pre><p>Then while in the same folder as the <code>docker-compose.yml</code> run:</p>
 <pre><code class="lang-sh">docker-compose up
-</code></pre></li>
-</ul>
-</li>
-</ol>
+</code></pre><p>You can learn more about using Docker by <a href="https://docs.docker.com/">reading the official Docker documentation</a>.</p>
 <h4 id="hardware-transcoding-with-nvidia-ubuntu">Hardware Transcoding with Nvidia (Ubuntu)</h4>
 <p>You are able to use hardware encoding with Nvidia, but it requires some additional configuration. These steps require basic knowledge of Ubuntu but nothing too special.</p>
 <p><strong>Adding Package Repositories</strong>
@@ -249,7 +206,7 @@ environment:
 </code></pre><p>Your completed <code>docker-compose.yml</code> file should look something like this:</p>
 <pre><code class="lang-yml">version: &quot;2.3&quot;
 services:
-  jellyfin-test:
+  jellyfin:
     image: jellyfin/jellyfin
     user: 1000:1000
     network_mode: &quot;host&quot;
@@ -262,10 +219,6 @@ services:
       - /path/to/media:/media
 </code></pre><div class="NOTE"><h5>Note</h5><p>For Nvidia Hardware encoding the minimum version of docker-compose needs to be 2. However we recommend sticking with version 2.3 as it has proven to work with nvenc encoding.</p>
 </div>
-<h3 id="docker-hub-image-maintained-by-linuxserverio">Docker Hub image maintained by LinuxServer.io</h3>
-<p><a href="https://hub.docker.com/r/linuxserver/jellyfin"><img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/linuxserver/jellyfin.svg"></a></p>
-<p>The intent of the Jellyfin image is to provide the capability of building from source using Docker. The native image is <a href="https://github.com/jellyfin/jellyfin/blob/master/Dockerfile">compiled</a> inside the container whereas the LinuxServer image <a href="https://github.com/linuxserver/docker-jellyfin/blob/master/Dockerfile">installs</a> Jellyfin as a package. This can lead to larger image size and more space consumption since there isn&#39;t a common base image for the official Jellyfin image, <a href="https://hub.docker.com/r/jellyfin/jellyfin/tags">Jellyfin</a> vs <a href="https://hub.docker.com/r/linuxserver/jellyfin/tags">LinuxServer</a> sizes. The Jellyfin image does not support environmentals except for $TZ. No other environmental parameter works. If switching between images, the folder locations are not the same, so you have to move config folders around before spinning up the alternative image.</p>
-<p>For ARM hardware and RPi, it is recommended to use the LinuxServer image since hardware acceleration support is not yet available on the native image.</p>
 <h3 id="unraid-docker">Unraid Docker</h3>
 <p>An Unraid Docker template is available in the repository.</p>
 <ol>
@@ -285,26 +238,34 @@ services:
 <p><a href="https://podman.io/">Podman</a> allows you to run containers as non-root. It&#39;s also the offically supported container solution on RHEL and CentOS.</p>
 <p>Steps to run Jellyfin using Podman are almost identical to Docker steps:</p>
 <ol>
+<li><p>Install Podman:</p>
+<pre><code class="lang-sh">dnf install -y podman
+</code></pre></li>
 <li><p>Download the latest container image:</p>
 <pre><code class="lang-sh">podman pull jellyfin/jellyfin
 </code></pre></li>
-<li><p>Create directories on the host for persistent data storage:</p>
+<li><p>Create persistent storage for configuration and cache data:</p>
+<p>Either create two persistent volumes:</p>
+<pre><code class="lang-sh">podman volume create jellyfin-config
+podman volume create jellyfin-cache
+</code></pre><p>Or create two directories on the host and use bind mounts:</p>
 <pre><code class="lang-sh">mkdir /path/to/config
 mkdir /path/to/cache
 </code></pre></li>
-<li><p>Run jellyfin:</p>
+<li><p>Create and run a Jellyfin container:</p>
 <pre><code class="lang-sh">podman run \
---cgroup-manager=systemd \
---privileged \
---volume /path/to/config:/config \
---volume /path/to/cache:/cache \
---volume /path/to/media:/media \
---net=host \
-jellyfin/jellyfin
+ --cgroup-manager=systemd \
+ --privileged \
+ --volume jellyfin-config:/config \
+ --volume jellyfin-cache:/cache \
+ --volume /path/to/media:/media \
+ --net=host \
+ jellyfin/jellyfin
 </code></pre></li>
 </ol>
 <p>Note that Podman doesn&#39;t require root access and it&#39;s recommended to run the Jellyfin container as a separate non-root user for security.</p>
 <p>If SELinux is enabled you need to use either <code>--privileged</code> or supply <code>z</code> volume option to allow Jellyfin to access the volumes.</p>
+<p>Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts.</p>
 <p>To mount your media library read-only append &#39;:ro&#39; to the media volume:</p>
 <pre><code class="lang-sh">--volume /path/to/media:/media:ro
 </code></pre><p>To run as a systemd service see <a href="https://www.redhat.com/sysadmin/podman-shareable-systemd-services">Running containers with Podman and shareable systemd services</a>.</p>
