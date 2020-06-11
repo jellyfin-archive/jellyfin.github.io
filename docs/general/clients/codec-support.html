@@ -343,7 +343,7 @@
 <td style="text-align:center">OPUS</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
-<td style="text-align:center">✅<sup>1</sup></td>
+<td style="text-align:center">✅<sup>5</sup></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
@@ -353,7 +353,6 @@
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup>Safari only supports opus in <code>.caf</code> files</p>
 <p><a href="https://en.wikipedia.org/wiki/Moving_Picture_Experts_Group#External_links">Format Cheetsheet:</a></p>
 <table>
 <thead>
@@ -377,16 +376,18 @@
 <p><sup>2</sup>Only EAC3 2.0 has been tested.</p>
 <p><sup>3</sup>OGG containers are not supported and will cause VORBIS to convert.</p>
 <p><sup>4</sup>Only DTS Mono has been tested.</p>
+<p><sup>5</sup>Safari only supports opus in <code>.caf</code> files</p>
 <p>ATSC Standard for <a href="https://www.atsc.org/wp-content/uploads/2015/03/A52-201212-17.pdf">AC-3 and EAC-3</a>.</p>
 <h2 id="subtitle-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformatssubtitlecaptionformatssupport-wikipedias-subtitle-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Subtitle/caption_formats_support" title="Wikipedia&#39;s subtitle codec tables">Subtitle Compatibility</a></h2>
-<p>Subtiles can be a subtle issue for transcoding. Containers have a limited number of subtitles that are supported. If subtitles need to be transcoded, it will happen one of two ways. They can be converted into another supported format that is supported by the browser or burned into the video due to the subtitle transcoding not being supported. Burning in subtitles the most intenstive method of transcoding due to two transcodings happening at once; applying the subtitle layer on top of the video layer. Here is a <a href="https://www.afterdawn.com/guides/archive/subtitle_formats_explained.cfm">breakdown</a> of common subtitle formats.</p>
+<p>Subtiles can be a subtle issue for transcoding. Containers have a limited number of subtitles that are supported. If subtitles need to be transcoded, it will happen one of two ways: they can be converted into another supported format that is supported or burned into the video due to the subtitle transcoding not being supported. Burning in subtitles is the most intensive method of transcoding. This is due to two transcodings happening at once; applying the subtitle layer on top of the video layer.</p>
+<p>Here is a <a href="https://www.afterdawn.com/guides/archive/subtitle_formats_explained.cfm">breakdown</a> of common subtitle formats.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align:center"></th>
 <th style="text-align:center">Format</th>
 <th style="text-align:center">TS</th>
-<th style="text-align:center">MP4<sup>1</sup></th>
+<th style="text-align:center">MP4</th>
 <th style="text-align:center">MKV</th>
 <th style="text-align:center">AVI</th>
 </tr>
@@ -401,7 +402,7 @@
 <td style="text-align:center">🔶</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebVTT">WebVTT (VTT)</a><sup>2</sup></td>
+<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/WebVTT">WebVTT (VTT)</a><sup>1</sup></td>
 <td style="text-align:center">Text</td>
 <td style="text-align:center">❌</td>
 <td style="text-align:center">❌</td>
@@ -417,7 +418,7 @@
 <td style="text-align:center">🔶</td>
 </tr>
 <tr>
-<td style="text-align:center">VobSub<sup>3</sup></td>
+<td style="text-align:center">VobSub<sup>2</sup></td>
 <td style="text-align:center">Picture</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -440,19 +441,37 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">❌</td>
 </tr>
+<tr>
+<td style="text-align:center">EIA-608/708<sup>3</sup></td>
+<td style="text-align:center">Embedded</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">❌</td>
+</tr>
 </tbody>
 </table>
-<p><sup>1</sup>MP4 containers can only support one embedded subtitle stream. This does not affect external subtitles.</p>
-<p><sup>2</sup>VTT are supported in an <a href="https://helpx.adobe.com/adobe-media-server/dev/webvtt-subtitles-captions.html">HLS Stream</a>.</p>
-<p><sup>3</sup>DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX)</a> is another name for VobSub files.</p>
-<p>To extract subtitles, the following commands can be used. The section <code>0:s:0</code> means the first subtitle, so <code>0:s:1</code> would be the second subtitle.</p>
-<h3 id="ssa-subtitles">SSA Subtitles</h3>
-<pre><code class="lang-bash">ffmpeg -dump_attachment:t &quot;&quot; -i file.mkv -map 0:s:1 -c:s ass extracted-subtitle.ass
-</code></pre><h3 id="recorded-ota-content">Recorded OTA Content</h3>
-<pre><code class="lang-bash">ffmpeg -f lavfi -i &quot;movie=Ronin (1998).ts[out+subcc]&quot; -map 0:1  &quot;Ronin (1998).srt&quot;
-</code></pre><h3 id="forced-subtitles">Forced Subtitles</h3>
+<p><sup>1</sup>VTT are supported in an <a href="https://helpx.adobe.com/adobe-media-server/dev/webvtt-subtitles-captions.html">HLS Stream</a>.</p>
+<p><sup>2</sup>DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX)</a> is another name for VobSub files.</p>
+<p><sup>3</sup>EIA-608/708 subtitles are embedded in private channels (channel 21) in a mpeg video codec. EIA-608 are standard CC subtitles with the black bar background while EIA-708 are typically SDH.</p>
+<h3 id="types-of-subtitles">Types of Subtitles</h3>
+<p>There are many variations of subtitles. Closed, open, burned-in, forced, SDH, and CC are among the common types of subtitles. The format, such as SubRIP or VobSUB, doesn&#39;t matter for the type of subtitle.</p>
+<h4 id="closed-subtitles">Closed Subtitles</h4>
+<p>This is the generic name for subtitles that can be turned on or off. This can be Forced, SDH, CC or normal subtitles.</p>
+<h4 id="burned-in">Burned-in</h4>
+<p>Open subtitles, also known as burned-in subtitles, are subtitles that have been permanently placed in the video and cannot be turned off. Open subtitles are the most common type of subtitles, where the subtitles are part of a seperate stream or file and can be toggled on or off.</p>
+<h4 id="sdh-and-closed-captioning">SDH and Closed Captioning</h4>
+<p>SDH and CC are subtitles for the Deaf and Hard of Hearing. They include extra content such as background noises. SDH and CC are not defined by a specific type of subtitle, just by their intent. If using an OTA Tuner and DVR, the subtitles will be <a href="https://evertz.com/resources/eia_608_708_cc.pdf">embedded</a> into the video and transcoding them before extracting the subtitles will destroy the subtitles.</p>
+<h4 id="forced">Forced</h4>
 <p>&quot;Forced subtitles are common on movies and only provide subtitles when the characters speak a foreign or alien language, or a sign, flag, or other text in a scene is not translated in the localization and dubbing process. In some cases, foreign dialogue may be left untranslated if the movie is meant to be seen from the point of view of a particular character who does not speak the language in question.&quot; - <a href="https://en.wikipedia.org/wiki/Subtitles#Categories">Wikipedia</a></p>
-<h2 id="container-compatibilityhttpsdevelopermozillaorgen-usdocswebmediaformatscontainers"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers">Container Compatibility</a></h2>
+<h3 id="extracting-subtitles">Extracting Subtitles</h3>
+<p>To extract subtitles, the following commands can be used. The section <code>0:s:0</code> means the first subtitle, so <code>0:s:1</code> would be the second subtitle.</p>
+<h4 id="ssaass-subtitles">SSA/ASS Subtitles</h4>
+<pre><code class="lang-bash">ffmpeg -dump_attachment:t &quot;&quot; -i file.mkv -map 0:s:1 -c:s ass extracted-subtitle.ass
+</code></pre><h4 id="recorded-ota-content">Recorded OTA Content</h4>
+<p>Content recorded OTA will typically have subtitles <a href="https://aberdeen.io/blog/2009/06/18/the-basics-of-608-vs-708-captions/">embedded</a> into the video codec itself. These subtitles are typically EIA-608 for analog and EIA-708 for digital.</p>
+<pre><code class="lang-bash">ffmpeg -f lavfi -i &quot;movie=Ronin (1998).ts[out+subcc]&quot; -map 0:1  &quot;Ronin (1998).srt&quot;
+</code></pre><h2 id="container-compatibilityhttpsdevelopermozillaorgen-usdocswebmediaformatscontainers"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers">Container Compatibility</a></h2>
 <p>If the container is unsupported, this will result in remuxing. The video and audio codec will remain intact, but wrapped in a supported container. This is the least intensive process. Most video containers will be remuxed to use the HLS streaming protocol and TS containers. Remuxing shouldn&#39;t be a concern even for an RPi3.</p>
 <table>
 <thead>
