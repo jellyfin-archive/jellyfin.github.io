@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Migrating from Emby | Documentation - Jellyfin Project </title>
+    <title>Migrating | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Migrating from Emby | Documentation - Jellyfin Project ">
+    <meta name="title" content="Migrating | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
@@ -81,6 +81,10 @@
 
 <p>Direct database migration from Emby (of any version) to Jellyfin is NOT SUPPORTED. We have found many subtle bugs due to the inconsistent database schemas that result from trying to do this, and strongly recommend that all Jellyfin users migrating from Emby start with a fresh database and library scan.</p>
 <p>The original procedure is provided below for reference however we cannot support it nor guarantee that a system upgraded in this way will work properly, if at all. If anyone is interested in writing a database migration script which will correct the deficiencies in the existing database and properly import them into Jellyfin, <a class="xref" href="../contributing/index.html">we would welcome it however</a>!</p>
+<h2 id="watched-status-migration">Watched Status Migration</h2>
+<p>There are scripts available that will use the API to copy watched status and users from one instance to another. This can be done from Plex, Emby or another Jellyfin instance.</p>
+<p><a href="https://github.com/CobayeGunther/Emby2Jelly">Emby/Jellyfin to Jellyfin migration</a></p>
+<p><a href="https://github.com/wilmardo/migrate-plex-to-jellyfin">Plex to Jellyfin migration</a></p>
 <h2 id="unofficial-procedure">Unofficial Procedure</h2>
 <div class="WARNING"><h5>Warning</h5><p>While it is technically possible to migrate existing configuration of Emby version 3.5.2 or earlier, due to subtle and weird bugs reported after such attempts we do not recommend this migration. Emby versions 3.5.3 or 3.6+ cannot be migrated. Thus we recommend creating a new Jellyfin configuration and rebuilding your library instead.</p>
 </div>
