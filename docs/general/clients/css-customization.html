@@ -102,19 +102,25 @@
 <p>To apply any one of these, copy paste the CSS code into the &quot;Custom CSS&quot; field. To use multiple modifications, simply add them one after another into the field. Any applied code will remain in the field. To remove a modification, delete or comment out the code for it from the field. Changes apply immediately when the settings page is saved and doesn&#39;t require restarting.</p>
 <h3 id="played-indicator">Played Indicator</h3>
 <p>This will affect the played/watched indicator. Replace the color hex with any value you like.</p>
-<h4 id="indicators-without-mod">Indicators Without Mod</h4>
+<h3 id="indicators-without-mod">Indicators Without Mod</h3>
 <p><img src="../../images/custom-css-normalwatched.png" alt="Screenshot of the default watched indicators"></p>
-<h4 id="green-indicators">Green Indicators</h4>
+<h3 id="green-indicators">Green Indicators</h3>
 <pre><code class="lang-css">.playedIndicator { background: #5dd000; }
 </code></pre><p><img src="../../images/custom-css-greenwatched.png" alt="Screenshot of watched indicators with a custom green color applied"></p>
-<h4 id="transparent-and-dark-indicators-using-rgba-hex-value">Transparent And Dark Indicators (using RGBA hex value)</h4>
+<h3 id="transparent-and-dark-indicators-using-rgba-hex-value">Transparent And Dark Indicators (using RGBA hex value)</h3>
 <pre><code class="lang-css">/* Make watched icon dark and transparent */
 .playedIndicator {background: #00000058;}
 </code></pre><p><img src="../../images/custom-css-transparentwatched.png" alt="Screenshot of watched indicators with a custom transparent color applied"></p>
-<h4 id="remove-live-tv-channel-listings">Remove Live TV Channel Listings</h4>
+<h3 id="remove-live-tv-channel-listings">Remove Live TV Channel Listings</h3>
 <pre><code class="lang-css">.guideChannelNumber { display: none; }
-</code></pre><h4 id="reduce-live-tv-channel-width">Reduce Live TV Channel Width</h4>
+</code></pre><h3 id="reduce-live-tv-channel-width">Reduce Live TV Channel Width</h3>
 <pre><code class="lang-css">.channelsContainer { max-width: 8em; }
+</code></pre><h3 id="background-image-on-homepage">Background Image on Homepage</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/background">Additional MDN Documentation</a></p>
+<pre><code class="lang-css">#indexPage {
+    background-image: url(https://i.ytimg.com/vi/avCWDDox1nE/maxresdefault.jpg);
+    background-size: cover;
+}
 </code></pre><h3 id="transparent-top-menu">Transparent Top Menu</h3>
 <p>Self explanatory</p>
 <pre><code class="lang-css">/* Top menu transparency */
