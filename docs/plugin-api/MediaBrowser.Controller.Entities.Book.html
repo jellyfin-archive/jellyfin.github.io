@@ -186,12 +186,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsInMixedFolder">BaseItem.IsInMixedFolder</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus">BaseItem.SupportsPlayedStatus</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPositionTicksResume">BaseItem.SupportsPositionTicksResume</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsRemoteImageDownloading">BaseItem.SupportsRemoteImageDownloading</a>
     </div>
     <div>
@@ -795,6 +789,23 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class Book : BaseItem, IHasProviderIds, IHasLookupInfo&lt;ItemLookupInfo&gt;, IEquatable&lt;BaseItem&gt;, IHasLookupInfo&lt;BookInfo&gt;, IHasSeries</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L27">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Entities_Book__ctor_" data-uid="MediaBrowser.Controller.Entities.Book.#ctor*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Book__ctor" data-uid="MediaBrowser.Controller.Entities.Book.#ctor">Book()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Book()</code></pre>
+  </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -835,7 +846,7 @@ public override string MediaType { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_SeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.SeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_SeriesId_" data-uid="MediaBrowser.Controller.Entities.Book.SeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_SeriesId" data-uid="MediaBrowser.Controller.Entities.Book.SeriesId">SeriesId</h4>
@@ -866,7 +877,7 @@ public Guid SeriesId { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_SeriesName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.SeriesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L17">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L21">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_SeriesName_" data-uid="MediaBrowser.Controller.Entities.Book.SeriesName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_SeriesName" data-uid="MediaBrowser.Controller.Entities.Book.SeriesName">SeriesName</h4>
@@ -897,7 +908,7 @@ public string SeriesName { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_SeriesPresentationUniqueKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.SeriesPresentationUniqueKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L18">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_SeriesPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.Book.SeriesPresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_SeriesPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.Book.SeriesPresentationUniqueKey">SeriesPresentationUniqueKey</h4>
@@ -923,6 +934,70 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_SupportsPlayedStatus.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.SupportsPlayedStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L14">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Entities_Book_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.Book.SupportsPlayedStatus*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Book_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.Book.SupportsPlayedStatus">SupportsPlayedStatus</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SupportsPlayedStatus { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPlayedStatus">BaseItem.SupportsPlayedStatus</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_SupportsPositionTicksResume.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.SupportsPositionTicksResume%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L16">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Entities_Book_SupportsPositionTicksResume_" data-uid="MediaBrowser.Controller.Entities.Book.SupportsPositionTicksResume*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Book_SupportsPositionTicksResume" data-uid="MediaBrowser.Controller.Entities.Book.SupportsPositionTicksResume">SupportsPositionTicksResume</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool SupportsPositionTicksResume { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPositionTicksResume">BaseItem.SupportsPositionTicksResume</a></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -930,7 +1005,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_CanDownload.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.CanDownload%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L52">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_CanDownload_" data-uid="MediaBrowser.Controller.Entities.Book.CanDownload*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_CanDownload" data-uid="MediaBrowser.Controller.Entities.Book.CanDownload">CanDownload()</h4>
@@ -962,7 +1037,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_FindSeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.FindSeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L47">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_FindSeriesId_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesId" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesId">FindSeriesId()</h4>
@@ -992,7 +1067,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_FindSeriesName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.FindSeriesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L37">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_FindSeriesName_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesName" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesName">FindSeriesName()</h4>
@@ -1022,7 +1097,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_FindSeriesPresentationUniqueKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.FindSeriesPresentationUniqueKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L42">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_FindSeriesPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesPresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesPresentationUniqueKey">FindSeriesPresentationUniqueKey()</h4>
@@ -1052,7 +1127,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_FindSeriesSortName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.FindSeriesSortName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L32">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_FindSeriesSortName_" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesSortName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_FindSeriesSortName" data-uid="MediaBrowser.Controller.Entities.Book.FindSeriesSortName">FindSeriesSortName()</h4>
@@ -1082,7 +1157,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_GetBlockUnratedType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.GetBlockUnratedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.Book.GetBlockUnratedType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.Book.GetBlockUnratedType">GetBlockUnratedType()</h4>
@@ -1114,7 +1189,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Book_GetLookupInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Book.GetLookupInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Book.cs/#L62">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Book_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.Book.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Book_GetLookupInfo" data-uid="MediaBrowser.Controller.Entities.Book.GetLookupInfo">GetLookupInfo()</h4>
