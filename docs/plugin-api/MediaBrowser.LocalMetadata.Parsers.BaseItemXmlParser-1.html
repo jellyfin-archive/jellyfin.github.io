@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1" class="text-break">Class BaseItemXmlParser&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Provides a base class for parsing metadata xml</p>
+  <div class="markdown level0 summary"><p>Provides a base class for parsing metadata xml.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -135,7 +135,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of item xml parser.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -143,19 +144,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.%23ctor(Microsoft.Extensions.Logging.ILogger%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser__0___MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.%23ctor(Microsoft.Extensions.Logging.ILogger%7BMediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%7B%600%7D%7D%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L32">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1__ctor_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.#ctor*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Providers_IProviderManager_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.#ctor(Microsoft.Extensions.Logging.ILogger,MediaBrowser.Controller.Providers.IProviderManager)">BaseItemXmlParser(ILogger, IProviderManager)</h4>
+  <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser__0___MediaBrowser_Controller_Providers_IProviderManager_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.#ctor(Microsoft.Extensions.Logging.ILogger{MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser{`0}},MediaBrowser.Controller.Providers.IProviderManager)">BaseItemXmlParser(ILogger&lt;BaseItemXmlParser&lt;T&gt;&gt;, IProviderManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser-1.html">BaseItemXmlParser&lt;T&gt;</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BaseItemXmlParser(ILogger logger, IProviderManager providerManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public BaseItemXmlParser(ILogger&lt;BaseItemXmlParser&lt;T&gt;&gt; logger, IProviderManager providerManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -168,15 +169,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser-1.html">BaseItemXmlParser</a>&lt;T&gt;&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td><p>The logger.</p>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger&lt;TCategoryName&gt;</a> interface.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
         <td><span class="parametername">providerManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a> interface.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -187,16 +189,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Logger.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.Logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Logger_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.Logger*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Logger" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.Logger">Logger</h4>
-  <div class="markdown level1 summary"><p>The logger</p>
+  <div class="markdown level1 summary"><p>Gets the logger.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ILogger Logger { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">protected ILogger&lt;BaseItemXmlParser&lt;T&gt;&gt; Logger { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -208,7 +210,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser-1.html">BaseItemXmlParser</a>&lt;T&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -218,11 +220,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_ProviderManager.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.ProviderManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L27">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L46">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_ProviderManager_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.ProviderManager*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_ProviderManager" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.ProviderManager">ProviderManager</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the provider manager.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -250,11 +253,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Fetch_MediaBrowser_Controller_Providers_MetadataResult__0__System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.Fetch(MediaBrowser.Controller.Providers.MetadataResult%7B%600%7D%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L55">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Fetch_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.Fetch*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_Fetch_MediaBrowser_Controller_Providers_MetadataResult__0__System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.Fetch(MediaBrowser.Controller.Providers.MetadataResult{`0},System.String,System.Threading.CancellationToken)">Fetch(MetadataResult&lt;T&gt;, String, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Fetches metadata for an item from one xml file</p>
+  <div class="markdown level1 summary"><p>Fetches metadata for an item from one xml file.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -302,7 +305,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
+        <td><p>Item is null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -311,11 +315,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_FetchDataFromXmlNode_System_Xml_XmlReader_MediaBrowser_Controller_Providers_MetadataResult__0__.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.FetchDataFromXmlNode(System.Xml.XmlReader%2CMediaBrowser.Controller.Providers.MetadataResult%7B%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L131">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L134">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_FetchDataFromXmlNode_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.FetchDataFromXmlNode*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_FetchDataFromXmlNode_System_Xml_XmlReader_MediaBrowser_Controller_Providers_MetadataResult__0__" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.FetchDataFromXmlNode(System.Xml.XmlReader,MediaBrowser.Controller.Providers.MetadataResult{`0})">FetchDataFromXmlNode(XmlReader, MetadataResult&lt;T&gt;)</h4>
-  <div class="markdown level1 summary"><p>Fetches metadata from one Xml Element</p>
+  <div class="markdown level1 summary"><p>Fetches metadata from one Xml Element.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -351,11 +355,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetLinkedChild_System_Xml_XmlReader_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.GetLinkedChild(System.Xml.XmlReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L1138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L1169">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetLinkedChild_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.GetLinkedChild*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetLinkedChild_System_Xml_XmlReader_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.GetLinkedChild(System.Xml.XmlReader)">GetLinkedChild(XmlReader)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get linked child.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -374,7 +379,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td></td>
+        <td><p>The xml reader.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -389,7 +395,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.LinkedChild.html">LinkedChild</a></td>
-        <td></td>
+        <td><p>The linked child.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -398,11 +405,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetShare_System_Xml_XmlReader_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser%601.GetShare(System.Xml.XmlReader)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L1186">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/BaseItemXmlParser.cs/#L1220">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetShare_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.GetShare*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_BaseItemXmlParser_1_GetShare_System_Xml_XmlReader_" data-uid="MediaBrowser.LocalMetadata.Parsers.BaseItemXmlParser`1.GetShare(System.Xml.XmlReader)">GetShare(XmlReader)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Get share.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -421,7 +429,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlreader">XmlReader</a></td>
         <td><span class="parametername">reader</span></td>
-        <td></td>
+        <td><p>The xml reader.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -436,7 +445,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Share.html">Share</a></td>
-        <td></td>
+        <td><p>The share.</p>
+</td>
       </tr>
     </tbody>
   </table>

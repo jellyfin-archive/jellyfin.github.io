@@ -83,12 +83,17 @@
   
   <h1 id="Jellyfin_Data_Entities_Preference" data-uid="Jellyfin.Data.Entities.Preference" class="text-break">Class Preference
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An entity representing a preference attached to a user or group.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">Preference</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -118,7 +123,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Data.dll</h6>
   <h5 id="Jellyfin_Data_Entities_Preference_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Preference</code></pre>
+    <pre><code class="lang-csharp hljs">public class Preference : ISavingChanges</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -127,11 +132,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L29">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference__ctor_" data-uid="Jellyfin.Data.Entities.Preference.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference__ctor" data-uid="Jellyfin.Data.Entities.Preference.#ctor">Preference()</h4>
-  <div class="markdown level1 summary"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Preference.html">Preference</a> class.
+Default constructor. Protected due to required properties, but present because EF needs it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,19 +146,20 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference__ctor_Jellyfin_Data_Enums_PreferenceKind_System_String_Jellyfin_Data_Entities_User_Jellyfin_Data_Entities_Group_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.%23ctor(Jellyfin.Data.Enums.PreferenceKind%2CSystem.String%2CJellyfin.Data.Entities.User%2CJellyfin.Data.Entities.Group)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference__ctor_Jellyfin_Data_Enums_PreferenceKind_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.%23ctor(Jellyfin.Data.Enums.PreferenceKind%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L19">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference__ctor_" data-uid="Jellyfin.Data.Entities.Preference.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_Preference__ctor_Jellyfin_Data_Enums_PreferenceKind_System_String_Jellyfin_Data_Entities_User_Jellyfin_Data_Entities_Group_" data-uid="Jellyfin.Data.Entities.Preference.#ctor(Jellyfin.Data.Enums.PreferenceKind,System.String,Jellyfin.Data.Entities.User,Jellyfin.Data.Entities.Group)">Preference(PreferenceKind, String, User, Group)</h4>
-  <div class="markdown level1 summary"><p>Public constructor with required data</p>
+  <h4 id="Jellyfin_Data_Entities_Preference__ctor_Jellyfin_Data_Enums_PreferenceKind_System_String_" data-uid="Jellyfin.Data.Entities.Preference.#ctor(Jellyfin.Data.Enums.PreferenceKind,System.String)">Preference(PreferenceKind, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Preference.html">Preference</a> class.
+Public constructor with required data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Preference(PreferenceKind kind, string value, User _user0, Group _group1)</code></pre>
+    <pre><code class="lang-csharp hljs">public Preference(PreferenceKind kind, string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,22 +174,14 @@
       <tr>
         <td><a class="xref" href="Jellyfin.Data.Enums.PreferenceKind.html">PreferenceKind</a></td>
         <td><span class="parametername">kind</span></td>
-        <td></td>
+        <td><p>The preference kind.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
-        <td><span class="parametername">_user0</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Group.html">Group</a></td>
-        <td><span class="parametername">_group1</span></td>
-        <td></td>
+        <td><p>The value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -193,11 +192,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L43">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_Id_" data-uid="Jellyfin.Data.Entities.Preference.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference_Id" data-uid="Jellyfin.Data.Entities.Preference.Id">Id</h4>
-  <div class="markdown level1 summary"><p>Identity, Indexed, Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets the id of this preference.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -222,22 +221,25 @@ public int Id { get; protected set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_Preference_Id_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Identity, Indexed, Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_Kind.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.Kind%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L54">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_Kind_" data-uid="Jellyfin.Data.Entities.Preference.Kind*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference_Kind" data-uid="Jellyfin.Data.Entities.Preference.Kind">Kind</h4>
-  <div class="markdown level1 summary"><p>Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets the type of this preference.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Required]
-public PreferenceKind Kind { get; set; }</code></pre>
+public PreferenceKind Kind { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,16 +256,19 @@ public PreferenceKind Kind { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_Preference_Kind_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L92">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L74">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_RowVersion_" data-uid="Jellyfin.Data.Entities.Preference.RowVersion*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference_RowVersion" data-uid="Jellyfin.Data.Entities.Preference.RowVersion">RowVersion</h4>
-  <div class="markdown level1 summary"><p>Required, ConcurrenyToken</p>
+  <div class="markdown level1 summary"><p>Gets or sets the row version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -287,16 +292,19 @@ public uint RowVersion { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_Preference_RowVersion_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, ConcurrencyToken.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_Value.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_Value_" data-uid="Jellyfin.Data.Entities.Preference.Value*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference_Value" data-uid="Jellyfin.Data.Entities.Preference.Value">Value</h4>
-  <div class="markdown level1 summary"><p>Required, Max length = 65535</p>
+  <div class="markdown level1 summary"><p>Gets or sets the value of this preference.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -321,23 +329,26 @@ public string Value { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_Preference_Value_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, Max length = 65535.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_Create_Jellyfin_Data_Enums_PreferenceKind_System_String_Jellyfin_Data_Entities_User_Jellyfin_Data_Entities_Group_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.Create(Jellyfin.Data.Enums.PreferenceKind%2CSystem.String%2CJellyfin.Data.Entities.User%2CJellyfin.Data.Entities.Group)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_Create_Jellyfin_Data_Enums_PreferenceKind_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.Create(Jellyfin.Data.Enums.PreferenceKind%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L84">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_Create_" data-uid="Jellyfin.Data.Entities.Preference.Create*"></a>
-  <h4 id="Jellyfin_Data_Entities_Preference_Create_Jellyfin_Data_Enums_PreferenceKind_System_String_Jellyfin_Data_Entities_User_Jellyfin_Data_Entities_Group_" data-uid="Jellyfin.Data.Entities.Preference.Create(Jellyfin.Data.Enums.PreferenceKind,System.String,Jellyfin.Data.Entities.User,Jellyfin.Data.Entities.Group)">Create(PreferenceKind, String, User, Group)</h4>
+  <h4 id="Jellyfin_Data_Entities_Preference_Create_Jellyfin_Data_Enums_PreferenceKind_System_String_" data-uid="Jellyfin.Data.Entities.Preference.Create(Jellyfin.Data.Enums.PreferenceKind,System.String)">Create(PreferenceKind, String)</h4>
   <div class="markdown level1 summary"><p>Static create function (for use in LINQ queries, etc.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Preference Create(PreferenceKind kind, string value, User _user0, Group _group1)</code></pre>
+    <pre><code class="lang-csharp hljs">public static Preference Create(PreferenceKind kind, string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,22 +363,14 @@ public string Value { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="Jellyfin.Data.Enums.PreferenceKind.html">PreferenceKind</a></td>
         <td><span class="parametername">kind</span></td>
-        <td></td>
+        <td><p>The preference kind.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">value</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
-        <td><span class="parametername">_user0</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Group.html">Group</a></td>
-        <td><span class="parametername">_group1</span></td>
-        <td></td>
+        <td><p>The value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -382,38 +385,8 @@ public string Value { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Jellyfin.Data.Entities.Preference.html">Preference</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_CreatePreferenceUnsafe.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.CreatePreferenceUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L22">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_Preference_CreatePreferenceUnsafe_" data-uid="Jellyfin.Data.Entities.Preference.CreatePreferenceUnsafe*"></a>
-  <h4 id="Jellyfin_Data_Entities_Preference_CreatePreferenceUnsafe" data-uid="Jellyfin.Data.Entities.Preference.CreatePreferenceUnsafe">CreatePreferenceUnsafe()</h4>
-  <div class="markdown level1 summary"><p>Replaces default constructor, since it&apos;s protected. Caller assumes responsibility for setting all required values before saving.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Preference CreatePreferenceUnsafe()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Preference.html">Preference</a></td>
-        <td></td>
+        <td><p>The new instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -422,7 +395,7 @@ public string Value { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L90">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Preference_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.Preference.OnSavingChanges*"></a>
   <h4 id="Jellyfin_Data_Entities_Preference_OnSavingChanges" data-uid="Jellyfin.Data.Entities.Preference.OnSavingChanges">OnSavingChanges()</h4>
@@ -431,6 +404,10 @@ public string Value { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnSavingChanges()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a>
   </div>
 </article>
           </div>
@@ -443,7 +420,7 @@ public string Value { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Preference.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Preference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Preference.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -98,11 +98,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_LocalSubnetsFn.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.LocalSubnetsFn%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L17">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_LocalSubnetsFn_" data-uid="MediaBrowser.Common.Net.INetworkManager.LocalSubnetsFn*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_LocalSubnetsFn" data-uid="MediaBrowser.Common.Net.INetworkManager.LocalSubnetsFn">LocalSubnetsFn</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a function to return the list of user defined LAN addresses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -127,36 +128,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetLocalIpAddresses_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetLocalIpAddresses(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetLocalIpAddresses.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetLocalIpAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L62">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_GetLocalIpAddresses_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetLocalIpAddresses*"></a>
-  <h4 id="MediaBrowser_Common_Net_INetworkManager_GetLocalIpAddresses_System_Boolean_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetLocalIpAddresses(System.Boolean)">GetLocalIpAddresses(Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="MediaBrowser_Common_Net_INetworkManager_GetLocalIpAddresses" data-uid="MediaBrowser.Common.Net.INetworkManager.GetLocalIpAddresses">GetLocalIpAddresses()</h4>
+  <div class="markdown level1 summary"><p>Investigates an caches a list of interface addresses, excluding local link and LAN excluded addresses.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IPAddress[] GetLocalIpAddresses(bool ignoreVirtualInterface)</code></pre>
+    <pre><code class="lang-csharp hljs">IPAddress[] GetLocalIpAddresses()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">ignoreVirtualInterface</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -168,7 +153,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a>[]</td>
-        <td></td>
+        <td><p>The list of ipaddresses.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -177,11 +163,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetLocalIpSubnetMask_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetLocalIpSubnetMask(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L50">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L95">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_GetLocalIpSubnetMask_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetLocalIpSubnetMask*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_GetLocalIpSubnetMask_System_Net_IPAddress_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetLocalIpSubnetMask(System.Net.IPAddress)">GetLocalIpSubnetMask(IPAddress)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Returns the subnet mask of an interface with the given address.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -200,7 +187,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
         <td><span class="parametername">address</span></td>
-        <td></td>
+        <td><p>The address to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -215,7 +203,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
-        <td></td>
+        <td><p>Returns the subnet mask of an interface with the given address, or null if an interface match cannot be found.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -224,7 +213,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetMacAddresses.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetMacAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L35">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_GetMacAddresses_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetMacAddresses*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_GetMacAddresses" data-uid="MediaBrowser.Common.Net.INetworkManager.GetMacAddresses">GetMacAddresses()</h4>
@@ -256,11 +245,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedTcpPort.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedTcpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L23">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedTcpPort_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedTcpPort*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedTcpPort" data-uid="MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedTcpPort">GetRandomUnusedTcpPort()</h4>
-  <div class="markdown level1 summary"><p>Gets a random port number that is currently available.</p>
+  <div class="markdown level1 summary"><p>Gets a random port TCP number that is currently available.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -288,11 +277,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedUdpPort.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedUdpPort%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L29">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedUdpPort_" data-uid="MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedUdpPort*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_GetRandomUnusedUdpPort" data-uid="MediaBrowser.Common.Net.INetworkManager.GetRandomUnusedUdpPort">GetRandomUnusedUdpPort()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a random port UDP number that is currently available.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,7 +299,70 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
+        <td><p>System.Int32.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_System_Net_IPAddress_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets(System.Net.IPAddress%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L79">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets*"></a>
+  <h4 id="MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_System_Net_IPAddress_System_Boolean_System_Boolean_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets(System.Net.IPAddress,System.Boolean,System.Boolean)">IsAddressInSubnets(IPAddress, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Returns true if address is in the LAN list in the config file.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAddressInSubnets(IPAddress address, bool excludeInterfaces, bool excludeRFC)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The address to check.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">excludeInterfaces</span></td>
+        <td><p>If true, check against addresses in the LAN settings which have [] arroud and return true if it matches the address give in address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">excludeRFC</span></td>
+        <td><p>If true, returns false if address is in the 127.x.x.x or 169.128.x.x range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>false</code>if the address isn&apos;t in the LAN list, <code>true</code> if the address has been defined as a LAN address.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -318,11 +371,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_System_String_System_String___.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets(System.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L70">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsAddressInSubnets_System_String_System_String___" data-uid="MediaBrowser.Common.Net.INetworkManager.IsAddressInSubnets(System.String,System.String[])">IsAddressInSubnets(String, String[])</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if the given address falls within the ranges given in [subnets]. The addresses in subnets can be hosts or subnets in the CIDR format.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -341,12 +395,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">addressString</span></td>
-        <td></td>
+        <td><p>The address to check.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
         <td><span class="parametername">subnets</span></td>
-        <td></td>
+        <td><p>If true, check against addresses in the LAN settings surrounded by brackets ([]).</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -361,7 +417,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code>if the address is in at least one of the given subnets, <code>false</code> otherwise.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -370,7 +427,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L56">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_System_String_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork(System.String)">IsInLocalNetwork(String)</h4>
@@ -420,7 +477,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpace_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpace(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L42">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpace_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpace*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpace_System_String_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpace(System.String)">IsInPrivateAddressSpace(String)</h4>
@@ -467,14 +524,65 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpaceAndLocalSubnet_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpaceAndLocalSubnet(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L49">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpaceAndLocalSubnet_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpaceAndLocalSubnet*"></a>
+  <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInPrivateAddressSpaceAndLocalSubnet_System_String_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInPrivateAddressSpaceAndLocalSubnet(System.String)">IsInPrivateAddressSpaceAndLocalSubnet(String)</h4>
+  <div class="markdown level1 summary"><p>Determines whether [is in private address space 10.x.x.x] [the specified endpoint] and exists in the subnets returned by GetSubnets().</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsInPrivateAddressSpaceAndLocalSubnet(string endpoint)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">endpoint</span></td>
+        <td><p>The endpoint.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if [is in private address space 10.x.x.x] [the specified endpoint]; otherwise, <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Net_INetworkManager_IsInSameSubnet_System_Net_IPAddress_System_Net_IPAddress_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Net.INetworkManager.IsInSameSubnet(System.Net.IPAddress%2CSystem.Net.IPAddress%2CSystem.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Net/INetworkManager.cs/#L88">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInSameSubnet_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInSameSubnet*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInSameSubnet_System_Net_IPAddress_System_Net_IPAddress_System_Net_IPAddress_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInSameSubnet(System.Net.IPAddress,System.Net.IPAddress,System.Net.IPAddress)">IsInSameSubnet(IPAddress, IPAddress, IPAddress)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Checks if address is in the LAN list in the config file.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -493,17 +601,20 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
         <td><span class="parametername">address1</span></td>
-        <td></td>
+        <td><p>Source address to check.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
         <td><span class="parametername">address2</span></td>
-        <td></td>
+        <td><p>Destination address to check against.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
         <td><span class="parametername">subnetMask</span></td>
-        <td></td>
+        <td><p>Destination subnet to check against.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -518,7 +629,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true/false</code>depending on whether address1 is in the same subnet as IPAddress2 with subnetMask.</p>
+</td>
       </tr>
     </tbody>
   </table>

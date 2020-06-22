@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser" class="text-break">Class PlaylistXmlParser
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Playlist xml parser.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -140,18 +141,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.%23ctor(Microsoft.Extensions.Logging.ILogger%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__MediaBrowser_Controller_Providers_IProviderManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.%23ctor(Microsoft.Extensions.Logging.ILogger%7BMediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser%7D%2CMediaBrowser.Controller.Providers.IProviderManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L20">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__ctor_" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.#ctor*"></a>
-  <h4 id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Controller_Providers_IProviderManager_" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.#ctor(Microsoft.Extensions.Logging.ILogger,MediaBrowser.Controller.Providers.IProviderManager)">PlaylistXmlParser(ILogger, IProviderManager)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__ctor_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser__MediaBrowser_Controller_Providers_IProviderManager_" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.#ctor(Microsoft.Extensions.Logging.ILogger{MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser},MediaBrowser.Controller.Providers.IProviderManager)">PlaylistXmlParser(ILogger&lt;PlaylistXmlParser&gt;, IProviderManager)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.html">PlaylistXmlParser</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlaylistXmlParser(ILogger logger, IProviderManager providerManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlaylistXmlParser(ILogger&lt;PlaylistXmlParser&gt; logger, IProviderManager providerManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,14 +166,16 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.html">PlaylistXmlParser</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger&lt;TCategoryName&gt;</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
         <td><span class="parametername">providerManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a> interface.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -182,7 +186,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser_FetchDataFromXmlNode_System_Xml_XmlReader_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Playlists_Playlist__.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.FetchDataFromXmlNode(System.Xml.XmlReader%2CMediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Playlists.Playlist%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L12">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L26">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser_FetchDataFromXmlNode_" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.FetchDataFromXmlNode*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser_FetchDataFromXmlNode_System_Xml_XmlReader_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Playlists_Playlist__" data-uid="MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser.FetchDataFromXmlNode(System.Xml.XmlReader,MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Playlists.Playlist})">FetchDataFromXmlNode(XmlReader, MetadataResult&lt;Playlist&gt;)</h4>
@@ -227,7 +231,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Parsers_PlaylistXmlParser.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Parsers.PlaylistXmlParser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Parsers/PlaylistXmlParser.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

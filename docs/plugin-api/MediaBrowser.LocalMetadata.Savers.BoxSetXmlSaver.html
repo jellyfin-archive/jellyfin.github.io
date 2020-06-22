@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver" class="text-break">Class BoxSetXmlSaver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Box set xml saver.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -98,6 +99,9 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_DateAddedFormat">BaseXmlSaver.DateAddedFormat</a>
+    </div>
     <div>
       <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_FileSystem">BaseXmlSaver.FileSystem</a>
     </div>
@@ -129,10 +133,7 @@
       <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_Save_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_">BaseXmlSaver.Save(BaseItem, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_DateAddedFormat">BaseXmlSaver.DateAddedFormat</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_">BaseXmlSaver.AddCommonNodes(BaseItem, XmlWriter, ILibraryManager, IUserManager, IUserDataManager, IFileSystem, IServerConfigurationManager)</a>
+      <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddCommonNodes_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_MediaBrowser_Controller_Library_ILibraryManager_">BaseXmlSaver.AddCommonNodes(BaseItem, XmlWriter, ILibraryManager)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BaseXmlSaver.html#MediaBrowser_LocalMetadata_Savers_BaseXmlSaver_AddShares_MediaBrowser_Controller_Entities_IHasShares_System_Xml_XmlWriter_">BaseXmlSaver.AddShares(IHasShares, XmlWriter)</a>
@@ -178,11 +179,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver__ctor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver__.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.%23ctor(MediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMicrosoft.Extensions.Logging.ILogger%7BMediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L26">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver__ctor_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.#ctor*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver__ctor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver__" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.#ctor(MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,Microsoft.Extensions.Logging.ILogger{MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver})">BoxSetXmlSaver(IFileSystem, IServerConfigurationManager, ILibraryManager, IUserManager, IUserDataManager, ILogger&lt;BoxSetXmlSaver&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.html">BoxSetXmlSaver</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -201,32 +203,38 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
         <td><span class="parametername">configurationManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
         <td><span class="parametername">libraryManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
         <td><span class="parametername">userManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
         <td><span class="parametername">userDataManager</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a> interface.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.html">BoxSetXmlSaver</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
-        <td></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger&lt;TCategoryName&gt;</a> interface.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -237,11 +245,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_GetLocalSavePath_MediaBrowser_Controller_Entities_BaseItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.GetLocalSavePath(MediaBrowser.Controller.Entities.BaseItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L48">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_GetLocalSavePath_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.GetLocalSavePath*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_GetLocalSavePath_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.GetLocalSavePath(MediaBrowser.Controller.Entities.BaseItem)">GetLocalSavePath(BaseItem)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the save path.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -260,7 +269,8 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -275,7 +285,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>System.String.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -286,11 +297,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_IsEnabledFor_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Library_ItemUpdateType_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.IsEnabledFor(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Controller.Library.ItemUpdateType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L32">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_IsEnabledFor_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.IsEnabledFor*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_IsEnabledFor_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Controller_Library_ItemUpdateType_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.IsEnabledFor(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Controller.Library.ItemUpdateType)">IsEnabledFor(BaseItem, ItemUpdateType)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether [is enabled for] [the specified item].</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -309,12 +321,14 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.ItemUpdateType.html">ItemUpdateType</a></td>
         <td><span class="parametername">updateType</span></td>
-        <td></td>
+        <td><p>Type of the update.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -329,7 +343,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if [is enabled for] [the specified item]; otherwise, <code>false</code>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -340,11 +355,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem%2CSystem.Xml.XmlWriter)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L24">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L43">View Source</a>
   </span>
   <a id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_WriteCustomElements_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.WriteCustomElements*"></a>
   <h4 id="MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver_WriteCustomElements_MediaBrowser_Controller_Entities_BaseItem_System_Xml_XmlWriter_" data-uid="MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver.WriteCustomElements(MediaBrowser.Controller.Entities.BaseItem,System.Xml.XmlWriter)">WriteCustomElements(BaseItem, XmlWriter)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Write custom elements.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -363,12 +379,14 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.xml.xmlwriter">XmlWriter</a></td>
         <td><span class="parametername">writer</span></td>
-        <td></td>
+        <td><p>The xml writer.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -392,7 +410,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_LocalMetadata_Savers_BoxSetXmlSaver.md&amp;value=---%0Auid%3A%20MediaBrowser.LocalMetadata.Savers.BoxSetXmlSaver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.LocalMetadata/Savers/BoxSetXmlSaver.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -83,12 +83,18 @@
   
   <h1 id="Jellyfin_Data_Entities_User" data-uid="Jellyfin.Data.Entities.User" class="text-break">Class User
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An entity representing a user.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">User</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Jellyfin.Data.IHasPermissions.html">IHasPermissions</a></div>
+    <div><a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -118,7 +124,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Data.dll</h6>
   <h5 id="Jellyfin_Data_Entities_User_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class User</code></pre>
+    <pre><code class="lang-csharp hljs">public class User : IHasPermissions, ISavingChanges</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -127,11 +133,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L81">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User__ctor_" data-uid="Jellyfin.Data.Entities.User.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_User__ctor" data-uid="Jellyfin.Data.Entities.User.#ctor">User()</h4>
-  <div class="markdown level1 summary"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.User.html">User</a> class.
+Default constructor. Protected due to required properties, but present because EF needs it.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -140,19 +147,20 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User__ctor_System_String_System_Boolean_System_String_System_String_System_Int32_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.%23ctor(System.String%2CSystem.Boolean%2CSystem.String%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User__ctor_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.%23ctor(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L29">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User__ctor_" data-uid="Jellyfin.Data.Entities.User.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_User__ctor_System_String_System_Boolean_System_String_System_String_System_Int32_System_String_System_Boolean_" data-uid="Jellyfin.Data.Entities.User.#ctor(System.String,System.Boolean,System.String,System.String,System.Int32,System.String,System.Boolean)">User(String, Boolean, String, String, Int32, String, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Public constructor with required data</p>
+  <h4 id="Jellyfin_Data_Entities_User__ctor_System_String_System_String_System_String_" data-uid="Jellyfin.Data.Entities.User.#ctor(System.String,System.String,System.String)">User(String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.User.html">User</a> class.
+Public constructor with required data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public User(string username, bool mustupdatepassword, string audiolanguagepreference, string authenticationproviderid, int invalidloginattemptcount, string subtitlemode, bool playdefaultaudiotrack)</code></pre>
+    <pre><code class="lang-csharp hljs">public User(string username, string authenticationProviderId, string passwordResetProviderId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,37 +175,20 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">username</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">mustupdatepassword</span></td>
-        <td></td>
+        <td><p>The username for the new user.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">audiolanguagepreference</span></td>
-        <td></td>
+        <td><span class="parametername">authenticationProviderId</span></td>
+        <td><p>The Id of the user&apos;s authentication provider.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">authenticationproviderid</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">invalidloginattemptcount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">subtitlemode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">playdefaultaudiotrack</span></td>
-        <td></td>
+        <td><span class="parametername">passwordResetProviderId</span></td>
+        <td><p>The Id of the user&apos;s password reset provider.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -205,20 +196,50 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_AudioLanguagePreference.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.AudioLanguagePreference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_AccessSchedules.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.AccessSchedules%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L122">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L350">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_AudioLanguagePreference_" data-uid="Jellyfin.Data.Entities.User.AudioLanguagePreference*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_AudioLanguagePreference" data-uid="Jellyfin.Data.Entities.User.AudioLanguagePreference">AudioLanguagePreference</h4>
-  <div class="markdown level1 summary"><p>Required, Max length = 255</p>
+  <a id="Jellyfin_Data_Entities_User_AccessSchedules_" data-uid="Jellyfin.Data.Entities.User.AccessSchedules*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_AccessSchedules" data-uid="Jellyfin.Data.Entities.User.AccessSchedules">AccessSchedules</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of access schedules this user has.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[MaxLength(255)]
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;AccessSchedule&gt; AccessSchedules { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Jellyfin.Data.Entities.AccessSchedule.html">AccessSchedule</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_AudioLanguagePreference.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.AudioLanguagePreference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L147">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_AudioLanguagePreference_" data-uid="Jellyfin.Data.Entities.User.AudioLanguagePreference*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_AudioLanguagePreference" data-uid="Jellyfin.Data.Entities.User.AudioLanguagePreference">AudioLanguagePreference</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the audio language preference.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MaxLength(255)]
 [StringLength(255)]
 public string AudioLanguagePreference { get; set; }</code></pre>
   </div>
@@ -237,16 +258,19 @@ public string AudioLanguagePreference { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_AudioLanguagePreference_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 255.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_AuthenticationProviderId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.AuthenticationProviderId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L157">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_AuthenticationProviderId_" data-uid="Jellyfin.Data.Entities.User.AuthenticationProviderId*"></a>
   <h4 id="Jellyfin_Data_Entities_User_AuthenticationProviderId" data-uid="Jellyfin.Data.Entities.User.AuthenticationProviderId">AuthenticationProviderId</h4>
-  <div class="markdown level1 summary"><p>Required, Max length = 255</p>
+  <div class="markdown level1 summary"><p>Gets or sets the authentication provider id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -271,20 +295,25 @@ public string AuthenticationProviderId { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_AuthenticationProviderId_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, Max length = 255.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_DisplayCollectionsView.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.DisplayCollectionsView%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L194">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L240">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_DisplayCollectionsView_" data-uid="Jellyfin.Data.Entities.User.DisplayCollectionsView*"></a>
   <h4 id="Jellyfin_Data_Entities_User_DisplayCollectionsView" data-uid="Jellyfin.Data.Entities.User.DisplayCollectionsView">DisplayCollectionsView</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to display the collections view.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? DisplayCollectionsView { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool DisplayCollectionsView { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -296,25 +325,30 @@ public string AuthenticationProviderId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_DisplayCollectionsView_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_DisplayMissingEpisodes.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.DisplayMissingEpisodes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L192">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L231">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_DisplayMissingEpisodes_" data-uid="Jellyfin.Data.Entities.User.DisplayMissingEpisodes*"></a>
   <h4 id="Jellyfin_Data_Entities_User_DisplayMissingEpisodes" data-uid="Jellyfin.Data.Entities.User.DisplayMissingEpisodes">DisplayMissingEpisodes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether missing episodes should be displayed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? DisplayMissingEpisodes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool DisplayMissingEpisodes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,88 +360,31 @@ public string AuthenticationProviderId { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_DisplayMissingEpisodes_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EasyPassword.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EasyPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L202">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L128">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay_" data-uid="Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay" data-uid="Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay">EnableNextEpisodeAutoPlay</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? EnableNextEpisodeAutoPlay { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableUserPreferenceAccess.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableUserPreferenceAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L204">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_User_EnableUserPreferenceAccess_" data-uid="Jellyfin.Data.Entities.User.EnableUserPreferenceAccess*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_EnableUserPreferenceAccess" data-uid="Jellyfin.Data.Entities.User.EnableUserPreferenceAccess">EnableUserPreferenceAccess</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? EnableUserPreferenceAccess { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_GroupedFolders.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.GroupedFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L138">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_User_GroupedFolders_" data-uid="Jellyfin.Data.Entities.User.GroupedFolders*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_GroupedFolders" data-uid="Jellyfin.Data.Entities.User.GroupedFolders">GroupedFolders</h4>
-  <div class="markdown level1 summary"><p>Max length = 65535</p>
+  <a id="Jellyfin_Data_Entities_User_EasyPassword_" data-uid="Jellyfin.Data.Entities.User.EasyPassword*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_EasyPassword" data-uid="Jellyfin.Data.Entities.User.EasyPassword">EasyPassword</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user&apos;s easy password, or <code>null</code> if none is set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[MaxLength(65535)]
 [StringLength(65535)]
-public string GroupedFolders { get; set; }</code></pre>
+public string EasyPassword { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -424,21 +401,25 @@ public string GroupedFolders { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_EasyPassword_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 65535.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Groups.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Groups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableAutoLogin.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableAutoLogin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L221">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L294">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_Groups_" data-uid="Jellyfin.Data.Entities.User.Groups*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_Groups" data-uid="Jellyfin.Data.Entities.User.Groups">Groups</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Jellyfin_Data_Entities_User_EnableAutoLogin_" data-uid="Jellyfin.Data.Entities.User.EnableAutoLogin*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_EnableAutoLogin" data-uid="Jellyfin.Data.Entities.User.EnableAutoLogin">EnableAutoLogin</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the user should auto-login.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Group_Groups_Id&quot;)]
-public virtual ICollection&lt;Group&gt; Groups { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool EnableAutoLogin { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -450,25 +431,135 @@ public virtual ICollection&lt;Group&gt; Groups { get; protected set; }</code></p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Jellyfin.Data.Entities.Group.html">Group</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_EnableAutoLogin_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableLocalPassword.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableLocalPassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L249">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_EnableLocalPassword_" data-uid="Jellyfin.Data.Entities.User.EnableLocalPassword*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_EnableLocalPassword" data-uid="Jellyfin.Data.Entities.User.EnableLocalPassword">EnableLocalPassword</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the user has a local password.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public bool EnableLocalPassword { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_EnableLocalPassword_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L285">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay_" data-uid="Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay" data-uid="Jellyfin.Data.Entities.User.EnableNextEpisodeAutoPlay">EnableNextEpisodeAutoPlay</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to enable auto-play for the next episode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public bool EnableNextEpisodeAutoPlay { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_EnableNextEpisodeAutoPlay_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_EnableUserPreferenceAccess.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.EnableUserPreferenceAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L303">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_EnableUserPreferenceAccess_" data-uid="Jellyfin.Data.Entities.User.EnableUserPreferenceAccess*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_EnableUserPreferenceAccess" data-uid="Jellyfin.Data.Entities.User.EnableUserPreferenceAccess">EnableUserPreferenceAccess</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the user can change their preferences.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public bool EnableUserPreferenceAccess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_EnableUserPreferenceAccess_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_HidePlayedInLatest.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.HidePlayedInLatest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L196">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L258">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_HidePlayedInLatest_" data-uid="Jellyfin.Data.Entities.User.HidePlayedInLatest*"></a>
   <h4 id="Jellyfin_Data_Entities_User_HidePlayedInLatest" data-uid="Jellyfin.Data.Entities.User.HidePlayedInLatest">HidePlayedInLatest</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the server should hide played content in &quot;Latest&quot;.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? HidePlayedInLatest { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool HidePlayedInLatest { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -480,29 +571,32 @@ public virtual ICollection&lt;Group&gt; Groups { get; protected set; }</code></p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_HidePlayedInLatest_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L96">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Id_" data-uid="Jellyfin.Data.Entities.User.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_User_Id" data-uid="Jellyfin.Data.Entities.User.Id">Id</h4>
-  <div class="markdown level1 summary"><p>Identity, Indexed, Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets the Id of the user.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Key]
 [Required]
-[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-public int Id { get; protected set; }</code></pre>
+[JsonIgnore]
+public Guid Id { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -514,7 +608,44 @@ public int Id { get; protected set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_Id_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Identity, Indexed, Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_InternalId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.InternalId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L321">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_InternalId_" data-uid="Jellyfin.Data.Entities.User.InternalId*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_InternalId" data-uid="Jellyfin.Data.Entities.User.InternalId">InternalId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the internal id.
+This is a temporary stopgap for until the library db is migrated.
+This corresponds to the value of the index of this user in the library db.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public long InternalId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -524,11 +655,11 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_InvalidLoginAttemptCount.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.InvalidLoginAttemptCount%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L145">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L179">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_InvalidLoginAttemptCount_" data-uid="Jellyfin.Data.Entities.User.InvalidLoginAttemptCount*"></a>
   <h4 id="Jellyfin_Data_Entities_User_InvalidLoginAttemptCount" data-uid="Jellyfin.Data.Entities.User.InvalidLoginAttemptCount">InvalidLoginAttemptCount</h4>
-  <div class="markdown level1 summary"><p>Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets the invalid login attempt count.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -551,23 +682,24 @@ public int InvalidLoginAttemptCount { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_InvalidLoginAttemptCount_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_LatestItemExcludes.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.LatestItemExcludes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_LastActivityDate.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.LastActivityDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L151">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L185">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_LatestItemExcludes_" data-uid="Jellyfin.Data.Entities.User.LatestItemExcludes*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_LatestItemExcludes" data-uid="Jellyfin.Data.Entities.User.LatestItemExcludes">LatestItemExcludes</h4>
-  <div class="markdown level1 summary"><p>Max length = 65535</p>
+  <a id="Jellyfin_Data_Entities_User_LastActivityDate_" data-uid="Jellyfin.Data.Entities.User.LastActivityDate*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_LastActivityDate" data-uid="Jellyfin.Data.Entities.User.LastActivityDate">LastActivityDate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the last activity date.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MaxLength(65535)]
-[StringLength(65535)]
-public string LatestItemExcludes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime? LastActivityDate { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -579,7 +711,38 @@ public string LatestItemExcludes { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_LastLoginDate.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.LastLoginDate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L190">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_LastLoginDate_" data-uid="Jellyfin.Data.Entities.User.LastLoginDate*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_LastLoginDate" data-uid="Jellyfin.Data.Entities.User.LastLoginDate">LastLoginDate</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the last login date.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DateTime? LastLoginDate { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -589,11 +752,12 @@ public string LatestItemExcludes { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_LoginAttemptsBeforeLockout.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.LoginAttemptsBeforeLockout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L155">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L195">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_LoginAttemptsBeforeLockout_" data-uid="Jellyfin.Data.Entities.User.LoginAttemptsBeforeLockout*"></a>
   <h4 id="Jellyfin_Data_Entities_User_LoginAttemptsBeforeLockout" data-uid="Jellyfin.Data.Entities.User.LoginAttemptsBeforeLockout">LoginAttemptsBeforeLockout</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the number of login attempts the user can make before they are locked out.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -616,14 +780,45 @@ public string LatestItemExcludes { get; set; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_MaxParentalAgeRating.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.MaxParentalAgeRating%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L309">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_MaxParentalAgeRating_" data-uid="Jellyfin.Data.Entities.User.MaxParentalAgeRating*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_MaxParentalAgeRating" data-uid="Jellyfin.Data.Entities.User.MaxParentalAgeRating">MaxParentalAgeRating</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the maximum parental age rating.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxParentalAgeRating { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_MustUpdatePassword.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.MustUpdatePassword%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L116">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L138">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_MustUpdatePassword_" data-uid="Jellyfin.Data.Entities.User.MustUpdatePassword*"></a>
   <h4 id="Jellyfin_Data_Entities_User_MustUpdatePassword" data-uid="Jellyfin.Data.Entities.User.MustUpdatePassword">MustUpdatePassword</h4>
-  <div class="markdown level1 summary"><p>Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the user must update their password.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -646,82 +841,19 @@ public bool MustUpdatePassword { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_MyMediaExcludes.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.MyMediaExcludes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L160">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_User_MyMediaExcludes_" data-uid="Jellyfin.Data.Entities.User.MyMediaExcludes*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_MyMediaExcludes" data-uid="Jellyfin.Data.Entities.User.MyMediaExcludes">MyMediaExcludes</h4>
-  <div class="markdown level1 summary"><p>Max length = 65535</p>
+  <h5 id="Jellyfin_Data_Entities_User_MustUpdatePassword_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
 </div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MaxLength(65535)]
-[StringLength(65535)]
-public string MyMediaExcludes { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_OrderedViews.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.OrderedViews%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L167">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_User_OrderedViews_" data-uid="Jellyfin.Data.Entities.User.OrderedViews*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_OrderedViews" data-uid="Jellyfin.Data.Entities.User.OrderedViews">OrderedViews</h4>
-  <div class="markdown level1 summary"><p>Max length = 65535</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[MaxLength(65535)]
-[StringLength(65535)]
-public string OrderedViews { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Password.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Password%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L109">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L118">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Password_" data-uid="Jellyfin.Data.Entities.User.Password*"></a>
   <h4 id="Jellyfin_Data_Entities_User_Password" data-uid="Jellyfin.Data.Entities.User.Password">Password</h4>
-  <div class="markdown level1 summary"><p>Max length = 65535</p>
+  <div class="markdown level1 summary"><p>Gets or sets the user&apos;s password, or <code>null</code> if none is set.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -745,20 +877,61 @@ public string Password { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_Password_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 65535.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_PasswordResetProviderId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.PasswordResetProviderId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L168">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_PasswordResetProviderId_" data-uid="Jellyfin.Data.Entities.User.PasswordResetProviderId*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_PasswordResetProviderId" data-uid="Jellyfin.Data.Entities.User.PasswordResetProviderId">PasswordResetProviderId</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the password reset provider id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+[MaxLength(255)]
+[StringLength(255)]
+public string PasswordResetProviderId { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_PasswordResetProviderId_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, Max length = 255.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Permissions.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Permissions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L224">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L363">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Permissions_" data-uid="Jellyfin.Data.Entities.User.Permissions*"></a>
   <h4 id="Jellyfin_Data_Entities_User_Permissions" data-uid="Jellyfin.Data.Entities.User.Permissions">Permissions</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the list of permissions this user has.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Permission_Permissions_Id&quot;)]
+    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Permission_Permissions_Guid&quot;)]
 public virtual ICollection&lt;Permission&gt; Permissions { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -781,11 +954,11 @@ public virtual ICollection&lt;Permission&gt; Permissions { get; protected set; }
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_PlayDefaultAudioTrack.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.PlayDefaultAudioTrack%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L182">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L212">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_PlayDefaultAudioTrack_" data-uid="Jellyfin.Data.Entities.User.PlayDefaultAudioTrack*"></a>
   <h4 id="Jellyfin_Data_Entities_User_PlayDefaultAudioTrack" data-uid="Jellyfin.Data.Entities.User.PlayDefaultAudioTrack">PlayDefaultAudioTrack</h4>
-  <div class="markdown level1 summary"><p>Required</p>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether the default audio track should be played.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -808,20 +981,24 @@ public bool PlayDefaultAudioTrack { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_PlayDefaultAudioTrack_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Preferences.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Preferences%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L230">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L377">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Preferences_" data-uid="Jellyfin.Data.Entities.User.Preferences*"></a>
   <h4 id="Jellyfin_Data_Entities_User_Preferences" data-uid="Jellyfin.Data.Entities.User.Preferences">Preferences</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the list of preferences this user has.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Preference_Preferences_Id&quot;)]
+    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;Preference_Preferences_Guid&quot;)]
 public virtual ICollection&lt;Preference&gt; Preferences { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -841,19 +1018,19 @@ public virtual ICollection&lt;Preference&gt; Preferences { get; protected set; }
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_ProviderMappings.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.ProviderMappings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_ProfileImage.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.ProfileImage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L227">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L328">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_ProviderMappings_" data-uid="Jellyfin.Data.Entities.User.ProviderMappings*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_ProviderMappings" data-uid="Jellyfin.Data.Entities.User.ProviderMappings">ProviderMappings</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Jellyfin_Data_Entities_User_ProfileImage_" data-uid="Jellyfin.Data.Entities.User.ProfileImage*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_ProfileImage" data-uid="Jellyfin.Data.Entities.User.ProfileImage">ProfileImage</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user&apos;s profile image. Can be <code>null</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[ForeignKey(&quot;ProviderMapping_ProviderMappings_Id&quot;)]
-public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual ImageInfo ProfileImage { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -865,7 +1042,7 @@ public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protec
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Jellyfin.Data.Entities.ProviderMapping.html">ProviderMapping</a>&gt;</td>
+        <td><a class="xref" href="Jellyfin.Data.Entities.ImageInfo.html">ImageInfo</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -875,15 +1052,17 @@ public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protec
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_RememberAudioSelections.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.RememberAudioSelections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L198">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L267">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_RememberAudioSelections_" data-uid="Jellyfin.Data.Entities.User.RememberAudioSelections*"></a>
   <h4 id="Jellyfin_Data_Entities_User_RememberAudioSelections" data-uid="Jellyfin.Data.Entities.User.RememberAudioSelections">RememberAudioSelections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to remember audio selections on played content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? RememberAudioSelections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool RememberAudioSelections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -895,25 +1074,30 @@ public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protec
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_RememberAudioSelections_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_RememberSubtitleSelections.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.RememberSubtitleSelections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L200">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L276">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_RememberSubtitleSelections_" data-uid="Jellyfin.Data.Entities.User.RememberSubtitleSelections*"></a>
   <h4 id="Jellyfin_Data_Entities_User_RememberSubtitleSelections" data-uid="Jellyfin.Data.Entities.User.RememberSubtitleSelections">RememberSubtitleSelections</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to remember subtitle selections on played content.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool? RememberSubtitleSelections { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[Required]
+public bool RememberSubtitleSelections { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -925,7 +1109,41 @@ public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protec
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_RememberSubtitleSelections_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_RemoteClientBitrateLimit.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.RemoteClientBitrateLimit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L314">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_RemoteClientBitrateLimit_" data-uid="Jellyfin.Data.Entities.User.RemoteClientBitrateLimit*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_RemoteClientBitrateLimit" data-uid="Jellyfin.Data.Entities.User.RemoteClientBitrateLimit">RemoteClientBitrateLimit</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the remote client bitrate limit.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? RemoteClientBitrateLimit { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -935,11 +1153,11 @@ public virtual ICollection&lt;ProviderMapping&gt; ProviderMappings { get; protec
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L209">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L339">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_RowVersion_" data-uid="Jellyfin.Data.Entities.User.RowVersion*"></a>
   <h4 id="Jellyfin_Data_Entities_User_RowVersion" data-uid="Jellyfin.Data.Entities.User.RowVersion">RowVersion</h4>
-  <div class="markdown level1 summary"><p>Required, ConcurrenyToken</p>
+  <div class="markdown level1 summary"><p>Gets or sets the row version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -963,23 +1181,26 @@ public uint RowVersion { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_RowVersion_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, Concurrency Token.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SubtitleLanguagePrefernce.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SubtitleLanguagePrefernce%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SubtitleLanguagePreference.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SubtitleLanguagePreference%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L188">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L221">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_SubtitleLanguagePrefernce_" data-uid="Jellyfin.Data.Entities.User.SubtitleLanguagePrefernce*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_SubtitleLanguagePrefernce" data-uid="Jellyfin.Data.Entities.User.SubtitleLanguagePrefernce">SubtitleLanguagePrefernce</h4>
-  <div class="markdown level1 summary"><p>Max length = 255</p>
+  <a id="Jellyfin_Data_Entities_User_SubtitleLanguagePreference_" data-uid="Jellyfin.Data.Entities.User.SubtitleLanguagePreference*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_SubtitleLanguagePreference" data-uid="Jellyfin.Data.Entities.User.SubtitleLanguagePreference">SubtitleLanguagePreference</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the subtitle language preference.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[MaxLength(255)]
 [StringLength(255)]
-public string SubtitleLanguagePrefernce { get; set; }</code></pre>
+public string SubtitleLanguagePreference { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -996,24 +1217,25 @@ public string SubtitleLanguagePrefernce { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_SubtitleLanguagePreference_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 255.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SubtitleMode.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SubtitleMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L174">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L203">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_SubtitleMode_" data-uid="Jellyfin.Data.Entities.User.SubtitleMode*"></a>
   <h4 id="Jellyfin_Data_Entities_User_SubtitleMode" data-uid="Jellyfin.Data.Entities.User.SubtitleMode">SubtitleMode</h4>
-  <div class="markdown level1 summary"><p>Required, Max length = 255</p>
+  <div class="markdown level1 summary"><p>Gets or sets the subtitle mode.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[Required]
-[MaxLength(255)]
-[StringLength(255)]
-public string SubtitleMode { get; set; }</code></pre>
+public SubtitlePlaybackMode SubtitleMode { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1025,7 +1247,41 @@ public string SubtitleMode { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="Jellyfin.Data.Enums.SubtitlePlaybackMode.html">SubtitlePlaybackMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_User_SubtitleMode_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SyncPlayAccess.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SyncPlayAccess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L330">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_SyncPlayAccess_" data-uid="Jellyfin.Data.Entities.User.SyncPlayAccess*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_SyncPlayAccess" data-uid="Jellyfin.Data.Entities.User.SyncPlayAccess">SyncPlayAccess</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Required]
+public SyncPlayAccess SyncPlayAccess { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Enums.SyncPlayAccess.html">SyncPlayAccess</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -1035,11 +1291,11 @@ public string SubtitleMode { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Username.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Username%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L107">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Username_" data-uid="Jellyfin.Data.Entities.User.Username*"></a>
   <h4 id="Jellyfin_Data_Entities_User_Username" data-uid="Jellyfin.Data.Entities.User.Username">Username</h4>
-  <div class="markdown level1 summary"><p>Required, Max length = 255</p>
+  <div class="markdown level1 summary"><p>Gets or sets the user&apos;s name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1064,23 +1320,26 @@ public string Username { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_User_Username_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required, Max length = 255.</p>
+</div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Create_System_String_System_Boolean_System_String_System_String_System_Int32_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Create(System.String%2CSystem.Boolean%2CSystem.String%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_Create_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.Create(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L81">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L387">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_Create_" data-uid="Jellyfin.Data.Entities.User.Create*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_Create_System_String_System_Boolean_System_String_System_String_System_Int32_System_String_System_Boolean_" data-uid="Jellyfin.Data.Entities.User.Create(System.String,System.Boolean,System.String,System.String,System.Int32,System.String,System.Boolean)">Create(String, Boolean, String, String, Int32, String, Boolean)</h4>
+  <h4 id="Jellyfin_Data_Entities_User_Create_System_String_System_String_System_String_" data-uid="Jellyfin.Data.Entities.User.Create(System.String,System.String,System.String)">Create(String, String, String)</h4>
   <div class="markdown level1 summary"><p>Static create function (for use in LINQ queries, etc.)</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User Create(string username, bool mustupdatepassword, string audiolanguagepreference, string authenticationproviderid, int invalidloginattemptcount, string subtitlemode, bool playdefaultaudiotrack)</code></pre>
+    <pre><code class="lang-csharp hljs">public static User Create(string username, string authenticationProviderId, string passwordResetProviderId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1095,37 +1354,20 @@ public string Username { get; set; }</code></pre>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">username</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">mustupdatepassword</span></td>
-        <td></td>
+        <td><p>The username for the created user.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">audiolanguagepreference</span></td>
-        <td></td>
+        <td><span class="parametername">authenticationProviderId</span></td>
+        <td><p>The Id of the user&apos;s authentication provider.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">authenticationproviderid</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">invalidloginattemptcount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">subtitlemode</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">playdefaultaudiotrack</span></td>
-        <td></td>
+        <td><span class="parametername">passwordResetProviderId</span></td>
+        <td><p>The Id of the user&apos;s password reset provider.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1140,25 +1382,176 @@ public string Username { get; set; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
-        <td></td>
+        <td><p>The created instance.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_CreateUserUnsafe.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.CreateUserUnsafe%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_GetPreference_Jellyfin_Data_Enums_PreferenceKind_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.GetPreference(Jellyfin.Data.Enums.PreferenceKind)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L423">View Source</a>
   </span>
-  <a id="Jellyfin_Data_Entities_User_CreateUserUnsafe_" data-uid="Jellyfin.Data.Entities.User.CreateUserUnsafe*"></a>
-  <h4 id="Jellyfin_Data_Entities_User_CreateUserUnsafe" data-uid="Jellyfin.Data.Entities.User.CreateUserUnsafe">CreateUserUnsafe()</h4>
-  <div class="markdown level1 summary"><p>Replaces default constructor, since it&apos;s protected. Caller assumes responsibility for setting all required values before saving.</p>
+  <a id="Jellyfin_Data_Entities_User_GetPreference_" data-uid="Jellyfin.Data.Entities.User.GetPreference*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_GetPreference_Jellyfin_Data_Enums_PreferenceKind_" data-uid="Jellyfin.Data.Entities.User.GetPreference(Jellyfin.Data.Enums.PreferenceKind)">GetPreference(PreferenceKind)</h4>
+  <div class="markdown level1 summary"><p>Gets the user&apos;s preferences for the given preference kind.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static User CreateUserUnsafe()</code></pre>
+    <pre><code class="lang-csharp hljs">public string[] GetPreference(PreferenceKind preference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Enums.PreferenceKind.html">PreferenceKind</a></td>
+        <td><span class="parametername">preference</span></td>
+        <td><p>The preference kind.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><p>A string array containing the user&apos;s preferences.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_HasPermission_Jellyfin_Data_Enums_PermissionKind_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.HasPermission(Jellyfin.Data.Enums.PermissionKind)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L403">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_HasPermission_" data-uid="Jellyfin.Data.Entities.User.HasPermission*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_HasPermission_Jellyfin_Data_Enums_PermissionKind_" data-uid="Jellyfin.Data.Entities.User.HasPermission(Jellyfin.Data.Enums.PermissionKind)">HasPermission(PermissionKind)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the user has the specified permission.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasPermission(PermissionKind kind)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Enums.PermissionKind.html">PermissionKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The permission kind.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>True</code> if the user has the specified permission.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_IsFolderGrouped_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.IsFolderGrouped(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L456">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_IsFolderGrouped_" data-uid="Jellyfin.Data.Entities.User.IsFolderGrouped*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_IsFolderGrouped_System_Guid_" data-uid="Jellyfin.Data.Entities.User.IsFolderGrouped(System.Guid)">IsFolderGrouped(Guid)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the provided folder is in this user&apos;s grouped folders.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsFolderGrouped(Guid id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The Guid of the folder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>True</code> if the folder is in the user&apos;s grouped folders.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_IsParentalScheduleAllowed.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.IsParentalScheduleAllowed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L445">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_IsParentalScheduleAllowed_" data-uid="Jellyfin.Data.Entities.User.IsParentalScheduleAllowed*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_IsParentalScheduleAllowed" data-uid="Jellyfin.Data.Entities.User.IsParentalScheduleAllowed">IsParentalScheduleAllowed()</h4>
+  <div class="markdown level1 summary"><p>Checks whether this user is currently allowed to use the server.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsParentalScheduleAllowed()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1170,8 +1563,9 @@ public string Username { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>True</code> if the current time is within an access schedule, or there are no access schedules.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1180,7 +1574,7 @@ public string Username { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L213">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L393">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_User_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.User.OnSavingChanges*"></a>
   <h4 id="Jellyfin_Data_Entities_User_OnSavingChanges" data-uid="Jellyfin.Data.Entities.User.OnSavingChanges">OnSavingChanges()</h4>
@@ -1189,6 +1583,93 @@ public string Username { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void OnSavingChanges()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SetPermission_Jellyfin_Data_Enums_PermissionKind_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SetPermission(Jellyfin.Data.Enums.PermissionKind%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L413">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_SetPermission_" data-uid="Jellyfin.Data.Entities.User.SetPermission*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_SetPermission_Jellyfin_Data_Enums_PermissionKind_System_Boolean_" data-uid="Jellyfin.Data.Entities.User.SetPermission(Jellyfin.Data.Enums.PermissionKind,System.Boolean)">SetPermission(PermissionKind, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the given permission kind to the provided value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPermission(PermissionKind kind, bool value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Enums.PermissionKind.html">PermissionKind</a></td>
+        <td><span class="parametername">kind</span></td>
+        <td><p>The permission kind.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User_SetPreference_Jellyfin_Data_Enums_PreferenceKind_System_String___.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User.SetPreference(Jellyfin.Data.Enums.PreferenceKind%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L435">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_User_SetPreference_" data-uid="Jellyfin.Data.Entities.User.SetPreference*"></a>
+  <h4 id="Jellyfin_Data_Entities_User_SetPreference_Jellyfin_Data_Enums_PreferenceKind_System_String___" data-uid="Jellyfin.Data.Entities.User.SetPreference(Jellyfin.Data.Enums.PreferenceKind,System.String[])">SetPreference(PreferenceKind, String[])</h4>
+  <div class="markdown level1 summary"><p>Sets the specified preference to the given value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetPreference(PreferenceKind preference, string[] values)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Enums.PreferenceKind.html">PreferenceKind</a></td>
+        <td><span class="parametername">preference</span></td>
+        <td><p>The preference kind.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>The values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Data.IHasPermissions.html">IHasPermissions</a>
+  </div>
+  <div>
+      <a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a>
   </div>
 </article>
           </div>
@@ -1201,7 +1682,7 @@ public string Username { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_User.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.User%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/User.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
