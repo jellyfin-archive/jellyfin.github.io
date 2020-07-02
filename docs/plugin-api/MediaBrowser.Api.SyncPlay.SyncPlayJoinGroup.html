@@ -123,7 +123,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Api.dll</h6>
   <h5 id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Route(&quot;/SyncPlay/{SessionId}/JoinGroup&quot;, &quot;POST&quot;, Summary = &quot;Join an existing SyncPlay group&quot;)]
+    <pre><code class="lang-csharp hljs">[Route(&quot;/SyncPlay/JoinGroup&quot;, &quot;POST&quot;, Summary = &quot;Join an existing SyncPlay group&quot;)]
 public class SyncPlayJoinGroup : IReturnVoid, IReturn</code></pre>
   </div>
   <h3 id="properties">Properties
@@ -133,7 +133,7 @@ public class SyncPlayJoinGroup : IReturnVoid, IReturn</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_GroupId.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L28">View Source</a>
   </span>
   <a id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_GroupId_" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.GroupId*"></a>
   <h4 id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_GroupId" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.GroupId">GroupId</h4>
@@ -165,7 +165,7 @@ public class SyncPlayJoinGroup : IReturnVoid, IReturn</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_PlayingItemId.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.PlayingItemId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L35">View Source</a>
   </span>
   <a id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_PlayingItemId_" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.PlayingItemId*"></a>
   <h4 id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_PlayingItemId" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.PlayingItemId">PlayingItemId</h4>
@@ -192,36 +192,6 @@ public class SyncPlayJoinGroup : IReturnVoid, IReturn</code></pre>
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_SessionId.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.SessionId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L26">View Source</a>
-  </span>
-  <a id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_SessionId_" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.SessionId*"></a>
-  <h4 id="MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup_SessionId" data-uid="MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup.SessionId">SessionId</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string SessionId { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Services.IReturnVoid.html">IReturnVoid</a>
@@ -240,7 +210,7 @@ public class SyncPlayJoinGroup : IReturnVoid, IReturn</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Api_SyncPlay_SyncPlayJoinGroup.md&amp;value=---%0Auid%3A%20MediaBrowser.Api.SyncPlay.SyncPlayJoinGroup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Api/SyncPlay/SyncPlayService.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

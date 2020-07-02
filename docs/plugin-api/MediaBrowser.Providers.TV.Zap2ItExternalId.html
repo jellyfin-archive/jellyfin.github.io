@@ -131,11 +131,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_Key.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L17">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_Key_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Key*"></a>
   <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_Key" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Key">Key</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the unique key to distinguish this provider/type pair. This should be unique across providers.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -158,18 +159,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_ProviderName.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.ProviderName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L13">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L14">View Source</a>
   </span>
-  <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_Name_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Name*"></a>
-  <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_Name" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_ProviderName_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.ProviderName*"></a>
+  <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_ProviderName" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.ProviderName">ProviderName</h4>
+  <div class="markdown level1 summary"><p>Gets the display name of the provider associated with this ID type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string ProviderName { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -188,14 +190,52 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_Type.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L20">View Source</a>
+  </span>
+  <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_Type_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Type*"></a>
+  <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_Type" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Type">Type</h4>
+  <div class="markdown level1 summary"><p>Gets the specific media type for this id. This is used to distinguish between the different
+external id types for providers with multiple ids.
+A null value indicates there is no specific media type associated with the external id, or this is the
+default id for the external provider so there is no need to specify a type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalIdMediaType? Type { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.ExternalIdMediaType.html">ExternalIdMediaType</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="MediaBrowser_Providers_TV_Zap2ItExternalId_Type_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>This can be used along with the <a class="xref" href="MediaBrowser.Controller.Providers.IExternalId.html#MediaBrowser_Controller_Providers_IExternalId_ProviderName">ProviderName</a> to localize the external id on the client.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_UrlFormatString.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.UrlFormatString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L19">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L23">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_UrlFormatString_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.UrlFormatString*"></a>
   <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_UrlFormatString" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.UrlFormatString">UrlFormatString</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the URL format string for this id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -223,11 +263,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId_Supports_MediaBrowser_Model_Entities_IHasProviderIds_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId.Supports(MediaBrowser.Model.Entities.IHasProviderIds)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L26">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_Zap2ItExternalId_Supports_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Supports*"></a>
   <h4 id="MediaBrowser_Providers_TV_Zap2ItExternalId_Supports_MediaBrowser_Model_Entities_IHasProviderIds_" data-uid="MediaBrowser.Providers.TV.Zap2ItExternalId.Supports(MediaBrowser.Model.Entities.IHasProviderIds)">Supports(IHasProviderIds)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines whether this id supports a given item type.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -246,7 +287,8 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -261,7 +303,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p>True if this item is supported, otherwise false.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -280,7 +323,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_Zap2ItExternalId.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.Zap2ItExternalId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/TvExternalIds.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
