@@ -101,6 +101,15 @@
 <p>Allows clients to discover Jellyfin on the local network. A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a JSON response that includes the server address, ID, and name.</p>
 <h4 id="dynamic-ports">Dynamic Ports</h4>
 <p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
+<h2 id="self-signed-certificate">Self-Signed Certificate</h2>
+<p><a href="https://www.sslshopper.com/article-most-common-openssl-commands.html">See here for more information.</a></p>
+<p>Create a private key.</p>
+<p><code>openssl req -x509 -newkey rsa:4096 -keyout ./privkey.pem -out cert.pem -days 365 -nodes -subj &#39;/CN=jellyfin.lan&#39;</code></p>
+<p>omit <code>-nodes</code> to set a password interactively.</p>
+<p>Remove <code>-days 365</code> to make it &#39;permanent&#39;.</p>
+<p>Add <code>-subj &#39;/CN=localhost&#39;</code> to make it not ask interactive questions about content of certificate.</p>
+<p>creates <code>./privkey.pem</code></p>
+<p><code>openssl pkcs12 -export -out jellyfin.pfx -inkey privkey.pem -in /usr/local/etc/letsencrypt/live/domain.org/cert.pem -passout pass:</code></p>
 <h2 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h2>
 <p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
 <div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired.</p>
