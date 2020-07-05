@@ -121,6 +121,7 @@
 <p>Issues: <a href="https://trac.ffmpeg.org/ticket/7511">FFmpeg Windows version with QSV hwaccel fails over TERMINAL</a> and <a href="https://trac.ffmpeg.org/ticket/6827">Intel QSV: &quot;Failed to create Direct3D device&quot; on Core i7-7700K (Skylake) on Windows 10</a></p>
 <p>CentOS may require <a href="https://www.getpagespeed.com/server-setup/how-to-enable-intel-hardware-acceleration-for-video-playback-in-rhel-centos-8">additional drivers</a> for QSV.</p>
 <p>Here&#39;s <a href="https://github.com/Artiume/jellyfin-docs/blob/master/general/wiki/main.md">additional information</a> to learn more.</p>
+<p>If your Jellyfin server does not support hardware acceleration, but you have another machine that does, you can leverage <a href="https://github.com/joshuaboniface/rffmpeg">rffmpeg</a> to delegate the transcoding to another machine. Currently Linux-only and requires SSH between the machines, as well as shared storage both for media and for the Jellyfin data directory.</p>
 <h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
 <p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section of the <strong>Playback</strong> tab. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
 <p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>
