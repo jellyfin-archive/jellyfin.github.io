@@ -214,6 +214,7 @@ services:
     network_mode: &quot;host&quot;
     runtime: nvidia
     environment:
+      - JELLYFIN_PublishedServerUrl=http://example.com
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
       - /path/to/config:/config
