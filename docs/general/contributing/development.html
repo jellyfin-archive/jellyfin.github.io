@@ -202,14 +202,14 @@ git branch -D my-testing-branch
 </div>
 <h3 id="master-branch">Master Branch</h3>
 <pre><code class="lang-sh">docker exec -ti jftest bash
-apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https curl
+apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https curl autoconf g++ make libpng-dev gifsicle automake libtool make gcc musl-dev nasm
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.asc.gpg &amp;&amp; mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/debian/10/prod.list &amp;&amp; mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list
 apt-get update &amp;&amp; apt-get install dotnet-sdk-3.1 yarn
 cd /opt &amp;&amp; git clone https://github.com/jellyfin/jellyfin.git &amp;&amp; git clone https://github.com/jellyfin/jellyfin-web.git
 mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
-cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; yarn build &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
+cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
 kill -15 $(pidof jellyfin)
 </code></pre><h3 id="pull-request">Pull Request</h3>
 <p>First, complete the steps above to setup your container to build the master branch.</p>
