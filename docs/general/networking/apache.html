@@ -98,9 +98,9 @@
 #    ServerName DOMAIN_NAME
 #
 #    ProxyPreserveHost On
+#    RemoteIPHeader X-Forwarded-For
 #
 #    ProxyPass &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
-#    ProxyPassReverse &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
 #
 #    ProxyPass &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
 #    ProxyPassReverse &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
@@ -121,8 +121,8 @@
 #    CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
 #&lt;/VirtualHost&gt;
 #&lt;/IfModule&gt;
-</code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code>, or <code>proxy_wstunnel</code> support manually.</p>
-<pre><code class="lang-bash">sudo a2enmod proxy proxy_http ssl proxy_wstunnel
+</code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code>, <code>proxy_wstunnel</code> and <code>remoteip</code> support manually.</p>
+<pre><code class="lang-bash">sudo a2enmod proxy proxy_http ssl proxy_wstunnel remoteip
 </code></pre></article>
           </div>
           
