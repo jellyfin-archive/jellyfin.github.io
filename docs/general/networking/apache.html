@@ -90,37 +90,42 @@
     CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
 &lt;/VirtualHost&gt;
 
-# Uncomment this section after you have acquired a SSL Certificate
 # If you are not using a SSL certificate, replace the &#39;redirect&#39;
 # line above with all lines below starting with &#39;Proxy&#39;
-#&lt;IfModule mod_ssl.c&gt;
-#&lt;VirtualHost *:443&gt;
-#    ServerName DOMAIN_NAME
-#
-#    ProxyPreserveHost On
-#    RemoteIPHeader X-Forwarded-For
-#
-#    ProxyPass &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
-#
-#    ProxyPass &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
-#    ProxyPassReverse &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
-#
-#    SSLEngine on
-#    SSLCertificateFile /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem
-#    SSLCertificateKeyFile /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
-#    Protocols h2 http/1.1
-#
-#    Enable only strong encryption ciphers and prefer versions with Forward Secrecy
-#    SSLCipherSuite HIGH:RC4-SHA:AES128-SHA:!aNULL:!MD5
-#    SSLHonorCipherOrder on
-#
-#    Disable insecure SSL and TLS versions
-#    SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
-#
-#    ErrorLog /var/log/apache2/DOMAIN_NAME-error.log
-#    CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
-#&lt;/VirtualHost&gt;
-#&lt;/IfModule&gt;
+&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
+    ServerName DOMAIN_NAME
+    # This folder exists just for certbot(You may have to create it, chown and chmod it to give apache permission to read it)
+    DocumentRoot /var/www/html/jellyfin/public_html
+
+    ProxyPreserveHost On
+
+    # Letsencrypt&#39;s certbot will place a file in this folder when updating/verifying certs
+    # This line will tell apache to not to use the proxy for this folder.
+    ProxyPass /.well_known/ !
+
+    ProxyPass &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
+    ProxyPassReverse &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
+
+    ProxyPass &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
+    ProxyPassReverse &quot;/&quot; &quot;http://SERVER_IP_ADDRESS:8096/&quot;
+
+    SSLEngine on
+    SSLCertificateFile /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem
+    SSLCertificateKeyFile /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem
+    Protocols h2 http/1.1
+
+    # Enable only strong encryption ciphers and prefer versions with Forward Secrecy
+    SSLCipherSuite HIGH:RC4-SHA:AES128-SHA:!aNULL:!MD5
+    SSLHonorCipherOrder on
+
+    Disable insecure SSL and TLS versions
+    SSLProtocol all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1
+
+    ErrorLog /var/log/apache2/DOMAIN_NAME-error.log
+    CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
+&lt;/VirtualHost&gt;
+&lt;/IfModule&gt;
 </code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code>, <code>proxy_wstunnel</code> and <code>remoteip</code> support manually.</p>
 <pre><code class="lang-bash">sudo a2enmod proxy proxy_http ssl proxy_wstunnel remoteip
 </code></pre></article>
