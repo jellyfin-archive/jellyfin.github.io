@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Traefik v2.x | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Traefik v2.x | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="network-reverse-proxy-traefik2">
+<h2 id="traefik-v2x">Traefik v2.x</h2>
+
+<p><a href="https://traefik.io/">Traefik</a> is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy. Traefik integrates with your existing infrastructure components (ie: Docker) and generally configures itself dynamically as services are added or removed.</p>
+<p>This document provides a complete configuration of Traefik v2.x and Jellyfin. It uses a number of files including a <code>docker-compose.yml</code> file, <code>traefik.toml</code> (your Traefik static configuration), <code>traefik-provider.toml</code> (a file-based provider for Traefik), <code>traefik.log</code> (an optional log file), <code>.env</code> (the environment which may be needed for your ACME/LetsEncrypt providers), and <code>acme.json</code> (the state data for your ACME/LetsEncrypt certificate). The files should all be created in the <strong>same</strong> directory. Alternately, alter the paths in the volume section of the <code>traefik</code> service in <code>docker-compose.yml</code>. You can optionally jam some of the traefik.toml file into labels for the traefik service in <code>docker-compose.yml</code>, however this method is much clearer and easier to comment.</p>
+<div class="NOTE"><h5>Note</h5><p>Ensure you enable some basic firewall or auth protection for Traefik or disable its dashboard. If you do not, your dashboard may be accessible from the internet. Pay attention to accessibility via IPv6, as even systems on an internal home network may be directly accessible over IPv6.  See <a href="https://docs.traefik.io/operations/api/#insecure">api-insecure</a> for more details on securing the dashboard.</p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>Traefik has many options for the configuration of LetsEncrypt using your choice of challenges. If your server is accessible from the Internet via port 80 or 443, you can use the HTTP-01 or TLS-ALPN-01 challenges. If so, the certificatesresolvers.leresolver.acme.httpchallenge.entrypoint must be reachable by Let&#39;s Encrypt through port 80/443. You can also use a DNS-01 challenge via one of the available <a href="https://docs.traefik.io/https/acme/#providers">providers</a>. Configuration is beyond the scope of this guide. This guide can use both HTTP-01 and DNS-01 by commenting or uncommenting the various blocks. You are most likely to use HTTP-01 unless you have full access to your DNS configuration. The configuration below uses RFC2136 (as set by certificatesresolvers.leresolver.acme.dnsChallenge of <code>traefik.toml</code>) and the variables for that provider are shown in the <code>.env</code> file as a formatting guide. See provider documentation and comments about configuration of your ACME provider of choice, or change the configuration to HTTP-01 in <code>traefik.toml</code>&#39;s comments.</p>
+</div>
+<p>The configuration below creates a Traefik v2.x installation with access at entryPoint ports 80 (labelled &#39;http&#39;), 443 (labeled &#39;https&#39;), and 9999 (labeled &#39;secure&#39;). Unrelated to this Jellyfin configuration, it redirects all traffic from http (port 80) to https (port 443) to ensure all data is encrypted. As for Jellyfin, it makes the service accessible without a path on the secure entry point.  This configuration is intended to be used as a starting point and some adaptation is likely required for your configuration. If you want Jellyfin to be accessible without using a port (using the default https port), simply change &#39;secure&#39; to &#39;https&#39; in <code>docker-compose.yml</code> where indicated and remove the &#39;:9999&#39; from the SSLHost parameter. If you want Jellyfin to be accessible with a path, simply add the PathPrefix (i.e. &#39;/jellyfin&#39;) and see the note near the end of this document about configuring Jellyfin.</p>
+<h3 id="docker-composeyml">docker-compose.yml</h3>
+<pre><code class="lang-yml">version: &#39;2.4&#39;
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:chevrotin # the chevrotin tag refers to v2.2.x
+    restart: unless-stopped
+    volumes:
+      # So that Traefik can listen to the Docker events (read-only)
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # TOML Configuration with global options
+      - /srv/traefik.toml:/traefik.toml
+      # Configuration for the file provider (needed for host networking and default TLS Options)
+      - /srv/traefik-provider.toml:/traefik-provider.toml
+      # LetsEncrypt ACME Configuration
+      - /srv/acme.json:/acme.json
+      # Log File (optional)
+      - /srv/traefik.log:/traefik.log
+    ports:
+     # The Web UI (enabled by --api.insecure=true in traefik.toml)
+      - 8080:8080
+     # The Available Ports (forward your router&#39;s incoming ports to the ports on the host)
+      - 80:80
+      - 443:443
+      - 9999:9999
+    env_file: .env
+
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: &quot;jellyfin&quot;
+    user: 1000:1000
+    group_add: # by id as these may not exist within the container. Needed to provide permissions to the VAAPI Devices
+      - &quot;107&quot; #render
+      - &quot;44&quot;  #video
+    # Network mode of &#39;host&#39; exposes the ports on the host. This is needed for DLNA access.
+    network_mode: &quot;host&quot;
+    volumes:
+      - /path/to/config:/config
+      - /path/to/cache:/cache
+      # Update this configuration as desired
+      - /path/to/media:/media
+    restart: always
+    devices:
+      # VAAPI Devices
+      - /dev/dri/renderD128:/dev/dri/renderD128
+      - /dev/dri/card0:/dev/dri/card0
+    labels:
+      - &quot;traefik.enable=true&quot;
+      ## HTTP Router
+      #### Entry point where Jellyfin is accessible via
+      #### Change secure to https in the line below to have accessible without needing to specify a port and change the SSLHost option below
+      - &quot;traefik.http.routers.jellyfin.entryPoints=secure&quot;
+      #### Host or Path where Jellyfin is accessible
+      #### Remove (or change) this rule if you&#39;d rather have Jellyfin accessible at a PathPrefix URI
+      - &quot;traefik.http.routers.jellyfin.rule=Host(`HOST_NAME.DOMAIN_NAME`)&quot; # OPTIONAL: &amp;&amp; PathPrefix(`/jellyfin`)
+      #### Enable TLS with the ACME/LetsEncrypt resolver for HOSTNAME.DOMAIN_NAME
+      - &quot;traefik.http.routers.jellyfin.tls=true&quot;
+      - &quot;traefik.http.routers.jellyfin.tls.certResolver=leresolver&quot;
+      - &quot;traefik.http.routers.jellyfin.tls.domains=HOSTNAME.DOMAIN_NAME&quot;
+      ## Middleware
+      - &quot;traefik.http.routers.jellyfin.middlewares=jellyfin-mw&quot;
+      #### The customResponseHeaders option lists the Header names and values to apply to the response.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.customResponseHeaders.X-Robots-Tag=noindex,nofollow,nosnippet,noarchive,notranslate,noimageindex&quot;
+      #### The sslRedirect is set to true, then only allow https requests.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.SSLRedirect=true&quot;
+      #### The sslHost option is the host name that is used to redirect http requests to https.
+      #### This is the exact URL that will be redirected to, so you can remove the :9999 port if using default SSL port
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.SSLHost=HOST_NAME.DOMAIN_NAME:9999&quot;
+      #### Set sslForceHost to true and set SSLHost to forced requests to use SSLHost even the ones that are already using SSL.
+      #### Note that this uses SSLHost verbatim, so add the port to SSLHost if you are using an alternate port.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.SSLForceHost=true&quot;
+      #### The stsSeconds is the max-age of the Strict-Transport-Security header. If set to 0, would NOT include the header.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.STSSeconds=315360000&quot;
+      #### The stsIncludeSubdomains is set to true, the includeSubDomains directive will be
+      #### appended to the Strict-Transport-Security header.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.STSIncludeSubdomains=true&quot;
+      #### Set stsPreload to true to have the preload flag appended to the Strict-Transport-Security header.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.STSPreload=true&quot;
+      #### Set forceSTSHeader to true, to add the STS header even when the connection is HTTP.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.forceSTSHeader=true&quot;
+      #### Set frameDeny to true to add the X-Frame-Options header with the value of DENY.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.frameDeny=true&quot;
+      #### Set contentTypeNosniff to true to add the X-Content-Type-Options header with the value nosniff.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.contentTypeNosniff=true&quot;
+      #### Set browserXssFilter to true to add the X-XSS-Protection header with the value 1; mode=block.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.browserXSSFilter=true&quot;
+      #### The customFrameOptionsValue allows the X-Frame-Options header value to be set with a custom value. This
+      #### overrides the FrameDeny option.
+      - &quot;traefik.http.middlewares.jellyfin-mw.headers.customFrameOptionsValue=&#39;allow-from https://DOMAIN_NAME&#39;&quot;
+      ## HTTP Service
+      # We define the port here as a port is required, but note that the service is pointing to the service defined in @file
+      - &quot;traefik.http.routers.jellyfin.service=jellyfin-svc@file&quot;
+      - &quot;traefik.http.services.jellyfin-svc.loadBalancer.server.port=8096&quot;
+      - &quot;traefik.http.services.jellyfin-svc.loadBalancer.passHostHeader=true&quot;
+      ## Redirection of HTTP on port 9999 to HTTPS on port 9999 (consistent protocol)
+      - &quot;traefik.http.routers.jellyfin-insecure.entryPoints=secure&quot;
+      - &quot;traefik.http.routers.jellyfin-insecure.rule=Host(`HOST_NAME.DOMAIN_NAME`)&quot; # OPTIONAL: &amp;&amp; PathPrefix(`/jellyfin`)
+      - &quot;traefik.http.routers.jellyfin-insecure.middlewares=jellyfin-insecure-mw&quot;
+      - &quot;traefik.http.middlewares.jellyfin-insecure-mw.redirectscheme.scheme=https&quot;
+      - &quot;traefik.http.middlewares.jellyfin-insecure-mw.redirectscheme.port=9999&quot; # remove if you are using a default port
+      - &quot;traefik.http.middlewares.jellyfin-insecure-mw.redirectscheme.permanent=false&quot;
+      - &quot;traefik.http.routers.jellyfin-insecure.service=noop@internal&quot;
+</code></pre><div class="WARNING"><h5>Warning</h5><p>TOML files can&#39;t support environment variables, so all values must be hard coded.</p>
+</div>
+<h3 id="traefiktoml">traefik.toml</h3>
+<pre><code class="lang-toml">[log]
+  # By default, the level is set to ERROR. Alternative logging levels
+  # are DEBUG, PANIC, FATAL, ERROR, WARN, and INFO.
+  level = &quot;DEBUG&quot;
+  filePath = &quot;/traefik.log&quot;
+
+[docker]
+  # Defines a default docker network to use for connections to all
+  # containers.  This option can be overridden on a container basis
+  # with the traefik.docker.network label.
+  network = &quot;traefik&quot;
+
+  # Expose containers by default through Traefik. If set to false,
+  # containers that don&#39;t have a traefik.enable=true label will be
+  # ignored from the resulting routing configuration.
+  exposedbydefault = false
+
+[api]
+  # Enable the API in insecure mode, which means that the API will be
+  # available directly on the entryPoint named traefik. If the entryPoint
+  # named traefik is not configured, it will be automatically created on
+  # port 8080.
+  insecure = true
+
+[providers]
+  # Connection to docker host system (docker.sock)
+  # Attach labels to your containers and let Traefik do the rest!
+  # Traefik works with both Docker (standalone) Engine and Docker Swarm Mode.
+  # See: https://docs.traefik.io/providers/docker/
+  [providers.docker]
+    # Traefik requires access to the docker socket to get its dynamic
+    # configuration.
+    endpoint = &quot;unix:///var/run/docker.sock&quot;
+  [providers.file]
+    filename = &quot;/traefik-provider.toml&quot;
+
+
+# EntryPoints are the network entry points into Traefik. They define
+# the port which will receive the packets, and whether to listen for
+# TCP or UDP.
+# See: https://docs.traefik.io/routing/entrypoints/
+# NOTE: If a TLS section (i.e. any of its fields) is defined in your docker-compose.yml file,
+# then the default configuration does not apply at all.
+[entryPoints]
+  # Standard HTTP redirects to HTTPS
+  [entryPoints.http]
+    address = &quot;:80&quot;
+    [entryPoints.http.http]
+      [entryPoints.http.http.redirections]
+        [entryPoints.http.http.redirections.entrypoint]
+          to = &quot;https&quot;
+          scheme = &quot;https&quot;
+  # Standard HTTPS
+  [entryPoints.https]
+    address = &quot;:443&quot;
+    [entryPoints.https.http.tls]
+      certResolver = &quot;leresolver&quot;
+      [[entryPoints.https.http.tls.domains]]
+        main = &quot;HOST_NAME.DOMAIN_NAME&quot;
+        # SANS are any other hostnames which Traefik should obtain a certificate for.
+        # If you are using DNS for LetsEncrypt, you can set a wildcard.
+        # Include all possible hostnames of this server.
+        #sans = [&quot;*.DOMAIN_NAME&quot;]
+  # Alternate HTTPS Port (for services - accepts both HTTP and HTTP by not defining a TLS configuration here)
+  [entryPoints.secure]
+    address = &quot;:9999&quot;
+
+# Enable ACME (Let&#39;s Encrypt): automatic SSL.
+[certificatesresolvers.leresolver.acme]
+  email = &quot;YOU@DOMAIN_NAME&quot;
+  storage = &quot;acme.json&quot;
+  # Use HTTP-01 ACME challenge
+  #[certificatresolvers.leresolver.acme.httpChallenge]
+  #  entryPoint = &quot;http&quot;
+  # Use a DNS-01 ACME challenge rather than HTTP-01 challenge.
+  # Mandatory for wildcard certificate generation.
+  [certificatesresolvers.leresolver.acme.dnsChallenge]
+    # Update this to your provider of choice and then ensure necessary variables are in the .env file to support it.
+    provider = &quot;rfc2136&quot;
+    delayBeforeCheck = 0
+    # A DNS server used to check whether the DNS is set up correctly before
+    # making the ACME request. Ideally a DNS server that isn&#39;t going to cache an old entry.
+    resolvers = [&quot;8.8.8.8:53&quot;]
+
+[retry]
+</code></pre><p>Due to a <a href="https://github.com/containous/traefik/issues/5559">quirk</a> in Traefik, you cannot dynamically route to containers when network_mode=host. We have created a static route to the docker host (192.168.1.xx:8096) in <code>traefik-provider.toml</code>. The use of host networking (as in this doc) or macvlan are required to use DLNA or an HdHomeRun so it can utilize the multicast network. <code>traefik-provider.toml</code> defines the jellyfin-svc@file service which we are pointing the router to in the <code>docker-compose.yml</code> file. You can not set a URL in <code>docker-compose.yml</code> which is why we set up this service externally. Be sure to update the IP address below to the IP address of the host on the local network (in this case, 192.168.1.xx).</p>
+<h3 id="traefik-providertoml">traefik-provider.toml</h3>
+<pre><code class="lang-toml">[http]
+  [http.services]
+    [http.services.jellyfin-svc]
+      [[http.services.jellyfin-svc.loadBalancer.servers]]
+        url = &quot;http://192.168.1.xx:8096&quot;
+# Set secure options by disabling insecure older TLS/SSL versions
+# and insecure ciphers. SNIStrict disabled leaves TLS1.0 open.
+# If you have problems with older clients, you can may need to relax
+# these minimums. This configuration will give you an A+ SSL security
+# score supporting TLS1.2 and TLS1.3
+[tls.options]
+  [tls.options.default]
+    sniStrict = true
+    minVersion = &quot;VersionTLS12&quot;
+    curvePreferences = [
+      &quot;secp521r1&quot;,
+      &quot;secp384r1&quot;
+    ]
+    cipherSuites = [
+      &quot;TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384&quot;,
+      &quot;TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384&quot;,
+      &quot;TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305&quot;,
+      &quot;TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305&quot;,
+      &quot;TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256&quot;,
+      &quot;TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256&quot;,
+      &quot;TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256&quot;,
+      &quot;TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256&quot;
+    ]
+    [tls.options.mintls13]
+      minVersion = &quot;VersionTLS13&quot;
+</code></pre><h3 id="env">.env</h3>
+<pre><code class="lang-bash">RFC2136_NAMESERVER=...
+RFC2136_TSIG_ALGORITHM=hmac-sha512.
+RFC2136_TSIG_KEY=...
+RFC2136_TSIG_SECRET=...
+</code></pre><p>Finally, create an empty acme.json and traefik.log file to handle the certificate and log file for any logging</p>
+<pre><code class="lang-bash">touch acme.json traefik.log
+chmod 600 acme.json traefik.log
+</code></pre><div class="WARNING"><h5>Warning</h5><p>These configurations use DOMAIN_NAME (i.e.: example.com) and HOST_NAME (i.e.: servername) throughout it.  You should replace these with your server&#39;s name. HOST_NAME.DOMAIN_NAME refers to the machine itself (ie: servername.example.com). Don&#39;t forget to update <code>traefik.toml</code>&#39;s YOU@DOMAIN_NAME with your email address. Let&#39;s Encrypt does not require a valid email but invalid e-mails may be flagged as fake.</p>
+</div>
+<p>Launch the Traefik and Jellyfin services.</p>
+<pre><code class="lang-bash">docker-compose up -d
+</code></pre><p>If you set a PathPrefix (i.e. /jellyfin), you need to configure Jellyfin to expect it. After starting the service, access Jellyfin directly (via the host&#39;s IP at port 8096) and change the &#39;Base URL&#39; in Dashboard / Advanced / Networking to match the &#39;/jellyfin&#39; path (if you used one in this configuration). Afterward, you may wish to create a firewall rule to prevent direct access to Jellyfin at port 8096 on the host, or simply ensure the port is not accessible via the Internet.</p>
+<p>Congratulations, your stack with Traefik 2.x and Jellyfin is (hopefully) running!  Check the log file or run without the &#39;-d&#39; parameter to review any errors that may come up, particularly with respect to the LetsEncrypt configuration.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/networking/traefik2.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
