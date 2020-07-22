@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="clients-codec-support">
 <h1 id="codec-tableshttpsenwikipediaorgwikilistofcodecs-wikipedias-list-of-all-codecs"><a href="https://en.wikipedia.org/wiki/List_of_codecs" title="Wikipedia&#39;s list of all codecs">Codec Tables</a></h1>
 
-<p>The goal is to Direct Play all media. This means the container, video, audio and subtitles are all compatible with the client. If the media is incompatible for any reason, Jellyfin will use FFmpeg to <a href="http://howto-pages.org/ffmpeg/">convert the media</a>. Direct Stream will occur if the audio, container or subtitles happen to not be supported. If the video codec is unsupported, this will result in video transcoding. Subtitles can be tricky because they can cause Direct Stream (subtitles are remuxed) or video transcoding (burning in subtitles) to occur. This is the most intensive CPU component of transcoding. Decoding is less intensive than encoding.</p>
+<p>The goal is to Direct Play all media. This means the container, video, audio and subtitles are all compatible with the client. If the media is incompatible for any reason, Jellyfin will use FFmpeg to <a href="http://howto-pages.org/ffmpeg/">convert the media</a> to a format that the client can process. Direct Stream will occur if the audio, container or subtitles happen to not be supported. If the video codec is unsupported, this will result in video transcoding. Subtitles can be tricky because they can cause Direct Stream (subtitles are remuxed) or video transcoding (burning in subtitles) to occur. This is the most intensive CPU component of transcoding. Decoding is less intensive than encoding.</p>
 <h2 id="video-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformats-wikipedias-video-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats" title="Wikipedia&#39;s video codec tables">Video Compatibility</a></h2>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs">Breakdown of video codecs.</a></p>
 <table>
@@ -198,9 +198,9 @@
 </table>
 <p><sup>1</sup>HEVC support is potentially available by offloading to the operating system, but this has not been tested.</p>
 <p><sup>2</sup>Android playback is currently broken. Client reports that HEVC is supported and attempts to Direct Stream.</p>
-<p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). On Android most new Phones in the higher price range and many &quot;4K&quot; AndroidTV devices have VP9 hardwaredecoding support. Refer to you manufacturer for supported codecs.</p>
-<p><sup>4</sup>AV1 support is experimental and often too slow for CPU decoding and as of writing this (05.2020) there is no hardware support on most devices yet. Support on jellyfin is tracked in <a href="https://github.com/jellyfin/jellyfin/issues/3129">jellyfin#3129</a>.</p>
-<p><a href="https://en.wikipedia.org/wiki/MPEG-4#MPEG-4_Parts">Format Cheetsheet:</a></p>
+<p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). Most new Android phones in the higher price range and many &quot;4K&quot; AndroidTV devices have VP9 hardware decoding support. Refer to you manufacturer for supported codecs.</p>
+<p><sup>4</sup>AV1 support is experimental and often too slow for CPU decoding. As of writing this (05.2020) there is no hardware support on most devices yet. Support for AV1 in Jellyfin is tracked in <a href="https://github.com/jellyfin/jellyfin/issues/3129">jellyfin#3129</a>.</p>
+<p><a href="https://en.wikipedia.org/wiki/MPEG-4#MPEG-4_Parts">Format Cheatsheet:</a></p>
 <table>
 <thead>
 <tr>
@@ -238,7 +238,7 @@
 <p><sup>1</sup><a href="https://www.afterdawn.com/glossary/term.cfm/mpeg_4_part_10">MPEG-4 Part-2 vs Part-10</a></p>
 <p><sup>2</sup><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_17">MPEG-4 Part 17: MP4TT Subtitles</a></p>
 <h2 id="audio-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformatsaudiocodingformatssupport-wikipedias-audio-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Audio_coding_formats_support" title="Wikipedia&#39;s audio codec tables">Audio Compatibility</a></h2>
-<p>If the audio codec is unsupported or incompatible (such as playing a 5.1 channel stream on a stereo device), the audio codec must be transcoded. This is not nearly as intensive as video coding.</p>
+<p>If the audio codec is unsupported or incompatible (such as playing a 5.1 channel stream on a stereo device), the audio codec must be transcoded. This is not nearly as intensive as video transcoding.</p>
 <table>
 <thead>
 <tr>
@@ -353,7 +353,7 @@
 </tr>
 </tbody>
 </table>
-<p><a href="https://en.wikipedia.org/wiki/Moving_Picture_Experts_Group#External_links">Format Cheetsheet:</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Moving_Picture_Experts_Group#External_links">Format Cheatsheet:</a></p>
 <table>
 <thead>
 <tr>
@@ -379,7 +379,7 @@
 <p><sup>5</sup>Safari only supports opus in <code>.caf</code> files</p>
 <p>ATSC Standard for <a href="https://www.atsc.org/wp-content/uploads/2015/03/A52-201212-17.pdf">AC-3 and EAC-3</a>.</p>
 <h2 id="subtitle-compatibilityhttpsenwikipediaorgwikicomparisonofvideocontainerformatssubtitlecaptionformatssupport-wikipedias-subtitle-codec-tables"><a href="https://en.wikipedia.org/wiki/Comparison_of_video_container_formats#Subtitle/caption_formats_support" title="Wikipedia&#39;s subtitle codec tables">Subtitle Compatibility</a></h2>
-<p>Subtiles can be a subtle issue for transcoding. Containers have a limited number of subtitles that are supported. If subtitles need to be transcoded, it will happen one of two ways: they can be converted into another supported format that is supported or burned into the video due to the subtitle transcoding not being supported. Burning in subtitles is the most intensive method of transcoding. This is due to two transcodings happening at once; applying the subtitle layer on top of the video layer.</p>
+<p>Subtiles can be a subtle issue for transcoding. Containers have a limited number of subtitles that are supported. If subtitles need to be transcoded, it will happen one of two ways: they can be converted into another format that is supported, or burned into the video due to the subtitle transcoding not being supported. Burning in subtitles is the most intensive method of transcoding. This is due to two transcodings happening at once; applying the subtitle layer on top of the video layer.</p>
 <p>Here is a <a href="https://www.afterdawn.com/guides/archive/subtitle_formats_explained.cfm">breakdown</a> of common subtitle formats.</p>
 <table>
 <thead>
@@ -453,13 +453,13 @@
 </table>
 <p><sup>1</sup>VTT are supported in an <a href="https://helpx.adobe.com/adobe-media-server/dev/webvtt-subtitles-captions.html">HLS Stream</a>.</p>
 <p><sup>2</sup>DVB-SUB <a href="https://forum.videohelp.com/threads/261451-Difference-between-SUB-and-IDX-file">(SUB + IDX)</a> is another name for VobSub files.</p>
-<p><sup>3</sup>EIA-608/708 subtitles are embedded in private channels (channel 21) in a mpeg video codec. EIA-608 are standard CC subtitles with the black bar background while EIA-708 are typically SDH.</p>
+<p><sup>3</sup>EIA-608/708 subtitles are embedded in private channels (channel 21) in a MPEG video codec. EIA-608 are standard CC subtitles with the black bar background, while EIA-708 are typically SDH.</p>
 <h3 id="types-of-subtitles">Types of Subtitles</h3>
-<p>There are many variations of subtitles. Closed, open, burned-in, forced, SDH, and CC are among the common types of subtitles. The format, such as SubRIP or VobSUB, doesn&#39;t matter for the type of subtitle.</p>
+<p>There are many variations of subtitles. Closed, open, burned-in, forced, SDH, and CC are among the common types of subtitles. The format (such as SubRIP or VobSUB) does not matter for the type of subtitle.</p>
 <h4 id="closed-subtitles">Closed Subtitles</h4>
 <p>This is the generic name for subtitles that can be turned on or off. This can be Forced, SDH, CC or normal subtitles.</p>
 <h4 id="burned-in">Burned-in</h4>
-<p>Open subtitles, also known as burned-in subtitles, are subtitles that have been permanently placed in the video and cannot be turned off. Open subtitles are the most common type of subtitles, where the subtitles are part of a seperate stream or file and can be toggled on or off.</p>
+<p>Open subtitles (also known as burned-in subtitles) are subtitles that have been permanently placed in the video and cannot be turned off. Open subtitles are the most common type of subtitles, where the subtitles are part of a seperate stream or file and can be toggled on or off.</p>
 <h4 id="sdh-and-closed-captioning">SDH and Closed Captioning</h4>
 <p>SDH and CC are subtitles for the Deaf and Hard of Hearing. They include extra content such as background noises. SDH and CC are not defined by a specific type of subtitle, just by their intent. If using an OTA Tuner and DVR, the subtitles will be <a href="https://evertz.com/resources/eia_608_708_cc.pdf">embedded</a> into the video and transcoding them before extracting the subtitles will destroy the subtitles.</p>
 <h4 id="forced">Forced</h4>
@@ -543,7 +543,7 @@
 <p><sup>2</sup>MKV containers can hold nearly any codec, but are not compatible with streaming in Firefox and will remux.</p>
 <p><sup>3</sup>MKV containers are improperly labeled as WebM in Firefox during playback.</p>
 <p><sup>4</sup>TS is one of the primary containers for streaming for Jellyfin.</p>
-<p><sup>5</sup>WebM and Ogg have limited codec support (by design) refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#WebM">this</a> for WebM and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#Ogg">this</a> for Ogg</p>
+<p><sup>5</sup>WebM and OGG have limited codec support (by design), refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#WebM">this</a> for WebM and <a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#Ogg">this</a> for OGG.</p>
 </article>
           </div>
           
