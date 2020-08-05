@@ -83,7 +83,16 @@
 <h2 id="installing">Installing</h2>
 <h3 id="catalog">Catalog</h3>
 <p>Many plugins are available in a repository hosted on our servers, which can be easily installed using the plugin catalog in the settings. At the moment many of these are still being updated frequently so the version number may not be accurate. There are several different categories that can indicate what kind of functionality the plugins may provide.</p>
-<p><strong>Note to Windows Users:</strong> Due to currently unresolved permission issues on Jellyfin Windows installs, to update plugins on Windows, you must stop Jellyfin and navigate to the local plugins folder (depending on your install, generally found within <code>\AppData\Local\jellyfin\plugins</code>), delete the <code>.dll</code> files for the plugins, start Jellyfin back up, and reinstall each plugin using the above method from the catalog. Plugin settings should be retained if you do not delete the <code>.xml</code> files from the <code>\AppData\Local\jellyfin\plugins\configurations</code> folder.</p>
+<p><strong>Note to Windows Users:</strong>
+Due to currently unresolved permission issues on Jellyfin Windows installs it is not possible to update and/or uninstall plugins from the UI.
+To update and/or uninstall plugins you must stop Jellyfin, navigate to the local <em>plugins folder</em> and delete the <code>.dll</code> files for the plugins you want to update and/or uninstall.
+The <em>plugins folder</em> is located in different locations depending on your install:</p>
+<ul>
+<li><code>%UserProfile%\AppData\Local\jellyfin\plugins</code> for direct installs</li>
+<li><code>%ProgramData%\Jellyfin\Server\plugins</code> for tray installs</li>
+</ul>
+<p>After that start Jellyfin back up, and reinstall each plugin you want to update using the above method from the catalog.
+Plugin settings should be retained if you do not delete the <code>.xml</code> files from the <code>&lt;direct or tray path&gt;\plugins\configurations</code> folder.</p>
 <p><strong>Authentication:</strong> Add new authentication providers, such as LDAP.</p>
 <p><strong>Channels:</strong> Allow streaming remote audio or video content.</p>
 <p><strong>General:</strong> Plugins that serve general purposes, such as sync with Trakt.tv, or Kodi.</p>
