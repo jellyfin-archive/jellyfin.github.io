@@ -1,0 +1,1028 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class StreamState
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class StreamState
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState">
+  
+  
+  <h1 id="Jellyfin_Api_Models_StreamingDtos_StreamState" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState" class="text-break">Class StreamState
+  </h1>
+  <div class="markdown level0 summary"><p>The stream state dto.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html">EncodingJobInfo</a></div>
+    <div class="level2"><span class="xref">StreamState</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_VideoStream">EncodingJobInfo.VideoStream</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_VideoType">EncodingJobInfo.VideoType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_RemoteHttpHeaders">EncodingJobInfo.RemoteHttpHeaders</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputVideoCodec">EncodingJobInfo.OutputVideoCodec</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InputProtocol">EncodingJobInfo.InputProtocol</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaPath">EncodingJobInfo.MediaPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsInputVideo">EncodingJobInfo.IsInputVideo</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsoMount">EncodingJobInfo.IsoMount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_PlayableStreamFileNames">EncodingJobInfo.PlayableStreamFileNames</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputAudioCodec">EncodingJobInfo.OutputAudioCodec</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputVideoBitrate">EncodingJobInfo.OutputVideoBitrate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_SubtitleStream">EncodingJobInfo.SubtitleStream</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_SubtitleDeliveryMethod">EncodingJobInfo.SubtitleDeliveryMethod</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_SupportedSubtitleCodecs">EncodingJobInfo.SupportedSubtitleCodecs</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InternalSubtitleStreamOffset">EncodingJobInfo.InternalSubtitleStreamOffset</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaSource">EncodingJobInfo.MediaSource</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_User">EncodingJobInfo.User</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_RunTimeTicks">EncodingJobInfo.RunTimeTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_ReadInputAtNativeFramerate">EncodingJobInfo.ReadInputAtNativeFramerate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputFilePath">EncodingJobInfo.OutputFilePath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MimeType">EncodingJobInfo.MimeType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetMimeType_System_String_System_Boolean_">EncodingJobInfo.GetMimeType(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TranscodeReasons">EncodingJobInfo.TranscodeReasons</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IgnoreInputDts">EncodingJobInfo.IgnoreInputDts</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IgnoreInputIndex">EncodingJobInfo.IgnoreInputIndex</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GenPtsInput">EncodingJobInfo.GenPtsInput</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_DiscardCorruptFramesInput">EncodingJobInfo.DiscardCorruptFramesInput</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_EnableFastSeekInput">EncodingJobInfo.EnableFastSeekInput</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GenPtsOutput">EncodingJobInfo.GenPtsOutput</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputContainer">EncodingJobInfo.OutputContainer</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputVideoSync">EncodingJobInfo.OutputVideoSync</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_AlbumCoverPath">EncodingJobInfo.AlbumCoverPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InputAudioSync">EncodingJobInfo.InputAudioSync</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InputVideoSync">EncodingJobInfo.InputVideoSync</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InputTimestamp">EncodingJobInfo.InputTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_AudioStream">EncodingJobInfo.AudioStream</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_SupportedAudioCodecs">EncodingJobInfo.SupportedAudioCodecs</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_SupportedVideoCodecs">EncodingJobInfo.SupportedVideoCodecs</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_InputContainer">EncodingJobInfo.InputContainer</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsoType">EncodingJobInfo.IsoType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_BaseRequest">EncodingJobInfo.BaseRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_StartTimeTicks">EncodingJobInfo.StartTimeTicks</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_CopyTimestamps">EncodingJobInfo.CopyTimestamps</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputAudioBitrate">EncodingJobInfo.OutputAudioBitrate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputAudioChannels">EncodingJobInfo.OutputAudioChannels</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_DeInterlace_System_String_System_Boolean_">EncodingJobInfo.DeInterlace(String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedProfiles_System_String_">EncodingJobInfo.GetRequestedProfiles(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedLevel_System_String_">EncodingJobInfo.GetRequestedLevel(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedMaxRefFrames_System_String_">EncodingJobInfo.GetRequestedMaxRefFrames(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedVideoBitDepth_System_String_">EncodingJobInfo.GetRequestedVideoBitDepth(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedAudioBitDepth_System_String_">EncodingJobInfo.GetRequestedAudioBitDepth(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_GetRequestedAudioChannels_System_String_">EncodingJobInfo.GetRequestedAudioChannels(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsVideoRequest">EncodingJobInfo.IsVideoRequest</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TranscodingType">EncodingJobInfo.TranscodingType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsSegmentedLiveStream">EncodingJobInfo.IsSegmentedLiveStream</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_EnableBreakOnNonKeyFrames_System_String_">EncodingJobInfo.EnableBreakOnNonKeyFrames(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TotalOutputBitrate">EncodingJobInfo.TotalOutputBitrate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputWidth">EncodingJobInfo.OutputWidth</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputHeight">EncodingJobInfo.OutputHeight</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputAudioSampleRate">EncodingJobInfo.OutputAudioSampleRate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_OutputAudioBitDepth">EncodingJobInfo.OutputAudioBitDepth</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetVideoLevel">EncodingJobInfo.TargetVideoLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetVideoBitDepth">EncodingJobInfo.TargetVideoBitDepth</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetRefFrames">EncodingJobInfo.TargetRefFrames</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetFramerate">EncodingJobInfo.TargetFramerate</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetTimestamp">EncodingJobInfo.TargetTimestamp</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetPacketLength">EncodingJobInfo.TargetPacketLength</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetVideoProfile">EncodingJobInfo.TargetVideoProfile</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetVideoCodecTag">EncodingJobInfo.TargetVideoCodecTag</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsTargetAnamorphic">EncodingJobInfo.IsTargetAnamorphic</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_ActualOutputVideoCodec">EncodingJobInfo.ActualOutputVideoCodec</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_ActualOutputAudioCodec">EncodingJobInfo.ActualOutputAudioCodec</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsTargetInterlaced">EncodingJobInfo.IsTargetInterlaced</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_IsTargetAVC">EncodingJobInfo.IsTargetAVC</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetVideoStreamCount">EncodingJobInfo.TargetVideoStreamCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_TargetAudioStreamCount">EncodingJobInfo.TargetAudioStreamCount</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_HlsListSize">EncodingJobInfo.HlsListSize</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_Progress">EncodingJobInfo.Progress</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Api.Models.StreamingDtos.html">Jellyfin.Api.Models.StreamingDtos</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
+  <h5 id="Jellyfin_Api_Models_StreamingDtos_StreamState_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class StreamState : EncodingJobInfo, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_Jellyfin_Api_Helpers_TranscodingJobHelper_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.%23ctor(MediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType%2CJellyfin.Api.Helpers.TranscodingJobHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L25">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState__ctor_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_Jellyfin_Api_Helpers_TranscodingJobHelper_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.#ctor(MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.MediaEncoding.TranscodingJobType,Jellyfin.Api.Helpers.TranscodingJobHelper)">StreamState(IMediaSourceManager, TranscodingJobType, TranscodingJobHelper)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamState(IMediaSourceManager mediaSourceManager, TranscodingJobType transcodingType, TranscodingJobHelper transcodingJobHelper)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
+        <td><span class="parametername">mediaSourceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">transcodingType</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a></td>
+        <td><span class="parametername">transcodingJobHelper</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a> singleton.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_DeviceProfile.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.DeviceProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L151">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_DeviceProfile_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.DeviceProfile*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_DeviceProfile" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.DeviceProfile">DeviceProfile</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the device profile.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DeviceProfile DeviceProfile { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_DirectStreamProvider.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.DirectStreamProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L63">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_DirectStreamProvider_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.DirectStreamProvider*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_DirectStreamProvider" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.DirectStreamProvider">DirectStreamProvider</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the direct stream provicer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IDirectStreamProvider DirectStreamProvider { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IDirectStreamProvider.html">IDirectStreamProvider</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_EnableDlnaHeaders.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.EnableDlnaHeaders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L146">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_EnableDlnaHeaders_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.EnableDlnaHeaders*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_EnableDlnaHeaders" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.EnableDlnaHeaders">EnableDlnaHeaders</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to enable dlna headers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableDlnaHeaders { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_EstimateContentLength.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.EstimateContentLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L136">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_EstimateContentLength_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.EstimateContentLength*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_EstimateContentLength" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.EstimateContentLength">EstimateContentLength</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether to estimate the content length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EstimateContentLength { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_IsOutputVideo.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.IsOutputVideo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L73">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_IsOutputVideo_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.IsOutputVideo*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_IsOutputVideo" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.IsOutputVideo">IsOutputVideo</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the request outputs video.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsOutputVideo { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_MinSegments.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.MinSegments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L115">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_MinSegments_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.MinSegments*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_MinSegments" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.MinSegments">MinSegments</h4>
+  <div class="markdown level1 summary"><p>Gets the minimum number of segments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MinSegments { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_Request.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.Request%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L40">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_Request_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Request*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_Request" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Request">Request</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StreamingRequestDto Request { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamingRequestDto.html">StreamingRequestDto</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_RequestedUrl.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.RequestedUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L35">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_RequestedUrl_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.RequestedUrl*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_RequestedUrl" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.RequestedUrl">RequestedUrl</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the requested url.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string RequestedUrl { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_SegmentLength.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.SegmentLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L78">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_SegmentLength_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.SegmentLength*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_SegmentLength" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.SegmentLength">SegmentLength</h4>
+  <div class="markdown level1 summary"><p>Gets the segment length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int SegmentLength { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodeSeekInfo.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodeSeekInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L141">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodeSeekInfo_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodeSeekInfo*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodeSeekInfo" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodeSeekInfo">TranscodeSeekInfo</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the transcode seek info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodeSeekInfo TranscodeSeekInfo { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.TranscodeSeekInfo.html">TranscodeSeekInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingJob.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingJob%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L156">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingJob_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingJob*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingJob" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingJob">TranscodingJob</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the transcoding job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobDto TranscodingJob { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingThrottler.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingThrottler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L53">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingThrottler_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingThrottler*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_TranscodingThrottler" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.TranscodingThrottler">TranscodingThrottler</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the transcoding throttler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingThrottler TranscodingThrottler { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingThrottler.html">TranscodingThrottler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_UserAgent.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.UserAgent%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L131">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_UserAgent_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.UserAgent*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_UserAgent" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.UserAgent">UserAgent</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the user agent.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string UserAgent { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_VideoRequest.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.VideoRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L58">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_VideoRequest_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.VideoRequest*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_VideoRequest" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.VideoRequest">VideoRequest</h4>
+  <div class="markdown level1 summary"><p>Gets the video request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VideoRequestDto VideoRequest { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.VideoRequestDto.html">VideoRequestDto</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_WaitForPath.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.WaitForPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L68">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_WaitForPath_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.WaitForPath*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_WaitForPath" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.WaitForPath">WaitForPath</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the path to wait for.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string WaitForPath { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L159">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L175">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_Dispose_System_Boolean_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Disposes the stream state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Whether the object is currently beeing disposed.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState_ReportTranscodingProgress_System_Nullable_System_TimeSpan__System_Nullable_System_Single__System_Nullable_System_Double__System_Nullable_System_Int64__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState.ReportTranscodingProgress(System.Nullable%7BSystem.TimeSpan%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L166">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Models_StreamingDtos_StreamState_ReportTranscodingProgress_" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.ReportTranscodingProgress*"></a>
+  <h4 id="Jellyfin_Api_Models_StreamingDtos_StreamState_ReportTranscodingProgress_System_Nullable_System_TimeSpan__System_Nullable_System_Single__System_Nullable_System_Double__System_Nullable_System_Int64__System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Models.StreamingDtos.StreamState.ReportTranscodingProgress(System.Nullable{System.TimeSpan},System.Nullable{System.Single},System.Nullable{System.Double},System.Nullable{System.Int64},System.Nullable{System.Int32})">ReportTranscodingProgress(Nullable&lt;TimeSpan&gt;, Nullable&lt;Single&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ReportTranscodingProgress(TimeSpan? transcodingPosition, float? framerate, double? percentComplete, long? bytesTranscoded, int? bitRate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</td>
+        <td><span class="parametername">transcodingPosition</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">framerate</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">percentComplete</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">bytesTranscoded</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">bitRate</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="MediaBrowser.Controller.MediaEncoding.EncodingJobInfo.html#MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_ReportTranscodingProgress_System_Nullable_System_TimeSpan__System_Nullable_System_Single__System_Nullable_System_Double__System_Nullable_System_Int64__System_Nullable_System_Int32__">EncodingJobInfo.ReportTranscodingProgress(Nullable&lt;TimeSpan&gt;, Nullable&lt;Single&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;)</a></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_StreamingDtos_StreamState.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.StreamingDtos.StreamState%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/StreamingDtos/StreamState.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

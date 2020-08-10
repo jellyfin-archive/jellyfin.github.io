@@ -91,7 +91,6 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="MediaBrowser.Model.Configuration.BaseApplicationConfiguration.html">BaseApplicationConfiguration</a></div>
     <div class="level2"><span class="xref">ServerConfiguration</span></div>
-      <div class="level3"><a class="xref" href="MediaBrowser.Api.UpdateConfiguration.html">UpdateConfiguration</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -145,7 +144,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Configuration_ServerConfiguration__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Configuration.ServerConfiguration.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Configuration/ServerConfiguration.cs/#L260">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Configuration/ServerConfiguration.cs/#L270">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Configuration_ServerConfiguration__ctor_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.#ctor*"></a>
   <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration__ctor" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.#ctor">ServerConfiguration()</h4>
@@ -817,6 +816,37 @@ provided for <a class="xref" href="MediaBrowser.Model.Configuration.ServerConfig
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool EnableSimpleArtistDetection { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Configuration_ServerConfiguration_EnableSlowResponseWarning.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Configuration.ServerConfiguration.EnableSlowResponseWarning%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Configuration/ServerConfiguration.cs/#L260">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableSlowResponseWarning_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableSlowResponseWarning*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_EnableSlowResponseWarning" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.EnableSlowResponseWarning">EnableSlowResponseWarning</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether slow server responses should be logged as a warning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableSlowResponseWarning { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1729,6 +1759,37 @@ different directories and files.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Configuration_ServerConfiguration_SlowResponseThresholdMs.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Configuration.ServerConfiguration.SlowResponseThresholdMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Configuration/ServerConfiguration.cs/#L265">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Configuration_ServerConfiguration_SlowResponseThresholdMs_" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SlowResponseThresholdMs*"></a>
+  <h4 id="MediaBrowser_Model_Configuration_ServerConfiguration_SlowResponseThresholdMs" data-uid="MediaBrowser.Model.Configuration.ServerConfiguration.SlowResponseThresholdMs">SlowResponseThresholdMs</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the threshold for the slow response time warning in ms.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public long SlowResponseThresholdMs { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
         <td></td>
       </tr>
     </tbody>

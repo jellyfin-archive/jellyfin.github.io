@@ -1,0 +1,988 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TranscodingJobHelper
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TranscodingJobHelper
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper">
+  
+  
+  <h1 id="Jellyfin_Api_Helpers_TranscodingJobHelper" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper" class="text-break">Class TranscodingJobHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Transcoding job helpers.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">TranscodingJobHelper</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Api.Helpers.html">Jellyfin.Api.Helpers</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
+  <h5 id="Jellyfin_Api_Helpers_TranscodingJobHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TranscodingJobHelper : IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper__ctor_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Helpers_TranscodingJobHelper__MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Model_IO_IIsoManager_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_Logging_ILoggerFactory_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.%23ctor(Microsoft.Extensions.Logging.ILogger%7BJellyfin.Api.Helpers.TranscodingJobHelper%7D%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Model.IO.IIsoManager%2CMediaBrowser.Controller.MediaEncoding.ISubtitleEncoder%2CMicrosoft.Extensions.Configuration.IConfiguration%2CMicrosoft.Extensions.Logging.ILoggerFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L70">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper__ctor_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper__ctor_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Helpers_TranscodingJobHelper__MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Model_IO_IIsoManager_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_Extensions_Logging_ILoggerFactory_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.#ctor(Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Helpers.TranscodingJobHelper},MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Model.IO.IIsoManager,MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder,Microsoft.Extensions.Configuration.IConfiguration,Microsoft.Extensions.Logging.ILoggerFactory)">TranscodingJobHelper(ILogger&lt;TranscodingJobHelper&gt;, IMediaSourceManager, IFileSystem, IMediaEncoder, IServerConfigurationManager, ISessionManager, IAuthorizationContext, IIsoManager, ISubtitleEncoder, IConfiguration, ILoggerFactory)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobHelper(ILogger&lt;TranscodingJobHelper&gt; logger, IMediaSourceManager mediaSourceManager, IFileSystem fileSystem, IMediaEncoder mediaEncoder, IServerConfigurationManager serverConfigurationManager, ISessionManager sessionManager, IAuthorizationContext authorizationContext, IIsoManager isoManager, ISubtitleEncoder subtitleEncoder, IConfiguration configuration, ILoggerFactory loggerFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger&lt;TCategoryName&gt;</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
+        <td><span class="parametername">mediaSourceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
+        <td><span class="parametername">fileSystem</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
+        <td><span class="parametername">mediaEncoder</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a></td>
+        <td><span class="parametername">sessionManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
+        <td><span class="parametername">authorizationContext</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IIsoManager.html">IIsoManager</a></td>
+        <td><span class="parametername">isoManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Model.IO.IIsoManager.html">IIsoManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a></td>
+        <td><span class="parametername">subtitleEncoder</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></td>
+        <td><span class="parametername">loggerFactory</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a> interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L866">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Dispose transcoding job helper.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L876">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_Dispose_System_Boolean_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Dispose throttler.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p>Disposing.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L105">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_System_String_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob(System.String)">GetTranscodingJob(String)</h4>
+  <div class="markdown level1 summary"><p>Get transcoding job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobDto GetTranscodingJob(string playSessionId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>Playback session id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><p>The transcoding job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob(System.String%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L119">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingJob_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingJob(System.String,MediaBrowser.Controller.MediaEncoding.TranscodingJobType)">GetTranscodingJob(String, TranscodingJobType)</h4>
+  <div class="markdown level1 summary"><p>Get transcoding job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobDto GetTranscodingJob(string path, TranscodingJobType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>Path to the transcoding file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><p>The transcoding job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingLock_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingLock(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L824">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingLock_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingLock*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_GetTranscodingLock_System_String_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.GetTranscodingLock(System.String)">GetTranscodingLock(String)</h4>
+  <div class="markdown level1 summary"><p>Gets the transcoding lock.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SemaphoreSlim GetTranscodingLock(string outputPath)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">outputPath</span></td>
+        <td><p>The output path of the transcoded file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim">SemaphoreSlim</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim">SemaphoreSlim</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_KillTranscodingJobs_System_String_System_String_System_Func_System_String_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.KillTranscodingJobs(System.String%2CSystem.String%2CSystem.Func%7BSystem.String%2CSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L223">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_KillTranscodingJobs_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.KillTranscodingJobs*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_KillTranscodingJobs_System_String_System_String_System_Func_System_String_System_Boolean__" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.KillTranscodingJobs(System.String,System.String,System.Func{System.String,System.Boolean})">KillTranscodingJobs(String, String, Func&lt;String, Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Kills the single transcoding job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task KillTranscodingJobs(string deviceId, string playSessionId, Func&lt;string, bool&gt; deleteFiles)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td><p>The device id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>The play session identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-2">Func</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">deleteFiles</span></td>
+        <td><p>The delete files.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginning_System_String_System_String_System_String_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_System_Diagnostics_Process_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Threading_CancellationTokenSource_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginning(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType%2CSystem.Diagnostics.Process%2CSystem.String%2CJellyfin.Api.Models.StreamingDtos.StreamState%2CSystem.Threading.CancellationTokenSource)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L649">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginning_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginning*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginning_System_String_System_String_System_String_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_System_Diagnostics_Process_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Threading_CancellationTokenSource_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginning(System.String,System.String,System.String,System.String,MediaBrowser.Controller.MediaEncoding.TranscodingJobType,System.Diagnostics.Process,System.String,Jellyfin.Api.Models.StreamingDtos.StreamState,System.Threading.CancellationTokenSource)">OnTranscodeBeginning(String, String, String, String, TranscodingJobType, Process, String, StreamState, CancellationTokenSource)</h4>
+  <div class="markdown level1 summary"><p>Called when [transcode beginning].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobDto OnTranscodeBeginning(string path, string playSessionId, string liveStreamId, string transcodingJobId, TranscodingJobType type, Process process, string deviceId, StreamState state, CancellationTokenSource cancellationTokenSource)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>The play session identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">liveStreamId</span></td>
+        <td><p>The live stream identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">transcodingJobId</span></td>
+        <td><p>The transcoding job identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.diagnostics.process">Process</a></td>
+        <td><span class="parametername">process</span></td>
+        <td><p>The process.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td><p>The device id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
+        <td><span class="parametername">cancellationTokenSource</span></td>
+        <td><p>The cancellation token source.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><p>TranscodingJob.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginRequest_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginRequest(System.String%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L792">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginRequest_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginRequest*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeBeginRequest_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeBeginRequest(System.String,MediaBrowser.Controller.MediaEncoding.TranscodingJobType)">OnTranscodeBeginRequest(String, TranscodingJobType)</h4>
+  <div class="markdown level1 summary"><p>Called when [transcode begin request].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TranscodingJobDto OnTranscodeBeginRequest(string path, TranscodingJobType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeEndRequest_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeEndRequest(Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L688">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeEndRequest_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeEndRequest*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeEndRequest_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeEndRequest(Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto)">OnTranscodeEndRequest(TranscodingJobDto)</h4>
+  <div class="markdown level1 summary"><p>Called when [transcode end].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTranscodeEndRequest(TranscodingJobDto job)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><span class="parametername">job</span></td>
+        <td><p>The transcode job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeFailedToStart_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_Jellyfin_Api_Models_StreamingDtos_StreamState_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeFailedToStart(System.String%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType%2CJellyfin.Api.Models.StreamingDtos.StreamState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L707">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeFailedToStart_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeFailedToStart*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_OnTranscodeFailedToStart_System_String_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_Jellyfin_Api_Models_StreamingDtos_StreamState_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.OnTranscodeFailedToStart(System.String,MediaBrowser.Controller.MediaEncoding.TranscodingJobType,Jellyfin.Api.Models.StreamingDtos.StreamState)">OnTranscodeFailedToStart(String, TranscodingJobType, StreamState)</h4>
+  <div class="markdown level1 summary"><p><summary>
+The progressive
+</summary>
+Called when [transcode failed to start].</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void OnTranscodeFailedToStart(string path, TranscodingJobType type, StreamState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_PingTranscodingJob_System_String_System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.PingTranscodingJob(System.String%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L133">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_PingTranscodingJob_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.PingTranscodingJob*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_PingTranscodingJob_System_String_System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.PingTranscodingJob(System.String,System.Nullable{System.Boolean})">PingTranscodingJob(String, Nullable&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Ping transcoding job.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PingTranscodingJob(string playSessionId, bool? isUserPaused)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>Play session id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">isUserPaused</span></td>
+        <td><p>Is user paused.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
+        <td><p>Play session id is null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_ReportTranscodingProgress_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Nullable_System_TimeSpan__System_Nullable_System_Single__System_Nullable_System_Double__System_Nullable_System_Int64__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.ReportTranscodingProgress(Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto%2CJellyfin.Api.Models.StreamingDtos.StreamState%2CSystem.Nullable%7BSystem.TimeSpan%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L427">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_ReportTranscodingProgress_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.ReportTranscodingProgress*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_ReportTranscodingProgress_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Nullable_System_TimeSpan__System_Nullable_System_Single__System_Nullable_System_Double__System_Nullable_System_Int64__System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.ReportTranscodingProgress(Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto,Jellyfin.Api.Models.StreamingDtos.StreamState,System.Nullable{System.TimeSpan},System.Nullable{System.Single},System.Nullable{System.Double},System.Nullable{System.Int64},System.Nullable{System.Int32})">ReportTranscodingProgress(TranscodingJobDto, StreamState, Nullable&lt;TimeSpan&gt;, Nullable&lt;Single&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Report the transcoding progress to the session manager.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ReportTranscodingProgress(TranscodingJobDto job, StreamState state, TimeSpan? transcodingPosition, float? framerate, double? percentComplete, long? bytesTranscoded, int? bitRate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a></td>
+        <td><span class="parametername">job</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a> of which the progress will be reported.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a> of the current transcoding job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</td>
+        <td><span class="parametername">transcodingPosition</span></td>
+        <td><p>The current transcoding position.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">framerate</span></td>
+        <td><p>The framerate of the transcoding job.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><span class="parametername">percentComplete</span></td>
+        <td><p>The completion percentage of the transcode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">bytesTranscoded</span></td>
+        <td><p>The number of bytes transcoded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">bitRate</span></td>
+        <td><p>The bitrate of the transcoding job.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper_StartFfMpeg_Jellyfin_Api_Models_StreamingDtos_StreamState_System_String_System_String_Microsoft_AspNetCore_Http_HttpRequest_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_System_Threading_CancellationTokenSource_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper.StartFfMpeg(Jellyfin.Api.Models.StreamingDtos.StreamState%2CSystem.String%2CSystem.String%2CMicrosoft.AspNetCore.Http.HttpRequest%2CMediaBrowser.Controller.MediaEncoding.TranscodingJobType%2CSystem.Threading.CancellationTokenSource%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L483">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_TranscodingJobHelper_StartFfMpeg_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.StartFfMpeg*"></a>
+  <h4 id="Jellyfin_Api_Helpers_TranscodingJobHelper_StartFfMpeg_Jellyfin_Api_Models_StreamingDtos_StreamState_System_String_System_String_Microsoft_AspNetCore_Http_HttpRequest_MediaBrowser_Controller_MediaEncoding_TranscodingJobType_System_Threading_CancellationTokenSource_System_String_" data-uid="Jellyfin.Api.Helpers.TranscodingJobHelper.StartFfMpeg(Jellyfin.Api.Models.StreamingDtos.StreamState,System.String,System.String,Microsoft.AspNetCore.Http.HttpRequest,MediaBrowser.Controller.MediaEncoding.TranscodingJobType,System.Threading.CancellationTokenSource,System.String)">StartFfMpeg(StreamState, String, String, HttpRequest, TranscodingJobType, CancellationTokenSource, String)</h4>
+  <div class="markdown level1 summary"><p>Starts the FFMPEG.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;TranscodingJobDto&gt; StartFfMpeg(StreamState state, string outputPath, string commandLineArguments, HttpRequest request, TranscodingJobType transcodingJobType, CancellationTokenSource cancellationTokenSource, string workingDirectory = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">outputPath</span></td>
+        <td><p>The output path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">commandLineArguments</span></td>
+        <td><p>The command line arguments for ffmpeg.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a></td>
+        <td><span class="parametername">transcodingJobType</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Controller.MediaEncoding.TranscodingJobType.html">TranscodingJobType</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
+        <td><span class="parametername">cancellationTokenSource</span></td>
+        <td><p>The cancellation token source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">workingDirectory</span></td>
+        <td><p>The working directory.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto.html">TranscodingJobDto</a>&gt;</td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_TranscodingJobHelper.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.TranscodingJobHelper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/TranscodingJobHelper.cs/#L33" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

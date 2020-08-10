@@ -90,7 +90,8 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandler-1">AuthorizationHandler</a>&lt;<a class="xref" href="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationRequirement.html">RequiresElevationRequirement</a>&gt;</div>
-    <div class="level2"><span class="xref">RequiresElevationHandler</span></div>
+    <div class="level2"><a class="xref" href="Jellyfin.Api.Auth.BaseAuthorizationHandler-1.html">BaseAuthorizationHandler</a>&lt;<a class="xref" href="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationRequirement.html">RequiresElevationRequirement</a>&gt;</div>
+    <div class="level3"><span class="xref">RequiresElevationHandler</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -98,6 +99,9 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Jellyfin.Api.Auth.BaseAuthorizationHandler-1.html#Jellyfin_Api_Auth_BaseAuthorizationHandler_1_ValidateClaims_System_Security_Claims_ClaimsPrincipal_System_Boolean_System_Boolean_System_Boolean_">BaseAuthorizationHandler&lt;RequiresElevationRequirement&gt;.ValidateClaims(ClaimsPrincipal, Boolean, Boolean, Boolean)</a>
+    </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.authorization.authorizationhandler-1.handleasync#Microsoft_AspNetCore_Authorization_AuthorizationHandler_1_HandleAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_">AuthorizationHandler&lt;RequiresElevationRequirement&gt;.HandleAsync(AuthorizationHandlerContext)</a>
     </div>
@@ -127,8 +131,56 @@
   <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
   <h5 id="Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class RequiresElevationHandler : AuthorizationHandler&lt;RequiresElevationRequirement&gt;, IAuthorizationHandler</code></pre>
+    <pre><code class="lang-csharp hljs">public class RequiresElevationHandler : BaseAuthorizationHandler&lt;RequiresElevationRequirement&gt;, IAuthorizationHandler</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Common_Net_INetworkManager_Microsoft_AspNetCore_Http_IHttpContextAccessor_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Common.Net.INetworkManager%2CMicrosoft.AspNetCore.Http.IHttpContextAccessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/RequiresElevationPolicy/RequiresElevationHandler.cs/#L21">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler__ctor_" data-uid="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Common_Net_INetworkManager_Microsoft_AspNetCore_Http_IHttpContextAccessor_" data-uid="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Common.Net.INetworkManager,Microsoft.AspNetCore.Http.IHttpContextAccessor)">RequiresElevationHandler(IUserManager, INetworkManager, IHttpContextAccessor)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.html">RequiresElevationHandler</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public RequiresElevationHandler(IUserManager userManager, INetworkManager networkManager, IHttpContextAccessor httpContextAccessor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td><span class="parametername">userManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></td>
+        <td><span class="parametername">networkManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor">IHttpContextAccessor</a></td>
+        <td><span class="parametername">httpContextAccessor</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.ihttpcontextaccessor">IHttpContextAccessor</a> interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -136,7 +188,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationRequirement_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext%2CJellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationRequirement)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/RequiresElevationPolicy/RequiresElevationHandler.cs/#L13">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/RequiresElevationPolicy/RequiresElevationHandler.cs/#L30">View Source</a>
   </span>
   <a id="Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler_HandleRequirementAsync_" data-uid="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.HandleRequirementAsync*"></a>
   <h4 id="Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler_HandleRequirementAsync_Microsoft_AspNetCore_Authorization_AuthorizationHandlerContext_Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationRequirement_" data-uid="Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler.HandleRequirementAsync(Microsoft.AspNetCore.Authorization.AuthorizationHandlerContext,Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationRequirement)">HandleRequirementAsync(AuthorizationHandlerContext, RequiresElevationRequirement)</h4>
@@ -200,7 +252,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Auth_RequiresElevationPolicy_RequiresElevationHandler.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Auth.RequiresElevationPolicy.RequiresElevationHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/RequiresElevationPolicy/RequiresElevationHandler.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Auth/RequiresElevationPolicy/RequiresElevationHandler.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

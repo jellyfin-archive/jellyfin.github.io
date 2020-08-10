@@ -1,0 +1,1112 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AudioController
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AudioController
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Api.Controllers.AudioController">
+  
+  
+  <h1 id="Jellyfin_Api_Controllers_AudioController" data-uid="Jellyfin.Api.Controllers.AudioController" class="text-break">Class AudioController
+  </h1>
+  <div class="markdown level0 summary"><p>The audio controller.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase">ControllerBase</a></div>
+    <div class="level2"><a class="xref" href="Jellyfin.Api.BaseJellyfinApiController.html">BaseJellyfinApiController</a></div>
+    <div class="level3"><span class="xref">AudioController</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#Microsoft_AspNetCore_Mvc_ControllerBase_StatusCode_System_Int32_">ControllerBase.StatusCode(Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.statuscode#Microsoft_AspNetCore_Mvc_ControllerBase_StatusCode_System_Int32_System_Object_">ControllerBase.StatusCode(Int32, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#Microsoft_AspNetCore_Mvc_ControllerBase_Content_System_String_">ControllerBase.Content(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#Microsoft_AspNetCore_Mvc_ControllerBase_Content_System_String_System_String_">ControllerBase.Content(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#Microsoft_AspNetCore_Mvc_ControllerBase_Content_System_String_System_String_System_Text_Encoding_">ControllerBase.Content(String, String, Encoding)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.content#Microsoft_AspNetCore_Mvc_ControllerBase_Content_System_String_Microsoft_Net_Http_Headers_MediaTypeHeaderValue_">ControllerBase.Content(String, MediaTypeHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.nocontent#Microsoft_AspNetCore_Mvc_ControllerBase_NoContent">ControllerBase.NoContent()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#Microsoft_AspNetCore_Mvc_ControllerBase_Ok">ControllerBase.Ok()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.ok#Microsoft_AspNetCore_Mvc_ControllerBase_Ok_System_Object_">ControllerBase.Ok(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirect#Microsoft_AspNetCore_Mvc_ControllerBase_Redirect_System_String_">ControllerBase.Redirect(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectPermanent_System_String_">ControllerBase.RedirectPermanent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectPreserveMethod_System_String_">ControllerBase.RedirectPreserveMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirectpermanentpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectPermanentPreserveMethod_System_String_">ControllerBase.RedirectPermanentPreserveMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirect#Microsoft_AspNetCore_Mvc_ControllerBase_LocalRedirect_System_String_">ControllerBase.LocalRedirect(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_LocalRedirectPermanent_System_String_">ControllerBase.LocalRedirectPermanent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_LocalRedirectPreserveMethod_System_String_">ControllerBase.LocalRedirectPreserveMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.localredirectpermanentpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_LocalRedirectPermanentPreserveMethod_System_String_">ControllerBase.LocalRedirectPermanentPreserveMethod(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction">ControllerBase.RedirectToAction()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_">ControllerBase.RedirectToAction(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_System_Object_">ControllerBase.RedirectToAction(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_System_String_">ControllerBase.RedirectToAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_System_String_System_Object_">ControllerBase.RedirectToAction(String, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_System_String_System_String_">ControllerBase.RedirectToAction(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoaction#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToAction_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToAction(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPreserveMethod_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToActionPreserveMethod(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_">ControllerBase.RedirectToActionPermanent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_System_Object_">ControllerBase.RedirectToActionPermanent(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_System_String_">ControllerBase.RedirectToActionPermanent(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_System_String_System_String_">ControllerBase.RedirectToActionPermanent(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_System_String_System_Object_">ControllerBase.RedirectToActionPermanent(String, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanent_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToActionPermanent(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoactionpermanentpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToActionPermanentPreserveMethod_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToActionPermanentPreserveMethod(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoute_System_String_">ControllerBase.RedirectToRoute(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoute_System_Object_">ControllerBase.RedirectToRoute(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoute_System_String_System_Object_">ControllerBase.RedirectToRoute(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoute_System_String_System_String_">ControllerBase.RedirectToRoute(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroute#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoute_System_String_System_Object_System_String_">ControllerBase.RedirectToRoute(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePreserveMethod_System_String_System_Object_System_String_">ControllerBase.RedirectToRoutePreserveMethod(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanent_System_String_">ControllerBase.RedirectToRoutePermanent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanent_System_Object_">ControllerBase.RedirectToRoutePermanent(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanent_System_String_System_Object_">ControllerBase.RedirectToRoutePermanent(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanent_System_String_System_String_">ControllerBase.RedirectToRoutePermanent(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanent_System_String_System_Object_System_String_">ControllerBase.RedirectToRoutePermanent(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttoroutepermanentpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToRoutePermanentPreserveMethod_System_String_System_Object_System_String_">ControllerBase.RedirectToRoutePermanentPreserveMethod(String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_">ControllerBase.RedirectToPage(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_System_Object_">ControllerBase.RedirectToPage(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_System_String_">ControllerBase.RedirectToPage(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_System_String_System_Object_">ControllerBase.RedirectToPage(String, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_System_String_System_String_">ControllerBase.RedirectToPage(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopage#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPage_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToPage(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanent_System_String_">ControllerBase.RedirectToPagePermanent(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanent_System_String_System_Object_">ControllerBase.RedirectToPagePermanent(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanent_System_String_System_String_">ControllerBase.RedirectToPagePermanent(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanent_System_String_System_String_System_String_">ControllerBase.RedirectToPagePermanent(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanent#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanent_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToPagePermanent(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePreserveMethod_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToPagePreserveMethod(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.redirecttopagepermanentpreservemethod#Microsoft_AspNetCore_Mvc_ControllerBase_RedirectToPagePermanentPreserveMethod_System_String_System_String_System_Object_System_String_">ControllerBase.RedirectToPagePermanentPreserveMethod(String, String, Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_">ControllerBase.File(Byte[], String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_Boolean_">ControllerBase.File(Byte[], String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_String_">ControllerBase.File(Byte[], String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_String_System_Boolean_">ControllerBase.File(Byte[], String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(Byte[], String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(Byte[], String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(Byte[], String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_Byte___System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(Byte[], String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_">ControllerBase.File(Stream, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_Boolean_">ControllerBase.File(Stream, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_String_">ControllerBase.File(Stream, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_String_System_Boolean_">ControllerBase.File(Stream, String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(Stream, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(Stream, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(Stream, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_IO_Stream_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(Stream, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_">ControllerBase.File(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_Boolean_">ControllerBase.File(String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_String_">ControllerBase.File(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_String_System_Boolean_">ControllerBase.File(String, String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.File(String, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.file#Microsoft_AspNetCore_Mvc_ControllerBase_File_System_String_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.File(String, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_">ControllerBase.PhysicalFile(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_Boolean_">ControllerBase.PhysicalFile(String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_String_">ControllerBase.PhysicalFile(String, String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_String_System_Boolean_">ControllerBase.PhysicalFile(String, String, String, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.PhysicalFile(String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.PhysicalFile(String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_">ControllerBase.PhysicalFile(String, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.physicalfile#Microsoft_AspNetCore_Mvc_ControllerBase_PhysicalFile_System_String_System_String_System_String_System_Nullable_System_DateTimeOffset__Microsoft_Net_Http_Headers_EntityTagHeaderValue_System_Boolean_">ControllerBase.PhysicalFile(String, String, String, Nullable&lt;DateTimeOffset&gt;, EntityTagHeaderValue, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#Microsoft_AspNetCore_Mvc_ControllerBase_Unauthorized">ControllerBase.Unauthorized()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unauthorized#Microsoft_AspNetCore_Mvc_ControllerBase_Unauthorized_System_Object_">ControllerBase.Unauthorized(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#Microsoft_AspNetCore_Mvc_ControllerBase_NotFound">ControllerBase.NotFound()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.notfound#Microsoft_AspNetCore_Mvc_ControllerBase_NotFound_System_Object_">ControllerBase.NotFound(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#Microsoft_AspNetCore_Mvc_ControllerBase_BadRequest">ControllerBase.BadRequest()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#Microsoft_AspNetCore_Mvc_ControllerBase_BadRequest_System_Object_">ControllerBase.BadRequest(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.badrequest#Microsoft_AspNetCore_Mvc_ControllerBase_BadRequest_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.BadRequest(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#Microsoft_AspNetCore_Mvc_ControllerBase_UnprocessableEntity">ControllerBase.UnprocessableEntity()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#Microsoft_AspNetCore_Mvc_ControllerBase_UnprocessableEntity_System_Object_">ControllerBase.UnprocessableEntity(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.unprocessableentity#Microsoft_AspNetCore_Mvc_ControllerBase_UnprocessableEntity_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.UnprocessableEntity(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#Microsoft_AspNetCore_Mvc_ControllerBase_Conflict">ControllerBase.Conflict()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#Microsoft_AspNetCore_Mvc_ControllerBase_Conflict_System_Object_">ControllerBase.Conflict(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#Microsoft_AspNetCore_Mvc_ControllerBase_Conflict_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.Conflict(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem_Microsoft_AspNetCore_Mvc_ValidationProblemDetails_">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.ValidationProblem(ModelStateDictionary)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#Microsoft_AspNetCore_Mvc_ControllerBase_Created_System_String_System_Object_">ControllerBase.Created(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#Microsoft_AspNetCore_Mvc_ControllerBase_Created_System_Uri_System_Object_">ControllerBase.Created(Uri, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtAction_System_String_System_Object_">ControllerBase.CreatedAtAction(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtAction_System_String_System_Object_System_Object_">ControllerBase.CreatedAtAction(String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdataction#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtAction_System_String_System_String_System_Object_System_Object_">ControllerBase.CreatedAtAction(String, String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtRoute_System_String_System_Object_">ControllerBase.CreatedAtRoute(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtRoute_System_Object_System_Object_">ControllerBase.CreatedAtRoute(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.createdatroute#Microsoft_AspNetCore_Mvc_ControllerBase_CreatedAtRoute_System_String_System_Object_System_Object_">ControllerBase.CreatedAtRoute(String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted">ControllerBase.Accepted()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted_System_Object_">ControllerBase.Accepted(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted_System_Uri_">ControllerBase.Accepted(Uri)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted_System_String_">ControllerBase.Accepted(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted_System_String_System_Object_">ControllerBase.Accepted(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.accepted#Microsoft_AspNetCore_Mvc_ControllerBase_Accepted_System_Uri_System_Object_">ControllerBase.Accepted(Uri, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_">ControllerBase.AcceptedAtAction(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_System_String_">ControllerBase.AcceptedAtAction(String, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_System_Object_">ControllerBase.AcceptedAtAction(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_System_String_System_Object_">ControllerBase.AcceptedAtAction(String, String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_System_Object_System_Object_">ControllerBase.AcceptedAtAction(String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedataction#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtAction_System_String_System_String_System_Object_System_Object_">ControllerBase.AcceptedAtAction(String, String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtRoute_System_Object_">ControllerBase.AcceptedAtRoute(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtRoute_System_String_">ControllerBase.AcceptedAtRoute(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtRoute_System_String_System_Object_">ControllerBase.AcceptedAtRoute(String, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtRoute_System_Object_System_Object_">ControllerBase.AcceptedAtRoute(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.acceptedatroute#Microsoft_AspNetCore_Mvc_ControllerBase_AcceptedAtRoute_System_String_System_Object_System_Object_">ControllerBase.AcceptedAtRoute(String, Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#Microsoft_AspNetCore_Mvc_ControllerBase_Challenge">ControllerBase.Challenge()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#Microsoft_AspNetCore_Mvc_ControllerBase_Challenge_System_String___">ControllerBase.Challenge(String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#Microsoft_AspNetCore_Mvc_ControllerBase_Challenge_Microsoft_AspNetCore_Authentication_AuthenticationProperties_">ControllerBase.Challenge(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.challenge#Microsoft_AspNetCore_Mvc_ControllerBase_Challenge_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String___">ControllerBase.Challenge(AuthenticationProperties, String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#Microsoft_AspNetCore_Mvc_ControllerBase_Forbid">ControllerBase.Forbid()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#Microsoft_AspNetCore_Mvc_ControllerBase_Forbid_System_String___">ControllerBase.Forbid(String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#Microsoft_AspNetCore_Mvc_ControllerBase_Forbid_Microsoft_AspNetCore_Authentication_AuthenticationProperties_">ControllerBase.Forbid(AuthenticationProperties)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#Microsoft_AspNetCore_Mvc_ControllerBase_Forbid_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String___">ControllerBase.Forbid(AuthenticationProperties, String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_System_String_">ControllerBase.SignIn(ClaimsPrincipal, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String_">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#Microsoft_AspNetCore_Mvc_ControllerBase_SignOut_System_String___">ControllerBase.SignOut(String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#Microsoft_AspNetCore_Mvc_ControllerBase_SignOut_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String___">ControllerBase.SignOut(AuthenticationProperties, String[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String, IValueProvider)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String, Expression&lt;Func&lt;TModel, Object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_System_Func_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_System_Boolean__">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String, Func&lt;ModelMetadata, Boolean&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_System_Linq_Expressions_Expression_System_Func___0_System_Object_____">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String, IValueProvider, Expression&lt;Func&lt;TModel, Object&gt;&gt;[])</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync__1___0_System_String_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_System_Func_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_System_Boolean__">ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, String, IValueProvider, Func&lt;ModelMetadata, Boolean&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync_System_Object_System_Type_System_String_">ControllerBase.TryUpdateModelAsync(Object, Type, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryupdatemodelasync#Microsoft_AspNetCore_Mvc_ControllerBase_TryUpdateModelAsync_System_Object_System_Type_System_String_Microsoft_AspNetCore_Mvc_ModelBinding_IValueProvider_System_Func_Microsoft_AspNetCore_Mvc_ModelBinding_ModelMetadata_System_Boolean__">ControllerBase.TryUpdateModelAsync(Object, Type, String, IValueProvider, Func&lt;ModelMetadata, Boolean&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#Microsoft_AspNetCore_Mvc_ControllerBase_TryValidateModel_System_Object_">ControllerBase.TryValidateModel(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.tryvalidatemodel#Microsoft_AspNetCore_Mvc_ControllerBase_TryValidateModel_System_Object_System_String_">ControllerBase.TryValidateModel(Object, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.httpcontext#Microsoft_AspNetCore_Mvc_ControllerBase_HttpContext">ControllerBase.HttpContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.request#Microsoft_AspNetCore_Mvc_ControllerBase_Request">ControllerBase.Request</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.response#Microsoft_AspNetCore_Mvc_ControllerBase_Response">ControllerBase.Response</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.routedata#Microsoft_AspNetCore_Mvc_ControllerBase_RouteData">ControllerBase.RouteData</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelstate#Microsoft_AspNetCore_Mvc_ControllerBase_ModelState">ControllerBase.ModelState</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.controllercontext#Microsoft_AspNetCore_Mvc_ControllerBase_ControllerContext">ControllerBase.ControllerContext</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.metadataprovider#Microsoft_AspNetCore_Mvc_ControllerBase_MetadataProvider">ControllerBase.MetadataProvider</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.modelbinderfactory#Microsoft_AspNetCore_Mvc_ControllerBase_ModelBinderFactory">ControllerBase.ModelBinderFactory</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.url#Microsoft_AspNetCore_Mvc_ControllerBase_Url">ControllerBase.Url</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator#Microsoft_AspNetCore_Mvc_ControllerBase_ObjectValidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user#Microsoft_AspNetCore_Mvc_ControllerBase_User">ControllerBase.User</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Api.Controllers.html">Jellyfin.Api.Controllers</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
+  <h5 id="Jellyfin_Api_Controllers_AudioController_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AudioController : BaseJellyfinApiController</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Devices_IDeviceManager_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Net_Http_IHttpClientFactory_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.%23ctor(MediaBrowser.Controller.Dlna.IDlnaManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.MediaEncoding.ISubtitleEncoder%2CMicrosoft.Extensions.Configuration.IConfiguration%2CMediaBrowser.Controller.Devices.IDeviceManager%2CJellyfin.Api.Helpers.TranscodingJobHelper%2CSystem.Net.Http.IHttpClientFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L63">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_AudioController__ctor_" data-uid="Jellyfin.Api.Controllers.AudioController.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Controllers_AudioController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Devices_IDeviceManager_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Net_Http_IHttpClientFactory_" data-uid="Jellyfin.Api.Controllers.AudioController.#ctor(MediaBrowser.Controller.Dlna.IDlnaManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder,Microsoft.Extensions.Configuration.IConfiguration,MediaBrowser.Controller.Devices.IDeviceManager,Jellyfin.Api.Helpers.TranscodingJobHelper,System.Net.Http.IHttpClientFactory)">AudioController(IDlnaManager, IUserManager, IAuthorizationContext, ILibraryManager, IMediaSourceManager, IServerConfigurationManager, IMediaEncoder, IFileSystem, ISubtitleEncoder, IConfiguration, IDeviceManager, TranscodingJobHelper, IHttpClientFactory)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.AudioController.html">AudioController</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AudioController(IDlnaManager dlnaManager, IUserManager userManger, IAuthorizationContext authorizationContext, ILibraryManager libraryManager, IMediaSourceManager mediaSourceManager, IServerConfigurationManager serverConfigurationManager, IMediaEncoder mediaEncoder, IFileSystem fileSystem, ISubtitleEncoder subtitleEncoder, IConfiguration configuration, IDeviceManager deviceManager, TranscodingJobHelper transcodingJobHelper, IHttpClientFactory httpClientFactory)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Dlna.IDlnaManager.html">IDlnaManager</a></td>
+        <td><span class="parametername">dlnaManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Dlna.IDlnaManager.html">IDlnaManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td><span class="parametername">userManger</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
+        <td><span class="parametername">authorizationContext</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
+        <td><span class="parametername">mediaSourceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
+        <td><span class="parametername">mediaEncoder</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
+        <td><span class="parametername">fileSystem</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a></td>
+        <td><span class="parametername">subtitleEncoder</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a></td>
+        <td><span class="parametername">deviceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a></td>
+        <td><span class="parametername">transcodingJobHelper</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a> singleton.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a></td>
+        <td><span class="parametername">httpClientFactory</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController_GetAudioStream_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.GetAudioStream(System.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Dlna.SubtitleDeliveryMethod%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BMediaBrowser.Model.Dlna.EncodingContext%7D%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L147">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_AudioController_GetAudioStream_" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStream*"></a>
+  <h4 id="Jellyfin_Api_Controllers_AudioController_GetAudioStream_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStream(System.Guid,System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Dlna.SubtitleDeliveryMethod,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{MediaBrowser.Model.Dlna.EncodingContext},System.Collections.Generic.Dictionary{System.String,System.String})">GetAudioStream(Guid, String, Nullable&lt;Boolean&gt;, String, String, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Single&gt;, Nullable&lt;Single&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, SubtitleDeliveryMethod, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;EncodingContext&gt;, Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets an audio stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;GetAudioStreamByContainer&quot;)]
+[HttpGet(&quot;{itemId}/stream&quot;, Name = &quot;GetAudioStream&quot;)]
+[HttpHead(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;HeadAudioStreamByContainer&quot;)]
+[HttpHead(&quot;{itemId}/stream&quot;, Name = &quot;HeadAudioStream&quot;)]
+[ProducesResponseType(200)]
+public Task&lt;ActionResult&gt; GetAudioStream([FromRoute] Guid itemId, [FromRoute] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodingReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The item id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>The audio container.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">static</span></td>
+        <td><p>Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">params</span></td>
+        <td><p>The streaming parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceProfileId</span></td>
+        <td><p>Optional. The dlna device profile id to utilize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>The play session id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">segmentContainer</span></td>
+        <td><p>The segment container.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">segmentLength</span></td>
+        <td><p>The segment lenght.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">minSegments</span></td>
+        <td><p>The minimum number of segments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td><p>The media version id, if playing an alternate version.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td><p>The device id of the client requesting. Used to stop encoding processes when needed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">audioCodec</span></td>
+        <td><p>Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&apos;s extension. Options: aac, mp3, vorbis, wma.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">enableAutoStreamCopy</span></td>
+        <td><p>Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">allowVideoStreamCopy</span></td>
+        <td><p>Whether or not to allow copying of the video stream url.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">allowAudioStreamCopy</span></td>
+        <td><p>Whether or not to allow copying of the audio stream url.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">breakOnNonKeyFrames</span></td>
+        <td><p>Optional. Whether to break on non key frames.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioSampleRate</span></td>
+        <td><p>Optional. Specify a specific audio sample rate, e.g. 44100.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxAudioBitDepth</span></td>
+        <td><p>Optional. The maximum audio bit depth.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioBitRate</span></td>
+        <td><p>Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioChannels</span></td>
+        <td><p>Optional. Specify a specific number of audio channels to encode to, e.g. 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxAudioChannels</span></td>
+        <td><p>Optional. Specify a maximum number of audio channels to encode to, e.g. 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>Optional. Specify a specific an encoder profile (varies by encoder), e.g. main, baseline, high.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">level</span></td>
+        <td><p>Optional. Specify a level for the encoder profile (varies by encoder), e.g. 3, 3.1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">framerate</span></td>
+        <td><p>Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">maxFramerate</span></td>
+        <td><p>Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">copyTimestamps</span></td>
+        <td><p>Whether or not to copy timestamps when transcoding with an offset. Defaults to false.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">startTimeTicks</span></td>
+        <td><p>Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">width</span></td>
+        <td><p>Optional. The fixed horizontal resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">height</span></td>
+        <td><p>Optional. The fixed vertical resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">videoBitRate</span></td>
+        <td><p>Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">subtitleStreamIndex</span></td>
+        <td><p>Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">SubtitleDeliveryMethod</a></td>
+        <td><span class="parametername">subtitleMethod</span></td>
+        <td><p>Optional. Specify the subtitle delivery method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxRefFrames</span></td>
+        <td><p>Optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxVideoBitDepth</span></td>
+        <td><p>Optional. The maximum video bit depth.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">requireAvc</span></td>
+        <td><p>Optional. Whether to require avc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">deInterlace</span></td>
+        <td><p>Optional. Whether to deinterlace the video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">requireNonAnamorphic</span></td>
+        <td><p>Optional. Whether to require a non anamporphic stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">transcodingMaxAudioChannels</span></td>
+        <td><p>Optional. The maximum number of audio channels to transcode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">cpuCoreLimit</span></td>
+        <td><p>Optional. The limit of how many cpu cores to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">liveStreamId</span></td>
+        <td><p>The live stream id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">enableMpegtsM2TsMode</span></td>
+        <td><p>Optional. Whether to enable the MpegtsM2Ts mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">videoCodec</span></td>
+        <td><p>Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&apos;s extension. Options: h265, h264, mpeg4, theora, vpx, wmv.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">subtitleCodec</span></td>
+        <td><p>Optional. Specify a subtitle codec to encode to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">transcodingReasons</span></td>
+        <td><p>Optional. The transcoding reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioStreamIndex</span></td>
+        <td><p>Optional. The index of the audio stream to use. If omitted the first audio stream will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">videoStreamIndex</span></td>
+        <td><p>Optional. The index of the video stream to use. If omitted the first video stream will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dlna.EncodingContext.html">EncodingContext</a>&gt;</td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Optional. The <a class="xref" href="MediaBrowser.Model.Dlna.EncodingContext.html">EncodingContext</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">streamOptions</span></td>
+        <td><p>Optional. The streaming options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.fileresult">FileResult</a> containing the audio file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
