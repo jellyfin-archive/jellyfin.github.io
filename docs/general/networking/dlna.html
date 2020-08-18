@@ -83,7 +83,22 @@
 <p>If DLNA fails to bind properly, the message <code>[ERR] Failed to bind to port 1900: &quot;Address already in use&quot;. DLNA will be unavailable</code> should appear in the logs.</p>
 <p>Setting <code>Alive message interval (seconds)</code> to 30 seconds also appears to help discovery for some clients.</p>
 <p>If a base URL is set, try removing it and restarting the server.</p>
-</article>
+<h3 id="dlna-logging">DLNA Logging</h3>
+<p>Use these entries in <code>logging.default.json</code> to turn on DLNA debug logs:</p>
+<pre><code class="lang-json">{
+  &quot;Serilog&quot;: {
+    &quot;MinimumLevel&quot;: {
+      &quot;Default&quot;: &quot;Warning&quot;,
+      &quot;Override&quot;: {
+        &quot;Microsoft&quot;: &quot;Warning&quot;,
+        &quot;System&quot;: &quot;Warning&quot;,
+        &quot;Emby.Dlna&quot;: &quot;Debug&quot;,
+        &quot;Emby.Dlna.Eventing&quot;: &quot;Debug&quot;
+      }
+    }
+  }
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
