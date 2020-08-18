@@ -668,8 +668,8 @@ public class DlnaServerController : BaseJellyfinApiController</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ConnectionManager/ConnectionManager&quot;)]
-[HttpGet(&quot;{serverId}/ConnectionManager/ConnectionManager.xml&quot;, Name = &quot;GetConnectionManager_2&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ConnectionManager&quot;)]
+[HttpGet(&quot;{serverId}/ConnectionManager.xml&quot;, Name = &quot;GetConnectionManager_2&quot;)]
 [Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
 [ProducesResponseType(200)]
 public ActionResult GetConnectionManager([FromRoute] string serverId)</code></pre>
@@ -722,8 +722,8 @@ public ActionResult GetConnectionManager([FromRoute] string serverId)</code></pr
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ContentDirectory/ContentDirectory&quot;)]
-[HttpGet(&quot;{serverId}/ContentDirectory/ContentDirectory.xml&quot;, Name = &quot;GetContentDirectory_2&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ContentDirectory&quot;)]
+[HttpGet(&quot;{serverId}/ContentDirectory.xml&quot;, Name = &quot;GetContentDirectory_2&quot;)]
 [Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
 [ProducesResponseType(200)]
 public ActionResult GetContentDirectory([FromRoute] string serverId)</code></pre>
@@ -938,8 +938,8 @@ public ActionResult GetIconId([FromRoute] string serverId, [FromRoute] string fi
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar&quot;)]
-[HttpGet(&quot;{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar.xml&quot;, Name = &quot;GetMediaReceiverRegistrar_2&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/MediaReceiverRegistrar&quot;)]
+[HttpGet(&quot;{serverId}/MediaReceiverRegistrar.xml&quot;, Name = &quot;GetMediaReceiverRegistrar_2&quot;)]
 [Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
 [ProducesResponseType(200)]
 public ActionResult GetMediaReceiverRegistrar([FromRoute] string serverId)</code></pre>
