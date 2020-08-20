@@ -844,7 +844,7 @@ public ActionResult&lt;DeviceOptions&gt; GetDeviceOptions([FromQuery, Required] 
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;DeviceInfo&gt;&gt; GetDevices([FromQuery] bool? supportsSync, [FromQuery, Required] Guid? userId)</code></pre>
+public ActionResult&lt;QueryResult&lt;DeviceInfo&gt;&gt; GetDevices([FromQuery] bool? supportsSync, [FromQuery] Guid? userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

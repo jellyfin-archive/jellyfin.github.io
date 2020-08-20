@@ -715,7 +715,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;ListingProviders&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;ListingProviders&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 public Task&lt;ActionResult&lt;ListingsProviderInfo&gt;&gt; AddListingProvider([FromQuery] string pw, [FromBody] ListingsProviderInfo listingsProviderInfo, [FromQuery] bool validateListings = false, [FromQuery] bool validateLogin = false)</code></pre>

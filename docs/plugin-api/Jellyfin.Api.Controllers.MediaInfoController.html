@@ -621,19 +621,19 @@ public class MediaInfoController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_MediaInfoController__MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.%23ctor(MediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Common.Net.INetworkManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.MediaInfoController%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_MediaInfoController__Jellyfin_Api_Helpers_MediaInfoHelper_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.%23ctor(MediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.MediaInfoController%7D%2CJellyfin.Api.Helpers.MediaInfoHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L64">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L46">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController__ctor_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_MediaInfoController__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_MediaInfoController__MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.#ctor(MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Common.Net.INetworkManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Net.IAuthorizationContext,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.MediaInfoController},MediaBrowser.Controller.Configuration.IServerConfigurationManager)">MediaInfoController(IMediaSourceManager, IDeviceManager, ILibraryManager, INetworkManager, IMediaEncoder, IUserManager, IAuthorizationContext, ILogger&lt;MediaInfoController&gt;, IServerConfigurationManager)</h4>
+  <h4 id="Jellyfin_Api_Controllers_MediaInfoController__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_MediaInfoController__Jellyfin_Api_Helpers_MediaInfoHelper_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.#ctor(MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Net.IAuthorizationContext,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.MediaInfoController},Jellyfin.Api.Helpers.MediaInfoHelper)">MediaInfoController(IMediaSourceManager, IDeviceManager, ILibraryManager, IAuthorizationContext, ILogger&lt;MediaInfoController&gt;, MediaInfoHelper)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.MediaInfoController.html">MediaInfoController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaInfoController(IMediaSourceManager mediaSourceManager, IDeviceManager deviceManager, ILibraryManager libraryManager, INetworkManager networkManager, IMediaEncoder mediaEncoder, IUserManager userManager, IAuthorizationContext authContext, ILogger&lt;MediaInfoController&gt; logger, IServerConfigurationManager serverConfigurationManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public MediaInfoController(IMediaSourceManager mediaSourceManager, IDeviceManager deviceManager, ILibraryManager libraryManager, IAuthorizationContext authContext, ILogger&lt;MediaInfoController&gt; logger, MediaInfoHelper mediaInfoHelper)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -664,24 +664,6 @@ public class MediaInfoController : BaseJellyfinApiController</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></td>
-        <td><span class="parametername">networkManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
-        <td><span class="parametername">mediaEncoder</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td><span class="parametername">userManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
         <td><span class="parametername">authContext</span></td>
         <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a> interface.</p>
@@ -694,9 +676,9 @@ public class MediaInfoController : BaseJellyfinApiController</code></pre>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">serverConfigurationManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
+        <td><a class="xref" href="Jellyfin.Api.Helpers.MediaInfoHelper.html">MediaInfoHelper</a></td>
+        <td><span class="parametername">mediaInfoHelper</span></td>
+        <td><p>Instance of the <a class="xref" href="Jellyfin.Api.Helpers.MediaInfoHelper.html">MediaInfoHelper</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -708,7 +690,7 @@ public class MediaInfoController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L283">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L270">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_System_String_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream(System.String)">CloseLiveStream(String)</h4>
@@ -760,7 +742,7 @@ public ActionResult CloseLiveStream([FromQuery, Required] string liveStreamId)</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L298">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L285">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_System_Int32_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes(System.Int32)">GetBitrateTestBytes(Int32)</h4>
@@ -814,7 +796,7 @@ public ActionResult GetBitrateTestBytes([FromQuery] int size = 102400)</code></p
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_GetPlaybackInfo_System_Guid_System_Nullable_System_Guid__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.GetPlaybackInfo(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L69">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_GetPlaybackInfo_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetPlaybackInfo*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_GetPlaybackInfo_System_Guid_System_Nullable_System_Guid__" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetPlaybackInfo(System.Guid,System.Nullable{System.Guid})">GetPlaybackInfo(Guid, Nullable&lt;Guid&gt;)</h4>
@@ -872,7 +854,7 @@ public Task&lt;ActionResult&lt;PlaybackInfoResponse&gt;&gt; GetPlaybackInfo([Fro
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_GetPostedPlaybackInfo_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_Jellyfin_Api_Models_VideoDtos_DeviceProfileDto_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.GetPostedPlaybackInfo(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CJellyfin.Api.Models.VideoDtos.DeviceProfileDto%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L121">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L100">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_GetPostedPlaybackInfo_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetPostedPlaybackInfo*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_GetPostedPlaybackInfo_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_Jellyfin_Api_Models_VideoDtos_DeviceProfileDto_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetPostedPlaybackInfo(System.Guid,System.Nullable{System.Guid},System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,Jellyfin.Api.Models.VideoDtos.DeviceProfileDto,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">GetPostedPlaybackInfo(Guid, Nullable&lt;Guid&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, DeviceProfileDto, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean)</h4>
@@ -1014,7 +996,7 @@ public Task&lt;ActionResult&lt;PlaybackInfoResponse&gt;&gt; GetPostedPlaybackInf
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Guid__Jellyfin_Api_Models_MediaInfoDtos_OpenLiveStreamDto_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream(System.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CJellyfin.Api.Models.MediaInfoDtos.OpenLiveStreamDto%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L242">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L229">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int64__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Guid__Jellyfin_Api_Models_MediaInfoDtos_OpenLiveStreamDto_System_Boolean_System_Boolean_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream(System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Int64},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Guid},Jellyfin.Api.Models.MediaInfoDtos.OpenLiveStreamDto,System.Boolean,System.Boolean)">OpenLiveStream(String, Nullable&lt;Guid&gt;, String, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Guid&gt;, OpenLiveStreamDto, Boolean, Boolean)</h4>
@@ -1138,7 +1120,7 @@ public Task&lt;ActionResult&lt;LiveStreamResponse&gt;&gt; OpenLiveStream([FromQu
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L38" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

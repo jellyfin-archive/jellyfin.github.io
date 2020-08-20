@@ -619,19 +619,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Devices_IDeviceManager_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Net_Http_IHttpClientFactory_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.%23ctor(MediaBrowser.Controller.Dlna.IDlnaManager%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.MediaEncoding.ISubtitleEncoder%2CMicrosoft.Extensions.Configuration.IConfiguration%2CMediaBrowser.Controller.Devices.IDeviceManager%2CJellyfin.Api.Helpers.TranscodingJobHelper%2CSystem.Net.Http.IHttpClientFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController__ctor_Jellyfin_Api_Helpers_AudioHelper_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.%23ctor(Jellyfin.Api.Helpers.AudioHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L27">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_AudioController__ctor_" data-uid="Jellyfin.Api.Controllers.AudioController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_AudioController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_Microsoft_Extensions_Configuration_IConfiguration_MediaBrowser_Controller_Devices_IDeviceManager_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Net_Http_IHttpClientFactory_" data-uid="Jellyfin.Api.Controllers.AudioController.#ctor(MediaBrowser.Controller.Dlna.IDlnaManager,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder,Microsoft.Extensions.Configuration.IConfiguration,MediaBrowser.Controller.Devices.IDeviceManager,Jellyfin.Api.Helpers.TranscodingJobHelper,System.Net.Http.IHttpClientFactory)">AudioController(IDlnaManager, IUserManager, IAuthorizationContext, ILibraryManager, IMediaSourceManager, IServerConfigurationManager, IMediaEncoder, IFileSystem, ISubtitleEncoder, IConfiguration, IDeviceManager, TranscodingJobHelper, IHttpClientFactory)</h4>
+  <h4 id="Jellyfin_Api_Controllers_AudioController__ctor_Jellyfin_Api_Helpers_AudioHelper_" data-uid="Jellyfin.Api.Controllers.AudioController.#ctor(Jellyfin.Api.Helpers.AudioHelper)">AudioController(AudioHelper)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.AudioController.html">AudioController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AudioController(IDlnaManager dlnaManager, IUserManager userManger, IAuthorizationContext authorizationContext, ILibraryManager libraryManager, IMediaSourceManager mediaSourceManager, IServerConfigurationManager serverConfigurationManager, IMediaEncoder mediaEncoder, IFileSystem fileSystem, ISubtitleEncoder subtitleEncoder, IConfiguration configuration, IDeviceManager deviceManager, TranscodingJobHelper transcodingJobHelper, IHttpClientFactory httpClientFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public AudioController(AudioHelper audioHelper)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -644,81 +644,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Dlna.IDlnaManager.html">IDlnaManager</a></td>
-        <td><span class="parametername">dlnaManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Dlna.IDlnaManager.html">IDlnaManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
-        <td><span class="parametername">userManger</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
-        <td><span class="parametername">authorizationContext</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
-        <td><span class="parametername">libraryManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
-        <td><span class="parametername">mediaSourceManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">serverConfigurationManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
-        <td><span class="parametername">mediaEncoder</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a></td>
-        <td><span class="parametername">subtitleEncoder</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder.html">ISubtitleEncoder</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a></td>
-        <td><span class="parametername">configuration</span></td>
-        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.configuration.iconfiguration">IConfiguration</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a></td>
-        <td><span class="parametername">deviceManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a></td>
-        <td><span class="parametername">transcodingJobHelper</span></td>
-        <td><p>The <a class="xref" href="Jellyfin.Api.Helpers.TranscodingJobHelper.html">TranscodingJobHelper</a> singleton.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a></td>
-        <td><span class="parametername">httpClientFactory</span></td>
-        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory">IHttpClientFactory</a> interface.</p>
+        <td><a class="xref" href="Jellyfin.Api.Helpers.AudioHelper.html">AudioHelper</a></td>
+        <td><span class="parametername">audioHelper</span></td>
+        <td><p>Instance of <a class="xref" href="Jellyfin.Api.Helpers.AudioHelper.html">AudioHelper</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -730,7 +658,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController_GetAudioStream_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.GetAudioStream(System.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Dlna.SubtitleDeliveryMethod%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BMediaBrowser.Model.Dlna.EncodingContext%7D%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L147">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L86">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_AudioController_GetAudioStream_" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStream*"></a>
   <h4 id="Jellyfin_Api_Controllers_AudioController_GetAudioStream_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStream(System.Guid,System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Dlna.SubtitleDeliveryMethod,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{MediaBrowser.Model.Dlna.EncodingContext},System.Collections.Generic.Dictionary{System.String,System.String})">GetAudioStream(Guid, String, Nullable&lt;Boolean&gt;, String, String, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Single&gt;, Nullable&lt;Single&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, SubtitleDeliveryMethod, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;EncodingContext&gt;, Dictionary&lt;String, String&gt;)</h4>
@@ -1079,7 +1007,7 @@ public Task&lt;ActionResult&gt; GetAudioStream([FromRoute] Guid itemId, [FromRou
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L29" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

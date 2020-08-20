@@ -1,0 +1,597 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MediaInfoHelper
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MediaInfoHelper
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper">
+  
+  
+  <h1 id="Jellyfin_Api_Helpers_MediaInfoHelper" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper" class="text-break">Class MediaInfoHelper
+  </h1>
+  <div class="markdown level0 summary"><p>Media info helper.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">MediaInfoHelper</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Api.Helpers.html">Jellyfin.Api.Helpers</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
+  <h5 id="Jellyfin_Api_Helpers_MediaInfoHelper_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MediaInfoHelper</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Helpers_MediaInfoHelper__MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Helpers.MediaInfoHelper%7D%2CMediaBrowser.Common.Net.INetworkManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Net.IAuthorizationContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L54">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper__ctor_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Helpers_MediaInfoHelper__MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Helpers.MediaInfoHelper},MediaBrowser.Common.Net.INetworkManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Net.IAuthorizationContext)">MediaInfoHelper(IUserManager, ILibraryManager, IMediaSourceManager, IMediaEncoder, IServerConfigurationManager, ILogger&lt;MediaInfoHelper&gt;, INetworkManager, IDeviceManager, IAuthorizationContext)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Helpers.MediaInfoHelper.html">MediaInfoHelper</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MediaInfoHelper(IUserManager userManager, ILibraryManager libraryManager, IMediaSourceManager mediaSourceManager, IMediaEncoder mediaEncoder, IServerConfigurationManager serverConfigurationManager, ILogger&lt;MediaInfoHelper&gt; logger, INetworkManager networkManager, IDeviceManager deviceManager, IAuthorizationContext authContext)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a></td>
+        <td><span class="parametername">userManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
+        <td><span class="parametername">libraryManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
+        <td><span class="parametername">mediaSourceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
+        <td><span class="parametername">mediaEncoder</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
+        <td><span class="parametername">serverConfigurationManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Jellyfin.Api.Helpers.MediaInfoHelper.html">MediaInfoHelper</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger&lt;TCategoryName&gt;</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></td>
+        <td><span class="parametername">networkManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a></td>
+        <td><span class="parametername">deviceManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Devices.IDeviceManager.html">IDeviceManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
+        <td><span class="parametername">authContext</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a> interface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper_GetPlaybackInfo_System_Guid_System_Nullable_System_Guid__System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.GetPlaybackInfo(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L84">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper_GetPlaybackInfo_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.GetPlaybackInfo*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper_GetPlaybackInfo_System_Guid_System_Nullable_System_Guid__System_String_System_String_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.GetPlaybackInfo(System.Guid,System.Nullable{System.Guid},System.String,System.String)">GetPlaybackInfo(Guid, Nullable&lt;Guid&gt;, String, String)</h4>
+  <div class="markdown level1 summary"><p>Get playback info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;PlaybackInfoResponse&gt; GetPlaybackInfo(Guid id, Guid? userId, string mediaSourceId = null, string liveStreamId = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>Item id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>User Id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td><p>Media source id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">liveStreamId</span></td>
+        <td><p>Live stream id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.PlaybackInfoResponse.html">PlaybackInfoResponse</a>&gt;</td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> containing the <a class="xref" href="MediaBrowser.Model.MediaInfo.PlaybackInfoResponse.html">PlaybackInfoResponse</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper_NormalizeMediaSourceContainer_MediaBrowser_Model_Dto_MediaSourceInfo_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Model_Dlna_DlnaProfileType_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.NormalizeMediaSourceContainer(MediaBrowser.Model.Dto.MediaSourceInfo%2CMediaBrowser.Model.Dlna.DeviceProfile%2CMediaBrowser.Model.Dlna.DlnaProfileType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L519">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper_NormalizeMediaSourceContainer_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.NormalizeMediaSourceContainer*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper_NormalizeMediaSourceContainer_MediaBrowser_Model_Dto_MediaSourceInfo_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Model_Dlna_DlnaProfileType_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.NormalizeMediaSourceContainer(MediaBrowser.Model.Dto.MediaSourceInfo,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Model.Dlna.DlnaProfileType)">NormalizeMediaSourceContainer(MediaSourceInfo, DeviceProfile, DlnaProfileType)</h4>
+  <div class="markdown level1 summary"><p>Normalize media source container.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void NormalizeMediaSourceContainer(MediaSourceInfo mediaSource, DeviceProfile profile, DlnaProfileType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
+        <td><p>Media source.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>Device profile.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DlnaProfileType.html">DlnaProfileType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Dlna profile type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper_OpenMediaSource_Microsoft_AspNetCore_Http_HttpRequest_MediaBrowser_Model_MediaInfo_LiveStreamRequest_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.OpenMediaSource(Microsoft.AspNetCore.Http.HttpRequest%2CMediaBrowser.Model.MediaInfo.LiveStreamRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L459">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper_OpenMediaSource_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.OpenMediaSource*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper_OpenMediaSource_Microsoft_AspNetCore_Http_HttpRequest_MediaBrowser_Model_MediaInfo_LiveStreamRequest_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.OpenMediaSource(Microsoft.AspNetCore.Http.HttpRequest,MediaBrowser.Model.MediaInfo.LiveStreamRequest)">OpenMediaSource(HttpRequest, LiveStreamRequest)</h4>
+  <div class="markdown level1 summary"><p>Open media source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Task&lt;LiveStreamResponse&gt; OpenMediaSource(HttpRequest httpRequest, LiveStreamRequest request)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></td>
+        <td><span class="parametername">httpRequest</span></td>
+        <td><p>Http Request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamRequest.html">LiveStreamRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>Live stream request.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>&gt;</td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> containing the <a class="xref" href="MediaBrowser.Model.MediaInfo.LiveStreamResponse.html">LiveStreamResponse</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper_SetDeviceSpecificData_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_MediaSourceInfo_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Net_AuthorizationInfo_System_Nullable_System_Int64__System_Int64_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Guid_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.SetDeviceSpecificData(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Dto.MediaSourceInfo%2CMediaBrowser.Model.Dlna.DeviceProfile%2CMediaBrowser.Controller.Net.AuthorizationInfo%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Int64%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Guid%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L159">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper_SetDeviceSpecificData_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.SetDeviceSpecificData*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper_SetDeviceSpecificData_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_MediaSourceInfo_MediaBrowser_Model_Dlna_DeviceProfile_MediaBrowser_Controller_Net_AuthorizationInfo_System_Nullable_System_Int64__System_Int64_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Guid_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_String_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.SetDeviceSpecificData(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.MediaSourceInfo,MediaBrowser.Model.Dlna.DeviceProfile,MediaBrowser.Controller.Net.AuthorizationInfo,System.Nullable{System.Int64},System.Int64,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Guid,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.String)">SetDeviceSpecificData(BaseItem, MediaSourceInfo, DeviceProfile, AuthorizationInfo, Nullable&lt;Int64&gt;, Int64, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Guid, Boolean, Boolean, Boolean, Boolean, Boolean, String)</h4>
+  <div class="markdown level1 summary"><p>SetDeviceSpecificData.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetDeviceSpecificData(BaseItem item, MediaSourceInfo mediaSource, DeviceProfile profile, AuthorizationInfo auth, long? maxBitrate, long startTimeTicks, string mediaSourceId, int? audioStreamIndex, int? subtitleStreamIndex, int? maxAudioChannels, string playSessionId, Guid userId, bool enableDirectPlay, bool enableDirectStream, bool enableTranscoding, bool allowVideoStreamCopy, bool allowAudioStreamCopy, string ipAddress)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
+        <td><span class="parametername">item</span></td>
+        <td><p>Item to set data for.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
+        <td><p>Media source info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>Device profile.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Net.AuthorizationInfo.html">AuthorizationInfo</a></td>
+        <td><span class="parametername">auth</span></td>
+        <td><p>Authorization info.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">maxBitrate</span></td>
+        <td><p>Max bitrate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">startTimeTicks</span></td>
+        <td><p>Start time ticks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td><p>Media source id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioStreamIndex</span></td>
+        <td><p>Audio stream index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">subtitleStreamIndex</span></td>
+        <td><p>Subtitle stream index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxAudioChannels</span></td>
+        <td><p>Max audio channels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>Play session id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>User id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableDirectPlay</span></td>
+        <td><p>Enable direct play.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableDirectStream</span></td>
+        <td><p>Enable direct stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">enableTranscoding</span></td>
+        <td><p>Enable transcoding.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowVideoStreamCopy</span></td>
+        <td><p>Allow video stream copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">allowAudioStreamCopy</span></td>
+        <td><p>Allow audio stream copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">ipAddress</span></td>
+        <td><p>Requesting IP address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper_SortMediaSources_MediaBrowser_Model_MediaInfo_PlaybackInfoResponse_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper.SortMediaSources(MediaBrowser.Model.MediaInfo.PlaybackInfoResponse%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L408">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_MediaInfoHelper_SortMediaSources_" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.SortMediaSources*"></a>
+  <h4 id="Jellyfin_Api_Helpers_MediaInfoHelper_SortMediaSources_MediaBrowser_Model_MediaInfo_PlaybackInfoResponse_System_Nullable_System_Int64__" data-uid="Jellyfin.Api.Helpers.MediaInfoHelper.SortMediaSources(MediaBrowser.Model.MediaInfo.PlaybackInfoResponse,System.Nullable{System.Int64})">SortMediaSources(PlaybackInfoResponse, Nullable&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sort media source.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SortMediaSources(PlaybackInfoResponse result, long? maxBitrate)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.MediaInfo.PlaybackInfoResponse.html">PlaybackInfoResponse</a></td>
+        <td><span class="parametername">result</span></td>
+        <td><p>Playback info response.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">maxBitrate</span></td>
+        <td><p>Max bitrate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_MediaInfoHelper.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.MediaInfoHelper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/MediaInfoHelper.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
