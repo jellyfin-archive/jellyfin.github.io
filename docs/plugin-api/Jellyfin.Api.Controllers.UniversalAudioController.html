@@ -705,9 +705,9 @@ public class UniversalAudioController : BaseJellyfinApiController</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Audio/{itemId}/universal&quot;)]
-[HttpGet(&quot;Audio/{itemId}/{universal=universal}.{container?}&quot;, Name = &quot;GetUniversalAudioStream_2&quot;)]
+[HttpGet(&quot;Audio/{itemId}/universal.{container}&quot;, Name = &quot;GetUniversalAudioStream_2&quot;)]
 [HttpHead(&quot;Audio/{itemId}/universal&quot;, Name = &quot;HeadUniversalAudioStream&quot;)]
-[HttpHead(&quot;Audio/{itemId}/{universal=universal}.{container?}&quot;, Name = &quot;HeadUniversalAudioStream_2&quot;)]
+[HttpHead(&quot;Audio/{itemId}/universal.{container}&quot;, Name = &quot;HeadUniversalAudioStream_2&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(302)]
