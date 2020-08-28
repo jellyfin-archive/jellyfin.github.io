@@ -852,7 +852,7 @@ public ActionResult UpdateConfiguration([FromBody, Required] ServerConfiguration
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;MediaEncoder/Path&quot;)]
 [Authorize(Policy = &quot;FirstTimeSetupOrElevated&quot;)]
 [ProducesResponseType(204)]
-public ActionResult UpdateMediaEncoderPath([FromForm, Required] MediaEncoderPathDto mediaEncoderPath)</code></pre>
+public ActionResult UpdateMediaEncoderPath([FromBody, Required] MediaEncoderPathDto mediaEncoderPath)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

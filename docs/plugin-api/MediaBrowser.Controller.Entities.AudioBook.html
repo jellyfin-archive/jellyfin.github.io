@@ -626,7 +626,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImagePath_MediaBrowser_Model_Entities_ImageType_System_Int32_MediaBrowser_Model_IO_FileSystemMetadata_">BaseItem.SetImagePath(ImageType, Int32, FileSystemMetadata)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImage(ImageType, Int32)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImageAsync_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImageAsync(ImageType, Int32)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.RemoveImage(ItemImageInfo)</a>
@@ -635,7 +635,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(List&lt;ItemImageInfo&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">BaseItem.UpdateToRepository(ItemUpdateType, CancellationToken)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepositoryAsync_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">BaseItem.UpdateToRepositoryAsync(ItemUpdateType, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidateImages_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.ValidateImages(IDirectoryService)</a>
@@ -665,7 +665,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowsMultipleImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.AllowsMultipleImages(ImageType)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SwapImages_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.SwapImages(ImageType, Int32, Int32)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SwapImagesAsync_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.SwapImagesAsync(ImageType, Int32, Int32)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlayed_Jellyfin_Data_Entities_User_">BaseItem.IsPlayed(User)</a>
@@ -816,7 +816,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_SeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.SeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_SeriesId_" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_SeriesId" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesId">SeriesId</h4>
@@ -847,7 +847,7 @@ public Guid SeriesId { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_SeriesName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.SeriesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L21">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_SeriesName_" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_SeriesName" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesName">SeriesName</h4>
@@ -878,7 +878,7 @@ public string SeriesName { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_SeriesPresentationUniqueKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.SeriesPresentationUniqueKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L18">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_SeriesPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesPresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_SeriesPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.AudioBook.SeriesPresentationUniqueKey">SeriesPresentationUniqueKey</h4>
@@ -909,7 +909,7 @@ public string SeriesPresentationUniqueKey { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_SupportsPlayedStatus.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.SupportsPlayedStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L13">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L15">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.AudioBook.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.AudioBook.SupportsPlayedStatus">SupportsPlayedStatus</h4>
@@ -942,7 +942,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_SupportsPositionTicksResume.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.SupportsPositionTicksResume%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L10">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L12">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_SupportsPositionTicksResume_" data-uid="MediaBrowser.Controller.Entities.AudioBook.SupportsPositionTicksResume*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_SupportsPositionTicksResume" data-uid="MediaBrowser.Controller.Entities.AudioBook.SupportsPositionTicksResume">SupportsPositionTicksResume</h4>
@@ -977,7 +977,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_CanDownload.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.CanDownload%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L52">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_CanDownload_" data-uid="MediaBrowser.Controller.Entities.AudioBook.CanDownload*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_CanDownload" data-uid="MediaBrowser.Controller.Entities.AudioBook.CanDownload">CanDownload()</h4>
@@ -1009,7 +1009,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_FindSeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.FindSeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L47">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesId_" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesId" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesId">FindSeriesId()</h4>
@@ -1039,7 +1039,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_FindSeriesName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.FindSeriesName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L32">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesName_" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesName" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesName">FindSeriesName()</h4>
@@ -1069,7 +1069,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_FindSeriesPresentationUniqueKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.FindSeriesPresentationUniqueKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L37">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesPresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesPresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesPresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesPresentationUniqueKey">FindSeriesPresentationUniqueKey()</h4>
@@ -1099,7 +1099,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_FindSeriesSortName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.FindSeriesSortName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L27">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesSortName_" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesSortName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_FindSeriesSortName" data-uid="MediaBrowser.Controller.Entities.AudioBook.FindSeriesSortName">FindSeriesSortName()</h4>
@@ -1129,7 +1129,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_GetBlockUnratedType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.GetBlockUnratedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.AudioBook.GetBlockUnratedType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.AudioBook.GetBlockUnratedType">GetBlockUnratedType()</h4>
@@ -1161,7 +1161,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook_GetDefaultPrimaryImageAspectRatio.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook.GetDefaultPrimaryImageAspectRatio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L42">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AudioBook_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Entities.AudioBook.GetDefaultPrimaryImageAspectRatio*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AudioBook_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Entities.AudioBook.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
@@ -1255,7 +1255,7 @@ public override bool SupportsPositionTicksResume { get; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AudioBook.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AudioBook%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AudioBook.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

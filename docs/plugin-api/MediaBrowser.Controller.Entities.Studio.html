@@ -594,7 +594,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetImagePath_MediaBrowser_Model_Entities_ImageType_System_Int32_MediaBrowser_Model_IO_FileSystemMetadata_">BaseItem.SetImagePath(ImageType, Int32, FileSystemMetadata)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImage_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImage(ImageType, Int32)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DeleteImageAsync_MediaBrowser_Model_Entities_ImageType_System_Int32_">BaseItem.DeleteImageAsync(ImageType, Int32)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.RemoveImage(ItemImageInfo)</a>
@@ -603,7 +603,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(List&lt;ItemImageInfo&gt;)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepository_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">BaseItem.UpdateToRepository(ItemUpdateType, CancellationToken)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepositoryAsync_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">BaseItem.UpdateToRepositoryAsync(ItemUpdateType, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ValidateImages_MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.ValidateImages(IDirectoryService)</a>
@@ -633,7 +633,7 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllowsMultipleImages_MediaBrowser_Model_Entities_ImageType_">BaseItem.AllowsMultipleImages(ImageType)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SwapImages_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.SwapImages(ImageType, Int32, Int32)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SwapImagesAsync_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_">BaseItem.SwapImagesAsync(ImageType, Int32, Int32)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPlayed_Jellyfin_Data_Entities_User_">BaseItem.IsPlayed(User)</a>
@@ -778,7 +778,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_ContainingFolderPath.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.ContainingFolderPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_ContainingFolderPath_" data-uid="MediaBrowser.Controller.Entities.Studio.ContainingFolderPath*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_ContainingFolderPath" data-uid="MediaBrowser.Controller.Entities.Studio.ContainingFolderPath">ContainingFolderPath</h4>
@@ -814,7 +814,7 @@ public override string ContainingFolderPath { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_IsDisplayedAsFolder.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.IsDisplayedAsFolder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L37">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_IsDisplayedAsFolder_" data-uid="MediaBrowser.Controller.Entities.Studio.IsDisplayedAsFolder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_IsDisplayedAsFolder" data-uid="MediaBrowser.Controller.Entities.Studio.IsDisplayedAsFolder">IsDisplayedAsFolder</h4>
@@ -847,7 +847,7 @@ public override bool IsDisplayedAsFolder { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_SupportsAncestors.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.SupportsAncestors%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L40">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_SupportsAncestors_" data-uid="MediaBrowser.Controller.Entities.Studio.SupportsAncestors*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_SupportsAncestors" data-uid="MediaBrowser.Controller.Entities.Studio.SupportsAncestors">SupportsAncestors</h4>
@@ -880,7 +880,7 @@ public override bool SupportsAncestors { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_SupportsPeople.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.SupportsPeople%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L66">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L68">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_SupportsPeople_" data-uid="MediaBrowser.Controller.Entities.Studio.SupportsPeople*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_SupportsPeople" data-uid="MediaBrowser.Controller.Entities.Studio.SupportsPeople">SupportsPeople</h4>
@@ -915,7 +915,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_BeforeMetadataRefresh_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.BeforeMetadataRefresh(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L104">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L106">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.Studio.BeforeMetadataRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Studio.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
@@ -965,7 +965,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_CanDelete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.CanDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L49">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_CanDelete_" data-uid="MediaBrowser.Controller.Entities.Studio.CanDelete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_CanDelete" data-uid="MediaBrowser.Controller.Entities.Studio.CanDelete">CanDelete()</h4>
@@ -997,7 +997,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_CreatePresentationUniqueKey.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.CreatePresentationUniqueKey%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_CreatePresentationUniqueKey_" data-uid="MediaBrowser.Controller.Entities.Studio.CreatePresentationUniqueKey*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_CreatePresentationUniqueKey" data-uid="MediaBrowser.Controller.Entities.Studio.CreatePresentationUniqueKey">CreatePresentationUniqueKey()</h4>
@@ -1029,7 +1029,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_GetDefaultPrimaryImageAspectRatio.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.GetDefaultPrimaryImageAspectRatio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L43">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Entities.Studio.GetDefaultPrimaryImageAspectRatio*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Entities.Studio.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
@@ -1061,7 +1061,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_GetPath_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.GetPath(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L69">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L71">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_GetPath_" data-uid="MediaBrowser.Controller.Entities.Studio.GetPath*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_GetPath_System_String_" data-uid="MediaBrowser.Controller.Entities.Studio.GetPath(System.String)">GetPath(String)</h4>
@@ -1108,7 +1108,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_GetPath_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.GetPath(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L76">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_GetPath_" data-uid="MediaBrowser.Controller.Entities.Studio.GetPath*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_GetPath_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Studio.GetPath(System.String,System.Boolean)">GetPath(String, Boolean)</h4>
@@ -1160,7 +1160,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_GetTaggedItems_MediaBrowser_Controller_Entities_InternalItemsQuery_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.GetTaggedItems(MediaBrowser.Controller.Entities.InternalItemsQuery)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L61">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_GetTaggedItems_" data-uid="MediaBrowser.Controller.Entities.Studio.GetTaggedItems*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_GetTaggedItems_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Studio.GetTaggedItems(MediaBrowser.Controller.Entities.InternalItemsQuery)">GetTaggedItems(InternalItemsQuery)</h4>
@@ -1207,7 +1207,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_GetUserDataKeys.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.GetUserDataKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L16">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_GetUserDataKeys_" data-uid="MediaBrowser.Controller.Entities.Studio.GetUserDataKeys*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_GetUserDataKeys" data-uid="MediaBrowser.Controller.Entities.Studio.GetUserDataKeys">GetUserDataKeys()</h4>
@@ -1239,7 +1239,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_IsSaveLocalMetadataEnabled.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.IsSaveLocalMetadataEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L56">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_IsSaveLocalMetadataEnabled_" data-uid="MediaBrowser.Controller.Entities.Studio.IsSaveLocalMetadataEnabled*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_IsSaveLocalMetadataEnabled" data-uid="MediaBrowser.Controller.Entities.Studio.IsSaveLocalMetadataEnabled">IsSaveLocalMetadataEnabled()</h4>
@@ -1271,7 +1271,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio_RequiresRefresh.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio.RequiresRefresh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L89">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L91">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Studio_RequiresRefresh_" data-uid="MediaBrowser.Controller.Entities.Studio.RequiresRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Studio_RequiresRefresh" data-uid="MediaBrowser.Controller.Entities.Studio.RequiresRefresh">RequiresRefresh()</h4>
@@ -1347,7 +1347,7 @@ public override bool SupportsPeople { get; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Studio.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Studio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Studio.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

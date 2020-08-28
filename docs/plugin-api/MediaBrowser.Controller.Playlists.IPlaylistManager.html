@@ -95,19 +95,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_ICollection_System_Guid__System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylist(System.String%2CSystem.Collections.Generic.ICollection%7BSystem.Guid%7D%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylistAsync_System_Guid_System_Collections_Generic_ICollection_System_Guid__System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylistAsync(System.Guid%2CSystem.Collections.Generic.ICollection%7BSystem.Guid%7D%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L34">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylist_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylist*"></a>
-  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylist_System_String_System_Collections_Generic_ICollection_System_Guid__System_Guid_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylist(System.String,System.Collections.Generic.ICollection{System.Guid},System.Guid)">AddToPlaylist(String, ICollection&lt;Guid&gt;, Guid)</h4>
+  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylistAsync_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylistAsync*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_AddToPlaylistAsync_System_Guid_System_Collections_Generic_ICollection_System_Guid__System_Guid_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.AddToPlaylistAsync(System.Guid,System.Collections.Generic.ICollection{System.Guid},System.Guid)">AddToPlaylistAsync(Guid, ICollection&lt;Guid&gt;, Guid)</h4>
   <div class="markdown level1 summary"><p>Adds to playlist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddToPlaylist(string playlistId, ICollection&lt;Guid&gt; itemIds, Guid userId)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddToPlaylistAsync(Guid playlistId, ICollection&lt;Guid&gt; itemIds, Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -120,7 +120,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">playlistId</span></td>
         <td><p>The playlist identifier.</p>
 </td>
@@ -139,12 +139,28 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_CreatePlaylist_MediaBrowser_Model_Playlists_PlaylistCreationRequest_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.CreatePlaylist(MediaBrowser.Model.Playlists.PlaylistCreationRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L25">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_CreatePlaylist_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.CreatePlaylist*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_CreatePlaylist_MediaBrowser_Model_Playlists_PlaylistCreationRequest_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.CreatePlaylist(MediaBrowser.Model.Playlists.PlaylistCreationRequest)">CreatePlaylist(PlaylistCreationRequest)</h4>
@@ -194,7 +210,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylists_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylists(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L18">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylists_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylists*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylists_System_Guid_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylists(System.Guid)">GetPlaylists(Guid)</h4>
@@ -244,7 +260,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylistsFolder_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylistsFolder(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L49">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylistsFolder_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylistsFolder*"></a>
   <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_GetPlaylistsFolder_System_Guid_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.GetPlaylistsFolder(System.Guid)">GetPlaylistsFolder(Guid)</h4>
@@ -291,19 +307,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem(System.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItemAsync_System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItemAsync(System.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L58">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem*"></a>
-  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItem_System_String_System_String_System_Int32_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItem(System.String,System.String,System.Int32)">MoveItem(String, String, Int32)</h4>
+  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItemAsync_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItemAsync*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_MoveItemAsync_System_String_System_String_System_Int32_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.MoveItemAsync(System.String,System.String,System.Int32)">MoveItemAsync(String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Moves the item.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void MoveItem(string playlistId, string entryId, int newIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">Task MoveItemAsync(string playlistId, string entryId, int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,21 +351,37 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylist_System_String_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylist(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylistAsync_System_String_System_Collections_Generic_IEnumerable_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylistAsync(System.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L42">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylist_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylist*"></a>
-  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylist_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylist(System.String,System.Collections.Generic.IEnumerable{System.String})">RemoveFromPlaylist(String, IEnumerable&lt;String&gt;)</h4>
+  <a id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylistAsync_" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylistAsync*"></a>
+  <h4 id="MediaBrowser_Controller_Playlists_IPlaylistManager_RemoveFromPlaylistAsync_System_String_System_Collections_Generic_IEnumerable_System_String__" data-uid="MediaBrowser.Controller.Playlists.IPlaylistManager.RemoveFromPlaylistAsync(System.String,System.Collections.Generic.IEnumerable{System.String})">RemoveFromPlaylistAsync(String, IEnumerable&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Removes from playlist.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void RemoveFromPlaylist(string playlistId, IEnumerable&lt;string&gt; entryIds)</code></pre>
+    <pre><code class="lang-csharp hljs">Task RemoveFromPlaylistAsync(string playlistId, IEnumerable&lt;string&gt; entryIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -375,6 +407,22 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -386,7 +434,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Playlists_IPlaylistManager.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Playlists.IPlaylistManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Playlists/IPlaylistManager.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

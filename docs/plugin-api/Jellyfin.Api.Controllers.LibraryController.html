@@ -930,7 +930,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetCriticReviews()</co
 [Authorize(Policy = &quot;Download&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult GetDownload([FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&gt; GetDownload([FromRoute] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -960,7 +960,7 @@ public ActionResult GetDownload([FromRoute] Guid itemId)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.fileresult">FileResult</a> containing the media stream.</p>
 </td>
       </tr>

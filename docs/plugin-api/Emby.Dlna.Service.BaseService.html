@@ -89,13 +89,13 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">BaseService</span></div>
-      <div class="level2"><a class="xref" href="Emby.Dlna.ConnectionManager.ConnectionManager.html">ConnectionManager</a></div>
-      <div class="level2"><a class="xref" href="Emby.Dlna.ContentDirectory.ContentDirectory.html">ContentDirectory</a></div>
-      <div class="level2"><a class="xref" href="Emby.Dlna.MediaReceiverRegistrar.MediaReceiverRegistrar.html">MediaReceiverRegistrar</a></div>
+      <div class="level2"><a class="xref" href="Emby.Dlna.ConnectionManager.ConnectionManagerService.html">ConnectionManagerService</a></div>
+      <div class="level2"><a class="xref" href="Emby.Dlna.ContentDirectory.ContentDirectoryService.html">ContentDirectoryService</a></div>
+      <div class="level2"><a class="xref" href="Emby.Dlna.MediaReceiverRegistrar.MediaReceiverRegistrarService.html">MediaReceiverRegistrarService</a></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Emby.Dlna.IEventManager.html">IEventManager</a></div>
+    <div><a class="xref" href="Emby.Dlna.IDlnaEventManager.html">IDlnaEventManager</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -125,7 +125,7 @@
   <h6><strong>Assembly</strong>: Emby.Dlna.dll</h6>
   <h5 id="Emby_Dlna_Service_BaseService_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class BaseService : IEventManager</code></pre>
+    <pre><code class="lang-csharp hljs">public class BaseService : IDlnaEventManager</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -134,7 +134,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Dlna_Service_BaseService__MediaBrowser_Common_Net_IHttpClient_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Dlna.Service.BaseService%7D%2CMediaBrowser.Common.Net.IHttpClient)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L11">View Source</a>
   </span>
   <a id="Emby_Dlna_Service_BaseService__ctor_" data-uid="Emby.Dlna.Service.BaseService.#ctor*"></a>
   <h4 id="Emby_Dlna_Service_BaseService__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Dlna_Service_BaseService__MediaBrowser_Common_Net_IHttpClient_" data-uid="Emby.Dlna.Service.BaseService.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Dlna.Service.BaseService},MediaBrowser.Common.Net.IHttpClient)">BaseService(ILogger&lt;BaseService&gt;, IHttpClient)</h4>
@@ -166,23 +166,24 @@
       </tr>
     </tbody>
   </table>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_EventManager.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.EventManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L11">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L19">View Source</a>
   </span>
+  <a id="Emby_Dlna_Service_BaseService_EventManager_" data-uid="Emby.Dlna.Service.BaseService.EventManager*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_EventManager" data-uid="Emby.Dlna.Service.BaseService.EventManager">EventManager</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IEventManager EventManager</code></pre>
+    <pre><code class="lang-csharp hljs">protected IDlnaEventManager EventManager { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -192,7 +193,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Emby.Dlna.IEventManager.html">IEventManager</a></td>
+        <td><a class="xref" href="Emby.Dlna.IDlnaEventManager.html">IDlnaEventManager</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -202,16 +203,17 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_HttpClient.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.HttpClient%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L12">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L21">View Source</a>
   </span>
+  <a id="Emby_Dlna_Service_BaseService_HttpClient_" data-uid="Emby.Dlna.Service.BaseService.HttpClient*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_HttpClient" data-uid="Emby.Dlna.Service.BaseService.HttpClient">HttpClient</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected IHttpClient HttpClient</code></pre>
+    <pre><code class="lang-csharp hljs">protected IHttpClient HttpClient { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -231,16 +233,17 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_Logger.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.Logger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L13">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L23">View Source</a>
   </span>
+  <a id="Emby_Dlna_Service_BaseService_Logger_" data-uid="Emby.Dlna.Service.BaseService.Logger*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_Logger" data-uid="Emby.Dlna.Service.BaseService.Logger">Logger</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected ILogger Logger</code></pre>
+    <pre><code class="lang-csharp hljs">protected ILogger Logger { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -262,7 +265,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_CancelEventSubscription_System_String_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.CancelEventSubscription(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L25">View Source</a>
   </span>
   <a id="Emby_Dlna_Service_BaseService_CancelEventSubscription_" data-uid="Emby.Dlna.Service.BaseService.CancelEventSubscription*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_CancelEventSubscription_System_String_" data-uid="Emby.Dlna.Service.BaseService.CancelEventSubscription(System.String)">CancelEventSubscription(String)</h4>
@@ -309,7 +312,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_CreateEventSubscription_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.CreateEventSubscription(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L35">View Source</a>
   </span>
   <a id="Emby_Dlna_Service_BaseService_CreateEventSubscription_" data-uid="Emby.Dlna.Service.BaseService.CreateEventSubscription*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_CreateEventSubscription_System_String_System_String_System_String_" data-uid="Emby.Dlna.Service.BaseService.CreateEventSubscription(System.String,System.String,System.String)">CreateEventSubscription(String, String, String)</h4>
@@ -366,7 +369,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Dlna_Service_BaseService_RenewEventSubscription_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Dlna.Service.BaseService.RenewEventSubscription(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Dlna/Service/BaseService.cs/#L30">View Source</a>
   </span>
   <a id="Emby_Dlna_Service_BaseService_RenewEventSubscription_" data-uid="Emby.Dlna.Service.BaseService.RenewEventSubscription*"></a>
   <h4 id="Emby_Dlna_Service_BaseService_RenewEventSubscription_System_String_System_String_System_String_System_String_" data-uid="Emby.Dlna.Service.BaseService.RenewEventSubscription(System.String,System.String,System.String,System.String)">RenewEventSubscription(String, String, String, String)</h4>
@@ -425,7 +428,7 @@
   </table>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Emby.Dlna.IEventManager.html">IEventManager</a>
+      <a class="xref" href="Emby.Dlna.IDlnaEventManager.html">IDlnaEventManager</a>
   </div>
 </article>
           </div>

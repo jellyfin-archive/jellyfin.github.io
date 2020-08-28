@@ -749,7 +749,7 @@
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult DeleteAlternateSources([FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&gt; DeleteAlternateSources([FromRoute] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -779,7 +779,7 @@ public ActionResult DeleteAlternateSources([FromRoute] Guid itemId)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the video doesn&apos;t exist.</p>
 </td>
       </tr>
@@ -1205,7 +1205,7 @@ public Task&lt;ActionResult&gt; GetVideoStream([FromRoute] Guid itemId, [FromRou
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(400)]
-public ActionResult MergeVersions([FromQuery, Required] string itemIds)</code></pre>
+public Task&lt;ActionResult&gt; MergeVersions([FromQuery, Required] string itemIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1235,7 +1235,7 @@ public ActionResult MergeVersions([FromQuery, Required] string itemIds)</code></
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.badrequestresult">BadRequestResult</a> if less than two ids were supplied.</p>
 </td>
       </tr>

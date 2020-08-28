@@ -715,7 +715,7 @@ public class ImageController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult DeleteItemImage([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -757,7 +757,7 @@ public ActionResult DeleteItemImage([FromRoute] Guid itemId, [FromRoute] ImageTy
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if item not found.</p>
 </td>
       </tr>
@@ -1454,7 +1454,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt; GetItemImageInfos([FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImageInfos([FromRoute] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1484,7 +1484,7 @@ public ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt; GetItemImageInfos([FromR
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.ImageInfo.html">ImageInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.ImageInfo.html">ImageInfo</a>&gt;&gt;&gt;</td>
         <td><p>The list of image infos on success, or <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if item not found.</p>
 </td>
       </tr>
@@ -2246,7 +2246,7 @@ public Task&lt;ActionResult&gt; SetItemImage([FromRoute] Guid itemId, [FromRoute
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult UpdateItemImageIndex([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int imageIndex, [FromQuery] int newIndex)</code></pre>
+public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int imageIndex, [FromQuery] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2294,7 +2294,7 @@ public ActionResult UpdateItemImageIndex([FromRoute] Guid itemId, [FromRoute] Im
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if item not found.</p>
 </td>
       </tr>
