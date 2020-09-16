@@ -174,9 +174,37 @@
 <li>app:<ul>
 <li>src:<ul>
 <li>main:<ul>
-<li>assets/fonts:</li>
-<li>java/org/jellyfin/androidtv:</li>
-<li>res:</li>
+<li>java/org/jellyfin/androidtv:<ul>
+<li>constant: <code>constants/enums</code></li>
+<li>data:<ul>
+<li>compat: <code>classes ported from old apiclient to maintain compatibility in the app (Deprecated should be replaced/removed)</code></li>
+<li>eventhandling: <code>API webservice event handling</code></li>
+<li>model: <code>various data models</code></li>
+<li>querying: <code>extensions to the querying package in the apiclient (Should probably be replaced/removed)</code></li>
+<li>repository: <code>data repositories for shared access</code></li>
+</ul>
+</li>
+<li>di: <code>dependency injection modules</code></li>
+<li>integration: <code>Android TV homescreen channel integrations</code></li>
+<li>preference: <code>interface for Android shared preferences</code></li>
+<li>ui:<ul>
+<li>browsing: <code>views for browsing items (rows, grids, etc.)</code></li>
+<li>home: <code>home screen views</code></li>
+<li>itemdetail: <code>item detail views</code></li>
+<li>itemhandling: <code>BaseItem views</code></li>
+<li>livetv: <code>live TV views</code></li>
+<li>playback: <code>media player views</code></li>
+<li>preference: <code>app preferences/settings views</code></li>
+<li>presentation: <code>presenters from MVP architecture</code></li>
+<li>search: <code>search views</code></li>
+<li>shared: <code>shared code for UI classes</code></li>
+<li>startup: <code>authentication views</code></li>
+</ul>
+</li>
+<li>util: <code>various utilities</code></li>
+</ul>
+</li>
+<li>res: <code>Android resource files for XML layouts, translations, images, etc.</code></li>
 </ul>
 </li>
 </ul>
