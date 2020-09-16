@@ -83,7 +83,8 @@
   
   <h1 id="Jellyfin_Data_Entities_ImageInfo" data-uid="Jellyfin.Data.Entities.ImageInfo" class="text-break">Class ImageInfo
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An entity representing an image.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -124,14 +125,34 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L28">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_ImageInfo__ctor_" data-uid="Jellyfin.Data.Entities.ImageInfo.#ctor*"></a>
+  <h4 id="Jellyfin_Data_Entities_ImageInfo__ctor" data-uid="Jellyfin.Data.Entities.ImageInfo.#ctor">ImageInfo()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.ImageInfo.html">ImageInfo</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ImageInfo()</code></pre>
+  </div>
+  <h5 id="Jellyfin_Data_Entities_ImageInfo__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo__ctor_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L11">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L16">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_ImageInfo__ctor_" data-uid="Jellyfin.Data.Entities.ImageInfo.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_ImageInfo__ctor_System_String_" data-uid="Jellyfin.Data.Entities.ImageInfo.#ctor(System.String)">ImageInfo(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.ImageInfo.html">ImageInfo</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -150,7 +171,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>The path.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -161,17 +183,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L17">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L38">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_ImageInfo_Id_" data-uid="Jellyfin.Data.Entities.ImageInfo.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_ImageInfo_Id" data-uid="Jellyfin.Data.Entities.ImageInfo.Id">Id</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Key]
-[Required]
-[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    <pre><code class="lang-csharp hljs">[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 public int Id { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -189,21 +210,24 @@ public int Id { get; protected set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_ImageInfo_Id_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Identity, Indexed, Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo_LastModified.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.LastModified%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_ImageInfo_LastModified_" data-uid="Jellyfin.Data.Entities.ImageInfo.LastModified*"></a>
   <h4 id="Jellyfin_Data_Entities_ImageInfo_LastModified" data-uid="Jellyfin.Data.Entities.ImageInfo.LastModified">LastModified</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the date last modified.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public DateTime LastModified { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime LastModified { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,16 +244,20 @@ public DateTime LastModified { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_ImageInfo_LastModified_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo_Path.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.Path%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L24">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L52">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_ImageInfo_Path_" data-uid="Jellyfin.Data.Entities.ImageInfo.Path*"></a>
   <h4 id="Jellyfin_Data_Entities_ImageInfo_Path" data-uid="Jellyfin.Data.Entities.ImageInfo.Path">Path</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the path of the image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,16 +281,20 @@ public string Path { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
+  <h5 id="Jellyfin_Data_Entities_ImageInfo_Path_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Required.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo_UserId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo.UserId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L44">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_ImageInfo_UserId_" data-uid="Jellyfin.Data.Entities.ImageInfo.UserId*"></a>
   <h4 id="Jellyfin_Data_Entities_ImageInfo_UserId" data-uid="Jellyfin.Data.Entities.ImageInfo.UserId">UserId</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets or sets the user id.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -294,7 +326,7 @@ public string Path { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_ImageInfo.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.ImageInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/ImageInfo.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

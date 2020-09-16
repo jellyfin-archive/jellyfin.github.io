@@ -624,7 +624,7 @@ public class ConfigurationController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L35">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController__ctor_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder)">ConfigurationController(IServerConfigurationManager, IMediaEncoder)</h4>
@@ -666,7 +666,7 @@ public class ConfigurationController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_GetConfiguration.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.GetConfiguration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_GetConfiguration_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_GetConfiguration" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetConfiguration">GetConfiguration()</h4>
@@ -700,7 +700,7 @@ public ActionResult&lt;ServerConfiguration&gt; GetConfiguration()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_GetDefaultMetadataOptions.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.GetDefaultMetadataOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L103">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L106">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_GetDefaultMetadataOptions_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetDefaultMetadataOptions*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_GetDefaultMetadataOptions" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetDefaultMetadataOptions">GetDefaultMetadataOptions()</h4>
@@ -735,7 +735,7 @@ public ActionResult&lt;MetadataOptions&gt; GetDefaultMetadataOptions()</code></p
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_GetNamedConfiguration_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.GetNamedConfiguration(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L76">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_GetNamedConfiguration_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetNamedConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_GetNamedConfiguration_System_String_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.GetNamedConfiguration(System.String)">GetNamedConfiguration(String)</h4>
@@ -746,7 +746,8 @@ public ActionResult&lt;MetadataOptions&gt; GetDefaultMetadataOptions()</code></p
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Configuration/{key}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;object&gt; GetNamedConfiguration([FromRoute] string key)</code></pre>
+[ProducesFile(new string[]{&quot;application/json&quot;})]
+public ActionResult&lt;object&gt; GetNamedConfiguration([FromRoute, Required] string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -787,7 +788,7 @@ public ActionResult&lt;object&gt; GetNamedConfiguration([FromRoute] string key)<
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_UpdateConfiguration_MediaBrowser_Model_Configuration_ServerConfiguration_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.UpdateConfiguration(MediaBrowser.Model.Configuration.ServerConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L61">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_UpdateConfiguration_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_UpdateConfiguration_MediaBrowser_Model_Configuration_ServerConfiguration_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateConfiguration(MediaBrowser.Model.Configuration.ServerConfiguration)">UpdateConfiguration(ServerConfiguration)</h4>
@@ -840,7 +841,7 @@ public ActionResult UpdateConfiguration([FromBody, Required] ServerConfiguration
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_UpdateMediaEncoderPath_Jellyfin_Api_Models_ConfigurationDtos_MediaEncoderPathDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.UpdateMediaEncoderPath(Jellyfin.Api.Models.ConfigurationDtos.MediaEncoderPathDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L120">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_UpdateMediaEncoderPath_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateMediaEncoderPath*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_UpdateMediaEncoderPath_Jellyfin_Api_Models_ConfigurationDtos_MediaEncoderPathDto_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateMediaEncoderPath(Jellyfin.Api.Models.ConfigurationDtos.MediaEncoderPathDto)">UpdateMediaEncoderPath(MediaEncoderPathDto)</h4>
@@ -893,7 +894,7 @@ public ActionResult UpdateMediaEncoderPath([FromBody, Required] MediaEncoderPath
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController_UpdateNamedConfiguration_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController.UpdateNamedConfiguration(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L87">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L90">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ConfigurationController_UpdateNamedConfiguration_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateNamedConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_ConfigurationController_UpdateNamedConfiguration_System_String_" data-uid="Jellyfin.Api.Controllers.ConfigurationController.UpdateNamedConfiguration(System.String)">UpdateNamedConfiguration(String)</h4>
@@ -905,7 +906,7 @@ public ActionResult UpdateMediaEncoderPath([FromBody, Required] MediaEncoderPath
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Configuration/{key}&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; UpdateNamedConfiguration([FromRoute] string key)</code></pre>
+public Task&lt;ActionResult&gt; UpdateNamedConfiguration([FromRoute, Required] string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -952,7 +953,7 @@ public Task&lt;ActionResult&gt; UpdateNamedConfiguration([FromRoute] string key)
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ConfigurationController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ConfigurationController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ConfigurationController.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

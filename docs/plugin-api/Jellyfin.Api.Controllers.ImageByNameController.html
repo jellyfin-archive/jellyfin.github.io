@@ -623,7 +623,7 @@ public class ImageByNameController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L35">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController__ctor_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem)">ImageByNameController(IServerConfigurationManager, IFileSystem)</h4>
@@ -665,7 +665,7 @@ public class ImageByNameController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImage_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImage(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L64">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImage_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImage_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImage(System.String,System.String)">GetGeneralImage(String, String)</h4>
@@ -679,7 +679,8 @@ public class ImageByNameController : BaseJellyfinApiController</code></pre>
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;FileStreamResult&gt; GetGeneralImage([FromRoute, Required] string name, [FromRoute, Required] string type)</code></pre>
+[ProducesImageFile]
+public ActionResult GetGeneralImage([FromRoute, Required] string name, [FromRoute, Required] string type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -715,7 +716,7 @@ public ActionResult&lt;FileStreamResult&gt; GetGeneralImage([FromRoute, Required
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a> containing the image contents on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the image could not be found.</p>
 </td>
       </tr>
@@ -726,7 +727,7 @@ public ActionResult&lt;FileStreamResult&gt; GetGeneralImage([FromRoute, Required
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImages.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImages_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImages*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetGeneralImages" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetGeneralImages">GetGeneralImages()</h4>
@@ -761,7 +762,7 @@ public ActionResult&lt;IEnumerable&lt;ImageByNameInfo&gt;&gt; GetGeneralImages()
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImage_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImage(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L141">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L144">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImage_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImage_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImage(System.String,System.String)">GetMediaInfoImage(String, String)</h4>
@@ -775,7 +776,8 @@ public ActionResult&lt;IEnumerable&lt;ImageByNameInfo&gt;&gt; GetGeneralImages()
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;FileStreamResult&gt; GetMediaInfoImage([FromRoute, Required] string theme, [FromRoute, Required] string name)</code></pre>
+[ProducesImageFile]
+public ActionResult GetMediaInfoImage([FromRoute, Required] string theme, [FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -811,7 +813,7 @@ public ActionResult&lt;FileStreamResult&gt; GetMediaInfoImage([FromRoute, Requir
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a> containing the image contents on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the image could not be found.</p>
 </td>
       </tr>
@@ -822,7 +824,7 @@ public ActionResult&lt;FileStreamResult&gt; GetMediaInfoImage([FromRoute, Requir
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImages.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L125">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L128">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImages_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImages*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetMediaInfoImages" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetMediaInfoImages">GetMediaInfoImages()</h4>
@@ -857,7 +859,7 @@ public ActionResult&lt;IEnumerable&lt;ImageByNameInfo&gt;&gt; GetMediaInfoImages
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetRatingImage_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetRatingImage(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L108">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L110">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetRatingImage_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetRatingImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetRatingImage_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetRatingImage(System.String,System.String)">GetRatingImage(String, String)</h4>
@@ -871,7 +873,8 @@ public ActionResult&lt;IEnumerable&lt;ImageByNameInfo&gt;&gt; GetMediaInfoImages
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;FileStreamResult&gt; GetRatingImage([FromRoute, Required] string theme, [FromRoute, Required] string name)</code></pre>
+[ProducesImageFile]
+public ActionResult GetRatingImage([FromRoute, Required] string theme, [FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -907,7 +910,7 @@ public ActionResult&lt;FileStreamResult&gt; GetRatingImage([FromRoute, Required]
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.filestreamresult">FileStreamResult</a> containing the image contents on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the image could not be found.</p>
 </td>
       </tr>
@@ -918,7 +921,7 @@ public ActionResult&lt;FileStreamResult&gt; GetRatingImage([FromRoute, Required]
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController_GetRatingImages.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController.GetRatingImages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L92">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L94">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageByNameController_GetRatingImages_" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetRatingImages*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageByNameController_GetRatingImages" data-uid="Jellyfin.Api.Controllers.ImageByNameController.GetRatingImages">GetRatingImages()</h4>
@@ -959,7 +962,7 @@ public ActionResult&lt;IEnumerable&lt;ImageByNameInfo&gt;&gt; GetRatingImages()<
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageByNameController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageByNameController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageByNameController.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

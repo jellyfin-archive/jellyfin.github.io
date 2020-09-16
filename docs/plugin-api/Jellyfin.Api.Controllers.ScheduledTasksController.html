@@ -782,7 +782,7 @@ public IEnumerable&lt;IScheduledTaskWorker&gt; GetTasks([FromQuery] bool? isHidd
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Running/{taskId}&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult StartTask([FromRoute] string taskId)</code></pre>
+public ActionResult StartTask([FromRoute, Required] string taskId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

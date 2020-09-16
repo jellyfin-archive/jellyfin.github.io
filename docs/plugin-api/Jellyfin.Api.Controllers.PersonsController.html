@@ -623,7 +623,7 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L36">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController__ctor_" data-uid="Jellyfin.Api.Controllers.PersonsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_" data-uid="Jellyfin.Api.Controllers.PersonsController.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserManager)">PersonsController(ILibraryManager, IDtoService, IUserManager)</h4>
@@ -671,7 +671,7 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController_GetPerson_System_String_System_Nullable_System_Guid__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.GetPerson(System.String%2CSystem.Nullable%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L262">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L263">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController_GetPerson_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPerson*"></a>
   <h4 id="Jellyfin_Api_Controllers_PersonsController_GetPerson_System_String_System_Nullable_System_Guid__" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPerson(System.String,System.Nullable{System.Guid})">GetPerson(String, Nullable&lt;Guid&gt;)</h4>
@@ -683,7 +683,7 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{name}&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;BaseItemDto&gt; GetPerson([FromRoute] string name, [FromQuery] Guid? userId)</code></pre>
+public ActionResult&lt;BaseItemDto&gt; GetPerson([FromRoute, Required] string name, [FromQuery] Guid? userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -731,7 +731,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Guid__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L80">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L81">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController_GetPersons_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPersons*"></a>
   <h4 id="Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Guid__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Boolean_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Boolean)">GetPersons(Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, String, String, String, Nullable&lt;Boolean&gt;, String, String, String, String, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, String, String, String, String, Nullable&lt;Guid&gt;, String, String, String, Nullable&lt;Boolean&gt;, Boolean)</h4>
@@ -963,7 +963,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

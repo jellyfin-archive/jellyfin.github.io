@@ -688,7 +688,7 @@ public class PlaylistsController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{playlistId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddToPlaylist([FromRoute] Guid playlistId, [FromQuery] string ids, [FromQuery] Guid? userId)</code></pre>
+public Task&lt;ActionResult&gt; AddToPlaylist([FromRoute, Required] Guid playlistId, [FromQuery] string ids, [FromQuery] Guid? userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -804,7 +804,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{playlistId}/Items&quot;)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPlaylistItems([FromRoute] Guid playlistId, [FromRoute] Guid userId, [FromRoute] int? startIndex, [FromRoute] int? limit, [FromRoute] string fields, [FromRoute] bool? enableImages, [FromRoute] bool? enableUserData, [FromRoute] int? imageTypeLimit, [FromRoute] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPlaylistItems([FromRoute, Required] Guid playlistId, [FromQuery, Required] Guid userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -904,7 +904,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPlaylistItems([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{playlistId}/Items/{itemId}/Move/{newIndex}&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; MoveItem([FromRoute] string playlistId, [FromRoute] string itemId, [FromRoute] int newIndex)</code></pre>
+public Task&lt;ActionResult&gt; MoveItem([FromRoute, Required] string playlistId, [FromRoute, Required] string itemId, [FromRoute, Required] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -968,7 +968,7 @@ public Task&lt;ActionResult&gt; MoveItem([FromRoute] string playlistId, [FromRou
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{playlistId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; RemoveFromPlaylist([FromRoute] string playlistId, [FromQuery] string entryIds)</code></pre>
+public Task&lt;ActionResult&gt; RemoveFromPlaylist([FromRoute, Required] string playlistId, [FromQuery] string entryIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

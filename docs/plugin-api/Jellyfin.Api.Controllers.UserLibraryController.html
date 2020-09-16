@@ -624,7 +624,7 @@ public class UserLibraryController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserViewManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L49">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController__ctor_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserViewManager,MediaBrowser.Model.IO.IFileSystem)">UserLibraryController(IUserManager, IUserDataManager, ILibraryManager, IDtoService, IUserViewManager, IFileSystem)</h4>
@@ -690,7 +690,7 @@ public class UserLibraryController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_DeleteUserItemRating_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.DeleteUserItemRating(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L167">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L168">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_DeleteUserItemRating_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.DeleteUserItemRating*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_DeleteUserItemRating_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.DeleteUserItemRating(System.Guid,System.Guid)">DeleteUserItemRating(Guid, Guid)</h4>
@@ -701,7 +701,7 @@ public class UserLibraryController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Users/{userId}/Items/{itemId}/Rating&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;UserItemDataDto&gt; DeleteUserItemRating([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;UserItemDataDto&gt; DeleteUserItemRating([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -748,7 +748,7 @@ public ActionResult&lt;UserItemDataDto&gt; DeleteUserItemRating([FromRoute] Guid
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetIntros_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetIntros(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L111">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L112">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetIntros_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetIntros*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetIntros_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetIntros(System.Guid,System.Guid)">GetIntros(Guid, Guid)</h4>
@@ -759,7 +759,7 @@ public ActionResult&lt;UserItemDataDto&gt; DeleteUserItemRating([FromRoute] Guid
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/{itemId}/Intros&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetIntros([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetIntros([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -806,7 +806,7 @@ public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetIntros(
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetItem_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetItem(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L71">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L72">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetItem_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetItem*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetItem_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetItem(System.Guid,System.Guid)">GetItem(Guid, Guid)</h4>
@@ -817,7 +817,7 @@ public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetIntros(
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/{itemId}&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetItem([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetItem([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -864,7 +864,7 @@ public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetItem([FromRoute] Guid user
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetLatestMedia_System_Guid_System_Nullable_System_Guid__System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_Int32_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetLatestMedia(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Int32%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L264">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L265">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetLatestMedia_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetLatestMedia*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetLatestMedia_System_Guid_System_Nullable_System_Guid__System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_Int32_System_Boolean_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetLatestMedia(System.Guid,System.Nullable{System.Guid},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.Int32,System.Boolean)">GetLatestMedia(Guid, Nullable&lt;Guid&gt;, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, Int32, Boolean)</h4>
@@ -875,7 +875,7 @@ public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetItem([FromRoute] Guid user
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/Latest&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLatestMedia([FromRoute] Guid userId, [FromQuery] Guid? parentId, [FromQuery] string fields, [FromQuery] string includeItemTypes, [FromQuery] bool? isPlayed, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] int limit = 20, [FromQuery] bool groupItems = true)</code></pre>
+public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLatestMedia([FromRoute, Required] Guid userId, [FromQuery] Guid? parentId, [FromQuery] string fields, [FromQuery] string includeItemTypes, [FromQuery] bool? isPlayed, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] int limit = 20, [FromQuery] bool groupItems = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -976,7 +976,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLatestMedia([FromRo
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetLocalTrailers_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetLocalTrailers(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L196">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L197">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetLocalTrailers_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetLocalTrailers*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetLocalTrailers_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetLocalTrailers(System.Guid,System.Guid)">GetLocalTrailers(Guid, Guid)</h4>
@@ -987,7 +987,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLatestMedia([FromRo
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/{itemId}/LocalTrailers&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLocalTrailers([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLocalTrailers([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1034,7 +1034,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLocalTrailers([From
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetRootFolder_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetRootFolder(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L94">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L95">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetRootFolder_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetRootFolder*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetRootFolder_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetRootFolder(System.Guid)">GetRootFolder(Guid)</h4>
@@ -1045,7 +1045,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetLocalTrailers([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/Root&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;BaseItemDto&gt; GetRootFolder([FromRoute] Guid userId)</code></pre>
+public ActionResult&lt;BaseItemDto&gt; GetRootFolder([FromRoute, Required] Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1086,7 +1086,7 @@ public ActionResult&lt;BaseItemDto&gt; GetRootFolder([FromRoute] Guid userId)</c
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_GetSpecialFeatures_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.GetSpecialFeatures(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L231">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L232">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_GetSpecialFeatures_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetSpecialFeatures*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_GetSpecialFeatures_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.GetSpecialFeatures(System.Guid,System.Guid)">GetSpecialFeatures(Guid, Guid)</h4>
@@ -1097,7 +1097,7 @@ public ActionResult&lt;BaseItemDto&gt; GetRootFolder([FromRoute] Guid userId)</c
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Items/{itemId}/SpecialFeatures&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetSpecialFeatures([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetSpecialFeatures([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1144,7 +1144,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetSpecialFeatures([Fr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_MarkFavoriteItem_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.MarkFavoriteItem(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L140">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_MarkFavoriteItem_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.MarkFavoriteItem*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_MarkFavoriteItem_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.MarkFavoriteItem(System.Guid,System.Guid)">MarkFavoriteItem(Guid, Guid)</h4>
@@ -1155,7 +1155,7 @@ public ActionResult&lt;IEnumerable&lt;BaseItemDto&gt;&gt; GetSpecialFeatures([Fr
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/FavoriteItems/{itemId}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;UserItemDataDto&gt; MarkFavoriteItem([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;UserItemDataDto&gt; MarkFavoriteItem([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1202,7 +1202,7 @@ public ActionResult&lt;UserItemDataDto&gt; MarkFavoriteItem([FromRoute] Guid use
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_UnmarkFavoriteItem_System_Guid_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.UnmarkFavoriteItem(System.Guid%2CSystem.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L153">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L154">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_UnmarkFavoriteItem_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.UnmarkFavoriteItem*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_UnmarkFavoriteItem_System_Guid_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.UnmarkFavoriteItem(System.Guid,System.Guid)">UnmarkFavoriteItem(Guid, Guid)</h4>
@@ -1213,7 +1213,7 @@ public ActionResult&lt;UserItemDataDto&gt; MarkFavoriteItem([FromRoute] Guid use
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Users/{userId}/FavoriteItems/{itemId}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;UserItemDataDto&gt; UnmarkFavoriteItem([FromRoute] Guid userId, [FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;UserItemDataDto&gt; UnmarkFavoriteItem([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1260,7 +1260,7 @@ public ActionResult&lt;UserItemDataDto&gt; UnmarkFavoriteItem([FromRoute] Guid u
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController_UpdateUserItemRating_System_Guid_System_Guid_System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Guid%2CSystem.Guid%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L182">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L183">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserLibraryController_UpdateUserItemRating_" data-uid="Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserLibraryController_UpdateUserItemRating_System_Guid_System_Guid_System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.UserLibraryController.UpdateUserItemRating(System.Guid,System.Guid,System.Nullable{System.Boolean})">UpdateUserItemRating(Guid, Guid, Nullable&lt;Boolean&gt;)</h4>
@@ -1271,7 +1271,7 @@ public ActionResult&lt;UserItemDataDto&gt; UnmarkFavoriteItem([FromRoute] Guid u
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/Items/{itemId}/Rating&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;UserItemDataDto&gt; UpdateUserItemRating([FromRoute] Guid userId, [FromRoute] Guid itemId, [FromQuery] bool? likes)</code></pre>
+public ActionResult&lt;UserItemDataDto&gt; UpdateUserItemRating([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] bool? likes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1330,7 +1330,7 @@ public ActionResult&lt;UserItemDataDto&gt; UpdateUserItemRating([FromRoute] Guid
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserLibraryController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserLibraryController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserLibraryController.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

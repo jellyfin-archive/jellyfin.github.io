@@ -623,7 +623,7 @@ public class RemoteImageController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_IServerApplicationPaths_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController.%23ctor(MediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.IServerApplicationPaths%2CSystem.Net.Http.IHttpClientFactory%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L45">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_RemoteImageController__ctor_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_RemoteImageController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_IServerApplicationPaths_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.#ctor(MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.IServerApplicationPaths,System.Net.Http.IHttpClientFactory,MediaBrowser.Controller.Library.ILibraryManager)">RemoteImageController(IProviderManager, IServerApplicationPaths, IHttpClientFactory, ILibraryManager)</h4>
@@ -677,7 +677,7 @@ public class RemoteImageController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController_DownloadRemoteImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController.DownloadRemoteImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L206">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L209">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_RemoteImageController_DownloadRemoteImage_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.DownloadRemoteImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_RemoteImageController_DownloadRemoteImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_String_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.DownloadRemoteImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.String)">DownloadRemoteImage(Guid, ImageType, String)</h4>
@@ -690,7 +690,7 @@ public class RemoteImageController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; DownloadRemoteImage([FromRoute] Guid itemId, [FromQuery, Required] ImageType type, [FromQuery] string imageUrl)</code></pre>
+public Task&lt;ActionResult&gt; DownloadRemoteImage([FromRoute, Required] Guid itemId, [FromQuery, Required] ImageType type, [FromQuery] string imageUrl)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -743,7 +743,7 @@ public Task&lt;ActionResult&gt; DownloadRemoteImage([FromRoute] Guid itemId, [Fr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImage_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImage(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L153">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L155">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImage_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImage_System_String_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImage(System.String)">GetRemoteImage(String)</h4>
@@ -756,6 +756,7 @@ public Task&lt;ActionResult&gt; DownloadRemoteImage([FromRoute] Guid itemId, [Fr
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
+[ProducesImageFile]
 public Task&lt;ActionResult&gt; GetRemoteImage([FromQuery, Required] string imageUrl)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -797,7 +798,7 @@ public Task&lt;ActionResult&gt; GetRemoteImage([FromQuery, Required] string imag
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImageProviders_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImageProviders(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L131">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L133">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImageProviders_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImageProviders*"></a>
   <h4 id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImageProviders_System_Guid_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImageProviders(System.Guid)">GetRemoteImageProviders(Guid)</h4>
@@ -810,7 +811,7 @@ public Task&lt;ActionResult&gt; GetRemoteImage([FromQuery, Required] string imag
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;IEnumerable&lt;ImageProviderInfo&gt;&gt; GetRemoteImageProviders([FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;IEnumerable&lt;ImageProviderInfo&gt;&gt; GetRemoteImageProviders([FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -851,7 +852,7 @@ public ActionResult&lt;IEnumerable&lt;ImageProviderInfo&gt;&gt; GetRemoteImagePr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImages_System_Guid_System_Nullable_MediaBrowser_Model_Entities_ImageType__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImages(System.Guid%2CSystem.Nullable%7BMediaBrowser.Model.Entities.ImageType%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L69">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImages_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImages*"></a>
   <h4 id="Jellyfin_Api_Controllers_RemoteImageController_GetRemoteImages_System_Guid_System_Nullable_MediaBrowser_Model_Entities_ImageType__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.RemoteImageController.GetRemoteImages(System.Guid,System.Nullable{MediaBrowser.Model.Entities.ImageType},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Boolean)">GetRemoteImages(Guid, Nullable&lt;ImageType&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Boolean)</h4>
@@ -864,7 +865,7 @@ public ActionResult&lt;IEnumerable&lt;ImageProviderInfo&gt;&gt; GetRemoteImagePr
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&lt;RemoteImageResult&gt;&gt; GetRemoteImages([FromRoute] Guid itemId, [FromQuery] ImageType? type, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string providerName, [FromQuery] bool includeAllLanguages = false)</code></pre>
+public Task&lt;ActionResult&lt;RemoteImageResult&gt;&gt; GetRemoteImages([FromRoute, Required] Guid itemId, [FromQuery] ImageType? type, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string providerName, [FromQuery] bool includeAllLanguages = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -941,7 +942,7 @@ public Task&lt;ActionResult&lt;RemoteImageResult&gt;&gt; GetRemoteImages([FromRo
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_RemoteImageController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.RemoteImageController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/RemoteImageController.cs/#L30" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

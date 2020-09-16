@@ -624,7 +624,7 @@ public class ItemRefreshController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemRefreshController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemRefreshController.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L30">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L31">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemRefreshController__ctor_" data-uid="Jellyfin.Api.Controllers.ItemRefreshController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemRefreshController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="Jellyfin.Api.Controllers.ItemRefreshController.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem)">ItemRefreshController(ILibraryManager, IProviderManager, IFileSystem)</h4>
@@ -672,7 +672,7 @@ public class ItemRefreshController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemRefreshController_Post_System_Guid_MediaBrowser_Controller_Providers_MetadataRefreshMode_MediaBrowser_Controller_Providers_MetadataRefreshMode_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemRefreshController.Post(System.Guid%2CMediaBrowser.Controller.Providers.MetadataRefreshMode%2CMediaBrowser.Controller.Providers.MetadataRefreshMode%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L52">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemRefreshController_Post_" data-uid="Jellyfin.Api.Controllers.ItemRefreshController.Post*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemRefreshController_Post_System_Guid_MediaBrowser_Controller_Providers_MetadataRefreshMode_MediaBrowser_Controller_Providers_MetadataRefreshMode_System_Boolean_System_Boolean_" data-uid="Jellyfin.Api.Controllers.ItemRefreshController.Post(System.Guid,MediaBrowser.Controller.Providers.MetadataRefreshMode,MediaBrowser.Controller.Providers.MetadataRefreshMode,System.Boolean,System.Boolean)">Post(Guid, MetadataRefreshMode, MetadataRefreshMode, Boolean, Boolean)</h4>
@@ -684,7 +684,7 @@ public class ItemRefreshController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{itemId}/Refresh&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult Post([FromRoute] Guid itemId, [FromQuery] MetadataRefreshMode metadataRefreshMode = MetadataRefreshMode.None, [FromQuery] MetadataRefreshMode imageRefreshMode = MetadataRefreshMode.None, [FromQuery] bool replaceAllMetadata = false, [FromQuery] bool replaceAllImages = false)</code></pre>
+public ActionResult Post([FromRoute, Required] Guid itemId, [FromQuery] MetadataRefreshMode metadataRefreshMode = MetadataRefreshMode.None, [FromQuery] MetadataRefreshMode imageRefreshMode = MetadataRefreshMode.None, [FromQuery] bool replaceAllMetadata = false, [FromQuery] bool replaceAllImages = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -755,7 +755,7 @@ public ActionResult Post([FromRoute] Guid itemId, [FromQuery] MetadataRefreshMod
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemRefreshController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemRefreshController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemRefreshController.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

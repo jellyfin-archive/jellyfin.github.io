@@ -220,10 +220,66 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_AuthenticateQuickConnect_MediaBrowser_Controller_Session_AuthenticationRequest_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.AuthenticateQuickConnect(MediaBrowser.Controller.Session.AuthenticationRequest%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L275">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_Session_ISessionManager_AuthenticateQuickConnect_" data-uid="MediaBrowser.Controller.Session.ISessionManager.AuthenticateQuickConnect*"></a>
+  <h4 id="MediaBrowser_Controller_Session_ISessionManager_AuthenticateQuickConnect_MediaBrowser_Controller_Session_AuthenticationRequest_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.AuthenticateQuickConnect(MediaBrowser.Controller.Session.AuthenticationRequest,System.String)">AuthenticateQuickConnect(AuthenticationRequest, String)</h4>
+  <div class="markdown level1 summary"><p>Authenticates a new session with quick connect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task&lt;AuthenticationResult&gt; AuthenticateQuickConnect(AuthenticationRequest request, string token)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.AuthenticationRequest.html">AuthenticationRequest</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Quick connect access token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Authentication.AuthenticationResult.html">AuthenticationResult</a>&gt;</td>
+        <td><p>Task{SessionInfo}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_ClearTranscodingInfo_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.ClearTranscodingInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L294">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L302">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_ClearTranscodingInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ClearTranscodingInfo*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_ClearTranscodingInfo_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ClearTranscodingInfo(System.String)">ClearTranscodingInfo(String)</h4>
@@ -257,7 +313,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_CloseIfNeeded_MediaBrowser_Controller_Session_SessionInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.CloseIfNeeded(MediaBrowser.Controller.Session.SessionInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L345">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L353">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_CloseIfNeeded_" data-uid="MediaBrowser.Controller.Session.ISessionManager.CloseIfNeeded*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_CloseIfNeeded_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.CloseIfNeeded(MediaBrowser.Controller.Session.SessionInfo)">CloseIfNeeded(SessionInfo)</h4>
@@ -289,7 +345,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_CreateNewSession_MediaBrowser_Controller_Session_AuthenticationRequest_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.CreateNewSession(MediaBrowser.Controller.Session.AuthenticationRequest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L274">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L282">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_CreateNewSession_" data-uid="MediaBrowser.Controller.Session.ISessionManager.CreateNewSession*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_CreateNewSession_MediaBrowser_Controller_Session_AuthenticationRequest_" data-uid="MediaBrowser.Controller.Session.ISessionManager.CreateNewSession(MediaBrowser.Controller.Session.AuthenticationRequest)">CreateNewSession(AuthenticationRequest)</h4>
@@ -339,7 +395,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_GetSession_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.GetSession(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L303">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L311">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_GetSession_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSession*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_GetSession_System_String_System_String_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSession(System.String,System.String,System.String)">GetSession(String, String, String)</h4>
@@ -401,7 +457,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_MediaBrowser_Controller_Security_AuthenticationInfo_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken(MediaBrowser.Controller.Security.AuthenticationInfo%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L322">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L330">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_MediaBrowser_Controller_Security_AuthenticationInfo_System_String_System_String_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken(MediaBrowser.Controller.Security.AuthenticationInfo,System.String,System.String,System.String)">GetSessionByAuthenticationToken(AuthenticationInfo, String, String, String)</h4>
@@ -469,7 +525,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L312">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L320">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_GetSessionByAuthenticationToken_System_String_System_String_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.GetSessionByAuthenticationToken(System.String,System.String,System.String)">GetSessionByAuthenticationToken(String, String, String)</h4>
@@ -531,7 +587,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_Logout_MediaBrowser_Controller_Security_AuthenticationInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.Logout(MediaBrowser.Controller.Security.AuthenticationInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L330">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L338">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_Logout_" data-uid="MediaBrowser.Controller.Session.ISessionManager.Logout*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_Logout_MediaBrowser_Controller_Security_AuthenticationInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.Logout(MediaBrowser.Controller.Security.AuthenticationInfo)">Logout(AuthenticationInfo)</h4>
@@ -563,7 +619,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_Logout_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.Logout(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L329">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L337">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_Logout_" data-uid="MediaBrowser.Controller.Session.ISessionManager.Logout*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_Logout_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.Logout(System.String)">Logout(String)</h4>
@@ -948,7 +1004,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_ReportCapabilities_System_String_MediaBrowser_Model_Session_ClientCapabilities_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.ReportCapabilities(System.String%2CMediaBrowser.Model.Session.ClientCapabilities)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L281">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L289">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_ReportCapabilities_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportCapabilities*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_ReportCapabilities_System_String_MediaBrowser_Model_Session_ClientCapabilities_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportCapabilities(System.String,MediaBrowser.Model.Session.ClientCapabilities)">ReportCapabilities(String, ClientCapabilities)</h4>
@@ -1102,7 +1158,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_ReportTranscodingInfo_System_String_MediaBrowser_Model_Session_TranscodingInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.ReportTranscodingInfo(System.String%2CMediaBrowser.Model.Session.TranscodingInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L288">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L296">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_ReportTranscodingInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportTranscodingInfo*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_ReportTranscodingInfo_System_String_MediaBrowser_Model_Session_TranscodingInfo_" data-uid="MediaBrowser.Controller.Session.ISessionManager.ReportTranscodingInfo(System.String,MediaBrowser.Model.Session.TranscodingInfo)">ReportTranscodingInfo(String, TranscodingInfo)</h4>
@@ -1142,7 +1198,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_RevokeToken_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.RevokeToken(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L343">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L351">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_RevokeToken_" data-uid="MediaBrowser.Controller.Session.ISessionManager.RevokeToken*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_RevokeToken_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.RevokeToken(System.String)">RevokeToken(String)</h4>
@@ -1176,7 +1232,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionManager_RevokeUserTokens_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionManager.RevokeUserTokens(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L336">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionManager.cs/#L344">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionManager_RevokeUserTokens_" data-uid="MediaBrowser.Controller.Session.ISessionManager.RevokeUserTokens*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionManager_RevokeUserTokens_System_Guid_System_String_" data-uid="MediaBrowser.Controller.Session.ISessionManager.RevokeUserTokens(System.Guid,System.String)">RevokeUserTokens(Guid, String)</h4>

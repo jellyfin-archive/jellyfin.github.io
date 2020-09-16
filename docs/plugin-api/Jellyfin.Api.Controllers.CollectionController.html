@@ -683,7 +683,7 @@ public class CollectionController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{collectionId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddToCollection([FromRoute] Guid collectionId, [FromQuery, Required] string itemIds)</code></pre>
+public Task&lt;ActionResult&gt; AddToCollection([FromRoute, Required] Guid collectionId, [FromQuery, Required] string itemIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -811,7 +811,7 @@ public Task&lt;ActionResult&lt;CollectionCreationResult&gt;&gt; CreateCollection
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{collectionId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; RemoveFromCollection([FromRoute] Guid collectionId, [FromQuery, Required] string itemIds)</code></pre>
+public Task&lt;ActionResult&gt; RemoveFromCollection([FromRoute, Required] Guid collectionId, [FromQuery, Required] string itemIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

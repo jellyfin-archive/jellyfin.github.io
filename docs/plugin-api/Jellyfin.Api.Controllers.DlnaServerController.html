@@ -659,7 +659,7 @@ public class DlnaServerController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_GetConnectionManager_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.GetConnectionManager(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L98">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_GetConnectionManager_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetConnectionManager*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_GetConnectionManager_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetConnectionManager(System.String)">GetConnectionManager(String)</h4>
@@ -669,10 +669,12 @@ public class DlnaServerController : BaseJellyfinApiController</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ConnectionManager&quot;)]
-[HttpGet(&quot;{serverId}/ConnectionManager.xml&quot;, Name = &quot;GetConnectionManager_2&quot;)]
-[Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
+[HttpGet(&quot;{serverId}/ConnectionManager/ConnectionManager&quot;, Name = &quot;GetConnectionManager_2&quot;)]
+[HttpGet(&quot;{serverId}/ConnectionManager/ConnectionManager.xml&quot;, Name = &quot;GetConnectionManager_3&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetConnectionManager([FromRoute] string serverId)</code></pre>
+[Produces(&quot;text/xml&quot;, new string[]{})]
+[ProducesFile(new string[]{&quot;text/xml&quot;})]
+public ActionResult GetConnectionManager([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -713,7 +715,7 @@ public ActionResult GetConnectionManager([FromRoute] string serverId)</code></pr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_GetContentDirectory_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.GetContentDirectory(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L64">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_GetContentDirectory_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetContentDirectory*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_GetContentDirectory_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetContentDirectory(System.String)">GetContentDirectory(String)</h4>
@@ -723,10 +725,12 @@ public ActionResult GetConnectionManager([FromRoute] string serverId)</code></pr
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/ContentDirectory&quot;)]
-[HttpGet(&quot;{serverId}/ContentDirectory.xml&quot;, Name = &quot;GetContentDirectory_2&quot;)]
-[Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
+[HttpGet(&quot;{serverId}/ContentDirectory/ContentDirectory&quot;, Name = &quot;GetContentDirectory_2&quot;)]
+[HttpGet(&quot;{serverId}/ContentDirectory/ContentDirectory.xml&quot;, Name = &quot;GetContentDirectory_3&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetContentDirectory([FromRoute] string serverId)</code></pre>
+[Produces(&quot;text/xml&quot;, new string[]{})]
+[ProducesFile(new string[]{&quot;text/xml&quot;})]
+public ActionResult GetContentDirectory([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -778,9 +782,10 @@ public ActionResult GetContentDirectory([FromRoute] string serverId)</code></pre
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/description&quot;)]
 [HttpGet(&quot;{serverId}/description.xml&quot;, Name = &quot;GetDescriptionXml_2&quot;)]
-[Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
 [ProducesResponseType(200)]
-public ActionResult GetDescriptionXml([FromRoute] string serverId)</code></pre>
+[Produces(&quot;text/xml&quot;, new string[]{})]
+[ProducesFile(new string[]{&quot;text/xml&quot;})]
+public ActionResult GetDescriptionXml([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -821,7 +826,7 @@ public ActionResult GetDescriptionXml([FromRoute] string serverId)</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_GetIcon_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.GetIcon(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L196">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L205">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_GetIcon_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetIcon*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_GetIcon_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetIcon(System.String)">GetIcon(String)</h4>
@@ -831,7 +836,8 @@ public ActionResult GetDescriptionXml([FromRoute] string serverId)</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;icons/{fileName}&quot;)]
-public ActionResult GetIcon([FromRoute] string fileName)</code></pre>
+[ProducesImageFile]
+public ActionResult GetIcon([FromRoute, Required] string fileName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -872,7 +878,7 @@ public ActionResult GetIcon([FromRoute] string fileName)</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_GetIconId_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.GetIconId(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L184">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L191">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_GetIconId_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetIconId*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_GetIconId_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetIconId(System.String,System.String)">GetIconId(String, String)</h4>
@@ -882,7 +888,9 @@ public ActionResult GetIcon([FromRoute] string fileName)</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/icons/{fileName}&quot;)]
-public ActionResult GetIconId([FromRoute] string serverId, [FromRoute] string fileName)</code></pre>
+[ProducesResponseType(200)]
+[ProducesImageFile]
+public ActionResult GetIconId([FromRoute, Required] string serverId, [FromRoute, Required] string fileName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -929,7 +937,7 @@ public ActionResult GetIconId([FromRoute] string serverId, [FromRoute] string fi
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_GetMediaReceiverRegistrar_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.GetMediaReceiverRegistrar(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L81">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_GetMediaReceiverRegistrar_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetMediaReceiverRegistrar*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_GetMediaReceiverRegistrar_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.GetMediaReceiverRegistrar(System.String)">GetMediaReceiverRegistrar(String)</h4>
@@ -939,10 +947,12 @@ public ActionResult GetIconId([FromRoute] string serverId, [FromRoute] string fi
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{serverId}/MediaReceiverRegistrar&quot;)]
-[HttpGet(&quot;{serverId}/MediaReceiverRegistrar.xml&quot;, Name = &quot;GetMediaReceiverRegistrar_2&quot;)]
-[Produces(&quot;text/xml; charset=UTF-8&quot;, new string[]{})]
+[HttpGet(&quot;{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar&quot;, Name = &quot;GetMediaReceiverRegistrar_2&quot;)]
+[HttpGet(&quot;{serverId}/MediaReceiverRegistrar/MediaReceiverRegistrar.xml&quot;, Name = &quot;GetMediaReceiverRegistrar_3&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetMediaReceiverRegistrar([FromRoute] string serverId)</code></pre>
+[Produces(&quot;text/xml&quot;, new string[]{})]
+[ProducesFile(new string[]{&quot;text/xml&quot;})]
+public ActionResult GetMediaReceiverRegistrar([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -983,7 +993,7 @@ public ActionResult GetMediaReceiverRegistrar([FromRoute] string serverId)</code
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerControlRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerControlRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L119">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L126">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerControlRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerControlRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerControlRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerControlRequest(System.String)">ProcessConnectionManagerControlRequest(String)</h4>
@@ -993,7 +1003,7 @@ public ActionResult GetMediaReceiverRegistrar([FromRoute] string serverId)</code
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{serverId}/ConnectionManager/Control&quot;)]
-public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessConnectionManagerControlRequest([FromRoute] string serverId)</code></pre>
+public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessConnectionManagerControlRequest([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1034,7 +1044,7 @@ public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessConnectionManagerC
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerEventRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerEventRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L169">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L176">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerEventRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerEventRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessConnectionManagerEventRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessConnectionManagerEventRequest(System.String)">ProcessConnectionManagerEventRequest(String)</h4>
@@ -1087,7 +1097,7 @@ public ActionResult&lt;EventSubscriptionResponse&gt; ProcessConnectionManagerEve
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryControlRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryControlRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L108">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L115">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryControlRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryControlRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryControlRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryControlRequest(System.String)">ProcessContentDirectoryControlRequest(String)</h4>
@@ -1097,7 +1107,7 @@ public ActionResult&lt;EventSubscriptionResponse&gt; ProcessConnectionManagerEve
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{serverId}/ContentDirectory/Control&quot;)]
-public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessContentDirectoryControlRequest([FromRoute] string serverId)</code></pre>
+public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessContentDirectoryControlRequest([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1138,7 +1148,7 @@ public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessContentDirectoryCo
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryEventRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryEventRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L155">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L162">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryEventRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryEventRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessContentDirectoryEventRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessContentDirectoryEventRequest(System.String)">ProcessContentDirectoryEventRequest(String)</h4>
@@ -1191,7 +1201,7 @@ public ActionResult&lt;EventSubscriptionResponse&gt; ProcessContentDirectoryEven
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarControlRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarControlRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L137">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarControlRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarControlRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarControlRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarControlRequest(System.String)">ProcessMediaReceiverRegistrarControlRequest(String)</h4>
@@ -1201,7 +1211,7 @@ public ActionResult&lt;EventSubscriptionResponse&gt; ProcessContentDirectoryEven
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{serverId}/MediaReceiverRegistrar/Control&quot;)]
-public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessMediaReceiverRegistrarControlRequest([FromRoute] string serverId)</code></pre>
+public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessMediaReceiverRegistrarControlRequest([FromRoute, Required] string serverId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1242,7 +1252,7 @@ public Task&lt;ActionResult&lt;ControlResponse&gt;&gt; ProcessMediaReceiverRegis
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarEventRequest_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarEventRequest(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L141">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L148">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarEventRequest_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarEventRequest*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaServerController_ProcessMediaReceiverRegistrarEventRequest_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaServerController.ProcessMediaReceiverRegistrarEventRequest(System.String)">ProcessMediaReceiverRegistrarEventRequest(String)</h4>
@@ -1301,7 +1311,7 @@ public ActionResult&lt;EventSubscriptionResponse&gt; ProcessMediaReceiverRegistr
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaServerController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaServerController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L17" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaServerController.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

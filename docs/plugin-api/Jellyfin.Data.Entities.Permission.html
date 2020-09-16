@@ -93,7 +93,7 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a></div>
+    <div><a class="xref" href="Jellyfin.Data.Interfaces.IHasConcurrencyToken.html">IHasConcurrencyToken</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -123,7 +123,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Data.dll</h6>
   <h5 id="Jellyfin_Data_Entities_Permission_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Permission : ISavingChanges</code></pre>
+    <pre><code class="lang-csharp hljs">public class Permission : IHasConcurrencyToken</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -132,7 +132,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L29">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission__ctor_" data-uid="Jellyfin.Data.Entities.Permission.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission__ctor" data-uid="Jellyfin.Data.Entities.Permission.#ctor">Permission()</h4>
@@ -149,7 +149,7 @@ Default constructor. Protected due to required properties, but present because E
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission__ctor_Jellyfin_Data_Enums_PermissionKind_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.%23ctor(Jellyfin.Data.Enums.PermissionKind%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L19">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission__ctor_" data-uid="Jellyfin.Data.Entities.Permission.#ctor*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission__ctor_Jellyfin_Data_Enums_PermissionKind_System_Boolean_" data-uid="Jellyfin.Data.Entities.Permission.#ctor(Jellyfin.Data.Enums.PermissionKind,System.Boolean)">Permission(PermissionKind, Boolean)</h4>
@@ -192,7 +192,7 @@ Public constructor with required data.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L39">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission_Id_" data-uid="Jellyfin.Data.Entities.Permission.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission_Id" data-uid="Jellyfin.Data.Entities.Permission.Id">Id</h4>
@@ -201,9 +201,7 @@ Public constructor with required data.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Key]
-[Required]
-[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+    <pre><code class="lang-csharp hljs">[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 public int Id { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -229,7 +227,7 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_Kind.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.Kind%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission_Kind_" data-uid="Jellyfin.Data.Entities.Permission.Kind*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission_Kind" data-uid="Jellyfin.Data.Entities.Permission.Kind">Kind</h4>
@@ -238,8 +236,7 @@ public int Id { get; protected set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public PermissionKind Kind { get; protected set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PermissionKind Kind { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,17 +261,16 @@ public PermissionKind Kind { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L76">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L59">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission_RowVersion_" data-uid="Jellyfin.Data.Entities.Permission.RowVersion*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission_RowVersion" data-uid="Jellyfin.Data.Entities.Permission.RowVersion">RowVersion</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the row version.</p>
+  <div class="markdown level1 summary"><p>Gets the version of this row. Acts as a concurrency token.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[ConcurrencyCheck]
-[Required]
 public uint RowVersion { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
@@ -292,15 +288,12 @@ public uint RowVersion { get; set; }</code></pre>
       </tr>
     </tbody>
   </table>
-  <h5 id="Jellyfin_Data_Entities_Permission_RowVersion_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Required, ConcurrencyToken.</p>
-</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_Value.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L56">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission_Value_" data-uid="Jellyfin.Data.Entities.Permission.Value*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission_Value" data-uid="Jellyfin.Data.Entities.Permission.Value">Value</h4>
@@ -309,8 +302,7 @@ public uint RowVersion { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public bool Value { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -334,70 +326,15 @@ public bool Value { get; set; }</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_Create_Jellyfin_Data_Enums_PermissionKind_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.Create(Jellyfin.Data.Enums.PermissionKind%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L86">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_Permission_Create_" data-uid="Jellyfin.Data.Entities.Permission.Create*"></a>
-  <h4 id="Jellyfin_Data_Entities_Permission_Create_Jellyfin_Data_Enums_PermissionKind_System_Boolean_" data-uid="Jellyfin.Data.Entities.Permission.Create(Jellyfin.Data.Enums.PermissionKind,System.Boolean)">Create(PermissionKind, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Static create function (for use in LINQ queries, etc.)</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static Permission Create(PermissionKind kind, bool value)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Enums.PermissionKind.html">PermissionKind</a></td>
-        <td><span class="parametername">kind</span></td>
-        <td><p>The permission kind.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">value</span></td>
-        <td><p>The value of this permission.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Permission.html">Permission</a></td>
-        <td><p>The newly created instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L92">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Permission_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.Permission.OnSavingChanges*"></a>
   <h4 id="Jellyfin_Data_Entities_Permission_OnSavingChanges" data-uid="Jellyfin.Data.Entities.Permission.OnSavingChanges">OnSavingChanges()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Called when saving changes to this entity.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -405,7 +342,7 @@ public bool Value { get; set; }</code></pre>
   </div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="Jellyfin.Data.ISavingChanges.html">ISavingChanges</a>
+      <a class="xref" href="Jellyfin.Data.Interfaces.IHasConcurrencyToken.html">IHasConcurrencyToken</a>
   </div>
 </article>
           </div>
@@ -418,7 +355,7 @@ public bool Value { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Permission.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Permission%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Permission.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

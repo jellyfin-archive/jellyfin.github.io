@@ -623,7 +623,7 @@ public class UserViewsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserViewsController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserViewsController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserViewManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L42">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserViewsController__ctor_" data-uid="Jellyfin.Api.Controllers.UserViewsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserViewsController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserViewManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Jellyfin.Api.Controllers.UserViewsController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserViewManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Library.ILibraryManager)">UserViewsController(IUserManager, IUserViewManager, IDtoService, IAuthorizationContext, ILibraryManager)</h4>
@@ -683,7 +683,7 @@ public class UserViewsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserViewsController_GetGroupingOptions_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserViewsController.GetGroupingOptions(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L126">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L127">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserViewsController_GetGroupingOptions_" data-uid="Jellyfin.Api.Controllers.UserViewsController.GetGroupingOptions*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserViewsController_GetGroupingOptions_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserViewsController.GetGroupingOptions(System.Guid)">GetGroupingOptions(Guid)</h4>
@@ -695,7 +695,7 @@ public class UserViewsController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/GroupingOptions&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;IEnumerable&lt;SpecialViewOptionDto&gt;&gt; GetGroupingOptions([FromRoute] Guid userId)</code></pre>
+public ActionResult&lt;IEnumerable&lt;SpecialViewOptionDto&gt;&gt; GetGroupingOptions([FromRoute, Required] Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -737,7 +737,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserViewsController_GetUserViews_System_Guid_System_Nullable_System_Boolean__System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserViewsController.GetUserViews(System.Guid%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L64">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L65">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserViewsController_GetUserViews_" data-uid="Jellyfin.Api.Controllers.UserViewsController.GetUserViews*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserViewsController_GetUserViews_System_Guid_System_Nullable_System_Boolean__System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.UserViewsController.GetUserViews(System.Guid,System.Nullable{System.Boolean},System.String,System.Boolean)">GetUserViews(Guid, Nullable&lt;Boolean&gt;, String, Boolean)</h4>
@@ -748,7 +748,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Views&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUserViews([FromRoute] Guid userId, [FromQuery] bool? includeExternalContent, [FromQuery] string presetViews, [FromQuery] bool includeHidden = false)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUserViews([FromRoute, Required] Guid userId, [FromQuery] bool? includeExternalContent, [FromQuery] string presetViews, [FromQuery] bool includeHidden = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -813,7 +813,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUserViews([FromRout
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserViewsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserViewsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserViewsController.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

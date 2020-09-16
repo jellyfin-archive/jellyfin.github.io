@@ -623,7 +623,7 @@ public class ChannelsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.%23ctor(MediaBrowser.Controller.Channels.IChannelManager%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L37">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController__ctor_" data-uid="Jellyfin.Api.Controllers.ChannelsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController__ctor_MediaBrowser_Controller_Channels_IChannelManager_MediaBrowser_Controller_Library_IUserManager_" data-uid="Jellyfin.Api.Controllers.ChannelsController.#ctor(MediaBrowser.Controller.Channels.IChannelManager,MediaBrowser.Controller.Library.IUserManager)">ChannelsController(IChannelManager, IUserManager)</h4>
@@ -665,7 +665,7 @@ public class ChannelsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetAllChannelFeatures.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetAllChannelFeatures%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L79">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L80">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetAllChannelFeatures_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetAllChannelFeatures*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetAllChannelFeatures" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetAllChannelFeatures">GetAllChannelFeatures()</h4>
@@ -699,7 +699,7 @@ public ActionResult&lt;IEnumerable&lt;ChannelFeatures&gt;&gt; GetAllChannelFeatu
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetChannelFeatures_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetChannelFeatures(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L92">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L93">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetChannelFeatures_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelFeatures*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetChannelFeatures_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelFeatures(System.String)">GetChannelFeatures(String)</h4>
@@ -709,7 +709,7 @@ public ActionResult&lt;IEnumerable&lt;ChannelFeatures&gt;&gt; GetAllChannelFeatu
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{channelId}/Features&quot;)]
-public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute] string channelId)</code></pre>
+public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute, Required] string channelId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -750,7 +750,7 @@ public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute] string
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L115">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L116">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelItems*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String)">GetChannelItems(Guid, Nullable&lt;Guid&gt;, Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, String)</h4>
@@ -760,7 +760,7 @@ public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute] string
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{channelId}/Items&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string sortOrder, [FromQuery] string filters, [FromQuery] string sortBy, [FromQuery] string fields)</code></pre>
+public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute, Required] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string sortOrder, [FromQuery] string filters, [FromQuery] string sortBy, [FromQuery] string fields)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -850,7 +850,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetChannels_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetChannels(System.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L54">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetChannels_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannels*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetChannels_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannels(System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">GetChannels(Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -932,7 +932,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetChannels([FromQuery
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L193">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L194">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems*"></a>
   <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String)">GetLatestChannelItems(Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String)</h4>
@@ -1020,7 +1020,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

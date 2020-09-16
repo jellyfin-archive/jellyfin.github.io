@@ -623,7 +623,7 @@ public class DlnaController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.%23ctor(MediaBrowser.Controller.Dlna.IDlnaManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L24">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController__ctor_" data-uid="Jellyfin.Api.Controllers.DlnaController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController__ctor_MediaBrowser_Controller_Dlna_IDlnaManager_" data-uid="Jellyfin.Api.Controllers.DlnaController.#ctor(MediaBrowser.Controller.Dlna.IDlnaManager)">DlnaController(IDlnaManager)</h4>
@@ -659,7 +659,7 @@ public class DlnaController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_CreateProfile_MediaBrowser_Model_Dlna_DeviceProfile_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.CreateProfile(MediaBrowser.Model.Dlna.DeviceProfile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L102">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_CreateProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.CreateProfile*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_CreateProfile_MediaBrowser_Model_Dlna_DeviceProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.CreateProfile(MediaBrowser.Model.Dlna.DeviceProfile)">CreateProfile(DeviceProfile)</h4>
@@ -711,7 +711,7 @@ public ActionResult CreateProfile([FromBody] DeviceProfile deviceProfile)</code>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_DeleteProfile_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.DeleteProfile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L80">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L81">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_DeleteProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.DeleteProfile*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_DeleteProfile_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaController.DeleteProfile(System.String)">DeleteProfile(String)</h4>
@@ -723,7 +723,7 @@ public ActionResult CreateProfile([FromBody] DeviceProfile deviceProfile)</code>
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Profiles/{profileId}&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult DeleteProfile([FromRoute] string profileId)</code></pre>
+public ActionResult DeleteProfile([FromRoute, Required] string profileId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -764,7 +764,7 @@ public ActionResult DeleteProfile([FromRoute] string profileId)</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_GetDefaultProfile.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.GetDefaultProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L45">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L46">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_GetDefaultProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.GetDefaultProfile*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_GetDefaultProfile" data-uid="Jellyfin.Api.Controllers.DlnaController.GetDefaultProfile">GetDefaultProfile()</h4>
@@ -798,7 +798,7 @@ public ActionResult&lt;DeviceProfile&gt; GetDefaultProfile()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_GetProfile_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.GetProfile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L60">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_GetProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.GetProfile*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_GetProfile_System_String_" data-uid="Jellyfin.Api.Controllers.DlnaController.GetProfile(System.String)">GetProfile(String)</h4>
@@ -810,7 +810,7 @@ public ActionResult&lt;DeviceProfile&gt; GetDefaultProfile()</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Profiles/{profileId}&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;DeviceProfile&gt; GetProfile([FromRoute] string profileId)</code></pre>
+public ActionResult&lt;DeviceProfile&gt; GetProfile([FromRoute, Required] string profileId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -851,7 +851,7 @@ public ActionResult&lt;DeviceProfile&gt; GetProfile([FromRoute] string profileId
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_GetProfileInfos.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.GetProfileInfos%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L34">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_GetProfileInfos_" data-uid="Jellyfin.Api.Controllers.DlnaController.GetProfileInfos*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_GetProfileInfos" data-uid="Jellyfin.Api.Controllers.DlnaController.GetProfileInfos">GetProfileInfos()</h4>
@@ -885,7 +885,7 @@ public ActionResult&lt;IEnumerable&lt;DeviceProfileInfo&gt;&gt; GetProfileInfos(
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController_UpdateProfile_System_String_MediaBrowser_Model_Dlna_DeviceProfile_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController.UpdateProfile(System.String%2CMediaBrowser.Model.Dlna.DeviceProfile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L118">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DlnaController_UpdateProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.UpdateProfile*"></a>
   <h4 id="Jellyfin_Api_Controllers_DlnaController_UpdateProfile_System_String_MediaBrowser_Model_Dlna_DeviceProfile_" data-uid="Jellyfin.Api.Controllers.DlnaController.UpdateProfile(System.String,MediaBrowser.Model.Dlna.DeviceProfile)">UpdateProfile(String, DeviceProfile)</h4>
@@ -897,7 +897,7 @@ public ActionResult&lt;IEnumerable&lt;DeviceProfileInfo&gt;&gt; GetProfileInfos(
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Profiles/{profileId}&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult UpdateProfile([FromRoute] string profileId, [FromBody] DeviceProfile deviceProfile)</code></pre>
+public ActionResult UpdateProfile([FromRoute, Required] string profileId, [FromBody] DeviceProfile deviceProfile)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -950,7 +950,7 @@ public ActionResult UpdateProfile([FromRoute] string profileId, [FromBody] Devic
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DlnaController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DlnaController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DlnaController.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -670,7 +670,7 @@ public class DisplayPreferencesController : BaseJellyfinApiController</code></pr
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{displayPreferencesId}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;DisplayPreferencesDto&gt; GetDisplayPreferences([FromRoute] string displayPreferencesId, [FromQuery, Required] Guid userId, [FromQuery, Required] string client)</code></pre>
+public ActionResult&lt;DisplayPreferencesDto&gt; GetDisplayPreferences([FromRoute, Required] string displayPreferencesId, [FromQuery, Required] Guid userId, [FromQuery, Required] string client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -734,7 +734,7 @@ public ActionResult&lt;DisplayPreferencesDto&gt; GetDisplayPreferences([FromRout
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{displayPreferencesId}&quot;)]
 [ProducesResponseType(204)]
-public ActionResult UpdateDisplayPreferences([FromRoute] string displayPreferencesId, [FromQuery, Required] Guid userId, [FromQuery, Required] string client, [FromBody, Required] DisplayPreferencesDto displayPreferences)</code></pre>
+public ActionResult UpdateDisplayPreferences([FromRoute, Required] string displayPreferencesId, [FromQuery, Required] Guid userId, [FromQuery, Required] string client, [FromBody, Required] DisplayPreferencesDto displayPreferences)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

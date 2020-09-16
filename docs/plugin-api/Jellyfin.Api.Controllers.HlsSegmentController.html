@@ -623,7 +623,7 @@ public class HlsSegmentController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController__ctor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Jellyfin_Api_Helpers_TranscodingJobHelper_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController.%23ctor(MediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CJellyfin.Api.Helpers.TranscodingJobHelper)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L37">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_HlsSegmentController__ctor_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_HlsSegmentController__ctor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Jellyfin_Api_Helpers_TranscodingJobHelper_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.#ctor(MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Configuration.IServerConfigurationManager,Jellyfin.Api.Helpers.TranscodingJobHelper)">HlsSegmentController(IFileSystem, IServerConfigurationManager, TranscodingJobHelper)</h4>
@@ -671,7 +671,7 @@ public class HlsSegmentController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController_GetHlsAudioSegmentLegacy_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController.GetHlsAudioSegmentLegacy(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L56">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsAudioSegmentLegacy_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsAudioSegmentLegacy*"></a>
   <h4 id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsAudioSegmentLegacy_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsAudioSegmentLegacy(System.String,System.String)">GetHlsAudioSegmentLegacy(String, String)</h4>
@@ -683,7 +683,8 @@ public class HlsSegmentController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Audio/{itemId}/hls/{segmentId}/stream.mp3&quot;, Name = &quot;GetHlsAudioSegmentLegacyMp3&quot;)]
 [HttpGet(&quot;Audio/{itemId}/hls/{segmentId}/stream.aac&quot;, Name = &quot;GetHlsAudioSegmentLegacyAac&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetHlsAudioSegmentLegacy([FromRoute] string itemId, [FromRoute] string segmentId)</code></pre>
+[ProducesAudioFile]
+public ActionResult GetHlsAudioSegmentLegacy([FromRoute, Required] string itemId, [FromRoute, Required] string segmentId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -730,7 +731,7 @@ public ActionResult GetHlsAudioSegmentLegacy([FromRoute] string itemId, [FromRou
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController_GetHlsPlaylistLegacy_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController.GetHlsPlaylistLegacy(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L77">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsPlaylistLegacy_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsPlaylistLegacy*"></a>
   <h4 id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsPlaylistLegacy_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsPlaylistLegacy(System.String,System.String)">GetHlsPlaylistLegacy(String, String)</h4>
@@ -742,7 +743,8 @@ public ActionResult GetHlsAudioSegmentLegacy([FromRoute] string itemId, [FromRou
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{itemId}/hls/{playlistId}/stream.m3u8&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetHlsPlaylistLegacy([FromRoute] string itemId, [FromRoute] string playlistId)</code></pre>
+[ProducesPlaylistFile]
+public ActionResult GetHlsPlaylistLegacy([FromRoute, Required] string itemId, [FromRoute, Required] string playlistId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -789,7 +791,7 @@ public ActionResult GetHlsPlaylistLegacy([FromRoute] string itemId, [FromRoute] 
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController_GetHlsVideoSegmentLegacy_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController.GetHlsVideoSegmentLegacy(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L117">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsVideoSegmentLegacy_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsVideoSegmentLegacy*"></a>
   <h4 id="Jellyfin_Api_Controllers_HlsSegmentController_GetHlsVideoSegmentLegacy_System_String_System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.GetHlsVideoSegmentLegacy(System.String,System.String,System.String,System.String)">GetHlsVideoSegmentLegacy(String, String, String, String)</h4>
@@ -800,7 +802,8 @@ public ActionResult GetHlsPlaylistLegacy([FromRoute] string itemId, [FromRoute] 
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{itemId}/hls/{playlistId}/{segmentId}.{segmentContainer}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult GetHlsVideoSegmentLegacy([FromRoute] string itemId, [FromRoute] string playlistId, [FromRoute] string segmentId, [FromRoute] string segmentContainer)</code></pre>
+[ProducesVideoFile]
+public ActionResult GetHlsVideoSegmentLegacy([FromRoute, Required] string itemId, [FromRoute, Required] string playlistId, [FromRoute, Required] string segmentId, [FromRoute, Required] string segmentContainer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -859,7 +862,7 @@ public ActionResult GetHlsVideoSegmentLegacy([FromRoute] string itemId, [FromRou
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController_StopEncodingProcess_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController.StopEncodingProcess(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L97">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_HlsSegmentController_StopEncodingProcess_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.StopEncodingProcess*"></a>
   <h4 id="Jellyfin_Api_Controllers_HlsSegmentController_StopEncodingProcess_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.HlsSegmentController.StopEncodingProcess(System.String,System.String)">StopEncodingProcess(String, String)</h4>
@@ -924,7 +927,7 @@ public ActionResult StopEncodingProcess([FromQuery] string deviceId, [FromQuery]
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_HlsSegmentController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.HlsSegmentController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/HlsSegmentController.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

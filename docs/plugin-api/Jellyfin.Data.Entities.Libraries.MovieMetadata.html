@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MovieMetadata
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MovieMetadata
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata">
+  
+  
+  <h1 id="Jellyfin_Data_Entities_Libraries_MovieMetadata" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata" class="text-break">Class MovieMetadata
+  </h1>
+  <div class="markdown level0 summary"><p>An entity holding the metadata for a movie.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html">ItemMetadata</a></div>
+    <div class="level2"><span class="xref">MovieMetadata</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Jellyfin.Data.Interfaces.IHasArtwork.html">IHasArtwork</a></div>
+    <div><a class="xref" href="Jellyfin.Data.Interfaces.IHasConcurrencyToken.html">IHasConcurrencyToken</a></div>
+    <div><a class="xref" href="Jellyfin.Data.Interfaces.IHasCompanies.html">IHasCompanies</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Id">ItemMetadata.Id</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Title">ItemMetadata.Title</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_OriginalTitle">ItemMetadata.OriginalTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_SortTitle">ItemMetadata.SortTitle</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Language">ItemMetadata.Language</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_ReleaseDate">ItemMetadata.ReleaseDate</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_DateAdded">ItemMetadata.DateAdded</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_DateModified">ItemMetadata.DateModified</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_RowVersion">ItemMetadata.RowVersion</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_PersonRoles">ItemMetadata.PersonRoles</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Genres">ItemMetadata.Genres</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Artwork">ItemMetadata.Artwork</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Ratings">ItemMetadata.Ratings</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_Sources">ItemMetadata.Sources</a>
+    </div>
+    <div>
+      <a class="xref" href="Jellyfin.Data.Entities.Libraries.ItemMetadata.html#Jellyfin_Data_Entities_Libraries_ItemMetadata_OnSavingChanges">ItemMetadata.OnSavingChanges()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Data.Entities.Libraries.html">Jellyfin.Data.Entities.Libraries</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Data.dll</h6>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MovieMetadata : ItemMetadata, IHasArtwork, IHasConcurrencyToken, IHasCompanies</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L34">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.#ctor*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.#ctor">MovieMetadata()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.MovieMetadata.html">MovieMetadata</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected MovieMetadata()</code></pre>
+  </div>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor_System_String_System_String_Jellyfin_Data_Entities_Libraries_Movie_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.%23ctor(System.String%2CSystem.String%2CJellyfin.Data.Entities.Libraries.Movie)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L21">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.#ctor*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata__ctor_System_String_System_String_Jellyfin_Data_Entities_Libraries_Movie_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.#ctor(System.String,System.String,Jellyfin.Data.Entities.Libraries.Movie)">MovieMetadata(String, String, Movie)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.MovieMetadata.html">MovieMetadata</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MovieMetadata(string title, string language, Movie movie)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">title</span></td>
+        <td><p>The title or name of the movie.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">language</span></td>
+        <td><p>ISO-639-3 3-character language codes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Data.Entities.Libraries.Movie.html">Movie</a></td>
+        <td><span class="parametername">movie</span></td>
+        <td><p>The movie.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Companies.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Companies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L84">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Companies_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Companies*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Companies" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Companies">Companies</h4>
+  <div class="markdown level1 summary"><p>Gets a collection containing this entity&apos;s companies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[NotMapped]
+public ICollection&lt;Company&gt; Companies { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Jellyfin.Data.Entities.Libraries.Company.html">Company</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Country.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Country%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L74">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Country_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Country*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Country" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Country">Country</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the country code.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MaxLength(2)]
+[StringLength(2)]
+public string Country { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Country_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 2.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Outline.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Outline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L44">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Outline_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Outline*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Outline" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Outline">Outline</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the outline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MaxLength(1024)]
+[StringLength(1024)]
+public string Outline { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Outline_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 1024.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Plot.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Plot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L64">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Plot_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Plot*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Plot" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Plot">Plot</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the plot.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MaxLength(65535)]
+[StringLength(65535)]
+public string Plot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Plot_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 65535.</p>
+</div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Studios.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Studios%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L81">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Studios_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Studios*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Studios" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Studios">Studios</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the studios that produced this movie.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ICollection&lt;Company&gt; Studios { get; protected set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.icollection-1">ICollection</a>&lt;<a class="xref" href="Jellyfin.Data.Entities.Libraries.Company.html">Company</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata_Tagline.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata.Tagline%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L54">View Source</a>
+  </span>
+  <a id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Tagline_" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Tagline*"></a>
+  <h4 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Tagline" data-uid="Jellyfin.Data.Entities.Libraries.MovieMetadata.Tagline">Tagline</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the tagline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[MaxLength(1024)]
+[StringLength(1024)]
+public string Tagline { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Jellyfin_Data_Entities_Libraries_MovieMetadata_Tagline_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Max length = 1024.</p>
+</div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Data.Interfaces.IHasArtwork.html">IHasArtwork</a>
+  </div>
+  <div>
+      <a class="xref" href="Jellyfin.Data.Interfaces.IHasConcurrencyToken.html">IHasConcurrencyToken</a>
+  </div>
+  <div>
+      <a class="xref" href="Jellyfin.Data.Interfaces.IHasCompanies.html">IHasCompanies</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_MovieMetadata.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.MovieMetadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/MovieMetadata.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -173,19 +173,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_FFProbeAudioInfo_Fetch_MediaBrowser_Controller_Entities_Audio_Audio_System_Threading_CancellationToken_MediaBrowser_Model_MediaInfo_MediaInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.FFProbeAudioInfo.Fetch(MediaBrowser.Controller.Entities.Audio.Audio%2CSystem.Threading.CancellationToken%2CMediaBrowser.Model.MediaInfo.MediaInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_FFProbeAudioInfo_Fetch_MediaBrowser_Controller_Entities_Audio_Audio_MediaBrowser_Model_MediaInfo_MediaInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.FFProbeAudioInfo.Fetch(MediaBrowser.Controller.Entities.Audio.Audio%2CMediaBrowser.Model.MediaInfo.MediaInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/FFProbeAudioInfo.cs/#L80">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/FFProbeAudioInfo.cs/#L83">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_FFProbeAudioInfo_Fetch_" data-uid="MediaBrowser.Providers.MediaInfo.FFProbeAudioInfo.Fetch*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_FFProbeAudioInfo_Fetch_MediaBrowser_Controller_Entities_Audio_Audio_System_Threading_CancellationToken_MediaBrowser_Model_MediaInfo_MediaInfo_" data-uid="MediaBrowser.Providers.MediaInfo.FFProbeAudioInfo.Fetch(MediaBrowser.Controller.Entities.Audio.Audio,System.Threading.CancellationToken,MediaBrowser.Model.MediaInfo.MediaInfo)">Fetch(Audio, CancellationToken, MediaInfo)</h4>
+  <h4 id="MediaBrowser_Providers_MediaInfo_FFProbeAudioInfo_Fetch_MediaBrowser_Controller_Entities_Audio_Audio_MediaBrowser_Model_MediaInfo_MediaInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.MediaInfo.FFProbeAudioInfo.Fetch(MediaBrowser.Controller.Entities.Audio.Audio,MediaBrowser.Model.MediaInfo.MediaInfo,System.Threading.CancellationToken)">Fetch(Audio, MediaInfo, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Fetches the specified audio.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected void Fetch(Audio audio, CancellationToken cancellationToken, MediaInfo mediaInfo)</code></pre>
+    <pre><code class="lang-csharp hljs">protected void Fetch(Audio audio, MediaInfo mediaInfo, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -204,15 +204,15 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Model.MediaInfo.MediaInfo.html">MediaInfo</a></td>
         <td><span class="parametername">mediaInfo</span></td>
         <td><p>The media information.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
 </td>
       </tr>
     </tbody>

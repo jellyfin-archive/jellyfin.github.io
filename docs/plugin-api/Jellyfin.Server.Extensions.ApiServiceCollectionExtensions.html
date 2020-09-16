@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddCustomAuthentication_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddCustomAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L127">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L130">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddCustomAuthentication_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddCustomAuthentication*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddCustomAuthentication_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddCustomAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddCustomAuthentication(IServiceCollection)</h4>
@@ -175,19 +175,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApi_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApi(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApi_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Collections_Generic_IReadOnlyList_System_String__.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApi(Microsoft.Extensions.DependencyInjection.IServiceCollection%2CSystem.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%2CSystem.Collections.Generic.IReadOnlyList%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L143">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApi_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApi*"></a>
-  <h4 id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApi_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_String_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.String)">AddJellyfinApi(IServiceCollection, String)</h4>
+  <h4 id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApi_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Collections_Generic_IEnumerable_System_Reflection_Assembly__System_Collections_Generic_IReadOnlyList_System_String__" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApi(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Collections.Generic.IEnumerable{System.Reflection.Assembly},System.Collections.Generic.IReadOnlyList{System.String})">AddJellyfinApi(IServiceCollection, IEnumerable&lt;Assembly&gt;, IReadOnlyList&lt;String&gt;)</h4>
   <div class="markdown level1 summary"><p>Extension method for adding the jellyfin API to the service collection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IMvcBuilder AddJellyfinApi(this IServiceCollection serviceCollection, string baseUrl)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IMvcBuilder AddJellyfinApi(this IServiceCollection serviceCollection, IEnumerable&lt;Assembly&gt; pluginAssemblies, IReadOnlyList&lt;string&gt; knownProxies)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -206,9 +206,15 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">baseUrl</span></td>
-        <td><p>The base url for the API.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>&gt;</td>
+        <td><span class="parametername">pluginAssemblies</span></td>
+        <td><p>An IEnumerable containing all plugin assemblies with API controllers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">knownProxies</span></td>
+        <td><p>A list of all known proxies to trust for X-Forwarded-For.</p>
 </td>
       </tr>
     </tbody>
@@ -234,7 +240,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiAuthorization_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L46">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiAuthorization_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiAuthorization*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiAuthorization_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiAuthorization(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddJellyfinApiAuthorization(IServiceCollection)</h4>
@@ -284,7 +290,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L191">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L208">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiSwagger_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiSwagger*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiServiceCollectionExtensions_AddJellyfinApiSwagger_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Jellyfin.Server.Extensions.ApiServiceCollectionExtensions.AddJellyfinApiSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">AddJellyfinApiSwagger(IServiceCollection)</h4>
@@ -340,7 +346,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiServiceCollectionExtensions.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiServiceCollectionExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L36" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiServiceCollectionExtensions.cs/#L39" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

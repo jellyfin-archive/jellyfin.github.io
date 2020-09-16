@@ -623,7 +623,7 @@ public class ImageController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Drawing_IImageProcessor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ImageController__MediaBrowser_Controller_Configuration_IServerConfigurationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.Drawing.IImageProcessor%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.ImageController%7D%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L58">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController__ctor_" data-uid="Jellyfin.Api.Controllers.ImageController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Drawing_IImageProcessor_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ImageController__MediaBrowser_Controller_Configuration_IServerConfigurationManager_" data-uid="Jellyfin.Api.Controllers.ImageController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.Drawing.IImageProcessor,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Net.IAuthorizationContext,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.ImageController},MediaBrowser.Controller.Configuration.IServerConfigurationManager)">ImageController(IUserManager, ILibraryManager, IProviderManager, IImageProcessor, IFileSystem, IAuthorizationContext, ILogger&lt;ImageController&gt;, IServerConfigurationManager)</h4>
@@ -701,7 +701,7 @@ public class ImageController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_DeleteItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.DeleteItemImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L172">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L174">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_DeleteItemImage_" data-uid="Jellyfin.Api.Controllers.ImageController.DeleteItemImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_DeleteItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.DeleteItemImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32})">DeleteItemImage(Guid, ImageType, Nullable&lt;Int32&gt;)</h4>
@@ -715,7 +715,7 @@ public class ImageController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -768,7 +768,7 @@ public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute] Guid itemId, [FromRo
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_DeleteUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.DeleteUserImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L132">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L134">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_DeleteUserImage_" data-uid="Jellyfin.Api.Controllers.ImageController.DeleteUserImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_DeleteUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.DeleteUserImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32})">DeleteUserImage(Guid, ImageType, Nullable&lt;Int32&gt;)</h4>
@@ -782,7 +782,7 @@ public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute] Guid itemId, [FromRo
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public ActionResult DeleteUserImage([FromRoute] Guid userId, [FromRoute] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
+public ActionResult DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -832,13 +832,13 @@ public ActionResult DeleteUserImage([FromRoute] Guid userId, [FromRoute] ImageTy
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetArtistImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetArtistImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetArtistImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetArtistImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L506">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L510">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetArtistImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetArtistImage*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ImageController_GetArtistImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetArtistImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetArtistImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ImageController_GetArtistImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Int32_" data-uid="Jellyfin.Api.Controllers.ImageController.GetArtistImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Int32)">GetArtistImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Get artist image by name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -848,7 +848,8 @@ public ActionResult DeleteUserImage([FromRoute] Guid userId, [FromRoute] ImageTy
 [HttpHead(&quot;Artists/{name}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadArtistImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetArtistImage([FromRoute] string name, [FromRoute] ImageType imageType, [FromRoute] string tag, [FromRoute] string format, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetArtistImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -957,7 +958,7 @@ public Task&lt;ActionResult&gt; GetArtistImage([FromRoute] string name, [FromRou
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">imageIndex</span></td>
         <td><p>Image index.</p>
 </td>
@@ -986,7 +987,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetGenreImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetGenreImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L584">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L589">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetGenreImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetGenreImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetGenreImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetGenreImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetGenreImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -999,7 +1000,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Genres/{name}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadGenreImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetGenreImage([FromRoute] string name, [FromRoute] ImageType imageType, [FromRoute] string tag, [FromRoute] string format, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1137,7 +1139,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetItemImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L348">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L350">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetItemImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetItemImage(Guid, ImageType, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, Nullable&lt;Boolean&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -1152,7 +1154,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Items/{itemId}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadItemImage_2&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetItemImage([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] string format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] string format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1287,13 +1290,13 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetItemImage2_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetItemImage2(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetItemImage2_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Double_System_Int32_System_Nullable_System_Int32__System_String_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetItemImage2(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Int32%2CSystem.Int32%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Double%2CSystem.Int32%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L428">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L431">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetItemImage2_" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImage2*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ImageController_GetItemImage2_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImage2(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetItemImage2(Guid, ImageType, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, Nullable&lt;Boolean&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ImageController_GetItemImage2_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_Nullable_System_Boolean__System_Double_System_Int32_System_Nullable_System_Int32__System_String_System_String_System_Int32_" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImage2(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Int32,System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.Nullable{System.Boolean},System.Double,System.Int32,System.Nullable{System.Int32},System.String,System.String,System.Int32)">GetItemImage2(Guid, ImageType, Int32, Int32, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, Nullable&lt;Boolean&gt;, Double, Int32, Nullable&lt;Int32&gt;, String, String, Int32)</h4>
   <div class="markdown level1 summary"><p>Gets the item&apos;s image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1303,7 +1306,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Items/{itemId}/Images/{imageType}/{imageIndex}/{tag}/{format}/{maxWidth}/{maxHeight}/{percentPlayed}/{unplayedCount}&quot;, Name = &quot;HeadItemImage2&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetItemImage2([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromRoute] string tag, [FromQuery] bool? cropWhitespace, [FromRoute] string format, [FromQuery] bool? addPlayedIndicator, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetItemImage2([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int maxWidth, [FromRoute, Required] int maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromRoute, Required] string tag, [FromQuery] bool? cropWhitespace, [FromRoute, Required] string format, [FromQuery] bool? addPlayedIndicator, [FromRoute, Required] double percentPlayed, [FromRoute, Required] int unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1328,13 +1332,13 @@ public Task&lt;ActionResult&gt; GetItemImage2([FromRoute] Guid itemId, [FromRout
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">maxWidth</span></td>
         <td><p>The maximum image width to return.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">maxHeight</span></td>
         <td><p>The maximum image height to return.</p>
 </td>
@@ -1382,13 +1386,13 @@ public Task&lt;ActionResult&gt; GetItemImage2([FromRoute] Guid itemId, [FromRout
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
         <td><span class="parametername">percentPlayed</span></td>
         <td><p>Optional. Percent to render for the percent played overlay.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">unplayedCount</span></td>
         <td><p>Optional. Unplayed count overlay to render.</p>
 </td>
@@ -1412,7 +1416,7 @@ public Task&lt;ActionResult&gt; GetItemImage2([FromRoute] Guid itemId, [FromRout
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">imageIndex</span></td>
         <td><p>Image index.</p>
 </td>
@@ -1441,7 +1445,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetItemImageInfos_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetItemImageInfos(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L263">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L265">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetItemImageInfos_" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImageInfos*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetItemImageInfos_System_Guid_" data-uid="Jellyfin.Api.Controllers.ImageController.GetItemImageInfos(System.Guid)">GetItemImageInfos(Guid)</h4>
@@ -1454,7 +1458,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImageInfos([FromRoute] Guid itemId)</code></pre>
+public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImageInfos([FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1495,7 +1499,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImage
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetMusicGenreImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetMusicGenreImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L662">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L668">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetMusicGenreImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetMusicGenreImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetMusicGenreImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetMusicGenreImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetMusicGenreImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -1508,7 +1512,8 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImage
 [HttpHead(&quot;MusicGenres/{name}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadMusicGenreImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetMusicGenreImage([FromRoute] string name, [FromRoute] ImageType imageType, [FromRoute] string tag, [FromRoute] string format, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetMusicGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1646,7 +1651,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetPersonImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetPersonImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L740">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L747">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetPersonImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetPersonImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetPersonImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetPersonImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetPersonImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -1659,7 +1664,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Persons/{name}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadPersonImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetPersonImage([FromRoute] string name, [FromRoute] ImageType imageType, [FromRoute] string tag, [FromRoute] string format, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetPersonImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1797,7 +1803,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetStudioImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetStudioImage(System.String%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L818">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L826">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetStudioImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetStudioImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetStudioImage_System_String_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetStudioImage(System.String,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetStudioImage(String, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -1810,7 +1816,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Studios/{name}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadStudioImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetStudioImage([FromRoute] string name, [FromRoute] ImageType imageType, [FromRoute] string tag, [FromRoute] string format, [FromRoute] int? maxWidth, [FromRoute] int? maxHeight, [FromRoute] double? percentPlayed, [FromRoute] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetStudioImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] string tag, [FromRoute, Required] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1948,7 +1955,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_GetUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.GetUserImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L896">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L905">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_GetUserImage_" data-uid="Jellyfin.Api.Controllers.ImageController.GetUserImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_GetUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.GetUserImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Int32})">GetUserImage(Guid, ImageType, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Int32&gt;)</h4>
@@ -1961,7 +1968,8 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [HttpHead(&quot;Users/{userId}/Images/{imageType}/{imageIndex?}&quot;, Name = &quot;HeadUserImage&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; GetUserImage([FromRoute] Guid userId, [FromRoute] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+[ProducesImageFile]
+public Task&lt;ActionResult&gt; GetUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] string format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2099,7 +2107,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_PostUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.PostUserImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L85">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L87">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_PostUserImage_" data-uid="Jellyfin.Api.Controllers.ImageController.PostUserImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_PostUserImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.PostUserImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32})">PostUserImage(Guid, ImageType, Nullable&lt;Int32&gt;)</h4>
@@ -2113,7 +2121,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; PostUserImage([FromRoute] Guid userId, [FromRoute] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
+public Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2166,7 +2174,7 @@ public Task&lt;ActionResult&gt; PostUserImage([FromRoute] Guid userId, [FromRout
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_SetItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.SetItemImage(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L201">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L203">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_SetItemImage_" data-uid="Jellyfin.Api.Controllers.ImageController.SetItemImage*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_SetItemImage_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.ImageController.SetItemImage(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Nullable{System.Int32})">SetItemImage(Guid, ImageType, Nullable&lt;Int32&gt;)</h4>
@@ -2180,7 +2188,7 @@ public Task&lt;ActionResult&gt; PostUserImage([FromRoute] Guid userId, [FromRout
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; SetItemImage([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
+public Task&lt;ActionResult&gt; SetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int? imageIndex = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2233,7 +2241,7 @@ public Task&lt;ActionResult&gt; SetItemImage([FromRoute] Guid itemId, [FromRoute
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController_UpdateItemImageIndex_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController.UpdateItemImageIndex(System.Guid%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L236">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L238">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ImageController_UpdateItemImageIndex_" data-uid="Jellyfin.Api.Controllers.ImageController.UpdateItemImageIndex*"></a>
   <h4 id="Jellyfin_Api_Controllers_ImageController_UpdateItemImageIndex_System_Guid_MediaBrowser_Model_Entities_ImageType_System_Int32_System_Int32_" data-uid="Jellyfin.Api.Controllers.ImageController.UpdateItemImageIndex(System.Guid,MediaBrowser.Model.Entities.ImageType,System.Int32,System.Int32)">UpdateItemImageIndex(Guid, ImageType, Int32, Int32)</h4>
@@ -2246,7 +2254,7 @@ public Task&lt;ActionResult&gt; SetItemImage([FromRoute] Guid itemId, [FromRoute
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute] Guid itemId, [FromRoute] ImageType imageType, [FromRoute] int imageIndex, [FromQuery] int newIndex)</code></pre>
+public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2311,7 +2319,7 @@ public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute] Guid itemId, [F
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ImageController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ImageController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ImageController.cs/#L35" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

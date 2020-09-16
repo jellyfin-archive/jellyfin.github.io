@@ -94,29 +94,32 @@
 </ul>
 <p>then you can serve over HTTPS just as easily:</p>
 <pre><code class="lang-bash">caddy reverse-proxy --from example.com --to 127.0.0.1:8096
-</code></pre><p>You will see Caddy provision a TLS certificate for your site and, if it succeeds, you can then access your Jellyfin server over HTTPS with your domain name.</p>
+</code></pre><p>You will see Caddy provision a TLS certificate for your site and if it succeeds, you can then access your Jellyfin server over HTTPS with your domain name.</p>
 <h2 id="caddyfile">Caddyfile</h2>
-<p>If you want to use a config file, create a file called <code>Caddyfile</code>, where we will put our configuration.</p>
-<p>The first <code>reverse-proxy</code> command above is equivalent to:</p>
+<p>If you want to use a config file, create a file called <code>Caddyfile</code> for the configuration.
+The first <code>reverse-proxy</code> command above is equivalent to the following options.</p>
 <pre><code class="lang-txt">:5001
 
 reverse_proxy 127.0.0.1:8096
-</code></pre><p>To get HTTPS, simply change the first line to your domain name:</p>
+</code></pre><p>To get HTTPS, simply change the first line to your domain name.</p>
 <pre><code class="lang-txt">example.com
 
 reverse_proxy 127.0.0.1:8096
 </code></pre><h3 id="subpath">Subpath</h3>
 <p>You can serve Jellyfin only at a particular base path and not proxy all other requests.</p>
-<p>To do this, first configure Jellyfin to use a base path: go to Admin -&gt; Networking and in the &quot;Base URL&quot; field, enter a path like <code>/jellyfin</code>. You might have to restart the Jellyfin server for this to take effect.</p>
-<p>Then simply give the <code>reverse_proxy</code> directive a path matcher:</p>
+<p>To do this, first configure Jellyfin to use a base path.
+Go to <code>Admin &gt; Networking</code> and in the Base URL field, enter a path like <code>/jellyfin</code>.
+You might have to restart the Jellyfin server for this to take effect.
+Then simply give the <code>reverse_proxy</code> directive a path matcher.</p>
 <pre><code class="lang-txt">example.com
 
 reverse_proxy /jellyfin/* 127.0.0.1:8096
-</code></pre><p>With that config, Caddy will only proxy requests that start with <code>/jellyfin/</code> (note the trailing slash -- that is optional, but recommended).</p>
+</code></pre><p>With that config, Caddy will only proxy requests that start with <code>/jellyfin/</code>.
+Note the trailing slash - that is optional, but recommended.</p>
 <h2 id="community-links">Community Links</h2>
 <ul>
-<li><a href="https://old.reddit.com/r/jellyfin/comments/gdwe0s/windows_and_caddy_v2_reverse_proxy_guide/">Windows Reverse Proxy Guide</a> (for Caddy v2)</li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/ek8ugr/windows_reverse_proxy_guide/">Windows Reverse Proxy Guide</a> (for Caddy v1, which is obsolete)</li>
+<li><a href="https://old.reddit.com/r/jellyfin/comments/gdwe0s/windows_and_caddy_v2_reverse_proxy_guide">Windows Reverse Proxy Guide for Caddy v2</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/ek8ugr/windows_reverse_proxy_guide">Windows Reverse Proxy Guide for Caddy v1</a></li>
 </ul>
 </article>
           </div>

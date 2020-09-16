@@ -623,7 +623,7 @@ public class SubtitleController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_SubtitleController__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Subtitles.ISubtitleManager%2CMediaBrowser.Controller.MediaEncoding.ISubtitleEncoder%2CMediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.SubtitleController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L57">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController__ctor_" data-uid="Jellyfin.Api.Controllers.SubtitleController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Subtitles_ISubtitleManager_MediaBrowser_Controller_MediaEncoding_ISubtitleEncoder_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Net_IAuthorizationContext_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_SubtitleController__" data-uid="Jellyfin.Api.Controllers.SubtitleController.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Subtitles.ISubtitleManager,MediaBrowser.Controller.MediaEncoding.ISubtitleEncoder,MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Net.IAuthorizationContext,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.SubtitleController})">SubtitleController(ILibraryManager, ISubtitleManager, ISubtitleEncoder, IMediaSourceManager, IProviderManager, IFileSystem, IAuthorizationContext, ILogger&lt;SubtitleController&gt;)</h4>
@@ -701,7 +701,7 @@ public class SubtitleController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_DeleteSubtitle_System_Guid_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.DeleteSubtitle(System.Guid%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L85">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_DeleteSubtitle_" data-uid="Jellyfin.Api.Controllers.SubtitleController.DeleteSubtitle*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_DeleteSubtitle_System_Guid_System_Int32_" data-uid="Jellyfin.Api.Controllers.SubtitleController.DeleteSubtitle(System.Guid,System.Int32)">DeleteSubtitle(Guid, Int32)</h4>
@@ -714,7 +714,7 @@ public class SubtitleController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult&lt;Task&gt; DeleteSubtitle([FromRoute] Guid itemId, [FromRoute] int index)</code></pre>
+public ActionResult&lt;Task&gt; DeleteSubtitle([FromRoute, Required] Guid itemId, [FromRoute, Required] int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -761,7 +761,7 @@ public ActionResult&lt;Task&gt; DeleteSubtitle([FromRoute] Guid itemId, [FromRou
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_DownloadRemoteSubtitles_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.DownloadRemoteSubtitles(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L131">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L132">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_DownloadRemoteSubtitles_" data-uid="Jellyfin.Api.Controllers.SubtitleController.DownloadRemoteSubtitles*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_DownloadRemoteSubtitles_System_Guid_System_String_" data-uid="Jellyfin.Api.Controllers.SubtitleController.DownloadRemoteSubtitles(System.Guid,System.String)">DownloadRemoteSubtitles(Guid, String)</h4>
@@ -773,7 +773,7 @@ public ActionResult&lt;Task&gt; DeleteSubtitle([FromRoute] Guid itemId, [FromRou
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/{itemId}/RemoteSearch/Subtitles/{subtitleId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute] Guid itemId, [FromRoute, Required] string subtitleId)</code></pre>
+public Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string subtitleId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -820,7 +820,7 @@ public Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute] Guid itemId,
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_GetRemoteSubtitles_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.GetRemoteSubtitles(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L161">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L162">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_GetRemoteSubtitles_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetRemoteSubtitles*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_GetRemoteSubtitles_System_String_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetRemoteSubtitles(System.String)">GetRemoteSubtitles(String)</h4>
@@ -833,6 +833,7 @@ public Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute] Guid itemId,
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
+[ProducesFile(new string[]{&quot;text/*&quot;})]
 public Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -874,7 +875,7 @@ public Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string 
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_GetSubtitle_System_Guid_System_String_System_Int32_System_String_System_Nullable_System_Int64__System_Boolean_System_Boolean_System_Int64_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.GetSubtitle(System.Guid%2CSystem.String%2CSystem.Int32%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L185">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L187">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_GetSubtitle_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetSubtitle*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_GetSubtitle_System_Guid_System_String_System_Int32_System_String_System_Nullable_System_Int64__System_Boolean_System_Boolean_System_Int64_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetSubtitle(System.Guid,System.String,System.Int32,System.String,System.Nullable{System.Int64},System.Boolean,System.Boolean,System.Int64)">GetSubtitle(Guid, String, Int32, String, Nullable&lt;Int64&gt;, Boolean, Boolean, Int64)</h4>
@@ -886,6 +887,7 @@ public Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string 
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{itemId}/{mediaSourceId}/Subtitles/{index}/Stream.{format}&quot;)]
 [HttpGet(&quot;Videos/{itemId}/{mediaSourceId}/Subtitles/{index}/{startPositionTicks?}/Stream.{format}&quot;, Name = &quot;GetSubtitle_2&quot;)]
 [ProducesResponseType(200)]
+[ProducesFile(new string[]{&quot;text/*&quot;})]
 public Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid itemId, [FromRoute, Required] string mediaSourceId, [FromRoute, Required] int index, [FromRoute, Required] string format, [FromQuery] long? endPositionTicks, [FromQuery] bool copyTimestamps = false, [FromQuery] bool addVttTimeMap = false, [FromRoute] long startPositionTicks = 0L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -969,7 +971,7 @@ public Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid itemId, [
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_GetSubtitlePlaylist_System_Guid_System_Int32_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.GetSubtitlePlaylist(System.Guid%2CSystem.Int32%2CSystem.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L251">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L253">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_GetSubtitlePlaylist_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetSubtitlePlaylist*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_GetSubtitlePlaylist_System_Guid_System_Int32_System_String_System_Int32_" data-uid="Jellyfin.Api.Controllers.SubtitleController.GetSubtitlePlaylist(System.Guid,System.Int32,System.String,System.Int32)">GetSubtitlePlaylist(Guid, Int32, String, Int32)</h4>
@@ -981,7 +983,8 @@ public Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid itemId, [
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{itemId}/{mediaSourceId}/Subtitles/{index}/subtitles.m3u8&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute] Guid itemId, [FromRoute] int index, [FromRoute] string mediaSourceId, [FromQuery, Required] int segmentLength)</code></pre>
+[ProducesPlaylistFile]
+public Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute, Required] Guid itemId, [FromRoute, Required] int index, [FromRoute, Required] string mediaSourceId, [FromQuery, Required] int segmentLength)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1040,7 +1043,7 @@ public Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute] Guid itemId, [Fr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController_SearchRemoteSubtitles_System_Guid_System_String_System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController.SearchRemoteSubtitles(System.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L111">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L112">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SubtitleController_SearchRemoteSubtitles_" data-uid="Jellyfin.Api.Controllers.SubtitleController.SearchRemoteSubtitles*"></a>
   <h4 id="Jellyfin_Api_Controllers_SubtitleController_SearchRemoteSubtitles_System_Guid_System_String_System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.SubtitleController.SearchRemoteSubtitles(System.Guid,System.String,System.Nullable{System.Boolean})">SearchRemoteSubtitles(Guid, String, Nullable&lt;Boolean&gt;)</h4>
@@ -1052,7 +1055,7 @@ public Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute] Guid itemId, [Fr
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/{itemId}/RemoteSearch/Subtitles/{language}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; SearchRemoteSubtitles([FromRoute] Guid itemId, [FromRoute, Required] string language, [FromQuery] bool? isPerfectMatch)</code></pre>
+public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; SearchRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string language, [FromQuery] bool? isPerfectMatch)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1111,7 +1114,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; Sea
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SubtitleController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SubtitleController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L33" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SubtitleController.cs/#L34" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

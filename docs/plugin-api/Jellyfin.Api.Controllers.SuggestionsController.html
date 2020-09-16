@@ -623,7 +623,7 @@ public class SuggestionsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SuggestionsController__ctor_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SuggestionsController.%23ctor(MediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L33">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SuggestionsController__ctor_" data-uid="Jellyfin.Api.Controllers.SuggestionsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_SuggestionsController__ctor_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Jellyfin.Api.Controllers.SuggestionsController.#ctor(MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager)">SuggestionsController(IDtoService, IUserManager, ILibraryManager)</h4>
@@ -671,7 +671,7 @@ public class SuggestionsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SuggestionsController_GetSuggestions_System_Guid_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SuggestionsController.GetSuggestions(System.Guid%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L54">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SuggestionsController_GetSuggestions_" data-uid="Jellyfin.Api.Controllers.SuggestionsController.GetSuggestions*"></a>
   <h4 id="Jellyfin_Api_Controllers_SuggestionsController_GetSuggestions_System_Guid_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_" data-uid="Jellyfin.Api.Controllers.SuggestionsController.GetSuggestions(System.Guid,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">GetSuggestions(Guid, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean)</h4>
@@ -682,7 +682,7 @@ public class SuggestionsController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Users/{userId}/Suggestions&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSuggestions([FromRoute] Guid userId, [FromQuery] string mediaType, [FromQuery] string type, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] bool enableTotalRecordCount = false)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSuggestions([FromRoute, Required] Guid userId, [FromQuery] string mediaType, [FromQuery] string type, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] bool enableTotalRecordCount = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -759,7 +759,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSuggestions([FromRo
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SuggestionsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SuggestionsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L19" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SuggestionsController.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

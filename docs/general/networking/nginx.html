@@ -80,71 +80,96 @@
 <h2 id="nginx">Nginx</h2>
 
 <p>&quot;<a href="https://www.nginx.com/">Nginx</a> (pronounced &quot;engine X&quot;) is a web server which can also be used as a reverse proxy, load balancer, mail proxy and HTTP cache. The software was created by Igor Sysoev and first publicly released in 2004.[9] A company of the same name was founded in 2011 to provide support and Nginx plus paid software.&quot; - <a href="https://en.wikipedia.org/wiki/Nginx">Wikipedia</a></p>
-<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code> which will forward requests to Jellyfin.</p>
-<div class="WARNING"><h5>Warning</h5><p>This is just an example! Please read up on networking and port forwarding before you expose anything past your router.</p>
+<h2 id="nginx-from-a-subdomain-jellyfinexampleorg">Nginx from a subdomain (jellyfin.example.org)</h2>
+<div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS. <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>. Using only HTTP will expose passwords and API keys.</p>
 </div>
-<pre><code class="lang-conf">server {
+<p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code> which will forward requests to Jellyfin.</p>
+<pre><code class="lang-config"># Uncomment the commented sections after you have acquired a SSL Certificate
+server {
     listen 80;
-    server_name DOMAIN_NAME;
+    listen [::]:80;
+    # server_name DOMAIN_NAME;
 
     # Uncomment to redirect HTTP to HTTPS
     # return 301 https://$host$request_uri;
-}
-
-# Uncomment this section after you have acquired a SSL Certificate
-#server {
-#    listen 443 ssl http2;
-#    server_name DOMAIN_NAME;
-#    ssl_certificate /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem;
-#    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem;
-#    include /etc/letsencrypt/options-ssl-nginx.conf;
-#    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-#    add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
-#    ssl_trusted_certificate /etc/letsencrypt/live/DOMAIN_NAME/chain.pem;
-#    ssl_stapling on;
-#    ssl_stapling_verify on;
-#
-#    # Security / XSS Mitigation Headers
-#    add_header X-Frame-Options &quot;SAMEORIGIN&quot;;
-#    add_header X-XSS-Protection &quot;1; mode=block&quot;;
-#    add_header X-Content-Type-Options &quot;nosniff&quot;;
-#
-#    # Content Security Policy
-#    # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
-#    # Enforces https content and restricts JS/CSS to origin
-#    # External Javascript (such as cast_sender.js for Chromecast or YouTube embed JS for external trailers) must be whitelisted.
-#    add_header Content-Security-Policy &quot;default-src https: data: blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://www.gstatic.com/cv/js/sender/v1/cast_sender.js https://www.youtube.com/iframe_api https://s.ytimg.com; worker-src &#39;self&#39; blob:; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;self&#39;&quot;;
-#
-#    location / {
-#        # Proxy main Jellyfin traffic
-#        proxy_pass http://SERVER_IP_ADDRESS:8096/;
-#        proxy_set_header Host $host;
-#        proxy_set_header X-Real-IP $remote_addr;
-#        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-#        proxy_set_header X-Forwarded-Proto $scheme;
-#        proxy_set_header X-Forwarded-Protocol $scheme;
-#        proxy_set_header X-Forwarded-Host $http_host;
-#
-#        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
-#        proxy_buffering off;
-#    }
-#    location /socket {
-#        # Proxy Jellyfin Websockets traffic
-#        proxy_pass http://SERVER_IP_ADDRESS:8096/socket;
-#        proxy_http_version 1.1;
-#        proxy_set_header Upgrade $http_upgrade;
-#        proxy_set_header Connection &quot;upgrade&quot;;
-#        proxy_set_header Host $host;
-#        proxy_set_header X-Real-IP $remote_addr;
-#        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-#        proxy_set_header X-Forwarded-Proto $scheme;
-#        proxy_set_header X-Forwarded-Protocol $scheme;
-#        proxy_set_header X-Forwarded-Host $http_host;
-#    }
 #}
-</code></pre><h2 id="nginx-with-subpath">Nginx with Subpath</h2>
+
+#server {
+    # listen 443 ssl http2;
+    # listen [::]:443 ssl http2;
+    server_name DOMAIN_NAME;
+
+    # use a variable to store the upstream proxy
+    # in this example we are using a hostname which is resolved via DNS
+    # (if you aren&#39;t using DNS remove the resolver line and change the variable to point to an IP address e.g `set $jellyfin 127.0.0.1`)
+    set $jellyfin jellyfin;
+    resolver 127.0.0.1 valid=30;
+
+    #ssl_certificate /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem;
+    #ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem;
+    #include /etc/letsencrypt/options-ssl-nginx.conf;
+    #ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    #add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
+    #ssl_trusted_certificate /etc/letsencrypt/live/DOMAIN_NAME/chain.pem;
+    #ssl_stapling on;
+    #ssl_stapling_verify on;
+
+    # Security / XSS Mitigation Headers
+    add_header X-Frame-Options &quot;SAMEORIGIN&quot;;
+    add_header X-XSS-Protection &quot;1; mode=block&quot;;
+    add_header X-Content-Type-Options &quot;nosniff&quot;;
+
+    # Content Security Policy
+    # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
+    # Enforces https content and restricts JS/CSS to origin
+    # External Javascript (such as cast_sender.js for Chromecast) must be whitelisted.
+    #add_header Content-Security-Policy &quot;default-src https: data: blob:; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://www.gstatic.com/cv/js/sender/v1/cast_sender.js; worker-src &#39;self&#39; blob:; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;self&#39;&quot;;
+
+    location / {
+        # Proxy main Jellyfin traffic
+        proxy_pass http://$jellyfin:8096;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+
+        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+        proxy_buffering off;
+    }
+
+    # location block for /web - This is purely for aesthetics so /web/#!/ works instead of having to go to /web/index.html/#!/
+    location ~ ^/web/$ {
+        # Proxy main Jellyfin traffic
+        proxy_pass http://$jellyfin:8096/web/index.html/;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+    }
+
+    location /socket {
+        # Proxy Jellyfin Websockets traffic
+        proxy_pass http://$jellyfin:8096/socket/;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection &quot;upgrade&quot;;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Protocol $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+    }
+}
+</code></pre><h2 id="nginx-with-subpath-exampleorgjellyfin">Nginx with Subpath (example.org/jellyfin)</h2>
 <p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
-<p>Set the base URL field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
+<p>Set the <a class="xref" href="index.html#base-url">base URL</a> field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
+<div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS. <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>.</p>
+</div>
 <pre><code class="lang-conf"># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
 
 server {
@@ -154,6 +179,12 @@ server {
     server_name DOMAIN_NAME;
     # You can specify multiple domain names if you want
     #server_name jellyfin.local;
+
+    # use a variable to store the upstream proxy
+    # in this example we are using a hostname which is resolved via DNS
+    # (if you aren&#39;t using DNS remove the resolver line and change the variable to point to an IP address e.g `set $jellyfin 127.0.0.1`)
+    set $jellyfin jellyfin;
+    resolver 127.0.0.1 valid=30;
 
     # Uncomment and create directory to also host static content
     #root /srv/http/media;
@@ -174,7 +205,7 @@ server {
         # The / at the end is significant.
         # https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/
 
-        proxy_pass http://SERVER_IP_ADDRESS:8096/jellyfin/;
+        proxy_pass http://$jellyfin:8096/jellyfin/;
 
         proxy_pass_request_headers on;
 
@@ -192,7 +223,72 @@ server {
         proxy_buffering off;
     }
 }
-</code></pre></article>
+</code></pre><h2 id="extra-nginx-configurations">Extra Nginx Configurations</h2>
+<h3 id="cache-video-streams">Cache Video Streams</h3>
+<pre><code class="lang-conf">#Must be in HTTP block
+proxy_cache_path  /home/cache/web levels=1:2 keys_zone=cWEB:50m inactive=90d max_size=35000m;
+map $request_uri $h264Level { ~(h264-level=)(.+?)&amp; $2; }
+map $request_uri $h264Profile { ~(h264-profile=)(.+?)&amp; $2; }
+
+#set in Server block
+proxy_cache cWEB;
+proxy_cache_valid 200 301 302 30d;
+proxy_ignore_headers Expires Cache-Control Set-Cookie X-Accel-Expires;
+proxy_cache_use_stale error timeout invalid_header updating http_500 http_502 http_503 http_504;
+proxy_connect_timeout 10s;
+proxy_http_version 1.1;
+proxy_set_header Connection &quot;&quot;;
+
+location /videos/
+  {
+  proxy_pass http://myJF-IP:8096;
+  proxy_cache_key &quot;mydomain.com$uri?MediaSourceId=$arg_MediaSourceId&amp;VideoCodec=$arg_VideoCodec&amp;AudioCodec=$arg_AudioCodec&amp;AudioStreamIndex=$arg_AudioStreamIndex&amp;VideoBitrate=$arg_VideoBitrate&amp;AudioBitrate=$arg_AudioBitrate&amp;SubtitleMethod=$arg_SubtitleMethod&amp;TranscodingMaxAudioChannels=$arg_TranscodingMaxAudioChannels&amp;RequireAvc=$arg_RequireAvc&amp;SegmentContainer=$arg_SegmentContainer&amp;MinSegments=$arg_MinSegments&amp;BreakOnNonKeyFrames=$arg_BreakOnNonKeyFrames&amp;h264-profile=$h264Profile&amp;h264-level=$h264Level&amp;TranscodeReasons=$arg_TranscodeReasons&quot;;
+  proxy_cache_valid 200 301 302 30d;
+  }
+</code></pre><h3 id="cache-images">Cache Images</h3>
+<pre><code class="lang-conf"># Add this outside of you server block (i.e. http block)
+proxy_cache_path /var/cache/nginx/jellyfin levels=1:2 keys_zone=jellyfin:100m max_size=15g inactive=30d use_temp_path=off;
+
+# Cache images (inside server block)
+location ~ /Items/(.*)/Images {
+  proxy_pass http://127.0.0.1:8096;
+  proxy_set_header Host $host;
+  proxy_set_header X-Real-IP $remote_addr;
+  proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header X-Forwarded-Proto $scheme;
+  proxy_set_header X-Forwarded-Protocol $scheme;
+  proxy_set_header X-Forwarded-Host $http_host;
+
+  proxy_cache jellyfin;
+  proxy_cache_revalidate on;
+  proxy_cache_lock on;
+  # add_header X-Cache-Status $upstream_cache_status; # This is only to check if cache is working
+}
+</code></pre><p>Ensure that the directory /var/cache/nginx/jellyfin exists and the nginx user has write permissions on it! All the cache options used are explained on <a href="https://www.nginx.com/blog/nginx-caching-guide/">Nginx blog</a> and <a href="http://nginx.org/en/docs/http/ngx_http_proxy_module.html">Nginx proxy module</a>.</p>
+<h3 id="rate-limit-downloads">Rate Limit Downloads</h3>
+<pre><code class="lang-conf"># Add this outside of you server block (i.e. http block)
+limit_conn_zone $binary_remote_addr zone=addr:10m;
+
+# Downloads limit (inside server block)
+location ~ /Items/(.*)/Download$ {
+   proxy_pass http://127.0.0.1:8096;
+   proxy_set_header Host $host;
+   proxy_set_header X-Real-IP $remote_addr;
+   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+   proxy_set_header X-Forwarded-Proto $scheme;
+   proxy_set_header X-Forwarded-Protocol $scheme;
+   proxy_set_header X-Forwarded-Host $http_host;
+
+   limit_rate 1700k; # Speed limit (here is on kb/s)
+   limit_conn addr 3; # Number of simultaneous downloads per IP
+   limit_conn_status 460; # Custom error handling
+   # proxy_buffering on; # Be sure buffering is on (it is by default on nginx), otherwise limits won&#39;t work
+}
+
+# Error page
+error_page 460 http://your-page-telling-your-limit/;
+</code></pre><p><a href="https://www.nginx.com/blog/rate-limiting-nginx/">See here for more</a></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

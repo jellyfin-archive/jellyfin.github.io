@@ -79,12 +79,15 @@
             <article class="content wrap" id="_content" data-uid="network-dlna">
 <h2 id="dlna">DLNA</h2>
 
-<p>DLNA is based on uPnP. DLNA will send a broadcast signal from Jellyfin. This broadcast is limited to Jellyfin&#39;s current subnet. If you are using docker, the network should use Host Mode, otherwise the broadcast signal will only be sent in the bridged network inside of docker.</p>
+<p>DLNA is based on uPnP.
+DLNA will send a broadcast signal from Jellyfin.
+This broadcast is limited to Jellyfin&#39;s current subnet.
+If you are using docker, the network should use Host Mode, otherwise the broadcast signal will only be sent in the bridged network inside of docker.</p>
 <p>If DLNA fails to bind properly, the message <code>[ERR] Failed to bind to port 1900: &quot;Address already in use&quot;. DLNA will be unavailable</code> should appear in the logs.</p>
 <p>Setting <code>Alive message interval (seconds)</code> to 30 seconds also appears to help discovery for some clients.</p>
 <p>If a base URL is set, try removing it and restarting the server.</p>
 <h3 id="dlna-logging">DLNA Logging</h3>
-<p>Use these entries in <code>logging.default.json</code> to turn on DLNA debug logs:</p>
+<p>Use these entries in <code>logging.default.json</code> to turn on DLNA debug logs.</p>
 <pre><code class="lang-json">{
   &quot;Serilog&quot;: {
     &quot;MinimumLevel&quot;: {

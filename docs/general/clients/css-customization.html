@@ -88,11 +88,13 @@
 <h3 id="colors">Colors</h3>
 <p>CSS supports multiple color formats, but typically the hex color codes are used for specific colors. To get a specific color, exact color data such as the hex codes below have to be used.</p>
 <p>Some examples of hex color codes:</p>
-<p><code>#5dd000</code> Green <br>
-<code>#0000d0</code> Blue <br>
-<code>#d00000</code> Red <br>
-<code>#00000058</code> Transparent Black</p>
-<p>Go <a href="https://htmlcolorcodes.com/color-picker/">here</a> for a hex color chart to get a code for any given color.</p>
+<ul>
+<li>Green: <code>#5dd000</code></li>
+<li>Blue: <code>#0000d0</code></li>
+<li>Red: <code>#d00000</code></li>
+<li>Transparent Black: <code>#00000058</code></li>
+</ul>
+<p>Go <a href="https://htmlcolorcodes.com/color-picker">here</a> for a hex color chart to get a code for any given color.</p>
 <p>If you are looking for a more standard and less specific color, typing the literal name of colors suits that purpose well. For example, to get the color &quot;yellow&quot; you can simply write &quot;yellow&quot;, this will use a preset yellow color.</p>
 <p><code>yellow</code> Yellow <br>
 <code>red</code> Red <br>
@@ -100,13 +102,15 @@
 <code>lightseagreen</code> Light Sea Green</p>
 <p>Go <a href="https://www.w3schools.com/colors/colors_names.asp">here</a> for a list of color names supported.</p>
 <h3 id="comments">Comments</h3>
-<p>A section of code or text inbetween <code>/*</code> and <code>*/</code> indicates a comment, and will be ignored. This allows you to add descriptions for any particular section of code. It can also be used to disable code without deleting it. For example:</p>
+<p>A section of code or text inbetween <code>/*</code> and <code>*/</code> indicates a comment, and will be ignored.
+This allows you to add descriptions for any particular section of code.
+It can also be used to disable code without deleting it.</p>
 <p><code>/* This might be added above code to tell you what it does */</code></p>
 <h3 id="css-chaining">CSS Chaining</h3>
 <p>CSS can be &quot;chained&quot; together to modify different sections together at the same time. An example of this is the &quot;Border Color&quot; tweak. It lists the elements to be modified, and performs a change that is applied to all of them.</p>
 <p>&quot;Border Color&quot; tweak:</p>
-<p><code>.emby-input, .emby-textarea, .emby-select { border-color: #d00000; }</code></p>
-<h2 id="tweak-list">Tweak List</h2>
+<pre><code class="lang-css">.emby-input, .emby-textarea, .emby-select { border-color: #d00000; }
+</code></pre><h2 id="tweak-list">Tweak List</h2>
 <p>To apply any one of these tweaks, copy and paste the CSS code from the example into the &quot;Custom CSS&quot; field. To use multiple tweaks, simply add them one after another into the field. Any applied code will remain in the field. To remove a tweak, delete or comment out the code for it from the field. Changes apply immediately when the settings page is saved and doesn&#39;t require restarting your Jellyfin server.</p>
 <h3 id="played-indicator">Played Indicator</h3>
 <p>This will affect the played/watched indicator. Replace the hex color with any value you like.</p>
@@ -144,8 +148,8 @@
 .headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
 .pageTitle {margin-top: auto; margin-bottom: auto;}
 .emby-tab-button {padding: 1.75em 1.7em;}
-</code></pre><p><strong>The enlarged tab buttons and transparent menu look like this:</strong>
-<img src="../../images/custom-css-transparenttopbarenlargedtabs.png" alt="Screenshot of enlarged tab buttons and transparent menu"></p>
+</code></pre><p><strong>The enlarged tab buttons and transparent menu look like this:</strong></p>
+<p><img src="../../images/custom-css-transparenttopbarenlargedtabs.png" alt="Screenshot of enlarged tab buttons and transparent menu"></p>
 <h3 id="minimalistic-login-page">Minimalistic Login Page</h3>
 <p>This looks even better together with the transparent top menu!</p>
 <pre><code class="lang-css">/* Narrow the login form */
@@ -236,6 +240,7 @@
     justify-content: space-between;
     pointer-events: none;
 }
+
 .emby-scrollbuttons-button {
     pointer-events: initial;
 }
@@ -367,17 +372,17 @@
 <p>Some links to places where custom CSS has been discussed and shared!</p>
 <h3 id="emby-web-app-custom-css">Emby Web App Custom CSS</h3>
 <ul>
-<li><a href="https://emby.media/community/index.php?/topic/18046-custom-css-with-emby-web-app/">Custom CSS with Emby Web App</a></li>
+<li><a href="https://emby.media/community/index.php?/topic/18046-custom-css-with-emby-web-app">Custom CSS with Emby Web App</a></li>
 </ul>
 <h3 id="community-posts">Community Posts</h3>
 <p>Keep in mind that these posts may have been made under previous versions of Jellyfin. Some of these tweaks listed in these guides may not work anymore!</p>
 <ul>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050/">Custom CSS Guide</a></li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/htrfrx/but_wait_there_is_more_custom_css/">&quot;But wait, there is more Custom CSS!&quot;</a></li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/g9gmjj/customizable_plug_n_play_css_for_jellyfin/">Customizable Plug n&#39; Play CSS for Jellyfin</a></li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css/">Easy Jellyfin custom CSS</a></li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050/">Custom CSS - updated for 10.5.0</a></li>
-<li><a href="https://www.reddit.com/r/jellyfin/comments/bvnt65/sharing_even_more_custom_css_and_some_fixes_to/">Sharing even more custom CSS (and some fixes to previous stuff)</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050">Custom CSS Guide</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/htrfrx/but_wait_there_is_more_custom_css">&quot;But wait, there is more Custom CSS!&quot;</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/g9gmjj/customizable_plug_n_play_css_for_jellyfin">Customizable Plug n&#39; Play CSS for Jellyfin</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/crxqk5/easy_jellyfin_custom_css">Easy Jellyfin custom CSS</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/fgmu6k/custom_css_updated_for_1050">Custom CSS - updated for 10.5.0</a></li>
+<li><a href="https://www.reddit.com/r/jellyfin/comments/bvnt65/sharing_even_more_custom_css_and_some_fixes_to">Sharing even more custom CSS (and some fixes to previous stuff)</a></li>
 </ul>
 <h3 id="community-themes">Community Themes</h3>
 <ul>

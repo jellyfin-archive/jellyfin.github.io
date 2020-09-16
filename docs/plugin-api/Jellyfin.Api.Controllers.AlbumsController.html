@@ -623,7 +623,7 @@ public class AlbumsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AlbumsController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AlbumsController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L34">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_AlbumsController__ctor_" data-uid="Jellyfin.Api.Controllers.AlbumsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_AlbumsController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_" data-uid="Jellyfin.Api.Controllers.AlbumsController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService)">AlbumsController(IUserManager, ILibraryManager, IDtoService)</h4>
@@ -671,7 +671,7 @@ public class AlbumsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AlbumsController_GetSimilarAlbums_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AlbumsController.GetSimilarAlbums(System.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L53">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_AlbumsController_GetSimilarAlbums_" data-uid="Jellyfin.Api.Controllers.AlbumsController.GetSimilarAlbums*"></a>
   <h4 id="Jellyfin_Api_Controllers_AlbumsController_GetSimilarAlbums_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.AlbumsController.GetSimilarAlbums(System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Int32})">GetSimilarAlbums(String, Nullable&lt;Guid&gt;, String, Nullable&lt;Int32&gt;)</h4>
@@ -682,7 +682,7 @@ public class AlbumsController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Albums/{albumId}/Similar&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarAlbums([FromRoute] string albumId, [FromQuery] Guid? userId, [FromQuery] string excludeArtistIds, [FromQuery] int? limit)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarAlbums([FromRoute, Required] string albumId, [FromQuery] Guid? userId, [FromQuery] string excludeArtistIds, [FromQuery] int? limit)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -741,7 +741,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarAlbums([From
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AlbumsController_GetSimilarArtists_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AlbumsController.GetSimilarArtists(System.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L85">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_AlbumsController_GetSimilarArtists_" data-uid="Jellyfin.Api.Controllers.AlbumsController.GetSimilarArtists*"></a>
   <h4 id="Jellyfin_Api_Controllers_AlbumsController_GetSimilarArtists_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__" data-uid="Jellyfin.Api.Controllers.AlbumsController.GetSimilarArtists(System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Int32})">GetSimilarArtists(String, Nullable&lt;Guid&gt;, String, Nullable&lt;Int32&gt;)</h4>
@@ -752,7 +752,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarAlbums([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Artists/{artistId}/Similar&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarArtists([FromRoute] string artistId, [FromQuery] Guid? userId, [FromQuery] string excludeArtistIds, [FromQuery] int? limit)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarArtists([FromRoute, Required] string artistId, [FromQuery] Guid? userId, [FromQuery] string excludeArtistIds, [FromQuery] int? limit)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -817,7 +817,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSimilarArtists([Fro
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AlbumsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AlbumsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AlbumsController.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

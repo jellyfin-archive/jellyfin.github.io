@@ -689,7 +689,7 @@ public class SessionController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/User/{userId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult AddUserToSession([FromRoute, Required] string sessionId, [FromRoute] Guid userId)</code></pre>
+public ActionResult AddUserToSession([FromRoute, Required] string sessionId, [FromRoute, Required] Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -939,22 +939,22 @@ public ActionResult&lt;IEnumerable&lt;SessionInfo&gt;&gt; GetSessions([FromQuery
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SessionController_Play_System_String_System_Guid___System_Nullable_System_Int64__MediaBrowser_Model_Session_PlayCommand_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SessionController.Play(System.String%2CSystem.Guid%5B%5D%2CSystem.Nullable%7BSystem.Int64%7D%2CMediaBrowser.Model.Session.PlayCommand)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SessionController_Play_System_String_MediaBrowser_Model_Session_PlayCommand_System_Guid___System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SessionController.Play(System.String%2CMediaBrowser.Model.Session.PlayCommand%2CSystem.Guid%5B%5D%2CSystem.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SessionController.cs/#L158">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SessionController_Play_" data-uid="Jellyfin.Api.Controllers.SessionController.Play*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SessionController_Play_System_String_System_Guid___System_Nullable_System_Int64__MediaBrowser_Model_Session_PlayCommand_" data-uid="Jellyfin.Api.Controllers.SessionController.Play(System.String,System.Guid[],System.Nullable{System.Int64},MediaBrowser.Model.Session.PlayCommand)">Play(String, Guid[], Nullable&lt;Int64&gt;, PlayCommand)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SessionController_Play_System_String_MediaBrowser_Model_Session_PlayCommand_System_Guid___System_Nullable_System_Int64__" data-uid="Jellyfin.Api.Controllers.SessionController.Play(System.String,MediaBrowser.Model.Session.PlayCommand,System.Guid[],System.Nullable{System.Int64})">Play(String, PlayCommand, Guid[], Nullable&lt;Int64&gt;)</h4>
   <div class="markdown level1 summary"><p>Instructs a session to play an item.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Playing&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Playing/{command}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult Play([FromRoute, Required] string sessionId, [FromQuery] Guid[] itemIds, [FromQuery] long? startPositionTicks, [FromQuery] PlayCommand playCommand)</code></pre>
+public ActionResult Play([FromRoute, Required] string sessionId, [FromRoute, Required] PlayCommand command, [FromQuery] Guid[] itemIds, [FromQuery] long? startPositionTicks)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -973,6 +973,12 @@ public ActionResult Play([FromRoute, Required] string sessionId, [FromQuery] Gui
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Session.PlayCommand.html">PlayCommand</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
         <td><span class="parametername">itemIds</span></td>
         <td><p>The ids of the items to play, comma delimited.</p>
@@ -982,12 +988,6 @@ public ActionResult Play([FromRoute, Required] string sessionId, [FromQuery] Gui
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
         <td><span class="parametername">startPositionTicks</span></td>
         <td><p>The starting position of the first item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Session.PlayCommand.html">PlayCommand</a></td>
-        <td><span class="parametername">playCommand</span></td>
-        <td><p>The type of play command to issue (PlayNow, PlayNext, PlayLast). Clients who have not yet implemented play next and play last may play now.</p>
 </td>
       </tr>
     </tbody>
@@ -1025,7 +1025,7 @@ public ActionResult Play([FromRoute, Required] string sessionId, [FromQuery] Gui
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Capabilities&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult PostCapabilities([FromQuery, Required] string id, [FromQuery] string playableMediaTypes, [FromQuery] string supportedCommands, [FromQuery] bool supportsMediaControl = false, [FromQuery] bool supportsSync = false, [FromQuery] bool supportsPersistentIdentifier = true)</code></pre>
+public ActionResult PostCapabilities([FromQuery] string id, [FromQuery] string playableMediaTypes, [FromQuery] string supportedCommands, [FromQuery] bool supportsMediaControl = false, [FromQuery] bool supportsSync = false, [FromQuery] bool supportsPersistentIdentifier = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1167,7 +1167,7 @@ public ActionResult PostFullCapabilities([FromQuery] string id, [FromBody, Requi
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Sessions/{sessionId}/User/{userId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult RemoveUserFromSession([FromRoute] string sessionId, [FromRoute] Guid userId)</code></pre>
+public ActionResult RemoveUserFromSession([FromRoute, Required] string sessionId, [FromRoute, Required] Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1438,7 +1438,7 @@ public ActionResult SendGeneralCommand([FromRoute, Required] string sessionId, [
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Message&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SendMessageCommand([FromRoute, Required] string sessionId, [FromQuery, Required] string text, [FromQuery, Required] string header, [FromQuery] long? timeoutMs)</code></pre>
+public ActionResult SendMessageCommand([FromRoute, Required] string sessionId, [FromQuery, Required] string text, [FromQuery] string header, [FromQuery] long? timeoutMs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1506,7 +1506,7 @@ public ActionResult SendMessageCommand([FromRoute, Required] string sessionId, [
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Playing/{command}&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Playing&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 public ActionResult SendPlaystateCommand([FromRoute, Required] string sessionId, [FromBody] PlaystateRequest playstateRequest)</code></pre>

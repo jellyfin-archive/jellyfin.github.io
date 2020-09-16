@@ -677,7 +677,7 @@ public class PluginsController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{pluginId}/Configuration&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;BasePluginConfiguration&gt; GetPluginConfiguration([FromRoute] Guid pluginId)</code></pre>
+public ActionResult&lt;BasePluginConfiguration&gt; GetPluginConfiguration([FromRoute, Required] Guid pluginId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -799,7 +799,7 @@ public ActionResult&lt;PluginSecurityInfo&gt; GetPluginSecurityInfo()</code></pr
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Paid plugins are not supported&quot;)]
 [HttpGet(&quot;Registrations/{name}&quot;)]
 [ProducesResponseType(501)]
-public ActionResult GetRegistration([FromRoute] string name)</code></pre>
+public ActionResult GetRegistration([FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -868,7 +868,7 @@ public ActionResult GetRegistration([FromRoute] string name)</code></pre>
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This endpoint should not be used.&quot;)]
 [HttpPost(&quot;RegistrationRecords/{name}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute] string name)</code></pre>
+public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -922,7 +922,7 @@ public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult UninstallPlugin([FromRoute] Guid pluginId)</code></pre>
+public ActionResult UninstallPlugin([FromRoute, Required] Guid pluginId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -975,7 +975,7 @@ public ActionResult UninstallPlugin([FromRoute] Guid pluginId)</code></pre>
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{pluginId}/Configuration&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdatePluginConfiguration([FromRoute] Guid pluginId)</code></pre>
+public Task&lt;ActionResult&gt; UpdatePluginConfiguration([FromRoute, Required] Guid pluginId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -743,13 +743,13 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_LibraryOptionsDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String%2CSystem.String%2CSystem.String%5B%5D%2CJellyfin.Api.Models.LibraryStructureDto.LibraryOptionsDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String%2CSystem.String%2CSystem.String%5B%5D%2CJellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L73">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder*"></a>
-  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_LibraryOptionsDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String,System.String,System.String[],Jellyfin.Api.Models.LibraryStructureDto.LibraryOptionsDto,System.Boolean)">AddVirtualFolder(String, String, String[], LibraryOptionsDto, Boolean)</h4>
+  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String,System.String,System.String[],Jellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto,System.Boolean)">AddVirtualFolder(String, String, String[], AddVirtualFolderDto, Boolean)</h4>
   <div class="markdown level1 summary"><p>Adds a virtual folder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -757,7 +757,7 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] string collectionType, [FromQuery] string[] paths, [FromBody] LibraryOptionsDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
+public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] string collectionType, [FromQuery] string[] paths, [FromBody] AddVirtualFolderDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -788,7 +788,7 @@ public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQ
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Jellyfin.Api.Models.LibraryStructureDto.LibraryOptionsDto.html">LibraryOptionsDto</a></td>
+        <td><a class="xref" href="Jellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto.html">AddVirtualFolderDto</a></td>
         <td><span class="parametername">libraryOptionsDto</span></td>
         <td><p>The library options.</p>
 </td>
@@ -1073,13 +1073,13 @@ public ActionResult RenameVirtualFolder([FromQuery] string name, [FromQuery] str
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_System_String_MediaBrowser_Model_Configuration_LibraryOptions_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(System.String%2CMediaBrowser.Model.Configuration.LibraryOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_Jellyfin_Api_Models_LibraryStructureDto_UpdateLibraryOptionsDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(Jellyfin.Api.Models.LibraryStructureDto.UpdateLibraryOptionsDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L319">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L318">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions*"></a>
-  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_System_String_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(System.String,MediaBrowser.Model.Configuration.LibraryOptions)">UpdateLibraryOptions(String, LibraryOptions)</h4>
+  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_Jellyfin_Api_Models_LibraryStructureDto_UpdateLibraryOptionsDto_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(Jellyfin.Api.Models.LibraryStructureDto.UpdateLibraryOptionsDto)">UpdateLibraryOptions(UpdateLibraryOptionsDto)</h4>
   <div class="markdown level1 summary"><p>Update library options.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1087,7 +1087,7 @@ public ActionResult RenameVirtualFolder([FromQuery] string name, [FromQuery] str
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;LibraryOptions&quot;)]
 [ProducesResponseType(204)]
-public ActionResult UpdateLibraryOptions([FromQuery] string id, [FromBody] LibraryOptions libraryOptions)</code></pre>
+public ActionResult UpdateLibraryOptions([FromBody] UpdateLibraryOptionsDto request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1100,15 +1100,9 @@ public ActionResult UpdateLibraryOptions([FromQuery] string id, [FromBody] Libra
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The library name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Configuration.LibraryOptions.html">LibraryOptions</a></td>
-        <td><span class="parametername">libraryOptions</span></td>
-        <td><p>The library options.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.LibraryStructureDto.UpdateLibraryOptionsDto.html">UpdateLibraryOptionsDto</a></td>
+        <td><span class="parametername">request</span></td>
+        <td><p>The library name and options.</p>
 </td>
       </tr>
     </tbody>

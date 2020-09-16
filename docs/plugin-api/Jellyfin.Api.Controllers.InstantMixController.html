@@ -689,7 +689,7 @@ public class InstantMixController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Albums/{id}/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromAlbum([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromAlbum([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -783,7 +783,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromAlbum
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Artists/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromArtists([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromArtists([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -877,7 +877,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromArtis
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/{id}/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromItem([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromItem([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1065,7 +1065,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromMusic
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;MusicGenres/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromMusicGenres([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromMusicGenres([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1159,7 +1159,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromMusic
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Playlists/{id}/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromPlaylist([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromPlaylist([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1253,7 +1253,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromPlayl
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Songs/{id}/InstantMix&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromSong([FromRoute] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetInstantMixFromSong([FromRoute, Required] Guid id, [FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] string fields, [FromQuery] bool? enableImages, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] string enableImageTypes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

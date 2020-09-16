@@ -696,7 +696,7 @@ public class ItemUpdateController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/{itemId}/MetadataEditor&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public ActionResult&lt;MetadataEditorInfo&gt; GetMetadataEditorInfo([FromRoute] Guid itemId)</code></pre>
+public ActionResult&lt;MetadataEditorInfo&gt; GetMetadataEditorInfo([FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -749,7 +749,7 @@ public ActionResult&lt;MetadataEditorInfo&gt; GetMetadataEditorInfo([FromRoute] 
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/{itemId}&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdateItem([FromRoute] Guid itemId, [FromBody, Required] BaseItemDto request)</code></pre>
+public Task&lt;ActionResult&gt; UpdateItem([FromRoute, Required] Guid itemId, [FromBody, Required] BaseItemDto request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,7 +808,7 @@ public Task&lt;ActionResult&gt; UpdateItem([FromRoute] Guid itemId, [FromBody, R
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/{itemId}/ContentType&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult UpdateItemContentType([FromRoute] Guid itemId, [FromQuery, Required] string contentType)</code></pre>
+public ActionResult UpdateItemContentType([FromRoute, Required] Guid itemId, [FromQuery] string contentType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -105,17 +105,18 @@
 <h2 id="self-signed-certificate">Self-Signed Certificate</h2>
 <p><a href="https://www.sslshopper.com/article-most-common-openssl-commands.html">See here for more information.</a></p>
 <p>Create a private key.</p>
-<p><code>openssl req -x509 -newkey rsa:4096 -keyout ./privkey.pem -out cert.pem -days 365 -nodes -subj &#39;/CN=jellyfin.lan&#39;</code></p>
-<p>omit <code>-nodes</code> to set a password interactively.</p>
+<pre><code class="lang-sh">openssl req -x509 -newkey rsa:4096 -keyout ./privkey.pem -out cert.pem -days 365 -nodes -subj &#39;/CN=jellyfin.lan&#39;
+</code></pre><p>Omit <code>-nodes</code> to set a password interactively.</p>
 <p>Remove <code>-days 365</code> to make it &#39;permanent&#39;.</p>
 <p>Add <code>-subj &#39;/CN=localhost&#39;</code> to make it not ask interactive questions about content of certificate.</p>
-<p>creates <code>./privkey.pem</code></p>
-<p><code>openssl pkcs12 -export -out jellyfin.pfx -inkey privkey.pem -in /usr/local/etc/letsencrypt/live/domain.org/cert.pem -passout pass:</code></p>
-<h2 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h2>
+<p>The above command creates <code>./privkey.pem</code> which will require one more step before use in Jellyfin.</p>
+<pre><code class="lang-sh">openssl pkcs12 -export -out jellyfin.pfx -inkey privkey.pem -in /usr/local/etc/letsencrypt/live/domain.org/cert.pem -passout pass:
+</code></pre><h2 id="running-jellyfin-behind-a-reverse-proxy">Running Jellyfin Behind a Reverse Proxy</h2>
 <p>It&#39;s possible to run Jellyfin behind another server acting as a reverse proxy.  With a reverse proxy setup, this server handles all network traffic and proxies it back to Jellyfin. This provides the benefits of using DNS names and not having to remember port numbers, as well as easier integration and management of SSL certificates.</p>
-<div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.  These examples assume you want to run Jellyfin under a sub-domain (ie: jellyfin.example.com), but are easily adapted for the root domain if desired.</p>
+<div class="WARNING"><h5>Warning</h5><p>In order for a reverse proxy to have the maximum benefit, you should have a publically routable IP address and a domain with DNS set up correctly.
+These examples assume you want to run Jellyfin under a sub-domain (e.g. jellyfin.example.com), but are easily adapted for the root domain if desired.</p>
 </div>
-<p>Some popular options for reverse proxy systems are <a href="https://httpd.apache.org/">Apache</a>, <a href="https://caddyserver.com/">Caddy</a>, <a href="https://www.haproxy.com/">Haproxy</a>, <a href="https://www.nginx.com/">Nginx</a> and <a href="https://traefik.io/">Traefik</a>.</p>
+<p>Some popular options for reverse proxy systems are <a href="https://httpd.apache.org">Apache</a>, <a href="https://caddyserver.com">Caddy</a>, <a href="https://www.haproxy.com">Haproxy</a>, <a href="https://www.nginx.com">Nginx</a> and <a href="https://traefik.io">Traefik</a>.</p>
 <ul>
 <li><a class="xref" href="apache.html">Apache</a></li>
 <li><a class="xref" href="caddy.html">Caddy</a></li>
@@ -123,7 +124,7 @@
 <li><a class="xref" href="nginx.html">Nginx</a></li>
 <li><a class="xref" href="traefik.html">Traefik</a></li>
 </ul>
-<p>While not a reverse proxy, Let&#39;s Encrypt can be used independently or with a Reverse Proxy to provide SSL certificates.</p>
+<p>While not a reverse proxy, Let&#39;s Encrypt can be used independently or with a reverse proxy to provide SSL certificates.</p>
 <ul>
 <li><a class="xref" href="letsencrypt.html">Let&#39;s Encrypt</a></li>
 </ul>
@@ -136,7 +137,7 @@
 <p>In addition, the examples are configured for use with Let&#39;s Encrypt certificates. If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
 <h3 id="base-url">Base URL</h3>
-<p>Running Jellyfin with a path (<code>https://example.com/jellyfin</code>) is supported by the Android and web clients.</p>
+<p>Running Jellyfin with a path (e.g. <code>https://example.com/jellyfin</code>) is supported by the Android and web clients.</p>
 <div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HDHomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
 </div>
 <p>The Base URL setting in the <strong>Networking</strong> page is an advanced setting used to specify the URL prefix that your Jellyfin instance can be accessed at. In effect, it adds this URL fragment to the start of any URL path. For instance, if you have a Jellyfin server at <code>http://myserver</code> and access its main page <code>http://myserver/web/index.html</code>, setting a Base URL of <code>/jellyfin</code> will alter this main page to <code>http://myserver/jellyfin/web/index.html</code>. This can be useful if administrators want to access multiple Jellyfin instances under a single domain name, or if the Jellyfin instance lives only at a subpath to another domain with other services listening on <code>/</code>.</p>
