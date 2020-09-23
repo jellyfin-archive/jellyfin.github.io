@@ -858,9 +858,9 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetAdditionalPart([Fro
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;GetVideoStream_2&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;GetVideoStreamWithExt&quot;)]
 [HttpGet(&quot;{itemId}/stream&quot;)]
-[HttpHead(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;HeadVideoStream_2&quot;)]
+[HttpHead(&quot;{itemId}/{stream=stream}.{container?}&quot;, Name = &quot;HeadVideoStreamWithExt&quot;)]
 [HttpHead(&quot;{itemId}/stream&quot;, Name = &quot;HeadVideoStream&quot;)]
 [ProducesResponseType(200)]
 [ProducesVideoFile]
