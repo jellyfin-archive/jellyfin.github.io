@@ -1,128 +1,528 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Jellyfin: The Free Software Media System</title>
+    <title>Posts  Jellyfin: The Free Software Media System</title>
     <link>https://jellyfin.org/posts/</link>
-    <description>Recent content in Posts on Jellyfin: The Free Software Media System</description>
+    <description>  Posts  Jellyfin: The Free Software Media System</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 22 Aug 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://jellyfin.org/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <atom:link href="https://jellyfin.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Client Spotlight: Videotape</title>
       <link>https://jellyfin.org/posts/client-videotape/</link>
       <pubDate>Sat, 22 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/client-videotape/</guid>
-      <description>&lt;p&gt;Videotape is a free lightweight video player for both Windows 10 &amp;amp; Xbox. Their new 3.0 version now supports Jellyfin!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Videotape is a free lightweight video player for both Windows 10 &amp;amp; Xbox. Their new 3.0 version now supports Jellyfin!&lt;/p&gt;
+&lt;p&gt;Videotape is a native UWP application with a strong focus on design and usability.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Direct play almost all files, both from Jellyfin and other local files&lt;/li&gt;
+&lt;li&gt;Overlay and always on top modes&lt;/li&gt;
+&lt;li&gt;Adjustable playback speed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Download it now from the Microsoft store!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;NoLinkLook&#34; href=&#34;//www.microsoft.com/store/apps/9NLVH2LL4P1Z?cid=storebadge&amp;ocid=badge&#34;&gt;&lt;img src=&#34;https://jellyfin.org/images/store-icons/microsoft.svg&#34; alt=&#34;View VideoTape in the Microsoft Store&#34; style=&#34;width: 142px; height: 52px;&#34;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s what Jellyfin looks like on Windows, with Videotape 3.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/images/posts/videotape/detailview.png&#34; name=&#34;Detail View on Windows 10&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Here&#39;s what it looks like on the Xbox One.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/images/posts/videotape/detailxbox.png&#34; name=&#34;Detail View on Xbox One&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Client Spotlight&lt;/p&gt;
+&lt;p&gt;This blog series aims to highlight some of the amazing projects created by our community.&lt;/p&gt;
+&lt;p&gt;Feel free to send a message if you can think of a project that could use more love!&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
       <title>Jellyfin Release - v10.6.0</title>
       <link>https://jellyfin.org/posts/jellyfin-10-6-0/</link>
       <pubDate>Sun, 19 Jul 2020 11:42:00 +0100</pubDate>
-      
       <guid>https://jellyfin.org/posts/jellyfin-10-6-0/</guid>
-      <description>&lt;p&gt;After months of work, here comes another behemoth of a release, this time with over 30 major improvements and tons of fixes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;After months of work, here comes another behemoth of a release, this time with over 30 major improvements and tons of fixes.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jellyfin.org/downloads/&#34; class=&#34;button button__accent&#34;&gt;Download Jellyfin 10.6.0&lt;/a&gt; &lt;a href=&#34;https://github.com/jellyfin/jellyfin/releases/tag/v10.6.0&#34; class=&#34;button hero__button&#34;&gt;Read the full release notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;At &lt;strong&gt;more than 500 pull requests&lt;/strong&gt; merged between the server and the web client, Jellyfin 10.6.0 brings an incredible number of new features, improvements and bug fixes. It&#39;s a huge release and we have a lot to cover, so let&#39;s get to it!&lt;/p&gt;
+&lt;h1 id=&#34;syncplay&#34;&gt;SyncPlay&lt;/h1&gt;
+&lt;p&gt;Other services have recently launched various ways to view your content together with friends. With the current global situation, it makes a lot of sense, and Jellyfin isn&#39;t lagging behind.&lt;/p&gt;
+&lt;p&gt;We&#39;re proud to announce Jellyfin 10.6&#39;s headline feature: &lt;strong&gt;SyncPlay&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;SyncPlay allows you to create rooms that other users or clients can join in order to share a common viewing experience. There is no limit on the number of users in a room and you are free to join the same room with the same user from multiple clients as well.&lt;/p&gt;
+&lt;p&gt;Thanks to first-time contributor &lt;a href=&#34;https://github.com/OancaAndrei&#34;&gt;OancaAndrei&lt;/a&gt;, who submitted pull requests to both the server and the web client (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2733&#34;&gt;jf#2733&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1011&#34;&gt;jf-web#1011&lt;/a&gt;) in order to lay out the foundations for this, you can now watch movies together with friends and family, from the comfort of your respective homes.&lt;/p&gt;
+&lt;p&gt;The feature is expected to be improved in future versions of Jellyfin, but has already been used by multiple users during the development cycle, with a delay between clients of only a couple of milliseconds.&lt;/p&gt;
+&lt;h1 id=&#34;migration-to-entity-framework-core&#34;&gt;Migration to Entity Framework Core&lt;/h1&gt;
+&lt;p&gt;It&#39;s been on our plate for a while, but thanks to new team member &lt;a href=&#34;https://github.com/barronpm&#34;&gt;barronpm&lt;/a&gt;, we can finally say that the rewrite of our database model is progressing at a steady pace!&lt;/p&gt;
+&lt;p&gt;Previously, Jellyfin used a combination of SQLite databases (yes, multiple ones), XML files and C# spaghetti to perform database operations. Information was split in multiple places, sometimes even duplicated and generally filtered in C# instead of using the database engine&#39;s faster processing.&lt;/p&gt;
+&lt;p&gt;Over the course of this cycle, &lt;a href=&#34;https://github.com/barronpm&#34;&gt;barronpm&lt;/a&gt; has been deciphering and untangling this mess, and managed to successfully migrate the ActivityDB (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2970&#34;&gt;jf#2970&lt;/a&gt;) and the UserDB (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3148&#34;&gt;jf3148&lt;/a&gt;) to EF Core.&lt;/p&gt;
+&lt;p&gt;While there is still a ways to go, EF Core should bring faster database queries, support for multiple database engines, cleaner code, and significantly reduced memory usage. Currently, there is still a bridge to make the link between the new EF Core databases and the existing code, which will be cleaned up down the line.&lt;/p&gt;
+&lt;p&gt;Part of the improved memory usage is due to our current inherited custom ORM caching everything in memory to make up for its slowness. For large databases, this could result in hundreds of megabytes of memory lost to caching. With EF Core, however, we leave the heavy lifting to the database engine, leading to better response times and less memory usage overall.&lt;/p&gt;
+&lt;p&gt;Your databases will be automatically migrated when you first launch Jellyfin 10.6. While the migration process has been well tested over the past few months, issues may arise during the migration process. To prevent any data loss, please &lt;strong&gt;backup your existing data files&lt;/strong&gt; before starting the migration process.&lt;/p&gt;
+&lt;h1 id=&#34;a-more-modern-web-client&#34;&gt;A more modern web client&lt;/h1&gt;
+&lt;p&gt;Our web client has long suffered of a massive amount of technical debt, due to the project we forked from only providing minified versions of the source and using antiquated web technologies. Some of these old technologies have, until recently, prevented us from being able to use modern JavaScript tooling, which would allow us to significantly clean the source.&lt;/p&gt;
+&lt;p&gt;Thankfully, this is now behind us, as &lt;a href=&#34;https://github.com/MrTimscampi&#34;&gt;MrTimscampi&lt;/a&gt; worked on improving the way we build the web client by using Gulp to perform various tasks necessary for building our current code structure with modern tools. (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/862&#34;&gt;jf-web#862&lt;/a&gt;). This allows us to use bleeding edge JavaScript thanks to Babel, but also simplifies greatly our support for legacy clients (Most notably early WebOS and Tizen versions).&lt;/p&gt;
+&lt;p&gt;Among the benefits of this move to Gulp for building the client, we have started moving away from &lt;a href=&#34;https://requirejs.org/&#34;&gt;RequireJS&lt;/a&gt; and towards using standard &lt;a href=&#34;https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules&#34;&gt;EcmaScript Modules&lt;/a&gt;, thanks to &lt;a href=&#34;https://github.com/Camc314&#34;&gt;Camc314&lt;/a&gt;, &lt;a href=&#34;https://github.com/cromefire/&#34;&gt;cromefire&lt;/a&gt;, &lt;a href=&#34;https://github.com/delgan&#34;&gt;Delgan&lt;/a&gt;, &lt;a href=&#34;https://github.com/dkanada/&#34;&gt;dkanada&lt;/a&gt;, &lt;a href=&#34;https://github.com/grafixeyehero/&#34;&gt;grafixeyehero&lt;/a&gt;, &lt;a href=&#34;https://github.com/MrTimscampi&#34;&gt;MrTimscampi&lt;/a&gt;, and &lt;a href=&#34;https://github.com/sarab97/&#34;&gt;sarab97&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This massive change, once it is complete, will allow us to simplify the web client build process, which will in turn allow us to start our migration to &lt;a href=&#34;https://vuejs.org/&#34;&gt;Vue&lt;/a&gt; and significantly clean up our code. This should also bring some noticeable performance improvements to the web client down the line, as we tackle technical debt and remove deprecated practices and libraries from the code.&lt;/p&gt;
+&lt;h1 id=&#34;server-performance-bug-fixes-and-better-networking&#34;&gt;Server performance, bug fixes and better networking&lt;/h1&gt;
+&lt;p&gt;Our resident C# performance wizard, &lt;a href=&#34;https://github.com/Bond-009&#34;&gt;Bond-009&lt;/a&gt; continues his quest to rid the server source of warnings and generally improve server performance, fixing multiple bugs in the process.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/mark-monteiro&#34;&gt;mark-monteiro&lt;/a&gt; worked on multiple fixes for 10.6, including reworking the network settings accessible through the administration dashboard (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2774&#34;&gt;jf#2774&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1140&#34;&gt;jf-web#1140&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Team member &lt;a href=&#34;https://github.com/nyanmisaka&#34;&gt;nyanmisaka&lt;/a&gt;, with some help from &lt;a href=&#34;https://github.com/artiume/&#34;&gt;artiume&lt;/a&gt;, brings a number of improvements to transcoding (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2809&#34;&gt;jf#2809&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1046&#34;&gt;jf-web#1046&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2821&#34;&gt;jf#2821&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/2715&#34;&gt;jf#2715&lt;/a&gt;), with format toggles, options for toggling transcoding for HEVC and 10-bit VP9 videos off for older GPUs, providing support for the VP8/VP9 QSV and NVDEC decoders in FFmpeg 4.3, better support for UTF-16 subtitles and a host of other improvements.&lt;/p&gt;
+&lt;p&gt;Further changes to the server include fixes for collection metadata issues (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3117&#34;&gt;jf#3117&lt;/a&gt;), improvements to the metadata providers (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3071&#34;&gt;jf#3071&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3056&#34;&gt;jf#3056&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3289&#34;&gt;jf#3289&lt;/a&gt;), and more core providers moved to plugins (&lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3208&#34;&gt;jf#3208&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;more-web-client-improvements&#34;&gt;More web client improvements&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/itegulov&#34;&gt;Itegulov&lt;/a&gt; and &lt;a href=&#34;https://github.com/dkanada/&#34;&gt;dkanada&lt;/a&gt; have improved support for ebooks by adding an EPUB reader based on &lt;a href=&#34;https://github.com/futurepress/epub.js/&#34;&gt;epub.js&lt;/a&gt; (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1263&#34;&gt;jf-web#1263&lt;/a&gt;). Reader support for more formats is in progress for future versions, including CBZ/CBR and PDF.&lt;/p&gt;
+&lt;p&gt;As we used the new 10.5 details screen over the last few months, we noticed some improvements we could make to the experience. Team member &lt;a href=&#34;https://github.com/MrTimscampi&#34;&gt;MrTimscampi&lt;/a&gt;, along with input from the rest of the web team and some of our users, did a second pass on that screen (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/949&#34;&gt;jf-web#949&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1206&#34;&gt;jf-web#1206&lt;/a&gt;), tightening the design and cleaning some visual issues along the way. &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1406&#34;&gt;Delgan&lt;/a&gt; put in the final touches to the page by avoiding a jump in the content when rendering the track selectors on the page (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1406&#34;&gt;jf-web#1406&lt;/a&gt;)&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;10.5.5&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-6-0/details-10-5.png&#34; name=&#34;&#34; /&gt;
+    &lt;img data-label=&#34;10.6.0&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-6-0/details-10-6.png&#34; name=&#34;&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;Team member &lt;a href=&#34;https://github.com/ferferga&#34;&gt;ferferga&lt;/a&gt; and contributor &lt;a href=&#34;https://github.com/samuel9554&#34;&gt;samuel9554&lt;/a&gt; have been working on redesigning our music experience. For 10.6, they overhauled our mobile music player interface and made significant changes to the mini player and the remote player UI (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1056&#34;&gt;jf-web#1056&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1430&#34;&gt;jf-web#1430&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;10.5.5&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-6-0/player-10-5.png&#34; name=&#34;&#34; /&gt;
+    &lt;img data-label=&#34;10.6.0&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-6-0/player-10-6.png&#34; name=&#34;&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/MrTimscampi&#34;&gt;MrTimscampi&lt;/a&gt; also reworked the image loading system (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1065&#34;&gt;jf-web#1065&lt;/a&gt;), fixing some visual issues and improving memory usage by unloading out of view images. Along with this improvement, &lt;a href=&#34;https://github.com/ferferga&#34;&gt;ferferga&lt;/a&gt;, &lt;a href=&#34;https://github.com/GranPC&#34;&gt;GranPC&lt;/a&gt;, &lt;a href=&#34;https://github.com/JustAMan&#34;&gt;JustAMan&lt;/a&gt; and &lt;a href=&#34;https://github.com/Bond-009&#34;&gt;Bond-009&lt;/a&gt; have implemented &lt;a href=&#34;https://blurha.sh/&#34;&gt;Blurhash&lt;/a&gt; placeholder support on both the server and the web client, which brings further visual refinement to the user interface.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/JustAMan&#34;&gt;JustAMan&lt;/a&gt; went back over our new SSA/ASS subtitle rendering system and significantly improved performance for subtitles with heavy effects (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1144&#34;&gt;jf-web#1144&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1095&#34;&gt;jf-web#1095&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1048&#34;&gt;jf-web#1048&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1005&#34;&gt;jf-web#1005&lt;/a&gt;). While we still consider the feature experimental, it should now be able to render most subtitles accurately and with correct performance.&lt;/p&gt;
+&lt;p&gt;Other improvements to the web client include a rewritten image viewer (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/967&#34;&gt;jf-web#967&lt;/a&gt;), a configuration option for the number of items per page in libraries (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/983&#34;&gt;jf-web#983&lt;/a&gt;), a toggle for the nightly version of the Chromecast client (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1242&#34;&gt;jf-web#1242&lt;/a&gt;), and support for multiple plugin repositories (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/pull/1393&#34;&gt;jf-web#1393&lt;/a&gt;, &lt;a href=&#34;https://github.com/jellyfin/jellyfin/pull/3244&#34;&gt;jf#3244&lt;/a&gt;).&lt;/p&gt;
+&lt;h1 id=&#34;patreons-and-github-sponsors&#34;&gt;Patreons and Github Sponsors&lt;/h1&gt;
+&lt;p&gt;With the increased amount of activity on the project, we would like to give a signal boost to some ways to support the people working daily on Jellyfin.&lt;/p&gt;
+&lt;p&gt;We want to stress that, while some of our contributors individually accept financial donations, Jellyfin and its features will &lt;strong&gt;never&lt;/strong&gt; be hidden behind a paywall. Supporting the developers financially is entirely voluntary and won&#39;t give you any exclusive access to features or support, nor will it change the priority of your feature requests or issues.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/anthonylavado&#34;&gt;anthonylavado&lt;/a&gt;, our wonderful PR and developer relation person, accepts donations through &lt;a href=&#34;https://github.com/sponsors/anthonylavado&#34;&gt;Github Sponsors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/barronpm&#34;&gt;barronpm&lt;/a&gt;, whose main work is on the server portion of Jellyfin and who has been spearheading the migration to EF Core has recently opened &lt;a href=&#34;https://www.patreon.com/barronpm&#34;&gt;a Patreon page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dkanada/&#34;&gt;dkanada&lt;/a&gt;, whose work spreads from server to web client, accepts donations through &lt;a href=&#34;https://github.com/sponsors/dkanada&#34;&gt;Github Sponsors&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/ferferga&#34;&gt;ferferga&lt;/a&gt;, web client contributor, localization aficionado and all-around awesome person accepts donations through &lt;a href=&#34;https://github.com/sponsors/ferferga&#34;&gt;Github Sponsors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/nielsvanvelzen&#34;&gt;nielsvanvelzen&lt;/a&gt;, who has been working hard on the Android TV client, can be supported on &lt;a href=&#34;https://github.com/sponsors/nielsvanvelzen&#34;&gt;Github Sponsors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/MrTimscampi&#34;&gt;MrTimscampi&lt;/a&gt;, whose main work has been cleaning up and modernizing the web client, also recently opened &lt;a href=&#34;https://www.patreon.com/mrtimscampi&#34;&gt;a Patreon page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/oddstr13&#34;&gt;oddstr13&lt;/a&gt;, one of the developers of Jellyfin for Kodi also accepts donations on &lt;a href=&#34;https://github.com/sponsors/oddstr13&#34;&gt;Github Sponsors&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/thornbill&#34;&gt;thornbill&lt;/a&gt; who handles the iOS and Android clients, and also contributes to the Android TV client, can be supported on &lt;a href=&#34;https://github.com/sponsors/thornbill&#34;&gt;Github Sponsors&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;contributors&#34;&gt;Contributors&lt;/h1&gt;
+&lt;p&gt;As an final note, we would like to thank all the contributors who worked on making Jellyfin 10.6 a reality:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/adavier/&#34;&gt;adavier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/aled/&#34;&gt;aled&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alset333/&#34;&gt;alset333&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/anthonylavado/&#34;&gt;anthonylavado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Artiume/&#34;&gt;Artiume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/balu92/&#34;&gt;balu92&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/BaronGreenback/&#34;&gt;BaronGreenback&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/barronpm/&#34;&gt;barronpm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bendardenne/&#34;&gt;bendardenne&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Bond-009&#34;&gt;Bond-009&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Brissot/&#34;&gt;Brissot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Camc314/&#34;&gt;Camc314&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ConfusedPolarBear/&#34;&gt;ConfusedPolarBear&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/crobibero/&#34;&gt;crobibero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cromefire/&#34;&gt;cromefire&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cvium/&#34;&gt;cvium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dafo90/&#34;&gt;dafo90&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/danieladov/&#34;&gt;danieladov&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Delgan/&#34;&gt;Delgan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dkanada/&#34;&gt;dkanada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dmitrylyzo/&#34;&gt;dmitrylyzo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dtparr/&#34;&gt;dtparr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EraYaN/&#34;&gt;EraYaN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ferferga/&#34;&gt;ferferga&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/fhriley/&#34;&gt;fhriley&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grafixeyehero/&#34;&gt;grafixeyehero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/GranPC/&#34;&gt;GranPC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/h1nk/&#34;&gt;h1nk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hauntingEcho/&#34;&gt;hauntingEcho&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/itegulov/&#34;&gt;itegulov&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/iwalton3/&#34;&gt;iwalton3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jairbubbles/&#34;&gt;jairbubbles&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/joshuaboniface/&#34;&gt;joshuaboniface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/JustAMan/&#34;&gt;JustAMan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/kesslern/&#34;&gt;kesslern&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KGT1/&#34;&gt;KGT1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KristupasSavickas/&#34;&gt;KristupasSavickas&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/KucharczykL/&#34;&gt;KucharczykL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lfoust/&#34;&gt;lfoust&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/lyonzy/&#34;&gt;lyonzy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/macr/&#34;&gt;macr&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mark-monteiro&#34;&gt;mark-monteiro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/masterkoppa/&#34;&gt;masterkoppa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mijofa/&#34;&gt;mijofa&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MrTimscampi/&#34;&gt;MrTimscampi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Nazar78/&#34;&gt;Nazar78&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/neilsb/&#34;&gt;neilsb&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Nickbert7/&#34;&gt;Nickbert7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nielsvanvelzen/&#34;&gt;nielsvanvelzen&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nyanmisaka/&#34;&gt;nyanmisaka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/OancaAndrei/&#34;&gt;OancaAndrei&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/oddstr13&#34;&gt;oddstr13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ox0spy/&#34;&gt;ox0spy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Polpetta/&#34;&gt;Polpetta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PrplHaz4/&#34;&gt;PrplHaz4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/puschie286/&#34;&gt;puschie286&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pusta/&#34;&gt;pusta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/randrey/&#34;&gt;randrey&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/redSpoutnik/&#34;&gt;redSpoutnik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rexbron/&#34;&gt;rexbron&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rigtorp/&#34;&gt;rigtorp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rotvel/&#34;&gt;rotvel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/samuel9554/&#34;&gt;samuel9554&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sarab97/&#34;&gt;sarab97&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Shawmon/&#34;&gt;Shawmon&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/shayaantx/&#34;&gt;shayaantx&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sparky8251/&#34;&gt;sparky8251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Stampede10343/&#34;&gt;Stampede10343&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/telans/&#34;&gt;telans&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ThibaultNocchi/&#34;&gt;ThibaultNocchi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/thornbill/&#34;&gt;thornbill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/twinkybot/&#34;&gt;twinkybot&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Ullmie02/&#34;&gt;Ullmie02&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/viaregio/&#34;&gt;viaregio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/villagra/&#34;&gt;villagra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/whooo/&#34;&gt;whooo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/xumix/&#34;&gt;xumix&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/YouKnowBlom/&#34;&gt;YouKnowBlom&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ZadenRB/&#34;&gt;ZadenRB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
     
     <item>
       <title>Plugin Repositories</title>
       <link>https://jellyfin.org/posts/plugin-updates/</link>
       <pubDate>Fri, 17 Jul 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/plugin-updates/</guid>
       <description>&lt;p&gt;There have been several changes to plugins for the new release.
-Here&#39;s a quick post going over the biggest updates for developers and users alike.&lt;/p&gt;</description>
+Here&#39;s a quick post going over the biggest updates for developers and users alike.&lt;/p&gt;
+&lt;p&gt;The most noticable change for everyone is that third party plugin repositories are now available!
+You can access the current list at Dashboard -&amp;gt; Plugins -&amp;gt; Repositories, and items can be added or removed as desired.
+Even the official repository can be removed if you&#39;d prefer to avoid external calls to our server.&lt;/p&gt;
+&lt;h1 id=&#34;manifest&#34;&gt;Manifest&lt;/h1&gt;
+&lt;p&gt;For developers, the only required change is a JSON manifest at &lt;em&gt;any&lt;/em&gt; location with versions that point to binary releases at &lt;em&gt;any&lt;/em&gt; location.
+We don&#39;t require any specific method for hosting these files, as that would go against the ideals of the project.
+The official repository uses nginx for the manifest and GitHub Releases for the binaries, but you could potentially host the manifest on GitHub as well.
+Here&#39;s an example manifest with all the properties.
+Please note that the GUID must be unique (both in the manifest and the plugin itself) if you want to avoid conflicts with other plugins.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;[
+    {
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;category&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Metadata&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;guid&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a4df60c5-6ab4-412a-8f79-2cab93fb2bc5&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Anime&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;This plugin supports several different metadata providers and options for organizing your collection.&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;owner&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jellyfin&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;overview&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Manage Your Anime in Jellyfin&amp;#34;&lt;/span&gt;,
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;versions&amp;#34;&lt;/span&gt;: [
+            {
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;checksum&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ad6db5175f4732308b5dd166f79a1c2d&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;changelog&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bug fixes and improvements&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;targetAbi&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;10.6.0.0&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;sourceUrl&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://repo.jellyfin.org/releases/other/whats-this-plugin.zip.gif&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;timestamp&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2020-03-27 06:02:58&amp;#34;&lt;/span&gt;,
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;version&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1.0.3.0&amp;#34;&lt;/span&gt;
+            }
+        ]
+    }
+]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The official repository manifest for &lt;a href=&#34;https://repo.jellyfin.org/releases/plugin/manifest-stable.json&#34;&gt;stable plugins&lt;/a&gt; can be used for more examples.
+You can also find the &lt;a href=&#34;https://repo.jellyfin.org/releases/plugin/manifest.json&#34;&gt;deprecated manifest&lt;/a&gt; on the same domain for the old format.
+However, all new plugin updates (on the official repository) will go to the new manifest, so older verions of Jellyfin won&#39;t receive plugin updates.
+Plugins do have &lt;a href=&#34;https://jellyfin.org/docs/plugin-api/MediaBrowser.Model.Updates.html&#34;&gt;official documentation&lt;/a&gt; on our DocFX instance.
+Please be aware that our documentation is still a work in progress, since a lot of the C# code still has very little information for tools like this.
+Things are improving thanks to the diligent server team though, who have been slowly adding information throughout the codebase.&lt;/p&gt;
+&lt;h1 id=&#34;tools&#34;&gt;Tools&lt;/h1&gt;
+&lt;p&gt;One excellent tool that might help with repository management is &lt;a href=&#34;https://github.com/oddstr13/jellyfin-plugin-repository-manager&#34;&gt;jellyfin-plugin-repository-manager&lt;/a&gt; by Oddstr13, a frequent contributor.
+He did mention that his tool works much better with nginx than GitHub releases, but feel free to check it out!
+Another useful tool might be the &lt;a href=&#34;https://github.com/jellyfin/jellyfin-build&#34;&gt;jellyfin-build&lt;/a&gt; repository, which used to be the method used for updates on the official repository.
+We&#39;ll probably be migrating to the repository manager linked above though, since most of the other build systems have moved to Azure.&lt;/p&gt;
+&lt;h1 id=&#34;code&#34;&gt;Code&lt;/h1&gt;
+&lt;p&gt;There are always a few changes to the ABI you might want to know about if you maintain a plugin.
+I&#39;ll include the most important ones for 10.6.0 here to hopefully reduce any issues with the update.&lt;/p&gt;
+&lt;p&gt;The first batch comes from the HTML for settings on the web client, which has been going through an overhaul lately.
+One of the long term goals we have is deprecating jQuery entirely, since it&#39;s not 2008 anymore and better tools have come along.
+That does mean plugin pages will have to migrate off it at some point, but we haven&#39;t made the full transition yet, don&#39;t worry.
+Although jQuery will stick around a bit longer, we did remove two custom scripts in the web source that&amp;hellip;extended the functionality a bit.
+There was one for &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/selectmenu.js&#34;&gt;select menus&lt;/a&gt; and yet another for &lt;a href=&#34;https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/fnchecked.js&#34;&gt;checkbox&lt;/a&gt; elements.
+I can only assume the goal was compatibility with older browsers or clients at the time, but we&#39;ve been pushing extremely hard to modernize the web client.
+That means avoiding abandoned libraries, ancient JavaScript practices, and definitely custom extensions for dependencies we don&#39;t even want in the code.
+The easiest fix for this change is to migrate from jQuery to vanilla JavaScript for checkboxes and select menus in the HTML source.&lt;/p&gt;
+&lt;p&gt;There were also several changes to the C# ABI that might affect your plugin.
+The most troublesome is probably the ILogger tweaks, which were made to improve the server logs by appending the class name to every line.
+You&#39;ll also find quite a few changes caused by the new database migration (Jellyfin.Data is the new namespace for these objects) and a few unrelated items.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;IExternalID.Name -&amp;gt; IExternalID.ProviderName
+MediaBrowser.Controller.Entities.User -&amp;gt; Jellyfin.Data.Entities.User
+MetadataProviders -&amp;gt; MetadataProvider
+CompressionMethod -&amp;gt; CompressionMethods
+RequestContentBytes &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; request -&amp;gt; RequestContent &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Encoding.UTF8.GetString&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;request&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+User.Name -&amp;gt; User.Username
+item.GetDisplayExtras&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; -&amp;gt; item.GetExtras&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;BaseItem.DisplayExtraTypes&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+user.RootFolder -&amp;gt; libraryManager.GetUserRootFolder&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;future&#34;&gt;Future&lt;/h1&gt;
+&lt;p&gt;Third party repositories are the first step in a larger plan to vastly increase plugin usage within the codebase.
+They will allow anyone to maintain their own plugin and push updates as quickly as they want, without having to deal with a centralized system.
+It also gives users the power to reduce their reliance on an internet connection by allowing all repositories to be removed at will.&lt;/p&gt;
+&lt;p&gt;We understand some of these changes might be annoying to update within your plugin, but hopefully that will also see an improvement very soon.
+The next goal (now that more than one repository can be used at the same time) will be an unstable repository for plugins.
+This will fix the long-standing request for better plugin support on the unstable version, which has been a blocker for many users.
+It will also have the side effect of requiring an unstable NuGet repository for the C# ABI, thus helping third party plugin developers test their plugins against any changes to the ABI before a server update has landed.&lt;/p&gt;
+&lt;p&gt;If you develop a plugin (or client) and would like to be included in our mailing list for third party developers, please contact us through Matrix or send an email to get the details.
+The main goal here is excellent support for plugins and unofficial clients, so if you have any suggestions definitely contact us on one of our public forums.
+Hopefully, the C# ABI will stabilize over time and huge changes will become more infrequent so we can focus on making plugins as great as possible!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Packaging Updates for 10.6.0</title>
       <link>https://jellyfin.org/posts/packaging-updates/</link>
       <pubDate>Sun, 21 Jun 2020 04:16:09 -0400</pubDate>
-      
       <guid>https://jellyfin.org/posts/packaging-updates/</guid>
       <description>&lt;p&gt;Packaging and building binaries for releases and testing has long been an issue for us. From fighting with duct-tape-and-coat-hanger scripts, to testing breaking changes, to massaging official releases, how we were doing things for the last year-and-a-half needed some improvements.&lt;/p&gt;
 &lt;p&gt;Luckily, today they are all completed. In this post, I&#39;ll detail the changes as well as what the entail for our users.&lt;/p&gt;
-&lt;p&gt;For a brief TL;DR: for most users of our stable releases, not much will change, and you will upgrade to 10.6.0 as you always have. For anyone using nightlies for testing, advanced setups, or who are just curious - read on!&lt;/p&gt;</description>
+&lt;p&gt;For a brief TL;DR: for most users of our stable releases, not much will change, and you will upgrade to 10.6.0 as you always have. For anyone using nightlies for testing, advanced setups, or who are just curious - read on!&lt;/p&gt;
+&lt;h3 id=&#34;split-builds&#34;&gt;Split Builds&lt;/h3&gt;
+&lt;p&gt;The first main component of the packaging changes is split builds. Previously, we were relying on some serious hackery in order to build both the Web UI (&lt;a href=&#34;https://github.com/jellyfin/jellyfin-web&#34;&gt;https://github.com/jellyfin/jellyfin-web&lt;/a&gt;) and Server (&lt;a href=&#34;https://github.com/jellyfin/jellyfin&#34;&gt;https://github.com/jellyfin/jellyfin&lt;/a&gt;) and combine them into one package. Ultimately, with the sheer number of changes in both repositories and speed at which updates happen, along with our eventual goal to decouple the two from each other for releases, this sort of solution had reached its limits. This is perhaps best exemplified by the mostly-unseen work I had to do to get 10.5.4 and 10.5.5 to build at all.&lt;/p&gt;
+&lt;p&gt;With split packages, the two repositories are now built completely independently for all platforms. If you build the &lt;code&gt;jellyfin-web&lt;/code&gt; repository, you get out a Docker image, &lt;code&gt;.deb&lt;/code&gt; packages, &lt;code&gt;.rpm&lt;/code&gt; packages, or a &lt;code&gt;.tar.gz&lt;/code&gt; archive that just contains the Web UI. Similarly, if you build the &lt;code&gt;jellyfin&lt;/code&gt; repository, you get out the various Docker, &lt;code&gt;.deb&lt;/code&gt;, &lt;code&gt;.rpm&lt;/code&gt;, &lt;code&gt;.tar.gz&lt;/code&gt;, and &lt;code&gt;.zip&lt;/code&gt; archives you know and love.&lt;/p&gt;
+&lt;p&gt;The main difference is the naming - the &lt;code&gt;jellyfin-web&lt;/code&gt; repository binaries are named, well, &lt;code&gt;jellyfin-web&lt;/code&gt;, and the &lt;code&gt;jellyfin&lt;/code&gt; repository binaries are named &lt;code&gt;jellyfin-server&lt;/code&gt;. So, to use Debian as an example, where there was once &lt;code&gt;jellyfin&lt;/code&gt;, there is now &lt;code&gt;jellyfin-web&lt;/code&gt; and &lt;code&gt;jellyfin-server&lt;/code&gt;. But don&#39;t worry, &lt;code&gt;jellyfin&lt;/code&gt; is not gone - we&#39;ll get to that shortly.&lt;/p&gt;
+&lt;h3 id=&#34;azure-pipelines-builds&#34;&gt;Azure Pipelines builds&lt;/h3&gt;
+&lt;p&gt;Our previous build infrastructure consisted of a veritable spaghetti factory of Bash, Python, and Docker scripts that were executed on our build server, a DigitalOcean droplet. For the most part, it worked, but the process was very fragile, opaque (I&#39;m not even sure &lt;em&gt;I&lt;/em&gt; understand how it all worked all the time, and I wrote it all!), and resource-intensive.&lt;/p&gt;
+&lt;p&gt;As we&#39;ve moved more and more functions to Azure for testing, verification, linting, etc. in the various repositories, it became obvious that Azure Pipelines had a lot of flexibility, and would be able to perform nearly all of our build steps for us. This eliminated at least 2/3 of the build server, and gives us another cool option - unstable builds, which I&#39;ll touch on shortly.&lt;/p&gt;
+&lt;p&gt;The Azure Pipelines build handles the actual building of all the archives for both repositories mentioned in the previous section, uploads the binary artifacts to the build server, and then kicks off a single script to handle the last 1/3 of the process, making things much clearer, more obvious, and with results visible to everyone in our Azure project page.&lt;/p&gt;
+&lt;h3 id=&#34;metapackages-and-metaimages&#34;&gt;Metapackages and Metaimages&lt;/h3&gt;
+&lt;p&gt;I previously mentioned that the package which used to be called &lt;code&gt;jellyfin&lt;/code&gt; is now called &lt;code&gt;jellyfin-server&lt;/code&gt;, and does not contain the Web UI. So, how do you get it all? And how will upgrades be seamless? The answer is metapackages, metaarchives, and metaimages! These new components can be found in &lt;a href=&#34;https://github.com/jellyfin/jellyfin-metapackages&#34;&gt;this repository page&lt;/a&gt;, specifically the Docker images which will now be the source of truth for those configurations. I&#39;ll outline how each platform behaves below.&lt;/p&gt;
+&lt;p&gt;For Docker, the Azure pipelines split builds create docker images called &lt;code&gt;jellyfin/jellyfin-server&lt;/code&gt; and &lt;code&gt;jellyfin/jellyfin-web&lt;/code&gt;. On their own they&#39;re not too useful, but exist to enable the next step. When an Azure build finishes and has uploaded these images, a script is kicked off on our build server which builds the &lt;code&gt;jellyfin/jellyfin&lt;/code&gt; &amp;ldquo;metaimage&amp;rdquo;, which will take the two separate images, and combine them into a single Docker image along with all the components to run them, like &lt;code&gt;jellyfin-ffmpeg&lt;/code&gt;, then push the resulting image. The end result is a single image, &lt;code&gt;jellyfin/jellyfin&lt;/code&gt;, like there has always been, but the builds are done independently rather than relying on &lt;code&gt;git clone&lt;/code&gt;/archive downloads inside the build steps and other shenanigans.&lt;/p&gt;
+&lt;p&gt;For Debian and Ubuntu, the Azure pipelines split builds create separate &lt;code&gt;.deb&lt;/code&gt; packages for each component. Unlike Docker, these are fully usable on their own, and installing Jellyfin in 10.6.0+ can be done with &lt;code&gt;apt install jellyfin-server jellyfin-web&lt;/code&gt; if one wishes. The metapackage is a separate &lt;code&gt;.deb&lt;/code&gt;, called &lt;code&gt;jellyfin&lt;/code&gt;, who&#39;s only function is to have dependencies on these two component packages. Thus, installing &lt;code&gt;jellyfin&lt;/code&gt; will automatically install &lt;code&gt;jellyfin-server&lt;/code&gt; and &lt;code&gt;jellyfin-web&lt;/code&gt;, along with the other required dependencies from each. This is how upgrades will be seamless from previous versions: upgrading from the old &lt;code&gt;jellyfin&lt;/code&gt; to the new &lt;code&gt;jellyfin&lt;/code&gt; will automatically pull in the two new subpackages and remove the old one, with no interruptions.&lt;/p&gt;
+&lt;p&gt;For Fedora and CentOS, the setup is similar to Debian/Ubuntu, with the only difference being the metapackage is a component of the &lt;code&gt;jellyfin-server&lt;/code&gt; repository and is thus only rebuilt when that repository is. However, since we do not provide a &amp;ldquo;proper&amp;rdquo; repository for these packages like we do for Debian/Ubuntu, the impact should be quite low, and will be nonexistent for stable releases.&lt;/p&gt;
+&lt;p&gt;For Windows installers and MacOS &lt;code&gt;.app&lt;/code&gt; packages, the process remains a little more complicated and a WIP, but those will continue to work on release.&lt;/p&gt;
+&lt;p&gt;For the remaining platforms, including the archive packages for Windows, MacOS, Linux, and .NET portable, the process takes the two separate &lt;code&gt;.tar.gz&lt;/code&gt; / &lt;code&gt;.zip&lt;/code&gt; archives from the build process, and combines them into a single &lt;code&gt;jellyfin&lt;/code&gt; archive of the same type, which puts the two component parts in their respective places. Thus, like all the others mentioned above, the change should be invisible to users by downloading the &amp;ldquo;combined&amp;rdquo; version of the archives.&lt;/p&gt;
+&lt;h3 id=&#34;unstable-builds&#34;&gt;Unstable builds&lt;/h3&gt;
+&lt;p&gt;One of the cool things that this new setup enables is &amp;ldquo;unstable&amp;rdquo; builds. For quite a while now, we&#39;ve been providing (when not broken) &amp;ldquo;nightly&amp;rdquo; builds, which as their name implies are build every night if there were merged PRs from the previous day. However, these had a number of drawbacks. First, they broke a lot; second, on a busy day it would be possible for there to be up to a dozen separate PRs that made up the nightly changeset; third, they could often be totally messed up in terms of contents, for instance if the unsplit build grabbed the wrong version of Web.&lt;/p&gt;
+&lt;p&gt;The new split builds, Azure builds, and metapackages/metaimages instead let us do something far superior: build &amp;ldquo;unstable&amp;rdquo; releases for &lt;em&gt;every merged PR&lt;/em&gt;. We don&#39;t have to worry about resource usage (Azure provides this), disk space, or other aspects of the build process. We can know immediately if something breaks. And most importantly, it lets anyone test our master branch in a very clear way, knowing &lt;em&gt;exactly&lt;/em&gt; what version of the repository you are using and what the last merged PR was if something goes wrong.&lt;/p&gt;
+&lt;p&gt;Unstable builds are versioned based on the Azure build ID, which is in the format &amp;ldquo;[date].[id]&amp;quot;, for example &amp;ldquo;20200620.12&amp;rdquo; for the 12th build on June 20th 2020. Thus this version string will tell you exactly which Azure build generated the binary, and thus which PR in which repository triggered it. For those binaries with changelogs (&lt;code&gt;.deb&lt;/code&gt; and &lt;code&gt;.rpm&lt;/code&gt; packages only for now), the changelog data includes the PR ID explicitly as well.&lt;/p&gt;
+&lt;h3 id=&#34;using-unstable-builds&#34;&gt;Using Unstable builds&lt;/h3&gt;
+&lt;p&gt;Using unstable builds is a bit different than the previous nightlies. For those, the packages/images were named &lt;code&gt;jellyfin-nightly&lt;/code&gt; or &lt;code&gt;jellyfin:nightly&lt;/code&gt; (for Docker) and were stored in the same repositories. This has now changed somewhat, and I&#39;ll detail the changes to each platform below. Note that, at least until 10.6.0 is released, we will continue to build &lt;code&gt;nightly&lt;/code&gt; images as we always have, after which they will be turned off in favour of &lt;code&gt;unstable&lt;/code&gt; builds exclusively, so if you like to live on the bleeding edge, please review this section in detail and make the required changes as soon as you can.&lt;/p&gt;
+&lt;p&gt;For Docker, the new unstable builds are available with the &lt;code&gt;unstable&lt;/code&gt; tag, e.g. &lt;code&gt;jellyfin/jellyfin:unstable&lt;/code&gt;, or at a specific version tag, for instance &lt;code&gt;jellyfin/jellyfin:20200620.12-unstable&lt;/code&gt;. Following the main &lt;code&gt;unstable&lt;/code&gt; tag will ensure you can always grab the latest unstable build, while the versioned tags allow you to pull specific builds for testing or debugging.&lt;/p&gt;
+&lt;p&gt;For Debian and Ubuntu, where the unstable images are stored has changed. As mentioned, previously they were part of the &lt;code&gt;main&lt;/code&gt; section of the repository with the alternate name &lt;code&gt;jellyfin-nightly&lt;/code&gt;, and this is no longer the case for unstable. Instead, a separate repository &amp;ldquo;component&amp;rdquo; called &lt;code&gt;unstable&lt;/code&gt; has been created to house the unstable builds, and they are not renamed. To enable this extra component, add a line to your &lt;code&gt;/etc/apt/sources.list.d/jellyfin.list&lt;/code&gt; like the following, which is identical to the existing line except with &lt;code&gt;main&lt;/code&gt; replaced by &lt;code&gt;unstable&lt;/code&gt;: &lt;code&gt;deb [arch=amd64] https://repo.jellyfin.org/debian buster unstable&lt;/code&gt;. Because of how the versioning works, once you enable this additional source, you will always get the &lt;code&gt;unstable&lt;/code&gt; packages with their &amp;ldquo;very high&amp;rdquo; version numbers over the stable releases, so to disable unstable builds, you must remove this extra line, run &lt;code&gt;apt update&lt;/code&gt;, remove the old package(s), then install the stable version.&lt;/p&gt;
+&lt;p&gt;For all other releases, since the source was always files downloaded from &lt;a href=&#34;https://repo.jellyfin.org/releases&#34;&gt;our repository site&lt;/a&gt;, not much will change - instead of downloading files from the &lt;code&gt;nightly/&lt;/code&gt; folder of your platform, download from the &lt;code&gt;unstable/&lt;/code&gt; folder. Note that these folders will, because of the split builds, contain separate subfolders for &lt;code&gt;server&lt;/code&gt;, &lt;code&gt;web&lt;/code&gt;, and &lt;code&gt;combined&lt;/code&gt;; generally you will want &lt;code&gt;combined&lt;/code&gt;. You can then use these archives as you always have.&lt;/p&gt;
+&lt;h3 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h3&gt;
+&lt;p&gt;Thank you for reading this description of our build changes. We continue to test these extensively to work out any bugs, but if you have questions or feedback, please drop us a message on Matrix!&lt;/p&gt;
+&lt;p&gt;We hope to see you very soon for 10.6.0, and many future releases with this new format!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Client Spotlight: Infuse for tvOS and iOS</title>
       <link>https://jellyfin.org/posts/client-infuse/</link>
       <pubDate>Tue, 12 May 2020 10:00:00 -0400</pubDate>
-      
       <guid>https://jellyfin.org/posts/client-infuse/</guid>
       <description>&lt;p&gt;Today, &lt;a href=&#34;https://firecore.com&#34;&gt;Firecore&lt;/a&gt; has launched &lt;a href=&#34;https://firecore.com/infuse&#34;&gt;Infuse 6.4&lt;/a&gt; for Apple TV, iPhone, and iPad.&lt;/p&gt;
-&lt;p&gt;This release brings official support for Jellyfin, built right in.&lt;/p&gt;</description>
+&lt;p&gt;This release brings official support for Jellyfin, built right in.&lt;/p&gt;
+&lt;p&gt;With Infuse, it&#39;s easy to connect to with automatic server discovery. Once connected, you can enjoy direct playback (no transcoding required) for almost all formats.&lt;/p&gt;
+&lt;p&gt;There are way too many features to list them all, but here&#39;s a few.&lt;/p&gt;
+&lt;p&gt;With Infuse, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enjoy hardware decoded H.264 and H.265 video&lt;/li&gt;
+&lt;li&gt;Direct play of 4K video with HDR&lt;/li&gt;
+&lt;li&gt;Direct play of Dolby Vision (single-layer) and Dolby Atmos&lt;/li&gt;
+&lt;li&gt;Playback position sync with Jellyfin, and Trakt&lt;/li&gt;
+&lt;li&gt;Sync videos for offline playback&lt;/li&gt;
+&lt;li&gt;Adjustable playback speed&lt;/li&gt;
+&lt;li&gt;PiP and Split View support on iPadOS&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When you get Infuse Pro:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;High res audio decoding (Dolby True HD, DTS-HD MA)&lt;/li&gt;
+&lt;li&gt;AirPlay and Google Cast support&lt;/li&gt;
+&lt;li&gt;Even more format support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a class=&#34;NoLinkLook&#34; href=&#39;https://apps.apple.com/app/id1136220934?mt=8&#39;&gt;&lt;img height=&#34;77&#34; src=&#34;https://jellyfin.org/images/posts/infuse/infuse-6-icon.png&#34;/&gt;&lt;/a&gt; &lt;a style=&#34;padding-left: 20px;&#34; class=&#34;NoLinkLook&#34; href=&#39;https://apps.apple.com/app/id1136220934?mt=8&#39;&gt;&lt;img width=&#34;153&#34; alt=&#39;Download on the App Store&#39; src=&#39;https://jellyfin.org/images/store-icons/app-store.svg&#39;/&gt;&lt;/a&gt;&lt;br/&gt;Infuse is a free download on the &lt;a href=&#34;https://apps.apple.com/app/id1136220934?mt=8&#34;&gt;App Store&lt;/a&gt;. &lt;br/&gt; Infuse Pro can be purchased separately, or through in-app subscription.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Here&#39;s what our demo library looks like on Apple TV with Infuse 6.4.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Click a screenshot for a full 2160p view.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-1.png&#34;&gt;&lt;img src=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-1-thumb.png&#34; name=&#34;Main Screen&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-2.png&#34;&gt;&lt;img src=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-2-thumb.png&#34; name=&#34;Movie View&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-3.png&#34;&gt;&lt;img src=&#34;https://jellyfin.org/images/posts/infuse/infuse-screenshot-3-thumb.png&#34; name=&#34;Movie Detail View&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jellyfin: Now on Xbox One (UPDATED)</title>
       <link>https://jellyfin.org/posts/jellyfin-xbox/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/jellyfin-xbox/</guid>
-      <description>&lt;p&gt;Due to long standing issues with this current release of the Xbox client beta, and incompatibility with the latest release of Jellyfin, we&#39;ve made the decision to remove it from the store. We hope to return soon, with an updated client. In the meanwhile, please try using the Edge browser, or Kodi with our plug-ins to watch Jellyfin.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Due to long standing issues with this current release of the Xbox client beta, and incompatibility with the latest release of Jellyfin, we&#39;ve made the decision to remove it from the store. We hope to return soon, with an updated client. In the meanwhile, please try using the Edge browser, or Kodi with our plug-ins to watch Jellyfin.&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;Jellyfin is proud to announce our brand new &lt;a href=&#34;https://www.microsoft.com/store/apps/9P2DRTG62QF8&#34;&gt;Xbox One client beta&lt;/a&gt;.&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;Thanks to some very &lt;a href=&#34;https://github.com/jellyfin/jellyfin-uwp/graphs/contributors&#34;&gt;helpful contributors&lt;/a&gt;, Jellyfin is now available for your Xbox One:&lt;/p&gt;
+&lt;!--&lt;a class=&#34;NoLinkLook&#34; href=&#34;//www.microsoft.com/store/apps/9P2DRTG62QF8?cid=storebadge&amp;ocid=badge&#34;&gt;&lt;img src=&#34;https://jellyfin.org/images/store-icons/microsoft.svg&#34; alt=&#34;View Jellyfin in the Microsoft Store&#34; style=&#34;width: 142px; height: 52px;&#34;/&gt;&lt;/a&gt;--&gt;
+&lt;p&gt;To get started, use the icon above, or search the store for &amp;ldquo;Jellyfin&amp;rdquo;. We also plan on expanding this client to Windows in the near future.&lt;/p&gt;
+&lt;p&gt;Do you have suggestions or ideas on how to improve the experience? &lt;a href=&#34;../../contact&#34;&gt;Let us know&lt;/a&gt;, or visit the project on &lt;a href=&#34;https://github.com/jellyfin/jellyfin-uwp&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Happy streaming!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jellyfin Release - v10.5.0</title>
       <link>https://jellyfin.org/posts/jellyfin-10-5-0/</link>
       <pubDate>Sat, 07 Mar 2020 08:11:42 +0100</pubDate>
-      
       <guid>https://jellyfin.org/posts/jellyfin-10-5-0/</guid>
-      <description>&lt;p&gt;A myriad of improvements, bugfixes, and a look towards the future.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A myriad of improvements, bugfixes, and a look towards the future.&lt;/p&gt;
+&lt;p&gt;With &lt;strong&gt;over 200 contributions&lt;/strong&gt; and &lt;strong&gt;over 500 issues closed&lt;/strong&gt;, this is our biggest release yet. We&#39;re releasing a bit before the expected Christmas deadline, but our anniversary release packs a lot of new features.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://jellyfin.org/downloads/&#34; class=&#34;button button__accent&#34;&gt;Download Jellyfin 10.5.0&lt;/a&gt; &lt;a href=&#34;https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0&#34; class=&#34;button hero__button&#34;&gt;Read the full release notes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;This post will feature some of the main enhancements available in Jellyfin version 10.5.0. For an exhaustive list of all the changes, you can find a complete list on &lt;a href=&#34;https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;web-client&#34;&gt;Web client&lt;/h2&gt;
+&lt;p&gt;This cycle, part of our focus was on improving the look and feel of the web client.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;10.4.3&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-5-0/old-home.jpg&#34; name=&#34;&#34; /&gt;
+    &lt;img data-label=&#34;10.5.0&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-5-0/new-home.jpg&#34; name=&#34;&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;The web client now uses the &lt;strong&gt;Noto Sans&lt;/strong&gt; font for all the languages we ship with. This makes for a more consistent experience and ensures that &lt;strong&gt;multilingual libraries look unified&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Jellyfin 10.5.0 ships with the Latin, Greek, Chinese, Japanese, Korean, Arabic, Cyrillic, Hebrew, Vietnamese and Devanagari versions of the Noto font, optimized for the web.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;10.4.3&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-5-0/old-details.png&#34; name=&#34;&#34; /&gt;
+    &lt;img data-label=&#34;10.5.0&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-5-0/new-details.png&#34; name=&#34;&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;The most noticeable visual change is the &lt;strong&gt;new details page layout&lt;/strong&gt;. It puts the artwork of your library front and center while looking more modern and polished.&lt;/p&gt;
+&lt;p&gt;We have also completely &lt;strong&gt;overhauled SSA/ASS subtitle support&lt;/strong&gt;. Through the use of asm.js and Web Assembly, we now provide improved rendering for these formats, fixing some long-standing issues for anime lovers. Note that this feature is still experimental. If you notice lag in the rendering of complex effects, you can enable burn-in by selecting &lt;em&gt;All complex formats&lt;/em&gt; in &lt;em&gt;User Settings &amp;gt; Subtitles &amp;gt; Burn subtitles&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;However, most of the new developments in the web client are not immediately visible. We spent a lot of time preparing and cleaning the code for future improvements.&lt;/p&gt;
+&lt;p&gt;&lt;img data-label=&#34;10.5.0&#34; src=&#34;https://jellyfin.org/images/posts/jellyfin-10-5-0/webos-icons.png&#34; name=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;A few long-standing issues for WebOS have been fixed as well, bringing us a bit closer to the release of the WebOS app. Among these, icons are now properly working and the client has been reported to work on both WebOS 3 and WebOS 4. We also have plans for the next release that should improve compatibility with earlier WebOS versions and streamline the support of clients using older browser versions as a base. Navigation in the TV layout has also been substantially improved, paving the way for navigation using a remote.&lt;/p&gt;
+&lt;p&gt;Finally, several performance and responsiveness issues have been addressed. A rogue gamepad input loop is now properly handled, which prevents unnecessary repaintings by the browser and should improve performance. A previously disabled fade-in effect for images has also been enabled, making loading into a new page look smoother. It is now also possible to upload artwork in WEBP format.&lt;/p&gt;
+&lt;h2 id=&#34;server&#34;&gt;Server&lt;/h2&gt;
+&lt;p&gt;This cycle, our server team ported the code over to .NET Core 3.1. This move makes new features available to our developers, including support for ARM64 for Linux, compatibility with TLS v1.3 and better garbage collection on Docker, allowing for better memory usage when running in a container.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support for AMD AMF hardware encoding&lt;/strong&gt; is now available on Windows and Linux. We also improved DVD support when added as folders. The metadata provider for TheMovieDB now handles season images. Furthermore, various issues with media scanning, base URLs and DLNA were fixed. &lt;strong&gt;Full hardware acceleration&lt;/strong&gt; for Raspberry Pi is also now supported for older models. For Raspeberry Pi 4, hardware-accelerated encoding for H264 is now supported on Raspbian, both using the LinuxServer.io Docker and the repository package.&lt;/p&gt;
+&lt;p&gt;As part of a project to move the core metadata providers to plugins, MusicBrainz is now a default plugin and allows you to configure the URL of the instance you want to pull data from. This allows you to host an instance of MusicBrainz and sidestep the global rate limiting enforced by the main service.&lt;/p&gt;
+&lt;p&gt;In addition to all these improvements, more tests have been added on the server-side to help developers track down issues with new and existing code. This ensures a faster development time and helps prevents regressions, which will now be caught earlier through automated testing.&lt;/p&gt;
+&lt;h2 id=&#34;documentation&#34;&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;Our documentation team has also been hard at work improving both the user and developer documentation.&lt;/p&gt;
+&lt;p&gt;Of note recently are the overhauls to the &lt;a href=&#34;https://jellyfin.org/docs/general/networking/index.html&#34;&gt;Networking&lt;/a&gt; and &lt;a href=&#34;https://jellyfin.org/docs/general/administration/hardware-acceleration.html&#34;&gt;Hardware Acceleration&lt;/a&gt; sections.&lt;/p&gt;
+&lt;p&gt;We now provide an extensive &lt;a href=&#34;https://jellyfin.org/docs/general/clients/codec-support.html&#34;&gt;Codec Support&lt;/a&gt; list and help on &lt;a href=&#34;https://jellyfin.org/docs/general/clients/css-customization.html&#34;&gt;CSS Customization&lt;/a&gt;, with examples of useful CSS customizations to apply to your server via the Administration dashboard.&lt;/p&gt;
+&lt;h2 id=&#34;looking-towards-the-future&#34;&gt;Looking towards the future&lt;/h2&gt;
+&lt;p&gt;A lot is happening in the world of Jellyfin recently. Since the release of Jellyfin 10.4.0, we have seen a lot of new contributors joining the team and the speed of development has tremendously accelerated.&lt;/p&gt;
+&lt;p&gt;With the influx of contributors, we have a few large scale projects for both the server and the web client that should bring a ton of improvements to Jellyfin. More information is already available on &lt;a href=&#34;https://github.com/jellyfin/&#34;&gt;GitHub&lt;/a&gt; if you want to take part in the discussion or implementation.&lt;/p&gt;
+&lt;p&gt;We&#39;d like to thank all the contributors to this release for their hard work and dedication to making the best FOSS media server possible.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Abbe98/&#34;&gt;Abbe98&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/anthonylavado/&#34;&gt;anthonylavado&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Artiume/&#34;&gt;Artiume&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Bond-009/&#34;&gt;Bond-009&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/bugfixin/&#34;&gt;bugfixin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/cvium/&#34;&gt;cvium&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dhartung/&#34;&gt;dhartung&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dinki/&#34;&gt;dinki&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dkanada/&#34;&gt;dkanada&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dmitrylyzo/&#34;&gt;dmitrylyzo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/DrPandemic/&#34;&gt;DrPandemic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/EraYaN/&#34;&gt;EraYaN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ferferga/&#34;&gt;ferferga&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/grafixeyehero/&#34;&gt;grafixeyehero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/joshuaboniface/&#34;&gt;joshuaboniface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/JustAMan/&#34;&gt;JustAMan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/LogicalPhallacy/&#34;&gt;LogicalPhallacy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mark-monteiro/&#34;&gt;mark-monteiro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MrTimscampi/&#34;&gt;MrTimscampi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Narfinger/&#34;&gt;Narfinger&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Nickbert7/&#34;&gt;Nickbert7&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nvllsvm/&#34;&gt;nvllsvm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nyanmisaka/&#34;&gt;nyanmisaka&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/oddstr13/&#34;&gt;oddstr13&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ploughpuff/&#34;&gt;ploughpuff&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/redSpoutnik/&#34;&gt;redSpoutnik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sparky8251/&#34;&gt;sparky8251&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/thornbill/&#34;&gt;thornbill&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vitorsemeano/&#34;&gt;vitorsemeano&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Wunax/&#34;&gt;Wunax&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/YouKnowBlom/&#34;&gt;YouKnowBlom&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you&#39;d like to take part in the development of Jellyfin, most of the contributors are available on &lt;a href=&#34;https://github.com/jellyfin/&#34;&gt;GitHub&lt;/a&gt; or via &lt;a href=&#34;https://jellyfin.org/contact/&#34;&gt;any of the ways on our contact page&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jellyfin for Kodi Release - v0.5.0</title>
       <link>https://jellyfin.org/posts/kodi-0-5-0/</link>
       <pubDate>Wed, 04 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/kodi-0-5-0/</guid>
-      <description>&lt;p&gt;Announcing Kodi 19 support, Python 3, and more!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Announcing Kodi 19 support, Python 3, and more!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please make sure you are either upgrading from version 0.4.1, or restart Kodi after upgrading to 0.5.0.  There are some incompatibilities with new libraries that can&#39;t be resolved at runtime and require either the previous version or a restart to initialize properly.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Kodi 19 support&lt;/li&gt;
+&lt;li&gt;Significantly faster sync speed&lt;/li&gt;
+&lt;li&gt;Less noisy logs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;Kodi 19 (code named &amp;lsquo;Matrix&amp;rsquo;) is right around the corner and we&#39;re ready for its arrival.  Matrix is currently in a pre-release state and alpha releases are available in Team Kodi&#39;s &lt;a href=&#34;https://mirrors.kodi.tv/nightlies/&#34;&gt;nightly download repo&lt;/a&gt;.  This is a big release in that Matrix introduces Python 3 support into the Kodi addon ecosystem.&lt;/p&gt;
+&lt;p&gt;Other exciting news is that we have some significant speed increases within the addon, particularly surrounding the initial library sync.  In some cases we&#39;re seeing sync times well below half of their previous values.  This is largely due to new contributor &lt;a href=&#34;https://github.com/druscoe&#34;&gt;druscoe&lt;/a&gt;, so there&#39;s some well deserved shout outs there.&lt;/p&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;p&gt;Full release notes available on &lt;a href=&#34;https://github.com/jellyfin/jellyfin-kodi/releases/tag/v0.5.0&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;download-now&#34;&gt;Download Now&lt;/h2&gt;
+&lt;p&gt;If you have the Jellyfin for Kodi addon repository installed and updates enabled, this version will automatically be installed for you.&lt;/p&gt;
+&lt;p&gt;If you have installed the addon manually, the new zip file is available &lt;a href=&#34;https://repo.jellyfin.org/releases/client/kodi/plugin.video.jellyfin/plugin.video.jellyfin-0.5.0.zip&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Client Spotlight: MPV Shim</title>
       <link>https://jellyfin.org/posts/client-mpv/</link>
       <pubDate>Fri, 07 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/client-mpv/</guid>
-      <description>&lt;p&gt;Jellyfin MPV Shim is a lightweight cast-only client that allows you to cast videos from Jellyfin to the &lt;a href=&#34;https://mpv.io/&#34;&gt;MPV Media Player&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Jellyfin MPV Shim is a lightweight cast-only client that allows you to cast videos from Jellyfin to the &lt;a href=&#34;https://mpv.io/&#34;&gt;MPV Media Player&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It runs in the system tray and stays out of your way until you want to play something. It also has excellent codec support and many configurable options for advanced users.&lt;/p&gt;
+&lt;p&gt;If you watch a lot of anime, this client is definitely for you. The player has full support for 10-bit HEVC video with subtitles. Additionally, there is a menu option that allows setting subtitles and audio preferences over an entire season of TV at once.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/images/mpv-shim/blender.png&#34; name=&#34;Interface&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;To get started on Windows, simply &lt;a href=&#34;https://github.com/iwalton3/jellyfin-mpv-shim/releases&#34;&gt;download the binary&lt;/a&gt; and run it. If you are on Linux, &lt;a href=&#34;https://github.com/iwalton3/jellyfin-mpv-shim/blob/master/README.md#linux-installation&#34;&gt;follow the instructions here&lt;/a&gt;. After you have started the client, enter the URL of your server and the username and password to connect. The client will run in a tray icon, which allows you to access the configuration and view the error logs.&lt;/p&gt;
+&lt;p&gt;Casting media is easy. Open the Play On menu in the Jellyfin web or mobile clients and select Jellyfin MPV Shim. Then play media normally. You’ll be able to control most aspects of playback from the web application or by &lt;a href=&#34;https://github.com/iwalton3/jellyfin-mpv-shim#keyboard-shortcuts&#34;&gt;using keyboard shortcuts&lt;/a&gt;. Most of the options can be accessed using the menu during playback. Press &lt;code&gt;C&lt;/code&gt; on your computer or use the arrow-based navigation controls in the mobile client when supported.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://jellyfin.org/images/mpv-shim/menu.png&#34; name=&#34;Configuration Menu&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;You can adjust playback settings and preferences in the menu with ease. Use the arrow keys and enter to navigate and escape to go back. The &lt;strong&gt;Auto Set Audio/Subtitles&lt;/strong&gt; option allows you to set the subtitles for an entire season at once, instead of having to change the settings each time the episode changes. Use the &lt;strong&gt;Preferences&lt;/strong&gt; menu to adjust the default playback settings and remote video quality.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Client Spotlight&lt;/p&gt;
+&lt;p&gt;This blog series aims to highlight some of the amazing projects created by our community.&lt;/p&gt;
+&lt;p&gt;Feel free to send a message if you can think of a project that could use more love!&lt;/p&gt;
+&lt;/blockquote&gt;</description>
     </item>
     
     <item>
       <title>New Android TV Release - v0.11.0</title>
       <link>https://jellyfin.org/posts/android-tv-11/</link>
       <pubDate>Tue, 04 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/android-tv-11/</guid>
-      <description>&lt;p&gt;Thank you for using Jellyfin! This is a major update for the Android TV client.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Thank you for using Jellyfin! This is a major update for the Android TV client.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️
+We have added crash reporting. Read the notes below for more information.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;highlights&#34;&gt;Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Upgraded ExoPlayer to version 2
+This means video playback should be a lot smoother now!&lt;/li&gt;
+&lt;li&gt;New home screen
+The newly made home screen now looks more or less the same as the webclient. It will display the sections you have chosen under your &amp;ldquo;Home&amp;rdquo; preferences.&lt;br&gt;
+&lt;em&gt;Note: changing sections is only available in the web version for now&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Integration with &amp;ldquo;Next Up&amp;rdquo; section on Android TV devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;crash-reporting&#34;&gt;Crash Reporting&lt;/h2&gt;
+&lt;p&gt;Providing logs on Android TV devices can be challenging for users as it requires Android developer tools. Issues can be challenging to replicate for developers and crash logs help a lot with this.&lt;/p&gt;
+&lt;p&gt;We don&#39;t want to force users to report their logs to a third-party and therefore we won&#39;t report anything by default. When a crash occured the app will show a dialog and ask to report the logs.&lt;/p&gt;
+&lt;p&gt;All crash reports are retained for 30 days and can only be reviewed by a small group of developers inside the Android TV team.&lt;/p&gt;
+&lt;p&gt;More information can be found in the &lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv/issues/193&#34;&gt;issue&lt;/a&gt; about this change.&lt;/p&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;p&gt;Full release notes available on &lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv/releases/tag/v0.11.0&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;download-now&#34;&gt;Download Now&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;NoLinkLook&#34; href=&#39;https://play.google.com/store/apps/details?id=org.jellyfin.androidtv&amp;utm_source=blog&amp;pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1&#39;&gt;&lt;img width=&#34;153&#34; alt=&#39;Get it on Google Play&#39; src=&#39;https://jellyfin.org/images/store-icons/google-play.png&#39;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;NoLinkLook&#34; href=&#39;https://www.amazon.com/gp/product/B07TX7Z725/ref=jellyfin_for_fire_tv&#39;&gt;&lt;img width=&#34;153&#34; alt=&#39;Available at Amazon App Store&#39; src=&#39;https://jellyfin.org/images/store-icons/amazon.png&#39;/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Direct downloads are always available from &lt;a href=&#34;https://repo.jellyfin.org/releases/client/androidtv/&#34;&gt;our repository&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Jellyfin in 2019</title>
       <link>https://jellyfin.org/posts/jellyfin-in-2019/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/jellyfin-in-2019/</guid>
-      <description>&lt;p&gt;It feels hard to believe, but the Jellyfin project is now over a year old. With our official founding somewhere around December 8th 2018, Andrew and I weren&#39;t sure exactly what was going to happen. Did we have the resources to make a fork of Emby really happen? Were the doubters right in saying that we wouldn&#39;t last a year? It seems that we&#39;ve proven them, and ourselves, wrong.&lt;/p&gt;</description>
+      <description>&lt;p&gt;It feels hard to believe, but the Jellyfin project is now over a year old. With our official founding somewhere around December 8th 2018, Andrew and I weren&#39;t sure exactly what was going to happen. Did we have the resources to make a fork of Emby really happen? Were the doubters right in saying that we wouldn&#39;t last a year? It seems that we&#39;ve proven them, and ourselves, wrong.&lt;/p&gt;
+&lt;p&gt;What started with just a few people, some forked code, and an idea a little over a year ago has now grown to a thriving community of contributors and users, always ready to help make something better: a truly FLOSS media server, one which refuses to bow to the pressures of commercialization, and that seeks to keep this space free. Without all of you, we wouldn&#39;t have gone anywhere at all, and for that you have our eternal thanks!&lt;/p&gt;
+&lt;p&gt;2019 has been a busy year for the &lt;a href=&#34;https://github.com/jellyfin/jellyfin&#34;&gt;Core Server project&lt;/a&gt;. Starting with our first &amp;ldquo;real&amp;rdquo; release of 10.0.0 in early January 2019, we&#39;ve been through 5 &amp;ldquo;major&amp;rdquo; releases and over a dozen hotfix revisions. There have been some significant changes to both the backend and frontend to help make Jellyfin more stable, more performant, and easier to use, with plenty more on the horizon. We&#39;ve removed tons of cruft, embedded 3rd-party libraries, and dead code, while adding numerous useful features. And we&#39;ve built in support for numerous platforms, including Debian/Ubuntu, Fedora/CentOS, Windows with both portable and installer versions, MacOS with officially signed DMG images, and most popular of all with over 52 million pulls, Docker. Plugins are growing as well, with over 20 now available - some ports of Emby plugins, some brand-new - and more coming all the time.&lt;/p&gt;
+&lt;p&gt;For the core server, 2020 looks to be just as exciting: our long-term plans continue to include a full database rewrite, permitting far better performance, backup/restore flexibility, and support for additional database engines, as well as continual overhaul of the WebUI to address usability concerns. &lt;a href=&#34;https://features.jellyfin.org&#34;&gt;Our Fider feature request center&lt;/a&gt; continues to grow with many well-requested features, and our hope is that the major overhaul work will be finished early this year so we can get on to new features without relying on spaghetti and duct tape to achieve them. If you&#39;re interested in helping, please check out our &lt;a href=&#34;https://jellyfin.org/contribute/&#34;&gt;How To Contribute&lt;/a&gt; page for details.&lt;/p&gt;
+&lt;p&gt;The client side has been equally exciting. We started 2019 without a single client, Emby having just cut us off from their clients out of spite. Through the dedicated work of a small subteam, 2019 brought us four well-supported clients all on the way to full release: &lt;a href=&#34;https://github.com/jellyfin/jellyfin-android&#34;&gt;Android&lt;/a&gt; and &lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv&#34;&gt;Android TV&lt;/a&gt; are both in the major App stores (Google Play and Amazon) as well as available as &lt;a href=&#34;https://repo.jellyfin.org/releases/client&#34;&gt;direct &lt;code&gt;.apk&lt;/code&gt; downloads&lt;/a&gt;, including &lt;a href=&#34;https://github.com/jellyfin/jellyfin-chromecast&#34;&gt;Chromecast&lt;/a&gt; support, while &lt;a href=&#34;https://github.com/jellyfin/jellyfin-kodi&#34;&gt;Kodi&lt;/a&gt; was consolidated into a single client and remains well-maintained with constant improvement, including support for Kodi 16-18 with 19 on the way, improved IPv6 support, and support for Unicode. Late last year we also released an &lt;a href=&#34;https://github.com/jellyfin/jellyfin-expo&#34;&gt;iOS Expo App&lt;/a&gt;, which is currently in TestFlight Beta, which will hopefully bring us more support for Apple devices. &lt;a href=&#34;https://github.com/jellyfin/jellyfin-roku&#34;&gt;Roku&lt;/a&gt;, one of our most requested clients, had to be started from scratch, due to issues with the forked code, and continues to improve, though it is still under active development, with video playback mostly working. We also have preliminary support for &lt;a href=&#34;https://github.com/jellyfin/jellyfin-webos&#34;&gt;WebOS&lt;/a&gt;, which still must be side-loaded but generally works. Finally &lt;a href=&#34;https://github.com/jellyfin/mopidy-jellyfin&#34;&gt;the Mopidy plugin&lt;/a&gt; has been ported and improved extensively, offering proper population of the Mopidy library, multi-library support, and audio-book playback.&lt;/p&gt;
+&lt;p&gt;Though we admittedly still lack some of the more well-requested but &amp;ldquo;niche&amp;rdquo; clients, some of which we may never see, 2020 still looks exciting on the client front. Improvements continue to come in across the entire App ecosystem, and though work on our new React client has been slow, we have high hopes for this to replace most of the disparate clients we have now. Now as always we can use contributors across the board, so if development on any of the platforms is familiar to you, please check out our &lt;a href=&#34;https://jellyfin.org/contribute/&#34;&gt;How To Contribute&lt;/a&gt; page for details.&lt;/p&gt;
+&lt;p&gt;I would be remiss to not discuss the Jellyfin community, both &lt;a href=&#34;https://reddit.com/r/jellyfin&#34;&gt;over on Reddit&lt;/a&gt;, &lt;a href=&#34;https://forum.jellyfin.org&#34;&gt;our own forums&lt;/a&gt;, as well as our Matrix chats. Jellyfin wouldn&#39;t have gone anywhere without both users to test us out and recommend us, as well as those willing to help their fellow user leaving us free to progress the project. We sincerely appreciate everything you do to help no matter how small.&lt;/p&gt;
+&lt;p&gt;I wish all of you a happy new year, a happy decade, and many many hours of watching enjoyment on your Jellyfin instances!&lt;/p&gt;
+&lt;p&gt;Cheers,
+Joshua, Project Co-Leader&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Welcome to the New Website!</title>
       <link>https://jellyfin.org/posts/welcome/</link>
       <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://jellyfin.org/posts/welcome/</guid>
       <description>&lt;p&gt;Welcome to our brand new website.&lt;/p&gt;
 &lt;p&gt;At first glance, it may not look like much has changed - the theme and colours are still the same, and so is our frontpage. What has changed, is what&#39;s under the hood. Our website is now built using &lt;a href=&#34;https://www.gohugo.io&#34;&gt;Hugo&lt;/a&gt;, a static-page generator written in Go.&lt;/p&gt;
-&lt;p&gt;As part of the move, we&#39;ve decided to introduce this new blog, where you&#39;ll be able to hear more about Jellyfin&#39;s new releases, future development, and goals. Occasionally, we&#39;ll feature guest posts from some of our own contributors.&lt;/p&gt;</description>
+&lt;p&gt;As part of the move, we&#39;ve decided to introduce this new blog, where you&#39;ll be able to hear more about Jellyfin&#39;s new releases, future development, and goals. Occasionally, we&#39;ll feature guest posts from some of our own contributors.&lt;/p&gt;
+&lt;p&gt;Thank you for using Jellyfin. We can&#39;t wait to share what&#39;s next!&lt;/p&gt;</description>
     </item>
     
   </channel>
