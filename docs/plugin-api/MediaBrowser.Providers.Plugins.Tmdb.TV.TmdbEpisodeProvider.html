@@ -88,8 +88,7 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><a class="xref" href="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProviderBase.html">TmdbEpisodeProviderBase</a></div>
-    <div class="level2"><span class="xref">TmdbEpisodeProvider</span></div>
+    <div class="level1"><span class="xref">TmdbEpisodeProvider</span></div>
   </div>
   <div classs="implements">
     <h5>Implements</h5>
@@ -103,15 +102,6 @@
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProviderBase.html#MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProviderBase_Logger">TmdbEpisodeProviderBase.Logger</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProviderBase.html#MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProviderBase_GetEpisodeInfo_System_String_System_Int32_System_Int32_System_String_System_Threading_CancellationToken_">TmdbEpisodeProviderBase.GetEpisodeInfo(String, Int32, Int32, String, CancellationToken)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProviderBase.html#MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProviderBase_GetResponse_System_String_System_Threading_CancellationToken_">TmdbEpisodeProviderBase.GetResponse(String, CancellationToken)</a>
-    </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
@@ -138,24 +128,24 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Providers.dll</h6>
   <h5 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class TmdbEpisodeProvider : TmdbEpisodeProviderBase, IRemoteMetadataProvider&lt;Episode, EpisodeInfo&gt;, IMetadataProvider&lt;Episode&gt;, IRemoteMetadataProvider, IRemoteSearchProvider&lt;EpisodeInfo&gt;, IRemoteSearchProvider, IMetadataProvider, IHasOrder</code></pre>
+    <pre><code class="lang-csharp hljs">public class TmdbEpisodeProvider : IRemoteMetadataProvider&lt;Episode, EpisodeInfo&gt;, IMetadataProvider&lt;Episode&gt;, IRemoteMetadataProvider, IRemoteSearchProvider&lt;EpisodeInfo&gt;, IRemoteSearchProvider, IMetadataProvider, IHasOrder</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider__ctor_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Model_Globalization_ILocalizationManager_Microsoft_Extensions_Logging_ILoggerFactory_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.%23ctor(System.Net.Http.IHttpClientFactory%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.Serialization.IJsonSerializer%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Model.Globalization.ILocalizationManager%2CMicrosoft.Extensions.Logging.ILoggerFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider__ctor_System_Net_Http_IHttpClientFactory_MediaBrowser_Providers_Plugins_Tmdb_TmdbClientManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.%23ctor(System.Net.Http.IHttpClientFactory%2CMediaBrowser.Providers.Plugins.Tmdb.TmdbClientManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L30">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider__ctor_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider__ctor_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_Serialization_IJsonSerializer_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Model_Globalization_ILocalizationManager_Microsoft_Extensions_Logging_ILoggerFactory_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.#ctor(System.Net.Http.IHttpClientFactory,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.Serialization.IJsonSerializer,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Model.Globalization.ILocalizationManager,Microsoft.Extensions.Logging.ILoggerFactory)">TmdbEpisodeProvider(IHttpClientFactory, IServerConfigurationManager, IJsonSerializer, IFileSystem, ILocalizationManager, ILoggerFactory)</h4>
+  <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider__ctor_System_Net_Http_IHttpClientFactory_MediaBrowser_Providers_Plugins_Tmdb_TmdbClientManager_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.#ctor(System.Net.Http.IHttpClientFactory,MediaBrowser.Providers.Plugins.Tmdb.TmdbClientManager)">TmdbEpisodeProvider(IHttpClientFactory, TmdbClientManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TmdbEpisodeProvider(IHttpClientFactory httpClientFactory, IServerConfigurationManager configurationManager, IJsonSerializer jsonSerializer, IFileSystem fileSystem, ILocalizationManager localization, ILoggerFactory loggerFactory)</code></pre>
+    <pre><code class="lang-csharp hljs">public TmdbEpisodeProvider(IHttpClientFactory httpClientFactory, TmdbClientManager tmdbClientManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,28 +163,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">configurationManager</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Serialization.IJsonSerializer.html">IJsonSerializer</a></td>
-        <td><span class="parametername">jsonSerializer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
-        <td><span class="parametername">localization</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.iloggerfactory">ILoggerFactory</a></td>
-        <td><span class="parametername">loggerFactory</span></td>
+        <td><a class="xref" href="MediaBrowser.Providers.Plugins.Tmdb.TmdbClientManager.html">TmdbClientManager</a></td>
+        <td><span class="parametername">tmdbClientManager</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -206,7 +176,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Name_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Name*"></a>
   <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Name" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Name">Name</h4>
@@ -236,7 +206,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Order.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Order%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L31">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Order_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Order*"></a>
   <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_Order" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.Order">Order</h4>
@@ -268,7 +238,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetImageResponse_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetImageResponse(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L210">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L202">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetImageResponse_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetImageResponse*"></a>
   <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetImageResponse_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetImageResponse(System.String,System.Threading.CancellationToken)">GetImageResponse(String, CancellationToken)</h4>
@@ -320,7 +290,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetMetadata_MediaBrowser_Controller_Providers_EpisodeInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetMetadata(MediaBrowser.Controller.Providers.EpisodeInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L72">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L68">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetMetadata_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetMetadata*"></a>
   <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetMetadata_MediaBrowser_Controller_Providers_EpisodeInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetMetadata(MediaBrowser.Controller.Providers.EpisodeInfo,System.Threading.CancellationToken)">GetMetadata(EpisodeInfo, CancellationToken)</h4>
@@ -372,7 +342,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetSearchResults_MediaBrowser_Controller_Providers_EpisodeInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetSearchResults(MediaBrowser.Controller.Providers.EpisodeInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L35">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetSearchResults_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetSearchResults*"></a>
   <h4 id="MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider_GetSearchResults_MediaBrowser_Controller_Providers_EpisodeInfo_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider.GetSearchResults(MediaBrowser.Controller.Providers.EpisodeInfo,System.Threading.CancellationToken)">GetSearchResults(EpisodeInfo, CancellationToken)</h4>
@@ -452,7 +422,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_Plugins_Tmdb_TV_TmdbEpisodeProvider.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.Plugins.Tmdb.TV.TmdbEpisodeProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/Plugins/Tmdb/TV/TmdbEpisodeProvider.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

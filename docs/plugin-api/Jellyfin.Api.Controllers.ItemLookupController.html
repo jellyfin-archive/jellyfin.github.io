@@ -693,7 +693,7 @@ public class ItemLookupController : BaseJellyfinApiController</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Apply/{id}&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Apply/{itemId}&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 public Task&lt;ActionResult&gt; ApplySearchCriteria([FromRoute, Required] Guid itemId, [FromBody, Required] RemoteSearchResult searchResult, [FromQuery] bool replaceAllImages = true)</code></pre>

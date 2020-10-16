@@ -124,7 +124,7 @@
   <h5 id="MediaBrowser_Controller_SyncPlay_GroupInfo_remarks"><strong>Remarks</strong></h5>
   <div class="markdown level0 remarks"><p>Class is not thread-safe, external locking is required when accessing methods.</p>
 </div>
-  <h3 id="properties">Properties
+  <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
@@ -133,16 +133,15 @@
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L19">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_DefaultPing_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.DefaultPing*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_DefaultPing" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.DefaultPing">DefaultPing</h4>
-  <div class="markdown level1 summary"><p>Gets the default ping value used for sessions.</p>
+  <div class="markdown level1 summary"><p>The default ping value used for sessions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long DefaultPing { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const long DefaultPing = 500L</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -157,6 +156,8 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_GroupId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
@@ -166,7 +167,7 @@
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_GroupId_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.GroupId*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_GroupId" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.GroupId">GroupId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the group identifier.</p>
+  <div class="markdown level1 summary"><p>Gets the group identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -356,7 +357,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_AddSession_MediaBrowser_Controller_Session_SessionInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.AddSession(MediaBrowser.Controller.Session.SessionInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L71">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L72">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_AddSession_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.AddSession*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_AddSession_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.AddSession(MediaBrowser.Controller.Session.SessionInfo)">AddSession(SessionInfo)</h4>
@@ -390,7 +391,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_ContainsSession_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.ContainsSession(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L62">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L63">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_ContainsSession_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.ContainsSession*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_ContainsSession_System_String_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.ContainsSession(System.String)">ContainsSession(String)</h4>
@@ -414,7 +415,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">sessionId</span></td>
-        <td></td>
+        <td><p>The session id to check.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -439,7 +441,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_GetHighestPing.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.GetHighestPing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L118">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L110">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_GetHighestPing_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.GetHighestPing*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_GetHighestPing" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.GetHighestPing">GetHighestPing()</h4>
@@ -471,7 +473,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_IsBuffering.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.IsBuffering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L148">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L138">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_IsBuffering_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.IsBuffering*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_IsBuffering" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.IsBuffering">IsBuffering()</h4>
@@ -503,7 +505,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_IsEmpty.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.IsEmpty%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L165">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L155">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_IsEmpty_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.IsEmpty*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_IsEmpty" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.IsEmpty">IsEmpty()</h4>
@@ -535,7 +537,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_RemoveSession_MediaBrowser_Controller_Session_SessionInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.RemoveSession(MediaBrowser.Controller.Session.SessionInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L89">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L88">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_RemoveSession_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.RemoveSession*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_RemoveSession_MediaBrowser_Controller_Session_SessionInfo_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.RemoveSession(MediaBrowser.Controller.Session.SessionInfo)">RemoveSession(SessionInfo)</h4>
@@ -569,7 +571,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_SetBuffering_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.SetBuffering(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L134">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L126">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_SetBuffering_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.SetBuffering*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_SetBuffering_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.SetBuffering(MediaBrowser.Controller.Session.SessionInfo,System.Boolean)">SetBuffering(SessionInfo, Boolean)</h4>
@@ -609,7 +611,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_GroupInfo_UpdatePing_MediaBrowser_Controller_Session_SessionInfo_System_Int64_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.GroupInfo.UpdatePing(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L104">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/GroupInfo.cs/#L98">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_SyncPlay_GroupInfo_UpdatePing_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.UpdatePing*"></a>
   <h4 id="MediaBrowser_Controller_SyncPlay_GroupInfo_UpdatePing_MediaBrowser_Controller_Session_SessionInfo_System_Int64_" data-uid="MediaBrowser.Controller.SyncPlay.GroupInfo.UpdatePing(MediaBrowser.Controller.Session.SessionInfo,System.Int64)">UpdatePing(SessionInfo, Int64)</h4>

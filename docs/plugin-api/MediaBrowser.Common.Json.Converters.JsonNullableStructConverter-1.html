@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class JsonNullableStructConverter&lt;T&gt;
+    <title>Class JsonNullableStructConverter&lt;TStruct&gt;
    | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class JsonNullableStructConverter&lt;T&gt;
+    <meta name="title" content="Class JsonNullableStructConverter&lt;TStruct&gt;
    | Documentation - Jellyfin Project ">
     <meta name="generator" content="docfx 2.48.1.0">
     
@@ -81,7 +81,7 @@
             <article class="content wrap" id="_content" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1">
   
   
-  <h1 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1" class="text-break">Class JsonNullableStructConverter&lt;T&gt;
+  <h1 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1" class="text-break">Class JsonNullableStructConverter&lt;TStruct&gt;
   </h1>
   <div class="markdown level0 summary"><p>Converts a nullable struct or value to/from JSON.
 Required - some clients send an empty string.</p>
@@ -91,16 +91,16 @@ Required - some clients send an empty string.</p>
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter">JsonConverter</a></div>
-    <div class="level2"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1">JsonConverter</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;T&gt;&gt;</div>
-    <div class="level3"><span class="xref">JsonNullableStructConverter&lt;T&gt;</span></div>
+    <div class="level2"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1">JsonConverter</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;TStruct&gt;&gt;</div>
+    <div class="level3"><span class="xref">JsonNullableStructConverter&lt;TStruct&gt;</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert#System_Text_Json_Serialization_JsonConverter_1_CanConvert_System_Type_">JsonConverter&lt;Nullable&lt;T&gt;&gt;.CanConvert(Type)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.canconvert#System_Text_Json_Serialization_JsonConverter_1_CanConvert_System_Type_">JsonConverter&lt;Nullable&lt;TStruct&gt;&gt;.CanConvert(Type)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.handlenull#System_Text_Json_Serialization_JsonConverter_1_HandleNull">JsonConverter&lt;Nullable&lt;T&gt;&gt;.HandleNull</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1.handlenull#System_Text_Json_Serialization_JsonConverter_1_HandleNull">JsonConverter&lt;Nullable&lt;TStruct&gt;&gt;.HandleNull</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
@@ -128,7 +128,7 @@ Required - some clients send an empty string.</p>
   <h6><strong>Assembly</strong>: MediaBrowser.Common.dll</h6>
   <h5 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JsonNullableStructConverter&lt;T&gt; : JsonConverter&lt;T?&gt; where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public class JsonNullableStructConverter&lt;TStruct&gt; : JsonConverter&lt;TStruct?&gt; where TStruct : struct</code></pre>
   </div>
   <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,44 +140,8 @@ Required - some clients send an empty string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="parametername">T</span></td>
+        <td><span class="parametername">TStruct</span></td>
         <td><p>The struct type.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1__ctor_System_Text_Json_Serialization_JsonConverter_System_Nullable__0___.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Json.Converters.JsonNullableStructConverter%601.%23ctor(System.Text.Json.Serialization.JsonConverter%7BSystem.Nullable%7B%600%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Json/Converters/JsonNullableStructConverter.cs/#L21">View Source</a>
-  </span>
-  <a id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1__ctor_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.#ctor*"></a>
-  <h4 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1__ctor_System_Text_Json_Serialization_JsonConverter_System_Nullable__0___" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.#ctor(System.Text.Json.Serialization.JsonConverter{System.Nullable{`0}})">JsonNullableStructConverter(JsonConverter&lt;Nullable&lt;T&gt;&gt;)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter-1.html">JsonNullableStructConverter&lt;T&gt;</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public JsonNullableStructConverter(JsonConverter&lt;T?&gt; baseJsonConverter)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.text.json.serialization.jsonconverter-1">JsonConverter</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;T&gt;&gt;</td>
-        <td><span class="parametername">baseJsonConverter</span></td>
-        <td><p>The base json converter.</p>
 </td>
       </tr>
     </tbody>
@@ -189,7 +153,7 @@ Required - some clients send an empty string.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Json.Converters.JsonNullableStructConverter%601.Read(System.Text.Json.Utf8JsonReader%40%2CSystem.Type%2CSystem.Text.Json.JsonSerializerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Json/Converters/JsonNullableStructConverter.cs/#L27">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Json/Converters/JsonNullableStructConverter.cs/#L16">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Read_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.Read*"></a>
   <h4 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Read_System_Text_Json_Utf8JsonReader__System_Type_System_Text_Json_JsonSerializerOptions_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.Read(System.Text.Json.Utf8JsonReader@,System.Type,System.Text.Json.JsonSerializerOptions)">Read(ref Utf8JsonReader, Type, JsonSerializerOptions)</h4>
@@ -197,7 +161,7 @@ Required - some clients send an empty string.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override T? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public override TStruct? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -236,27 +200,27 @@ Required - some clients send an empty string.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;TStruct&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Text.Json.Serialization.JsonConverter&lt;System.Nullable&lt;T&gt;&gt;.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)</span></div>
+  <div><span class="xref">System.Text.Json.Serialization.JsonConverter&lt;System.Nullable&lt;TStruct&gt;&gt;.Read(System.Text.Json.Utf8JsonReader, System.Type, System.Text.Json.JsonSerializerOptions)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Nullable__0__System_Text_Json_JsonSerializerOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Json.Converters.JsonNullableStructConverter%601.Write(System.Text.Json.Utf8JsonWriter%2CSystem.Nullable%7B%600%7D%2CSystem.Text.Json.JsonSerializerOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Json/Converters/JsonNullableStructConverter.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Json/Converters/JsonNullableStructConverter.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Write_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.Write*"></a>
-  <h4 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Nullable__0__System_Text_Json_JsonSerializerOptions_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{`0},System.Text.Json.JsonSerializerOptions)">Write(Utf8JsonWriter, Nullable&lt;T&gt;, JsonSerializerOptions)</h4>
+  <h4 id="MediaBrowser_Common_Json_Converters_JsonNullableStructConverter_1_Write_System_Text_Json_Utf8JsonWriter_System_Nullable__0__System_Text_Json_JsonSerializerOptions_" data-uid="MediaBrowser.Common.Json.Converters.JsonNullableStructConverter`1.Write(System.Text.Json.Utf8JsonWriter,System.Nullable{`0},System.Text.Json.JsonSerializerOptions)">Write(Utf8JsonWriter, Nullable&lt;TStruct&gt;, JsonSerializerOptions)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, T? value, JsonSerializerOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Write(Utf8JsonWriter writer, TStruct? value, JsonSerializerOptions options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -274,7 +238,7 @@ Required - some clients send an empty string.</p>
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;T&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;TStruct&gt;</td>
         <td><span class="parametername">value</span></td>
         <td></td>
       </tr>
@@ -286,7 +250,7 @@ Required - some clients send an empty string.</p>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.Text.Json.Serialization.JsonConverter&lt;System.Nullable&lt;T&gt;&gt;.Write(System.Text.Json.Utf8JsonWriter, System.Nullable&lt;T&gt;, System.Text.Json.JsonSerializerOptions)</span></div>
+  <div><span class="xref">System.Text.Json.Serialization.JsonConverter&lt;System.Nullable&lt;TStruct&gt;&gt;.Write(System.Text.Json.Utf8JsonWriter, System.Nullable&lt;TStruct&gt;, System.Text.Json.JsonSerializerOptions)</span></div>
 </article>
           </div>
           

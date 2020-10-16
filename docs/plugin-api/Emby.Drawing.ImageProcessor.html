@@ -256,19 +256,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_System_String_.md&amp;value=---%0Auid%3A%20Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Drawing/ImageProcessor.cs/#L469">View Source</a>
   </span>
   <a id="Emby_Drawing_ImageProcessor_CreateImageCollage_" data-uid="Emby.Drawing.ImageProcessor.CreateImageCollage*"></a>
-  <h4 id="Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_" data-uid="Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions)">CreateImageCollage(ImageCollageOptions)</h4>
+  <h4 id="Emby_Drawing_ImageProcessor_CreateImageCollage_MediaBrowser_Controller_Drawing_ImageCollageOptions_System_String_" data-uid="Emby.Drawing.ImageProcessor.CreateImageCollage(MediaBrowser.Controller.Drawing.ImageCollageOptions,System.String)">CreateImageCollage(ImageCollageOptions, String)</h4>
   <div class="markdown level1 summary"><p>Creates the image collage.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CreateImageCollage(ImageCollageOptions options)</code></pre>
+    <pre><code class="lang-csharp hljs">public void CreateImageCollage(ImageCollageOptions options, string libraryName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -284,6 +284,12 @@
         <td><a class="xref" href="MediaBrowser.Controller.Drawing.ImageCollageOptions.html">ImageCollageOptions</a></td>
         <td><span class="parametername">options</span></td>
         <td><p>The options.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">libraryName</span></td>
+        <td><p>The library name to draw onto the collage.</p>
 </td>
       </tr>
     </tbody>

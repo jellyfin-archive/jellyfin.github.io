@@ -98,7 +98,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionController_IsSessionActive.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionController.IsSessionActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L16">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionController_IsSessionActive_" data-uid="MediaBrowser.Controller.Session.ISessionController.IsSessionActive*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionController_IsSessionActive" data-uid="MediaBrowser.Controller.Session.ISessionController.IsSessionActive">IsSessionActive</h4>
@@ -130,7 +130,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionController_SupportsMediaControl.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionController.SupportsMediaControl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L21">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L22">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionController_SupportsMediaControl_" data-uid="MediaBrowser.Controller.Session.ISessionController.SupportsMediaControl*"></a>
   <h4 id="MediaBrowser_Controller_Session_ISessionController_SupportsMediaControl" data-uid="MediaBrowser.Controller.Session.ISessionController.SupportsMediaControl">SupportsMediaControl</h4>
@@ -161,19 +161,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionController_SendMessage__1_System_String_System_Guid___0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionController.SendMessage%60%601(System.String%2CSystem.Guid%2C%60%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionController_SendMessage__1_MediaBrowser_Model_Session_SessionMessageType_System_Guid___0_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionController.SendMessage%60%601(MediaBrowser.Model.Session.SessionMessageType%2CSystem.Guid%2C%60%600%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L27">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Session_ISessionController_SendMessage_" data-uid="MediaBrowser.Controller.Session.ISessionController.SendMessage*"></a>
-  <h4 id="MediaBrowser_Controller_Session_ISessionController_SendMessage__1_System_String_System_Guid___0_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Session.ISessionController.SendMessage``1(System.String,System.Guid,``0,System.Threading.CancellationToken)">SendMessage&lt;T&gt;(String, Guid, T, CancellationToken)</h4>
+  <h4 id="MediaBrowser_Controller_Session_ISessionController_SendMessage__1_MediaBrowser_Model_Session_SessionMessageType_System_Guid___0_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Session.ISessionController.SendMessage``1(MediaBrowser.Model.Session.SessionMessageType,System.Guid,``0,System.Threading.CancellationToken)">SendMessage&lt;T&gt;(SessionMessageType, Guid, T, CancellationToken)</h4>
   <div class="markdown level1 summary"><p>Sends the message.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task SendMessage&lt;T&gt;(string name, Guid messageId, T data, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">Task SendMessage&lt;T&gt;(SessionMessageType name, Guid messageId, T data, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -186,7 +186,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
         <td></td>
       </tr>
@@ -248,7 +248,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Session_ISessionController.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Session.ISessionController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Session/ISessionController.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

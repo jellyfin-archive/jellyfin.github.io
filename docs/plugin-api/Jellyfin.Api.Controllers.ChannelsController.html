@@ -747,20 +747,20 @@ public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute, Requir
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_MediaBrowser_Model_Querying_ItemFilter___System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CMediaBrowser.Model.Querying.ItemFilter%5B%5D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L116">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelItems*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String)">GetChannelItems(Guid, Nullable&lt;Guid&gt;, Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, String)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetChannelItems_System_Guid_System_Nullable_System_Guid__System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_MediaBrowser_Model_Querying_ItemFilter___System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetChannelItems(System.Guid,System.Nullable{System.Guid},System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,MediaBrowser.Model.Querying.ItemFilter[],System.String,System.String)">GetChannelItems(Guid, Nullable&lt;Guid&gt;, Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, ItemFilter[], String, String)</h4>
   <div class="markdown level1 summary"><p>Get channel items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{channelId}/Items&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute, Required] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string sortOrder, [FromQuery] string filters, [FromQuery] string sortBy, [FromQuery] string fields)</code></pre>
+public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute, Required] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string sortOrder, [FromQuery] ItemFilter[] filters, [FromQuery] string sortBy, [FromQuery] string fields)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -809,9 +809,9 @@ public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannel
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.ItemFilter.html">ItemFilter</a>[]</td>
         <td><span class="parametername">filters</span></td>
-        <td><p>Optional. Specify additional filters to apply. This allows multiple, comma delimited. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes.</p>
+        <td><p>Optional. Specify additional filters to apply.</p>
 </td>
       </tr>
       <tr>
@@ -929,20 +929,20 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetChannels([FromQuery
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Querying_ItemFilter___System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Querying.ItemFilter%5B%5D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ChannelsController.cs/#L194">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String)">GetLatestChannelItems(Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ChannelsController_GetLatestChannelItems_System_Nullable_System_Guid__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Querying_ItemFilter___System_String_System_String_" data-uid="Jellyfin.Api.Controllers.ChannelsController.GetLatestChannelItems(System.Nullable{System.Guid},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Querying.ItemFilter[],System.String,System.String)">GetLatestChannelItems(Nullable&lt;Guid&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, ItemFilter[], String, String)</h4>
   <div class="markdown level1 summary"><p>Gets latest channel items.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/Latest&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLatestChannelItems([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string filters, [FromQuery] string fields, [FromQuery] string channelIds)</code></pre>
+public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLatestChannelItems([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] ItemFilter[] filters, [FromQuery] string fields, [FromQuery] string channelIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -973,9 +973,9 @@ public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLatestC
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Querying.ItemFilter.html">ItemFilter</a>[]</td>
         <td><span class="parametername">filters</span></td>
-        <td><p>Optional. Specify additional filters to apply. This allows multiple, comma delimited. Options: IsFolder, IsNotFolder, IsUnplayed, IsPlayed, IsFavorite, IsResumable, Likes, Dislikes.</p>
+        <td><p>Optional. Specify additional filters to apply.</p>
 </td>
       </tr>
       <tr>
