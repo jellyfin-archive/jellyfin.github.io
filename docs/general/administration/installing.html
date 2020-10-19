@@ -155,36 +155,36 @@ mkdir /path/to/cache
 </div>
 <p><strong>Using Docker command line interface:</strong></p>
 <pre><code class="lang-sh">docker run -d \
- --volume /path/to/config:/config \
- --volume /path/to/cache:/cache \
- --volume /path/to/media:/media \
+ --name jellyfin \
  --user 1000:1000 \
  --net=host \
+ --volume /path/to/config:/config \
+ --volume /path/to/cache:/cache \
+ --mount type=bind,source=/path/to/media,target=/media \
  --restart=unless-stopped \
  jellyfin/jellyfin
-</code></pre><p>Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts.</p>
-<p>To mount your media library read-only append &#39;:ro&#39; to the media volume:</p>
-<pre><code class="lang-sh">--volume /path/to/media:/media:ro
+</code></pre><p>Using host networking (<code>--net=host</code>) is optional but required in order to use DLNA or HDHomeRun.</p>
+<p>Bind Mounts are needed to pass folders from the host OS to the container OS whereas volumes are maintained by Docker and can be considered easier to backup and control by external programs. For a simple setup, it&#39;s considered easier to use Bind Mounts instead of volumes. Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts. Multiple media libraries can be bind mounted if needed:</p>
+<pre><code class="lang-sh">--mount type=bind,source=/path/to/media1,target=/media1
+--mount type=bind,source=/path/to/media2,target=/media2,readonly
+...etc
 </code></pre><div class="NOTE"><h5>Note</h5><p>There is currently an <a href="https://github.com/docker/for-linux/issues/788">issue</a> with read-only mounts in Docker. If there are submounts within the main mount, the submounts are read-write capable.</p>
 </div>
-<p>Multiple media libraries can be bind mounted if needed:</p>
-<pre><code class="lang-sh">--volume /path/to/media1:/media/media1
---volume /path/to/media2:/media/media2
-...etc
-</code></pre><p>Using host networking (<code>--net=host</code>) is optional but required in order to use DLNA or HDHomeRun.</p>
 <p><strong>Using Docker Compose:</strong></p>
 <p>Create a <code>docker-compose.yml</code> file with the following contents:</p>
 <pre><code class="lang-yml">version: &quot;3&quot;
 services:
   jellyfin:
     image: jellyfin/jellyfin
+    container_name: jellyfin
     user: 1000:1000
     network_mode: &quot;host&quot;
-    restart: &quot;unless-stopped&quot;
     volumes:
       - /path/to/config:/config
       - /path/to/cache:/cache
       - /path/to/media:/media
+      - /path/to/media2:/media2:ro
+    restart: &quot;unless-stopped&quot;
 </code></pre><p>Then while in the same folder as the <code>docker-compose.yml</code> run:</p>
 <pre><code class="lang-sh">docker-compose up
 </code></pre><p>To run the container in background add <code>-d</code> to the above command.</p>
