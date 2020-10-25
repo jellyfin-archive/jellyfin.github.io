@@ -9,6 +9,57 @@
     <atom:link href="https://jellyfin.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Android v2.1.0 - Jellyfin in your car!</title>
+      <link>https://jellyfin.org/posts/android-v2.1.0/</link>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://jellyfin.org/posts/android-v2.1.0/</guid>
+      <description>&lt;p&gt;Jellyfin for Android version 2.1 is here with support for Android Auto.&lt;/p&gt;
+&lt;p&gt;A new version of the Android app: version 2.1 has just been released! This update contains some quality of life improvements, some bugfixes and new features.
+It&#39;s been only a few weeks since 2.0 but we couldn&#39;t wait to bring these new exiting changes to you. Let&#39;s start with the most awesome feature.&lt;/p&gt;
+&lt;h2 id=&#34;android-auto&#34;&gt;Android Auto&lt;/h2&gt;
+&lt;p&gt;Starting with this update we now support playing music in cars. This change was contributed by &lt;a href=&#34;https://github.com/Spacetech&#34;&gt;@Spacetech&lt;/a&gt; and we are excited to release it. Right now it supports browsing your music library in multiple categories: latest, albums, artists, songs and genres. It allows shuffling your albums and shows thumbnails when available.&lt;/p&gt;
+&lt;video controls loop autoplay muted playsinline class=&#34;inline justify&#34; height=&#34;500&#34;&gt;
+	&lt;source src=&#34;https://jellyfin.org/images/posts/android-2-1-0/android-auto.webm&#34; type=&#34;video/webm&#34; /&gt;
+&lt;/video&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; since we do not have offline-support at the moment all music playback needs an active network connection to work. Be aware this may cause additional charges in your mobile plan.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;connectivity-issues&#34;&gt;Connectivity issues&lt;/h2&gt;
+&lt;p&gt;Some users reported issues when connecting to their server. We&#39;ve made some improvements to fix those problems:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When your server uses an outdated version a warning is shown.&lt;/li&gt;
+&lt;li&gt;If the webui fails to load we now show a proper error allowing you to change the server address.&lt;/li&gt;
+&lt;li&gt;Users with self-signed certificates should be able to use the app again.&lt;/li&gt;
+&lt;li&gt;And lastly, when your device name includes special characters they are now removed to fix the &amp;ldquo;endless loading&amp;rdquo; issue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;playback-improvements&#34;&gt;Playback improvements&lt;/h2&gt;
+&lt;p&gt;The native video player (ExoPlayer) now supports zooming using gestures so you can remove the black bars from the video. We made some changes to which audio codecs are supported to prevent unnecessary transcoding. We also made some big changes to the structure of the app to fix an issue where you weren&#39;t able to return to the app after leaving Picture-in-Picture mode.&lt;/p&gt;
+&lt;p&gt;There is a new option in the settings to select which external player to use. The listed players should also report playback status back to Jellyfin to track what you watch and allow the app to resume playback. Issues with subtitles (especially external subtitles) should now be less common.&lt;/p&gt;
+&lt;h2 id=&#34;fdroid&#34;&gt;F-Droid&lt;/h2&gt;
+&lt;p&gt;We have added the required metadata for F-Droid to our repository. We are currently working with the F-Droid team to get the app in their repository - we will post an additional announcement when this is ready.&lt;/p&gt;
+&lt;h2 id=&#34;release-notes&#34;&gt;Release Notes&lt;/h2&gt;
+&lt;p&gt;Full release notes available on &lt;a href=&#34;https://github.com/jellyfin/jellyfin-android/releases/tag/v2.1.0&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;download-now&#34;&gt;Download Now&lt;/h2&gt;
+&lt;a class=&#34;NoLinkLook&#34; href=&#34;https://play.google.com/store/apps/details?id=org.jellyfin.mobile&#34;&gt;
+  &lt;img width=&#34;153&#34; alt=&#34;Jellyfin on Google Play&#34; src=&#34;https://jellyfin.org/images/store-icons/google-play.png&#34; /&gt;
+&lt;/a&gt;
+&lt;a class=&#34;NoLinkLook&#34; href=&#34;https://www.amazon.com/gp/product/B081RFTTQ9&#34;&gt;
+  &lt;img width=&#34;153&#34; alt=&#34;Jellyfin on Amazon App Store&#34; src=&#34;https://jellyfin.org/images/store-icons/amazon.png&#34; /&gt;
+&lt;/a&gt;
+&lt;p&gt;Direct downloads are always available from &lt;a href=&#34;https://repo.jellyfin.org/releases/client/android/&#34;&gt;our repository&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
+&lt;p&gt;We are grateful to all contributors this release:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Maxr1998&#34;&gt;@Maxr1998&lt;/a&gt; - &lt;a href=&#34;https://github.com/sponsors/Maxr1998&#34;&gt;Sponsor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nielsvanvelzen&#34;&gt;@nielsvanvelzen&lt;/a&gt; - &lt;a href=&#34;https://github.com/sponsors/nielsvanvelzen&#34;&gt;Sponsor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vitorsemeano&#34;&gt;@vitorsemeano&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ferferga&#34;&gt;@ferferga&lt;/a&gt; - &lt;a href=&#34;https://github.com/sponsors/ferferga&#34;&gt;Sponsor&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CarlosOlivo&#34;&gt;@CarlosOlivo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Spacetech&#34;&gt;@Spacetech&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/h1dden-da3m0n&#34;&gt;@h1dden-da3m0n&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/IzzySoft&#34;&gt;@IzzySoft&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
       <title>Android Developers Rejoice</title>
       <link>https://jellyfin.org/posts/android-next/</link>
       <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
