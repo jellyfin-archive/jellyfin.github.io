@@ -723,7 +723,7 @@ public ActionResult&lt;TaskInfo&gt; GetTask([FromRoute, Required] string taskId)
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [ProducesResponseType(200)]
-public IEnumerable&lt;IScheduledTaskWorker&gt; GetTasks([FromQuery] bool? isHidden, [FromQuery] bool? isEnabled)</code></pre>
+public IEnumerable&lt;TaskInfo&gt; GetTasks([FromQuery] bool? isHidden, [FromQuery] bool? isEnabled)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -759,7 +759,7 @@ public IEnumerable&lt;IScheduledTaskWorker&gt; GetTasks([FromQuery] bool? isHidd
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Tasks.IScheduledTaskWorker.html">IScheduledTaskWorker</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Tasks.TaskInfo.html">TaskInfo</a>&gt;</td>
         <td><p>The list of scheduled tasks.</p>
 </td>
       </tr>
