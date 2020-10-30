@@ -782,7 +782,7 @@ public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute, Required] Guid itemI
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public ActionResult DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
+public Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int? index = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -824,7 +824,7 @@ public ActionResult DeleteUserImage([FromRoute, Required] Guid userId, [FromRout
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>

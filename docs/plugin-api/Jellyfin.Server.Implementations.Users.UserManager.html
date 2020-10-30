@@ -431,19 +431,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImage_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImage(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImageAsync_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImageAsync(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L722">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L720">View Source</a>
   </span>
-  <a id="Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImage_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImage*"></a>
-  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImage_Jellyfin_Data_Entities_User_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImage(Jellyfin.Data.Entities.User)">ClearProfileImage(User)</h4>
+  <a id="Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImageAsync_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImageAsync*"></a>
+  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_ClearProfileImageAsync_Jellyfin_Data_Entities_User_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.ClearProfileImageAsync(Jellyfin.Data.Entities.User)">ClearProfileImageAsync(User)</h4>
   <div class="markdown level1 summary"><p>Clears the user&apos;s profile image.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ClearProfileImage(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task ClearProfileImageAsync(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -459,6 +459,22 @@
         <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
         <td><span class="parametername">user</span></td>
         <td><p>The user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the clearing of the profile image.</p>
 </td>
       </tr>
     </tbody>
@@ -572,7 +588,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_GetAuthenticationProviders.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.GetAuthenticationProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L588">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L586">View Source</a>
   </span>
   <a id="Jellyfin_Server_Implementations_Users_UserManager_GetAuthenticationProviders_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.GetAuthenticationProviders*"></a>
   <h4 id="Jellyfin_Server_Implementations_Users_UserManager_GetAuthenticationProviders" data-uid="Jellyfin.Server.Implementations.Users.UserManager.GetAuthenticationProviders">GetAuthenticationProviders()</h4>
@@ -602,7 +618,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_GetPasswordResetProviders.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.GetPasswordResetProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L603">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L601">View Source</a>
   </span>
   <a id="Jellyfin_Server_Implementations_Users_UserManager_GetPasswordResetProviders_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.GetPasswordResetProviders*"></a>
   <h4 id="Jellyfin_Server_Implementations_Users_UserManager_GetPasswordResetProviders" data-uid="Jellyfin.Server.Implementations.Users.UserManager.GetPasswordResetProviders">GetPasswordResetProviders()</h4>
@@ -804,7 +820,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_InitializeAsync.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.InitializeAsync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L561">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L559">View Source</a>
   </span>
   <a id="Jellyfin_Server_Implementations_Users_UserManager_InitializeAsync_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.InitializeAsync*"></a>
   <h4 id="Jellyfin_Server_Implementations_Users_UserManager_InitializeAsync" data-uid="Jellyfin.Server.Implementations.Users.UserManager.InitializeAsync">InitializeAsync()</h4>
@@ -835,7 +851,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_RedeemPasswordResetPin_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.RedeemPasswordResetPin(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L541">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L539">View Source</a>
   </span>
   <a id="Jellyfin_Server_Implementations_Users_UserManager_RedeemPasswordResetPin_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.RedeemPasswordResetPin*"></a>
   <h4 id="Jellyfin_Server_Implementations_Users_UserManager_RedeemPasswordResetPin_System_String_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.RedeemPasswordResetPin(System.String)">RedeemPasswordResetPin(String)</h4>
@@ -1045,7 +1061,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_StartForgotPasswordProcess_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.StartForgotPasswordProcess(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L518">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L516">View Source</a>
   </span>
   <a id="Jellyfin_Server_Implementations_Users_UserManager_StartForgotPasswordProcess_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.StartForgotPasswordProcess*"></a>
   <h4 id="Jellyfin_Server_Implementations_Users_UserManager_StartForgotPasswordProcess_System_String_System_Boolean_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.StartForgotPasswordProcess(System.String,System.Boolean)">StartForgotPasswordProcess(String, Boolean)</h4>
@@ -1098,13 +1114,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_UpdateConfiguration_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.UpdateConfiguration(System.Guid%2CMediaBrowser.Model.Configuration.UserConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_UpdateConfigurationAsync_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.UpdateConfigurationAsync(System.Guid%2CMediaBrowser.Model.Configuration.UserConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L618">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L616">View Source</a>
   </span>
-  <a id="Jellyfin_Server_Implementations_Users_UserManager_UpdateConfiguration_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdateConfiguration*"></a>
-  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_UpdateConfiguration_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdateConfiguration(System.Guid,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateConfiguration(Guid, UserConfiguration)</h4>
+  <a id="Jellyfin_Server_Implementations_Users_UserManager_UpdateConfigurationAsync_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdateConfigurationAsync*"></a>
+  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_UpdateConfigurationAsync_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdateConfigurationAsync(System.Guid,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateConfigurationAsync(Guid, UserConfiguration)</h4>
   <div class="markdown level1 summary"><p>This method updates the user&apos;s configuration.
 This is only included as a stopgap until the new API, using this internally is not recommended.
 Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_">UpdateUser(User)</a>.</p>
@@ -1112,7 +1128,7 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateConfiguration(Guid userId, UserConfiguration config)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task UpdateConfigurationAsync(Guid userId, UserConfiguration config)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1138,15 +1154,31 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicy_System_Guid_MediaBrowser_Model_Users_UserPolicy_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicy(System.Guid%2CMediaBrowser.Model.Users.UserPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicyAsync_System_Guid_MediaBrowser_Model_Users_UserPolicy_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicyAsync(System.Guid%2CMediaBrowser.Model.Users.UserPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L651">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server.Implementations/Users/UserManager.cs/#L649">View Source</a>
   </span>
-  <a id="Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicy_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicy*"></a>
-  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicy_System_Guid_MediaBrowser_Model_Users_UserPolicy_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicy(System.Guid,MediaBrowser.Model.Users.UserPolicy)">UpdatePolicy(Guid, UserPolicy)</h4>
+  <a id="Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicyAsync_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicyAsync*"></a>
+  <h4 id="Jellyfin_Server_Implementations_Users_UserManager_UpdatePolicyAsync_System_Guid_MediaBrowser_Model_Users_UserPolicy_" data-uid="Jellyfin.Server.Implementations.Users.UserManager.UpdatePolicyAsync(System.Guid,MediaBrowser.Model.Users.UserPolicy)">UpdatePolicyAsync(Guid, UserPolicy)</h4>
   <div class="markdown level1 summary"><p>This method updates the user&apos;s policy.
 This is only included as a stopgap until the new API, using this internally is not recommended.
 Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_">UpdateUser(User)</a>.</p>
@@ -1154,7 +1186,7 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdatePolicy(Guid userId, UserPolicy policy)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task UpdatePolicyAsync(Guid userId, UserPolicy policy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1176,6 +1208,22 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
         <td><a class="xref" href="MediaBrowser.Model.Users.UserPolicy.html">UserPolicy</a></td>
         <td><span class="parametername">policy</span></td>
         <td><p>The request containing the new user policy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>A task representing the update.</p>
 </td>
       </tr>
     </tbody>
