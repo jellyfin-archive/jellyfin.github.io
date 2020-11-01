@@ -124,6 +124,9 @@ cd jellyfin
 <li><p>From Powershell set the execution policy to unrestricted:</p>
 <pre><code class="lang-powershell">set-executionpolicy unrestricted
 </code></pre></li>
+<li><p>If you are building a version of Jellyfin newer than 10.6.4, you will need to download the build script from a seperate repository:</p>
+<pre><code class="lang-powershell">git clone https://github.com/jellyfin/jellyfin-server-windows.git windows
+</code></pre></li>
 <li><p>Run the Jellyfin build script:</p>
 <pre><code class="lang-powershell">windows\build-jellyfin.ps1 -verbose
 </code></pre><ul>

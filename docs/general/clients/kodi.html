@@ -204,6 +204,8 @@ Also be aware that a local SQLite database is required. Remote Kodi databases, l
 <p>The Jellyfin for Kodi addon doesn&#39;t natively handle multiple user accounts.  Fortunately, Kodi has a built in method of handling this called profiles.  Information about this can be found on the Profiles page of the <a href="https://kodi.wiki/view/Profiles">Kodi Wiki</a>.  Once profiles have been created, you must install the Jellyfin add-on and go through the installation steps above for each user profile.  When you switch Kodi profiles, you will also switch Jellyfin users. You can tell Kodi to bring you to a profile login screen during startup by going to the Profiles section inside of the Settings page and checking the box for &quot;Show login screen on startup.&quot;</p>
 <div class="NOTE"><h5>Note</h5><p>Kodi&#39;s default skin does not display all unicode characters. To display unicode characters the skin&#39;s font must be changed.</p>
 </div>
+<h2 id="multiple-clients">Multiple Clients</h2>
+<p>When using multiple Kodi clients do not copy Kodi&#39;s database (i.e. myvideosXYZ.db, jellyfin.db) files from one client to the other to try and reduce initial syncing time. This will work, but it will confuse Jellyfin and all the clients will be seen as the same client, causing sync between these clients not to work correctly.</p>
 </article>
           </div>
           
