@@ -463,7 +463,7 @@ sudo chmod u+x jellyfin.sh
 </code></pre></li>
 <li><p>Add a repository configuration at <code>/etc/apt/sources.list.d/jellyfin.list</code>:</p>
 <pre><code class="lang-sh">echo &quot;deb [arch=$( dpkg --print-architecture )] https://repo.jellyfin.org/debian $( lsb_release -c -s ) main&quot; | sudo tee /etc/apt/sources.list.d/jellyfin.list
-</code></pre><div class="NOTE"><h5>Note</h5><p>Supported releases are <code>stretch</code> and <code>buster</code>.</p>
+</code></pre><div class="NOTE"><h5>Note</h5><p>Supported releases are <code>stretch</code>, <code>buster</code>, and <code>bullseye</code>.</p>
 </div>
 </li>
 <li><p>Update APT repositories:</p>
