@@ -107,7 +107,7 @@
 </tr>
 <tr>
 <td>RPi</td>
-<td>OMX</td>
+<td>OMX, VAAPI</td>
 </tr>
 </tbody>
 </table>
@@ -361,7 +361,7 @@ makepkg -si
 <li><p>Go to step 3 of <strong>on Ubuntu 18.04 or 20.04 LTS</strong> above.</p>
 </li>
 </ol>
-<h3 id="raspberry-pi-3-and-4">Raspberry Pi 3 and 4</h3>
+<h3 id="configuring-omx-on-raspberry-pi-3-and-4-running-raspberry-pi-os">Configuring OMX on Raspberry Pi 3 and 4 running Raspberry Pi OS</h3>
 <ol>
 <li><p>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.</p>
 <pre><code class="lang-sh">sudo usermod -aG video jellyfin
@@ -386,6 +386,36 @@ sudo systemctl restart jellyfin
 </div>
 <div class="NOTE"><h5>Note</h5><p>For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
 </div>
+<h3 id="configuring-vaapi-on-raspberry-pi-3-and-4-running-ubuntu-server">Configuring VAAPI on Raspberry Pi 3 and 4 running Ubuntu server</h3>
+<ol>
+<li><p>Enable the <code>render</code> device on your Pi.</p>
+<ul>
+<li><p>If you are using Raspberry Pi 3 add this to the <code>/boot/firmware/usercfg.txt</code> file.</p>
+<pre><code class="lang-sh">gpu_mem=256
+dtoverlay=vc4-kms-v3d
+</code></pre></li>
+<li><p>Or if you are a Raspberry Pi 4 user add this to the <code>/boot/firmware/usercfg.txt</code> file.</p>
+<pre><code class="lang-sh">gpu_mem=320
+dtoverlay=vc4-kms-v3d-pi4
+</code></pre><p>Then save the file and do a reboot. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>.</p>
+<pre><code class="lang-sh">$ ls -l /dev/dri
+total 0
+drwxr-xr-x 2 root root        100 Oct 13 16:00 by-path
+crw-rw---- 1 root video  226,   0 Oct 13 16:00 card0
+crw-rw---- 1 root video  226,   1 Oct 13 16:00 card1
+crw-rw---- 1 root render 226, 128 Oct 13 16:00 renderD128
+</code></pre></li>
+</ul>
+</li>
+<li><p>Add Jellyfin service user to the <code>render</code> group to allow Jellyfin&#39;s FFMpeg process access to the device, and restart Jellyfin.</p>
+<pre><code class="lang-sh">sudo usermod -aG render jellyfin
+sudo systemctl restart jellyfin
+</code></pre></li>
+<li><p>Configure VAAPI acceleration in the <strong>Transcoding</strong> page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API</code> Device value.</p>
+</li>
+<li><p>Watch a movie, and verify that transcoding is working by watching <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code>.</p>
+</li>
+</ol>
 <h2 id="verifying-transcodes">Verifying Transcodes</h2>
 <p>To verify that you are using the proper libraries, run this command against your transcoding log. This can be found at Admin Dashboard &gt; Logs, and /var/log/jellyfin if instead via the repository.</p>
 <pre><code class="lang-sh">grep -A2 &#39;Stream mapping:&#39; /var/log/jellyfin/ffmpeg-transcode-85a68972-7129-474c-9c5d-2d9949021b44.txt
