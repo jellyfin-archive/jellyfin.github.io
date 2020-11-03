@@ -705,14 +705,12 @@ public class UniversalAudioController : BaseJellyfinApiController</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Audio/{itemId}/universal&quot;)]
-[HttpGet(&quot;Audio/{itemId}/universal.{container}&quot;, Name = &quot;GetUniversalAudioStream_2&quot;)]
 [HttpHead(&quot;Audio/{itemId}/universal&quot;, Name = &quot;HeadUniversalAudioStream&quot;)]
-[HttpHead(&quot;Audio/{itemId}/universal.{container}&quot;, Name = &quot;HeadUniversalAudioStream_2&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(302)]
 [ProducesAudioFile]
-public Task&lt;ActionResult&gt; GetUniversalAudioStream([FromRoute, Required] Guid itemId, [FromRoute] string container, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] Guid? userId, [FromQuery] string audioCodec, [FromQuery] int? maxAudioChannels, [FromQuery] int? transcodingAudioChannels, [FromQuery] long? maxStreamingBitrate, [FromQuery] long? startTimeTicks, [FromQuery] string transcodingContainer, [FromQuery] string transcodingProtocol, [FromQuery] int? maxAudioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] bool? enableRemoteMedia, [FromQuery] bool breakOnNonKeyFrames, [FromQuery] bool enableRedirection = true)</code></pre>
+public Task&lt;ActionResult&gt; GetUniversalAudioStream([FromRoute, Required] Guid itemId, [FromQuery] string container, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] Guid? userId, [FromQuery] string audioCodec, [FromQuery] int? maxAudioChannels, [FromQuery] int? transcodingAudioChannels, [FromQuery] long? maxStreamingBitrate, [FromQuery] long? startTimeTicks, [FromQuery] string transcodingContainer, [FromQuery] string transcodingProtocol, [FromQuery] int? maxAudioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] bool? enableRemoteMedia, [FromQuery] bool breakOnNonKeyFrames, [FromQuery] bool enableRedirection = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

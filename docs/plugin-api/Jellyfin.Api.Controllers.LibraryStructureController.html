@@ -624,7 +624,7 @@ public class LibraryStructureController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Library.ILibraryMonitor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L42">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController__ctor_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Library_ILibraryMonitor_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Library.ILibraryMonitor)">LibraryStructureController(IServerConfigurationManager, ILibraryManager, ILibraryMonitor)</h4>
@@ -672,7 +672,7 @@ public class LibraryStructureController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddMediaPath_Jellyfin_Api_Models_LibraryStructureDto_MediaPathDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddMediaPath(Jellyfin.Api.Models.LibraryStructureDto.MediaPathDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L204">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L205">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_AddMediaPath_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddMediaPath*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddMediaPath_Jellyfin_Api_Models_LibraryStructureDto_MediaPathDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddMediaPath(Jellyfin.Api.Models.LibraryStructureDto.MediaPathDto,System.Boolean)">AddMediaPath(MediaPathDto, Boolean)</h4>
@@ -746,7 +746,7 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String%2CSystem.String%2CSystem.String%5B%5D%2CJellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L73">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L74">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String,System.String,System.String[],Jellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto,System.Boolean)">AddVirtualFolder(String, String, String[], AddVirtualFolderDto, Boolean)</h4>
@@ -757,7 +757,7 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] string collectionType, [FromQuery] string[] paths, [FromBody] AddVirtualFolderDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
+public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] string collectionType, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] paths, [FromBody] AddVirtualFolderDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,7 +822,7 @@ public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQ
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_GetVirtualFolders.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.GetVirtualFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L57">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_GetVirtualFolders_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.GetVirtualFolders*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_GetVirtualFolders" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.GetVirtualFolders">GetVirtualFolders()</h4>
@@ -856,7 +856,7 @@ public ActionResult&lt;IEnumerable&lt;VirtualFolderInfo&gt;&gt; GetVirtualFolder
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_RemoveMediaPath_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.RemoveMediaPath(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L272">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L273">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_RemoveMediaPath_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RemoveMediaPath*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_RemoveMediaPath_System_String_System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RemoveMediaPath(System.String,System.String,System.Boolean)">RemoveMediaPath(String, String, Boolean)</h4>
@@ -936,7 +936,7 @@ public ActionResult RemoveMediaPath([FromQuery] string name, [FromQuery] string 
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_RemoveVirtualFolder_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.RemoveVirtualFolder(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L102">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_RemoveVirtualFolder_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RemoveVirtualFolder*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_RemoveVirtualFolder_System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RemoveVirtualFolder(System.String,System.Boolean)">RemoveVirtualFolder(String, Boolean)</h4>
@@ -994,7 +994,7 @@ public Task&lt;ActionResult&gt; RemoveVirtualFolder([FromQuery] string name, [Fr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_RenameVirtualFolder_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.RenameVirtualFolder(System.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L122">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L123">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_RenameVirtualFolder_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RenameVirtualFolder*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_RenameVirtualFolder_System_String_System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.RenameVirtualFolder(System.String,System.String,System.Boolean)">RenameVirtualFolder(String, String, Boolean)</h4>
@@ -1076,7 +1076,7 @@ public ActionResult RenameVirtualFolder([FromQuery] string name, [FromQuery] str
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_Jellyfin_Api_Models_LibraryStructureDto_UpdateLibraryOptionsDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(Jellyfin.Api.Models.LibraryStructureDto.UpdateLibraryOptionsDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L318">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L319">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateLibraryOptions_Jellyfin_Api_Models_LibraryStructureDto_UpdateLibraryOptionsDto_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateLibraryOptions(Jellyfin.Api.Models.LibraryStructureDto.UpdateLibraryOptionsDto)">UpdateLibraryOptions(UpdateLibraryOptionsDto)</h4>
@@ -1128,7 +1128,7 @@ public ActionResult UpdateLibraryOptions([FromBody] UpdateLibraryOptionsDto requ
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_UpdateMediaPath_System_String_MediaBrowser_Model_Configuration_MediaPathInfo_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.UpdateMediaPath(System.String%2CMediaBrowser.Model.Configuration.MediaPathInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L248">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L249">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateMediaPath_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateMediaPath*"></a>
   <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_UpdateMediaPath_System_String_MediaBrowser_Model_Configuration_MediaPathInfo_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.UpdateMediaPath(System.String,MediaBrowser.Model.Configuration.MediaPathInfo)">UpdateMediaPath(String, MediaPathInfo)</h4>
@@ -1208,7 +1208,7 @@ public ActionResult UpdateMediaPath([FromQuery] string name, [FromBody] MediaPat
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L28" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -1025,7 +1025,7 @@ public ActionResult Play([FromRoute, Required] string sessionId, [FromQuery, Req
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Capabilities&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult PostCapabilities([FromQuery] string id, [FromQuery] string playableMediaTypes, [FromQuery] GeneralCommandType[] supportedCommands, [FromQuery] bool supportsMediaControl = false, [FromQuery] bool supportsSync = false, [FromQuery] bool supportsPersistentIdentifier = true)</code></pre>
+public ActionResult PostCapabilities([FromQuery] string id, [FromQuery] string playableMediaTypes, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] GeneralCommandType[] supportedCommands, [FromQuery] bool supportsMediaControl = false, [FromQuery] bool supportsSync = false, [FromQuery] bool supportsPersistentIdentifier = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
