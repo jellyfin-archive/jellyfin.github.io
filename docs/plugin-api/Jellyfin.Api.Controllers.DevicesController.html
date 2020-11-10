@@ -613,7 +613,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
   <h5 id="Jellyfin_Api_Controllers_DevicesController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Authorize(Policy = &quot;DefaultAuthorization&quot;)]
+    <pre><code class="lang-csharp hljs">[Authorize(Policy = &quot;RequiresElevation&quot;)]
 public class DevicesController : BaseJellyfinApiController</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -671,7 +671,7 @@ public class DevicesController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DevicesController_DeleteDevice_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DevicesController.DeleteDevice(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L134">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L130">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DevicesController_DeleteDevice_" data-uid="Jellyfin.Api.Controllers.DevicesController.DeleteDevice*"></a>
   <h4 id="Jellyfin_Api_Controllers_DevicesController_DeleteDevice_System_String_" data-uid="Jellyfin.Api.Controllers.DevicesController.DeleteDevice(System.String)">DeleteDevice(String)</h4>
@@ -724,7 +724,7 @@ public ActionResult DeleteDevice([FromQuery, Required] string id)</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DevicesController_GetDeviceInfo_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DevicesController.GetDeviceInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L64">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L63">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DevicesController_GetDeviceInfo_" data-uid="Jellyfin.Api.Controllers.DevicesController.GetDeviceInfo*"></a>
   <h4 id="Jellyfin_Api_Controllers_DevicesController_GetDeviceInfo_System_String_" data-uid="Jellyfin.Api.Controllers.DevicesController.GetDeviceInfo(System.String)">GetDeviceInfo(String)</h4>
@@ -734,7 +734,6 @@ public ActionResult DeleteDevice([FromQuery, Required] string id)</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Info&quot;)]
-[Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 public ActionResult&lt;DeviceInfo&gt; GetDeviceInfo([FromQuery, Required] string id)</code></pre>
@@ -778,7 +777,7 @@ public ActionResult&lt;DeviceInfo&gt; GetDeviceInfo([FromQuery, Required] string
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DevicesController_GetDeviceOptions_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DevicesController.GetDeviceOptions(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L84">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DevicesController_GetDeviceOptions_" data-uid="Jellyfin.Api.Controllers.DevicesController.GetDeviceOptions*"></a>
   <h4 id="Jellyfin_Api_Controllers_DevicesController_GetDeviceOptions_System_String_" data-uid="Jellyfin.Api.Controllers.DevicesController.GetDeviceOptions(System.String)">GetDeviceOptions(String)</h4>
@@ -788,7 +787,6 @@ public ActionResult&lt;DeviceInfo&gt; GetDeviceInfo([FromQuery, Required] string
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Options&quot;)]
-[Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 public ActionResult&lt;DeviceOptions&gt; GetDeviceOptions([FromQuery, Required] string id)</code></pre>
@@ -842,7 +840,6 @@ public ActionResult&lt;DeviceOptions&gt; GetDeviceOptions([FromQuery, Required] 
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
-[Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
 public ActionResult&lt;QueryResult&lt;DeviceInfo&gt;&gt; GetDevices([FromQuery] bool? supportsSync, [FromQuery] Guid? userId)</code></pre>
   </div>
@@ -891,7 +888,7 @@ public ActionResult&lt;QueryResult&lt;DeviceInfo&gt;&gt; GetDevices([FromQuery] 
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_DevicesController_UpdateDeviceOptions_System_String_MediaBrowser_Model_Devices_DeviceOptions_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.DevicesController.UpdateDeviceOptions(System.String%2CMediaBrowser.Model.Devices.DeviceOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L109">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/DevicesController.cs/#L106">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_DevicesController_UpdateDeviceOptions_" data-uid="Jellyfin.Api.Controllers.DevicesController.UpdateDeviceOptions*"></a>
   <h4 id="Jellyfin_Api_Controllers_DevicesController_UpdateDeviceOptions_System_String_MediaBrowser_Model_Devices_DeviceOptions_" data-uid="Jellyfin.Api.Controllers.DevicesController.UpdateDeviceOptions(System.String,MediaBrowser.Model.Devices.DeviceOptions)">UpdateDeviceOptions(String, DeviceOptions)</h4>
@@ -901,7 +898,6 @@ public ActionResult&lt;QueryResult&lt;DeviceInfo&gt;&gt; GetDevices([FromQuery] 
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Options&quot;)]
-[Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
 public ActionResult UpdateDeviceOptions([FromQuery, Required] string id, [FromBody, Required] DeviceOptions deviceOptions)</code></pre>

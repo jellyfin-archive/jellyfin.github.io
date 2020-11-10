@@ -620,19 +620,19 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Dto.IDtoService%2CMediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Library.IUserDataManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L39">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController__ctor_" data-uid="Jellyfin.Api.Controllers.PersonsController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_" data-uid="Jellyfin.Api.Controllers.PersonsController.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserManager)">PersonsController(ILibraryManager, IDtoService, IUserManager)</h4>
+  <h4 id="Jellyfin_Api_Controllers_PersonsController__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Dto_IDtoService_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Library_IUserDataManager_" data-uid="Jellyfin.Api.Controllers.PersonsController.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Dto.IDtoService,MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Library.IUserDataManager)">PersonsController(ILibraryManager, IDtoService, IUserManager, IUserDataManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.PersonsController.html">PersonsController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PersonsController(ILibraryManager libraryManager, IDtoService dtoService, IUserManager userManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public PersonsController(ILibraryManager libraryManager, IDtoService dtoService, IUserManager userManager, IUserDataManager userDataManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -662,6 +662,12 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
         <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html">IUserManager</a> interface.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a></td>
+        <td><span class="parametername">userDataManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Library.IUserDataManager.html">IUserDataManager</a> interface.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -671,7 +677,7 @@ public class PersonsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController_GetPerson_System_String_System_Nullable_System_Guid__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.GetPerson(System.String%2CSystem.Nullable%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L265">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L126">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController_GetPerson_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPerson*"></a>
   <h4 id="Jellyfin_Api_Controllers_PersonsController_GetPerson_System_String_System_Nullable_System_Guid__" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPerson(System.String,System.Nullable{System.Guid})">GetPerson(String, Nullable&lt;Guid&gt;)</h4>
@@ -728,21 +734,21 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_MediaBrowser_Model_Querying_ItemFilter___System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Int32__MediaBrowser_Model_Entities_ImageType___System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Guid__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CMediaBrowser.Model.Querying.ItemFilter%5B%5D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Entities.ImageType%5B%5D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Int32__System_String_System_String_MediaBrowser_Model_Querying_ItemFilter___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__MediaBrowser_Model_Entities_ImageType___System_String_System_String_System_String_System_Nullable_System_Guid__System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CMediaBrowser.Model.Querying.ItemFilter%5B%5D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Entities.ImageType%5B%5D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L69">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PersonsController_GetPersons_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPersons*"></a>
-  <h4 id="Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Double__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_String_System_String_MediaBrowser_Model_Querying_ItemFilter___System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Int32__MediaBrowser_Model_Entities_ImageType___System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Guid__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Boolean_" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable{System.Double},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.String,System.String,MediaBrowser.Model.Querying.ItemFilter[],System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Int32},MediaBrowser.Model.Entities.ImageType[],System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Guid},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Boolean)">GetPersons(Nullable&lt;Double&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, String, String, ItemFilter[], Nullable&lt;Boolean&gt;, String, String, String, String, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, ImageType[], String, String, String, String, String, Nullable&lt;Guid&gt;, String, String, String, Nullable&lt;Boolean&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Gets all persons from a given item, folder, or the entire library.</p>
+  <h4 id="Jellyfin_Api_Controllers_PersonsController_GetPersons_System_Nullable_System_Int32__System_String_System_String_MediaBrowser_Model_Querying_ItemFilter___System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__MediaBrowser_Model_Entities_ImageType___System_String_System_String_System_String_System_Nullable_System_Guid__System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.PersonsController.GetPersons(System.Nullable{System.Int32},System.String,System.String,MediaBrowser.Model.Querying.ItemFilter[],System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},MediaBrowser.Model.Entities.ImageType[],System.String,System.String,System.String,System.Nullable{System.Guid},System.Nullable{System.Boolean})">GetPersons(Nullable&lt;Int32&gt;, String, String, ItemFilter[], Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, ImageType[], String, String, String, Nullable&lt;Guid&gt;, Nullable&lt;Boolean&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets all persons.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery] double? minCommunityRating, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery] string searchTerm, [FromQuery] string parentId, [FromQuery] string fields, [FromQuery] string excludeItemTypes, [FromQuery] string includeItemTypes, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery] bool? isFavorite, [FromQuery] string mediaTypes, [FromQuery] string genres, [FromQuery] string genreIds, [FromQuery] string officialRatings, [FromQuery] string tags, [FromQuery] string years, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] ImageType[] enableImageTypes, [FromQuery] string person, [FromQuery] string personIds, [FromQuery] string personTypes, [FromQuery] string studios, [FromQuery] string studioIds, [FromQuery] Guid? userId, [FromQuery] string nameStartsWithOrGreater, [FromQuery] string nameStartsWith, [FromQuery] string nameLessThan, [FromQuery] bool? enableImages, [FromQuery] bool enableTotalRecordCount = true)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery] int? limit, [FromQuery] string searchTerm, [FromQuery] string fields, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery] bool? isFavorite, [FromQuery] bool? enableUserData, [FromQuery] int? imageTypeLimit, [FromQuery] ImageType[] enableImageTypes, [FromQuery] string excludePersonTypes, [FromQuery] string personTypes, [FromQuery] string appearsInItemId, [FromQuery] Guid? userId, [FromQuery] bool? enableImages)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -754,18 +760,6 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a>&gt;</td>
-        <td><span class="parametername">minCommunityRating</span></td>
-        <td><p>Optional filter by minimum community rating.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><span class="parametername">startIndex</span></td>
-        <td><p>Optional. The record index to start at. All items with a lower index will be dropped from the results.</p>
-</td>
-      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">limit</span></td>
@@ -780,26 +774,8 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">parentId</span></td>
-        <td><p>Specify this to localize the search to a specific item or folder. Omit to use the root.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">fields</span></td>
         <td><p>Optional. Specify additional fields of information to return in the output. This allows multiple, comma delimited. Options: Budget, Chapters, DateCreated, Genres, HomePageUrl, IndexOptions, MediaStreams, Overview, ParentId, Path, People, ProviderIds, PrimaryImageAspectRatio, Revenue, SortName, Studios, Taglines.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">excludeItemTypes</span></td>
-        <td><p>Optional. If specified, results will be filtered out based on item type. This allows multiple, comma delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">includeItemTypes</span></td>
-        <td><p>Optional. If specified, results will be filtered in based on item type. This allows multiple, comma delimited.</p>
 </td>
       </tr>
       <tr>
@@ -811,43 +787,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">isFavorite</span></td>
-        <td><p>Optional filter by items that are marked as favorite, or not.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">mediaTypes</span></td>
-        <td><p>Optional filter by MediaType. Allows multiple, comma delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">genres</span></td>
-        <td><p>Optional. If specified, results will be filtered based on genre. This allows multiple, pipe delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">genreIds</span></td>
-        <td><p>Optional. If specified, results will be filtered based on genre id. This allows multiple, pipe delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">officialRatings</span></td>
-        <td><p>Optional. If specified, results will be filtered based on OfficialRating. This allows multiple, pipe delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">tags</span></td>
-        <td><p>Optional. If specified, results will be filtered based on tag. This allows multiple, pipe delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">years</span></td>
-        <td><p>Optional. If specified, results will be filtered based on production year. This allows multiple, comma delimited.</p>
+        <td><p>Optional filter by items that are marked as favorite, or not. userId is required.</p>
 </td>
       </tr>
       <tr>
@@ -870,32 +810,20 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">person</span></td>
-        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">personIds</span></td>
-        <td><p>Optional. If specified, results will be filtered to include only those containing the specified person id.</p>
+        <td><span class="parametername">excludePersonTypes</span></td>
+        <td><p>Optional. If specified results will be filtered to exclude those containing the specified PersonType. Allows multiple, comma-delimited.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">personTypes</span></td>
-        <td><p>Optional. If specified, along with Person, results will be filtered to include only those containing the specified person and PersonType. Allows multiple, comma-delimited.</p>
+        <td><p>Optional. If specified results will be filtered to include only those containing the specified PersonType. Allows multiple, comma-delimited.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">studios</span></td>
-        <td><p>Optional. If specified, results will be filtered based on studio. This allows multiple, pipe delimited.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">studioIds</span></td>
-        <td><p>Optional. If specified, results will be filtered based on studio id. This allows multiple, pipe delimited.</p>
+        <td><span class="parametername">appearsInItemId</span></td>
+        <td><p>Optional. If specified, person results will be filtered on items related to said persons.</p>
 </td>
       </tr>
       <tr>
@@ -905,33 +833,9 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">nameStartsWithOrGreater</span></td>
-        <td><p>Optional filter by items whose name is sorted equally or greater than a given input string.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">nameStartsWith</span></td>
-        <td><p>Optional filter by items whose name is sorted equally than a given input string.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">nameLessThan</span></td>
-        <td><p>Optional filter by items whose name is equally or lesser than a given input string.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">enableImages</span></td>
         <td><p>Optional, include image information in output.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">enableTotalRecordCount</span></td>
-        <td><p>Optional. Include total record count.</p>
 </td>
       </tr>
     </tbody>
@@ -963,7 +867,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPersons([FromQuery]
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PersonsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PersonsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PersonsController.cs/#L24" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

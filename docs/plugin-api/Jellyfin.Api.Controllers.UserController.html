@@ -1067,6 +1067,42 @@ public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBo
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetCurrentUser.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetCurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L539">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_UserController_GetCurrentUser_" data-uid="Jellyfin.Api.Controllers.UserController.GetCurrentUser*"></a>
+  <h4 id="Jellyfin_Api_Controllers_UserController_GetCurrentUser" data-uid="Jellyfin.Api.Controllers.UserController.GetCurrentUser">GetCurrentUser()</h4>
+  <div class="markdown level1 summary"><p>Gets the user based on auth token.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;Me&quot;)]
+[Authorize(Policy = &quot;DefaultAuthorization&quot;)]
+[ProducesResponseType(200)]
+[ProducesResponseType(400)]
+public ActionResult&lt;UserDto&gt; GetCurrentUser()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a>&gt;</td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a> for the authenticated user.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetPublicUsers.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetPublicUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
