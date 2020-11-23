@@ -125,19 +125,81 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_HlsHelpers_GetLivePlaylistText_System_String_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.HlsHelpers.GetLivePlaylistText(System.String%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_HlsHelpers_GetFmp4InitFileName_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.HlsHelpers.GetFmp4InitFileName(System.String%2CJellyfin.Api.Models.StreamingDtos.StreamState%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L87">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_HlsHelpers_GetFmp4InitFileName_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.GetFmp4InitFileName*"></a>
+  <h4 id="Jellyfin_Api_Helpers_HlsHelpers_GetFmp4InitFileName_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_System_Boolean_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.GetFmp4InitFileName(System.String,Jellyfin.Api.Models.StreamingDtos.StreamState,System.Boolean)">GetFmp4InitFileName(String, StreamState, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the #EXT-X-MAP string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetFmp4InitFileName(string outputPath, StreamState state, bool isOsDepends)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">outputPath</span></td>
+        <td><p>The output path of the file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isOsDepends</span></td>
+        <td><p>Get a normal string or depends on OS.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>The string text of #EXT-X-MAP.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_HlsHelpers_GetLivePlaylistText_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.HlsHelpers.GetLivePlaylistText(System.String%2CJellyfin.Api.Models.StreamingDtos.StreamState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L119">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_HlsHelpers_GetLivePlaylistText_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.GetLivePlaylistText*"></a>
-  <h4 id="Jellyfin_Api_Helpers_HlsHelpers_GetLivePlaylistText_System_String_System_Int32_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.GetLivePlaylistText(System.String,System.Int32)">GetLivePlaylistText(String, Int32)</h4>
+  <h4 id="Jellyfin_Api_Helpers_HlsHelpers_GetLivePlaylistText_System_String_Jellyfin_Api_Models_StreamingDtos_StreamState_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.GetLivePlaylistText(System.String,Jellyfin.Api.Models.StreamingDtos.StreamState)">GetLivePlaylistText(String, StreamState)</h4>
   <div class="markdown level1 summary"><p>Gets the hls playlist text.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static string GetLivePlaylistText(string path, int segmentLength)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string GetLivePlaylistText(string path, StreamState state)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -156,9 +218,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">segmentLength</span></td>
-        <td><p>The segment length.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Api.Models.StreamingDtos.StreamState.html">StreamState</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -184,7 +246,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_HlsHelpers_WaitForMinimumSegmentCount_System_String_System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.HlsHelpers.WaitForMinimumSegmentCount(System.String%2CSystem.Nullable%7BSystem.Int32%7D%2CMicrosoft.Extensions.Logging.ILogger%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L24">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L27">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_HlsHelpers_WaitForMinimumSegmentCount_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.WaitForMinimumSegmentCount*"></a>
   <h4 id="Jellyfin_Api_Helpers_HlsHelpers_WaitForMinimumSegmentCount_System_String_System_Nullable_System_Int32__Microsoft_Extensions_Logging_ILogger_System_Threading_CancellationToken_" data-uid="Jellyfin.Api.Helpers.HlsHelpers.WaitForMinimumSegmentCount(System.String,System.Nullable{System.Int32},Microsoft.Extensions.Logging.ILogger,System.Threading.CancellationToken)">WaitForMinimumSegmentCount(String, Nullable&lt;Int32&gt;, ILogger, CancellationToken)</h4>
@@ -258,7 +320,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_HlsHelpers.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.HlsHelpers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/HlsHelpers.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

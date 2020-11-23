@@ -93,12 +93,12 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1">IInfrastructure</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iserviceprovider">IServiceProvider</a>&gt;</div>
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies</span></div>
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbSetCache</span></div>
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">IResettableService</a></div>
   </div>
   <div class="inheritedMembers">
@@ -107,10 +107,13 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbsetcache-getoraddset#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbSetCache_GetOrAddSet_Microsoft_EntityFrameworkCore_Internal_IDbSetSource_System_Type_">DbContext.IDbSetCache.GetOrAddSet(IDbSetSource, Type)</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbsetcache-getoraddset#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbSetCache_GetOrAddSet_Microsoft_EntityFrameworkCore_Internal_IDbSetSource_System_String_System_Type_">DbContext.IDbSetCache.GetOrAddSet(IDbSetSource, String, Type)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#Microsoft_EntityFrameworkCore_DbContext_Set__1">DbContext.Set&lt;TEntity&gt;()</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.query#Microsoft_EntityFrameworkCore_DbContext_Query__1">DbContext.Query&lt;TQuery&gt;()</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.set#Microsoft_EntityFrameworkCore_DbContext_Set__1_System_String_">DbContext.Set&lt;TEntity&gt;(String)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring#Microsoft_EntityFrameworkCore_DbContext_OnConfiguring_Microsoft_EntityFrameworkCore_DbContextOptionsBuilder_">DbContext.OnConfiguring(DbContextOptionsBuilder)</a>
@@ -125,13 +128,13 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesasync#Microsoft_EntityFrameworkCore_DbContext_SaveChangesAsync_System_Boolean_System_Threading_CancellationToken_">DbContext.SaveChangesAsync(Boolean, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-setpool#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_SetPool_Microsoft_EntityFrameworkCore_Internal_IDbContextPool_">DbContext.IDbContextPoolable.SetPool(IDbContextPool)</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-clearlease#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_ClearLease">DbContext.IDbContextPoolable.ClearLease()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-setlease#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_SetLease_Microsoft_EntityFrameworkCore_Internal_DbContextLease_">DbContext.IDbContextPoolable.SetLease(DbContextLease)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-snapshotconfiguration#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_SnapshotConfiguration">DbContext.IDbContextPoolable.SnapshotConfiguration()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-resurrect#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_Resurrect_Microsoft_EntityFrameworkCore_Internal_DbContextPoolConfigurationSnapshot_">DbContext.IDbContextPoolable.Resurrect(DbContextPoolConfigurationSnapshot)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-infrastructure-iresettableservice-resetstate#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Infrastructure_IResettableService_ResetState">DbContext.IResettableService.ResetState()</a>
@@ -230,6 +233,9 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.findasync#Microsoft_EntityFrameworkCore_DbContext_FindAsync__1_System_Object___System_Threading_CancellationToken_">DbContext.FindAsync&lt;TEntity&gt;(Object[], CancellationToken)</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.fromexpression#Microsoft_EntityFrameworkCore_DbContext_FromExpression__1_System_Linq_Expressions_Expression_System_Func_System_Linq_IQueryable___0____">DbContext.FromExpression&lt;TResult&gt;(Expression&lt;Func&lt;IQueryable&lt;TResult&gt;&gt;&gt;)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.database#Microsoft_EntityFrameworkCore_DbContext_Database">DbContext.Database</a>
     </div>
     <div>
@@ -269,6 +275,15 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-infrastructure-iinfrastructure-system-iserviceprovider--instance#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Infrastructure_IInfrastructure_System_IServiceProvider__Instance">DbContext.IInfrastructure&lt;IServiceProvider&gt;.Instance</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savingchanges">DbContext.SavingChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savedchanges">DbContext.SavedChanges</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechangesfailed">DbContext.SaveChangesFailed</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
     </div>
     <div>
@@ -294,7 +309,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Server.Implementations.dll</h6>
   <h5 id="Jellyfin_Server_Implementations_JellyfinDb_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JellyfinDb : DbContext, IDisposable, IAsyncDisposable, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService</code></pre>
+    <pre><code class="lang-csharp hljs">public class JellyfinDb : DbContext, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IDisposable, IAsyncDisposable, IResettableService</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -675,12 +690,6 @@
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#Microsoft_EntityFrameworkCore_DbContext_SaveChanges">DbContext.SaveChanges()</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">System.IAsyncDisposable</a>
-  </div>
-  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iinfrastructure-1">Microsoft.EntityFrameworkCore.Infrastructure.IInfrastructure&lt;T&gt;</a>
   </div>
   <div>
@@ -693,7 +702,17 @@
       <span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span>
   </div>
   <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">System.IAsyncDisposable</a>
+  </div>
+  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">Microsoft.EntityFrameworkCore.Infrastructure.IResettableService</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
   </div>
 </article>
           </div>

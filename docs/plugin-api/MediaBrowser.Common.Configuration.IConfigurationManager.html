@@ -164,7 +164,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Configuration_IConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Configuration.IConfigurationManager.AddParts(System.Collections.Generic.IEnumerable%7BMediaBrowser.Common.Configuration.IConfigurationFactory%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L81">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Configuration_IConfigurationManager_AddParts_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.AddParts*"></a>
   <h4 id="MediaBrowser_Common_Configuration_IConfigurationManager_AddParts_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Configuration_IConfigurationFactory__" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.AddParts(System.Collections.Generic.IEnumerable{MediaBrowser.Common.Configuration.IConfigurationFactory})">AddParts(IEnumerable&lt;IConfigurationFactory&gt;)</h4>
@@ -198,7 +198,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Configuration_IConfigurationManager_GetConfiguration_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Configuration.IConfigurationManager.GetConfiguration(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L61">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Configuration_IConfigurationManager_GetConfiguration_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.GetConfiguration*"></a>
   <h4 id="MediaBrowser_Common_Configuration_IConfigurationManager_GetConfiguration_System_String_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.GetConfiguration(System.String)">GetConfiguration(String)</h4>
@@ -248,7 +248,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Configuration_IConfigurationManager_GetConfigurationType_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Configuration.IConfigurationManager.GetConfigurationType(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L61">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L68">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Configuration_IConfigurationManager_GetConfigurationType_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.GetConfigurationType*"></a>
   <h4 id="MediaBrowser_Common_Configuration_IConfigurationManager_GetConfigurationType_System_String_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.GetConfigurationType(System.String)">GetConfigurationType(String)</h4>
@@ -289,6 +289,39 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
         <td><p>Type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Configuration_IConfigurationManager_RegisterConfiguration__1.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Configuration.IConfigurationManager.RegisterConfiguration%60%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L53">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Configuration_IConfigurationManager_RegisterConfiguration_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.RegisterConfiguration*"></a>
+  <h4 id="MediaBrowser_Common_Configuration_IConfigurationManager_RegisterConfiguration__1" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.RegisterConfiguration``1">RegisterConfiguration&lt;T&gt;()</h4>
+  <div class="markdown level1 summary"><p>Manually pre-loads a factory so that it is available pre system initialisation.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RegisterConfiguration&lt;T&gt;()
+    where T : IConfigurationFactory</code></pre>
+  </div>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>Class to register.</p>
 </td>
       </tr>
     </tbody>
@@ -348,7 +381,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Configuration_IConfigurationManager_SaveConfiguration_System_String_System_Object_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Configuration.IConfigurationManager.SaveConfiguration(System.String%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L68">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Configuration/IConfigurationManager.cs/#L75">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Configuration_IConfigurationManager_SaveConfiguration_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.SaveConfiguration*"></a>
   <h4 id="MediaBrowser_Common_Configuration_IConfigurationManager_SaveConfiguration_System_String_System_Object_" data-uid="MediaBrowser.Common.Configuration.IConfigurationManager.SaveConfiguration(System.String,System.Object)">SaveConfiguration(String, Object)</h4>
@@ -486,6 +519,9 @@
       <a class="xref" href="MediaBrowser.Common.Configuration.ConfigurationManagerExtensions.html#MediaBrowser_Common_Configuration_ConfigurationManagerExtensions_GetConfiguration__1_MediaBrowser_Common_Configuration_IConfigurationManager_System_String_">ConfigurationManagerExtensions.GetConfiguration&lt;T&gt;(IConfigurationManager, String)</a>
   </div>
   <div>
+      <a class="xref" href="Jellyfin.Networking.Configuration.NetworkConfigurationExtensions.html#Jellyfin_Networking_Configuration_NetworkConfigurationExtensions_GetNetworkConfiguration_MediaBrowser_Common_Configuration_IConfigurationManager_">NetworkConfigurationExtensions.GetNetworkConfiguration(IConfigurationManager)</a>
+  </div>
+  <div>
       <a class="xref" href="MediaBrowser.Controller.Library.MetadataConfigurationExtensions.html#MediaBrowser_Controller_Library_MetadataConfigurationExtensions_GetMetadataConfiguration_MediaBrowser_Common_Configuration_IConfigurationManager_">MetadataConfigurationExtensions.GetMetadataConfiguration(IConfigurationManager)</a>
   </div>
   <div>
@@ -493,6 +529,9 @@
   </div>
   <div>
       <a class="xref" href="MediaBrowser.XbmcMetadata.Configuration.NfoConfigurationExtension.html#MediaBrowser_XbmcMetadata_Configuration_NfoConfigurationExtension_GetNfoConfiguration_MediaBrowser_Common_Configuration_IConfigurationManager_">NfoConfigurationExtension.GetNfoConfiguration(IConfigurationManager)</a>
+  </div>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
   </div>
   <div>
       <a class="xref" href="Emby.Dlna.ConfigurationExtension.html#Emby_Dlna_ConfigurationExtension_GetDlnaConfiguration_MediaBrowser_Common_Configuration_IConfigurationManager_">ConfigurationExtension.GetDlnaConfiguration(IConfigurationManager)</a>

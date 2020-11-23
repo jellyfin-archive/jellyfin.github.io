@@ -402,6 +402,9 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.conflict#Microsoft_AspNetCore_Mvc_ControllerBase_Conflict_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.Conflict(ModelStateDictionary)</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problem#Microsoft_AspNetCore_Mvc_ControllerBase_Problem_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_">ControllerBase.Problem(String, String, Nullable&lt;Int32&gt;, String, String)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem_Microsoft_AspNetCore_Mvc_ValidationProblemDetails_">ControllerBase.ValidationProblem(ValidationProblemDetails)</a>
     </div>
     <div>
@@ -409,6 +412,9 @@
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem">ControllerBase.ValidationProblem()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.validationproblem#Microsoft_AspNetCore_Mvc_ControllerBase_ValidationProblem_System_String_System_String_System_Nullable_System_Int32__System_String_System_String_Microsoft_AspNetCore_Mvc_ModelBinding_ModelStateDictionary_">ControllerBase.ValidationProblem(String, String, Nullable&lt;Int32&gt;, String, String, ModelStateDictionary)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.created#Microsoft_AspNetCore_Mvc_ControllerBase_Created_System_String_System_Object_">ControllerBase.Created(String, Object)</a>
@@ -510,10 +516,22 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.forbid#Microsoft_AspNetCore_Mvc_ControllerBase_Forbid_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String___">ControllerBase.Forbid(AuthenticationProperties, String[])</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_">ControllerBase.SignIn(ClaimsPrincipal)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_System_String_">ControllerBase.SignIn(ClaimsPrincipal, String)</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_Microsoft_AspNetCore_Authentication_AuthenticationProperties_">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signin#Microsoft_AspNetCore_Mvc_ControllerBase_SignIn_System_Security_Claims_ClaimsPrincipal_Microsoft_AspNetCore_Authentication_AuthenticationProperties_System_String_">ControllerBase.SignIn(ClaimsPrincipal, AuthenticationProperties, String)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#Microsoft_AspNetCore_Mvc_ControllerBase_SignOut">ControllerBase.SignOut()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#Microsoft_AspNetCore_Mvc_ControllerBase_SignOut_Microsoft_AspNetCore_Authentication_AuthenticationProperties_">ControllerBase.SignOut(AuthenticationProperties)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.signout#Microsoft_AspNetCore_Mvc_ControllerBase_SignOut_System_String___">ControllerBase.SignOut(String[])</a>
@@ -583,6 +601,9 @@
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.objectvalidator#Microsoft_AspNetCore_Mvc_ControllerBase_ObjectValidator">ControllerBase.ObjectValidator</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.problemdetailsfactory#Microsoft_AspNetCore_Mvc_ControllerBase_ProblemDetailsFactory">ControllerBase.ProblemDetailsFactory</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.controllerbase.user#Microsoft_AspNetCore_Mvc_ControllerBase_User">ControllerBase.User</a>
@@ -667,13 +688,353 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/stream.{container:required}&quot;, Name = &quot;GetAudioStreamByContainer&quot;)]
-[HttpGet(&quot;{itemId}/stream&quot;, Name = &quot;GetAudioStream&quot;)]
-[HttpHead(&quot;{itemId}/stream.{container:required}&quot;, Name = &quot;HeadAudioStreamByContainer&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/stream&quot;, Name = &quot;GetAudioStream&quot;)]
 [HttpHead(&quot;{itemId}/stream&quot;, Name = &quot;HeadAudioStream&quot;)]
 [ProducesResponseType(200)]
 [ProducesAudioFile]
-public Task&lt;ActionResult&gt; GetAudioStream([FromRoute, Required] Guid itemId, [FromRoute] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodingReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions)</code></pre>
+public Task&lt;ActionResult&gt; GetAudioStream([FromRoute, Required] Guid itemId, [FromQuery] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodingReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The item id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">container</span></td>
+        <td><p>The audio container.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">static</span></td>
+        <td><p>Optional. If true, the original file will be streamed statically without any encoding. Use either no url extension or the original file extension. true/false.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">params</span></td>
+        <td><p>The streaming parameters.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">tag</span></td>
+        <td><p>The tag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceProfileId</span></td>
+        <td><p>Optional. The dlna device profile id to utilize.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">playSessionId</span></td>
+        <td><p>The play session id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">segmentContainer</span></td>
+        <td><p>The segment container.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">segmentLength</span></td>
+        <td><p>The segment length.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">minSegments</span></td>
+        <td><p>The minimum number of segments.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">mediaSourceId</span></td>
+        <td><p>The media version id, if playing an alternate version.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">deviceId</span></td>
+        <td><p>The device id of the client requesting. Used to stop encoding processes when needed.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">audioCodec</span></td>
+        <td><p>Optional. Specify a audio codec to encode to, e.g. mp3. If omitted the server will auto-select using the url&apos;s extension. Options: aac, mp3, vorbis, wma.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">enableAutoStreamCopy</span></td>
+        <td><p>Whether or not to allow automatic stream copy if requested values match the original source. Defaults to true.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">allowVideoStreamCopy</span></td>
+        <td><p>Whether or not to allow copying of the video stream url.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">allowAudioStreamCopy</span></td>
+        <td><p>Whether or not to allow copying of the audio stream url.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">breakOnNonKeyFrames</span></td>
+        <td><p>Optional. Whether to break on non key frames.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioSampleRate</span></td>
+        <td><p>Optional. Specify a specific audio sample rate, e.g. 44100.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxAudioBitDepth</span></td>
+        <td><p>Optional. The maximum audio bit depth.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioBitRate</span></td>
+        <td><p>Optional. Specify an audio bitrate to encode to, e.g. 128000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioChannels</span></td>
+        <td><p>Optional. Specify a specific number of audio channels to encode to, e.g. 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxAudioChannels</span></td>
+        <td><p>Optional. Specify a maximum number of audio channels to encode to, e.g. 2.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td><p>Optional. Specify a specific an encoder profile (varies by encoder), e.g. main, baseline, high.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">level</span></td>
+        <td><p>Optional. Specify a level for the encoder profile (varies by encoder), e.g. 3, 3.1.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">framerate</span></td>
+        <td><p>Optional. A specific video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a>&gt;</td>
+        <td><span class="parametername">maxFramerate</span></td>
+        <td><p>Optional. A specific maximum video framerate to encode to, e.g. 23.976. Generally this should be omitted unless the device has specific requirements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">copyTimestamps</span></td>
+        <td><p>Whether or not to copy timestamps when transcoding with an offset. Defaults to false.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">startTimeTicks</span></td>
+        <td><p>Optional. Specify a starting offset, in ticks. 1 tick = 10000 ms.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">width</span></td>
+        <td><p>Optional. The fixed horizontal resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">height</span></td>
+        <td><p>Optional. The fixed vertical resolution of the encoded video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">videoBitRate</span></td>
+        <td><p>Optional. Specify a video bitrate to encode to, e.g. 500000. If omitted this will be left to encoder defaults.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">subtitleStreamIndex</span></td>
+        <td><p>Optional. The index of the subtitle stream to use. If omitted no subtitles will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.SubtitleDeliveryMethod.html">SubtitleDeliveryMethod</a></td>
+        <td><span class="parametername">subtitleMethod</span></td>
+        <td><p>Optional. Specify the subtitle delivery method.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxRefFrames</span></td>
+        <td><p>Optional.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">maxVideoBitDepth</span></td>
+        <td><p>Optional. The maximum video bit depth.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">requireAvc</span></td>
+        <td><p>Optional. Whether to require avc.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">deInterlace</span></td>
+        <td><p>Optional. Whether to deinterlace the video.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">requireNonAnamorphic</span></td>
+        <td><p>Optional. Whether to require a non anamorphic stream.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">transcodingMaxAudioChannels</span></td>
+        <td><p>Optional. The maximum number of audio channels to transcode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">cpuCoreLimit</span></td>
+        <td><p>Optional. The limit of how many cpu cores to use.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">liveStreamId</span></td>
+        <td><p>The live stream id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
+        <td><span class="parametername">enableMpegtsM2TsMode</span></td>
+        <td><p>Optional. Whether to enable the MpegtsM2Ts mode.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">videoCodec</span></td>
+        <td><p>Optional. Specify a video codec to encode to, e.g. h264. If omitted the server will auto-select using the url&apos;s extension. Options: h265, h264, mpeg4, theora, vpx, wmv.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">subtitleCodec</span></td>
+        <td><p>Optional. Specify a subtitle codec to encode to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">transcodingReasons</span></td>
+        <td><p>Optional. The transcoding reason.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">audioStreamIndex</span></td>
+        <td><p>Optional. The index of the audio stream to use. If omitted the first audio stream will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">videoStreamIndex</span></td>
+        <td><p>Optional. The index of the video stream to use. If omitted the first video stream will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dlna.EncodingContext.html">EncodingContext</a>&gt;</td>
+        <td><span class="parametername">context</span></td>
+        <td><p>Optional. The <a class="xref" href="MediaBrowser.Model.Dlna.EncodingContext.html">EncodingContext</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">streamOptions</span></td>
+        <td><p>Optional. The streaming options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.fileresult">FileResult</a> containing the audio file.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_AudioController_GetAudioStreamByContainer_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.AudioController.GetAudioStreamByContainer(System.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Dlna.SubtitleDeliveryMethod%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BMediaBrowser.Model.Dlna.EncodingContext%7D%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/AudioController.cs/#L253">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_AudioController_GetAudioStreamByContainer_" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStreamByContainer*"></a>
+  <h4 id="Jellyfin_Api_Controllers_AudioController_GetAudioStreamByContainer_System_Guid_System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_String_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_String_System_Nullable_System_Single__System_Nullable_System_Single__System_Nullable_System_Boolean__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_SubtitleDeliveryMethod_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Dlna_EncodingContext__System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="Jellyfin.Api.Controllers.AudioController.GetAudioStreamByContainer(System.Guid,System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.String,System.Nullable{System.Single},System.Nullable{System.Single},System.Nullable{System.Boolean},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Dlna.SubtitleDeliveryMethod,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean},System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{MediaBrowser.Model.Dlna.EncodingContext},System.Collections.Generic.Dictionary{System.String,System.String})">GetAudioStreamByContainer(Guid, String, Nullable&lt;Boolean&gt;, String, String, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, String, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, String, Nullable&lt;Single&gt;, Nullable&lt;Single&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, SubtitleDeliveryMethod, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;EncodingContext&gt;, Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets an audio stream.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/stream.{container}&quot;, Name = &quot;GetAudioStreamByContainer&quot;)]
+[HttpHead(&quot;{itemId}/stream.{container}&quot;, Name = &quot;HeadAudioStreamByContainer&quot;)]
+[ProducesResponseType(200)]
+[ProducesAudioFile]
+public Task&lt;ActionResult&gt; GetAudioStreamByContainer([FromRoute, Required] Guid itemId, [FromRoute, Required] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodingReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -997,6 +1358,10 @@ public Task&lt;ActionResult&gt; GetAudioStream([FromRoute, Required] Guid itemId
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
 </article>
           </div>
           

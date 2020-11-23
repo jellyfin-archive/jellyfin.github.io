@@ -83,7 +83,8 @@
   
   <h1 id="Emby_Naming_Video_VideoResolver" data-uid="Emby.Naming.Video.VideoResolver" class="text-break">Class VideoResolver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Resolves <a class="xref" href="Emby.Naming.Video.VideoFileInfo.html">VideoFileInfo</a> from file path.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -127,11 +128,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver__ctor_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.%23ctor(Emby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L20">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver__ctor_" data-uid="Emby.Naming.Video.VideoResolver.#ctor*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver__ctor_Emby_Naming_Common_NamingOptions_" data-uid="Emby.Naming.Video.VideoResolver.#ctor(Emby.Naming.Common.NamingOptions)">VideoResolver(NamingOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Naming.Video.VideoResolver.html">VideoResolver</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -150,7 +152,9 @@
       <tr>
         <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a> object containing VideoFileExtensions, StubFileExtensions, CleanStringRegexes and CleanDateTimeRegexes
+    and passes options in <a class="xref" href="Emby.Naming.Video.StubResolver.html">StubResolver</a>, <a class="xref" href="Emby.Naming.Video.FlagParser.html">FlagParser</a>, <a class="xref" href="Emby.Naming.Video.Format3DParser.html">Format3DParser</a> and <a class="xref" href="Emby.Naming.Video.ExtraResolver.html">ExtraResolver</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -161,11 +165,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_CleanDateTime_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.CleanDateTime(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L135">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L159">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_CleanDateTime_" data-uid="Emby.Naming.Video.VideoResolver.CleanDateTime*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_CleanDateTime_System_String_" data-uid="Emby.Naming.Video.VideoResolver.CleanDateTime(System.String)">CleanDateTime(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tries to get name and year from raw name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,7 +189,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>Raw name.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -199,7 +205,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Emby.Naming.Video.CleanDateTimeResult.html">CleanDateTimeResult</a></td>
-        <td></td>
+        <td><p>Returns <a class="xref" href="Emby.Naming.Video.CleanDateTimeResult.html">CleanDateTimeResult</a> with name and optional year.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -208,11 +215,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_IsStubFile_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.IsStubFile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L124">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L137">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_IsStubFile_" data-uid="Emby.Naming.Video.VideoResolver.IsStubFile*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_IsStubFile_System_String_" data-uid="Emby.Naming.Video.VideoResolver.IsStubFile(System.String)">IsStubFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines if path is video file stub based on extension.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -231,7 +239,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path to file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -246,7 +255,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p>True if is video file stub.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -255,11 +265,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_IsVideoFile_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.IsVideoFile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L118">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L126">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_IsVideoFile_" data-uid="Emby.Naming.Video.VideoResolver.IsVideoFile*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_IsVideoFile_System_String_" data-uid="Emby.Naming.Video.VideoResolver.IsVideoFile(System.String)">IsVideoFile(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Determines if path is video file based on extension.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -278,7 +289,8 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
-        <td></td>
+        <td><p>Path to file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -293,7 +305,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p>True if is video file.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -302,7 +315,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_Resolve_System_String_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.Resolve(System.String%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L53">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_Resolve_" data-uid="Emby.Naming.Video.VideoResolver.Resolve*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_Resolve_System_String_System_Boolean_System_Boolean_" data-uid="Emby.Naming.Video.VideoResolver.Resolve(System.String,System.Boolean,System.Boolean)">Resolve(String, Boolean, Boolean)</h4>
@@ -380,7 +393,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_ResolveDirectory_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.ResolveDirectory(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L25">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L30">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_ResolveDirectory_" data-uid="Emby.Naming.Video.VideoResolver.ResolveDirectory*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_ResolveDirectory_System_String_" data-uid="Emby.Naming.Video.VideoResolver.ResolveDirectory(System.String)">ResolveDirectory(String)</h4>
@@ -430,7 +443,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_ResolveFile_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.ResolveFile(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L40">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_ResolveFile_" data-uid="Emby.Naming.Video.VideoResolver.ResolveFile*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_ResolveFile_System_String_" data-uid="Emby.Naming.Video.VideoResolver.ResolveFile(System.String)">ResolveFile(String)</h4>
@@ -480,11 +493,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoResolver_TryCleanString_System_String_System_ReadOnlySpan_System_Char___.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoResolver.TryCleanString(System.String%2CSystem.ReadOnlySpan%7BSystem.Char%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoResolver.cs/#L149">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoResolver_TryCleanString_" data-uid="Emby.Naming.Video.VideoResolver.TryCleanString*"></a>
   <h4 id="Emby_Naming_Video_VideoResolver_TryCleanString_System_String_System_ReadOnlySpan_System_Char___" data-uid="Emby.Naming.Video.VideoResolver.TryCleanString(System.String,System.ReadOnlySpan{System.Char}@)">TryCleanString(String, out ReadOnlySpan&lt;Char&gt;)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Tries to clean name of clutter.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -503,12 +517,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>Raw name.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
         <td><span class="parametername">newName</span></td>
-        <td></td>
+        <td><p>Clean name.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -523,10 +539,15 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p>True if cleaning of name was successful.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
 </article>
           </div>
           

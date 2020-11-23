@@ -1,0 +1,1640 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class NetworkManager
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class NetworkManager
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Jellyfin.Networking.Manager.NetworkManager">
+  
+  
+  <h1 id="Jellyfin_Networking_Manager_NetworkManager" data-uid="Jellyfin.Networking.Manager.NetworkManager" class="text-break">Class NetworkManager
+  </h1>
+  <div class="markdown level0 summary"><p>Class to take care of network interface management.
+Note: The normal collection methods and properties will not work with Collection{IPObject}. <a class="xref" href="MediaBrowser.Common.Net.NetworkExtensions.html">NetworkExtensions</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">NetworkManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Jellyfin.Networking.Manager.html">Jellyfin.Networking.Manager</a></h6>
+  <h6><strong>Assembly</strong>: Jellyfin.Networking.dll</h6>
+  <h5 id="Jellyfin_Networking_Manager_NetworkManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class NetworkManager : INetworkManager, IDisposable</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager__ctor_MediaBrowser_Common_Configuration_IConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Networking_Manager_NetworkManager__.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.%23ctor(MediaBrowser.Common.Configuration.IConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Networking.Manager.NetworkManager%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L102">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager__ctor_" data-uid="Jellyfin.Networking.Manager.NetworkManager.#ctor*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager__ctor_MediaBrowser_Common_Configuration_IConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Networking_Manager_NetworkManager__" data-uid="Jellyfin.Networking.Manager.NetworkManager.#ctor(MediaBrowser.Common.Configuration.IConfigurationManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Networking.Manager.NetworkManager})">NetworkManager(IConfigurationManager, ILogger&lt;NetworkManager&gt;)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Networking.Manager.NetworkManager.html">NetworkManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public NetworkManager(IConfigurationManager configurationManager, ILogger&lt;NetworkManager&gt; logger)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Configuration.IConfigurationManager.html">IConfigurationManager</a></td>
+        <td><span class="parametername">configurationManager</span></td>
+        <td><p>IServerConfigurationManager instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Jellyfin.Networking.Manager.NetworkManager.html">NetworkManager</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>Logger to use for messages.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsIP4Enabled.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsIP4Enabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L140">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsIP4Enabled_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsIP4Enabled*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsIP4Enabled" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsIP4Enabled">IsIP4Enabled</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether IP4 is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIP4Enabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsIP6Enabled.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsIP6Enabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L135">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsIP6Enabled_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsIP6Enabled*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsIP6Enabled" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsIP6Enabled">IsIP6Enabled</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether IP6 is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsIP6Enabled { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_MockNetworkSettings.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.MockNetworkSettings%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L130">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_MockNetworkSettings_" data-uid="Jellyfin.Networking.Manager.NetworkManager.MockNetworkSettings*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_MockNetworkSettings" data-uid="Jellyfin.Networking.Manager.NetworkManager.MockNetworkSettings">MockNetworkSettings</h4>
+  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether testing is taking place.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string MockNetworkSettings { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_PublishedServerUrls.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.PublishedServerUrls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L153">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_PublishedServerUrls_" data-uid="Jellyfin.Networking.Manager.NetworkManager.PublishedServerUrls*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_PublishedServerUrls" data-uid="Jellyfin.Networking.Manager.NetworkManager.PublishedServerUrls">PublishedServerUrls</h4>
+  <div class="markdown level1 summary"><p>Gets the Published server override list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;IPNetAddress, string&gt; PublishedServerUrls { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPNetAddress.html">IPNetAddress</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_RemoteAddressFilter.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.RemoteAddressFilter%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L143">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_RemoteAddressFilter_" data-uid="Jellyfin.Networking.Manager.NetworkManager.RemoteAddressFilter*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_RemoteAddressFilter" data-uid="Jellyfin.Networking.Manager.NetworkManager.RemoteAddressFilter">RemoteAddressFilter</h4>
+  <div class="markdown level1 summary"><p>Gets the remote address filter.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; RemoteAddressFilter { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_TrustAllIP6Interfaces.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.TrustAllIP6Interfaces%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L148">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_TrustAllIP6Interfaces_" data-uid="Jellyfin.Networking.Manager.NetworkManager.TrustAllIP6Interfaces*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_TrustAllIP6Interfaces" data-uid="Jellyfin.Networking.Manager.NetworkManager.TrustAllIP6Interfaces">TrustAllIP6Interfaces</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether is all IPv6 interfaces are trusted as internal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TrustAllIP6Interfaces { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_CreateCollection_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Net_IPObject__.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.CreateCollection(System.Collections.Generic.IEnumerable%7BMediaBrowser.Common.Net.IPObject%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L160">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_CreateCollection_" data-uid="Jellyfin.Networking.Manager.NetworkManager.CreateCollection*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_CreateCollection_System_Collections_Generic_IEnumerable_MediaBrowser_Common_Net_IPObject__" data-uid="Jellyfin.Networking.Manager.NetworkManager.CreateCollection(System.Collections.Generic.IEnumerable{MediaBrowser.Common.Net.IPObject})">CreateCollection(IEnumerable&lt;IPObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new network collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Collection&lt;IPObject&gt; CreateCollection(IEnumerable&lt;IPObject&gt; source = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Items to assign the collection, or null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>The collection created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_CreateIPCollection_System_String___System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.CreateIPCollection(System.String%5B%5D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L231">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_CreateIPCollection_" data-uid="Jellyfin.Networking.Manager.NetworkManager.CreateIPCollection*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_CreateIPCollection_System_String___System_Boolean_" data-uid="Jellyfin.Networking.Manager.NetworkManager.CreateIPCollection(System.String[],System.Boolean)">CreateIPCollection(String[], Boolean)</h4>
+  <div class="markdown level1 summary"><p>Parses an array of strings into a Collection{IPObject}.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; CreateIPCollection(string[] values, bool bracketed = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><span class="parametername">values</span></td>
+        <td><p>Values to parse.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">bracketed</span></td>
+        <td><p>When true, only include values in []. When false, ignore bracketed values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>IPCollection object containing the value strings.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_Dispose.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L175">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_Dispose_" data-uid="Jellyfin.Networking.Manager.NetworkManager.Dispose*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_Dispose" data-uid="Jellyfin.Networking.Manager.NetworkManager.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L623">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_Dispose_" data-uid="Jellyfin.Networking.Manager.NetworkManager.Dispose*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_Dispose_System_Boolean_" data-uid="Jellyfin.Networking.Manager.NetworkManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Protected implementation of Dispose pattern.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p><code>True</code> to dispose the managed state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetAllBindInterfaces_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetAllBindInterfaces(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L274">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetAllBindInterfaces_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetAllBindInterfaces*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetAllBindInterfaces_System_Boolean_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetAllBindInterfaces(System.Boolean)">GetAllBindInterfaces(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Calculates the list of interfaces to use for Kestrel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; GetAllBindInterfaces(bool individualInterfaces = false)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">individualInterfaces</span></td>
+        <td><p>When false, return <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress.any">Any</a> or <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress.ipv6any">IPv6Any</a> for all interfaces.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>A Collection{IPObject} object containing all the interfaces to bind.
+If all the interfaces are specified, and none are excluded, it returns zero items
+to represent any address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_MediaBrowser_Common_Net_IPObject_System_Nullable_System_Int32___.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(MediaBrowser.Common.Net.IPObject%2CSystem.Nullable%7BSystem.Int32%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L348">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_MediaBrowser_Common_Net_IPObject_System_Nullable_System_Int32___" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(MediaBrowser.Common.Net.IPObject,System.Nullable{System.Int32}@)">GetBindInterface(IPObject, out Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the bind address to use in system url&apos;s. (Server Discovery, PlayTo, LiveTV, SystemInfo)
+If no bind addresses are specified, an internal interface address is selected.
+The priority of selection is as follows:-</p>
+<p>The value contained in the startup parameter --published-server-url.</p>
+<p>If the user specified custom subnet overrides, the correct subnet for the source address.</p>
+<p>If the user specified bind interfaces to use:-
+The bind interface that contains the source subnet.
+The first bind interface specified that suits best first the source&apos;s endpoint. eg. external or internal.</p>
+<p>If the source is from a public subnet address range and the user hasn&apos;t specified any bind addresses:-
+The first public interface that isn&apos;t a loopback and contains the source subnet.
+The first public interface that isn&apos;t a loopback. Priority is given to interfaces with gateways.
+An internal interface if there are no public ip addresses.</p>
+<p>If the source is from a private subnet address range and the user hasn&apos;t specified any bind addresses:-
+The first private interface that contains the source subnet.
+The first private interface that isn&apos;t a loopback. Priority is given to interfaces with gateways.</p>
+<p>If no interfaces meet any of these criteria, then a loopback address is returned.</p>
+<p>Interface that have been specifically excluded from binding are not used in any of the calculations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBindInterface(IPObject source, out int? port)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Optional port returned, if it&apos;s part of an override.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>IP Address to use, or loopback address if all else fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Int32___.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(Microsoft.AspNetCore.Http.HttpRequest%2CSystem.Nullable%7BSystem.Int32%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L329">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_Microsoft_AspNetCore_Http_HttpRequest_System_Nullable_System_Int32___" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(Microsoft.AspNetCore.Http.HttpRequest,System.Nullable{System.Int32}@)">GetBindInterface(HttpRequest, out Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the bind address to use in system url&apos;s. (Server Discovery, PlayTo, LiveTV, SystemInfo)
+If no bind addresses are specified, an internal interface address is selected.
+(See <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html#MediaBrowser_Common_Net_INetworkManager_GetBindInterface_MediaBrowser_Common_Net_IPObject_System_Nullable_System_Int32___">GetBindInterface(IPObject, out Nullable&lt;Int32&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBindInterface(HttpRequest source, out int? port)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httprequest">HttpRequest</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Optional port returned, if it&apos;s part of an override.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>IP Address to use, or loopback address if all else fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_System_Net_IPAddress_System_Nullable_System_Int32___.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(System.Net.IPAddress%2CSystem.Nullable%7BSystem.Int32%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L323">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_System_Net_IPAddress_System_Nullable_System_Int32___" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(System.Net.IPAddress,System.Nullable{System.Int32}@)">GetBindInterface(IPAddress, out Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the bind address to use in system url&apos;s. (Server Discovery, PlayTo, LiveTV, SystemInfo)
+If no bind addresses are specified, an internal interface address is selected.
+(See <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html#MediaBrowser_Common_Net_INetworkManager_GetBindInterface_MediaBrowser_Common_Net_IPObject_System_Nullable_System_Int32___">GetBindInterface(IPObject, out Nullable&lt;Int32&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBindInterface(IPAddress source, out int? port)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>IP address of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Optional port returned, if it&apos;s part of an override.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>IP Address to use, or loopback address if all else fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_System_String_System_Nullable_System_Int32___.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(System.String%2CSystem.Nullable%7BSystem.Int32%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L312">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetBindInterface_System_String_System_Nullable_System_Int32___" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetBindInterface(System.String,System.Nullable{System.Int32}@)">GetBindInterface(String, out Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Retrieves the bind address to use in system url&apos;s. (Server Discovery, PlayTo, LiveTV, SystemInfo)
+If no bind addresses are specified, an internal interface address is selected.
+(See <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html#MediaBrowser_Common_Net_INetworkManager_GetBindInterface_MediaBrowser_Common_Net_IPObject_System_Nullable_System_Int32___">GetBindInterface(IPObject, out Nullable&lt;Int32&gt;)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string GetBindInterface(string source, out int? port)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>Source of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
+        <td><span class="parametername">port</span></td>
+        <td><p>Optional port returned, if it&apos;s part of an override.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><p>IP Address to use, or loopback address if all else fails.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetFilteredLANSubnets_System_Collections_ObjectModel_Collection_MediaBrowser_Common_Net_IPObject__.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetFilteredLANSubnets(System.Collections.ObjectModel.Collection%7BMediaBrowser.Common.Net.IPObject%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L526">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetFilteredLANSubnets_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetFilteredLANSubnets*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetFilteredLANSubnets_System_Collections_ObjectModel_Collection_MediaBrowser_Common_Net_IPObject__" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetFilteredLANSubnets(System.Collections.ObjectModel.Collection{MediaBrowser.Common.Net.IPObject})">GetFilteredLANSubnets(Collection&lt;IPObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Gets the filtered LAN ip addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; GetFilteredLANSubnets(Collection&lt;IPObject&gt; filter = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><span class="parametername">filter</span></td>
+        <td><p>Optional filter for the list.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>Returns a filtered list of LAN addresses.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetInternalBindAddresses.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetInternalBindAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L429">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetInternalBindAddresses_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetInternalBindAddresses*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetInternalBindAddresses" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetInternalBindAddresses">GetInternalBindAddresses()</h4>
+  <div class="markdown level1 summary"><p>Returns all the internal Bind interface addresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; GetInternalBindAddresses()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>An internal list of interfaces addresses.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetLoopbacks.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetLoopbacks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L202">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetLoopbacks_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetLoopbacks*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetLoopbacks" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetLoopbacks">GetLoopbacks()</h4>
+  <div class="markdown level1 summary"><p>Returns a collection containing the loopback interfaces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Collection&lt;IPObject&gt; GetLoopbacks()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><p>Collection{IPObject}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_GetMacAddresses.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.GetMacAddresses%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L182">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_GetMacAddresses_" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetMacAddresses*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_GetMacAddresses" data-uid="Jellyfin.Networking.Manager.NetworkManager.GetMacAddresses">GetMacAddresses()</h4>
+  <div class="markdown level1 summary"><p>Get a list of all the MAC addresses associated with active interfaces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyCollection&lt;PhysicalAddress&gt; GetMacAddresses()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.networkinformation.physicaladdress">PhysicalAddress</a>&gt;</td>
+        <td><p>List of MAC addresses.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsExcluded_System_Net_EndPoint_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsExcluded(System.Net.EndPoint)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L225">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsExcluded_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcluded*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsExcluded_System_Net_EndPoint_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcluded(System.Net.EndPoint)">IsExcluded(EndPoint)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the IP address is in the excluded list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExcluded(EndPoint ip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.endpoint">EndPoint</a></td>
+        <td><span class="parametername">ip</span></td>
+        <td><p>IP to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if excluded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsExcluded_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsExcluded(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L219">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsExcluded_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcluded*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsExcluded_System_Net_IPAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcluded(System.Net.IPAddress)">IsExcluded(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the IP address is in the excluded list.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExcluded(IPAddress ip)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">ip</span></td>
+        <td><p>IP to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if excluded.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsExcludedInterface_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsExcludedInterface(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L520">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsExcludedInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcludedInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsExcludedInterface_System_Net_IPAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsExcludedInterface(System.Net.IPAddress)">IsExcludedInterface(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if the ip address is specifically excluded in LocalNetworkAddresses.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsExcludedInterface(IPAddress address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>IP address to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if it is.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_MediaBrowser_Common_Net_IPObject_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface(MediaBrowser.Common.Net.IPObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L189">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_MediaBrowser_Common_Net_IPObject_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface(MediaBrowser.Common.Net.IPObject)">IsGatewayInterface(IPObject)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if the IP Address provided matches an interface that has a gateway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGatewayInterface(IPObject addressObj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a></td>
+        <td><span class="parametername">addressObj</span></td>
+        <td><p>IP to check. Can be an IPAddress or an IPObject.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Result of the check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L196">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsGatewayInterface_System_Net_IPAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsGatewayInterface(System.Net.IPAddress)">IsGatewayInterface(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if the IP Address provided matches an interface that has a gateway.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsGatewayInterface(IPAddress addressObj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">addressObj</span></td>
+        <td><p>IP to check. Can be an IPAddress or an IPObject.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Result of the check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_MediaBrowser_Common_Net_IPObject_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(MediaBrowser.Common.Net.IPObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L449">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_MediaBrowser_Common_Net_IPObject_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(MediaBrowser.Common.Net.IPObject)">IsInLocalNetwork(IPObject)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
+The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInLocalNetwork(IPObject address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>IP to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if endpoint is within the LAN range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L483">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_System_Net_IPAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(System.Net.IPAddress)">IsInLocalNetwork(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
+The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInLocalNetwork(IPAddress address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>IP to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if endpoint is within the LAN range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L472">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsInLocalNetwork_System_String_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsInLocalNetwork(System.String)">IsInLocalNetwork(String)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
+The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsInLocalNetwork(string address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>IP to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if endpoint is within the LAN range.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsPrivateAddressRange_MediaBrowser_Common_Net_IPObject_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsPrivateAddressRange(MediaBrowser.Common.Net.IPObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L501">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsPrivateAddressRange_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsPrivateAddressRange*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsPrivateAddressRange_MediaBrowser_Common_Net_IPObject_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsPrivateAddressRange(MediaBrowser.Common.Net.IPObject)">IsPrivateAddressRange(IPObject)</h4>
+  <div class="markdown level1 summary"><p>Returns true if the address is a private address.
+The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsPrivateAddressRange(IPObject address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>Address to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True or False.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_IsValidInterfaceAddress_System_Net_IPAddress_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.IsValidInterfaceAddress(System.Net.IPAddress)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L537">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_IsValidInterfaceAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsValidInterfaceAddress*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_IsValidInterfaceAddress_System_Net_IPAddress_" data-uid="Jellyfin.Networking.Manager.NetworkManager.IsValidInterfaceAddress(System.Net.IPAddress)">IsValidInterfaceAddress(IPAddress)</h4>
+  <div class="markdown level1 summary"><p>Checks to see if an IP address is still a valid interface address.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsValidInterfaceAddress(IPAddress address)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.net.ipaddress">IPAddress</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>IP address to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if it is.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_TryParseInterface_System_String_System_Collections_ObjectModel_Collection_MediaBrowser_Common_Net_IPObject___.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.TryParseInterface(System.String%2CSystem.Collections.ObjectModel.Collection%7BMediaBrowser.Common.Net.IPObject%7D%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L543">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_TryParseInterface_" data-uid="Jellyfin.Networking.Manager.NetworkManager.TryParseInterface*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_TryParseInterface_System_String_System_Collections_ObjectModel_Collection_MediaBrowser_Common_Net_IPObject___" data-uid="Jellyfin.Networking.Manager.NetworkManager.TryParseInterface(System.String,System.Collections.ObjectModel.Collection{MediaBrowser.Common.Net.IPObject}@)">TryParseInterface(String, out Collection&lt;IPObject&gt;)</h4>
+  <div class="markdown level1 summary"><p>Attempts to convert the token to an IP address, permitting for interface descriptions and indexes.
+eg. &quot;eth1&quot;, or &quot;TP-LINK Wireless USB Adapter&quot;.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool TryParseInterface(string token, out Collection&lt;IPObject&gt; result)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">token</span></td>
+        <td><p>Token to parse.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.objectmodel.collection-1">Collection</a>&lt;<a class="xref" href="MediaBrowser.Common.Net.IPObject.html">IPObject</a>&gt;</td>
+        <td><span class="parametername">result</span></td>
+        <td><p>Resultant object&apos;s ip addresses, if successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Success of the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_UpdateSettings_System_Object_.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.UpdateSettings(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L578">View Source</a>
+  </span>
+  <a id="Jellyfin_Networking_Manager_NetworkManager_UpdateSettings_" data-uid="Jellyfin.Networking.Manager.NetworkManager.UpdateSettings*"></a>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_UpdateSettings_System_Object_" data-uid="Jellyfin.Networking.Manager.NetworkManager.UpdateSettings(System.Object)">UpdateSettings(Object)</h4>
+  <div class="markdown level1 summary"><p>Reloads all settings and re-initialises the instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateSettings(object configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td><p>The <a class="xref" href="Jellyfin.Networking.Configuration.NetworkConfiguration.html">NetworkConfiguration</a> to use.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager_NetworkChanged.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager.NetworkChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L125">View Source</a>
+  </span>
+  <h4 id="Jellyfin_Networking_Manager_NetworkManager_NetworkChanged" data-uid="Jellyfin.Networking.Manager.NetworkManager.NetworkChanged">NetworkChanged</h4>
+  <div class="markdown level1 summary"><p>Event triggered on network changes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event EventHandler NetworkChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventhandler">EventHandler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Common.Net.INetworkManager.html">INetworkManager</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Networking_Manager_NetworkManager.md&amp;value=---%0Auid%3A%20Jellyfin.Networking.Manager.NetworkManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Networking/Manager/NetworkManager.cs/#L22" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

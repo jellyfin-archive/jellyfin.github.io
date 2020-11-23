@@ -83,7 +83,8 @@
   
   <h1 id="Emby_Naming_Video_VideoListResolver" data-uid="Emby.Naming.Video.VideoListResolver" class="text-break">Class VideoListResolver
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Resolves alternative versions and extras from list of video files.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -127,11 +128,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoListResolver__ctor_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoListResolver.%23ctor(Emby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L23">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoListResolver__ctor_" data-uid="Emby.Naming.Video.VideoListResolver.#ctor*"></a>
   <h4 id="Emby_Naming_Video_VideoListResolver__ctor_Emby_Naming_Common_NamingOptions_" data-uid="Emby.Naming.Video.VideoListResolver.#ctor(Emby.Naming.Common.NamingOptions)">VideoListResolver(NamingOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Naming.Video.VideoListResolver.html">VideoListResolver</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -150,7 +152,8 @@
       <tr>
         <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a> object containing CleanStringRegexes and VideoFlagDelimiters and passes options to <a class="xref" href="Emby.Naming.Video.StackResolver.html">StackResolver</a> and <a class="xref" href="Emby.Naming.Video.VideoResolver.html">VideoResolver</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -161,11 +164,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L34">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoListResolver_Resolve_" data-uid="Emby.Naming.Video.VideoListResolver.Resolve*"></a>
   <h4 id="Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Boolean_" data-uid="Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Boolean)">Resolve(List&lt;FileSystemMetadata&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resolves alternative versions and extras from list of video files.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -184,12 +188,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
         <td><span class="parametername">files</span></td>
-        <td></td>
+        <td><p>List of related video files.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">supportMultiVersion</span></td>
-        <td></td>
+        <td><p>Indication we should consider multi-versions of content.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -204,10 +210,15 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="Emby.Naming.Video.VideoInfo.html">VideoInfo</a>&gt;</td>
-        <td></td>
+        <td><p>Returns enumerable of <a class="xref" href="Emby.Naming.Video.VideoInfo.html">VideoInfo</a> which groups files together when related.</p>
+</td>
       </tr>
     </tbody>
   </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
 </article>
           </div>
           
@@ -219,7 +230,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoListResolver.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoListResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

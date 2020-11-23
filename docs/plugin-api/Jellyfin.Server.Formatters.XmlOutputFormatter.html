@@ -95,8 +95,8 @@
   </div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.apiexplorer.iapiresponsetypemetadataprovider">IApiResponseTypeMetadataProvider</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.ioutputformatter">IOutputFormatter</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.apiexplorer.iapiresponsetypemetadataprovider">IApiResponseTypeMetadataProvider</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -113,13 +113,13 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.textoutputformatter.supportedencodings#Microsoft_AspNetCore_Mvc_Formatters_TextOutputFormatter_SupportedEncodings">TextOutputFormatter.SupportedEncodings</a>
     </div>
     <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.outputformatter.canwriteresult#Microsoft_AspNetCore_Mvc_Formatters_OutputFormatter_CanWriteResult_Microsoft_AspNetCore_Mvc_Formatters_OutputFormatterCanWriteContext_">OutputFormatter.CanWriteResult(OutputFormatterCanWriteContext)</a>
-    </div>
-    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.outputformatter.canwritetype#Microsoft_AspNetCore_Mvc_Formatters_OutputFormatter_CanWriteType_System_Type_">OutputFormatter.CanWriteType(Type)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.outputformatter.getsupportedcontenttypes#Microsoft_AspNetCore_Mvc_Formatters_OutputFormatter_GetSupportedContentTypes_System_String_System_Type_">OutputFormatter.GetSupportedContentTypes(String, Type)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.outputformatter.canwriteresult#Microsoft_AspNetCore_Mvc_Formatters_OutputFormatter_CanWriteResult_Microsoft_AspNetCore_Mvc_Formatters_OutputFormatterCanWriteContext_">OutputFormatter.CanWriteResult(OutputFormatterCanWriteContext)</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.outputformatter.writeresponseheaders#Microsoft_AspNetCore_Mvc_Formatters_OutputFormatter_WriteResponseHeaders_Microsoft_AspNetCore_Mvc_Formatters_OutputFormatterWriteContext_">OutputFormatter.WriteResponseHeaders(OutputFormatterWriteContext)</a>
@@ -153,7 +153,7 @@
   <h6><strong>Assembly</strong>: jellyfin.dll</h6>
   <h5 id="Jellyfin_Server_Formatters_XmlOutputFormatter_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class XmlOutputFormatter : TextOutputFormatter, IApiResponseTypeMetadataProvider, IOutputFormatter</code></pre>
+    <pre><code class="lang-csharp hljs">public class XmlOutputFormatter : TextOutputFormatter, IOutputFormatter, IApiResponseTypeMetadataProvider</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -231,10 +231,14 @@
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.textoutputformatter.writeresponsebodyasync#Microsoft_AspNetCore_Mvc_Formatters_TextOutputFormatter_WriteResponseBodyAsync_Microsoft_AspNetCore_Mvc_Formatters_OutputFormatterWriteContext_System_Text_Encoding_">TextOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext, Encoding)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.apiexplorer.iapiresponsetypemetadataprovider">Microsoft.AspNetCore.Mvc.ApiExplorer.IApiResponseTypeMetadataProvider</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.ioutputformatter">Microsoft.AspNetCore.Mvc.Formatters.IOutputFormatter</a>
   </div>
   <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.formatters.ioutputformatter">Microsoft.AspNetCore.Mvc.Formatters.IOutputFormatter</a>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.apiexplorer.iapiresponsetypemetadataprovider">Microsoft.AspNetCore.Mvc.ApiExplorer.IApiResponseTypeMetadataProvider</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
   </div>
 </article>
           </div>
