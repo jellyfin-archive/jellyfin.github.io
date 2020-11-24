@@ -265,7 +265,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Collection&lt;IPObject&gt; CreateIPCollection(string[] values, bool bracketed = false)</code></pre>
+    <pre><code class="lang-csharp hljs">Collection&lt;IPObject&gt; CreateIPCollection(string[] values, bool negated = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,8 +285,8 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">bracketed</span></td>
-        <td><p>When true, only include values in []. When false, ignore bracketed values.</p>
+        <td><span class="parametername">negated</span></td>
+        <td><p>When true, only include values beginning with !. When false, ignore ! values.</p>
 </td>
       </tr>
     </tbody>
@@ -1011,7 +1011,7 @@ If no bind addresses are specified, an internal interface address is selected.
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_MediaBrowser_Common_Net_IPObject_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork(MediaBrowser.Common.Net.IPObject)">IsInLocalNetwork(IPObject)</h4>
   <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
-The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+The configuration option TrustIP6Interfaces overrides this functions behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1062,7 +1062,7 @@ The config option TrustIP6Interfaces overrides this functions behaviour.</p>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_System_Net_IPAddress_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork(System.Net.IPAddress)">IsInLocalNetwork(IPAddress)</h4>
   <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
-The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+The configuration option TrustIP6Interfaces overrides this functions behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1113,7 +1113,7 @@ The config option TrustIP6Interfaces overrides this functions behaviour.</p>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsInLocalNetwork_System_String_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsInLocalNetwork(System.String)">IsInLocalNetwork(String)</h4>
   <div class="markdown level1 summary"><p>Returns true if the address is part of the user defined LAN.
-The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+The configuration option TrustIP6Interfaces overrides this functions behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1164,7 +1164,7 @@ The config option TrustIP6Interfaces overrides this functions behaviour.</p>
   <a id="MediaBrowser_Common_Net_INetworkManager_IsPrivateAddressRange_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsPrivateAddressRange*"></a>
   <h4 id="MediaBrowser_Common_Net_INetworkManager_IsPrivateAddressRange_MediaBrowser_Common_Net_IPObject_" data-uid="MediaBrowser.Common.Net.INetworkManager.IsPrivateAddressRange(MediaBrowser.Common.Net.IPObject)">IsPrivateAddressRange(IPObject)</h4>
   <div class="markdown level1 summary"><p>Returns true if the address is a private address.
-The config option TrustIP6Interfaces overrides this functions behaviour.</p>
+The configuration option TrustIP6Interfaces overrides this functions behaviour.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -185,9 +185,9 @@ services:
 </code></pre><p>Install curl which will be used to download the required files.</p>
 <pre><code class="lang-sh">apt-get install curl
 </code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code> and add <code>non-free contrib</code> to each source as required.</p>
-<pre><code class="lang-data">deb http://deb.debian.org/debian/ stretch main
+<pre><code class="lang-data">deb http://deb.debian.org/debian/ buster main
 </code></pre><p>The line above should be modified to match the following line as an example.</p>
-<pre><code class="lang-data">deb http://deb.debian.org/debian/ stretch main non-free contrib
+<pre><code class="lang-data">deb http://deb.debian.org/debian/ buster main non-free contrib
 </code></pre><p>Download and add the sources for the Nvidia docker container.</p>
 <pre><code class="lang-sh">curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)

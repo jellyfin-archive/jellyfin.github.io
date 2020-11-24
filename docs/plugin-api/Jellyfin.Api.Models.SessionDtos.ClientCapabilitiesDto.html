@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_AppStoreUrl.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.AppStoreUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L60">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_AppStoreUrl_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.AppStoreUrl*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_AppStoreUrl" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.AppStoreUrl">AppStoreUrl</h4>
@@ -159,7 +159,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_DeviceProfile.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.DeviceProfile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L55">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_DeviceProfile_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.DeviceProfile*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_DeviceProfile" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.DeviceProfile">DeviceProfile</h4>
@@ -190,7 +190,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_IconUrl.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.IconUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L64">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L65">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_IconUrl_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.IconUrl*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_IconUrl" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.IconUrl">IconUrl</h4>
@@ -221,7 +221,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_MessageCallbackUrl.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.MessageCallbackUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L40">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_MessageCallbackUrl_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.MessageCallbackUrl*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_MessageCallbackUrl" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.MessageCallbackUrl">MessageCallbackUrl</h4>
@@ -261,7 +261,8 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;string&gt; PlayableMediaTypes { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonConverter(typeof(JsonCommaDelimitedArrayConverterFactory))]
+public IReadOnlyList&lt;string&gt; PlayableMediaTypes { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,7 +284,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportedCommands.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportedCommands%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L24">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportedCommands_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportedCommands*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportedCommands" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportedCommands">SupportedCommands</h4>
@@ -315,7 +316,7 @@ public IReadOnlyList&lt;GeneralCommandType&gt; SupportedCommands { get; set; }</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsContentUploading.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsContentUploading%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L35">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsContentUploading_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsContentUploading*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsContentUploading" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsContentUploading">SupportsContentUploading</h4>
@@ -346,7 +347,7 @@ public IReadOnlyList&lt;GeneralCommandType&gt; SupportedCommands { get; set; }</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsMediaControl.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsMediaControl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L30">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsMediaControl_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsMediaControl*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsMediaControl" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsMediaControl">SupportsMediaControl</h4>
@@ -377,7 +378,7 @@ public IReadOnlyList&lt;GeneralCommandType&gt; SupportedCommands { get; set; }</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsPersistentIdentifier.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsPersistentIdentifier%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L45">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsPersistentIdentifier_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsPersistentIdentifier*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsPersistentIdentifier" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsPersistentIdentifier">SupportsPersistentIdentifier</h4>
@@ -408,7 +409,7 @@ public IReadOnlyList&lt;GeneralCommandType&gt; SupportedCommands { get; set; }</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsSync.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsSync%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L49">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L50">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsSync_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsSync*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_SupportsSync" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.SupportsSync">SupportsSync</h4>
@@ -441,7 +442,7 @@ public IReadOnlyList&lt;GeneralCommandType&gt; SupportedCommands { get; set; }</
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_ToClientCapabilities.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.ToClientCapabilities%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Models/SessionDtos/ClientCapabilitiesDto.cs/#L71">View Source</a>
   </span>
   <a id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_ToClientCapabilities_" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.ToClientCapabilities*"></a>
   <h4 id="Jellyfin_Api_Models_SessionDtos_ClientCapabilitiesDto_ToClientCapabilities" data-uid="Jellyfin.Api.Models.SessionDtos.ClientCapabilitiesDto.ToClientCapabilities">ToClientCapabilities()</h4>
