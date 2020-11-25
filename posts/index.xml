@@ -6,8 +6,46 @@
     <description>  Posts  Jellyfin: The Free Software Media System</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2020 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://jellyfin.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Please refresh your Jellyfin Apt key on Debian/Ubuntu</title>
+      <link>https://jellyfin.org/posts/jellyfin-apt-key/</link>
+      <pubDate>Tue, 24 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://jellyfin.org/posts/jellyfin-apt-key/</guid>
+      <description>&lt;p&gt;Our GPG key for signing our Debian and Ubuntu repositories (&lt;code&gt;https://repo.jellyfin.org/debian&lt;/code&gt; and &lt;code&gt;https://repo.jellyfin.org/ubuntu&lt;/code&gt;) is set to expire next month.&lt;/p&gt;
+&lt;p&gt;Unfortunately this was an oversight when we first set up this repo, and we never provided any convenient way to update this. As a remedy, we&#39;ve removed the expiry on the key and put a new version on the repo. This brings us into line with numerous other 3rd-party Debian repositories, such as the Microsoft .NET and Docker repositories which also use an expiry-less key, and should avoid any such issues again, barring a need to rotate it. This does however require manually refreshing the key on your system.&lt;/p&gt;
+&lt;p&gt;Doing this is as easy as re-running the command from the install docs; it will overwrite the old key with the new one:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can verify this worked by checking the &lt;code&gt;apt-key&lt;/code&gt; output like so; this is a good practice anyways to verify that the key has not been altered, as its signatures and fingerprint should all match:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ apt-key list | grep -C2 jellyfin  # Notice the expires: field
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+pub   rsa3072 2018-12-16 [SC] [expires: 2020-12-15]
+      4918 AABC 486C A052 358D  778D 4902 3CD0 1DE2 1A7B
+uid           [ unknown] Jellyfin Team &amp;lt;team@jellyfin.org&amp;gt;
+sub   rsa3072 2018-12-16 [E] [expires: 2020-12-15]
+
+$ wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
+[...]
+
+$ apt-key list | grep -C2 jellyfin  # Notice the expires: is now gone
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+pub   rsa3072 2018-12-16 [SC]
+      4918 AABC 486C A052 358D  778D 4902 3CD0 1DE2 1A7B
+uid           [ unknown] Jellyfin Team &amp;lt;team@jellyfin.org&amp;gt;
+sub   rsa3072 2018-12-16 [E]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you find this didn&#39;t work, try removing the key first with this command, then re-add it again:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-key remove 1DE21A7B
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We&#39;ve also published the key to the Ubuntu keyserver as a backup, just in case, or if you prefer this method. Our docs will retain the direct-file method however. You can use this command to obtain the key directly from the Ubuntu keyserver:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 1DE21A7B
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Please ensure you refresh the key before December 15th, or you will find that &lt;code&gt;apt update&lt;/code&gt; no longer works!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Issue for reference: &lt;a href=&#34;https://github.com/jellyfin/jellyfin/issues/4528&#34;&gt;https://github.com/jellyfin/jellyfin/issues/4528&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Reddit thread for reference: &lt;a href=&#34;https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/&#34;&gt;https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks,
+Joshua&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Android v2.1.0 - Jellyfin in your car!</title>
