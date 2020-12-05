@@ -1,0 +1,1416 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IGroupStateContext
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IGroupStateContext
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext">
+  
+  
+  <h1 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext" class="text-break">Interface IGroupStateContext
+  </h1>
+  <div class="markdown level0 summary"><p>Interface IGroupStateContext.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Controller.SyncPlay.html">MediaBrowser.Controller.SyncPlay</a></h6>
+  <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
+  <h5 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IGroupStateContext</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_DefaultPing.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.DefaultPing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L20">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_DefaultPing_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.DefaultPing*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_DefaultPing" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.DefaultPing">DefaultPing</h4>
+  <div class="markdown level1 summary"><p>Gets the default ping value used for sessions, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long DefaultPing { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The default ping value used for sessions, in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_GroupId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L38">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GroupId_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GroupId*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GroupId" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GroupId">GroupId</h4>
+  <div class="markdown level1 summary"><p>Gets the group identifier.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Guid GroupId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><p>The group identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_LastActivity.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.LastActivity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L50">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_LastActivity_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.LastActivity*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_LastActivity" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.LastActivity">LastActivity</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the last activity.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">DateTime LastActivity { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><p>The last activity.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_MaxPlaybackOffset.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.MaxPlaybackOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L32">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_MaxPlaybackOffset_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.MaxPlaybackOffset*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_MaxPlaybackOffset" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.MaxPlaybackOffset">MaxPlaybackOffset</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum offset error accepted for position reported by clients, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long MaxPlaybackOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The maximum offset error accepted, in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_PlayQueue.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.PlayQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L56">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PlayQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PlayQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PlayQueue" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PlayQueue">PlayQueue</h4>
+  <div class="markdown level1 summary"><p>Gets the play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlayQueueManager PlayQueue { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.SyncPlay.Queue.PlayQueueManager.html">PlayQueueManager</a></td>
+        <td><p>The play queue.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_PositionTicks.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.PositionTicks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L44">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PositionTicks_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PositionTicks*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PositionTicks" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PositionTicks">PositionTicks</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the position ticks.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long PositionTicks { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The position ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_TimeSyncOffset.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.TimeSyncOffset%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L26">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_TimeSyncOffset_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.TimeSyncOffset*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_TimeSyncOffset" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.TimeSyncOffset">TimeSyncOffset</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum time offset error accepted for dates reported by clients, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long TimeSyncOffset { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The maximum offset error accepted, in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_AddToPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__MediaBrowser_Model_SyncPlay_GroupQueueMode_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.AddToPlayQueue(System.Collections.Generic.IReadOnlyList%7BSystem.Guid%7D%2CMediaBrowser.Model.SyncPlay.GroupQueueMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L184">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_AddToPlayQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.AddToPlayQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_AddToPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__MediaBrowser_Model_SyncPlay_GroupQueueMode_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.AddToPlayQueue(System.Collections.Generic.IReadOnlyList{System.Guid},MediaBrowser.Model.SyncPlay.GroupQueueMode)">AddToPlayQueue(IReadOnlyList&lt;Guid&gt;, GroupQueueMode)</h4>
+  <div class="markdown level1 summary"><p>Updates the play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool AddToPlayQueue(IReadOnlyList&lt;Guid&gt; newItems, GroupQueueMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><span class="parametername">newItems</span></td>
+        <td><p>The new items to add to the play queue.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupQueueMode.html">GroupQueueMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>The mode with which the items will be added.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the play queue has been changed; <code>false</code> if something went wrong.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetHighestPing.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetHighestPing%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L119">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetHighestPing_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetHighestPing*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetHighestPing" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetHighestPing">GetHighestPing()</h4>
+  <div class="markdown level1 summary"><p>Gets the highest ping in the group, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long GetHighestPing()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The highest ping in the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetPlayQueueUpdate_MediaBrowser_Model_SyncPlay_PlayQueueUpdateReason_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetPlayQueueUpdate(MediaBrowser.Model.SyncPlay.PlayQueueUpdateReason)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L220">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetPlayQueueUpdate_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetPlayQueueUpdate*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_GetPlayQueueUpdate_MediaBrowser_Model_SyncPlay_PlayQueueUpdateReason_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.GetPlayQueueUpdate(MediaBrowser.Model.SyncPlay.PlayQueueUpdateReason)">GetPlayQueueUpdate(PlayQueueUpdateReason)</h4>
+  <div class="markdown level1 summary"><p>Creates a play queue update.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">PlayQueueUpdate GetPlayQueueUpdate(PlayQueueUpdateReason reason)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.PlayQueueUpdateReason.html">PlayQueueUpdateReason</a></td>
+        <td><span class="parametername">reason</span></td>
+        <td><p>The reason for the update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.PlayQueueUpdate.html">PlayQueueUpdate</a></td>
+        <td><p>The play queue update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_IsBuffering.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.IsBuffering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L138">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_IsBuffering_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.IsBuffering*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_IsBuffering" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.IsBuffering">IsBuffering()</h4>
+  <div class="markdown level1 summary"><p>Gets the group buffering state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsBuffering()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if there is a session buffering in the group; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_MoveItemInPlayQueue_System_Guid_System_Int32_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.MoveItemInPlayQueue(System.Guid%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L176">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_MoveItemInPlayQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.MoveItemInPlayQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_MoveItemInPlayQueue_System_Guid_System_Int32_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.MoveItemInPlayQueue(System.Guid,System.Int32)">MoveItemInPlayQueue(Guid, Int32)</h4>
+  <div class="markdown level1 summary"><p>Moves an item in the play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool MoveItemInPlayQueue(Guid playlistItemId, int newIndex)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">playlistItemId</span></td>
+        <td><p>The playlist identifier of the item to move.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">newIndex</span></td>
+        <td><p>The new position.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if item has been moved; <code>false</code> if something went wrong.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayCommand_MediaBrowser_Model_SyncPlay_SendCommandType_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayCommand(MediaBrowser.Model.SyncPlay.SendCommandType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L90">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayCommand_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayCommand*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayCommand_MediaBrowser_Model_SyncPlay_SendCommandType_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayCommand(MediaBrowser.Model.SyncPlay.SendCommandType)">NewSyncPlayCommand(SendCommandType)</h4>
+  <div class="markdown level1 summary"><p>Builds a new playback command with some default values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">SendCommand NewSyncPlayCommand(SendCommandType type)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SendCommandType.html">SendCommandType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The command type.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SendCommand.html">SendCommand</a></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayGroupUpdate__1_MediaBrowser_Model_SyncPlay_GroupUpdateType___0_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayGroupUpdate%60%601(MediaBrowser.Model.SyncPlay.GroupUpdateType%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L99">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayGroupUpdate_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayGroupUpdate*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NewSyncPlayGroupUpdate__1_MediaBrowser_Model_SyncPlay_GroupUpdateType___0_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NewSyncPlayGroupUpdate``1(MediaBrowser.Model.SyncPlay.GroupUpdateType,``0)">NewSyncPlayGroupUpdate&lt;T&gt;(GroupUpdateType, T)</h4>
+  <div class="markdown level1 summary"><p>Builds a new group update message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">GroupUpdate&lt;T&gt; NewSyncPlayGroupUpdate&lt;T&gt;(GroupUpdateType type, T data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdateType.html">GroupUpdateType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The update type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The data to send.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate</a>&lt;T&gt;</td>
+        <td><p>The group update.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the data of the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_NextItemInQueue.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.NextItemInQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L195">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NextItemInQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NextItemInQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_NextItemInQueue" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.NextItemInQueue">NextItemInQueue()</h4>
+  <div class="markdown level1 summary"><p>Picks next item in play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool NextItemInQueue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the item changed; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_PreviousItemInQueue.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.PreviousItemInQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L201">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PreviousItemInQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PreviousItemInQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_PreviousItemInQueue" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.PreviousItemInQueue">PreviousItemInQueue()</h4>
+  <div class="markdown level1 summary"><p>Picks previous item in play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool PreviousItemInQueue()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the item changed; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_RemoveFromPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.RemoveFromPlayQueue(System.Collections.Generic.IReadOnlyList%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L168">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_RemoveFromPlayQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.RemoveFromPlayQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_RemoveFromPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.RemoveFromPlayQueue(System.Collections.Generic.IReadOnlyList{System.Guid})">RemoveFromPlayQueue(IReadOnlyList&lt;Guid&gt;)</h4>
+  <div class="markdown level1 summary"><p>Removes items from the play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool RemoveFromPlayQueue(IReadOnlyList&lt;Guid&gt; playlistItemIds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><span class="parametername">playlistItemIds</span></td>
+        <td><p>The items to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if playing item got removed; <code>false</code> otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_RestartCurrentItem.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.RestartCurrentItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L189">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_RestartCurrentItem_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.RestartCurrentItem*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_RestartCurrentItem" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.RestartCurrentItem">RestartCurrentItem()</h4>
+  <div class="markdown level1 summary"><p>Restarts current item in play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RestartCurrentItem()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SanitizePositionTicks_System_Nullable_System_Int64__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SanitizePositionTicks(System.Nullable%7BSystem.Int64%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L106">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SanitizePositionTicks_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SanitizePositionTicks*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SanitizePositionTicks_System_Nullable_System_Int64__" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SanitizePositionTicks(System.Nullable{System.Int64})">SanitizePositionTicks(Nullable&lt;Int64&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sanitizes the PositionTicks, considers the current playing item when available.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">long SanitizePositionTicks(long? positionTicks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">positionTicks</span></td>
+        <td><p>The PositionTicks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><p>The sanitized position ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendCommand_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_SyncPlayBroadcastType_MediaBrowser_Model_SyncPlay_SendCommand_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendCommand(MediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Model.SyncPlay.SyncPlayBroadcastType%2CMediaBrowser.Model.SyncPlay.SendCommand%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L83">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendCommand_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendCommand*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendCommand_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_SyncPlayBroadcastType_MediaBrowser_Model_SyncPlay_SendCommand_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendCommand(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType,MediaBrowser.Model.SyncPlay.SendCommand,System.Threading.CancellationToken)">SendCommand(SessionInfo, SyncPlayBroadcastType, SendCommand, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends a playback command to the interested sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendCommand(SessionInfo from, SyncPlayBroadcastType type, SendCommand message, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The current session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType.html">SyncPlayBroadcastType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The filtering type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SendCommand.html">SendCommand</a></td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>The task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendGroupUpdate__1_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_SyncPlayBroadcastType_MediaBrowser_Model_SyncPlay_GroupUpdate___0__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendGroupUpdate%60%601(MediaBrowser.Controller.Session.SessionInfo%2CMediaBrowser.Model.SyncPlay.SyncPlayBroadcastType%2CMediaBrowser.Model.SyncPlay.GroupUpdate%7B%60%600%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L73">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendGroupUpdate_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendGroupUpdate*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SendGroupUpdate__1_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_SyncPlayBroadcastType_MediaBrowser_Model_SyncPlay_GroupUpdate___0__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SendGroupUpdate``1(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType,MediaBrowser.Model.SyncPlay.GroupUpdate{``0},System.Threading.CancellationToken)">SendGroupUpdate&lt;T&gt;(SessionInfo, SyncPlayBroadcastType, GroupUpdate&lt;T&gt;, CancellationToken)</h4>
+  <div class="markdown level1 summary"><p>Sends a GroupUpdate message to the interested sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Task SendGroupUpdate&lt;T&gt;(SessionInfo from, SyncPlayBroadcastType type, GroupUpdate&lt;T&gt; message, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">from</span></td>
+        <td><p>The current session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType.html">SyncPlayBroadcastType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The filtering type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate</a>&lt;T&gt;</td>
+        <td><span class="parametername">message</span></td>
+        <td><p>The message to send.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td><p>The cancellation token.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>The task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of the data of the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetAllBuffering_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetAllBuffering(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L132">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetAllBuffering_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetAllBuffering*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetAllBuffering_System_Boolean_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetAllBuffering(System.Boolean)">SetAllBuffering(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the buffering state of all the sessions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetAllBuffering(bool isBuffering)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isBuffering</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetBuffering_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetBuffering(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L126">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetBuffering_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetBuffering*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetBuffering_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetBuffering(MediaBrowser.Controller.Session.SessionInfo,System.Boolean)">SetBuffering(SessionInfo, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the session&apos;s buffering state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetBuffering(SessionInfo session, bool isBuffering)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isBuffering</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetIgnoreGroupWait_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetIgnoreGroupWait(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L145">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetIgnoreGroupWait_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetIgnoreGroupWait*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetIgnoreGroupWait_MediaBrowser_Controller_Session_SessionInfo_System_Boolean_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetIgnoreGroupWait(MediaBrowser.Controller.Session.SessionInfo,System.Boolean)">SetIgnoreGroupWait(SessionInfo, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Sets the session&apos;s group wait state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetIgnoreGroupWait(SessionInfo session, bool ignoreGroupWait)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">ignoreGroupWait</span></td>
+        <td><p>The state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayingItem_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayingItem(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L161">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayingItem_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayingItem*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayingItem_System_Guid_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayingItem(System.Guid)">SetPlayingItem(Guid)</h4>
+  <div class="markdown level1 summary"><p>Sets the playing item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SetPlayingItem(Guid playlistItemId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">playlistItemId</span></td>
+        <td><p>The new playing item identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the play queue has been changed; <code>false</code> if something went wrong.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__System_Int32_System_Int64_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayQueue(System.Collections.Generic.IReadOnlyList%7BSystem.Guid%7D%2CSystem.Int32%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L154">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayQueue_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayQueue*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__System_Int32_System_Int64_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetPlayQueue(System.Collections.Generic.IReadOnlyList{System.Guid},System.Int32,System.Int64)">SetPlayQueue(IReadOnlyList&lt;Guid&gt;, Int32, Int64)</h4>
+  <div class="markdown level1 summary"><p>Sets a new play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool SetPlayQueue(IReadOnlyList&lt;Guid&gt; playQueue, int playingItemPosition, long startPositionTicks)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
+        <td><span class="parametername">playQueue</span></td>
+        <td><p>The new play queue.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">playingItemPosition</span></td>
+        <td><p>The playing item position in the play queue.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">startPositionTicks</span></td>
+        <td><p>The start position ticks.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if the play queue has been changed; <code>false</code> if something went wrong.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetRepeatMode_MediaBrowser_Model_SyncPlay_GroupRepeatMode_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetRepeatMode(MediaBrowser.Model.SyncPlay.GroupRepeatMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L207">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetRepeatMode_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetRepeatMode*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetRepeatMode_MediaBrowser_Model_SyncPlay_GroupRepeatMode_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetRepeatMode(MediaBrowser.Model.SyncPlay.GroupRepeatMode)">SetRepeatMode(GroupRepeatMode)</h4>
+  <div class="markdown level1 summary"><p>Sets the repeat mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetRepeatMode(GroupRepeatMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupRepeatMode.html">GroupRepeatMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>The new mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetShuffleMode_MediaBrowser_Model_SyncPlay_GroupShuffleMode_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetShuffleMode(MediaBrowser.Model.SyncPlay.GroupShuffleMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L213">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetShuffleMode_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetShuffleMode*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetShuffleMode_MediaBrowser_Model_SyncPlay_GroupShuffleMode_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetShuffleMode(MediaBrowser.Model.SyncPlay.GroupShuffleMode)">SetShuffleMode(GroupShuffleMode)</h4>
+  <div class="markdown level1 summary"><p>Sets the shuffle mode.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetShuffleMode(GroupShuffleMode mode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupShuffleMode.html">GroupShuffleMode</a></td>
+        <td><span class="parametername">mode</span></td>
+        <td><p>The new mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetState_MediaBrowser_Controller_SyncPlay_IGroupState_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetState(MediaBrowser.Controller.SyncPlay.IGroupState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L62">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetState_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetState*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_SetState_MediaBrowser_Controller_SyncPlay_IGroupState_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.SetState(MediaBrowser.Controller.SyncPlay.IGroupState)">SetState(IGroupState)</h4>
+  <div class="markdown level1 summary"><p>Sets a new state.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetState(IGroupState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.SyncPlay.IGroupState.html">IGroupState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td><p>The new state.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext_UpdatePing_MediaBrowser_Controller_Session_SessionInfo_System_Int64_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext.UpdatePing(MediaBrowser.Controller.Session.SessionInfo%2CSystem.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L113">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_UpdatePing_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.UpdatePing*"></a>
+  <h4 id="MediaBrowser_Controller_SyncPlay_IGroupStateContext_UpdatePing_MediaBrowser_Controller_Session_SessionInfo_System_Int64_" data-uid="MediaBrowser.Controller.SyncPlay.IGroupStateContext.UpdatePing(MediaBrowser.Controller.Session.SessionInfo,System.Int64)">UpdatePing(SessionInfo, Int64)</h4>
+  <div class="markdown level1 summary"><p>Updates the ping of a session, in milliseconds.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void UpdatePing(SessionInfo session, long ping)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
+        <td><span class="parametername">ping</span></td>
+        <td><p>The ping, in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_SyncPlay_IGroupStateContext.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.SyncPlay.IGroupStateContext%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/SyncPlay/IGroupStateContext.cs/#L14" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

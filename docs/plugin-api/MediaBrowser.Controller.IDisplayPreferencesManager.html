@@ -96,19 +96,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.GetDisplayPreferences(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.GetDisplayPreferences(System.Guid%2CSystem.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L21">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L22">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.GetDisplayPreferences*"></a>
-  <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_String_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.GetDisplayPreferences(System.Guid,System.String)">GetDisplayPreferences(Guid, String)</h4>
+  <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_Guid_System_String_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.GetDisplayPreferences(System.Guid,System.Guid,System.String)">GetDisplayPreferences(Guid, Guid, String)</h4>
   <div class="markdown level1 summary"><p>Gets the display preferences for the user and client.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">DisplayPreferences GetDisplayPreferences(Guid userId, string client)</code></pre>
+    <pre><code class="lang-csharp hljs">DisplayPreferences GetDisplayPreferences(Guid userId, Guid itemId, string client)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -124,6 +124,12 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">userId</span></td>
         <td><p>The user&apos;s id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The item id.</p>
 </td>
       </tr>
       <tr>
@@ -150,7 +156,7 @@
       </tr>
     </tbody>
   </table>
-  <h5 id="MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_String__remarks">Remarks</h5>
+  <h5 id="MediaBrowser_Controller_IDisplayPreferencesManager_GetDisplayPreferences_System_Guid_System_Guid_System_String__remarks">Remarks</h5>
   <div class="markdown level1 remarks"><p>This will create the display preferences if it does not exist, but it will not save automatically.</p>
 </div>
   <span class="small pull-right mobile-hide">
@@ -158,7 +164,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_GetItemDisplayPreferences_System_Guid_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.GetItemDisplayPreferences(System.Guid%2CSystem.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_IDisplayPreferencesManager_GetItemDisplayPreferences_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.GetItemDisplayPreferences*"></a>
   <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_GetItemDisplayPreferences_System_Guid_System_Guid_System_String_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.GetItemDisplayPreferences(System.Guid,System.Guid,System.String)">GetItemDisplayPreferences(Guid, Guid, String)</h4>
@@ -220,10 +226,72 @@
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_ListCustomItemDisplayPreferences_System_Guid_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.ListCustomItemDisplayPreferences(System.Guid%2CSystem.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L51">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_IDisplayPreferencesManager_ListCustomItemDisplayPreferences_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.ListCustomItemDisplayPreferences*"></a>
+  <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_ListCustomItemDisplayPreferences_System_Guid_System_Guid_System_String_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.ListCustomItemDisplayPreferences(System.Guid,System.Guid,System.String)">ListCustomItemDisplayPreferences(Guid, Guid, String)</h4>
+  <div class="markdown level1 summary"><p>Gets all of the custom item display preferences for the user and client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IDictionary&lt;string, string&gt; ListCustomItemDisplayPreferences(Guid userId, Guid itemId, string client)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The item id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.idictionary-2">IDictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><p>The dictionary of custom item display preferences.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_ListItemDisplayPreferences_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.ListItemDisplayPreferences(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L42">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_IDisplayPreferencesManager_ListItemDisplayPreferences_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.ListItemDisplayPreferences*"></a>
   <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_ListItemDisplayPreferences_System_Guid_System_String_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.ListItemDisplayPreferences(System.Guid,System.String)">ListItemDisplayPreferences(Guid, String)</h4>
@@ -279,7 +347,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_SaveChanges.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.SaveChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L65">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_IDisplayPreferencesManager_SaveChanges_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.SaveChanges*"></a>
   <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_SaveChanges" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.SaveChanges">SaveChanges()</h4>
@@ -290,6 +358,58 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">void SaveChanges()</code></pre>
   </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_IDisplayPreferencesManager_SetCustomItemDisplayPreferences_System_Guid_System_Guid_System_String_System_Collections_Generic_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.IDisplayPreferencesManager.SetCustomItemDisplayPreferences(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.Collections.Generic.Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/IDisplayPreferencesManager.cs/#L60">View Source</a>
+  </span>
+  <a id="MediaBrowser_Controller_IDisplayPreferencesManager_SetCustomItemDisplayPreferences_" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.SetCustomItemDisplayPreferences*"></a>
+  <h4 id="MediaBrowser_Controller_IDisplayPreferencesManager_SetCustomItemDisplayPreferences_System_Guid_System_Guid_System_String_System_Collections_Generic_Dictionary_System_String_System_String__" data-uid="MediaBrowser.Controller.IDisplayPreferencesManager.SetCustomItemDisplayPreferences(System.Guid,System.Guid,System.String,System.Collections.Generic.Dictionary{System.String,System.String})">SetCustomItemDisplayPreferences(Guid, Guid, String, Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the custom item display preference for the user and client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetCustomItemDisplayPreferences(Guid userId, Guid itemId, string client, Dictionary&lt;string, string&gt; customPreferences)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">userId</span></td>
+        <td><p>The user id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">itemId</span></td>
+        <td><p>The item id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">client</span></td>
+        <td><p>The client id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">customPreferences</span></td>
+        <td><p>A dictionary of custom item display preferences.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>

@@ -257,9 +257,87 @@ ldconfig -p | grep libnvidia-encode.so.1
 <p>Check the transcode logs to make sure everything is working properly.</p>
 <pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
-</code></pre><h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
+</code></pre><h3 id="configuring-opencl-accelerated-tone-mapping">Configuring OpenCL accelerated Tone mapping</h3>
+<p>Currently, Tone mapping with Nvidia NVENC, AMD AMF and Intel VAAPI is through OpenCL image support.</p>
+<table>
+<thead>
+<tr>
+<th>OS/Platform</th>
+<th>NVIDIA NVENC</th>
+<th>AMD AMF</th>
+<th>Intel VAAPI</th>
+<th>AMD VAAPI</th>
+<th>Intel QSV</th>
+<th>Software</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux</td>
+<td>OK</td>
+<td>OK</td>
+<td>OK</td>
+<td>planned</td>
+<td>planned</td>
+<td>planned</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>OK</td>
+<td>OK</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>planned</td>
+<td>planned</td>
+</tr>
+<tr>
+<td>Docker</td>
+<td>OK</td>
+<td>untested</td>
+<td>OK</td>
+<td>planned</td>
+<td>planned</td>
+<td>planned</td>
+</tr>
+</tbody>
+</table>
+<div class="NOTE"><h5>Note</h5><p>Make sure the hardware acceleration is well configured before reading this section.</p>
+</div>
+<ol>
+<li><p>On Windows: Install the latest Nvidia or AMD drivers.</p>
+</li>
+<li><p>On Linux or docker:</p>
+<ul>
+<li><p>For Nvidia cards, install <code>nvidia-opencl-icd</code> on Debian/Ubuntu. Install <code>opencl-nvidia</code> on Arch.</p>
+<pre><code class="lang-sh">sudo apt update
+sudo apt install nvidia-opencl-icd
+</code></pre><pre><code class="lang-sh">sudo pacman -Sy opencl-nvidia
+</code></pre></li>
+<li><p>For AMD cards, install <code>amdgpu-pro</code> with opencl arguments. See <strong>Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</strong> for more details.</p>
+<pre><code class="lang-sh">sudo ./amdgpu-pro-install -y --opencl=pal,legacy
+</code></pre></li>
+<li><p>For Intel iGPUs, follow the instructions from <a href="https://github.com/intel/compute-runtime/releases">intel-compute-runtime</a>. If you are using the docker image from jellyfin/jellyfin, this step can be skipped.</p>
+</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>Tone mapping on Intel VAAPI needs an iGPU that supports 10-bit decoding.
+Do not use the <code>intel-opencl-icd</code> package from the repository since they were not build with RELEASE_WITH_REGKEYS enabled for P010 pixel interop flags.</p>
+</div>
+</li>
+<li><p>Check the OpenCL device status. You will see corresponding vendor name if it goes well.</p>
+<ul>
+<li><p>Use <code>clinfo</code>: Install <code>clinfo</code> before using it. <code>sudo apt update &amp;&amp; sudo apt install clinfo -y</code> on Debian/Ubuntu or <code>sudo pacman -Sy clinfo</code> on Arch. Then <code>sudo clinfo</code></p>
+</li>
+<li><p>Use <code>jellyfin-ffmpeg</code>: <code>/usr/lib/jellyfin-ffmpeg/ffmpeg -v debug -init_hw_device opencl</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
 <p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
 <p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
+<div class="NOTE"><h5>Note</h5><p>For Intel Comet Lake or newer iGPUs, the legacy i965 VAAPI driver is incompatible with your hardware.
+Please follow the instructions from <strong>Configuring Intel QuickSync(QSV) on Debian/Ubuntu</strong> to get the newer iHD driver.</p>
+</div>
 <ol>
 <li><p>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</p>
 <pre><code class="lang-sh">$ ls -l /dev/dri
@@ -289,7 +367,8 @@ sudo systemctl restart jellyfin
 <li><p>Install the non-free iHD driver.</p>
 <pre><code class="lang-bash">sudo apt update
 sudo apt install vainfo intel-media-va-driver-non-free -y
-</code></pre><div class="NOTE"><h5>Note</h5><p>intel-media-va-driver-non-free is avaliable from apt since Debian buster and Ubuntu 19.04. Otherwise you have to build from source.</p>
+</code></pre><div class="NOTE"><h5>Note</h5><p>For Intel Comet Lake or newer iGPUs, make sure the version of <code>intel-media-va-driver-non-free</code> &gt;= 19.1.
+<code>intel-media-va-driver-non-free</code> is avaliable from apt since Debian buster and Ubuntu 19.04. Otherwise you have to build from source.</p>
 </div>
 </li>
 <li><p>Verify iHD driver using <code>vainfo</code>. You will find <code>iHD</code> from the result if it goes well.</p>

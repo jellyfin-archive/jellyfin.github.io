@@ -695,20 +695,20 @@ public class MoviesController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MoviesController_GetMovieRecommendations_System_Nullable_System_Guid__System_String_MediaBrowser_Model_Querying_ItemFields___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MoviesController.GetMovieRecommendations(System.Nullable%7BSystem.Guid%7D%2CSystem.String%2CMediaBrowser.Model.Querying.ItemFields%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MoviesController_GetMovieRecommendations_System_Nullable_System_Guid__System_Nullable_System_Guid__MediaBrowser_Model_Querying_ItemFields___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MoviesController.GetMovieRecommendations(System.Nullable%7BSystem.Guid%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CMediaBrowser.Model.Querying.ItemFields%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MoviesController.cs/#L65">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MoviesController_GetMovieRecommendations_" data-uid="Jellyfin.Api.Controllers.MoviesController.GetMovieRecommendations*"></a>
-  <h4 id="Jellyfin_Api_Controllers_MoviesController_GetMovieRecommendations_System_Nullable_System_Guid__System_String_MediaBrowser_Model_Querying_ItemFields___System_Int32_System_Int32_" data-uid="Jellyfin.Api.Controllers.MoviesController.GetMovieRecommendations(System.Nullable{System.Guid},System.String,MediaBrowser.Model.Querying.ItemFields[],System.Int32,System.Int32)">GetMovieRecommendations(Nullable&lt;Guid&gt;, String, ItemFields[], Int32, Int32)</h4>
+  <h4 id="Jellyfin_Api_Controllers_MoviesController_GetMovieRecommendations_System_Nullable_System_Guid__System_Nullable_System_Guid__MediaBrowser_Model_Querying_ItemFields___System_Int32_System_Int32_" data-uid="Jellyfin.Api.Controllers.MoviesController.GetMovieRecommendations(System.Nullable{System.Guid},System.Nullable{System.Guid},MediaBrowser.Model.Querying.ItemFields[],System.Int32,System.Int32)">GetMovieRecommendations(Nullable&lt;Guid&gt;, Nullable&lt;Guid&gt;, ItemFields[], Int32, Int32)</h4>
   <div class="markdown level1 summary"><p>Gets movie recommendations.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Recommendations&quot;)]
-public ActionResult&lt;IEnumerable&lt;RecommendationDto&gt;&gt; GetMovieRecommendations([FromQuery] Guid? userId, [FromQuery] string parentId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] int categoryLimit = 5, [FromQuery] int itemLimit = 8)</code></pre>
+public ActionResult&lt;IEnumerable&lt;RecommendationDto&gt;&gt; GetMovieRecommendations([FromQuery] Guid? userId, [FromQuery] Guid? parentId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] int categoryLimit = 5, [FromQuery] int itemLimit = 8)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -727,7 +727,7 @@ public ActionResult&lt;IEnumerable&lt;RecommendationDto&gt;&gt; GetMovieRecommen
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td><span class="parametername">parentId</span></td>
         <td><p>Specify this to localize the search to a specific item or folder. Omit to use the root.</p>
 </td>

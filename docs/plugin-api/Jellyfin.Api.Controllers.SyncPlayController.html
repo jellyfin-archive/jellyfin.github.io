@@ -634,7 +634,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Api.dll</h6>
   <h5 id="Jellyfin_Api_Controllers_SyncPlayController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Authorize(Policy = &quot;DefaultAuthorization&quot;)]
+    <pre><code class="lang-csharp hljs">[Authorize(Policy = &quot;SyncPlayAccess&quot;)]
 public class SyncPlayController : BaseJellyfinApiController</code></pre>
   </div>
   <h3 id="constructors">Constructors
@@ -644,7 +644,7 @@ public class SyncPlayController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_SyncPlay_ISyncPlayManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.%23ctor(MediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.SyncPlay.ISyncPlayManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L33">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L36">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController__ctor_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_SyncPlayController__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_SyncPlay_ISyncPlayManager_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.#ctor(MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.SyncPlay.ISyncPlayManager)">SyncPlayController(ISessionManager, IAuthorizationContext, ISyncPlayManager)</h4>
@@ -689,21 +689,21 @@ public class SyncPlayController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayBuffering_System_DateTime_System_Int64_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayBuffering(System.DateTime%2CSystem.Int64%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayBuffering_Jellyfin_Api_Models_SyncPlayDtos_BufferRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayBuffering(Jellyfin.Api.Models.SyncPlayDtos.BufferRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L170">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L268">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayBuffering_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayBuffering*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayBuffering_System_DateTime_System_Int64_System_Boolean_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayBuffering(System.DateTime,System.Int64,System.Boolean)">SyncPlayBuffering(DateTime, Int64, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Request group wait in SyncPlay group while buffering.</p>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayBuffering_Jellyfin_Api_Models_SyncPlayDtos_BufferRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayBuffering(Jellyfin.Api.Models.SyncPlayDtos.BufferRequestDto)">SyncPlayBuffering(BufferRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Notify SyncPlay group that member is buffering.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Buffering&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlayBuffering([FromQuery] DateTime when, [FromQuery] long positionTicks, [FromQuery] bool bufferingDone)</code></pre>
+public ActionResult SyncPlayBuffering([FromBody, Required] BufferRequestDto requestData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -716,21 +716,9 @@ public ActionResult SyncPlayBuffering([FromQuery] DateTime when, [FromQuery] lon
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
-        <td><span class="parametername">when</span></td>
-        <td><p>When the request has been made by the client.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">positionTicks</span></td>
-        <td><p>The playback position in ticks.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">bufferingDone</span></td>
-        <td><p>Whether the buffering is done.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.BufferRequestDto.html">BufferRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The player status.</p>
 </td>
       </tr>
     </tbody>
@@ -753,13 +741,13 @@ public ActionResult SyncPlayBuffering([FromQuery] DateTime when, [FromQuery] lon
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayCreateGroup.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayCreateGroup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayCreateGroup_Jellyfin_Api_Models_SyncPlayDtos_NewGroupRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayCreateGroup(Jellyfin.Api.Models.SyncPlayDtos.NewGroupRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L52">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayCreateGroup_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayCreateGroup*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayCreateGroup" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayCreateGroup">SyncPlayCreateGroup()</h4>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayCreateGroup_Jellyfin_Api_Models_SyncPlayDtos_NewGroupRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayCreateGroup(Jellyfin.Api.Models.SyncPlayDtos.NewGroupRequestDto)">SyncPlayCreateGroup(NewGroupRequestDto)</h4>
   <div class="markdown level1 summary"><p>Create a new SyncPlay group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -767,8 +755,27 @@ public ActionResult SyncPlayBuffering([FromQuery] DateTime when, [FromQuery] lon
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;New&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlayCreateGroup()</code></pre>
+[Authorize(Policy = &quot;SyncPlayCreateGroupAccess&quot;)]
+public ActionResult SyncPlayCreateGroup([FromBody, Required] NewGroupRequestDto requestData)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.NewGroupRequestDto.html">NewGroupRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The settings of the new group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -787,13 +794,13 @@ public ActionResult SyncPlayCreateGroup()</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayGetGroups_System_Nullable_System_Guid__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayGetGroups(System.Nullable%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayGetGroups.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayGetGroups%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L98">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L102">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayGetGroups_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayGetGroups*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayGetGroups_System_Nullable_System_Guid__" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayGetGroups(System.Nullable{System.Guid})">SyncPlayGetGroups(Nullable&lt;Guid&gt;)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayGetGroups" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayGetGroups">SyncPlayGetGroups()</h4>
   <div class="markdown level1 summary"><p>Gets all SyncPlay groups.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -801,26 +808,9 @@ public ActionResult SyncPlayCreateGroup()</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;List&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;GroupInfoView&gt;&gt; SyncPlayGetGroups([FromQuery] Guid? filterItemId)</code></pre>
+[Authorize(Policy = &quot;SyncPlayAccess&quot;)]
+public ActionResult&lt;IEnumerable&lt;GroupInfoDto&gt;&gt; SyncPlayGetGroups()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
-        <td><span class="parametername">filterItemId</span></td>
-        <td><p>Optional. Filter by item id.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -831,7 +821,7 @@ public ActionResult&lt;IEnumerable&lt;GroupInfoView&gt;&gt; SyncPlayGetGroups([F
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.SyncPlay.GroupInfoView.html">GroupInfoView</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.SyncPlay.GroupInfoDto.html">GroupInfoDto</a>&gt;&gt;</td>
         <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> containing the available SyncPlay groups.</p>
 </td>
       </tr>
@@ -839,13 +829,13 @@ public ActionResult&lt;IEnumerable&lt;GroupInfoView&gt;&gt; SyncPlayGetGroups([F
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayJoinGroup_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayJoinGroup(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayJoinGroup_Jellyfin_Api_Models_SyncPlayDtos_JoinGroupRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayJoinGroup(Jellyfin.Api.Models.SyncPlayDtos.JoinGroupRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L70">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayJoinGroup_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayJoinGroup*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayJoinGroup_System_Guid_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayJoinGroup(System.Guid)">SyncPlayJoinGroup(Guid)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayJoinGroup_Jellyfin_Api_Models_SyncPlayDtos_JoinGroupRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayJoinGroup(Jellyfin.Api.Models.SyncPlayDtos.JoinGroupRequestDto)">SyncPlayJoinGroup(JoinGroupRequestDto)</h4>
   <div class="markdown level1 summary"><p>Join an existing SyncPlay group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -853,7 +843,8 @@ public ActionResult&lt;IEnumerable&lt;GroupInfoView&gt;&gt; SyncPlayGetGroups([F
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Join&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlayJoinGroup([FromQuery, Required] Guid groupId)</code></pre>
+[Authorize(Policy = &quot;SyncPlayAccess&quot;)]
+public ActionResult SyncPlayJoinGroup([FromBody, Required] JoinGroupRequestDto requestData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -866,9 +857,9 @@ public ActionResult SyncPlayJoinGroup([FromQuery, Required] Guid groupId)</code>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">groupId</span></td>
-        <td><p>The sync play group id.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.JoinGroupRequestDto.html">JoinGroupRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The group to join.</p>
 </td>
       </tr>
     </tbody>
@@ -894,7 +885,7 @@ public ActionResult SyncPlayJoinGroup([FromQuery, Required] Guid groupId)</code>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayLeaveGroup.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayLeaveGroup%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L87">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayLeaveGroup_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayLeaveGroup*"></a>
   <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayLeaveGroup" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayLeaveGroup">SyncPlayLeaveGroup()</h4>
@@ -925,10 +916,114 @@ public ActionResult SyncPlayLeaveGroup()</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayMovePlaylistItem_Jellyfin_Api_Models_SyncPlayDtos_MovePlaylistItemRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayMovePlaylistItem(Jellyfin.Api.Models.SyncPlayDtos.MovePlaylistItemRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L172">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayMovePlaylistItem_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayMovePlaylistItem*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayMovePlaylistItem_Jellyfin_Api_Models_SyncPlayDtos_MovePlaylistItemRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayMovePlaylistItem(Jellyfin.Api.Models.SyncPlayDtos.MovePlaylistItemRequestDto)">SyncPlayMovePlaylistItem(MovePlaylistItemRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to move an item in the playlist in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;MovePlaylistItem&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayMovePlaylistItem([FromBody, Required] MovePlaylistItemRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.MovePlaylistItemRequestDto.html">MovePlaylistItemRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new position for the item.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayNextItem_Jellyfin_Api_Models_SyncPlayDtos_NextItemRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayNextItem(Jellyfin.Api.Models.SyncPlayDtos.NextItemRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L327">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayNextItem_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayNextItem*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayNextItem_Jellyfin_Api_Models_SyncPlayDtos_NextItemRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayNextItem(Jellyfin.Api.Models.SyncPlayDtos.NextItemRequestDto)">SyncPlayNextItem(NextItemRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request next item in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;NextItem&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayNextItem([FromBody, Required] NextItemRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.NextItemRequestDto.html">NextItemRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The current item information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPause.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPause%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L129">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L220">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPause_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPause*"></a>
   <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPause" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPause">SyncPlayPause()</h4>
@@ -959,13 +1054,13 @@ public ActionResult SyncPlayPause()</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPing_System_Double_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPing(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPing_Jellyfin_Api_Models_SyncPlayDtos_PingRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPing(Jellyfin.Api.Models.SyncPlayDtos.PingRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L191">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L395">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPing_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPing*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPing_System_Double_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPing(System.Double)">SyncPlayPing(Double)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPing_Jellyfin_Api_Models_SyncPlayDtos_PingRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPing(Jellyfin.Api.Models.SyncPlayDtos.PingRequestDto)">SyncPlayPing(PingRequestDto)</h4>
   <div class="markdown level1 summary"><p>Update session ping.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -973,7 +1068,7 @@ public ActionResult SyncPlayPause()</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Ping&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlayPing([FromQuery] double ping)</code></pre>
+public ActionResult SyncPlayPing([FromBody, Required] PingRequestDto requestData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -986,9 +1081,9 @@ public ActionResult SyncPlayPing([FromQuery] double ping)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.double">Double</a></td>
-        <td><span class="parametername">ping</span></td>
-        <td><p>The ping.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.PingRequestDto.html">PingRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new ping.</p>
 </td>
       </tr>
     </tbody>
@@ -1011,22 +1106,40 @@ public ActionResult SyncPlayPing([FromQuery] double ping)</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPlay.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPlay%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPreviousItem_Jellyfin_Api_Models_SyncPlayDtos_PreviousItemRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPreviousItem(Jellyfin.Api.Models.SyncPlayDtos.PreviousItemRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L111">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L344">View Source</a>
   </span>
-  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPlay_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPlay*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPlay" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPlay">SyncPlayPlay()</h4>
-  <div class="markdown level1 summary"><p>Request play in SyncPlay group.</p>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPreviousItem_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPreviousItem*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayPreviousItem_Jellyfin_Api_Models_SyncPlayDtos_PreviousItemRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayPreviousItem(Jellyfin.Api.Models.SyncPlayDtos.PreviousItemRequestDto)">SyncPlayPreviousItem(PreviousItemRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request previous item in SyncPlay group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Play&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;PreviousItem&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlayPlay()</code></pre>
+public ActionResult SyncPlayPreviousItem([FromBody, Required] PreviousItemRequestDto requestData)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.PreviousItemRequestDto.html">PreviousItemRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The current item information.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1045,13 +1158,169 @@ public ActionResult SyncPlayPlay()</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySeek_System_Int64_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySeek(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayQueue_Jellyfin_Api_Models_SyncPlayDtos_QueueRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayQueue(Jellyfin.Api.Models.SyncPlayDtos.QueueRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L148">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L189">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayQueue_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayQueue*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayQueue_Jellyfin_Api_Models_SyncPlayDtos_QueueRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayQueue(Jellyfin.Api.Models.SyncPlayDtos.QueueRequestDto)">SyncPlayQueue(QueueRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to queue items to the playlist of a SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Queue&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayQueue([FromBody, Required] QueueRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.QueueRequestDto.html">QueueRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The items to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayReady_Jellyfin_Api_Models_SyncPlayDtos_ReadyRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayReady(Jellyfin.Api.Models.SyncPlayDtos.ReadyRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L289">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayReady_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayReady*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayReady_Jellyfin_Api_Models_SyncPlayDtos_ReadyRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayReady(Jellyfin.Api.Models.SyncPlayDtos.ReadyRequestDto)">SyncPlayReady(ReadyRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Notify SyncPlay group that member is ready for playback.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Ready&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayReady([FromBody, Required] ReadyRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.ReadyRequestDto.html">ReadyRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The player status.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayRemoveFromPlaylist_Jellyfin_Api_Models_SyncPlayDtos_RemoveFromPlaylistRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayRemoveFromPlaylist(Jellyfin.Api.Models.SyncPlayDtos.RemoveFromPlaylistRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L155">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayRemoveFromPlaylist_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayRemoveFromPlaylist*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayRemoveFromPlaylist_Jellyfin_Api_Models_SyncPlayDtos_RemoveFromPlaylistRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayRemoveFromPlaylist(Jellyfin.Api.Models.SyncPlayDtos.RemoveFromPlaylistRequestDto)">SyncPlayRemoveFromPlaylist(RemoveFromPlaylistRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to remove items from the playlist in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;RemoveFromPlaylist&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayRemoveFromPlaylist([FromBody, Required] RemoveFromPlaylistRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.RemoveFromPlaylistRequestDto.html">RemoveFromPlaylistRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The items to remove.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySeek_Jellyfin_Api_Models_SyncPlayDtos_SeekRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySeek(Jellyfin.Api.Models.SyncPlayDtos.SeekRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L251">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySeek_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySeek*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySeek_System_Int64_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySeek(System.Int64)">SyncPlaySeek(Int64)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySeek_Jellyfin_Api_Models_SyncPlayDtos_SeekRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySeek(Jellyfin.Api.Models.SyncPlayDtos.SeekRequestDto)">SyncPlaySeek(SeekRequestDto)</h4>
   <div class="markdown level1 summary"><p>Request seek in SyncPlay group.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1059,7 +1328,7 @@ public ActionResult SyncPlayPlay()</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Seek&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SyncPlaySeek([FromQuery] long positionTicks)</code></pre>
+public ActionResult SyncPlaySeek([FromBody, Required] SeekRequestDto requestData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1072,13 +1341,341 @@ public ActionResult SyncPlaySeek([FromQuery] long positionTicks)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a></td>
-        <td><span class="parametername">positionTicks</span></td>
-        <td><p>The playback position in ticks.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.SeekRequestDto.html">SeekRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new playback position.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetIgnoreWait_Jellyfin_Api_Models_SyncPlayDtos_IgnoreWaitRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetIgnoreWait(Jellyfin.Api.Models.SyncPlayDtos.IgnoreWaitRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L310">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetIgnoreWait_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetIgnoreWait*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetIgnoreWait_Jellyfin_Api_Models_SyncPlayDtos_IgnoreWaitRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetIgnoreWait(Jellyfin.Api.Models.SyncPlayDtos.IgnoreWaitRequestDto)">SyncPlaySetIgnoreWait(IgnoreWaitRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request SyncPlay group to ignore member during group-wait.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;SetIgnoreWait&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlaySetIgnoreWait([FromBody, Required] IgnoreWaitRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.IgnoreWaitRequestDto.html">IgnoreWaitRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The settings to set.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetNewQueue_Jellyfin_Api_Models_SyncPlayDtos_PlayRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetNewQueue(Jellyfin.Api.Models.SyncPlayDtos.PlayRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L118">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetNewQueue_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetNewQueue*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetNewQueue_Jellyfin_Api_Models_SyncPlayDtos_PlayRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetNewQueue(Jellyfin.Api.Models.SyncPlayDtos.PlayRequestDto)">SyncPlaySetNewQueue(PlayRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to set new playlist in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;SetNewQueue&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlaySetNewQueue([FromBody, Required] PlayRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.PlayRequestDto.html">PlayRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new playlist to play in the group.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetPlaylistItem_Jellyfin_Api_Models_SyncPlayDtos_SetPlaylistItemRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetPlaylistItem(Jellyfin.Api.Models.SyncPlayDtos.SetPlaylistItemRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L138">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetPlaylistItem_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetPlaylistItem*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetPlaylistItem_Jellyfin_Api_Models_SyncPlayDtos_SetPlaylistItemRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetPlaylistItem(Jellyfin.Api.Models.SyncPlayDtos.SetPlaylistItemRequestDto)">SyncPlaySetPlaylistItem(SetPlaylistItemRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to change playlist item in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;SetPlaylistItem&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlaySetPlaylistItem([FromBody, Required] SetPlaylistItemRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.SetPlaylistItemRequestDto.html">SetPlaylistItemRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new item to play.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetRepeatMode_Jellyfin_Api_Models_SyncPlayDtos_SetRepeatModeRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetRepeatMode(Jellyfin.Api.Models.SyncPlayDtos.SetRepeatModeRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L361">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetRepeatMode_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetRepeatMode*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetRepeatMode_Jellyfin_Api_Models_SyncPlayDtos_SetRepeatModeRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetRepeatMode(Jellyfin.Api.Models.SyncPlayDtos.SetRepeatModeRequestDto)">SyncPlaySetRepeatMode(SetRepeatModeRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to set repeat mode in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;SetRepeatMode&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlaySetRepeatMode([FromBody, Required] SetRepeatModeRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.SetRepeatModeRequestDto.html">SetRepeatModeRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new repeat mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetShuffleMode_Jellyfin_Api_Models_SyncPlayDtos_SetShuffleModeRequestDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetShuffleMode(Jellyfin.Api.Models.SyncPlayDtos.SetShuffleModeRequestDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L378">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetShuffleMode_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetShuffleMode*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlaySetShuffleMode_Jellyfin_Api_Models_SyncPlayDtos_SetShuffleModeRequestDto_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlaySetShuffleMode(Jellyfin.Api.Models.SyncPlayDtos.SetShuffleModeRequestDto)">SyncPlaySetShuffleMode(SetShuffleModeRequestDto)</h4>
+  <div class="markdown level1 summary"><p>Request to set shuffle mode in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;SetShuffleMode&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlaySetShuffleMode([FromBody, Required] SetShuffleModeRequestDto requestData)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Jellyfin.Api.Models.SyncPlayDtos.SetShuffleModeRequestDto.html">SetShuffleModeRequestDto</a></td>
+        <td><span class="parametername">requestData</span></td>
+        <td><p>The new shuffle mode.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayStop.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayStop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L235">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayStop_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayStop*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayStop" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayStop">SyncPlayStop()</h4>
+  <div class="markdown level1 summary"><p>Request stop in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Stop&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayStop()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController_SyncPlayUnpause.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController.SyncPlayUnpause%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L205">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayUnpause_" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayUnpause*"></a>
+  <h4 id="Jellyfin_Api_Controllers_SyncPlayController_SyncPlayUnpause" data-uid="Jellyfin.Api.Controllers.SyncPlayController.SyncPlayUnpause">SyncPlayUnpause()</h4>
+  <div class="markdown level1 summary"><p>Request unpause in SyncPlay group.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Unpause&quot;)]
+[ProducesResponseType(204)]
+public ActionResult SyncPlayUnpause()</code></pre>
+  </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -1110,7 +1707,7 @@ public ActionResult SyncPlaySeek([FromQuery] long positionTicks)</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SyncPlayController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SyncPlayController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L20" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SyncPlayController.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

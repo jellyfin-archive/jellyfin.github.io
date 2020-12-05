@@ -132,7 +132,56 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the data of the message.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_GroupUpdate_1__ctor_System_Guid_MediaBrowser_Model_SyncPlay_GroupUpdateType__0_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.GroupUpdate%601.%23ctor(System.Guid%2CMediaBrowser.Model.SyncPlay.GroupUpdateType%2C%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L17">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_SyncPlay_GroupUpdate_1__ctor_" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_SyncPlay_GroupUpdate_1__ctor_System_Guid_MediaBrowser_Model_SyncPlay_GroupUpdateType__0_" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.#ctor(System.Guid,MediaBrowser.Model.SyncPlay.GroupUpdateType,`0)">GroupUpdate(Guid, GroupUpdateType, T)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate&lt;T&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GroupUpdate(Guid groupId, GroupUpdateType type, T data)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">groupId</span></td>
+        <td><p>The group identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdateType.html">GroupUpdateType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The update type.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">data</span></td>
+        <td><p>The update data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -143,16 +192,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_GroupUpdate_1_Data.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.GroupUpdate%601.Data%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L40">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_Data_" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.Data*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_Data" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.Data">Data</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the data.</p>
+  <div class="markdown level1 summary"><p>Gets the update data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public T Data { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public T Data { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +214,7 @@
     <tbody>
       <tr>
         <td><span class="xref">T</span></td>
-        <td><p>The data.</p>
+        <td><p>The update data.</p>
 </td>
       </tr>
     </tbody>
@@ -175,16 +224,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_GroupUpdate_1_GroupId.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.GroupUpdate%601.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L28">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_GroupId_" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.GroupId*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_GroupId" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.GroupId">GroupId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the group identifier.</p>
+  <div class="markdown level1 summary"><p>Gets the group identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid GroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -196,7 +245,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The group identifier.</p>
 </td>
       </tr>
@@ -207,16 +256,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_GroupUpdate_1_Type.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.GroupUpdate%601.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_Type_" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.Type*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_GroupUpdate_1_Type" data-uid="MediaBrowser.Model.SyncPlay.GroupUpdate`1.Type">Type</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the update type.</p>
+  <div class="markdown level1 summary"><p>Gets the update type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GroupUpdateType Type { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GroupUpdateType Type { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -249,7 +298,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_GroupUpdate_1.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.GroupUpdate%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/GroupUpdate.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

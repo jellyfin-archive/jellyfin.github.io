@@ -121,6 +121,72 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class SendCommand</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand__ctor_System_Guid_System_Guid_System_DateTime_MediaBrowser_Model_SyncPlay_SendCommandType_System_Nullable_System_Int64__System_DateTime_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.%23ctor(System.Guid%2CSystem.Guid%2CSystem.DateTime%2CMediaBrowser.Model.SyncPlay.SendCommandType%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L19">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_SyncPlay_SendCommand__ctor_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_SyncPlay_SendCommand__ctor_System_Guid_System_Guid_System_DateTime_MediaBrowser_Model_SyncPlay_SendCommandType_System_Nullable_System_Int64__System_DateTime_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.#ctor(System.Guid,System.Guid,System.DateTime,MediaBrowser.Model.SyncPlay.SendCommandType,System.Nullable{System.Int64},System.DateTime)">SendCommand(Guid, Guid, DateTime, SendCommandType, Nullable&lt;Int64&gt;, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Model.SyncPlay.SendCommand.html">SendCommand</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SendCommand(Guid groupId, Guid playlistItemId, DateTime when, SendCommandType command, long? positionTicks, DateTime emittedAt)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">groupId</span></td>
+        <td><p>The group identifier.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">playlistItemId</span></td>
+        <td><p>The playlist identifier of the playing item.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">when</span></td>
+        <td><p>The UTC time when to execute the command.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SendCommandType.html">SendCommandType</a></td>
+        <td><span class="parametername">command</span></td>
+        <td><p>The command.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int64">Int64</a>&gt;</td>
+        <td><span class="parametername">positionTicks</span></td>
+        <td><p>The position ticks, for commands that require it.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">emittedAt</span></td>
+        <td><p>The UTC time when this command has been emitted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -128,16 +194,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_Command.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.Command%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L57">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_SendCommand_Command_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.Command*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_Command" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.Command">Command</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the command.</p>
+  <div class="markdown level1 summary"><p>Gets the command.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SendCommandType Command { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public SendCommandType Command { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -160,16 +226,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_EmittedAt.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.EmittedAt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L63">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_SendCommand_EmittedAt_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.EmittedAt*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_EmittedAt" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.EmittedAt">EmittedAt</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the UTC time when this command has been emitted.</p>
+  <div class="markdown level1 summary"><p>Gets the UTC time when this command has been emitted.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string EmittedAt { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime EmittedAt { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +247,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>The UTC time when this command has been emitted.</p>
 </td>
       </tr>
@@ -192,16 +258,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_GroupId.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.GroupId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L14">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_SendCommand_GroupId_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.GroupId*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_GroupId" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.GroupId">GroupId</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the group identifier.</p>
+  <div class="markdown level1 summary"><p>Gets the group identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GroupId { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid GroupId { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,8 +279,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><p>The group identifier.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_PlaylistItemId.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.PlaylistItemId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L39">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_SyncPlay_SendCommand_PlaylistItemId_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.PlaylistItemId*"></a>
+  <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_PlaylistItemId" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.PlaylistItemId">PlaylistItemId</h4>
+  <div class="markdown level1 summary"><p>Gets the playlist identifier of the playing item.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Guid PlaylistItemId { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><p>The playlist identifier of the playing item.</p>
 </td>
       </tr>
     </tbody>
@@ -224,16 +322,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_PositionTicks.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.PositionTicks%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L26">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_SendCommand_PositionTicks_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.PositionTicks*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_PositionTicks" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.PositionTicks">PositionTicks</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the position ticks.</p>
+  <div class="markdown level1 summary"><p>Gets the position ticks.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public long? PositionTicks { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public long? PositionTicks { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -256,7 +354,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_SyncPlay_SendCommand_When.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.SyncPlay.SendCommand.When%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/SyncPlay/SendCommand.cs/#L45">View Source</a>
   </span>
   <a id="MediaBrowser_Model_SyncPlay_SendCommand_When_" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.When*"></a>
   <h4 id="MediaBrowser_Model_SyncPlay_SendCommand_When" data-uid="MediaBrowser.Model.SyncPlay.SendCommand.When">When</h4>
@@ -265,7 +363,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string When { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime When { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,7 +375,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td><p>The UTC time when to execute the command.</p>
 </td>
       </tr>
