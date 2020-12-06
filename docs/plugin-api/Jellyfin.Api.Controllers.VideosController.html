@@ -1567,7 +1567,7 @@ public Task&lt;ActionResult&gt; GetVideoStreamByContainer([FromRoute, Required] 
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(400)]
-public Task&lt;ActionResult&gt; MergeVersions([FromQuery, Required, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] itemIds)</code></pre>
+public Task&lt;ActionResult&gt; MergeVersions([FromQuery, Required, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] ids)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1581,7 +1581,7 @@ public Task&lt;ActionResult&gt; MergeVersions([FromQuery, Required, ModelBinder(
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>[]</td>
-        <td><span class="parametername">itemIds</span></td>
+        <td><span class="parametername">ids</span></td>
         <td><p>Item id list. This allows multiple, comma delimited.</p>
 </td>
       </tr>
