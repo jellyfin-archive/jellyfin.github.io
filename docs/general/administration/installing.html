@@ -185,6 +185,9 @@ services:
       - /path/to/media:/media
       - /path/to/media2:/media2:ro
     restart: &quot;unless-stopped&quot;
+    # Optional - alternative address used for autodiscovery
+    environment:
+      - JELLYFIN_PublishedServerUrl=http://example.com
 </code></pre><p>Then while in the same folder as the <code>docker-compose.yml</code> run:</p>
 <pre><code class="lang-sh">docker-compose up
 </code></pre><p>To run the container in background add <code>-d</code> to the above command.</p>
