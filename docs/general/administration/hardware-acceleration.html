@@ -308,10 +308,12 @@ Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 </li>
 <li><p>On Linux or docker:</p>
 <ul>
-<li><p>For Nvidia cards, install <code>nvidia-opencl-icd</code> on Debian/Ubuntu. Install <code>opencl-nvidia</code> on Arch.</p>
+<li><p>For Nvidia cards, install <code>nvidia-opencl-icd</code> on Debian/Ubuntu:</p>
 <pre><code class="lang-sh">sudo apt update
 sudo apt install nvidia-opencl-icd
-</code></pre><pre><code class="lang-sh">sudo pacman -Sy opencl-nvidia
+</code></pre><p>If presented with multiple package options, choose the one that matches the version of your current nvidia driver (<code>apt list --installed | grep nvidia</code>).</p>
+<p>Install <code>opencl-nvidia</code> on Arch:</p>
+<pre><code class="lang-sh">sudo pacman -Sy opencl-nvidia
 </code></pre></li>
 <li><p>For AMD cards, install <code>amdgpu-pro</code> with opencl arguments. See <strong>Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</strong> for more details.</p>
 <pre><code class="lang-sh">sudo ./amdgpu-pro-install -y --opencl=pal,legacy
