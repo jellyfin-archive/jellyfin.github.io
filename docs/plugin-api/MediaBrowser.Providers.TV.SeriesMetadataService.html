@@ -204,18 +204,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_TV_SeriesMetadataService__MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BMediaBrowser.Providers.TV.SeriesMetadataService%7D%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_TV_SeriesMetadataService__MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Globalization_ILocalizationManager_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BMediaBrowser.Providers.TV.SeriesMetadataService%7D%2CMediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Model.Globalization.ILocalizationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_SeriesMetadataService__ctor_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_TV_SeriesMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_TV_SeriesMetadataService__MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{MediaBrowser.Providers.TV.SeriesMetadataService},MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">SeriesMetadataService(IServerConfigurationManager, ILogger&lt;SeriesMetadataService&gt;, IProviderManager, IFileSystem, ILibraryManager)</h4>
+  <h4 id="MediaBrowser_Providers_TV_SeriesMetadataService__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_MediaBrowser_Providers_TV_SeriesMetadataService__MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Model_Globalization_ILocalizationManager_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{MediaBrowser.Providers.TV.SeriesMetadataService},MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Model.Globalization.ILocalizationManager)">SeriesMetadataService(IServerConfigurationManager, ILogger&lt;SeriesMetadataService&gt;, IProviderManager, IFileSystem, ILibraryManager, ILocalizationManager)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public SeriesMetadataService(IServerConfigurationManager serverConfigurationManager, ILogger&lt;SeriesMetadataService&gt; logger, IProviderManager providerManager, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public SeriesMetadataService(IServerConfigurationManager serverConfigurationManager, ILogger&lt;SeriesMetadataService&gt; logger, IProviderManager providerManager, IFileSystem fileSystem, ILibraryManager libraryManager, ILocalizationManager localizationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,16 +252,80 @@
         <td><span class="parametername">libraryManager</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Globalization.ILocalizationManager.html">ILocalizationManager</a></td>
+        <td><span class="parametername">localizationManager</span></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService_AfterMetadataRefresh_MediaBrowser_Controller_Entities_TV_Series_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService.AfterMetadataRefresh(MediaBrowser.Controller.Entities.TV.Series%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L37">View Source</a>
+  </span>
+  <a id="MediaBrowser_Providers_TV_SeriesMetadataService_AfterMetadataRefresh_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.AfterMetadataRefresh*"></a>
+  <h4 id="MediaBrowser_Providers_TV_SeriesMetadataService_AfterMetadataRefresh_MediaBrowser_Controller_Entities_TV_Series_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.AfterMetadataRefresh(MediaBrowser.Controller.Entities.TV.Series,MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Threading.CancellationToken)">AfterMetadataRefresh(Series, MetadataRefreshOptions, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override Task AfterMetadataRefresh(Series item, MetadataRefreshOptions refreshOptions, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Entities.TV.Series.html">Series</a></td>
+        <td><span class="parametername">item</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
+        <td><span class="parametername">refreshOptions</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">MediaBrowser.Providers.Manager.MetadataService&lt;MediaBrowser.Controller.Entities.TV.Series, MediaBrowser.Controller.Providers.SeriesInfo&gt;.AfterMetadataRefresh(MediaBrowser.Controller.Entities.TV.Series, MediaBrowser.Controller.Providers.MetadataRefreshOptions, System.Threading.CancellationToken)</span></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService_IsFullLocalMetadata_MediaBrowser_Controller_Entities_TV_Series_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService.IsFullLocalMetadata(MediaBrowser.Controller.Entities.TV.Series)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L27">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L46">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_SeriesMetadataService_IsFullLocalMetadata_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.IsFullLocalMetadata*"></a>
   <h4 id="MediaBrowser_Providers_TV_SeriesMetadataService_IsFullLocalMetadata_MediaBrowser_Controller_Entities_TV_Series_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.IsFullLocalMetadata(MediaBrowser.Controller.Entities.TV.Series)">IsFullLocalMetadata(Series)</h4>
@@ -310,7 +374,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService_MergeData_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_TV_Series__MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_TV_Series__MediaBrowser_Model_Entities_MetadataField___System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService.MergeData(MediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Entities.TV.Series%7D%2CMediaBrowser.Controller.Providers.MetadataResult%7BMediaBrowser.Controller.Entities.TV.Series%7D%2CMediaBrowser.Model.Entities.MetadataField%5B%5D%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L62">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_TV_SeriesMetadataService_MergeData_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.MergeData*"></a>
   <h4 id="MediaBrowser_Providers_TV_SeriesMetadataService_MergeData_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_TV_Series__MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_TV_Series__MediaBrowser_Model_Entities_MetadataField___System_Boolean_System_Boolean_" data-uid="MediaBrowser.Providers.TV.SeriesMetadataService.MergeData(MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.TV.Series},MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.TV.Series},MediaBrowser.Model.Entities.MetadataField[],System.Boolean,System.Boolean)">MergeData(MetadataResult&lt;Series&gt;, MetadataResult&lt;Series&gt;, MetadataField[], Boolean, Boolean)</h4>
@@ -378,7 +442,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_TV_SeriesMetadataService.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.TV.SeriesMetadataService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/TV/SeriesMetadataService.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
