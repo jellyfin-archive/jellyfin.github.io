@@ -137,7 +137,7 @@
 <h2 id="setup">Setup</h2>
 <p>Each hardware acceleration type, as well as each Jellyfin installation type, requires different setup options before it can be used. It is always best to consult the FFMpeg documentation on the acceleration type you choose for the latest information.</p>
 <h3 id="acceleration-on-docker">Acceleration on Docker</h3>
-<p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine.</p>
+<p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine. VAAPI may require the <code>render</code> group added to the docker permissions. The <code>render</code> group id can be discovered in /etc/group such as <code>render:x:122:</code>.</p>
 <div class="NOTE"><h5>Note</h5><p><a href="https://github.com/docker/compose/issues/6691">NVIDIA GPUs</a> aren&#39;t currently supported in docker-compose.</p>
 </div>
 <p>You can use <code>docker run</code> to start the server with a command like the one below.</p>
@@ -146,6 +146,7 @@
  --volume /path/to/cache:/cache \
  --volume /path/to/media:/media \
  --user 1000:1000 \
+ --group-add=122 \
  --net=host \
  --restart=unless-stopped \
  --device /dev/dri/renderD128:/dev/dri/renderD128 \
@@ -157,6 +158,8 @@ services:
   jellyfin:
     image: jellyfin/jellyfin
     user: 1000:1000
+    group_add:
+      - 122
     network_mode: &quot;host&quot;
     volumes:
       - /path/to/config:/config
