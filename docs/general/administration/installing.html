@@ -447,7 +447,38 @@ sudo chmod u+x jellyfin.sh
 <h3 id="arch-linux">Arch Linux</h3>
 <p>Jellyfin can be found in the AUR as <a href="https://aur.archlinux.org/packages/jellyfin/"><code>jellyfin</code></a>, <a href="https://aur.archlinux.org/packages/jellyfin-bin/"><code>jellyfin-bin</code></a> and <a href="https://aur.archlinux.org/packages/jellyfin-git/"><code>jellyfin-git</code></a>.</p>
 <h3 id="fedora">Fedora</h3>
-<p>Fedora 29 builds in RPM package format are available <a href="https://jellyfin.org/downloads/#fedora">here</a> for now but an official Fedora repository is coming soon.</p>
+<p>Fedora builds in RPM package format are available <a href="https://jellyfin.org/downloads/#fedora">here</a> for now but an official Fedora repository is coming soon.</p>
+<ol>
+<li><p>You will need to enable rpmfusion as ffmpeg is a dependency of the jellyfin server package</p>
+<pre><code class="lang-sh">sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+</code></pre><div class="NOTE"><h5>Note</h5><p>You do not need to manually install ffmpeg, it will be installed by the jellyfin server package as a dependency</p>
+</div>
+</li>
+<li><p>Install the jellyfin server</p>
+<pre><code class="lang-sh">sudo dnf install (link to version jellyfin server you want to install)
+</code></pre></li>
+<li><p>Install the jellyfin web interface</p>
+<pre><code class="lang-sh">sudo dnf install (link to web RPM you want to install)
+</code></pre></li>
+<li><p>Enable jellyfin service with systemd</p>
+<pre><code class="lang-sh">sudo systemctl start jellyfin
+</code></pre><pre><code class="lang-sh">sudo systemctl enable jellyfin
+</code></pre></li>
+<li><p>Open jellyfin service with firewalld</p>
+<pre><code class="lang-sh">sudo firewall-cmd --permanent --add-service=jellyfin
+</code></pre><div class="NOTE"><h5>Note</h5><p>This will open the following ports
+8096 TCP used by default for HTTP traffic, you can change this in the dashboard
+8920 TCP used by default for HTTPS traffic, you can change this in the dashboard
+1900 UDP used for service auto-discovery, this is not configurable
+7359 UDP used for auto-discovery, this is not configurable</p>
+</div>
+</li>
+<li><p>Reboot your box</p>
+<pre><code class="lang-sh">sudo systemctl reboot
+</code></pre></li>
+<li><p>Go to localhost:8096 or ip-address-of-jellyfin-server:8096 to finish setup in the web UI</p>
+</li>
+</ol>
 <h3 id="centos">CentOS</h3>
 <p>CentOS/RHEL 7 builds in RPM package format are available <a href="https://jellyfin.org/downloads/#centos">here</a> and an official CentOS/RHEL repository is planned for the future.</p>
 <p>The default CentOS/RHEL repositories don&#39;t carry FFmpeg, which the RPM requires. You will need to add a third-party repository which carries FFmpeg, such as <a href="https://rpmfusion.org/Configuration">RPM Fusion&#39;s Free repository</a>.</p>
