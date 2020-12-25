@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Jellyfin Web configuration | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Jellyfin Web configuration | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="web-config">
+<h1 id="jellyfin-web-configuration">Jellyfin Web configuration</h1>
+
+<h2 id="editing-the-configuration">Editing the configuration</h2>
+<p>The Jellyfin Web default interface can be configured using the <code>config.json</code> file in the webroot. Where this is and how to edit it depends on the installation method.</p>
+<h3 id="debianubuntufedoracentos-packages">Debian/Ubuntu/Fedora/CentOS Packages</h3>
+<p>The configuration can be found at <code>/usr/share/jellyfin/web/config.json</code>. This file is registered as a configuration file by the Debian packages, and any changes to the defaults will be handled by <code>apt</code> on upgrade.</p>
+<h3 id="docker">Docker</h3>
+<p>Overriding the default <code>config.json</code> can be done with an additional volume parameter to your <code>docker run</code> command, e.g.</p>
+<pre><code class="lang-sh">--volume /path/to/config/web-config.json:/jellyfin/jellyfin-web/config.json
+</code></pre><p>We would recommend obtaining the <a href="https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json">latest copy of the file</a> to pre-populate your configuration directory before starting Jellyfin for the first time; unlike most other components of this directory, it will not be created automatically on first run.</p>
+<h2 id="privacy-focused-changes">Privacy-focused changes</h2>
+<p>Our default settings for the Jellyfin Web <code>config.json</code> file include some features that privacy-focused or completely-offline users may with to disable. Each option is detailed below.</p>
+<h3 id="google-chromecast-support">Google Chromecast support</h3>
+<p>By default, Jellyfin Web includes Chromecast-from-browser support. This requires downloading files from Google servers to support this functionality.</p>
+<p>To disable it, edit <code>config.json</code> and remove the line:</p>
+<pre><code class="lang-json">&quot;plugins/chromecastPlayer/plugin&quot;
+</code></pre><p>in the <code>plugins</code> section. Be sure to remove the last comma from the line above if this is the last line in the list.</p>
+<h3 id="youtube-trailers-support">YouTube Trailers support</h3>
+<p>By default, Jellyfin Web includes functionality to auto-load movie trailers from YouTube. This functionality is disabled within Jellyfin by default, but the resources are included in the Web config to make enabling the feature easy.</p>
+<p>To disable it, edit <code>config.json</code> and remove the line:</p>
+<pre><code class="lang-json">&quot;plugins/youtubePlayer/plugin&quot;
+</code></pre><p>in the <code>plugins</code> section.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/clients/web-config.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -402,8 +402,14 @@ Any issues or feature requests related to deployment on Cloudron should be filed
 <li>Move <code>/Application/jellyfin-version</code> folder to the Trash. Replace version with the actual version number you are trying to delete.</li>
 </ol>
 <p><strong>Using FFmpeg with the Portable Version</strong></p>
-<p>The portable version doesn&#39;t come with FFmpeg by default. To install FFmpeg you can use homebrew or download the build from <a href="https://ffmpeg.zeranoe.com/builds/macos64/static/">Zeranoe</a>.</p>
-<p>If using Zeranoe&#39;s build, extract it to the <code>/Applications/</code> folder.</p>
+<p>The portable version doesn&#39;t come with FFmpeg by default, so to install FFmpeg you have three options.</p>
+<ul>
+<li>use the package manager homebrew by typing <code>brew install ffmpeg</code> into your Terminal (<a href="https://treehouse.github.io/installation-guides/mac/homebrew">here&#39;s how to install homebrew if you don&#39;t have it already</a></li>
+<li>download the most recent static build from <a href="https://evermeet.cx/ffmpeg/get/zip">this link</a> (compiled by a third party see <a href="https://evermeet.cx/ffmpeg/">this page</a> for options and information), or</li>
+<li>compile from source available from the official <a href="https://ffmpeg.org/download.html">website</a></li>
+</ul>
+<p>More detailed download options, documentation, and signatures can be found.</p>
+<p>If using static build, extract it to the <code>/Applications/</code> folder.</p>
 <p>Navigate to the Playback tab in the Dashboard and set the path to FFmpeg under FFmpeg Path.</p>
 <h2 id="linux">Linux</h2>
 <h3 id="linux-generic-amd64">Linux (generic amd64)</h3>

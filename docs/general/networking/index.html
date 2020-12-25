@@ -102,7 +102,10 @@
 <p>Allows clients to discover Jellyfin on the local network. A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a JSON response that includes the server address, ID, and name.</p>
 <h4 id="dynamic-ports">Dynamic Ports</h4>
 <p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
-<h2 id="self-signed-certificate">Self-Signed Certificate</h2>
+<h3 id="health-check-endpoint">Health Check Endpoint</h3>
+<p>Jellyfin exposes the <code>/health</code> endpoint designated for checking the status of the underlying service. Currently this will verify HTTP and database connectivity and return a <code>200 OK</code> response if successful.</p>
+<pre><code class="lang-sh">curl http://myserver:8096/health
+</code></pre><h2 id="self-signed-certificate">Self-Signed Certificate</h2>
 <p><a href="https://www.sslshopper.com/article-most-common-openssl-commands.html">See here for more information.</a></p>
 <p>Create a private key.</p>
 <pre><code class="lang-sh">openssl req -x509 -newkey rsa:4096 -keyout ./privkey.pem -out cert.pem -days 365 -nodes -subj &#39;/CN=jellyfin.lan&#39;
@@ -136,6 +139,8 @@ These examples assume you want to run Jellyfin under a sub-domain (e.g. jellyfin
 </ul>
 <p>In addition, the examples are configured for use with Let&#39;s Encrypt certificates. If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
+<h3 id="known-proxies">Known Proxies</h3>
+<p>Add the IP address of your reverse proxy to the <code>Known Proxies</code> (under Admin Dashboard -&gt; Networking).  This is a comma separated list of IP addresses of known proxies used when connecting to your Jellyfin instance and is required to make proper use of X-Forwarded-For headers. Requires a server restart after saving.</p>
 <h3 id="base-url">Base URL</h3>
 <p>Running Jellyfin with a path (e.g. <code>https://example.com/jellyfin</code>) is supported by the Android and web clients.</p>
 <div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HDHomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
