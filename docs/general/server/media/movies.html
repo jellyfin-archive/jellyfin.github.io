@@ -105,8 +105,6 @@
     ├── Best_Movie_Ever (2019) - [720P].mp4
     └── Best_Movie_Ever (2019) - [Directors Cut].mp4
 </code></pre><p>If labels are not added to the end of filenames, as shown above, each file will be treated as a unique movie and not a version of the same movie.</p>
-<div class="NOTE"><h5>Note</h5><p>To group media manually, long-click or right-click media to highlight then select additional media to merge. Use the new bar that appears to &#39;Group Versions&#39;.</p>
-</div>
 <h3 id="order-of-versions">Order of Versions</h3>
 <p>Movie versions are presented in an alphabetically sorted list. An exception applies to resolution names, which are sorted in descending order from highest to lowest resolution. A version name qualifies as a resolution name when ending with either a <code>p</code> or an <code>i</code>.</p>
 <div class="NOTE"><h5>Note</h5><p>The first movie version in the list is the one selected by default.</p>
@@ -116,7 +114,85 @@
 <li><code>1080p</code>, <code>2160p</code>, <code>360p</code>, <code>480p</code>, <code>720p</code> → <code>2160p</code>, <code>1080p</code>, <code>720p</code>, <code>480p</code>, <code>360p</code></li>
 <li><code>Extended Cut</code>, <code>Cinematic Cut</code>, <code>Director&#39;s Cut</code> → <code>Cinematic Cut</code>, <code>Director&#39;s Cut</code>, <code>Extended Cut</code></li>
 </ul>
-</article>
+<div class="NOTE"><h5>Note</h5><p>To group media manually, long-click or right-click media to highlight then select additional media to merge. Use the new bar that appears to &#39;Group Versions&#39;.</p>
+</div>
+<h2 id="movie-extras">Movie extras</h2>
+<p>Movie extras can include deleted scenes, interviews, and other various things that you would want to include alongside your movie. Jellyfin supports several different methods of adding these files.</p>
+<h3 id="extras-folders">Extras folders</h3>
+<p>One of the cleanest ways of adding extras is to place them in subfolders within your movie folder.</p>
+<p>Supported folder types are:</p>
+<ul>
+<li><code>behind the scenes</code></li>
+<li><code>deleted scenes</code></li>
+<li><code>interviews</code></li>
+<li><code>scenes</code></li>
+<li><code>samples</code></li>
+<li><code>shorts</code></li>
+<li><code>featurettes</code></li>
+<li><code>extras</code> - Generic catch all for extras of an unknown type.</li>
+</ul>
+<pre><code class="lang-txt">Movies
+└── Best_Movie_Ever (2019)
+    ├── Best_Movie_Ever (2019) - 1080P.mp4
+    ├── Best_Movie_Ever (2019) - 720P.mp4
+    ├── Best_Movie_Ever (2019) - Directors Cut.mp4
+    ├── behind the scenes
+    │   ├── Making of the Best Movie Ever.mp4
+    │   └── Finding the right score.mp4
+    ├── interviews
+    │   └── Interview with the Director.mp4
+    └── extras
+        └── Home recreation.mp4
+</code></pre><h3 id="file-name">File Name</h3>
+<p>Some types of extras support a special option if you only have a single of that type. These options are to name the filename a specific word when stored in the same folder as the movie.</p>
+<p>Supported filenames are:</p>
+<ul>
+<li><code>trailer</code></li>
+<li><code>sample</code></li>
+<li><code>theme</code> - Audio file of the theme song</li>
+</ul>
+<pre><code class="lang-txt">Movies
+└── Best_Movie_Ever (2019)
+    ├── Best_Movie_Ever (2019) - 1080P.mp4
+    ├── sample.mp4
+    ├── theme.mp3
+    └── trailer.mp4
+</code></pre><h3 id="file-suffix">File Suffix</h3>
+<p>If you would rather keep everything in a single folder, you can append special suffixes to the filename which Jellyfin picks up and uses to identify the file as an extra. Note that, with a few noted exceptions, these suffexes <strong>DO NOT</strong> contain any spaces.</p>
+<!-- markdownlint-disable MD038 -->
+<ul>
+<li><code>-trailer</code></li>
+<li><code>.trailer</code></li>
+<li><code>_trailer</code></li>
+<li><code>trailer</code> - This is a space followed by the word <code>trailer</code></li>
+<li><code>-sample</code></li>
+<li><code>.sample</code></li>
+<li><code>_sample</code></li>
+<li><code>sample</code> - This is a space followed by the word <code>sample</code></li>
+<li><code>-scene</code></li>
+<li><code>-clip</code></li>
+<li><code>-interview</code></li>
+<li><code>-behindthescenes</code></li>
+<li><code>-deleted</code></li>
+<li><code>-featurette</code></li>
+<li><code>-short</code>
+<!-- markdownlint-enable MD038 --></li>
+</ul>
+<pre><code class="lang-txt">Movies
+└── Best_Movie_Ever (2019)
+    ├── Best_Movie_Ever (2019) - 1080P.mp4
+    ├── That clip that I want everyone to see-clip.mp4
+    ├── Release Trailer-trailer.mp4
+    ├── Preview Trailer.trailer.avi
+    ├── Release Trailer 2_trailer.avi
+    ├── Teaser.sample.mp4
+    ├── Favorite Scene-scene.mp4
+    ├── The Best Ever-clip.mp4
+    ├── Making of The Best Movie Ever-behindthescenes.mp4
+    ├── Not the best scene-deleted.mp4
+    ├── Theme Song Music Video-featurette.mp4
+    └── Art of the Best Movie Ever-short.mp4
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
