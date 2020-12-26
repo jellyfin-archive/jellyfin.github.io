@@ -79,8 +79,8 @@
             <article class="content wrap" id="_content" data-uid="server-media-internet-radio">
 <h1 id="internet-radio">Internet radio</h1>
 
-<p>It is possible to add Internet radio stations (e.g. shoutcast) to Jellyfin by utilizing the Live TV M3U Tuner device type. Directly entering links into the m3u tuner is supported, but it depends on the provider.</p>
-<p>If the m3u is not supported, it is most like due to missing headers in the link. Create a new .m3u file containing the following data.</p>
+<p>It is possible to add Internet radio stations (e.g. shoutcast) to Jellyfin by utilizing the Live TV M3U Tuner device type. Directly entering links into the M3U tuner is supported, but it depends on the provider.</p>
+<p>If the M3U is not supported, it is most like due to missing headers in the link. Create a new M3U file containing the following data.</p>
 <pre><code class="lang-#EXTM3U">#EXTINF:0,Radio Freccia
 https://streamingv2.shoutcast.com/radiofreccia
 </code></pre><p>Note that the line that starts with <code>#EXTINF:0,&lt;title&gt;</code> is needed for each radio URL to give it a &#39;channel&#39; entry under Live TV \ Channels. Failing to add this line will cause the station to not show up under Live TV \ Channels.</p>

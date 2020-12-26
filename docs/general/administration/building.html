@@ -84,22 +84,22 @@
 <p>Jellyfin supports several methods of building for different platforms and instructions for all supported platforms are below.</p>
 <p>All package builds begin with these two steps:</p>
 <ol>
-<li><p>Clone the repository:</p>
+<li><p>Clone the repository.</p>
 <pre><code class="lang-sh">git clone https://github.com/jellyfin/jellyfin.git
 cd jellyfin
 </code></pre></li>
-<li><p>Initialize the submodules:</p>
+<li><p>Initialize the submodules.</p>
 <pre><code class="lang-sh">git submodule update --init
 </code></pre></li>
 </ol>
 <h2 id="container-image">Container image</h2>
 <ol>
-<li><p>Build the container image using Docker or Podman:</p>
+<li><p>Build the container image using Docker or Podman.</p>
 <pre><code class="lang-sh">docker build -t $USERNAME/jellyfin .
 </code></pre><p> or</p>
 <pre><code class="lang-sh">podman build -t $USERNAME/jellyfin .
 </code></pre></li>
-<li><p>Run Jellyfin in a new container using Docker or Podman from the built container image:</p>
+<li><p>Run Jellyfin in a new container using Docker or Podman from the built container image.</p>
 <pre><code class="lang-sh">docker run -d -p 8096:8096 $USERNAME/jellyfin
 </code></pre><p> or</p>
 <pre><code class="lang-sh">podman run -d -p 8096:8096 $USERNAME/jellyfin
@@ -107,12 +107,12 @@ cd jellyfin
 </ol>
 <h2 id="linux-or-macos">Linux or MacOS</h2>
 <ol>
-<li><p>Use the included <code>build</code> script to perform builds:</p>
+<li><p>Use the included <code>build</code> script to perform builds.</p>
 <pre><code class="lang-sh">./build --help
 ./build --list-platforms
 ./build &lt;platform&gt; all
 </code></pre></li>
-<li><p>The resulting archives can be found at <code>../bin/&lt;platform&gt;</code></p>
+<li><p>The resulting archives can be found at <code>../bin/&lt;platform&gt;</code>.</p>
 </li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>This will very likely be split out into a separate repository at some point in the future.</p>
@@ -121,13 +121,13 @@ cd jellyfin
 <ol>
 <li><p>Install the dotnet core SDK 3.1 from <a href="https://dotnet.microsoft.com/download/dotnet-core/3.1">Microsoft&#39;s Website</a> and <a href="https://gitforwindows.org/">install Git for Windows</a>. You must be on Powershell 3 or higher.</p>
 </li>
-<li><p>From Powershell set the execution policy to unrestricted:</p>
+<li><p>From Powershell set the execution policy to unrestricted.</p>
 <pre><code class="lang-powershell">set-executionpolicy unrestricted
 </code></pre></li>
-<li><p>If you are building a version of Jellyfin newer than 10.6.4, you will need to download the build script from a seperate repository:</p>
+<li><p>If you are building a version of Jellyfin newer than 10.6.4, you will need to download the build script from a separate repository.</p>
 <pre><code class="lang-powershell">git clone https://github.com/jellyfin/jellyfin-server-windows.git windows
 </code></pre></li>
-<li><p>Run the Jellyfin build script:</p>
+<li><p>Run the Jellyfin build script.</p>
 <pre><code class="lang-powershell">windows\build-jellyfin.ps1 -verbose
 </code></pre><ul>
 <li><p>The <code>-WindowsVersion</code> and <code>-Architecture</code> flags can optimize the build for your current environment; the default is generic Windows x64.</p>
@@ -140,14 +140,14 @@ cd jellyfin
 </li>
 </ul>
 </li>
-<li><p>(Optional) Use <a href="https://nssm.cc/">NSSM</a> to configure Jellyfin to run as a service.</p>
+<li><p>(Optional) Use <a href="https://nssm.cc">NSSM</a> to configure Jellyfin to run as a service.</p>
 </li>
-<li><p>Jellyfin is now available in the default directory (or the directory you chose). Assuming you kept the default directory:</p>
+<li><p>Jellyfin is now available in the default directory, or whichever directory you chose.</p>
 <ul>
-<li><p>To start it from a Powershell window, run:</p>
+<li><p>Start it from PowerShell.</p>
 <pre><code class="lang-powershell">&amp;&quot;$env:APPDATA\Jellyfin-Server\jellyfin.exe&quot;
 </code></pre></li>
-<li><p>To start it from CMD, run:</p>
+<li><p>Start it from CMD.</p>
 <pre><code class="lang-cmd">%APPDATA%\Jellyfin-Server\jellyfin.exe
 </code></pre></li>
 </ul>

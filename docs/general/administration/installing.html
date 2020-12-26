@@ -133,14 +133,14 @@
 </div>
 <h3 id="docker">Docker</h3>
 <p><a href="https://www.docker.com/">Docker</a> allows you to run containers on Linux, Windows and MacOS.</p>
-<p>The basic steps to create and run a Jellyfin container using Docker are as follows:</p>
+<p>The basic steps to create and run a Jellyfin container using Docker are as follows.</p>
 <ol>
-<li><p>Follow the <a href="https://docs.docker.com/engine/install/">offical installation guide to install Docker</a>.</p>
+<li><p>Follow the <a href="https://docs.docker.com/engine/install">offical installation guide to install Docker</a>.</p>
 </li>
-<li><p>Download the latest container image:</p>
+<li><p>Download the latest container image.</p>
 <pre><code class="lang-sh">docker pull jellyfin/jellyfin
 </code></pre></li>
-<li><p>Create persistent storage for configuration and cache data:</p>
+<li><p>Create persistent storage for configuration and cache data.</p>
 <p>Either create two persistent volumes:</p>
 <pre><code class="lang-sh">docker volume create jellyfin-config
 docker volume create jellyfin-cache
@@ -148,7 +148,7 @@ docker volume create jellyfin-cache
 <pre><code class="lang-sh">mkdir /path/to/config
 mkdir /path/to/cache
 </code></pre></li>
-<li><p>Create and run a container in one of the following ways:</p>
+<li><p>Create and run a container in one of the following ways.</p>
 </li>
 </ol>
 <div class="NOTE"><h5>Note</h5><p>The default network mode for Docker is bridge mode. Bridge mode will be used if host mode is omitted. Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
@@ -245,7 +245,7 @@ services:
 <h3 id="kubernetes">Kubernetes</h3>
 <p>A community project to deploy Jellyfin on Kubernetes-based platforms exists <a href="https://github.com/home-cluster/jellyfin-openshift">at their repository</a>. Any issues or feature requests related to deployment on Kubernetes-based platforms should be filed there.</p>
 <h3 id="podman">Podman</h3>
-<p><a href="https://podman.io/">Podman</a> allows you to run containers as non-root. It&#39;s also the offically supported container solution on RHEL and CentOS.</p>
+<p><a href="https://podman.io">Podman</a> allows you to run containers as non-root. It&#39;s also the offically supported container solution on RHEL and CentOS.</p>
 <p>Steps to run Jellyfin using Podman are almost identical to Docker steps:</p>
 <ol>
 <li><p>Install Podman:</p>

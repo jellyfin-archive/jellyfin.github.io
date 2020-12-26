@@ -225,10 +225,10 @@ apt-get install -t $distribution-backports nvidia-driver libnvcuvid1 libnvidia-e
 </code></pre><p>Validate that your driver and docker are correctly set up with this driver test.</p>
 <pre><code class="lang-sh">nvidia-smi
 docker run --gpus 0 nvidia/cuda:9.0-base nvidia-smi
-</code></pre><p>Validate access to needed ressources from host and docker.</p>
+</code></pre><p>Validate access to needed resources from host and docker.</p>
 <pre><code class="lang-sh">ldconfig -p | grep cuvid
 ldconfig -p | grep libnvidia-encode.so.1
-</code></pre><p>Start your container adding those environement parameters.</p>
+</code></pre><p>Start your container adding those environment parameters.</p>
 <pre><code class="lang-sh">-e NVIDIA_DRIVER_CAPABILITIES=all \
 -e NVIDIA_VISIBLE_DEVICES=all \
 --runtime=nvidia \
@@ -260,8 +260,8 @@ ldconfig -p | grep libnvidia-encode.so.1
 <p>Check the transcode logs to make sure everything is working properly.</p>
 <pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
-</code></pre><h3 id="configuring-opencl-accelerated-tone-mapping">Configuring OpenCL accelerated Tone mapping</h3>
-<p>Currently, Tone mapping with Nvidia NVENC, AMD AMF and Intel VAAPI is through OpenCL image support.</p>
+</code></pre><h3 id="configuring-opencl-accelerated-tone-mapping">Configuring OpenCL Accelerated Tone Mapping</h3>
+<p>Currently, tone mapping with Nvidia NVENC, AMD AMF and Intel VAAPI is through OpenCL image support.</p>
 <table>
 <thead>
 <tr>
@@ -416,10 +416,10 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <ol>
 <li><p>Install <code>amdgpu-pro</code> closed source graphics driver by following the <a href="https://amdgpu-install.readthedocs.io/en/latest/">installation instructions</a>.</p>
 </li>
-<li><p>Then install <code>amf-amdgpu-pro</code>:</p>
+<li><p>Then install <code>amf-amdgpu-pro</code>.</p>
 <pre><code class="lang-bash">sudo apt install amf-amdgpu-pro
 </code></pre></li>
-<li><p>Make sure your <code>jellyfin-ffmpeg</code> or <code>ffmpeg</code> contains <code>h264_amf</code> encoder:</p>
+<li><p>Make sure your <code>jellyfin-ffmpeg</code> or <code>ffmpeg</code> contains <code>h264_amf</code> encoder.</p>
 <pre><code class="lang-bash">$ cd /usr/lib/jellyfin-ffmpeg/
 $ ./ffmpeg -encoders | grep h264_amf
 V..... h264_amf             AMD AMF H.264 Encoder (codec h264)
@@ -435,10 +435,10 @@ V..... h264_amf             AMD AMF H.264 Encoder (codec h264)
 <h3 id="configuring-amd-amf-encoding-on-arch-linux">Configuring AMD AMF encoding on Arch Linux</h3>
 <p>AMD does not provide official <code>amdgpu-pro</code> driver support for Arch Linux, but fortunately, a third-party packaged <code>amdgpu-pro-installer</code> is provided in the archlinux user repository.</p>
 <ol>
-<li><p>Clone <a href="https://aur.archlinux.org/pkgbase/amdgpu-pro-installer/">this repository</a> using <code>git</code>:</p>
+<li><p>Clone <a href="https://aur.archlinux.org/pkgbase/amdgpu-pro-installer/">this repository</a> using <code>git</code>.</p>
 <pre><code class="lang-bash">git clone https://aur.archlinux.org/amdgpu-pro-installer.git
 </code></pre></li>
-<li><p>Enter that folder and make the installation package and install it:</p>
+<li><p>Enter that folder and make the installation package and install it.</p>
 <pre><code class="lang-bash">cd amdgpu-pro-installer
 makepkg -si
 </code></pre></li>
