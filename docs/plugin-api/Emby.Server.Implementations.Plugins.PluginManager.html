@@ -1,0 +1,653 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PluginManager
+   | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PluginManager
+   | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../images/favicon.png">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="../general/contributing/toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Emby.Server.Implementations.Plugins.PluginManager">
+  
+  
+  <h1 id="Emby_Server_Implementations_Plugins_PluginManager" data-uid="Emby.Server.Implementations.Plugins.PluginManager" class="text-break">Class PluginManager
+  </h1>
+  <div class="markdown level0 summary"><p>Defines the <a class="xref" href="Emby.Server.Implementations.Plugins.PluginManager.html">PluginManager</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><span class="xref">PluginManager</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="MediaBrowser.Common.Plugins.IPluginManager.html">IPluginManager</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Emby.Server.Implementations.Plugins.html">Emby.Server.Implementations.Plugins</a></h6>
+  <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
+  <h5 id="Emby_Server_Implementations_Plugins_PluginManager_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PluginManager : IPluginManager</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Plugins_PluginManager__MediaBrowser_Common_IApplicationHost_MediaBrowser_Model_Configuration_ServerConfiguration_System_String_System_Version_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Plugins.PluginManager%7D%2CMediaBrowser.Common.IApplicationHost%2CMediaBrowser.Model.Configuration.ServerConfiguration%2CSystem.String%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L44">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager__ctor_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.#ctor*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Plugins_PluginManager__MediaBrowser_Common_IApplicationHost_MediaBrowser_Model_Configuration_ServerConfiguration_System_String_System_Version_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Plugins.PluginManager},MediaBrowser.Common.IApplicationHost,MediaBrowser.Model.Configuration.ServerConfiguration,System.String,System.Version)">PluginManager(ILogger&lt;PluginManager&gt;, IApplicationHost, ServerConfiguration, String, Version)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Plugins.PluginManager.html">PluginManager</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginManager(ILogger&lt;PluginManager&gt; logger, IApplicationHost appHost, ServerConfiguration config, string pluginsPath, Version appVersion)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger-1">ILogger</a>&lt;<a class="xref" href="Emby.Server.Implementations.Plugins.PluginManager.html">PluginManager</a>&gt;</td>
+        <td><span class="parametername">logger</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a></td>
+        <td><span class="parametername">appHost</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Configuration.ServerConfiguration.html">ServerConfiguration</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Model.Configuration.ServerConfiguration.html">ServerConfiguration</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">pluginsPath</span></td>
+        <td><p>The plugin path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">appVersion</span></td>
+        <td><p>The application version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_Plugins.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.Plugins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L78">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_Plugins_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.Plugins*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_Plugins" data-uid="Emby.Server.Implementations.Plugins.PluginManager.Plugins">Plugins</h4>
+  <div class="markdown level1 summary"><p>Gets the Plugins.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IList&lt;LocalPlugin&gt; Plugins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1">IList</a>&lt;<a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_CreatePlugins.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.CreatePlugins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L135">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_CreatePlugins_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.CreatePlugins*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_CreatePlugins" data-uid="Emby.Server.Implementations.Plugins.PluginManager.CreatePlugins">CreatePlugins()</h4>
+  <div class="markdown level1 summary"><p>Creates all the plugin instances.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CreatePlugins()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_DisablePlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.DisablePlugin(MediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L286">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_DisablePlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.DisablePlugin*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_DisablePlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.DisablePlugin(MediaBrowser.Common.Plugins.LocalPlugin)">DisablePlugin(LocalPlugin)</h4>
+  <div class="markdown level1 summary"><p>Disable the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DisablePlugin(LocalPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a> of the plug to disable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_EnablePlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.EnablePlugin(MediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L268">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_EnablePlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.EnablePlugin*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_EnablePlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.EnablePlugin(MediaBrowser.Common.Plugins.LocalPlugin)">EnablePlugin(LocalPlugin)</h4>
+  <div class="markdown level1 summary"><p>Enables the plugin, disabling all other versions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void EnablePlugin(LocalPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a> of the plug to disable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_FailPlugin_System_Reflection_Assembly_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.FailPlugin(System.Reflection.Assembly)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L305">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_FailPlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.FailPlugin*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_FailPlugin_System_Reflection_Assembly_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.FailPlugin(System.Reflection.Assembly)">FailPlugin(Assembly)</h4>
+  <div class="markdown level1 summary"><p>Disable the plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void FailPlugin(Assembly assembly)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a></td>
+        <td><span class="parametername">assembly</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a> of the plug to disable.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_GetPlugin_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.GetPlugin(System.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L240">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_GetPlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.GetPlugin*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_GetPlugin_System_Guid_System_Version_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.GetPlugin(System.Guid,System.Version)">GetPlugin(Guid, Version)</h4>
+  <div class="markdown level1 summary"><p>Attempts to find the plugin with and id of <code data-dev-comment-type="paramref" class="paramref">id</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public LocalPlugin GetPlugin(Guid id, Version version = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a> of plugin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Optional <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a> of the plugin to locate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a> if located, or null if not.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_ImportPluginFrom_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.ImportPluginFrom(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L186">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_ImportPluginFrom_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.ImportPluginFrom*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_ImportPluginFrom_System_String_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.ImportPluginFrom(System.String)">ImportPluginFrom(String)</h4>
+  <div class="markdown level1 summary"><p>Imports a plugin manifest from <code data-dev-comment-type="paramref" class="paramref">folder</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportPluginFrom(string folder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">folder</span></td>
+        <td><p>Folder of the plugin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_LoadAssemblies.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.LoadAssemblies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L84">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_LoadAssemblies_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.LoadAssemblies*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_LoadAssemblies" data-uid="Emby.Server.Implementations.Plugins.PluginManager.LoadAssemblies">LoadAssemblies()</h4>
+  <div class="markdown level1 summary"><p>Returns all the assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IEnumerable&lt;Assembly&gt; LoadAssemblies()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.reflection.assembly">Assembly</a>&gt;</td>
+        <td><p>An IEnumerable{Assembly}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L147">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_RegisterServices_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.RegisterServices*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_RegisterServices_Microsoft_Extensions_DependencyInjection_IServiceCollection_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">RegisterServices(IServiceCollection)</h4>
+  <div class="markdown level1 summary"><p>Registers the plugin&apos;s services with the DI.
+Note: DI is not yet instantiated yet.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RegisterServices(IServiceCollection serviceCollection)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.iservicecollection">IServiceCollection</a></td>
+        <td><span class="parametername">serviceCollection</span></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.dependencyinjection.servicecollection">ServiceCollection</a> instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_RemovePlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.RemovePlugin(MediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L210">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_RemovePlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.RemovePlugin*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_RemovePlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.RemovePlugin(MediaBrowser.Common.Plugins.LocalPlugin)">RemovePlugin(LocalPlugin)</h4>
+  <div class="markdown level1 summary"><p>Removes the plugin reference &apos;<code data-dev-comment-type="paramref" class="paramref">plugin</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RemovePlugin(LocalPlugin plugin)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
+        <td><span class="parametername">plugin</span></td>
+        <td><p>The plugin.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>Outcome of the operation.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager_SaveManifest_MediaBrowser_Common_Plugins_PluginManifest_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager.SaveManifest(MediaBrowser.Common.Plugins.PluginManifest%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L329">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_Plugins_PluginManager_SaveManifest_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.SaveManifest*"></a>
+  <h4 id="Emby_Server_Implementations_Plugins_PluginManager_SaveManifest_MediaBrowser_Common_Plugins_PluginManifest_System_String_" data-uid="Emby.Server.Implementations.Plugins.PluginManager.SaveManifest(MediaBrowser.Common.Plugins.PluginManifest,System.String)">SaveManifest(PluginManifest, String)</h4>
+  <div class="markdown level1 summary"><p>Saves the manifest back to disk.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SaveManifest(PluginManifest manifest, string path)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a></td>
+        <td><span class="parametername">manifest</span></td>
+        <td><p>The <a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a> to save.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">path</span></td>
+        <td><p>The path where to save the manifest.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p>True if successful.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="MediaBrowser.Common.Plugins.IPluginManager.html">IPluginManager</a>
+  </div>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Plugins_PluginManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Plugins.PluginManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Plugins/PluginManager.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

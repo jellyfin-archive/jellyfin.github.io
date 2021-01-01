@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_Common_Plugins_IHasPluginConfiguration" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration" class="text-break">Interface IHasPluginConfiguration
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Defines the <a class="xref" href="MediaBrowser.Common.Plugins.IHasPluginConfiguration.html">IHasPluginConfiguration</a>.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="MediaBrowser.Common.Plugins.html">MediaBrowser.Common.Plugins</a></h6>
   <h6><strong>Assembly</strong>: MediaBrowser.Common.dll</h6>
@@ -98,7 +99,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_IHasPluginConfiguration_Configuration.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.IHasPluginConfiguration.Configuration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IPlugin.cs/#L79">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IHasPluginConfiguration.cs/#L19">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_Configuration_" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.Configuration*"></a>
   <h4 id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_Configuration" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.Configuration">Configuration</h4>
@@ -120,8 +121,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Plugins.BasePluginConfiguration.html">BasePluginConfiguration</a></td>
-        <td><p>The configuration.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -130,7 +130,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_IHasPluginConfiguration_ConfigurationType.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.IHasPluginConfiguration.ConfigurationType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IPlugin.cs/#L73">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IHasPluginConfiguration.cs/#L14">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_ConfigurationType_" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.ConfigurationType*"></a>
   <h4 id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_ConfigurationType" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.ConfigurationType">ConfigurationType</h4>
@@ -152,8 +152,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.type">Type</a></td>
-        <td><p>The type of the configuration.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -161,47 +160,14 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_IHasPluginConfiguration_SetStartupInfo_System_Action_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.IHasPluginConfiguration.SetStartupInfo(System.Action%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IPlugin.cs/#L89">View Source</a>
-  </span>
-  <a id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_SetStartupInfo_" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.SetStartupInfo*"></a>
-  <h4 id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_SetStartupInfo_System_Action_System_String__" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.SetStartupInfo(System.Action{System.String})">SetStartupInfo(Action&lt;String&gt;)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void SetStartupInfo(Action&lt;string&gt; directoryCreateFn)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action-1">Action</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><span class="parametername">directoryCreateFn</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_IHasPluginConfiguration_UpdateConfiguration_MediaBrowser_Model_Plugins_BasePluginConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.IHasPluginConfiguration.UpdateConfiguration(MediaBrowser.Model.Plugins.BasePluginConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IPlugin.cs/#L87">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IHasPluginConfiguration.cs/#L25">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_UpdateConfiguration_" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.UpdateConfiguration*"></a>
   <h4 id="MediaBrowser_Common_Plugins_IHasPluginConfiguration_UpdateConfiguration_MediaBrowser_Model_Plugins_BasePluginConfiguration_" data-uid="MediaBrowser.Common.Plugins.IHasPluginConfiguration.UpdateConfiguration(MediaBrowser.Model.Plugins.BasePluginConfiguration)">UpdateConfiguration(BasePluginConfiguration)</h4>
-  <div class="markdown level1 summary"><p>Completely overwrites the current configuration with a new copy
-Returns true or false indicating success or failure.</p>
+  <div class="markdown level1 summary"><p>Completely overwrites the current configuration with a new copy.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -226,22 +192,6 @@ Returns true or false indicating success or failure.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p><code>configuration</code> is <code>null</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
@@ -257,7 +207,7 @@ Returns true or false indicating success or failure.</p>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_IHasPluginConfiguration.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.IHasPluginConfiguration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IPlugin.cs/#L67" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/IHasPluginConfiguration.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

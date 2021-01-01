@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_Model_Updates_VersionInfo" data-uid="MediaBrowser.Model.Updates.VersionInfo" class="text-break">Class VersionInfo
   </h1>
-  <div class="markdown level0 summary"><p>Class PackageVersionInfo.</p>
+  <div class="markdown level0 summary"><p>Defines the <a class="xref" href="MediaBrowser.Model.Updates.VersionInfo.html">VersionInfo</a> class.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -125,19 +125,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_changelog.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.changelog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_Changelog.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.Changelog%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L36">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_changelog_" data-uid="MediaBrowser.Model.Updates.VersionInfo.changelog*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_changelog" data-uid="MediaBrowser.Model.Updates.VersionInfo.changelog">changelog</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_Changelog_" data-uid="MediaBrowser.Model.Updates.VersionInfo.Changelog*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_Changelog" data-uid="MediaBrowser.Model.Updates.VersionInfo.Changelog">Changelog</h4>
   <div class="markdown level1 summary"><p>Gets or sets the changelog for this version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string changelog { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;changelog&quot;)]
+public string Changelog { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,19 +158,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_checksum.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.checksum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_Checksum.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.Checksum%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L57">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_checksum_" data-uid="MediaBrowser.Model.Updates.VersionInfo.checksum*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_checksum" data-uid="MediaBrowser.Model.Updates.VersionInfo.checksum">checksum</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_Checksum_" data-uid="MediaBrowser.Model.Updates.VersionInfo.Checksum*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_Checksum" data-uid="MediaBrowser.Model.Updates.VersionInfo.Checksum">Checksum</h4>
   <div class="markdown level1 summary"><p>Gets or sets a checksum for the binary.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string checksum { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;checksum&quot;)]
+public string Checksum { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,19 +191,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_repositoryName.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.repositoryName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_RepositoryName.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.RepositoryName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L69">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L70">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_repositoryName_" data-uid="MediaBrowser.Model.Updates.VersionInfo.repositoryName*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_repositoryName" data-uid="MediaBrowser.Model.Updates.VersionInfo.repositoryName">repositoryName</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_RepositoryName_" data-uid="MediaBrowser.Model.Updates.VersionInfo.RepositoryName*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_RepositoryName" data-uid="MediaBrowser.Model.Updates.VersionInfo.RepositoryName">RepositoryName</h4>
   <div class="markdown level1 summary"><p>Gets or sets the repository name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string repositoryName { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;repositoryName&quot;)]
+public string RepositoryName { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -220,19 +223,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_repositoryUrl.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.repositoryUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_RepositoryUrl.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.RepositoryUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L76">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_repositoryUrl_" data-uid="MediaBrowser.Model.Updates.VersionInfo.repositoryUrl*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_repositoryUrl" data-uid="MediaBrowser.Model.Updates.VersionInfo.repositoryUrl">repositoryUrl</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_RepositoryUrl_" data-uid="MediaBrowser.Model.Updates.VersionInfo.RepositoryUrl*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_RepositoryUrl" data-uid="MediaBrowser.Model.Updates.VersionInfo.RepositoryUrl">RepositoryUrl</h4>
   <div class="markdown level1 summary"><p>Gets or sets the repository url.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string repositoryUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;repositoryUrl&quot;)]
+public string RepositoryUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -251,19 +255,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_sourceUrl.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.sourceUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_SourceUrl.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.SourceUrl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L50">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_sourceUrl_" data-uid="MediaBrowser.Model.Updates.VersionInfo.sourceUrl*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_sourceUrl" data-uid="MediaBrowser.Model.Updates.VersionInfo.sourceUrl">sourceUrl</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_SourceUrl_" data-uid="MediaBrowser.Model.Updates.VersionInfo.SourceUrl*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_SourceUrl" data-uid="MediaBrowser.Model.Updates.VersionInfo.SourceUrl">SourceUrl</h4>
   <div class="markdown level1 summary"><p>Gets or sets the source URL.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string sourceUrl { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;sourceUrl&quot;)]
+public string SourceUrl { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -283,19 +288,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_targetAbi.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.targetAbi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_TargetAbi.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.TargetAbi%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L43">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_targetAbi_" data-uid="MediaBrowser.Model.Updates.VersionInfo.targetAbi*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_targetAbi" data-uid="MediaBrowser.Model.Updates.VersionInfo.targetAbi">targetAbi</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_TargetAbi_" data-uid="MediaBrowser.Model.Updates.VersionInfo.TargetAbi*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_TargetAbi" data-uid="MediaBrowser.Model.Updates.VersionInfo.TargetAbi">TargetAbi</h4>
   <div class="markdown level1 summary"><p>Gets or sets the ABI that this version was built against.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string targetAbi { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;targetAbi&quot;)]
+public string TargetAbi { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -315,19 +321,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_timestamp.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_Timestamp.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.Timestamp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L64">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_timestamp_" data-uid="MediaBrowser.Model.Updates.VersionInfo.timestamp*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_timestamp" data-uid="MediaBrowser.Model.Updates.VersionInfo.timestamp">timestamp</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_Timestamp_" data-uid="MediaBrowser.Model.Updates.VersionInfo.Timestamp*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_Timestamp" data-uid="MediaBrowser.Model.Updates.VersionInfo.Timestamp">Timestamp</h4>
   <div class="markdown level1 summary"><p>Gets or sets a timestamp of when the binary was built.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string timestamp { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;timestamp&quot;)]
+public string Timestamp { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -347,19 +354,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_version.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_Version.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L19">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Updates_VersionInfo_version_" data-uid="MediaBrowser.Model.Updates.VersionInfo.version*"></a>
-  <h4 id="MediaBrowser_Model_Updates_VersionInfo_version" data-uid="MediaBrowser.Model.Updates.VersionInfo.version">version</h4>
+  <a id="MediaBrowser_Model_Updates_VersionInfo_Version_" data-uid="MediaBrowser.Model.Updates.VersionInfo.Version*"></a>
+  <h4 id="MediaBrowser_Model_Updates_VersionInfo_Version" data-uid="MediaBrowser.Model.Updates.VersionInfo.Version">Version</h4>
   <div class="markdown level1 summary"><p>Gets or sets the version.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string version { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonPropertyName(&quot;version&quot;)]
+public string Version { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -382,7 +390,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo_VersionNumber.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo.VersionNumber%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L30">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Updates_VersionInfo_VersionNumber_" data-uid="MediaBrowser.Model.Updates.VersionInfo.VersionNumber*"></a>
   <h4 id="MediaBrowser_Model_Updates_VersionInfo_VersionNumber" data-uid="MediaBrowser.Model.Updates.VersionInfo.VersionNumber">VersionNumber</h4>
@@ -423,7 +431,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Updates_VersionInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Updates.VersionInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Updates/VersionInfo.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

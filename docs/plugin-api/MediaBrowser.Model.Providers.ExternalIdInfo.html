@@ -121,6 +121,60 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ExternalIdInfo</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Providers_ExternalIdInfo__ctor_System_String_System_String_System_Nullable_MediaBrowser_Model_Providers_ExternalIdMediaType__System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Providers.ExternalIdInfo.%23ctor(System.String%2CSystem.String%2CSystem.Nullable%7BMediaBrowser.Model.Providers.ExternalIdMediaType%7D%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L15">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Providers_ExternalIdInfo__ctor_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_Providers_ExternalIdInfo__ctor_System_String_System_String_System_Nullable_MediaBrowser_Model_Providers_ExternalIdMediaType__System_String_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.#ctor(System.String,System.String,System.Nullable{MediaBrowser.Model.Providers.ExternalIdMediaType},System.String)">ExternalIdInfo(String, String, Nullable&lt;ExternalIdMediaType&gt;, String)</h4>
+  <div class="markdown level1 summary"><p>Represents the external id information for serialization to the client.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExternalIdInfo(string name, string key, ExternalIdMediaType? type, string urlFormatString)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>Name of the external id provider (IE: IMDB, MusicBrainz, etc).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">key</span></td>
+        <td><p>Key for this id. This key should be unique across all providers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Providers.ExternalIdMediaType.html">ExternalIdMediaType</a>&gt;</td>
+        <td><span class="parametername">type</span></td>
+        <td><p>Specific media type for this id</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">urlFormatString</span></td>
+        <td><p>URL format string.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -128,7 +182,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Providers_ExternalIdInfo_Key.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Providers.ExternalIdInfo.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Providers_ExternalIdInfo_Key_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Key*"></a>
   <h4 id="MediaBrowser_Model_Providers_ExternalIdInfo_Key" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Key">Key</h4>
@@ -159,7 +213,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Providers_ExternalIdInfo_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Providers.ExternalIdInfo.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L12">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L27">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Providers_ExternalIdInfo_Name_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Name*"></a>
   <h4 id="MediaBrowser_Model_Providers_ExternalIdInfo_Name" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Name">Name</h4>
@@ -190,7 +244,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Providers_ExternalIdInfo_Type.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Providers.ExternalIdInfo.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L44">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Providers_ExternalIdInfo_Type_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Type*"></a>
   <h4 id="MediaBrowser_Model_Providers_ExternalIdInfo_Type" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.Type">Type</h4>
@@ -227,7 +281,7 @@ default id for the external provider so there is no need to specify a type.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Providers_ExternalIdInfo_UrlFormatString.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Providers.ExternalIdInfo.UrlFormatString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Providers/ExternalIdInfo.cs/#L49">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Providers_ExternalIdInfo_UrlFormatString_" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.UrlFormatString*"></a>
   <h4 id="MediaBrowser_Model_Providers_ExternalIdInfo_UrlFormatString" data-uid="MediaBrowser.Model.Providers.ExternalIdInfo.UrlFormatString">UrlFormatString</h4>

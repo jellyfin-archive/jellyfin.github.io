@@ -123,19 +123,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin__ctor_System_Guid_System_String_System_Version_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.%23ctor(System.Guid%2CSystem.String%2CSystem.Version%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin__ctor_System_String_System_Boolean_MediaBrowser_Common_Plugins_PluginManifest_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.%23ctor(System.String%2CSystem.Boolean%2CMediaBrowser.Common.Plugins.PluginManifest)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L19">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L22">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin__ctor_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.#ctor*"></a>
-  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin__ctor_System_Guid_System_String_System_Version_System_String_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.#ctor(System.Guid,System.String,System.Version,System.String)">LocalPlugin(Guid, String, Version, String)</h4>
+  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin__ctor_System_String_System_Boolean_MediaBrowser_Common_Plugins_PluginManifest_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.#ctor(System.String,System.Boolean,MediaBrowser.Common.Plugins.PluginManifest)">LocalPlugin(String, Boolean, PluginManifest)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public LocalPlugin(Guid id, string name, Version version, string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public LocalPlugin(string path, bool isSupported, PluginManifest manifest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -148,27 +148,21 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">id</span></td>
-        <td><p>The plugin id.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The plugin name.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
-        <td><span class="parametername">version</span></td>
-        <td><p>The plugin version.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td><p>The plugin path.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">isSupported</span></td>
+        <td><p><strong>True</strong> if Jellyfin supports this version of the plugin.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a></td>
+        <td><span class="parametername">manifest</span></td>
+        <td><p>The manifest record for this plugin, or null if one does not exist.</p>
 </td>
       </tr>
     </tbody>
@@ -180,7 +174,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_DllFiles.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.DllFiles%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L64">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_DllFiles_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.DllFiles*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_DllFiles" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.DllFiles">DllFiles</h4>
@@ -211,7 +205,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Id.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L33">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Id_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Id*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Id" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Id">Id</h4>
@@ -239,10 +233,103 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Instance.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L69">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Plugins_LocalPlugin_Instance_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Instance*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Instance" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the instance of this plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IPlugin Instance { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_IsEnabledAndSupported.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.IsEnabledAndSupported%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L74">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Plugins_LocalPlugin_IsEnabledAndSupported_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.IsEnabledAndSupported*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_IsEnabledAndSupported" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.IsEnabledAndSupported">IsEnabledAndSupported</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether Jellyfin supports this version of the plugin, and it&apos;s enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsEnabledAndSupported { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Manifest.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Manifest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L79">View Source</a>
+  </span>
+  <a id="MediaBrowser_Common_Plugins_LocalPlugin_Manifest_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Manifest*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Manifest" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Manifest">Manifest</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether the plugin has a manifest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PluginManifest Manifest { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L38">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Name_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Name*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Name" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Name">Name</h4>
@@ -273,7 +360,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Path.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Path%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L59">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Path_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Path*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Path" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Path">Path</h4>
@@ -304,7 +391,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Version.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L43">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Version_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Version*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Version" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Version">Version</h4>
@@ -337,7 +424,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Compare_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Compare(MediaBrowser.Common.Plugins.LocalPlugin%2CMediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L81">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L87">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Compare_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Compare*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Compare_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Compare(MediaBrowser.Common.Plugins.LocalPlugin,MediaBrowser.Common.Plugins.LocalPlugin)">Compare(LocalPlugin, LocalPlugin)</h4>
@@ -393,7 +480,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Equals_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Equals(MediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L107">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L130">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Equals_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Equals*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Equals_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Equals(MediaBrowser.Common.Plugins.LocalPlugin)">Equals(LocalPlugin)</h4>
@@ -440,7 +527,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_Equals_System_Object_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L95">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L118">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_Equals_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Equals*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_Equals_System_Object_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.Equals(System.Object)">Equals(Object)</h4>
@@ -489,7 +576,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_GetHashCode.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L101">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L124">View Source</a>
   </span>
   <a id="MediaBrowser_Common_Plugins_LocalPlugin_GetHashCode_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.GetHashCode*"></a>
   <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_GetHashCode" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.GetHashCode">GetHashCode()</h4>
@@ -516,48 +603,22 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a></div>
-  <h3 id="operators">Operators
-  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_op_Equality_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.op_Equality(MediaBrowser.Common.Plugins.LocalPlugin%2CMediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_GetPluginInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.GetPluginInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L109">View Source</a>
   </span>
-  <a id="MediaBrowser_Common_Plugins_LocalPlugin_op_Equality_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.op_Equality*"></a>
-  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_op_Equality_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.op_Equality(MediaBrowser.Common.Plugins.LocalPlugin,MediaBrowser.Common.Plugins.LocalPlugin)">Equality(LocalPlugin, LocalPlugin)</h4>
-  <div class="markdown level1 summary"><p>== operator.</p>
+  <a id="MediaBrowser_Common_Plugins_LocalPlugin_GetPluginInfo_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.GetPluginInfo*"></a>
+  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_GetPluginInfo" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.GetPluginInfo">GetPluginInfo()</h4>
+  <div class="markdown level1 summary"><p>Returns the plugin information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator ==(LocalPlugin left, LocalPlugin right)</code></pre>
+    <pre><code class="lang-csharp hljs">public PluginInfo GetPluginInfo()</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
-        <td><span class="parametername">left</span></td>
-        <td><p>Left item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
-        <td><span class="parametername">right</span></td>
-        <td><p>Right item.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -568,64 +629,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Comparison result.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin_op_Inequality_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin.op_Inequality(MediaBrowser.Common.Plugins.LocalPlugin%2CMediaBrowser.Common.Plugins.LocalPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L70">View Source</a>
-  </span>
-  <a id="MediaBrowser_Common_Plugins_LocalPlugin_op_Inequality_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.op_Inequality*"></a>
-  <h4 id="MediaBrowser_Common_Plugins_LocalPlugin_op_Inequality_MediaBrowser_Common_Plugins_LocalPlugin_MediaBrowser_Common_Plugins_LocalPlugin_" data-uid="MediaBrowser.Common.Plugins.LocalPlugin.op_Inequality(MediaBrowser.Common.Plugins.LocalPlugin,MediaBrowser.Common.Plugins.LocalPlugin)">Inequality(LocalPlugin, LocalPlugin)</h4>
-  <div class="markdown level1 summary"><p>!= operator.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool operator !=(LocalPlugin left, LocalPlugin right)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
-        <td><span class="parametername">left</span></td>
-        <td><p>Left item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Plugins.LocalPlugin.html">LocalPlugin</a></td>
-        <td><span class="parametername">right</span></td>
-        <td><p>Right item.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Comparison result.</p>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.PluginInfo.html">PluginInfo</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.Plugins.PluginInfo.html">PluginInfo</a> instance containing the information.</p>
 </td>
       </tr>
     </tbody>
@@ -649,7 +654,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Common_Plugins_LocalPlugin.md&amp;value=---%0Auid%3A%20MediaBrowser.Common.Plugins.LocalPlugin%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Common/Plugins/LocalPlugin.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

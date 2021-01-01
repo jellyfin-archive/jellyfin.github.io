@@ -90,13 +90,13 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
-    <div class="level2"><a class="xref" href="Jellyfin.Data.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Jellyfin.Data.Events.GenericEventArgs-1.html">GenericEventArgs</a>&lt;<a class="xref" href="MediaBrowser.Model.Plugins.PluginInfo.html">PluginInfo</a>&gt;</div>
     <div class="level3"><span class="xref">PluginUninstalledEventArgs</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Jellyfin.Data.Events.GenericEventArgs-1.html#Jellyfin_Data_Events_GenericEventArgs_1_Argument">GenericEventArgs&lt;IPlugin&gt;.Argument</a>
+      <a class="xref" href="Jellyfin.Data.Events.GenericEventArgs-1.html#Jellyfin_Data_Events_GenericEventArgs_1_Argument">GenericEventArgs&lt;PluginInfo&gt;.Argument</a>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
@@ -127,25 +127,25 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Controller.dll</h6>
   <h5 id="MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PluginUninstalledEventArgs : GenericEventArgs&lt;IPlugin&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class PluginUninstalledEventArgs : GenericEventArgs&lt;PluginInfo&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs__ctor_MediaBrowser_Common_Plugins_IPlugin_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.%23ctor(MediaBrowser.Common.Plugins.IPlugin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs__ctor_MediaBrowser_Model_Plugins_PluginInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.%23ctor(MediaBrowser.Model.Plugins.PluginInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Events/Updates/PluginUninstalledEventArgs.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Events/Updates/PluginUninstalledEventArgs.cs/#L16">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs__ctor_" data-uid="MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs__ctor_MediaBrowser_Common_Plugins_IPlugin_" data-uid="MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.#ctor(MediaBrowser.Common.Plugins.IPlugin)">PluginUninstalledEventArgs(IPlugin)</h4>
+  <h4 id="MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs__ctor_MediaBrowser_Model_Plugins_PluginInfo_" data-uid="MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.#ctor(MediaBrowser.Model.Plugins.PluginInfo)">PluginUninstalledEventArgs(PluginInfo)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs.html">PluginUninstalledEventArgs</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PluginUninstalledEventArgs(IPlugin arg)</code></pre>
+    <pre><code class="lang-csharp hljs">public PluginUninstalledEventArgs(PluginInfo arg)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -158,7 +158,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Common.Plugins.IPlugin.html">IPlugin</a></td>
+        <td><a class="xref" href="MediaBrowser.Model.Plugins.PluginInfo.html">PluginInfo</a></td>
         <td><span class="parametername">arg</span></td>
         <td><p>The plugin.</p>
 </td>
@@ -180,7 +180,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Events_Updates_PluginUninstalledEventArgs.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Events.Updates.PluginUninstalledEventArgs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Events/Updates/PluginUninstalledEventArgs.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Events/Updates/PluginUninstalledEventArgs.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

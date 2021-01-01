@@ -641,19 +641,19 @@ public class PluginsController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController__ctor_MediaBrowser_Common_IApplicationHost_MediaBrowser_Common_Updates_IInstallationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.%23ctor(MediaBrowser.Common.IApplicationHost%2CMediaBrowser.Common.Updates.IInstallationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController__ctor_MediaBrowser_Common_Updates_IInstallationManager_MediaBrowser_Common_Plugins_IPluginManager_MediaBrowser_Common_Configuration_IConfigurationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.%23ctor(MediaBrowser.Common.Updates.IInstallationManager%2CMediaBrowser.Common.Plugins.IPluginManager%2CMediaBrowser.Common.Configuration.IConfigurationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L43">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController__ctor_" data-uid="Jellyfin.Api.Controllers.PluginsController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_PluginsController__ctor_MediaBrowser_Common_IApplicationHost_MediaBrowser_Common_Updates_IInstallationManager_" data-uid="Jellyfin.Api.Controllers.PluginsController.#ctor(MediaBrowser.Common.IApplicationHost,MediaBrowser.Common.Updates.IInstallationManager)">PluginsController(IApplicationHost, IInstallationManager)</h4>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController__ctor_MediaBrowser_Common_Updates_IInstallationManager_MediaBrowser_Common_Plugins_IPluginManager_MediaBrowser_Common_Configuration_IConfigurationManager_" data-uid="Jellyfin.Api.Controllers.PluginsController.#ctor(MediaBrowser.Common.Updates.IInstallationManager,MediaBrowser.Common.Plugins.IPluginManager,MediaBrowser.Common.Configuration.IConfigurationManager)">PluginsController(IInstallationManager, IPluginManager, IConfigurationManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.PluginsController.html">PluginsController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PluginsController(IApplicationHost appHost, IInstallationManager installationManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public PluginsController(IInstallationManager installationManager, IPluginManager pluginManager, IConfigurationManager config)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -666,15 +666,21 @@ public class PluginsController : BaseJellyfinApiController</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a></td>
-        <td><span class="parametername">appHost</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.IApplicationHost.html">IApplicationHost</a> interface.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Common.Updates.IInstallationManager.html">IInstallationManager</a></td>
         <td><span class="parametername">installationManager</span></td>
         <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Updates.IInstallationManager.html">IInstallationManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Plugins.IPluginManager.html">IPluginManager</a></td>
+        <td><span class="parametername">pluginManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Plugins.IPluginManager.html">IPluginManager</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Common.Configuration.IConfigurationManager.html">IConfigurationManager</a></td>
+        <td><span class="parametername">config</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Common.Configuration.IConfigurationManager.html">IConfigurationManager</a> interface.</p>
 </td>
       </tr>
     </tbody>
@@ -683,10 +689,130 @@ public class PluginsController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_DisablePlugin_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.DisablePlugin(System.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L155">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_PluginsController_DisablePlugin_" data-uid="Jellyfin.Api.Controllers.PluginsController.DisablePlugin*"></a>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController_DisablePlugin_System_Guid_System_Version_" data-uid="Jellyfin.Api.Controllers.PluginsController.DisablePlugin(System.Guid,System.Version)">DisablePlugin(Guid, Version)</h4>
+  <div class="markdown level1 summary"><p>Disable a plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{pluginId}/{version}/Disable&quot;)]
+[Authorize(Policy = &quot;RequiresElevation&quot;)]
+[ProducesResponseType(204)]
+[ProducesResponseType(404)]
+public ActionResult DisablePlugin([FromRoute, Required] Guid pluginId, [FromRoute, Required] Version version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">pluginId</span></td>
+        <td><p>Plugin id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Plugin version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_EnablePlugin_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.EnablePlugin(System.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L131">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_PluginsController_EnablePlugin_" data-uid="Jellyfin.Api.Controllers.PluginsController.EnablePlugin*"></a>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController_EnablePlugin_System_Guid_System_Version_" data-uid="Jellyfin.Api.Controllers.PluginsController.EnablePlugin(System.Guid,System.Version)">EnablePlugin(Guid, Version)</h4>
+  <div class="markdown level1 summary"><p>Enables a disabled plugin.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{pluginId}/{version}/Enable&quot;)]
+[Authorize(Policy = &quot;RequiresElevation&quot;)]
+[ProducesResponseType(204)]
+[ProducesResponseType(404)]
+public ActionResult EnablePlugin([FromRoute, Required] Guid pluginId, [FromRoute, Required] Version version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">pluginId</span></td>
+        <td><p>Plugin id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Plugin version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetPluginConfiguration_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetPluginConfiguration(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L236">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_GetPluginConfiguration_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_GetPluginConfiguration_System_Guid_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginConfiguration(System.Guid)">GetPluginConfiguration(Guid)</h4>
@@ -736,10 +862,124 @@ public ActionResult&lt;BasePluginConfiguration&gt; GetPluginConfiguration([FromR
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetPluginImage_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetPluginImage(System.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L289">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_PluginsController_GetPluginImage_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginImage*"></a>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController_GetPluginImage_System_Guid_System_Version_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginImage(System.Guid,System.Version)">GetPluginImage(Guid, Version)</h4>
+  <div class="markdown level1 summary"><p>Gets a plugin&apos;s image.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{pluginId}/{version}/Image&quot;)]
+[ProducesResponseType(200)]
+[ProducesResponseType(404)]
+[ProducesImageFile]
+[AllowAnonymous]
+public ActionResult GetPluginImage([FromRoute, Required] Guid pluginId, [FromRoute, Required] Version version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">pluginId</span></td>
+        <td><p>Plugin id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Plugin version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>Plugin&apos;s image.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetPluginManifest_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetPluginManifest(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L321">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_PluginsController_GetPluginManifest_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginManifest*"></a>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController_GetPluginManifest_System_Guid_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginManifest(System.Guid)">GetPluginManifest(Guid)</h4>
+  <div class="markdown level1 summary"><p>Gets a plugin&apos;s manifest.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;{pluginId}/Manifest&quot;)]
+[ProducesResponseType(204)]
+[ProducesResponseType(404)]
+public ActionResult&lt;PluginManifest&gt; GetPluginManifest([FromRoute, Required] Guid pluginId)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">pluginId</span></td>
+        <td><p>Plugin id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a>&gt;</td>
+        <td><p>A <a class="xref" href="MediaBrowser.Common.Plugins.PluginManifest.html">PluginManifest</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetPlugins.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetPlugins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L49">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L114">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_GetPlugins_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPlugins*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_GetPlugins" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPlugins">GetPlugins()</h4>
@@ -773,7 +1013,7 @@ public ActionResult&lt;IEnumerable&lt;PluginInfo&gt;&gt; GetPlugins()</code></pr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetPluginSecurityInfo.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetPluginSecurityInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L59">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_GetPluginSecurityInfo_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginSecurityInfo*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_GetPluginSecurityInfo" data-uid="Jellyfin.Api.Controllers.PluginsController.GetPluginSecurityInfo">GetPluginSecurityInfo()</h4>
@@ -785,7 +1025,7 @@ public ActionResult&lt;IEnumerable&lt;PluginInfo&gt;&gt; GetPlugins()</code></pr
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This endpoint should not be used.&quot;)]
 [HttpGet(&quot;SecurityInfo&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;PluginSecurityInfo&gt; GetPluginSecurityInfo()</code></pre>
+public static ActionResult&lt;PluginSecurityInfo&gt; GetPluginSecurityInfo()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -808,7 +1048,7 @@ public ActionResult&lt;PluginSecurityInfo&gt; GetPluginSecurityInfo()</code></pr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetRegistration_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetRegistration(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L194">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L99">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_GetRegistration_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetRegistration*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_GetRegistration_System_String_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetRegistration(System.String)">GetRegistration(String)</h4>
@@ -820,7 +1060,7 @@ public ActionResult&lt;PluginSecurityInfo&gt; GetPluginSecurityInfo()</code></pr
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;Paid plugins are not supported&quot;)]
 [HttpGet(&quot;Registrations/{name}&quot;)]
 [ProducesResponseType(501)]
-public ActionResult GetRegistration([FromRoute, Required] string name)</code></pre>
+public static ActionResult GetRegistration([FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -877,7 +1117,7 @@ public ActionResult GetRegistration([FromRoute, Required] string name)</code></p
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_GetRegistrationStatus_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.GetRegistrationStatus(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L172">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L77">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_GetRegistrationStatus_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetRegistrationStatus*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_GetRegistrationStatus_System_String_" data-uid="Jellyfin.Api.Controllers.PluginsController.GetRegistrationStatus(System.String)">GetRegistrationStatus(String)</h4>
@@ -889,7 +1129,7 @@ public ActionResult GetRegistration([FromRoute, Required] string name)</code></p
     <pre><code class="lang-csharp hljs">[Obsolete(&quot;This endpoint should not be used.&quot;)]
 [HttpPost(&quot;RegistrationRecords/{name}&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute, Required] string name)</code></pre>
+public static ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute, Required] string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -930,7 +1170,7 @@ public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_UninstallPlugin_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.UninstallPlugin(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L202">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_UninstallPlugin_" data-uid="Jellyfin.Api.Controllers.PluginsController.UninstallPlugin*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_UninstallPlugin_System_Guid_" data-uid="Jellyfin.Api.Controllers.PluginsController.UninstallPlugin(System.Guid)">UninstallPlugin(Guid)</h4>
@@ -943,6 +1183,7 @@ public ActionResult&lt;MBRegistrationRecord&gt; GetRegistrationStatus([FromRoute
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
+[Obsolete(&quot;Please use the UninstallPluginByVersion API.&quot;)]
 public ActionResult UninstallPlugin([FromRoute, Required] Guid pluginId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -974,7 +1215,67 @@ public ActionResult UninstallPlugin([FromRoute, Required] Guid pluginId)</code><
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
-        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the file could not be found.</p>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_UninstallPluginByVersion_System_Guid_System_Version_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.UninstallPluginByVersion(System.Guid%2CSystem.Version)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L179">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Controllers_PluginsController_UninstallPluginByVersion_" data-uid="Jellyfin.Api.Controllers.PluginsController.UninstallPluginByVersion*"></a>
+  <h4 id="Jellyfin_Api_Controllers_PluginsController_UninstallPluginByVersion_System_Guid_System_Version_" data-uid="Jellyfin.Api.Controllers.PluginsController.UninstallPluginByVersion(System.Guid,System.Version)">UninstallPluginByVersion(Guid, Version)</h4>
+  <div class="markdown level1 summary"><p>Uninstalls a plugin by version.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{pluginId}/{version}&quot;)]
+[Authorize(Policy = &quot;RequiresElevation&quot;)]
+[ProducesResponseType(204)]
+[ProducesResponseType(404)]
+public ActionResult UninstallPluginByVersion([FromRoute, Required] Guid pluginId, [FromRoute, Required] Version version)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
+        <td><span class="parametername">pluginId</span></td>
+        <td><p>Plugin id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.version">Version</a></td>
+        <td><span class="parametername">version</span></td>
+        <td><p>Plugin version.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
 </td>
       </tr>
     </tbody>
@@ -984,7 +1285,7 @@ public ActionResult UninstallPlugin([FromRoute, Required] Guid pluginId)</code><
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_UpdatePluginConfiguration_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.UpdatePluginConfiguration(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L260">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_UpdatePluginConfiguration_" data-uid="Jellyfin.Api.Controllers.PluginsController.UpdatePluginConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_UpdatePluginConfiguration_System_Guid_" data-uid="Jellyfin.Api.Controllers.PluginsController.UpdatePluginConfiguration(System.Guid)">UpdatePluginConfiguration(Guid)</h4>
@@ -1027,9 +1328,7 @@ public Task&lt;ActionResult&gt; UpdatePluginConfiguration([FromRoute, Required] 
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
-        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> that represents the asynchronous operation to update plugin configuration.
-The task result contains an <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success, or <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a>
-when plugin not found or plugin doesn&apos;t have configuration.</p>
+        <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if the plugin could not be found.</p>
 </td>
       </tr>
     </tbody>
@@ -1042,7 +1341,7 @@ when plugin not found or plugin doesn&apos;t have configuration.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController_UpdatePluginSecurityInfo_Jellyfin_Api_Models_PluginDtos_PluginSecurityInfo_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController.UpdatePluginSecurityInfo(Jellyfin.Api.Models.PluginDtos.PluginSecurityInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L157">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L342">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PluginsController_UpdatePluginSecurityInfo_" data-uid="Jellyfin.Api.Controllers.PluginsController.UpdatePluginSecurityInfo*"></a>
   <h4 id="Jellyfin_Api_Controllers_PluginsController_UpdatePluginSecurityInfo_Jellyfin_Api_Models_PluginDtos_PluginSecurityInfo_" data-uid="Jellyfin.Api.Controllers.PluginsController.UpdatePluginSecurityInfo(Jellyfin.Api.Models.PluginDtos.PluginSecurityInfo)">UpdatePluginSecurityInfo(PluginSecurityInfo)</h4>
@@ -1106,7 +1405,7 @@ public ActionResult UpdatePluginSecurityInfo([FromBody, Required] PluginSecurity
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PluginsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PluginsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PluginsController.cs/#L29" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
