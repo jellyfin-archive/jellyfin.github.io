@@ -104,7 +104,12 @@
 </code></pre><p>If you are running ArchLinux, run the following command instead:</p>
 <pre><code class="lang-sh">echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf &amp;&amp; sudo sysctl --system
 </code></pre><p>Then paste it in your terminal and press on enter to run it. For Docker, this needs to be done on the host, not the container. See <a href="https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers">here</a> for more information.</p>
-</article>
+<h2 id="uninstall-macos">Uninstall MacOS</h2>
+<p>To fully remove all data of Jellyfin from MacOS, run these commands:</p>
+<pre><code class="lang-bash">rm -Rfv ~/.config/jellyfin
+rm -Rfv ~/.cache/jellyfin
+rm -Rfv ~/.local/share/jellyfin
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
