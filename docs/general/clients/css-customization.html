@@ -194,7 +194,7 @@ It can also be used to disable code without deleting it.</p>
 .listItem-content {height: 115px;}
 .secondary.listItem-overview.listItemBodyText {height: 61px; margin: 0;}
 </code></pre><p><img src="../../images/custom-css-episodepreview.png" alt="Screenshot of a TV show page with stylized episode previews"></p>
-<h3 id="stylized-and-smaller-cast-info">Stylized and Smaller Cast Info</h3>
+<h3 id="stylized-and-smaller-cast--crew-info">Stylized and Smaller Cast &amp; Crew Info</h3>
 <p>This will drastically change the style of cast info into something very similar to how Plex approaches it. This override will lead to somewhat smaller thumbnails, and also works with all themes.</p>
 <pre><code class="lang-css">/* Shrink and square (or round) cast thumnails */
 #castContent .card.overflowPortraitCard.personCard.card-hoverable.card-withuserdata {width: 4.2cm !important; font-size: 90% !important;}
@@ -213,7 +213,22 @@ It can also be used to disable code without deleting it.</p>
 /* Center the mouseover buttons */
 #castContent .cardOverlayButton-br {bottom: 4%; right: 15%; width: 70%;}
 #castContent .cardOverlayButton.cardOverlayButton-hover.itemAction.paper-icon-button-light {margin:auto;}
-</code></pre><p><img src="../../images/custom-css-stylizedcast.png" alt="Screenshot of stylized and smaller cast and crew info"></p>
+</code></pre><p><img src="../../images/custom-css-stylizedcast.png" alt="Screenshot of stylized and smaller Cast &amp; Crew info"></p>
+<h3 id="pictureless-cast--crew">Pictureless Cast &amp; Crew</h3>
+<pre><code class="lang-css">#castContent .card.overflowPortraitCard { width: 4.2cm; font-size: 90%; }
+
+#castContent .personCard { width: auto; }
+
+#castContent .personCard .cardBox { margin-bottom: 0px; margin-right: 0px; }
+
+#castContent { flex-wrap: wrap; max-height: 9.75em; }
+
+div.personCard &gt; :first-child &gt; :first-child { display: none; }
+
+.itemDetailPage .cardText { text-align: left; }
+
+.itemDetailPage .textActionButton { text-align: left; }
+</code></pre><p><img src="../../images/custom-css-nopicturecast.png" alt="Screenshot of Pictureless Cast &amp; Crew info"></p>
 <h3 id="custom-background-color">Custom Background Color</h3>
 <pre><code class="lang-css">.backgroundContainer, .dialog, html { background-color: #0fd0d0; }
 </code></pre><h3 id="darken-the-background">Darken the Background</h3>
