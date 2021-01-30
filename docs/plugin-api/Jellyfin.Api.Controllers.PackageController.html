@@ -950,7 +950,7 @@ public Task&lt;ActionResult&gt; InstallPackage([FromRoute, Required] string name
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Repositories&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult SetRepositories([FromBody] List&lt;RepositoryInfo&gt; repositoryInfos)</code></pre>
+public ActionResult SetRepositories([FromBody, Required] List&lt;RepositoryInfo&gt; repositoryInfos)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

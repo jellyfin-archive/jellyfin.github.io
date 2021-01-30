@@ -1050,7 +1050,7 @@ public Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ForgotPassword/Pin&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody] string pin)</code></pre>
+public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody, Required] string pin)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
