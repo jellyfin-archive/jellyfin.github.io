@@ -260,8 +260,9 @@ ldconfig -p | grep libnvidia-encode.so.1
 <p>Check the transcode logs to make sure everything is working properly.</p>
 <pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
 Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
-</code></pre><h3 id="configuring-opencl-accelerated-tone-mapping">Configuring OpenCL Accelerated Tone Mapping</h3>
-<p>Currently, tone mapping with Nvidia NVENC, AMD AMF and Intel VAAPI is through OpenCL image support.</p>
+</code></pre><h3 id="configuring-opencl-acceleratedvpp-tone-mapping">Configuring OpenCL Accelerated/VPP Tone Mapping</h3>
+<p>OpenCL tone mapping with Nvidia NVENC, AMD AMF, and Intel VAAPI is through OpenCL image support.</p>
+<p>Full hardware based VPP tonemapping is supported on Intel VAAPI and QSV on Linux.</p>
 <table>
 <thead>
 <tr>
@@ -281,7 +282,7 @@ Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 <td>OK</td>
 <td>OK</td>
 <td>planned</td>
-<td>planned</td>
+<td>OK</td>
 <td>planned</td>
 </tr>
 <tr>
@@ -321,10 +322,12 @@ sudo apt install nvidia-opencl-icd
 <li><p>For AMD cards, install <code>amdgpu-pro</code> with opencl arguments. See <strong>Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</strong> for more details.</p>
 <pre><code class="lang-sh">sudo ./amdgpu-pro-install -y --opencl=pal,legacy
 </code></pre></li>
-<li><p>For Intel iGPUs, follow the instructions from <a href="https://github.com/intel/compute-runtime/releases">intel-compute-runtime</a>. If you are using the docker image from jellyfin/jellyfin, this step can be skipped.</p>
+<li><p>For Intel iGPUs, you have two types of tonemapping methods: OpenCL and VPP. Choose the latter one for faster transcoding speed, but fine tuning options are not supported.</p>
+<p>Method OpenCL: Follow the instructions from <a href="https://github.com/intel/compute-runtime/releases">intel-compute-runtime</a>. If you are using the docker image from jellyfin/jellyfin or linuxserver/jellyfin, this step can be skipped.</p>
+<p>Method VPP: Install <code>intel-media-va-driver-non-free</code> 20.1 and <code>jellyfin-ffmpeg</code> 4.3.1-4 or newer.</p>
 </li>
 </ul>
-<div class="NOTE"><h5>Note</h5><p>Tone mapping on Intel VAAPI needs an iGPU that supports 10-bit decoding.
+<div class="NOTE"><h5>Note</h5><p>Tone mapping on Intel VAAPI and QSV needs an iGPU that supports 10-bit decoding, such as i3-7100 and J4105.
 Do not use the <code>intel-opencl-icd</code> package from the repository since they were not build with RELEASE_WITH_REGKEYS enabled for P010 pixel interop flags.</p>
 </div>
 </li>
