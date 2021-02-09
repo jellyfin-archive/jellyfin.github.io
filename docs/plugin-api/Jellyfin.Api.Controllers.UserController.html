@@ -1036,13 +1036,13 @@ public Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([From
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_Jellyfin_Api_Models_UserDtos_ForgotPasswordPinDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(Jellyfin.Api.Models.UserDtos.ForgotPasswordPinDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L515">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPasswordPin*"></a>
-  <h4 id="Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_System_String_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(System.String)">ForgotPasswordPin(String)</h4>
+  <h4 id="Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_Jellyfin_Api_Models_UserDtos_ForgotPasswordPinDto_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(Jellyfin.Api.Models.UserDtos.ForgotPasswordPinDto)">ForgotPasswordPin(ForgotPasswordPinDto)</h4>
   <div class="markdown level1 summary"><p>Redeems a forgot password pin.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1050,7 +1050,7 @@ public Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ForgotPassword/Pin&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody, Required] string pin)</code></pre>
+public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody, Required] ForgotPasswordPinDto forgotPasswordPinRequest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1063,9 +1063,9 @@ public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBo
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">pin</span></td>
-        <td><p>The pin.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.UserDtos.ForgotPasswordPinDto.html">ForgotPasswordPinDto</a></td>
+        <td><span class="parametername">forgotPasswordPinRequest</span></td>
+        <td><p>The forgot password pin request containing the entered pin.</p>
 </td>
       </tr>
     </tbody>
