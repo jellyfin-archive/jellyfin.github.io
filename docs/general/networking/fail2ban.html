@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>fail2ban | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="fail2ban | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.48.1.0">
+    
+    <link rel="shortcut icon" href="../../images/favicon.png">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="fail2ban-jellyfin">
+<h2 id="fail2ban">Fail2ban</h2>
+
+<p>Fail2ban is an intrusion prevention software framework that protects computer servers from brute-force attacks.
+Fail2ban operates by monitoring log files (e.g. /var/log/auth.log, /var/log/apache/access.log, etc.) for selected entries and running scripts based on their content.</p>
+<p>Jellyfin produces logs that can be monitored by Fail2ban to prevent brute-force attacks on your machine.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Jellyfin remotely accessible</li>
+<li>Fail2ban installed and running</li>
+<li>Knowing where the logs for Jellyfin are stored: by default /var/log/jellyfin/</li>
+</ul>
+<h3 id="step-one-create-a-jail">Step one: create a jail</h3>
+<p>You need to create a jail for Fail2ban.
+If you are on Ubuntu and use nano as editor, type:</p>
+<pre><code class="lang-bash">sudo nano /etc/fail2ban/jail.d/jellyfin.local
+</code></pre><p>And add this to the file:</p>
+<pre><code class="lang-bash">[jellyfin]
+
+backend = auto
+enabled = true
+port = 80,443
+protocol = tcp
+filter = jellyfin
+maxretry = 3
+bantime = 86400
+findtime = 43200
+logpath = /var/log/jellyfin/jellyfin*.log
+</code></pre><p>Save and exit nano.</p>
+<h3 id="step-two-create-a-filter">Step two: create a filter</h3>
+<p>The filter explains to Fail2ban where to look in the log file. This is the tricky part.</p>
+<pre><code class="lang-bash">sudo nano /etc/fail2ban/filter.d/jellyfin.conf
+</code></pre><p>And add this to the new file (thanks to @sebres from F2B):</p>
+<pre><code class="lang-bash">[Definition]
+failregex = ^(?:\[\]\s+)?\[INF\] Authentication request for &quot;[^&quot;]*&quot; has been denied \(IP: &quot;&lt;HOST&gt;&quot;\)\.$
+</code></pre><p>Save and exit, then reload Fail2ban:</p>
+<pre><code class="lang-bash">sudo systemctl restart fail2ban
+</code></pre><p>You&#39;re done.</p>
+<h3 id="step-three-test">Step three: test</h3>
+<p>You can test this new jail:</p>
+<pre><code class="lang-bash">fail2ban-regex /var/log/jellyfin/*.log /etc/fail2ban/filter.d/jellyfin.conf
+</code></pre><p>And see the output.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/networking/fail2ban.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
