@@ -120,7 +120,7 @@
 </div>
 <h2 id="amd-amf">AMD AMF</h2>
 <p>AMF is now available on Windows and Linux, but since AMD has not implemented the HW decoder and scaler in ffmpeg, the decoding speed may not be as expected. The closed source driver <code>amdgpu-pro</code> is required when using AMF on Linux.</p>
-<div class="NOTE"><h5>Note</h5><p>Zen is CPU only. No hardware acceleration for any form of video decoding/encoding. You will need an APU or dGPU for hardware acceleration.</p>
+<div class="NOTE"><h5>Note</h5><p>Most Zen CPUs do not come with integrated graphics. You will need a dedicated GPU (dGPU) or a Zen CPU with integrated graphics for hardware acceleration. If your Zen CPU is suffixed with a &quot;G&quot; or &quot;GE&quot; in model name, you have integrated graphics.</p>
 </div>
 <h2 id="intel-quicksync">Intel QuickSync</h2>
 <p>Intel QSV Benchmarks on <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/quick-sync-video/quick-sync-video-installation.html">Linux</a>.</p>
