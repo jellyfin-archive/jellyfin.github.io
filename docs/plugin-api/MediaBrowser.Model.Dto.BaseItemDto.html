@@ -3060,7 +3060,7 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </span>
   <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentArtItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentArtItemId*"></a>
   <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentArtItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentArtItemId">ParentArtItemId</h4>
-  <div class="markdown level1 summary"><p>If the item does not have a art, this will hold the Id of the Parent that has one.</p>
+  <div class="markdown level1 summary"><p>Gets or sets wether the item has fan art, this will hold the Id of the Parent that has one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3124,7 +3124,7 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </span>
   <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropItemId*"></a>
   <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentBackdropItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentBackdropItemId">ParentBackdropItemId</h4>
-  <div class="markdown level1 summary"><p>If the item does not have any backdrops, this will hold the Id of the Parent that has one.</p>
+  <div class="markdown level1 summary"><p>Gets or sets wether the item has any backdrops, this will hold the Id of the Parent that has one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -3252,7 +3252,7 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </span>
   <a id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoItemId_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoItemId*"></a>
   <h4 id="MediaBrowser_Model_Dto_BaseItemDto_ParentLogoItemId" data-uid="MediaBrowser.Model.Dto.BaseItemDto.ParentLogoItemId">ParentLogoItemId</h4>
-  <div class="markdown level1 summary"><p>If the item does not have a logo, this will hold the Id of the Parent that has one.</p>
+  <div class="markdown level1 summary"><p>Gets or sets wether the item has a logo, this will hold the Id of the Parent that has one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4488,7 +4488,7 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </span>
   <a id="MediaBrowser_Model_Dto_BaseItemDto_StartDate_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.StartDate*"></a>
   <h4 id="MediaBrowser_Model_Dto_BaseItemDto_StartDate" data-uid="MediaBrowser.Model.Dto.BaseItemDto.StartDate">StartDate</h4>
-  <div class="markdown level1 summary"><p>The start date of the recording, in UTC.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the start date of the recording, in UTC.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4774,7 +4774,7 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </span>
   <a id="MediaBrowser_Model_Dto_BaseItemDto_UserData_" data-uid="MediaBrowser.Model.Dto.BaseItemDto.UserData*"></a>
   <h4 id="MediaBrowser_Model_Dto_BaseItemDto_UserData" data-uid="MediaBrowser.Model.Dto.BaseItemDto.UserData">UserData</h4>
-  <div class="markdown level1 summary"><p>User data for this item based on the user it&apos;s being requested for.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the user data for this item based on the user it&apos;s being requested for.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -4903,13 +4903,22 @@ Maps image type to dictionary mapping image tag to blurhash value.</p>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_">ProviderIdsExtensions.HasProviderId(IHasProviderIds, String)</a>
+  </div>
+  <div>
       <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_">ProviderIdsExtensions.HasProviderId(IHasProviderIds, MetadataProvider)</a>
   </div>
   <div>
-      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_">ProviderIdsExtensions.GetProviderId(IHasProviderIds, MetadataProvider)</a>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String__">ProviderIdsExtensions.TryGetProviderId(IHasProviderIds, String, out String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_System_String__">ProviderIdsExtensions.TryGetProviderId(IHasProviderIds, MetadataProvider, out String)</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_">ProviderIdsExtensions.GetProviderId(IHasProviderIds, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_">ProviderIdsExtensions.GetProviderId(IHasProviderIds, MetadataProvider)</a>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Model.Entities.ProviderIdsExtensions.html#MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String_">ProviderIdsExtensions.SetProviderId(IHasProviderIds, String, String)</a>

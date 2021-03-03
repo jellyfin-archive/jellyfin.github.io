@@ -394,8 +394,8 @@
   </span>
   <a id="MediaBrowser_Model_Dlna_AudioOptions_MaxAudioChannels_" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MaxAudioChannels*"></a>
   <h4 id="MediaBrowser_Model_Dlna_AudioOptions_MaxAudioChannels" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MaxAudioChannels">MaxAudioChannels</h4>
-  <div class="markdown level1 summary"><p>Allows an override of supported number of audio channels
-Example: DeviceProfile supports five channel, but user only has stereo speakers</p>
+  <div class="markdown level1 summary"><p>Gets or sets an override of supported number of audio channels
+Example: DeviceProfile supports five channel, but user only has stereo speakers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -426,7 +426,7 @@ Example: DeviceProfile supports five channel, but user only has stereo speakers<
   </span>
   <a id="MediaBrowser_Model_Dlna_AudioOptions_MaxBitrate_" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MaxBitrate*"></a>
   <h4 id="MediaBrowser_Model_Dlna_AudioOptions_MaxBitrate" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MaxBitrate">MaxBitrate</h4>
-  <div class="markdown level1 summary"><p>The application&apos;s configured quality setting.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the application&apos;s configured quality setting.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -457,7 +457,7 @@ Example: DeviceProfile supports five channel, but user only has stereo speakers<
   </span>
   <a id="MediaBrowser_Model_Dlna_AudioOptions_MediaSourceId_" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MediaSourceId*"></a>
   <h4 id="MediaBrowser_Model_Dlna_AudioOptions_MediaSourceId" data-uid="MediaBrowser.Model.Dlna.AudioOptions.MediaSourceId">MediaSourceId</h4>
-  <div class="markdown level1 summary"><p>Optional. Only needed if a specific AudioStreamIndex or SubtitleStreamIndex are requested.</p>
+  <div class="markdown level1 summary"><p>Gets or sets a media source id. Optional. Only needed if a specific AudioStreamIndex or SubtitleStreamIndex are requested.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -546,7 +546,7 @@ Example: DeviceProfile supports five channel, but user only has stereo speakers<
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_AudioOptions_GetMaxBitrate_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.AudioOptions.GetMaxBitrate(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/AudioOptions.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/AudioOptions.cs/#L71">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_AudioOptions_GetMaxBitrate_" data-uid="MediaBrowser.Model.Dlna.AudioOptions.GetMaxBitrate*"></a>
   <h4 id="MediaBrowser_Model_Dlna_AudioOptions_GetMaxBitrate_System_Boolean_" data-uid="MediaBrowser.Model.Dlna.AudioOptions.GetMaxBitrate(System.Boolean)">GetMaxBitrate(Boolean)</h4>
@@ -570,7 +570,8 @@ Example: DeviceProfile supports five channel, but user only has stereo speakers<
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">isAudio</span></td>
-        <td></td>
+        <td><p>Whether or not this is audio.</p>
+</td>
       </tr>
     </tbody>
   </table>

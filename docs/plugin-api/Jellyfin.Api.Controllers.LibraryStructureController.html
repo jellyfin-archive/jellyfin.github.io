@@ -764,13 +764,13 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String%2CSystem.String%2CSystem.String%5B%5D%2CJellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_Nullable_MediaBrowser_Model_Entities_CollectionTypeOptions__System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String%2CSystem.Nullable%7BMediaBrowser.Model.Entities.CollectionTypeOptions%7D%2CSystem.String%5B%5D%2CJellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryStructureController.cs/#L74">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder*"></a>
-  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_String_System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String,System.String,System.String[],Jellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto,System.Boolean)">AddVirtualFolder(String, String, String[], AddVirtualFolderDto, Boolean)</h4>
+  <h4 id="Jellyfin_Api_Controllers_LibraryStructureController_AddVirtualFolder_System_String_System_Nullable_MediaBrowser_Model_Entities_CollectionTypeOptions__System_String___Jellyfin_Api_Models_LibraryStructureDto_AddVirtualFolderDto_System_Boolean_" data-uid="Jellyfin.Api.Controllers.LibraryStructureController.AddVirtualFolder(System.String,System.Nullable{MediaBrowser.Model.Entities.CollectionTypeOptions},System.String[],Jellyfin.Api.Models.LibraryStructureDto.AddVirtualFolderDto,System.Boolean)">AddVirtualFolder(String, Nullable&lt;CollectionTypeOptions&gt;, String[], AddVirtualFolderDto, Boolean)</h4>
   <div class="markdown level1 summary"><p>Adds a virtual folder.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -778,7 +778,7 @@ public ActionResult AddMediaPath([FromBody, Required] MediaPathDto mediaPathDto,
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] string collectionType, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] paths, [FromBody] AddVirtualFolderDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
+public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQuery] CollectionTypeOptions? collectionType, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] paths, [FromBody] AddVirtualFolderDto libraryOptionsDto, [FromQuery] bool refreshLibrary = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -797,7 +797,7 @@ public Task&lt;ActionResult&gt; AddVirtualFolder([FromQuery] string name, [FromQ
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.CollectionTypeOptions.html">CollectionTypeOptions</a>&gt;</td>
         <td><span class="parametername">collectionType</span></td>
         <td><p>The type of the collection.</p>
 </td>

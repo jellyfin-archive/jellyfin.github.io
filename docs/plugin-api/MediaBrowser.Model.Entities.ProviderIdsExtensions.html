@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CMediaBrowser.Model.Entities.MetadataProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L92">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId*"></a>
   <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,MediaBrowser.Model.Entities.MetadataProvider)">GetProviderId(IHasProviderIds, MetadataProvider)</h4>
@@ -184,7 +184,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L39">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L80">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId*"></a>
   <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_GetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.GetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,System.String)">GetProviderId(IHasProviderIds, String)</h4>
@@ -240,11 +240,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CMediaBrowser.Model.Entities.MetadataProvider)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L17">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId*"></a>
   <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId(MediaBrowser.Model.Entities.IHasProviderIds,MediaBrowser.Model.Entities.MetadataProvider)">HasProviderId(IHasProviderIds, MetadataProvider)</h4>
-  <div class="markdown level1 summary"><p>Determines whether [has provider identifier] [the specified instance].</p>
+  <div class="markdown level1 summary"><p>Checks if this instance has an id for the given provider.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -286,7 +286,63 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p><code>true</code> if [has provider identifier] [the specified instance]; otherwise, <code>false</code>.</p>
+        <td><p><code>true</code> if a provider id with the given name was found; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L18">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId*"></a>
+  <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_HasProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.HasProviderId(MediaBrowser.Model.Entities.IHasProviderIds,System.String)">HasProviderId(IHasProviderIds, String)</h4>
+  <div class="markdown level1 summary"><p>Checks if this instance has an id for the given provider.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool HasProviderId(this IHasProviderIds instance, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The of the provider name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if a provider id with the given name was found; otherwise <code>false</code>.</p>
 </td>
       </tr>
     </tbody>
@@ -296,7 +352,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CMediaBrowser.Model.Entities.MetadataProvider%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L97">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L133">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId*"></a>
   <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_System_String_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,MediaBrowser.Model.Entities.MetadataProvider,System.String)">SetProviderId(IHasProviderIds, MetadataProvider, String)</h4>
@@ -342,7 +398,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L61">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L103">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId*"></a>
   <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_SetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.SetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,System.String,System.String)">SetProviderId(IHasProviderIds, String, String)</h4>
@@ -383,6 +439,130 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CMediaBrowser.Model.Entities.MetadataProvider%2CSystem.String%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L69">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId*"></a>
+  <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_MediaBrowser_Model_Entities_MetadataProvider_System_String__" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,MediaBrowser.Model.Entities.MetadataProvider,System.String@)">TryGetProviderId(IHasProviderIds, MetadataProvider, out String)</h4>
+  <div class="markdown level1 summary"><p>Gets a provider id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetProviderId(this IHasProviderIds instance, MetadataProvider provider, out string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.MetadataProvider.html">MetadataProvider</a></td>
+        <td><span class="parametername">provider</span></td>
+        <td><p>The provider.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The provider id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if a provider id with the given name was found; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId(MediaBrowser.Model.Entities.IHasProviderIds%2CSystem.String%2CSystem.String%40)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L46">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId*"></a>
+  <h4 id="MediaBrowser_Model_Entities_ProviderIdsExtensions_TryGetProviderId_MediaBrowser_Model_Entities_IHasProviderIds_System_String_System_String__" data-uid="MediaBrowser.Model.Entities.ProviderIdsExtensions.TryGetProviderId(MediaBrowser.Model.Entities.IHasProviderIds,System.String,System.String@)">TryGetProviderId(IHasProviderIds, String, out String)</h4>
+  <div class="markdown level1 summary"><p>Gets a provider id.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryGetProviderId(this IHasProviderIds instance, string name, out string id)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Entities.IHasProviderIds.html">IHasProviderIds</a></td>
+        <td><span class="parametername">instance</span></td>
+        <td><p>The instance.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The provider id.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><p><code>true</code> if a provider id with the given name was found; otherwise <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -394,7 +574,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Entities_ProviderIdsExtensions.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Entities.ProviderIdsExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Entities/ProviderIdsExtensions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
