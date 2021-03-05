@@ -130,7 +130,8 @@ service haproxy reload
 <p>Add a job to cron so the certificate will be renewed automatically.</p>
 <pre><code class="lang-sh">echo &quot;0 0 * * *  root  certbot renew --quiet --no-self-upgrade --post-hook &#39;systemctl reload nginx&#39;&quot; | sudo tee -a /etc/cron.d/renew_certbot
 </code></pre><h3 id="lets-encrypt-and-docker">Let&#39;s Encrypt and Docker</h3>
-<p>This section assumes that Jellyfin is running in a Docker container (on Linux). This section also assumes that you wish to run Let&#39;s Encrypt in a Docker container as well. The Linuxserver/letsencrypt Docker container has a built-in nginx webserver to handle the reverse proxy.</p>
+<p>This section assumes that Jellyfin is running in a Docker container (on Linux). This section also assumes that you wish to run Let&#39;s Encrypt in a Docker container as well. The Linuxserver/swag Docker container has a built-in nginx webserver to handle the reverse proxy.</p>
+<p>Linuxserver/letsencrypt is deprecated in favor of linuxserver/swag, see <a href="https://github.com/linuxserver/docker-swag#migrating-from-the-old-linuxserverletsencrypt-image">here</a> for information on how to migrate if needed.</p>
 <p>First, you need to determine a few things.</p>
 <ol>
 <li><strong>MAKE SURE YOU HAVE A CNAME FOR JELLYFIN WITH YOUR DNS PROVIDER BEFORE PROCEEDING</strong></li>
@@ -146,9 +147,9 @@ service haproxy reload
 </ol>
 <p>List of DNS Plugins <a href="https://certbot.eff.org/docs/using.html#dns-plugins">here</a> if using DNS-01 challenge.</p>
 <p>Then, depending on what those settings are, you&#39;ll need to adjust the values below as needed.</p>
-<p>For example, the docker create command from the LinuxServer team for the Let&#39;s Encrypt Docker container:</p>
+<p>For example, the docker create command from the LinuxServer team for the Swag Docker container:</p>
 <pre><code class="lang-sh">docker create \
-  --name=letsencrypt \
+  --name=swag \
   --cap-add=NET_ADMIN \
   -e PUID=1000 \
   -e PGID=1000 \
@@ -167,13 +168,13 @@ service haproxy reload
   -p 80:80 `#optional` \
   -v &lt;/path/to/appdata/config&gt;:/config \
   --restart unless-stopped \
-  linuxserver/letsencrypt
+  linuxserver/swag
 </code></pre><p>Assuming I follow this template and adjust for my region, ports, and path, it would look like this (with personal information redacted):</p>
-<pre><code class="lang-sh">docker create --name=letsencrypt --cap-add=NET_ADMIN -e PUID=1000 -e PGID=1000 -e TZ=America/Chicago -e URL=example.com -e SUBDOMAINS=jellyfin -e VALIDATION=http -e EMAIL=email@email.com -e DHLEVEL=2048 -e ONLY_SUBDOMAINS=false -e STAGING=false -p 443:443 -p 80:80 -v /path/to/appdata/lets-encrypt/:/config --restart unless-stopped linuxserver/letsencrypt
-</code></pre><p>This will pull down the linuxserver/letsencrypt container, and then create it with the variables specified. You&#39;ll then want to start the docker container with <code>docker start letsencrypt</code>. You can verify this is started by running <code>docker ps</code>, which will produce an output like this:</p>
+<pre><code class="lang-sh">docker create --name=swag --cap-add=NET_ADMIN -e PUID=1000 -e PGID=1000 -e TZ=America/Chicago -e URL=example.com -e SUBDOMAINS=jellyfin -e VALIDATION=http -e EMAIL=email@email.com -e DHLEVEL=2048 -e ONLY_SUBDOMAINS=false -e STAGING=false -p 443:443 -p 80:80 -v /path/to/appdata/swag/:/config --restart unless-stopped linuxserver/swag
+</code></pre><p>This will pull down the linuxserver/letsencrypt container, and then create it with the variables specified. You&#39;ll then want to start the docker container with <code>docker start swag</code>. You can verify this is started by running <code>docker ps</code>, which will produce an output like this:</p>
 <pre><code class="lang-text">CONTAINER ID        IMAGE                     COMMAND             CREATED             STATUS              PORTS                                      NAMES
-09346434b8ea        linuxserver/letsencrypt   &quot;/init&quot;             2 minutes ago       Up 5 seconds        0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp   letsencrypt
-</code></pre><p>At this point, navigate to what volume you selected (in my example, it&#39;s <code>/mnt/lets-encrypt</code>). You&#39;ll then need to navigate to <code>nginx/proxy-confs</code> within that directory. If you list the contents of that directory, you&#39;ll see a lot of files.</p>
+09346434b8ea        linuxserver/swag          &quot;/init&quot;             2 minutes ago       Up 5 seconds        0.0.0.0:80-&gt;80/tcp, 0.0.0.0:443-&gt;443/tcp   swag
+</code></pre><p>At this point, navigate to what volume you selected (in my example, it&#39;s <code>/mnt/swag</code>). You&#39;ll then need to navigate to <code>nginx/proxy-confs</code> within that directory. If you list the contents of that directory, you&#39;ll see a lot of files.</p>
 <p>The one we&#39;re interested in for jellyfin is <code>jellyfin.subdomain.conf.sample</code> (if using a subdomain) or <code>jellyfin.subfolder.conf.sample</code> (if using a subfolder). You&#39;ll want to copy the file needed, removing the .sample (ex. <code>cp jellyfin.subdomain.conf.sample jellyfin.subdomain.conf</code>). Open the file in your text editor of choice.</p>
 <p>It should look like this (this file is <code>jellyfin.subdomain.conf</code>, although <code>jellyfin.subfolder.conf</code> looks very similar):</p>
 <pre><code class="lang-nginx">server {
@@ -212,7 +213,7 @@ service haproxy reload
 }
 </code></pre><p>The lines we&#39;re interested in is <code>set $upstream_app jellyfin</code>. Now, assuming Jellyfin and Let&#39;s Encrypt are on the same network within Docker, it <em>should</em> see it and start handling reverse proxy without much issue. If it doesn&#39;t however, you&#39;ll just need to change <code>jellyfin</code> in that line to whatever the IP of your Jellyfin server is. We&#39;ll also look at the line <code>location ~ (/jellyfin)?/socket</code> and add a slash after socket, so the line should look like this <code>location ~ (/jellyfin)?/socket/</code>.</p>
 <p>Then, within Jellyfin settings (Dashboard -&gt; Networking), scroll down to &quot;Public HTTP port number&quot; and &quot;Public HTTPS port number&quot;, and make sure HTTP Port number is 8096, while HTTPS port number is 8920.</p>
-<p>Restart your Let&#39;s Encrypt docker container by running <code>docker restart letsencrypt</code>, and then you can follow the logs with <code>docker logs -f letsencrypt</code>. Assuming everything works, you should see <code>Server Ready</code> at the very end of the logs. This tells you Lets Encrypt is running without issue.</p>
+<p>Restart your Let&#39;s Encrypt docker container by running <code>docker restart swag</code>, and then you can follow the logs with <code>docker logs -f swag</code>. Assuming everything works, you should see <code>Server Ready</code> at the very end of the logs. This tells you Lets Encrypt is running without issue.</p>
 </virtualhost></article>
           </div>
           
