@@ -836,13 +836,13 @@ public ActionResult&lt;UserItemDataDto&gt; MarkUnplayedItem([FromRoute, Required
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PlaystateController_OnPlaybackProgress_System_Guid_System_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Session_PlayMethod_System_String_System_String_MediaBrowser_Model_Session_RepeatMode_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PlaystateController.OnPlaybackProgress(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Session.PlayMethod%2CSystem.String%2CSystem.String%2CMediaBrowser.Model.Session.RepeatMode%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PlaystateController_OnPlaybackProgress_System_Guid_System_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Session_PlayMethod__System_String_System_String_System_Nullable_MediaBrowser_Model_Session_RepeatMode__System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PlaystateController.OnPlaybackProgress(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BMediaBrowser.Model.Session.PlayMethod%7D%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BMediaBrowser.Model.Session.RepeatMode%7D%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PlaystateController.cs/#L246">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackProgress_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackProgress*"></a>
-  <h4 id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackProgress_System_Guid_System_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Session_PlayMethod_System_String_System_String_MediaBrowser_Model_Session_RepeatMode_System_Boolean_System_Boolean_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackProgress(System.Guid,System.Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Session.PlayMethod,System.String,System.String,MediaBrowser.Model.Session.RepeatMode,System.Boolean,System.Boolean)">OnPlaybackProgress(Guid, Guid, String, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, PlayMethod, String, String, RepeatMode, Boolean, Boolean)</h4>
+  <h4 id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackProgress_System_Guid_System_Guid_System_String_System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Session_PlayMethod__System_String_System_String_System_Nullable_MediaBrowser_Model_Session_RepeatMode__System_Boolean_System_Boolean_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackProgress(System.Guid,System.Guid,System.String,System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{MediaBrowser.Model.Session.PlayMethod},System.String,System.String,System.Nullable{MediaBrowser.Model.Session.RepeatMode},System.Boolean,System.Boolean)">OnPlaybackProgress(Guid, Guid, String, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;PlayMethod&gt;, String, String, Nullable&lt;RepeatMode&gt;, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"><p>Reports a user&apos;s playback progress.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -850,7 +850,7 @@ public ActionResult&lt;UserItemDataDto&gt; MarkUnplayedItem([FromRoute, Required
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/PlayingItems/{itemId}/Progress&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] long? positionTicks, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] int? volumeLevel, [FromQuery] PlayMethod playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] RepeatMode repeatMode, [FromQuery] bool isPaused = false, [FromQuery] bool isMuted = false)</code></pre>
+public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] long? positionTicks, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] int? volumeLevel, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] RepeatMode? repeatMode, [FromQuery] bool isPaused = false, [FromQuery] bool isMuted = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -905,7 +905,7 @@ public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid us
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Session.PlayMethod.html">PlayMethod</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Session.PlayMethod.html">PlayMethod</a>&gt;</td>
         <td><span class="parametername">playMethod</span></td>
         <td><p>The play method.</p>
 </td>
@@ -923,7 +923,7 @@ public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid us
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Session.RepeatMode.html">RepeatMode</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Session.RepeatMode.html">RepeatMode</a>&gt;</td>
         <td><span class="parametername">repeatMode</span></td>
         <td><p>The repeat mode.</p>
 </td>
@@ -960,13 +960,13 @@ public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid us
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PlaystateController_OnPlaybackStart_System_Guid_System_Guid_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Session_PlayMethod_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PlaystateController.OnPlaybackStart(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Session.PlayMethod%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_PlaystateController_OnPlaybackStart_System_Guid_System_Guid_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Session_PlayMethod__System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.PlaystateController.OnPlaybackStart(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BMediaBrowser.Model.Session.PlayMethod%7D%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/PlaystateController.cs/#L196">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackStart_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackStart*"></a>
-  <h4 id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackStart_System_Guid_System_Guid_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_Session_PlayMethod_System_String_System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackStart(System.Guid,System.Guid,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.Session.PlayMethod,System.String,System.String,System.Boolean)">OnPlaybackStart(Guid, Guid, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, PlayMethod, String, String, Boolean)</h4>
+  <h4 id="Jellyfin_Api_Controllers_PlaystateController_OnPlaybackStart_System_Guid_System_Guid_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_MediaBrowser_Model_Session_PlayMethod__System_String_System_String_System_Boolean_" data-uid="Jellyfin.Api.Controllers.PlaystateController.OnPlaybackStart(System.Guid,System.Guid,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{MediaBrowser.Model.Session.PlayMethod},System.String,System.String,System.Boolean)">OnPlaybackStart(Guid, Guid, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;PlayMethod&gt;, String, String, Boolean)</h4>
   <div class="markdown level1 summary"><p>Reports that a user has begun playing an item.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -974,7 +974,7 @@ public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid us
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/PlayingItems/{itemId}&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] PlayMethod playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] bool canSeek = false)</code></pre>
+public Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] bool canSeek = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1017,7 +1017,7 @@ public Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userI
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Session.PlayMethod.html">PlayMethod</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Session.PlayMethod.html">PlayMethod</a>&gt;</td>
         <td><span class="parametername">playMethod</span></td>
         <td><p>The play method.</p>
 </td>
@@ -1162,7 +1162,7 @@ public Task&lt;ActionResult&gt; OnPlaybackStopped([FromRoute, Required] Guid use
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Playing/Ping&quot;)]
 [ProducesResponseType(204)]
-public ActionResult PingPlaybackSession([FromQuery] string playSessionId)</code></pre>
+public ActionResult PingPlaybackSession([FromQuery, Required] string playSessionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

@@ -1135,7 +1135,7 @@ public ActionResult&lt;ItemCounts&gt; GetItemCounts([FromQuery] Guid? userId, [F
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Libraries/AvailableOptions&quot;)]
 [Authorize(Policy = &quot;FirstTimeSetupOrDefault&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;LibraryOptionsResultDto&gt; GetLibraryOptionsInfo([FromQuery] string libraryContentType, [FromQuery] bool isNewLibrary)</code></pre>
+public ActionResult&lt;LibraryOptionsResultDto&gt; GetLibraryOptionsInfo([FromQuery] string libraryContentType, [FromQuery] bool isNewLibrary = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

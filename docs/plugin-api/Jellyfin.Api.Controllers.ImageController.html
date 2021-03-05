@@ -3443,7 +3443,7 @@ public Task&lt;ActionResult&gt; SetItemImageByIndex([FromRoute, Required] Guid i
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] int newIndex)</code></pre>
+public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery, Required] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
