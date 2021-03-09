@@ -140,7 +140,7 @@ These examples assume you want to run Jellyfin under a sub-domain (e.g. jellyfin
 <p>In addition, the examples are configured for use with Let&#39;s Encrypt certificates. If you have a certificate from another source, change the SSL configuration from <code>/etc/letsencrypt/DOMAIN_NAME/</code> to the location of your certificate and key.</p>
 <p>Ports 80 and 443 (pointing to the proxy server) need to be opened on your router and firewall.</p>
 <h3 id="known-proxies">Known Proxies</h3>
-<p>Add the IP address of your reverse proxy to the <code>Known Proxies</code> (under Admin Dashboard -&gt; Networking).  This is a comma separated list of IP addresses of known proxies used when connecting to your Jellyfin instance and is required to make proper use of X-Forwarded-For headers. Requires a server restart after saving.</p>
+<p>Add the IP address/hostname of your reverse proxy to the <code>Known Proxies</code> (under Admin Dashboard -&gt; Networking).  This is a comma separated list of IP addresses/hostnames of known proxies used when connecting to your Jellyfin instance and is required to make proper use of X-Forwarded-For headers. Requires a server restart after saving.</p>
 <h3 id="base-url">Base URL</h3>
 <p>Running Jellyfin with a path (e.g. <code>https://example.com/jellyfin</code>) is supported by the Android and web clients.</p>
 <div class="WARNING"><h5>Warning</h5><p>Base URL is known to break HDHomeRun, DLNA, Sonarr, Radarr, Chromecast, and MrMC.</p>
