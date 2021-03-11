@@ -79,9 +79,10 @@
             <article class="content wrap" id="_content" data-uid="clients-kodi">
 <h1 id="jellyfin-for-kodi">Jellyfin for Kodi</h1>
 
-<div class="NOTE"><h5>Note</h5><p>It&#39;s highly recommended to install the <code>Kodi Sync Queue</code> plugin into the Jellyfin server as well.
-This will keep your media libraries up to date without waiting for a periodic re-sync from Kodi.
-Also be aware that a local SQLite database is required. Remote Kodi databases, like MySQL, is not supported.</p>
+<div class="TIP"><h5>Tip</h5><p>It&#39;s highly recommended to install the <code>Kodi Sync Queue</code> plugin into the Jellyfin server as well.
+This will keep your media libraries up to date without waiting for a periodic re-sync from Kodi.</p>
+</div>
+<div class="CAUTION"><h5>Caution</h5><p>Remote Kodi databases, like MySQL, are not supported. A local SQLite database is required (this is the default).</p>
 </div>
 <h2 id="installation-process">Installation Process</h2>
 <h3 id="install-add-on-repository">Install Add-On Repository</h3>
@@ -205,7 +206,7 @@ Also be aware that a local SQLite database is required. Remote Kodi databases, l
 <div class="NOTE"><h5>Note</h5><p>Kodi&#39;s default skin does not display all unicode characters. To display unicode characters the skin&#39;s font must be changed.</p>
 </div>
 <h2 id="multiple-clients">Multiple Clients</h2>
-<p>When using multiple Kodi clients do not copy Kodi&#39;s database (i.e. myvideosXYZ.db, jellyfin.db) files from one client to the other to try and reduce initial syncing time. This will work, but it will confuse Jellyfin and all the clients will be seen as the same client, causing sync between these clients not to work correctly.</p>
+<p>When using multiple Kodi clients do not copy Kodi&#39;s database (i.e. <code>myvideosXYZ.db</code>, <code>jellyfin.db</code>) files from one client to the other to try and reduce initial syncing time. This will work, but it will confuse Jellyfin and all the clients will be seen as the same client, causing sync between these clients not to work correctly.</p>
 </article>
           </div>
           
