@@ -644,7 +644,7 @@ public class NotificationsController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController__ctor_MediaBrowser_Controller_Notifications_INotificationManager_MediaBrowser_Controller_Library_IUserManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.%23ctor(MediaBrowser.Controller.Notifications.INotificationManager%2CMediaBrowser.Controller.Library.IUserManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L33">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController__ctor_" data-uid="Jellyfin.Api.Controllers.NotificationsController.#ctor*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController__ctor_MediaBrowser_Controller_Notifications_INotificationManager_MediaBrowser_Controller_Library_IUserManager_" data-uid="Jellyfin.Api.Controllers.NotificationsController.#ctor(MediaBrowser.Controller.Notifications.INotificationManager,MediaBrowser.Controller.Library.IUserManager)">NotificationsController(INotificationManager, IUserManager)</h4>
@@ -683,13 +683,13 @@ public class NotificationsController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_CreateAdminNotification_System_String_System_Nullable_MediaBrowser_Model_Notifications_NotificationLevel__System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.CreateAdminNotification(System.String%2CSystem.Nullable%7BMediaBrowser.Model.Notifications.NotificationLevel%7D%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_CreateAdminNotification_Jellyfin_Api_Models_NotificationDtos_AdminNotificationDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.CreateAdminNotification(Jellyfin.Api.Models.NotificationDtos.AdminNotificationDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L95">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L93">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_CreateAdminNotification_" data-uid="Jellyfin.Api.Controllers.NotificationsController.CreateAdminNotification*"></a>
-  <h4 id="Jellyfin_Api_Controllers_NotificationsController_CreateAdminNotification_System_String_System_Nullable_MediaBrowser_Model_Notifications_NotificationLevel__System_String_System_String_" data-uid="Jellyfin.Api.Controllers.NotificationsController.CreateAdminNotification(System.String,System.Nullable{MediaBrowser.Model.Notifications.NotificationLevel},System.String,System.String)">CreateAdminNotification(String, Nullable&lt;NotificationLevel&gt;, String, String)</h4>
+  <h4 id="Jellyfin_Api_Controllers_NotificationsController_CreateAdminNotification_Jellyfin_Api_Models_NotificationDtos_AdminNotificationDto_" data-uid="Jellyfin.Api.Controllers.NotificationsController.CreateAdminNotification(Jellyfin.Api.Models.NotificationDtos.AdminNotificationDto)">CreateAdminNotification(AdminNotificationDto)</h4>
   <div class="markdown level1 summary"><p>Sends a notification to all admins.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -697,7 +697,7 @@ public class NotificationsController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Admin&quot;)]
 [ProducesResponseType(204)]
-public ActionResult CreateAdminNotification([FromQuery] string url, [FromQuery] NotificationLevel? level, [FromQuery] string name = &quot;&quot;, [FromQuery] string description = &quot;&quot;)</code></pre>
+public ActionResult CreateAdminNotification([FromBody, Required] AdminNotificationDto notificationDto)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -710,27 +710,9 @@ public ActionResult CreateAdminNotification([FromQuery] string url, [FromQuery] 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">url</span></td>
-        <td><p>The URL of the notification.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Notifications.NotificationLevel.html">NotificationLevel</a>&gt;</td>
-        <td><span class="parametername">level</span></td>
-        <td><p>The level of the notification.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of the notification.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The description of the notification.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.NotificationDtos.AdminNotificationDto.html">AdminNotificationDto</a></td>
+        <td><span class="parametername">notificationDto</span></td>
+        <td><p>The notification request.</p>
 </td>
       </tr>
     </tbody>
@@ -756,7 +738,7 @@ public ActionResult CreateAdminNotification([FromQuery] string url, [FromQuery] 
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_GetNotifications.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.GetNotifications%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L44">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_GetNotifications_" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotifications*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_GetNotifications" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotifications">GetNotifications()</h4>
@@ -790,7 +772,7 @@ public ActionResult&lt;NotificationResultDto&gt; GetNotifications()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_GetNotificationServices.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.GetNotificationServices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L79">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L80">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationServices_" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationServices*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationServices" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationServices">GetNotificationServices()</h4>
@@ -824,7 +806,7 @@ public IEnumerable&lt;NameIdPair&gt; GetNotificationServices()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_GetNotificationsSummary.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.GetNotificationsSummary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L56">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationsSummary_" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationsSummary*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationsSummary" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationsSummary">GetNotificationsSummary()</h4>
@@ -858,7 +840,7 @@ public ActionResult&lt;NotificationsSummaryDto&gt; GetNotificationsSummary()</co
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_GetNotificationTypes.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.GetNotificationTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L68">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationTypes_" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationTypes*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_GetNotificationTypes" data-uid="Jellyfin.Api.Controllers.NotificationsController.GetNotificationTypes">GetNotificationTypes()</h4>
@@ -892,7 +874,7 @@ public IEnumerable&lt;NotificationTypeInfo&gt; GetNotificationTypes()</code></pr
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_SetRead.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.SetRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L126">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L119">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_SetRead_" data-uid="Jellyfin.Api.Controllers.NotificationsController.SetRead*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_SetRead" data-uid="Jellyfin.Api.Controllers.NotificationsController.SetRead">SetRead()</h4>
@@ -926,7 +908,7 @@ public ActionResult SetRead()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController_SetUnread.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController.SetUnread%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L131">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_NotificationsController_SetUnread_" data-uid="Jellyfin.Api.Controllers.NotificationsController.SetUnread*"></a>
   <h4 id="Jellyfin_Api_Controllers_NotificationsController_SetUnread" data-uid="Jellyfin.Api.Controllers.NotificationsController.SetUnread">SetUnread()</h4>
@@ -970,7 +952,7 @@ public ActionResult SetUnread()</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_NotificationsController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.NotificationsController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L21" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/NotificationsController.cs/#L22" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

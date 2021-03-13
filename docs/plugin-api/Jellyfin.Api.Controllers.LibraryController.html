@@ -1546,13 +1546,13 @@ public ActionResult&lt;ThemeMediaResult&gt; GetThemeVideos([FromRoute, Required]
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryController_PostUpdatedMedia_Jellyfin_Api_Models_LibraryDtos_MediaUpdateInfoDto___.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryController.PostUpdatedMedia(Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_LibraryController_PostUpdatedMedia_Jellyfin_Api_Models_LibraryDtos_MediaUpdateInfoDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.LibraryController.PostUpdatedMedia(Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/LibraryController.cs/#L596">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_LibraryController_PostUpdatedMedia_" data-uid="Jellyfin.Api.Controllers.LibraryController.PostUpdatedMedia*"></a>
-  <h4 id="Jellyfin_Api_Controllers_LibraryController_PostUpdatedMedia_Jellyfin_Api_Models_LibraryDtos_MediaUpdateInfoDto___" data-uid="Jellyfin.Api.Controllers.LibraryController.PostUpdatedMedia(Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto[])">PostUpdatedMedia(MediaUpdateInfoDto[])</h4>
+  <h4 id="Jellyfin_Api_Controllers_LibraryController_PostUpdatedMedia_Jellyfin_Api_Models_LibraryDtos_MediaUpdateInfoDto_" data-uid="Jellyfin.Api.Controllers.LibraryController.PostUpdatedMedia(Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto)">PostUpdatedMedia(MediaUpdateInfoDto)</h4>
   <div class="markdown level1 summary"><p>Reports that new movies have been added by an external source.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1561,7 +1561,7 @@ public ActionResult&lt;ThemeMediaResult&gt; GetThemeVideos([FromRoute, Required]
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Library/Media/Updated&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public ActionResult PostUpdatedMedia([FromBody, Required] MediaUpdateInfoDto[] updates)</code></pre>
+public ActionResult PostUpdatedMedia([FromBody, Required] MediaUpdateInfoDto dto)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1574,9 +1574,9 @@ public ActionResult PostUpdatedMedia([FromBody, Required] MediaUpdateInfoDto[] u
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto.html">MediaUpdateInfoDto</a>[]</td>
-        <td><span class="parametername">updates</span></td>
-        <td><p>A list of updated media paths.</p>
+        <td><a class="xref" href="Jellyfin.Api.Models.LibraryDtos.MediaUpdateInfoDto.html">MediaUpdateInfoDto</a></td>
+        <td><span class="parametername">dto</span></td>
+        <td><p>The update paths.</p>
 </td>
       </tr>
     </tbody>
@@ -1725,7 +1725,7 @@ public ActionResult PostUpdatedSeries([FromQuery] string tvdbId)</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;Library/Refresh&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpPost(&quot;Library/Refresh&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 public Task&lt;ActionResult&gt; RefreshLibrary()</code></pre>
