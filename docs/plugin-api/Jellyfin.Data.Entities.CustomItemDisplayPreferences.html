@@ -125,22 +125,6 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L32">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences__ctor_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences__ctor" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.#ctor">CustomItemDisplayPreferences()</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.CustomItemDisplayPreferences.html">CustomItemDisplayPreferences</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected CustomItemDisplayPreferences()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences__ctor_System_Guid_System_Guid_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.%23ctor(System.Guid%2CSystem.Guid%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
@@ -153,7 +137,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CustomItemDisplayPreferences(Guid userId, Guid itemId, string client, string preferenceKey, string preferenceValue)</code></pre>
+    <pre><code class="lang-csharp hljs">public CustomItemDisplayPreferences(Guid userId, Guid itemId, string client, string key, string value)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,13 +169,13 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">preferenceKey</span></td>
+        <td><span class="parametername">key</span></td>
         <td><p>The preference key.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">preferenceValue</span></td>
+        <td><span class="parametername">value</span></td>
         <td><p>The preference value.</p>
 </td>
       </tr>
@@ -204,7 +188,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_Client.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.Client%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L60">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Client_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Client*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Client" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Client">Client</h4>
@@ -213,8 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[MaxLength(32)]
+    <pre><code class="lang-csharp hljs">[MaxLength(32)]
 [StringLength(32)]
 public string Client { get; set; }</code></pre>
   </div>
@@ -241,7 +224,7 @@ public string Client { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L35">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Id_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Id" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Id">Id</h4>
@@ -276,7 +259,7 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_ItemId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.ItemId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L52">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_ItemId_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.ItemId*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_ItemId" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.ItemId">ItemId</h4>
@@ -310,7 +293,7 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_Key.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.Key%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L70">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Key_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Key*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Key" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Key">Key</h4>
@@ -319,8 +302,7 @@ public int Id { get; protected set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public string Key { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Key { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -345,7 +327,7 @@ public string Key { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_UserId.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.UserId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L44">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_UserId_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.UserId*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_UserId" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.UserId">UserId</h4>
@@ -379,7 +361,7 @@ public string Key { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_CustomItemDisplayPreferences_Value.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.CustomItemDisplayPreferences.Value%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L87">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/CustomItemDisplayPreferences.cs/#L78">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Value_" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Value*"></a>
   <h4 id="Jellyfin_Data_Entities_CustomItemDisplayPreferences_Value" data-uid="Jellyfin.Data.Entities.CustomItemDisplayPreferences.Value">Value</h4>
@@ -388,8 +370,7 @@ public string Key { get; set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-public string Value { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Value { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

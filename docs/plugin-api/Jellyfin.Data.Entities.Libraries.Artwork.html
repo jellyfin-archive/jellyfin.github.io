@@ -129,38 +129,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork__ctor_System_String_Jellyfin_Data_Enums_ArtKind_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.%23ctor(System.String%2CJellyfin.Data.Enums.ArtKind)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L21">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_Libraries_Artwork__ctor" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.#ctor">Artwork()</h4>
+  <h4 id="Jellyfin_Data_Entities_Libraries_Artwork__ctor_System_String_Jellyfin_Data_Enums_ArtKind_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.#ctor(System.String,Jellyfin.Data.Enums.ArtKind)">Artwork(String, ArtKind)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.Artwork.html">Artwork</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Artwork()</code></pre>
-  </div>
-  <h5 id="Jellyfin_Data_Entities_Libraries_Artwork__ctor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork__ctor_System_String_Jellyfin_Data_Enums_ArtKind_Jellyfin_Data_Interfaces_IHasArtwork_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.%23ctor(System.String%2CJellyfin.Data.Enums.ArtKind%2CJellyfin.Data.Interfaces.IHasArtwork)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L22">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_Libraries_Artwork__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_Libraries_Artwork__ctor_System_String_Jellyfin_Data_Enums_ArtKind_Jellyfin_Data_Interfaces_IHasArtwork_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.#ctor(System.String,Jellyfin.Data.Enums.ArtKind,Jellyfin.Data.Interfaces.IHasArtwork)">Artwork(String, ArtKind, IHasArtwork)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.Artwork.html">Artwork</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Artwork(string path, ArtKind kind, IHasArtwork owner)</code></pre>
+    <pre><code class="lang-csharp hljs">public Artwork(string path, ArtKind kind)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -184,12 +165,6 @@
         <td><p>The kind of art.</p>
 </td>
       </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Interfaces.IHasArtwork.html">IHasArtwork</a></td>
-        <td><span class="parametername">owner</span></td>
-        <td><p>The owner.</p>
-</td>
-      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -199,7 +174,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L51">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L38">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork_Id_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_Artwork_Id" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Id">Id</h4>
@@ -234,7 +209,7 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork_Kind.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.Kind%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L71">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L57">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork_Kind_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Kind*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_Artwork_Kind" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Kind">Kind</h4>
@@ -268,7 +243,7 @@ public int Id { get; protected set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork_Path.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.Path%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L60">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L47">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork_Path_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Path*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_Artwork_Path" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.Path">Path</h4>
@@ -277,8 +252,7 @@ public int Id { get; protected set; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Required]
-[MaxLength(65535)]
+    <pre><code class="lang-csharp hljs">[MaxLength(65535)]
 [StringLength(65535)]
 public string Path { get; set; }</code></pre>
   </div>
@@ -305,7 +279,7 @@ public string Path { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L74">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L60">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork_RowVersion_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.RowVersion*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_Artwork_RowVersion" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.RowVersion">RowVersion</h4>
@@ -339,7 +313,7 @@ public uint RowVersion { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_Artwork_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.Artwork.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/Artwork.cs/#L64">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_Artwork_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.OnSavingChanges*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_Artwork_OnSavingChanges" data-uid="Jellyfin.Data.Entities.Libraries.Artwork.OnSavingChanges">OnSavingChanges()</h4>

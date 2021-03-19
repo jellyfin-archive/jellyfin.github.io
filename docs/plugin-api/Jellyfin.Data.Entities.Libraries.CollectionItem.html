@@ -129,38 +129,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem__ctor.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_Jellyfin_Data_Entities_Libraries_LibraryItem_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.%23ctor(Jellyfin.Data.Entities.Libraries.LibraryItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L47">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L16">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.#ctor">CollectionItem()</h4>
+  <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_Jellyfin_Data_Entities_Libraries_LibraryItem_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.#ctor(Jellyfin.Data.Entities.Libraries.LibraryItem)">CollectionItem(LibraryItem)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.CollectionItem.html">CollectionItem</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected CollectionItem()</code></pre>
-  </div>
-  <h5 id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Default constructor. Protected due to required properties, but present because EF needs it.</p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_Jellyfin_Data_Entities_Libraries_Collection_Jellyfin_Data_Entities_Libraries_CollectionItem_Jellyfin_Data_Entities_Libraries_CollectionItem_.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.%23ctor(Jellyfin.Data.Entities.Libraries.Collection%2CJellyfin.Data.Entities.Libraries.CollectionItem%2CJellyfin.Data.Entities.Libraries.CollectionItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L19">View Source</a>
-  </span>
-  <a id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.#ctor*"></a>
-  <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem__ctor_Jellyfin_Data_Entities_Libraries_Collection_Jellyfin_Data_Entities_Libraries_CollectionItem_Jellyfin_Data_Entities_Libraries_CollectionItem_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.#ctor(Jellyfin.Data.Entities.Libraries.Collection,Jellyfin.Data.Entities.Libraries.CollectionItem,Jellyfin.Data.Entities.Libraries.CollectionItem)">CollectionItem(Collection, CollectionItem, CollectionItem)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Data.Entities.Libraries.CollectionItem.html">CollectionItem</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public CollectionItem(Collection collection, CollectionItem previous, CollectionItem next)</code></pre>
+    <pre><code class="lang-csharp hljs">public CollectionItem(LibraryItem libraryItem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -173,21 +154,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Libraries.Collection.html">Collection</a></td>
-        <td><span class="parametername">collection</span></td>
-        <td><p>The collection.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Libraries.CollectionItem.html">CollectionItem</a></td>
-        <td><span class="parametername">previous</span></td>
-        <td><p>The previous item.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.Libraries.CollectionItem.html">CollectionItem</a></td>
-        <td><span class="parametername">next</span></td>
-        <td><p>The next item.</p>
+        <td><a class="xref" href="Jellyfin.Data.Entities.Libraries.LibraryItem.html">LibraryItem</a></td>
+        <td><span class="parametername">libraryItem</span></td>
+        <td><p>The library item.</p>
 </td>
       </tr>
     </tbody>
@@ -199,7 +168,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_Id.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L57">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L27">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_Id_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_Id" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Id">Id</h4>
@@ -234,7 +203,7 @@ public int Id { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_LibraryItem.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.LibraryItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L40">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_LibraryItem_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.LibraryItem*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_LibraryItem" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.LibraryItem">LibraryItem</h4>
@@ -268,7 +237,7 @@ public int Id { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_Next.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.Next%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L48">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_Next_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Next*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_Next" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Next">Next</h4>
@@ -302,7 +271,7 @@ public int Id { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_Previous.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.Previous%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L56">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_Previous_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Previous*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_Previous" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.Previous">Previous</h4>
@@ -336,7 +305,7 @@ public int Id { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_RowVersion.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.RowVersion%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L61">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L31">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_RowVersion_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.RowVersion*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_RowVersion" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.RowVersion">RowVersion</h4>
@@ -370,7 +339,7 @@ public uint RowVersion { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem_OnSavingChanges.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem.OnSavingChanges%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L89">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L59">View Source</a>
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_CollectionItem_OnSavingChanges_" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.OnSavingChanges*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_CollectionItem_OnSavingChanges" data-uid="Jellyfin.Data.Entities.Libraries.CollectionItem.OnSavingChanges">OnSavingChanges()</h4>
@@ -400,7 +369,7 @@ public uint RowVersion { get; set; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Data_Entities_Libraries_CollectionItem.md&amp;value=---%0Auid%3A%20Jellyfin.Data.Entities.Libraries.CollectionItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Data/Entities/Libraries/CollectionItem.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
