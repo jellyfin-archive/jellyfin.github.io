@@ -102,10 +102,9 @@
 <p>Allows clients to discover Jellyfin on the local network. A broadcast message to this port with <code>Who is JellyfinServer?</code> will get a JSON response that includes the server address, ID, and name.</p>
 <h4 id="dynamic-ports">Dynamic Ports</h4>
 <p>Live TV devices will often use a random UDP port for HDHomeRun devices. The server will select an unused port on startup to connect to these tuner devices.</p>
-<h3 id="health-check-endpoint">Health Check Endpoint</h3>
-<p>Jellyfin exposes the <code>/health</code> endpoint designated for checking the status of the underlying service. Currently this will verify HTTP and database connectivity and return a <code>200 OK</code> response if successful.</p>
-<pre><code class="lang-sh">curl http://myserver:8096/health
-</code></pre><h2 id="self-signed-certificate">Self-Signed Certificate</h2>
+<h3 id="monitoring-endpoints">Monitoring Endpoints</h3>
+<p>See <a class="xref" href="monitoring.html">Monitoring</a> for details on the monitoring endpoints that Jellyfin provides.</p>
+<h2 id="self-signed-certificate">Self-Signed Certificate</h2>
 <p><a href="https://www.sslshopper.com/article-most-common-openssl-commands.html">See here for more information.</a></p>
 <p>Create a private key.</p>
 <pre><code class="lang-sh">openssl req -x509 -newkey rsa:4096 -keyout ./privkey.pem -out cert.pem -days 365 -nodes -subj &#39;/CN=jellyfin.lan&#39;
