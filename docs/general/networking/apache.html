@@ -83,8 +83,8 @@
 <pre><code class="lang-conf">&lt;VirtualHost *:80&gt;
     ServerName DOMAIN_NAME
 
-    # Uncomment for HTTP to HTTPS redirect
-    # Redirect permanent / https://DOMAIN_NAME
+    # Comment to prevent HTTP to HTTPS redirect
+    Redirect permanent / https://DOMAIN_NAME
 
     ErrorLog /var/log/apache2/DOMAIN_NAME-error.log
     CustomLog /var/log/apache2/DOMAIN_NAME-access.log combined
@@ -102,7 +102,7 @@
 
     # Letsencrypt&#39;s certbot will place a file in this folder when updating/verifying certs
     # This line will tell apache to not to use the proxy for this folder.
-    ProxyPass /.well_known/ !
+    ProxyPass &quot;/.well-known/&quot; &quot;!&quot;
 
     ProxyPass &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
     ProxyPassReverse &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
