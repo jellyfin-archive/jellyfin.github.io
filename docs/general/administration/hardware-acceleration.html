@@ -140,8 +140,6 @@
 <p>Each hardware acceleration type, as well as each Jellyfin installation type, requires different setup options before it can be used. It is always best to consult the FFMpeg documentation on the acceleration type you choose for the latest information.</p>
 <h3 id="acceleration-on-docker">Acceleration on Docker</h3>
 <p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine. VAAPI may require the <code>render</code> group added to the docker permissions. The <code>render</code> group id can be discovered in /etc/group such as <code>render:x:122:</code>.</p>
-<div class="NOTE"><h5>Note</h5><p><a href="https://github.com/docker/compose/issues/6691">NVIDIA GPUs</a> aren&#39;t currently supported in docker-compose.</p>
-</div>
 <p>You can use <code>docker run</code> to start the server with a command like the one below.</p>
 <pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
@@ -173,75 +171,27 @@ services:
       - /dev/dri/card0:/dev/dri/card0
       # RPi 4
       - /dev/vchiq:/dev/vchiq
-</code></pre><h3 id="debian-docker-nvidia">Debian Docker Nvidia</h3>
+</code></pre><h3 id="linux-docker-nvidia-nvenc">Linux Docker NVIDIA NVENC</h3>
 <p>In order to achieve hardware acceleration using docker, several steps are required.</p>
 <p>Prerequisites:</p>
-<p><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)">NVIDIA Docker Installation</a></p>
+<p><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#getting-started">NVIDIA Container Toolkit installation</a></p>
 <ul>
 <li>GNU/Linux x86_64 with kernel version &gt; 3.10</li>
-<li>Docker &gt;= 1.12</li>
+<li>Docker &gt;= 19.03</li>
 <li>NVIDIA GPU with Architecture &gt; Fermi (2.1)</li>
-<li>NVIDIA drivers &gt;= 418.30</li>
+<li>NVIDIA drivers &gt;= 361.93</li>
 </ul>
-<p>Confirm that your GPU shows up with this command.</p>
-<pre><code class="lang-sh">lspci | grep VGA
-</code></pre><p>Update your host so there is no chance of outdated software causing issues.</p>
-<pre><code class="lang-sh">apt-get update &amp;&amp; apt-get dist-upgrade -y
-</code></pre><p>Install curl which will be used to download the required files.</p>
-<pre><code class="lang-sh">apt-get install curl
-</code></pre><p>Edit <code>sources.list</code> in <code>/etc/apt/sources.list</code> and add <code>non-free contrib</code> to each source as required.</p>
-<pre><code class="lang-data">deb http://deb.debian.org/debian/ buster main
-</code></pre><p>The line above should be modified to match the following line as an example.</p>
-<pre><code class="lang-data">deb http://deb.debian.org/debian/ buster main non-free contrib
-</code></pre><p>Download and add the sources for the Nvidia docker container.</p>
-<pre><code class="lang-sh">curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
-curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
-</code></pre><p>Update your package list again to download the latest software available from the new repository.</p>
-<pre><code class="lang-sh">apt-get update
-</code></pre><p>Install linux-headers with the following command.</p>
-<pre><code class="lang-sh">apt-get install linux-headers-$(uname -r | sed &#39;s/[^-]*-[^-]*-//&#39;)
-</code></pre><p>Alternatively, Install linux-headers using backports.</p>
-<pre><code class="lang-sh">distribution=$(. /etc/*-release;echo $VERSION_CODENAME)
-apt-get install -t $distribution-backports linux-headers-$(uname -r | sed &#39;s/[^-]*-[^-]*-//&#39;)
-</code></pre><p>Install Nvidia docker2 from the repository.</p>
-<pre><code class="lang-sh">apt-get install nvidia-docker2
-</code></pre><p>When prompted to choose to keep or install the maintainer package file type <code>y</code> to install the maintainer version.</p>
-<p>After the install you may want to add nvidia as default runtime: editing <code>/etc/docker/daemon.json</code> like this:</p>
-<pre><code class="lang-json">{
-    &quot;default-runtime&quot;: &quot;nvidia&quot;,
-    &quot;runtimes&quot;: {
-        &quot;nvidia&quot;: {
-            &quot;path&quot;: &quot;nvidia-container-runtime&quot;,
-            &quot;runtimeArgs&quot;: []
-        }
-    }
-}
-</code></pre><p>Restart any docker services currently running.</p>
-<pre><code class="lang-sh">sudo pkill -SIGHUP docker
-</code></pre><p>Install nvidia drivers and dependencies.</p>
-<pre><code class="lang-sh">distribution=$(. /etc/*-release;echo $VERSION_CODENAME)
-apt-get install -t $distribution-backports nvidia-driver libnvcuvid1 libnvidia-encode1 libcuda1 nvidia-smi
-</code></pre><p>Reboot your host to apply all changes.</p>
-<pre><code class="lang-sh">reboot now
-</code></pre><p>Validate that your driver and docker are correctly set up with this driver test.</p>
-<pre><code class="lang-sh">nvidia-smi
-docker run --gpus 0 nvidia/cuda:9.0-base nvidia-smi
-</code></pre><p>Validate access to needed resources from host and docker.</p>
-<pre><code class="lang-sh">ldconfig -p | grep cuvid
-ldconfig -p | grep libnvidia-encode.so.1
-</code></pre><p>Start your container adding those environment parameters.</p>
+<p>Follow the instructions in the link above to install the NVIDIA Container Toolkit for your Linux distribution.</p>
+<p>Start your container adding these parameters:</p>
 <pre><code class="lang-sh">-e NVIDIA_DRIVER_CAPABILITIES=all \
 -e NVIDIA_VISIBLE_DEVICES=all \
---runtime=nvidia \
 --gpus all \
-</code></pre><p>A complete run command would look like this.</p>
+</code></pre><p>A complete run command would look like this:</p>
 <pre><code class="lang-sh">docker run -d \
  --name=jellyfin \
  -e NVIDIA_DRIVER_CAPABILITIES=all \
  -e NVIDIA_VISIBLE_DEVICES=all \
  --gpus all \
- --runtime=nvidia \
  -p 8096:8096 \
  -p 8920:8920 \
  -v /config:/config \
@@ -249,21 +199,30 @@ ldconfig -p | grep libnvidia-encode.so.1
  -v /cache:/cache \
  --restart unless-stopped \
  jellyfin/jellyfin
-</code></pre><p>There are some special steps when running with the following option.</p>
+</code></pre><p>Or with docker-compose &gt;1.28, add the <code>deploy</code> and <code>environment</code> parts to your Jellyfin service:</p>
+<pre><code class="lang-yaml">services:
+  jellyfin:
+    image: jellyfin/jellyfin
+  # ... your Jellyfin config
+  environment:
+    NVIDIA_DRIVER_CAPABILITIES: all
+    NVIDIA_VISIBLE_DEVICES: all
+  deploy:
+    resources:
+      reservations:
+        devices:
+        - capabilities: [gpu]
+</code></pre><p>There are some special steps when running with the following option:</p>
 <pre><code class="lang-sh">--user 1000:1000
-</code></pre><p>You may need to add this user to the video group.</p>
+</code></pre><p>You may need to add this user to the video group on your host machine:</p>
 <pre><code class="lang-sh">usermod -aG video user
-</code></pre><p>Once the container is started you can again validate access to the host resources.</p>
+</code></pre><p>Once the container is started you can again validate access to the host resources:</p>
 <pre><code class="lang-sh">docker exec -it jellyfin nvidia-smi
-</code></pre><p>If you get driver information, everything is fine but if you get an error like <code>couldn&#39;t find libnvidia-ml.so library in your system</code> you need to run the following command.</p>
+</code></pre><p>If you get driver information, everything is fine but if you get an error like <code>couldn&#39;t find libnvidia-ml.so library in your system</code> you need to run the following command:</p>
 <pre><code class="lang-sh">docker exec -it jellyfin ldconfig
-</code></pre><p>After that, you should ensure the Nvidia driver loads correctly.</p>
-<p>Now go to the Jellyfin playback settings, enable Nvidia NVENC and select your target codecs depending on what your GPU supports. Try to play any file needing a transcode by changing the bitrate.</p>
-<p>Check the transcode logs to make sure everything is working properly.</p>
-<pre><code class="lang-data">Stream #0:0 -&gt; #0:0 (h264 (h264_cuvid) -&gt; h264 (h264_nvenc))
-Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
-</code></pre><h3 id="configuring-opencl-acceleratedvpp-tone-mapping">Configuring OpenCL Accelerated/VPP Tone Mapping</h3>
-<p>OpenCL tone mapping with Nvidia NVENC, AMD AMF, and Intel VAAPI is through OpenCL image support.</p>
+</code></pre><p>After that, you should ensure the NVIDIA driver loads correctly.</p>
+<h3 id="configuring-opencl-acceleratedvpp-tone-mapping">Configuring OpenCL Accelerated/VPP Tone Mapping</h3>
+<p>OpenCL tone mapping with NVIDIA NVENC, AMD AMF, and Intel VAAPI is through OpenCL image support.</p>
 <p>Full hardware based VPP tonemapping is supported on Intel VAAPI and QSV on Linux.</p>
 <table>
 <thead>
@@ -310,11 +269,11 @@ Stream #0:2 -&gt; #0:1 (ac3 (native) -&gt; aac (native))
 <div class="NOTE"><h5>Note</h5><p>Make sure the hardware acceleration is well configured before reading this section.</p>
 </div>
 <ol>
-<li><p>On Windows: Install the latest Nvidia or AMD drivers.</p>
+<li><p>On Windows: Install the latest NVIDIA or AMD drivers.</p>
 </li>
 <li><p>On Linux or docker:</p>
 <ul>
-<li><p>For Nvidia cards, install <code>nvidia-opencl-icd</code> on Debian/Ubuntu:</p>
+<li><p>For NVIDIA cards, install <code>nvidia-opencl-icd</code> on Debian/Ubuntu:</p>
 <pre><code class="lang-sh">sudo apt update
 sudo apt install nvidia-opencl-icd
 </code></pre><p>If presented with multiple package options, choose the one that matches the version of your current nvidia driver (<code>apt list --installed | grep nvidia</code>).</p>
