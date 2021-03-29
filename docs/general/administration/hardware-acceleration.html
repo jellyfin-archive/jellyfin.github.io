@@ -118,6 +118,8 @@
 <p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>. Both Intel iGPU and AMD GPU can use VAAPI.</p>
 <div class="NOTE"><h5>Note</h5><p>AMD GPU requires open source driver Mesa 20.1 or higher to support hardware decoding HEVC.</p>
 </div>
+<div class="NOTE"><h5>Note</h5><p>As of 10.7.1, the Docker image uses Debian 10 and thus Mesa 18.3.6. To upgrade it, you&#39;ll need to make your own image based on a more recent distribution.</p>
+</div>
 <h2 id="amd-amf">AMD AMF</h2>
 <p>AMF is now available on Windows and Linux, but since AMD has not implemented the HW decoder and scaler in ffmpeg, the decoding speed may not be as expected. The closed source driver <code>amdgpu-pro</code> is required when using AMF on Linux.</p>
 <div class="NOTE"><h5>Note</h5><p>Most Zen CPUs do not come with integrated graphics. You will need a dedicated GPU (dGPU) or a Zen CPU with integrated graphics for hardware acceleration. If your Zen CPU is suffixed with a &quot;G&quot; or &quot;GE&quot; in model name, you have integrated graphics.</p>
