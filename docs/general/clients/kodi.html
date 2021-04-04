@@ -179,6 +179,15 @@ This will keep your media libraries up to date without waiting for a periodic re
 </li>
 </ul>
 </li>
+<li>Mounted share<ul>
+<li>If you have mounted your network share, you can reference the local mount point. This can be more performant but generally means it only works for one type of operating system, given the difference between the file systems<ul>
+<li><code>/mnt/media</code> (Linux)</li>
+<li><code>Z:\media</code> (Windows)</li>
+<li><code>/Volumes/media</code> (Mac OS)</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -188,7 +197,10 @@ This will keep your media libraries up to date without waiting for a periodic re
 <li>Within Kodi, navigate to the settings menu and select &quot;File manager&quot;</li>
 <li>Select &quot;Add source&quot;</li>
 <li>Select &quot;Browse&quot; and &quot;Add network location&quot;</li>
-<li>Create either a NFS or SMB location from the selection box and fill in the necessary information about your network share</li>
+<li>Create either a NFS or SMB location from the selection box and fill in the necessary information about your network share<ul>
+<li>If you are using a mounted share, browse to the mount point on your file system rather than the network share</li>
+</ul>
+</li>
 <li>Select your newly created location and choose &quot;Ok&quot;</li>
 <li>Give your media source a name and choose &quot;Ok&quot;</li>
 <li>Go to Add-Ons -&gt; Jellyfin -&gt; Manage Libraries -&gt; Add Libraries</li>
