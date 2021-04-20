@@ -83,7 +83,8 @@
   
   <h1 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo" class="text-break">Class ServerDiscoveryInfo
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The server discovery info model.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -120,6 +121,60 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ServerDiscoveryInfo</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_ApiClient_ServerDiscoveryInfo__ctor_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.%23ctor(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L15">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo__ctor_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo__ctor_System_String_System_String_System_String_System_String_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.#ctor(System.String,System.String,System.String,System.String)">ServerDiscoveryInfo(String, String, String, String)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.html">ServerDiscoveryInfo</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ServerDiscoveryInfo(string address, string id, string name, string endpointAddress = null)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">address</span></td>
+        <td><p>The server address.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">id</span></td>
+        <td><p>The server id.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The server name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">endpointAddress</span></td>
+        <td><p>The endpoint address.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -127,16 +182,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Address.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Address%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L12">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L26">View Source</a>
   </span>
   <a id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Address_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Address*"></a>
   <h4 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Address" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Address">Address</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the address.</p>
+  <div class="markdown level1 summary"><p>Gets the address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Address { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Address { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,8 +204,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The address.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -159,16 +213,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_EndpointAddress.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.EndpointAddress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L30">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_EndpointAddress_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.EndpointAddress*"></a>
   <h4 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_EndpointAddress" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.EndpointAddress">EndpointAddress</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the endpoint address.</p>
+  <div class="markdown level1 summary"><p>Gets the endpoint address.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string EndpointAddress { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string EndpointAddress { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,8 +235,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The endpoint address.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -191,16 +244,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Id.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Id%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L31">View Source</a>
   </span>
   <a id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Id_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Id*"></a>
   <h4 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Id" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Id">Id</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the server identifier.</p>
+  <div class="markdown level1 summary"><p>Gets the server identifier.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Id { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,8 +266,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The server identifier.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -223,16 +275,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L24">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/ApiClient/ServerDiscoveryInfo.cs/#L36">View Source</a>
   </span>
   <a id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Name_" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Name*"></a>
   <h4 id="MediaBrowser_Model_ApiClient_ServerDiscoveryInfo_Name" data-uid="MediaBrowser.Model.ApiClient.ServerDiscoveryInfo.Name">Name</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the name.</p>
+  <div class="markdown level1 summary"><p>Gets the name.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Name { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,8 +297,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>The name.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
