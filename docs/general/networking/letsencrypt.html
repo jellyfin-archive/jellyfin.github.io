@@ -124,6 +124,7 @@ service haproxy reload
 <pre><code class="lang-data">@monthly /usr/bin/certbot renew --renew-hook &quot;/usr/local/bin/letsencrypt-renew.sh&quot; &gt;&gt; /var/log/letsencrypt-renewal.log
 </code></pre><h3 id="nginx">Nginx</h3>
 <p>After installing Certbot and the Nginx plugin with <code>sudo apt install certbot python3-certbot-nginx</code>, generate the certificate.</p>
+<p><strong>Note</strong>: For Fedora Linux distributions (e.g. CentOS 8) use <code>sudo dnf install python3-certbot-nginx</code> to install the Nginx plugin.</p>
 <pre><code class="lang-sh">sudo certbot --nginx --agree-tos --redirect --hsts --staple-ocsp --email YOUR_EMAIL -d DOMAIN_NAME
 </code></pre><p>Add the <code>--rsa-key-size 4096</code> parameter if you want a 4096 bit key instead.</p>
 <p>Copy and paste the whole Nginx sample configuration file from above, changing the parameters according to your setup and uncommenting the lines.</p>
