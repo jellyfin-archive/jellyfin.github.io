@@ -118,7 +118,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Model.dll</h6>
   <h5 id="MediaBrowser_Model_Dlna_MediaFormatProfileResolver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class MediaFormatProfileResolver</code></pre>
+    <pre><code class="lang-csharp hljs">public static class MediaFormatProfileResolver</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -127,7 +127,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveAudioFormat_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveAudioFormat(System.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/MediaFormatProfileResolver.cs/#L374">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/MediaFormatProfileResolver.cs/#L367">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveAudioFormat_" data-uid="MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveAudioFormat*"></a>
   <h4 id="MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveAudioFormat_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveAudioFormat(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})">ResolveAudioFormat(String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
@@ -135,7 +135,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaFormatProfile? ResolveAudioFormat(string container, int? bitrate, int? frequency, int? channels)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MediaFormatProfile? ResolveAudioFormat(string container, int? bitrate, int? frequency, int? channels)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,7 +189,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveImageFormat_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveImageFormat(System.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/MediaFormatProfileResolver.cs/#L476">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/MediaFormatProfileResolver.cs/#L469">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveImageFormat_" data-uid="MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveImageFormat*"></a>
   <h4 id="MediaBrowser_Model_Dlna_MediaFormatProfileResolver_ResolveImageFormat_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MediaBrowser.Model.Dlna.MediaFormatProfileResolver.ResolveImageFormat(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">ResolveImageFormat(String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
@@ -197,7 +197,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MediaFormatProfile? ResolveImageFormat(string container, int? width, int? height)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MediaFormatProfile? ResolveImageFormat(string container, int? width, int? height)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -254,7 +254,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string[] ResolveVideoFormat(string container, string videoCodec, string audioCodec, int? width, int? height, TransportStreamTimestamp timestampType)</code></pre>
+    <pre><code class="lang-csharp hljs">public static MediaFormatProfile[] ResolveVideoFormat(string container, string videoCodec, string audioCodec, int? width, int? height, TransportStreamTimestamp timestampType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -308,15 +308,11 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>[]</td>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.MediaFormatProfile.html">MediaFormatProfile</a>[]</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
-  </div>
 </article>
           </div>
           

@@ -120,22 +120,22 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ContentFeatureBuilder</code></pre>
   </div>
-  <h3 id="constructors">Constructors
+  <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder__ctor_MediaBrowser_Model_Dlna_DeviceProfile_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.%23ctor(MediaBrowser.Model.Dlna.DeviceProfile)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_Nullable_System_Int64__MediaBrowser_Model_Dlna_TranscodeSeekInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader(MediaBrowser.Model.Dlna.DeviceProfile%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean%2CSystem.Nullable%7BSystem.Int64%7D%2CMediaBrowser.Model.Dlna.TranscodeSeekInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L58">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_Dlna_ContentFeatureBuilder__ctor_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.#ctor*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder__ctor_MediaBrowser_Model_Dlna_DeviceProfile_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.#ctor(MediaBrowser.Model.Dlna.DeviceProfile)">ContentFeatureBuilder(DeviceProfile)</h4>
+  <a id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader*"></a>
+  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_Nullable_System_Int64__MediaBrowser_Model_Dlna_TranscodeSeekInfo_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader(MediaBrowser.Model.Dlna.DeviceProfile,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int64},MediaBrowser.Model.Dlna.TranscodeSeekInfo)">BuildAudioHeader(DeviceProfile, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean, Nullable&lt;Int64&gt;, TranscodeSeekInfo)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ContentFeatureBuilder(DeviceProfile profile)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string BuildAudioHeader(DeviceProfile profile, string container, string audioCodec, int? audioBitrate, int? audioSampleRate, int? audioChannels, int? audioBitDepth, bool isDirectStream, long? runtimeTicks, TranscodeSeekInfo transcodeSeekInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -152,35 +152,6 @@
         <td><span class="parametername">profile</span></td>
         <td></td>
       </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_Nullable_System_Int64__MediaBrowser_Model_Dlna_TranscodeSeekInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader(System.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean%2CSystem.Nullable%7BSystem.Int64%7D%2CMediaBrowser.Model.Dlna.TranscodeSeekInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L61">View Source</a>
-  </span>
-  <a id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildAudioHeader_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_Nullable_System_Int64__MediaBrowser_Model_Dlna_TranscodeSeekInfo_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildAudioHeader(System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.Nullable{System.Int64},MediaBrowser.Model.Dlna.TranscodeSeekInfo)">BuildAudioHeader(String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean, Nullable&lt;Int64&gt;, TranscodeSeekInfo)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string BuildAudioHeader(string container, string audioCodec, int? audioBitrate, int? audioSampleRate, int? audioChannels, int? audioBitDepth, bool isDirectStream, long? runtimeTicks, TranscodeSeekInfo transcodeSeekInfo)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">container</span></td>
@@ -245,18 +216,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildImageHeader_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildImageHeader(System.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildImageHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildImageHeader(MediaBrowser.Model.Dlna.DeviceProfile%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L13">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildImageHeader_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildImageHeader*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildImageHeader_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_String_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildImageHeader(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.String)">BuildImageHeader(String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean, String)</h4>
+  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildImageHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Boolean_System_String_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildImageHeader(MediaBrowser.Model.Dlna.DeviceProfile,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean,System.String)">BuildImageHeader(DeviceProfile, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Boolean, String)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string BuildImageHeader(string container, int? width, int? height, bool isDirectStream, string orgPn = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static string BuildImageHeader(DeviceProfile profile, string container, int? width, int? height, bool isDirectStream, string orgPn = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,6 +239,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">container</span></td>
@@ -312,18 +288,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildVideoHeader_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_MediaInfo_TransportStreamTimestamp_System_Boolean_System_Nullable_System_Int64__System_String_System_Nullable_System_Double__System_Nullable_System_Single__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_TranscodeSeekInfo_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildVideoHeader(System.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.MediaInfo.TransportStreamTimestamp%2CSystem.Boolean%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Dlna.TranscodeSeekInfo%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildVideoHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_MediaInfo_TransportStreamTimestamp_System_Boolean_System_Nullable_System_Int64__System_String_System_Nullable_System_Double__System_Nullable_System_Single__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_TranscodeSeekInfo_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildVideoHeader(MediaBrowser.Model.Dlna.DeviceProfile%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.MediaInfo.TransportStreamTimestamp%2CSystem.Boolean%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Double%7D%2CSystem.Nullable%7BSystem.Single%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CMediaBrowser.Model.Dlna.TranscodeSeekInfo%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L117">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ContentFeatureBuilder.cs/#L118">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildVideoHeader_" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildVideoHeader*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildVideoHeader_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_MediaInfo_TransportStreamTimestamp_System_Boolean_System_Nullable_System_Int64__System_String_System_Nullable_System_Double__System_Nullable_System_Single__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_TranscodeSeekInfo_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildVideoHeader(System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.MediaInfo.TransportStreamTimestamp,System.Boolean,System.Nullable{System.Int64},System.String,System.Nullable{System.Double},System.Nullable{System.Single},System.Nullable{System.Int32},MediaBrowser.Model.Dlna.TranscodeSeekInfo,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">BuildVideoHeader(String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, TransportStreamTimestamp, Boolean, Nullable&lt;Int64&gt;, String, Nullable&lt;Double&gt;, Nullable&lt;Single&gt;, Nullable&lt;Int32&gt;, TranscodeSeekInfo, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;)</h4>
+  <h4 id="MediaBrowser_Model_Dlna_ContentFeatureBuilder_BuildVideoHeader_MediaBrowser_Model_Dlna_DeviceProfile_System_String_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__MediaBrowser_Model_MediaInfo_TransportStreamTimestamp_System_Boolean_System_Nullable_System_Int64__System_String_System_Nullable_System_Double__System_Nullable_System_Single__System_Nullable_System_Int32__MediaBrowser_Model_Dlna_TranscodeSeekInfo_System_Nullable_System_Boolean__System_Nullable_System_Boolean__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_String_System_Nullable_System_Boolean__" data-uid="MediaBrowser.Model.Dlna.ContentFeatureBuilder.BuildVideoHeader(MediaBrowser.Model.Dlna.DeviceProfile,System.String,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},MediaBrowser.Model.MediaInfo.TransportStreamTimestamp,System.Boolean,System.Nullable{System.Int64},System.String,System.Nullable{System.Double},System.Nullable{System.Single},System.Nullable{System.Int32},MediaBrowser.Model.Dlna.TranscodeSeekInfo,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.Boolean})">BuildVideoHeader(DeviceProfile, String, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, TransportStreamTimestamp, Boolean, Nullable&lt;Int64&gt;, String, Nullable&lt;Double&gt;, Nullable&lt;Single&gt;, Nullable&lt;Int32&gt;, TranscodeSeekInfo, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, String, Nullable&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; BuildVideoHeader(string container, string videoCodec, string audioCodec, int? width, int? height, int? bitDepth, int? videoBitrate, TransportStreamTimestamp timestamp, bool isDirectStream, long? runtimeTicks, string videoProfile, double? videoLevel, float? videoFramerate, int? packetLength, TranscodeSeekInfo transcodeSeekInfo, bool? isAnamorphic, bool? isInterlaced, int? refFrames, int? numVideoStreams, int? numAudioStreams, string videoCodecTag, bool? isAvc)</code></pre>
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; BuildVideoHeader(DeviceProfile profile, string container, string videoCodec, string audioCodec, int? width, int? height, int? bitDepth, int? videoBitrate, TransportStreamTimestamp timestamp, bool isDirectStream, long? runtimeTicks, string videoProfile, double? videoLevel, float? videoFramerate, int? packetLength, TranscodeSeekInfo transcodeSeekInfo, bool? isAnamorphic, bool? isInterlaced, int? refFrames, int? numVideoStreams, int? numAudioStreams, string videoCodecTag, bool? isAvc)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -335,6 +311,11 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dlna.DeviceProfile.html">DeviceProfile</a></td>
+        <td><span class="parametername">profile</span></td>
+        <td></td>
+      </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">container</span></td>
