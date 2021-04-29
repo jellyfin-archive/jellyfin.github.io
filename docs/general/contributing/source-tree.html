@@ -82,48 +82,45 @@
 <p>Jellyfin is a maze of clients, plugins, and other useful projects. These source trees can serve as an excellent tool to inform new developers about the structure of several projects.</p>
 <h2 id="jellyfin-serverhttpsgithubcomjellyfinjellyfin"><a href="https://github.com/jellyfin/jellyfin">Jellyfin Server</a></h2>
 <ol>
-<li>BDInfo: <code>Blu-Ray Analyzer</code><ul>
-<li>Properties: <code>Assembly Info</code></li>
-</ul>
-</li>
-<li>DvdLib: <code>DVD Anaylzer</code><ul>
-<li>Ifo:</li>
-<li>Properties:</li>
-</ul>
-</li>
-<li>Emby.Dlna:<ul>
+<li>.ci: <code>Azure Pipelines Build definitions</code></li>
+<li>DvdLib: <code>DVD Anaylzer</code></li>
+<li>Emby.Dlna: <code>DLNA support for the server</code><ul>
 <li>Profiles: <code>DLNA Profiles for clients</code></li>
 </ul>
 </li>
-<li>Emby.Drawing:</li>
-<li>Emby.Naming:</li>
-<li>Emby.Notifications:</li>
-<li>Emby.Photos:</li>
-<li>Emby.Server.Implementations:<ul>
+<li>Emby.Drawing: <code>image processor managing the image encoder and image cache paths</code></li>
+<li>Emby.Naming: <code>parsers for the media filenames</code></li>
+<li>Emby.Notifications: <code>listening for events and sending the associated notification</code></li>
+<li>Emby.Photos: <code>metadata provider for photos</code></li>
+<li>Emby.Server.Implementations: <code>main implementations of the interfaces</code><ul>
 <li>ScheduledTasks: <code>all scheduled tasks can be found here</code></li>
 </ul>
 </li>
-<li>Jellyfin.Api:</li>
-<li>Jellyfin.Drawing.Skia:</li>
-<li>Jellyfin.Server:</li>
-<li>MediaBrowser.Api:<ul>
-<li>Playback:<ul>
-<li>BaseStreamingService.cs: <code>receives client information and reads media info and feeds this info to MediaInfoService</code></li>
-<li>MediaInfoService.cs: <code>logic for the stream builder that determines method of playback such as Direct Play or Transcoding</code></li>
+<li>Jellyfin.Api: <code>Jellyfin API</code><ul>
+<li>Controller: <code>API controllers answering the Jellyfin API requests</code></li>
+<li>Helpers:<ul>
+<li>MediaInfoHelper.cs: <code>logic for the stream builder that determines method of playback such as Direct Play or Transcoding</code></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>MediaBrowser.Common:</li>
-<li>MediaBrowser.Controller:</li>
-<li>MediaBrowser.LocalMetadata:</li>
-<li>MediaBrowser.MediaEncoding:</li>
-<li>MediaBrowser.Model:</li>
-<li>MediaBrowser.Providers:</li>
-<li>MediaBrowser.WebDashboard:</li>
-<li>MediaBrowser.XbmcMetadata:</li>
-<li>RSSDP:</li>
-<li>benches/Jellyfin.Common.Benches:</li>
+<li>Jellyfin.Data: <code>models used in the Entity Framework Core Database schema</code></li>
+<li>Jellyfin.Drawing.Skia: <code>image manipulation like resizing images, making image collages</code></li>
+<li>Jellyfin.Networking: <code>managing network interaces and settings</code></li>
+<li>Jellyfin.Server.Implementations: <code>like Emby.Server.Implementations, implementations using the EF Core Database</code></li>
+<li>Jellyfin.Server: <code>main server project that starts the whole server</code></li>
+<li>MediaBrowser.Common: <code>common methods used throughout the server</code></li>
+<li>MediaBrowser.Controller: <code>interface definitions</code></li>
+<li>MediaBrowser.LocalMetadata: <code>metadata provider and saver for local images, local Collections and Playlists</code></li>
+<li>MediaBrowser.MediaEncoding: <code>managing ffmpeg while interacting with the media files</code></li>
+<li>MediaBrowser.Model: <code>defining models used throughout the server</code></li>
+<li>MediaBrowser.Providers: <code>managing multiple metadata sources</code></li>
+<li>MediaBrowser.XbmcMetadata: <code>metadata provider and saver for local .nfo files</code></li>
+<li>RSSDP: <a href="https://github.com/Yortw/RSSDP">RSSDP library</a><code>, including custom changes, for the Simple Service Discovery (SSDP) protocol</code></li>
+<li>apiclient: <code>files used for generating the axios API client</code></li>
+<li>deployment: <code>files used while building Jellyfin for different plattforms</code></li>
+<li>tests: <code>multiple Unit Test projects testing Jellyfin functionality</code></li>
+<li>Dockerfile.* <code>Dockerfiles defining the Jellyfin Docker image</code></li>
 </ol>
 <h2 id="web-clienthttpsgithubcomjellyfinjellyfin-web"><a href="https://github.com/jellyfin/jellyfin-web">Web Client</a></h2>
 <ol>
