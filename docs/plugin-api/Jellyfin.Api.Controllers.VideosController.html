@@ -1209,8 +1209,8 @@ public Task&lt;ActionResult&gt; GetVideoStream([FromRoute, Required] Guid itemId
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/{stream=stream}.{container}&quot;)]
-[HttpHead(&quot;{itemId}/{stream=stream}.{container}&quot;, Name = &quot;HeadVideoStreamByContainer&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;{itemId}/stream.{container}&quot;)]
+[HttpHead(&quot;{itemId}/stream.{container}&quot;, Name = &quot;HeadVideoStreamByContainer&quot;)]
 [ProducesResponseType(200)]
 [ProducesVideoFile]
 public Task&lt;ActionResult&gt; GetVideoStreamByContainer([FromRoute, Required] Guid itemId, [FromRoute, Required] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod? subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodeReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions)</code></pre>
@@ -1276,7 +1276,7 @@ public Task&lt;ActionResult&gt; GetVideoStreamByContainer([FromRoute, Required] 
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
         <td><span class="parametername">segmentLength</span></td>
-        <td><p>The segment lenght.</p>
+        <td><p>The segment length.</p>
 </td>
       </tr>
       <tr>
@@ -1450,7 +1450,7 @@ public Task&lt;ActionResult&gt; GetVideoStreamByContainer([FromRoute, Required] 
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
         <td><span class="parametername">requireNonAnamorphic</span></td>
-        <td><p>Optional. Whether to require a non anamporphic stream.</p>
+        <td><p>Optional. Whether to require a non anamorphic stream.</p>
 </td>
       </tr>
       <tr>
