@@ -178,13 +178,13 @@
   </span>
   <a id="Jellyfin_Data_Entities_Libraries_MetadataProviderId_Id_" data-uid="Jellyfin.Data.Entities.Libraries.MetadataProviderId.Id*"></a>
   <h4 id="Jellyfin_Data_Entities_Libraries_MetadataProviderId_Id" data-uid="Jellyfin.Data.Entities.Libraries.MetadataProviderId.Id">Id</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the id.</p>
+  <div class="markdown level1 summary"><p>Gets the id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-public int Id { get; protected set; }</code></pre>
+public int Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -289,7 +289,7 @@ public string ProviderId { get; set; }</code></pre>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[ConcurrencyCheck]
-public uint RowVersion { get; set; }</code></pre>
+public uint RowVersion { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
