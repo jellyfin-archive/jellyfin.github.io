@@ -80,10 +80,13 @@
 <h1 id="troubleshooting">Troubleshooting</h1>
 
 <p>This page outlines some solutions to common issues beginners may encounter when running a Jellyfin server.</p>
-<h2 id="connection-issues">Connection Issues</h2>
+<h2 id="playback-issues">Playback Issues</h2>
+<p>The easiest way to check for issues is by checking the logs, which can be accessed through the console for the web client or in the log directory on your server.</p>
+<p>If media is unable transcode, first check the ffmpeg logs.</p>
+<h2 id="networking-issues">Networking Issues</h2>
 <p>If you can access the web interface over HTTP but not HTTPS, then you likely have an error with the certificate. Jellyfin uses a PFX file to handle HTTPS traffic. If you created the file with a password, then you will have to enter that value on the <strong>Networking</strong> page in the settings.</p>
 <p>If you can access the server locally but not outside of your LAN, then you likely have an issue with the router configuration. Check the port forwarding settings on your router to ensure the server is visible from outside your local network. You can also enable the &quot;Enable automatic port mapping&quot; option on the  <strong>Networking</strong> page of the server settings to have the server attempt to configure port forwarding on the router automatically if your router supports it.</p>
-<p>The easiest way to check for issues is by checking the logs, which can be accessed through the settings on the web client or in the log directory on your server. If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet. This would indicate either an incorrect address or an issue somewhere else on the network.</p>
+<p>If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet. This would indicate either an incorrect address or an issue somewhere else on the network.</p>
 <h2 id="debug-logging">Debug Logging</h2>
 <p>To enable debug (much more verbose) logging, it is currently required to manually edit config files since no options exist yet on the frontend. Go to the Jellyfin configuration directory, find the <code>logging.default.json</code> file, and change the minimum level to debug as seen below.</p>
 <pre><code class="lang-json">{
@@ -93,7 +96,7 @@
         }
     }
 }
-</code></pre><p>Jellyfin 10.4.1 and above will automatically reload the new configuration. The debug messages show up in the log with the <code>DBG</code> tag.</p>
+</code></pre><p>Jellyfin will automatically reload the new configuration without needing to restart. The debug messages show up in the log with the <code>DBG</code> tag.</p>
 <h2 id="real-time-monitoring">Real Time Monitoring</h2>
 <p>This will let Jellyfin automatically update libraries when files are added or modified. Unfortunately this feature is only supported on certain filesystems.</p>
 <p>For Linux systems, this is performed by <a href="https://en.wikipedia.org/wiki/Inotify">inotify</a>. NFS and rclone do not support inotify, but support can be provided by using a union file system such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a> with your networked file systems.</p>
