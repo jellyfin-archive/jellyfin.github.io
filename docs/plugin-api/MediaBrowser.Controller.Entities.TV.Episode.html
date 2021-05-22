@@ -965,7 +965,7 @@ public int? AiredSeasonNumber { get; }</code></pre>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_AirsBeforeSeasonNumber_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.AirsBeforeSeasonNumber*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_AirsBeforeSeasonNumber" data-uid="MediaBrowser.Controller.Entities.TV.Episode.AirsBeforeSeasonNumber">AirsBeforeSeasonNumber</h4>
-  <div class="markdown level1 summary"><p>Gets the season in which it aired.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the season in which it aired.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1063,7 +1063,7 @@ protected override bool EnableDefaultVideoUserDataKeys { get; }</code></pre>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_IndexNumberEnd_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.IndexNumberEnd*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_IndexNumberEnd" data-uid="MediaBrowser.Controller.Entities.TV.Episode.IndexNumberEnd">IndexNumberEnd</h4>
-  <div class="markdown level1 summary"><p>This is the ending episode number for double episodes.</p>
+  <div class="markdown level1 summary"><p>Gets or sets the ending episode number for double episodes.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1347,7 +1347,7 @@ public string SeasonName { get; set; }</code></pre>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_Series_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.Series*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_Series" data-uid="MediaBrowser.Controller.Entities.TV.Episode.Series">Series</h4>
-  <div class="markdown level1 summary"><p>This Episode&apos;s Series Instance.</p>
+  <div class="markdown level1 summary"><p>Gets the Episode&apos;s Series Instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1376,7 +1376,7 @@ public Series Series { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_SeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.SeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L264">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L265">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_SeriesId_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.SeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_SeriesId" data-uid="MediaBrowser.Controller.Entities.TV.Episode.SeriesId">SeriesId</h4>
@@ -1603,7 +1603,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L321">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L322">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
@@ -1611,7 +1611,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetdata)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetadata)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1625,7 +1625,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">replaceAllMetdata</span></td>
+        <td><span class="parametername">replaceAllMetadata</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1796,7 +1796,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_FindSeriesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.FindSeriesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L267">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L268">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_FindSeriesId_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.FindSeriesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_FindSeriesId" data-uid="MediaBrowser.Controller.Entities.TV.Episode.FindSeriesId">FindSeriesId()</h4>
@@ -1916,7 +1916,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_GetAncestorIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.GetAncestorIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L273">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L274">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_GetAncestorIds_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetAncestorIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_GetAncestorIds" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetAncestorIds">GetAncestorIds()</h4>
@@ -1948,7 +1948,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_GetBlockUnratedType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.GetBlockUnratedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L298">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L299">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetBlockUnratedType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetBlockUnratedType">GetBlockUnratedType()</h4>
@@ -2012,7 +2012,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_GetDeletePaths.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.GetDeletePaths%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L287">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L288">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_GetDeletePaths_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetDeletePaths*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_GetDeletePaths" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetDeletePaths">GetDeletePaths()</h4>
@@ -2044,7 +2044,7 @@ public override bool SupportsRemoteImageDownloading { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_TV_Episode_GetLookupInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.TV.Episode.GetLookupInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L303">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/TV/Episode.cs/#L304">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_TV_Episode_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_TV_Episode_GetLookupInfo" data-uid="MediaBrowser.Controller.Entities.TV.Episode.GetLookupInfo">GetLookupInfo()</h4>

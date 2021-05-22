@@ -141,16 +141,25 @@ It is created from the user-specific folders within the system root.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FileNameWithoutExtension">Folder.FileNameWithoutExtension</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced">Folder.IsAllowTagFilterEnforced()</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_RecursiveChildren">Folder.RecursiveChildren</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsShortcutChildren">Folder.SupportsShortcutChildren</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_">Folder.AddChild(BaseItem, CancellationToken)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FilterLinkedChildrenPerUser">Folder.FilterLinkedChildrenPerUser</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_RecursiveChildren">Folder.RecursiveChildren</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsOwnedItems">Folder.SupportsOwnedItems</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsUserDataFromChildren">Folder.SupportsUserDataFromChildren</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced">Folder.IsAllowTagFilterEnforced()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_AddChild_MediaBrowser_Controller_Entities_BaseItem_System_Threading_CancellationToken_">Folder.AddChild(BaseItem, CancellationToken)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsVisible_Jellyfin_Data_Entities_User_">Folder.IsVisible(User)</a>
@@ -231,9 +240,6 @@ It is created from the user-specific folders within the system root.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetLinkedChildren">Folder.GetLinkedChildren()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FilterLinkedChildrenPerUser">Folder.FilterLinkedChildrenPerUser</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_ContainsLinkedChildByItemId_System_Guid_">Folder.ContainsLinkedChildByItemId(Guid)</a>
     </div>
     <div>
@@ -241,9 +247,6 @@ It is created from the user-specific folders within the system root.</p>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetLinkedChildrenInfos">Folder.GetLinkedChildrenInfos()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsOwnedItems">Folder.SupportsOwnedItems</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">Folder.RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a>
@@ -259,9 +262,6 @@ It is created from the user-specific folders within the system root.</p>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsUnplayed_Jellyfin_Data_Entities_User_">Folder.IsUnplayed(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsUserDataFromChildren">Folder.SupportsUserDataFromChildren</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Controller_Entities_UserItemData_MediaBrowser_Model_Dto_BaseItemDto_Jellyfin_Data_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, UserItemData, BaseItemDto, User, DtoOptions)</a>
@@ -901,11 +901,12 @@ It is created from the user-specific folders within the system root.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L38">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder__ctor_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.#ctor*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder__ctor" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.#ctor">CollectionFolder()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Controller.Entities.CollectionFolder.html">CollectionFolder</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -918,7 +919,7 @@ It is created from the user-specific folders within the system root.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_ApplicationHost.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.ApplicationHost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L46">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_ApplicationHost_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ApplicationHost*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_ApplicationHost" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ApplicationHost">ApplicationHost</h4>
@@ -948,11 +949,11 @@ It is created from the user-specific folders within the system root.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_Children.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.Children%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L319">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L63">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_Children_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.Children*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_Children" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.Children">Children</h4>
-  <div class="markdown level1 summary"><p>Our children are actually just references to the ones in the physical root...</p>
+  <div class="markdown level1 summary"><p>Gets the item&apos;s children.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -978,12 +979,15 @@ public override IEnumerable&lt;BaseItem&gt; Children { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_Children">Folder.Children</a></div>
+  <h5 id="MediaBrowser_Controller_Entities_CollectionFolder_Children_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Our children are actually just references to the ones in the physical root...</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_CollectionType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.CollectionType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L54">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_CollectionType_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.CollectionType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_CollectionType" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.CollectionType">CollectionType</h4>
@@ -1013,11 +1017,11 @@ public override IEnumerable&lt;BaseItem&gt; Children { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_DisplayPreferencesId.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.DisplayPreferencesId%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L152">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L170">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_DisplayPreferencesId_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.DisplayPreferencesId*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_DisplayPreferencesId" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.DisplayPreferencesId">DisplayPreferencesId</h4>
-  <div class="markdown level1 summary"><p>Allow different display preferences for each collection folder.</p>
+  <div class="markdown level1 summary"><p>Gets the display preferences id.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1043,12 +1047,15 @@ public override Guid DisplayPreferencesId { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayPreferencesId">BaseItem.DisplayPreferencesId</a></div>
+  <h5 id="MediaBrowser_Controller_Entities_CollectionFolder_DisplayPreferencesId_remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>Allow different display preferences for each collection folder.</p>
+</div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_PhysicalFolderIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.PhysicalFolderIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L165">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L178">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalFolderIds_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalFolderIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalFolderIds" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalFolderIds">PhysicalFolderIds</h4>
@@ -1078,7 +1085,7 @@ public override Guid DisplayPreferencesId { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocations.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L155">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L173">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocations_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocations*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocations" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocations">PhysicalLocations</h4>
@@ -1111,7 +1118,7 @@ public override string[] PhysicalLocations { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocationsList.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocationsList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L163">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L176">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocationsList_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocationsList*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_PhysicalLocationsList" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.PhysicalLocationsList">PhysicalLocationsList</h4>
@@ -1141,7 +1148,7 @@ public override string[] PhysicalLocations { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_SupportsInheritedParentImages.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.SupportsInheritedParentImages%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L45">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsInheritedParentImages_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsInheritedParentImages*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsInheritedParentImages" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsInheritedParentImages">SupportsInheritedParentImages</h4>
@@ -1174,7 +1181,7 @@ public override bool SupportsInheritedParentImages { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_SupportsPeople.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.SupportsPeople%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L367">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L377">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsPeople_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsPeople*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsPeople" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsPeople">SupportsPeople</h4>
@@ -1207,7 +1214,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_SupportsPlayedStatus.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.SupportsPlayedStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L42">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L48">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SupportsPlayedStatus">SupportsPlayedStatus</h4>
@@ -1240,7 +1247,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_XmlSerializer.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.XmlSerializer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L44">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_XmlSerializer_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.XmlSerializer*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_XmlSerializer" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.XmlSerializer">XmlSerializer</h4>
@@ -1272,7 +1279,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_BeforeMetadataRefresh_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.BeforeMetadataRefresh(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L204">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L221">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.BeforeMetadataRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
@@ -1280,7 +1287,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetdata)</code></pre>
+    <pre><code class="lang-csharp hljs">public override bool BeforeMetadataRefresh(bool replaceAllMetadata)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1294,7 +1301,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">replaceAllMetdata</span></td>
+        <td><span class="parametername">replaceAllMetadata</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1321,7 +1328,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_CanDelete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.CanDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L66">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_CanDelete_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.CanDelete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_CanDelete" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.CanDelete">CanDelete()</h4>
@@ -1353,7 +1360,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetActualChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetActualChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L322">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L332">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetActualChildren_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetActualChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetActualChildren" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetActualChildren">GetActualChildren()</h4>
@@ -1383,7 +1390,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetFileSystemChildren(MediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L167">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L185">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetFileSystemChildren_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetFileSystemChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetFileSystemChildren(MediaBrowser.Controller.Providers.IDirectoryService)">GetFileSystemChildren(IDirectoryService)</h4>
@@ -1432,7 +1439,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L71">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions">GetLibraryOptions()</h4>
@@ -1462,7 +1469,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L107">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L122">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetLibraryOptions_System_String_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetLibraryOptions(System.String)">GetLibraryOptions(String)</h4>
@@ -1509,7 +1516,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetPhysicalFolders.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetPhysicalFolders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L327">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L337">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetPhysicalFolders_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetPhysicalFolders*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetPhysicalFolders" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetPhysicalFolders">GetPhysicalFolders()</h4>
@@ -1539,7 +1546,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_GetRefreshProgress.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.GetRefreshProgress%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L211">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L228">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_GetRefreshProgress_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetRefreshProgress*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_GetRefreshProgress" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.GetRefreshProgress">GetRefreshProgress()</h4>
@@ -1571,7 +1578,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_IsSaveLocalMetadataEnabled.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.IsSaveLocalMetadataEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L158">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L180">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_IsSaveLocalMetadataEnabled_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.IsSaveLocalMetadataEnabled*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_IsSaveLocalMetadataEnabled" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.IsSaveLocalMetadataEnabled">IsSaveLocalMetadataEnabled()</h4>
@@ -1603,7 +1610,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_OnCollectionFolderChange.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.OnCollectionFolderChange%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L140">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L155">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_OnCollectionFolderChange_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.OnCollectionFolderChange*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_OnCollectionFolderChange" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.OnCollectionFolderChange">OnCollectionFolderChange()</h4>
@@ -1618,7 +1625,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_RefreshLinkedChildren_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.RefreshLinkedChildren(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.IO.FileSystemMetadata%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L235">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L252">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_RefreshLinkedChildren_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.RefreshLinkedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_RefreshLinkedChildren_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.RefreshLinkedChildren(System.Collections.Generic.IEnumerable{MediaBrowser.Model.IO.FileSystemMetadata})">RefreshLinkedChildren(IEnumerable&lt;FileSystemMetadata&gt;)</h4>
@@ -1667,7 +1674,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_RequiresRefresh.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.RequiresRefresh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L173">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L190">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_RequiresRefresh_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.RequiresRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_RequiresRefresh" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.RequiresRefresh">RequiresRefresh()</h4>
@@ -1699,7 +1706,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_SaveLibraryOptions_System_String_MediaBrowser_Model_Configuration_LibraryOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.SaveLibraryOptions(System.String%2CMediaBrowser.Model.Configuration.LibraryOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L121">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L136">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_SaveLibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SaveLibraryOptions*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_SaveLibraryOptions_System_String_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.SaveLibraryOptions(System.String,MediaBrowser.Model.Configuration.LibraryOptions)">SaveLibraryOptions(String, LibraryOptions)</h4>
@@ -1736,7 +1743,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_UpdateLibraryOptions_MediaBrowser_Model_Configuration_LibraryOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.UpdateLibraryOptions(MediaBrowser.Model.Configuration.LibraryOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L102">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L117">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_UpdateLibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.UpdateLibraryOptions*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_UpdateLibraryOptions_MediaBrowser_Model_Configuration_LibraryOptions_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.UpdateLibraryOptions(MediaBrowser.Model.Configuration.LibraryOptions)">UpdateLibraryOptions(LibraryOptions)</h4>
@@ -1768,7 +1775,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_CollectionFolder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.CollectionFolder.ValidateChildrenInternal(System.IProgress%7BSystem.Double%7D%2CSystem.Threading.CancellationToken%2CSystem.Boolean%2CSystem.Boolean%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L310">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/CollectionFolder.cs/#L327">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_CollectionFolder_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ValidateChildrenInternal*"></a>
   <h4 id="MediaBrowser_Controller_Entities_CollectionFolder_ValidateChildrenInternal_System_IProgress_System_Double__System_Threading_CancellationToken_System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.CollectionFolder.ValidateChildrenInternal(System.IProgress{System.Double},System.Threading.CancellationToken,System.Boolean,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService)">ValidateChildrenInternal(IProgress&lt;Double&gt;, CancellationToken, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService)</h4>
