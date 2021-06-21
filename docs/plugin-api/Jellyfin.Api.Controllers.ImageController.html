@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -735,7 +735,7 @@ public class ImageController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -801,7 +801,7 @@ public Task&lt;ActionResult&gt; DeleteItemImage([FromRoute, Required] Guid itemI
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; DeleteItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -867,7 +867,7 @@ public Task&lt;ActionResult&gt; DeleteItemImageByIndex([FromRoute, Required] Gui
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
+public async Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -933,7 +933,7 @@ public Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userI
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; DeleteUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int index)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1000,7 +1000,7 @@ public Task&lt;ActionResult&gt; DeleteUserImageByIndex([FromRoute, Required] Gui
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetArtistImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetArtistImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1164,7 +1164,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1328,7 +1328,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetGenreImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetGenreImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1492,7 +1492,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] ImageFormat? format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] ImageFormat? format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1656,7 +1656,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetItemImage2([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int maxWidth, [FromRoute, Required] int maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromRoute, Required] string tag, [FromQuery] bool? cropWhitespace, [FromRoute, Required] ImageFormat format, [FromQuery] bool? addPlayedIndicator, [FromRoute, Required] double percentPlayed, [FromRoute, Required] int unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetItemImage2([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int maxWidth, [FromRoute, Required] int maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromRoute, Required] string tag, [FromQuery] bool? cropWhitespace, [FromRoute, Required] ImageFormat format, [FromQuery] bool? addPlayedIndicator, [FromRoute, Required] double percentPlayed, [FromRoute, Required] int unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromRoute, Required] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1820,7 +1820,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] ImageFormat? format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] string tag, [FromQuery] bool? cropWhitespace, [FromQuery] ImageFormat? format, [FromQuery] bool? addPlayedIndicator, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1983,7 +1983,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImageInfos([FromRoute, Required] Guid itemId)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImageInfos([FromRoute, Required] Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2038,7 +2038,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;ImageInfo&gt;&gt;&gt; GetItemImage
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetMusicGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetMusicGenreImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2202,7 +2202,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetMusicGenreImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetMusicGenreImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2366,7 +2366,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetPersonImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetPersonImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2530,7 +2530,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetPersonImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetPersonImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2694,7 +2694,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetStudioImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetStudioImage([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2858,7 +2858,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetStudioImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetStudioImageByIndex([FromRoute, Required] string name, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3022,7 +3022,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; GetUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer, [FromQuery] int? imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3186,7 +3186,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesImageFile]
-public Task&lt;ActionResult&gt; GetUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
+public async Task&lt;ActionResult&gt; GetUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery] string tag, [FromQuery] ImageFormat? format, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] double? percentPlayed, [FromQuery] int? unplayedCount, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? quality, [FromQuery] int? fillWidth, [FromQuery] int? fillHeight, [FromQuery] bool? cropWhitespace, [FromQuery] bool? addPlayedIndicator, [FromQuery] int? blur, [FromQuery] string backgroundColor, [FromQuery] string foregroundLayer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3350,7 +3350,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [AcceptsImageFile]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
+public async Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3417,7 +3417,7 @@ public Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId,
 [AcceptsImageFile]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; PostUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int index)</code></pre>
+public async Task&lt;ActionResult&gt; PostUserImageByIndex([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromRoute] int index)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3484,7 +3484,7 @@ public Task&lt;ActionResult&gt; PostUserImageByIndex([FromRoute, Required] Guid 
 [AcceptsImageFile]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; SetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType)</code></pre>
+public async Task&lt;ActionResult&gt; SetItemImage([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3545,7 +3545,7 @@ public Task&lt;ActionResult&gt; SetItemImage([FromRoute, Required] Guid itemId, 
 [AcceptsImageFile]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; SetItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex)</code></pre>
+public async Task&lt;ActionResult&gt; SetItemImageByIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute] int imageIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3611,7 +3611,7 @@ public Task&lt;ActionResult&gt; SetItemImageByIndex([FromRoute, Required] Guid i
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery, Required] int newIndex)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid itemId, [FromRoute, Required] ImageType imageType, [FromRoute, Required] int imageIndex, [FromQuery, Required] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3685,7 +3685,8 @@ public Task&lt;ActionResult&gt; UpdateItemImageIndex([FromRoute, Required] Guid 
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

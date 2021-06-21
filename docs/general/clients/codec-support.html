@@ -8,7 +8,7 @@
     <title>Codec Support | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Codec Support | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -86,114 +86,123 @@
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Sorted by efficency (excluding bit depth)</th>
-<th style="text-align:center">Chrome</th>
-<th style="text-align:center">Firefox</th>
-<th style="text-align:center">Safari</th>
-<th style="text-align:center">Android</th>
-<th style="text-align:center">iOS</th>
-<th style="text-align:center">AndroidTV</th>
-<th style="text-align:center"><a href="https://developer.roku.com/docs/specs/streaming.md">Roku</a></th>
-<th style="text-align:center">Kodi</th>
-<th style="text-align:center"><a href="https://docs.jellyfin.org/general/clients/index.html#jellyfin-desktop">Desktop</a></th>
+<th>Sorted by efficency (excluding bit depth)</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+<th>Android</th>
+<th>iOS</th>
+<th>SwiftFin (iOS)</th>
+<th>AndroidTV</th>
+<th><a href="https://developer.roku.com/docs/specs/streaming.md">Roku</a></th>
+<th>Kodi</th>
+<th><a href="https://docs.jellyfin.org/general/clients/index.html#jellyfin-desktop">Desktop</a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/DivX">MPEG-4 Part 2/SP</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://en.wikipedia.org/wiki/DivX">MPEG-4 Part 2/SP</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2#Advanced_Simple_Profile_(ASP)">MPEG-4 Part 2/ASP</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://en.wikipedia.org/wiki/MPEG-4_Part_2#Advanced_Simple_Profile_(ASP)">MPEG-4 Part 2/ASP</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td>✅</td>
+<td>❌</td>
+<td></td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 8Bit</a></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 8Bit</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 10Bit</a></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://caniuse.com/#feat=mpeg4" title="H264 Browser Support Reference">H.264 10Bit</a></td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://caniuse.com/#feat=hevc" title="HEVC Browser Support Reference">H.265 8Bit</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌<sup>1</sup></td>
-<td style="text-align:center">🔶<sup>2</sup></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">✅<sup>5</sup></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://caniuse.com/#feat=hevc" title="HEVC Browser Support Reference">H.265 8Bit</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌<sup>1</sup></td>
+<td>🔶<sup>2</sup></td>
+<td></td>
+<td>✅<sup>6</sup></td>
+<td>✅<sup>5</sup></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://caniuse.com/#feat=hevc" title="HEVC Browser Support Reference">H.265 10Bit</a></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">❌<sup>1</sup></td>
-<td style="text-align:center">🔶<sup>2</sup></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">🔶<sup>5</sup></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://caniuse.com/#feat=hevc" title="HEVC Browser Support Reference">H.265 10Bit</a></td>
+<td>❌</td>
+<td>❌</td>
+<td>❌<sup>1</sup></td>
+<td>🔶<sup>2</sup></td>
+<td></td>
+<td>✅<sup>6</sup></td>
+<td>🔶<sup>5</sup></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#VP9" title="V9 Browser Support Reference">VP9</a></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center">✅<sup>3</sup></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">🔶<sup>3</sup></td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
-<td style="text-align:center">✅</td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#VP9" title="V9 Browser Support Reference">VP9</a></td>
+<td>✅</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅<sup>3</sup></td>
+<td></td>
+<td>❌</td>
+<td>🔶<sup>3</sup></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
 </tr>
 <tr>
-<td style="text-align:center"><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#AV1" title="AV1 Browser Support Reference">AV1</a><sup>4</sup></td>
-<td style="text-align:center">🔶</td>
-<td style="text-align:center">🔶</td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
-<td style="text-align:center">❌</td>
-<td style="text-align:center"></td>
-<td style="text-align:center"></td>
+<td><a href="https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs#AV1" title="AV1 Browser Support Reference">AV1</a><sup>4</sup></td>
+<td>🔶</td>
+<td>🔶</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td>❌</td>
+<td></td>
+<td>❌</td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -202,6 +211,7 @@
 <p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). Most new Android phones in the higher price range and many &quot;4K&quot; AndroidTV devices have VP9 hardware decoding support. Refer to you manufacturer for supported codecs.</p>
 <p><sup>4</sup>AV1 support is experimental and often too slow for CPU decoding. As of writing this (05.2020) there is no hardware support on most devices yet. Support for AV1 in Jellyfin is tracked in <a href="https://github.com/jellyfin/jellyfin/issues/3129">jellyfin#3129</a>.</p>
 <p><sup>5</sup>As of <a href="https://github.com/jellyfin/jellyfin-androidtv/pull/671">version 0.12</a>, HEVC is enabled on all devices running Android 5.0+, but early generations of the Amazon Fire may not work yet. 10Bit may be supported depending on your device. Before Client 0.12, HEVC support was enabled on specific devices.</p>
+<p><sup>6</sup>HEVC decoding is supported on Apple devices with the A8X chip or newer and at least iOS 14</p>
 <p><a href="https://en.wikipedia.org/wiki/MPEG-4#MPEG-4_Parts">Format Cheatsheet:</a></p>
 <table>
 <thead>
@@ -251,6 +261,7 @@
 <th style="text-align:center">Android</th>
 <th style="text-align:center">AndroidTV</th>
 <th style="text-align:center">iOS</th>
+<th style="text-align:center">SwiftFin (iOS)</th>
 <th style="text-align:center">Roku</th>
 <th style="text-align:center">Kodi</th>
 <th style="text-align:center">Desktop</th>
@@ -268,6 +279,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
 </tr>
 <tr>
 <td style="text-align:center">MP3</td>
@@ -277,6 +289,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -292,6 +305,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
 </tr>
 <tr>
 <td style="text-align:center"><a href="https://www.loc.gov/preservation/digital/formats/fdd/fdd000209.shtml">AC3</a></td>
@@ -301,6 +315,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -313,6 +328,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -328,6 +344,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
+<td style="text-align:center">✅</td>
 </tr>
 <tr>
 <td style="text-align:center">DTS<sup>4</sup></td>
@@ -337,6 +354,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
 <td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center">✅<sup>6</sup></td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -349,6 +367,7 @@
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center"></td>
+<td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
 <td style="text-align:center">✅</td>
@@ -560,7 +579,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

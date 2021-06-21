@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class M3uParser
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -124,18 +124,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_TunerHosts_M3uParser__ctor_Microsoft_Extensions_Logging_ILogger_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_IServerApplicationHost_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.TunerHosts.M3uParser.%23ctor(Microsoft.Extensions.Logging.ILogger%2CSystem.Net.Http.IHttpClientFactory%2CMediaBrowser.Controller.IServerApplicationHost)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_TunerHosts_M3uParser__ctor_Microsoft_Extensions_Logging_ILogger_System_Net_Http_IHttpClientFactory_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.TunerHosts.M3uParser.%23ctor(Microsoft.Extensions.Logging.ILogger%2CSystem.Net.Http.IHttpClientFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/TunerHosts/M3uParser.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/TunerHosts/M3uParser.cs/#L29">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_TunerHosts_M3uParser__ctor_" data-uid="Emby.Server.Implementations.LiveTv.TunerHosts.M3uParser.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_LiveTv_TunerHosts_M3uParser__ctor_Microsoft_Extensions_Logging_ILogger_System_Net_Http_IHttpClientFactory_MediaBrowser_Controller_IServerApplicationHost_" data-uid="Emby.Server.Implementations.LiveTv.TunerHosts.M3uParser.#ctor(Microsoft.Extensions.Logging.ILogger,System.Net.Http.IHttpClientFactory,MediaBrowser.Controller.IServerApplicationHost)">M3uParser(ILogger, IHttpClientFactory, IServerApplicationHost)</h4>
+  <h4 id="Emby_Server_Implementations_LiveTv_TunerHosts_M3uParser__ctor_Microsoft_Extensions_Logging_ILogger_System_Net_Http_IHttpClientFactory_" data-uid="Emby.Server.Implementations.LiveTv.TunerHosts.M3uParser.#ctor(Microsoft.Extensions.Logging.ILogger,System.Net.Http.IHttpClientFactory)">M3uParser(ILogger, IHttpClientFactory)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public M3uParser(ILogger logger, IHttpClientFactory httpClientFactory, IServerApplicationHost appHost)</code></pre>
+    <pre><code class="lang-csharp hljs">public M3uParser(ILogger logger, IHttpClientFactory httpClientFactory)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -157,11 +157,6 @@
         <td><span class="parametername">httpClientFactory</span></td>
         <td></td>
       </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></td>
-        <td><span class="parametername">appHost</span></td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -179,7 +174,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Stream&gt; GetListingsStream(TunerHostInfo info, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;Stream&gt; GetListingsStream(TunerHostInfo info, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -231,7 +226,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;ChannelInfo&gt;&gt; Parse(TunerHostInfo info, string channelIdPrefix, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;List&lt;ChannelInfo&gt;&gt; Parse(TunerHostInfo info, string channelIdPrefix, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -295,7 +290,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

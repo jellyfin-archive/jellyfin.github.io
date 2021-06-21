@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PlaylistsController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -709,7 +709,7 @@ public class PlaylistsController : BaseJellyfinApiController</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{playlistId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; AddToPlaylist([FromRoute, Required] Guid playlistId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] ids, [FromQuery] Guid? userId)</code></pre>
+public async Task&lt;ActionResult&gt; AddToPlaylist([FromRoute, Required] Guid playlistId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] ids, [FromQuery] Guid? userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -773,7 +773,7 @@ public Task&lt;ActionResult&gt; AddToPlaylist([FromRoute, Required] Guid playlis
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;PlaylistCreationResult&gt;&gt; CreatePlaylist([FromQuery] string name, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] IReadOnlyList&lt;Guid&gt; ids, [FromQuery] Guid? userId, [FromQuery] string mediaType, [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow)] CreatePlaylistDto createPlaylistRequest)</code></pre>
+public async Task&lt;ActionResult&lt;PlaylistCreationResult&gt;&gt; CreatePlaylist([FromQuery] string name, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] IReadOnlyList&lt;Guid&gt; ids, [FromQuery] Guid? userId, [FromQuery] string mediaType, [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow)] CreatePlaylistDto createPlaylistRequest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -953,7 +953,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetPlaylistItems([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;{playlistId}/Items/{itemId}/Move/{newIndex}&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; MoveItem([FromRoute, Required] string playlistId, [FromRoute, Required] string itemId, [FromRoute, Required] int newIndex)</code></pre>
+public async Task&lt;ActionResult&gt; MoveItem([FromRoute, Required] string playlistId, [FromRoute, Required] string itemId, [FromRoute, Required] int newIndex)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1017,7 +1017,7 @@ public Task&lt;ActionResult&gt; MoveItem([FromRoute, Required] string playlistId
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;{playlistId}/Items&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; RemoveFromPlaylist([FromRoute, Required] string playlistId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] entryIds)</code></pre>
+public async Task&lt;ActionResult&gt; RemoveFromPlaylist([FromRoute, Required] string playlistId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] entryIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1079,7 +1079,8 @@ public Task&lt;ActionResult&gt; RemoveFromPlaylist([FromRoute, Required] string 
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

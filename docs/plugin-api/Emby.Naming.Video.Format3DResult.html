@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Format3DResult
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -125,20 +125,44 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult__ctor.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult__ctor_System_Boolean_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult.%23ctor(System.Boolean%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L13">View Source</a>
   </span>
   <a id="Emby_Naming_Video_Format3DResult__ctor_" data-uid="Emby.Naming.Video.Format3DResult.#ctor*"></a>
-  <h4 id="Emby_Naming_Video_Format3DResult__ctor" data-uid="Emby.Naming.Video.Format3DResult.#ctor">Format3DResult()</h4>
+  <h4 id="Emby_Naming_Video_Format3DResult__ctor_System_Boolean_System_String_" data-uid="Emby.Naming.Video.Format3DResult.#ctor(System.Boolean,System.String)">Format3DResult(Boolean, String)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Naming.Video.Format3DResult.html">Format3DResult</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Format3DResult()</code></pre>
+    <pre><code class="lang-csharp hljs">public Format3DResult(bool is3D, string format3D)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">is3D</span></td>
+        <td><p>A value indicating whether the parsed string contains 3D tokens.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">format3D</span></td>
+        <td><p>The 3D format. Value might be null if [is3D] is <code>false</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -146,16 +170,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult_Format3D.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult.Format3D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L29">View Source</a>
   </span>
   <a id="Emby_Naming_Video_Format3DResult_Format3D_" data-uid="Emby.Naming.Video.Format3DResult.Format3D*"></a>
   <h4 id="Emby_Naming_Video_Format3DResult_Format3D" data-uid="Emby.Naming.Video.Format3DResult.Format3D">Format3D</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the format3 d.</p>
+  <div class="markdown level1 summary"><p>Gets the format3 d.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Format3D { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Format3D { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -178,16 +202,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult_Is3D.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult.Is3D%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L23">View Source</a>
   </span>
   <a id="Emby_Naming_Video_Format3DResult_Is3D_" data-uid="Emby.Naming.Video.Format3DResult.Is3D*"></a>
   <h4 id="Emby_Naming_Video_Format3DResult_Is3D" data-uid="Emby.Naming.Video.Format3DResult.Is3D">Is3D</h4>
-  <div class="markdown level1 summary"><p>Gets or sets a value indicating whether [is3 d].</p>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether [is3 d].</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Is3D { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Is3D { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -201,38 +225,6 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if [is3 d]; otherwise, <code>false</code>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult_Tokens.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult.Tokens%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L34">View Source</a>
-  </span>
-  <a id="Emby_Naming_Video_Format3DResult_Tokens_" data-uid="Emby.Naming.Video.Format3DResult.Tokens*"></a>
-  <h4 id="Emby_Naming_Video_Format3DResult_Tokens" data-uid="Emby.Naming.Video.Format3DResult.Tokens">Tokens</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the tokens.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;string&gt; Tokens { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p>The tokens.</p>
 </td>
       </tr>
     </tbody>
@@ -252,12 +244,13 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_Format3DResult.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.Format3DResult%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/Format3DResult.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

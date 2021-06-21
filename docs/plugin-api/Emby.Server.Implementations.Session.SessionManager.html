@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SessionManager
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -993,7 +993,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnPlaybackProgress(PlaybackProgressInfo info, bool isAutomated)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task OnPlaybackProgress(PlaybackProgressInfo info, bool isAutomated)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1047,7 +1047,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnPlaybackStart(PlaybackStartInfo info)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task OnPlaybackStart(PlaybackStartInfo info)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1113,7 +1113,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task OnPlaybackStopped(PlaybackStopInfo info)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task OnPlaybackStopped(PlaybackStopInfo info)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1742,7 +1742,8 @@
   </span>
   <a id="Emby_Server_Implementations_Session_SessionManager_SendMessageToAdminSessions_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToAdminSessions*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionManager_SendMessageToAdminSessions__1_MediaBrowser_Model_Session_SessionMessageType___0_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToAdminSessions``1(MediaBrowser.Model.Session.SessionMessageType,``0,System.Threading.CancellationToken)">SendMessageToAdminSessions&lt;T&gt;(SessionMessageType, T, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the message to admin sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1761,17 +1762,20 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>The data.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1786,7 +1790,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1814,7 +1819,8 @@
   </span>
   <a id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserDeviceSessions_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserDeviceSessions*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserDeviceSessions__1_System_String_MediaBrowser_Model_Session_SessionMessageType___0_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserDeviceSessions``1(System.String,MediaBrowser.Model.Session.SessionMessageType,``0,System.Threading.CancellationToken)">SendMessageToUserDeviceSessions&lt;T&gt;(String, SessionMessageType, T, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the message to user device sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1833,22 +1839,26 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">deviceId</span></td>
-        <td></td>
+        <td><p>The device identifier.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>The data.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1863,7 +1873,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1891,7 +1902,8 @@
   </span>
   <a id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserSessions_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserSessions*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserSessions__1_System_Collections_Generic_List_System_Guid__MediaBrowser_Model_Session_SessionMessageType___0_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserSessions``1(System.Collections.Generic.List{System.Guid},MediaBrowser.Model.Session.SessionMessageType,``0,System.Threading.CancellationToken)">SendMessageToUserSessions&lt;T&gt;(List&lt;Guid&gt;, SessionMessageType, T, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the message to user sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1940,7 +1952,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2050,7 +2063,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SendPlayCommand(string controllingSessionId, string sessionId, PlayRequest command, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task SendPlayCommand(string controllingSessionId, string sessionId, PlayRequest command, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2336,7 +2349,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SendSyncPlayCommand(SessionInfo session, SendCommand command, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task SendSyncPlayCommand(SessionInfo session, SendCommand command, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2393,11 +2406,12 @@
   </span>
   <a id="Emby_Server_Implementations_Session_SessionManager_SendSyncPlayGroupUpdate_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendSyncPlayGroupUpdate*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionManager_SendSyncPlayGroupUpdate__1_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_GroupUpdate___0__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendSyncPlayGroupUpdate``1(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.SyncPlay.GroupUpdate{``0},System.Threading.CancellationToken)">SendSyncPlayGroupUpdate&lt;T&gt;(SessionInfo, GroupUpdate&lt;T&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a SyncPlayGroupUpdate to a session.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task SendSyncPlayGroupUpdate&lt;T&gt;(SessionInfo session, GroupUpdate&lt;T&gt; command, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task SendSyncPlayGroupUpdate&lt;T&gt;(SessionInfo session, GroupUpdate&lt;T&gt; command, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2412,17 +2426,20 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
         <td><span class="parametername">session</span></td>
-        <td></td>
+        <td><p>The session.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate</a>&lt;T&gt;</td>
         <td><span class="parametername">command</span></td>
-        <td></td>
+        <td><p>The group update.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2437,7 +2454,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2821,7 +2839,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

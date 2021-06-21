@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ChannelsController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -781,7 +781,7 @@ public ActionResult&lt;ChannelFeatures&gt; GetChannelFeatures([FromRoute, Requir
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;{channelId}/Items&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute, Required] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] SortOrder[] sortOrder, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] sortBy, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetChannelItems([FromRoute, Required] Guid channelId, [FromQuery] Guid? folderId, [FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] SortOrder[] sortOrder, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] sortBy, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -963,7 +963,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetChannels([FromQuery
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/Latest&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLatestChannelItems([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] channelIds)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLatestChannelItems([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFilter[] filters, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] channelIds)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1050,7 +1050,8 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

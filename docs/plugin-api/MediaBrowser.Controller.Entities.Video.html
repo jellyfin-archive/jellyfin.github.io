@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Video
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -1896,7 +1896,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Video.GetAllItemsForMediaSources%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Video.cs/#L511">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Video.cs/#L512">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources_" data-uid="MediaBrowser.Controller.Entities.Video.GetAllItemsForMediaSources*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources" data-uid="MediaBrowser.Controller.Entities.Video.GetAllItemsForMediaSources">GetAllItemsForMediaSources()</h4>
@@ -1928,7 +1928,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Video_GetDefaultVideoStream.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Video.GetDefaultVideoStream%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Video.cs/#L497">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Video.cs/#L498">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Video_GetDefaultVideoStream_" data-uid="MediaBrowser.Controller.Entities.Video.GetDefaultVideoStream*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Video_GetDefaultVideoStream" data-uid="MediaBrowser.Controller.Entities.Video.GetDefaultVideoStream">GetDefaultVideoStream()</h4>
@@ -2122,7 +2122,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override Task&lt;bool&gt; RefreshedOwnedItems(MetadataRefreshOptions options, List&lt;FileSystemMetadata&gt; fileSystemChildren, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">protected override async Task&lt;bool&gt; RefreshedOwnedItems(MetadataRefreshOptions options, List&lt;FileSystemMetadata&gt; fileSystemChildren, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2213,7 +2213,7 @@ public override bool SupportsThemeMedia { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override Task UpdateToRepositoryAsync(ItemUpdateType updateReason, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public override async Task UpdateToRepositoryAsync(ItemUpdateType updateReason, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2317,7 +2317,8 @@ public override bool SupportsThemeMedia { get; }</code></pre>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

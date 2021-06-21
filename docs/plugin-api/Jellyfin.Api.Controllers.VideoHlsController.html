@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class VideoHlsController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -753,7 +753,7 @@ public class VideoHlsController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{itemId}/live.m3u8&quot;)]
 [ProducesResponseType(200)]
 [ProducesPlaylistFile]
-public Task&lt;ActionResult&gt; GetLiveHlsStream([FromRoute, Required] Guid itemId, [FromQuery] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod? subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodeReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] bool? enableSubtitlesInManifest)</code></pre>
+public async Task&lt;ActionResult&gt; GetLiveHlsStream([FromRoute, Required] Guid itemId, [FromQuery] string container, [FromQuery] bool? static, [FromQuery] string params, [FromQuery] string tag, [FromQuery] string deviceProfileId, [FromQuery] string playSessionId, [FromQuery] string segmentContainer, [FromQuery] int? segmentLength, [FromQuery] int? minSegments, [FromQuery] string mediaSourceId, [FromQuery] string deviceId, [FromQuery] string audioCodec, [FromQuery] bool? enableAutoStreamCopy, [FromQuery] bool? allowVideoStreamCopy, [FromQuery] bool? allowAudioStreamCopy, [FromQuery] bool? breakOnNonKeyFrames, [FromQuery] int? audioSampleRate, [FromQuery] int? maxAudioBitDepth, [FromQuery] int? audioBitRate, [FromQuery] int? audioChannels, [FromQuery] int? maxAudioChannels, [FromQuery] string profile, [FromQuery] string level, [FromQuery] float? framerate, [FromQuery] float? maxFramerate, [FromQuery] bool? copyTimestamps, [FromQuery] long? startTimeTicks, [FromQuery] int? width, [FromQuery] int? height, [FromQuery] int? videoBitRate, [FromQuery] int? subtitleStreamIndex, [FromQuery] SubtitleDeliveryMethod? subtitleMethod, [FromQuery] int? maxRefFrames, [FromQuery] int? maxVideoBitDepth, [FromQuery] bool? requireAvc, [FromQuery] bool? deInterlace, [FromQuery] bool? requireNonAnamorphic, [FromQuery] int? transcodingMaxAudioChannels, [FromQuery] int? cpuCoreLimit, [FromQuery] string liveStreamId, [FromQuery] bool? enableMpegtsM2TsMode, [FromQuery] string videoCodec, [FromQuery] string subtitleCodec, [FromQuery] string transcodeReasons, [FromQuery] int? audioStreamIndex, [FromQuery] int? videoStreamIndex, [FromQuery] EncodingContext? context, [FromQuery] Dictionary&lt;string, string&gt; streamOptions, [FromQuery] int? maxWidth, [FromQuery] int? maxHeight, [FromQuery] bool? enableSubtitlesInManifest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1115,7 +1115,8 @@ public Task&lt;ActionResult&gt; GetLiveHlsStream([FromRoute, Required] Guid item
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

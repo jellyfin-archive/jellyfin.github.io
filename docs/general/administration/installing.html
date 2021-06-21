@@ -8,7 +8,7 @@
     <title>Installing Jellyfin | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Installing Jellyfin | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -59,11 +59,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -258,26 +258,27 @@ WantedBy=multi-user.target default.target
 <p>Cloudron is a complete solution for running apps on your server and keeping them up-to-date and secure. On your Cloudron you can install Jellyfin with a few clicks via the <a href="https://cloudron.io/store/org.jellyfin.cloudronapp.html">app library</a> and updates are delivered automatically.</p>
 <p>The source code for the package can be found <a href="https://git.cloudron.io/cloudron/jellyfin-app">here</a>.
 Any issues or feature requests related to deployment on Cloudron should be filed there.</p>
-<h2 id="windows-x86x64">Windows (x86/x64)</h2>
+<h2 id="windows-x64">Windows (x64)</h2>
 <p>Windows installers and builds in ZIP archive format are available <a href="https://jellyfin.org/downloads/#windows">here</a>.</p>
 <div class="WARNING"><h5>Warning</h5><p>If you installed a version prior to 10.4.0 using a PowerShell script, you will need to manually remove the service using the command <code>nssm remove Jellyfin</code> and uninstall the server by remove all the files manually. Also one might need to move the data files to the correct location, or point the installer at the old location.</p>
 </div>
-<div class="WARNING"><h5>Warning</h5><p>The 32-bit or x86 version is not recommended. <code>ffmpeg</code> and its video encoders generally perform better as a 64-bit executable due to the extra registers provided. This means that the 32-bit version of Jellyfin is deprecated.</p>
+<div class="WARNING"><h5>Warning</h5><p>The Basic Install is the recommended way to run the Jellyfin Server. Using the Advanced/Service mode may experience FFmpeg Hardware Acceleration issues, and is only for advanced users.</p>
 </div>
 <h3 id="install-using-installer-x64">Install using Installer (x64)</h3>
 <p><strong>Install</strong></p>
 <ol>
 <li>Download the latest version.</li>
 <li>Run the installer.</li>
-<li>(Optional) When installing as a service, pick the service account type.</li>
-<li>If everything was completed successfully, the Jellyfin service is now running.</li>
-<li>Open your browser at <a href="http://localhost:8096">http://localhost:8096</a> to finish setting up Jellyfin.</li>
+<li>(Optional) When installing as a service (not recommended), pick the service account type.</li>
+<li>If everything was completed successfully, Jellyfin is now running.</li>
+<li>Open your browser at <a href="http://your_local_IP_address:8096">http://your_local_IP_address:8096</a> to finish setting up Jellyfin.</li>
 </ol>
 <p><strong>Update</strong></p>
 <ol>
 <li>Download the latest version.</li>
+<li>Close or Stop Jellyfin if it is running.</li>
 <li>Run the installer.</li>
-<li>If everything was completed successfully, the Jellyfin service is now running as the new version.</li>
+<li>If everything was completed successfully, the new version is installed.</li>
 </ol>
 <p><strong>Uninstall</strong></p>
 <ol>
@@ -325,22 +326,21 @@ Any issues or feature requests related to deployment on Cloudron should be filed
 <li>Rename <code>system-bak</code> to <code>system</code>.</li>
 <li>Run <code>jellyfin.bat</code> to start the server again.</li>
 </ol>
-<h2 id="macos">MacOS</h2>
-<p>MacOS Application packages and builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#macos">here</a>.</p>
+<h2 id="macos">macOS</h2>
+<p>macOS Application packages and builds in TAR archive format are available <a href="https://jellyfin.org/downloads/#macos">here</a>.</p>
 <p><strong>Install</strong></p>
 <ol>
 <li>Download the latest version.</li>
 <li>Drag the <code>.app</code> package into the Applications folder.</li>
 <li>Start the application.</li>
-<li>Open your browser at <code>http://127.0.0.1:8096</code>.</li>
+<li>Click the icon in the menu bar and select &quot;Launch Web UI&quot;.</li>
 </ol>
 <p><strong>Upgrade</strong></p>
 <ol>
 <li>Download the latest version.</li>
-<li>Stop the currently running server either via the dashboard or using the application icon.</li>
+<li>Stop the currently running server either via the dashboard or using the menu bar icon.</li>
 <li>Drag the new <code>.app</code> package into the Applications folder and click yes to replace the files.</li>
 <li>Start the application.</li>
-<li>Open your browser at <code>http://127.0.0.1:8096</code>.</li>
 </ol>
 <p><strong>Uninstall</strong></p>
 <ol>
@@ -635,7 +635,8 @@ services:
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

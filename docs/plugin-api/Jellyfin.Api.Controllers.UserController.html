@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class UserController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -729,7 +729,7 @@ public class UserController : BaseJellyfinApiController</code></pre>
 [ProducesResponseType(200)]
 [ProducesResponseType(403)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUser([FromRoute, Required] Guid userId, [FromQuery, Required] string pw, [FromQuery] string password)</code></pre>
+public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUser([FromRoute, Required] Guid userId, [FromQuery, Required] string pw, [FromQuery] string password)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -793,7 +793,7 @@ public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUser([Fr
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;AuthenticateByName&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUserByName([FromBody, Required] AuthenticateUserByName request)</code></pre>
+public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUserByName([FromBody, Required] AuthenticateUserByName request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -845,7 +845,7 @@ public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUserByNa
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;AuthenticateWithQuickConnect&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWithQuickConnect([FromBody, Required] QuickConnectDto request)</code></pre>
+public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWithQuickConnect([FromBody, Required] QuickConnectDto request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -898,7 +898,7 @@ public Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWithQuic
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;New&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;UserDto&gt;&gt; CreateUserByName([FromBody, Required] CreateUserByName request)</code></pre>
+public async Task&lt;ActionResult&lt;UserDto&gt;&gt; CreateUserByName([FromBody, Required] CreateUserByName request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -952,7 +952,7 @@ public Task&lt;ActionResult&lt;UserDto&gt;&gt; CreateUserByName([FromBody, Requi
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; DeleteUser([FromRoute, Required] Guid userId)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteUser([FromRoute, Required] Guid userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1004,7 +1004,7 @@ public Task&lt;ActionResult&gt; DeleteUser([FromRoute, Required] Guid userId)</c
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ForgotPassword&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([FromBody, Required] ForgotPasswordDto forgotPasswordRequest)</code></pre>
+public async Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([FromBody, Required] ForgotPasswordDto forgotPasswordRequest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1056,7 +1056,7 @@ public Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword([From
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ForgotPassword/Pin&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody, Required] ForgotPasswordPinDto forgotPasswordPinRequest)</code></pre>
+public async Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([FromBody, Required] ForgotPasswordPinDto forgotPasswordPinRequest)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1294,7 +1294,7 @@ public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetUsers([FromQuery] bool?
 [ProducesResponseType(204)]
 [ProducesResponseType(400)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; UpdateUser([FromRoute, Required] Guid userId, [FromBody, Required] UserDto updateUser)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateUser([FromRoute, Required] Guid userId, [FromBody, Required] UserDto updateUser)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1354,7 +1354,7 @@ public Task&lt;ActionResult&gt; UpdateUser([FromRoute, Required] Guid userId, [F
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; UpdateUserConfiguration([FromRoute, Required] Guid userId, [FromBody, Required] UserConfiguration userConfig)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateUserConfiguration([FromRoute, Required] Guid userId, [FromBody, Required] UserConfiguration userConfig)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1476,7 +1476,7 @@ public ActionResult UpdateUserEasyPassword([FromRoute, Required] Guid userId, [F
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&gt; UpdateUserPassword([FromRoute, Required] Guid userId, [FromBody, Required] UpdateUserPassword request)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateUserPassword([FromRoute, Required] Guid userId, [FromBody, Required] UpdateUserPassword request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1537,7 +1537,7 @@ public Task&lt;ActionResult&gt; UpdateUserPassword([FromRoute, Required] Guid us
 [ProducesResponseType(204)]
 [ProducesResponseType(400)]
 [ProducesResponseType(403)]
-public Task&lt;ActionResult&gt; UpdateUserPolicy([FromRoute, Required] Guid userId, [FromBody, Required] UserPolicy newPolicy)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateUserPolicy([FromRoute, Required] Guid userId, [FromBody, Required] UserPolicy newPolicy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1599,7 +1599,8 @@ public Task&lt;ActionResult&gt; UpdateUserPolicy([FromRoute, Required] Guid user
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

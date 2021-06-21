@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Group
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -965,7 +965,8 @@
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_NewSyncPlayGroupUpdate_" data-uid="Emby.Server.Implementations.SyncPlay.Group.NewSyncPlayGroupUpdate*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_NewSyncPlayGroupUpdate__1_MediaBrowser_Model_SyncPlay_GroupUpdateType___0_" data-uid="Emby.Server.Implementations.SyncPlay.Group.NewSyncPlayGroupUpdate``1(MediaBrowser.Model.SyncPlay.GroupUpdateType,``0)">NewSyncPlayGroupUpdate&lt;T&gt;(GroupUpdateType, T)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Builds a new group update message.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -984,12 +985,14 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdateType.html">GroupUpdateType</a></td>
         <td><span class="parametername">type</span></td>
-        <td></td>
+        <td><p>The update type.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>The data to send.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1004,7 +1007,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate</a>&lt;T&gt;</td>
-        <td></td>
+        <td><p>The group update.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1019,7 +1023,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the data of the message.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1280,7 +1285,8 @@
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_SendGroupUpdate_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SendGroupUpdate*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_SendGroupUpdate__1_MediaBrowser_Controller_Session_SessionInfo_MediaBrowser_Model_SyncPlay_SyncPlayBroadcastType_MediaBrowser_Model_SyncPlay_GroupUpdate___0__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SendGroupUpdate``1(MediaBrowser.Controller.Session.SessionInfo,MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType,MediaBrowser.Model.SyncPlay.GroupUpdate{``0},System.Threading.CancellationToken)">SendGroupUpdate&lt;T&gt;(SessionInfo, SyncPlayBroadcastType, GroupUpdate&lt;T&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends a GroupUpdate message to the interested sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1299,22 +1305,26 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
         <td><span class="parametername">from</span></td>
-        <td></td>
+        <td><p>The current session.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.SyncPlay.SyncPlayBroadcastType.html">SyncPlayBroadcastType</a></td>
         <td><span class="parametername">type</span></td>
-        <td></td>
+        <td><p>The filtering type.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.SyncPlay.GroupUpdate-1.html">GroupUpdate</a>&lt;T&gt;</td>
         <td><span class="parametername">message</span></td>
-        <td></td>
+        <td><p>The message to send.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1329,7 +1339,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>The task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1344,7 +1355,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>The type of the data of the message.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1832,7 +1844,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

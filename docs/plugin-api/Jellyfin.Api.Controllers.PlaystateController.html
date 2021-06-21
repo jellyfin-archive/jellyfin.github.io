@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class PlaystateController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -850,7 +850,7 @@ public ActionResult&lt;UserItemDataDto&gt; MarkUnplayedItem([FromRoute, Required
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/PlayingItems/{itemId}/Progress&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] long? positionTicks, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] int? volumeLevel, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] RepeatMode? repeatMode, [FromQuery] bool isPaused = false, [FromQuery] bool isMuted = false)</code></pre>
+public async Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] long? positionTicks, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] int? volumeLevel, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] RepeatMode? repeatMode, [FromQuery] bool isPaused = false, [FromQuery] bool isMuted = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -974,7 +974,7 @@ public Task&lt;ActionResult&gt; OnPlaybackProgress([FromRoute, Required] Guid us
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Users/{userId}/PlayingItems/{itemId}&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] bool canSeek = false)</code></pre>
+public async Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] int? audioStreamIndex, [FromQuery] int? subtitleStreamIndex, [FromQuery] PlayMethod? playMethod, [FromQuery] string liveStreamId, [FromQuery] string playSessionId, [FromQuery] bool canSeek = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1074,7 +1074,7 @@ public Task&lt;ActionResult&gt; OnPlaybackStart([FromRoute, Required] Guid userI
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Users/{userId}/PlayingItems/{itemId}&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; OnPlaybackStopped([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] string nextMediaType, [FromQuery] long? positionTicks, [FromQuery] string liveStreamId, [FromQuery] string playSessionId)</code></pre>
+public async Task&lt;ActionResult&gt; OnPlaybackStopped([FromRoute, Required] Guid userId, [FromRoute, Required] Guid itemId, [FromQuery] string mediaSourceId, [FromQuery] string nextMediaType, [FromQuery] long? positionTicks, [FromQuery] string liveStreamId, [FromQuery] string playSessionId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1214,7 +1214,7 @@ public ActionResult PingPlaybackSession([FromQuery, Required] string playSession
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Playing/Progress&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; ReportPlaybackProgress([FromBody] PlaybackProgressInfo playbackProgressInfo)</code></pre>
+public async Task&lt;ActionResult&gt; ReportPlaybackProgress([FromBody] PlaybackProgressInfo playbackProgressInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1266,7 +1266,7 @@ public Task&lt;ActionResult&gt; ReportPlaybackProgress([FromBody] PlaybackProgre
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Playing&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; ReportPlaybackStart([FromBody] PlaybackStartInfo playbackStartInfo)</code></pre>
+public async Task&lt;ActionResult&gt; ReportPlaybackStart([FromBody] PlaybackStartInfo playbackStartInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1318,7 +1318,7 @@ public Task&lt;ActionResult&gt; ReportPlaybackStart([FromBody] PlaybackStartInfo
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/Playing/Stopped&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; ReportPlaybackStopped([FromBody] PlaybackStopInfo playbackStopInfo)</code></pre>
+public async Task&lt;ActionResult&gt; ReportPlaybackStopped([FromBody] PlaybackStopInfo playbackStopInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1374,7 +1374,8 @@ public Task&lt;ActionResult&gt; ReportPlaybackStopped([FromBody] PlaybackStopInf
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

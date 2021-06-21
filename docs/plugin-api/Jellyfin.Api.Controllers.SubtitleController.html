@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SubtitleController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -800,7 +800,7 @@ public ActionResult&lt;Task&gt; DeleteSubtitle([FromRoute, Required] Guid itemId
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/{itemId}/RemoteSearch/Subtitles/{subtitleId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string subtitleId)</code></pre>
+public async Task&lt;ActionResult&gt; DownloadRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string subtitleId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -950,7 +950,7 @@ public IEnumerable&lt;FontFile&gt; GetFallbackFontList()</code></pre>
 [ProducesResponseType(200)]
 [Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesFile(new string[]{&quot;text/*&quot;})]
-public Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string id)</code></pre>
+public async Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1000,10 +1000,10 @@ public Task&lt;ActionResult&gt; GetRemoteSubtitles([FromRoute, Required] string 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{routeItemId}/routeMediaSourceId/Subtitles/{routeIndex}/Stream.{routeFormat}&quot;)]
+    <pre><code class="lang-csharp hljs">[HttpGet(&quot;Videos/{routeItemId}/{routeMediaSourceId}/Subtitles/{routeIndex}/Stream.{routeFormat}&quot;)]
 [ProducesResponseType(200)]
 [ProducesFile(new string[]{&quot;text/*&quot;})]
-public Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid routeItemId, [FromRoute, Required] string routeMediaSourceId, [FromRoute, Required] int routeIndex, [FromRoute, Required] string routeFormat, [FromQuery] Guid? itemId, [FromQuery] string mediaSourceId, [FromQuery] int? index, [FromQuery] string format, [FromQuery] long? endPositionTicks, [FromQuery] bool copyTimestamps = false, [FromQuery] bool addVttTimeMap = false, [FromQuery] long startPositionTicks = 0L)</code></pre>
+public async Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid routeItemId, [FromRoute, Required] string routeMediaSourceId, [FromRoute, Required] int routeIndex, [FromRoute, Required] string routeFormat, [FromQuery] Guid? itemId, [FromQuery] string mediaSourceId, [FromQuery] int? index, [FromQuery] string format, [FromQuery] long? endPositionTicks, [FromQuery] bool copyTimestamps = false, [FromQuery] bool addVttTimeMap = false, [FromQuery] long startPositionTicks = 0L)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1123,7 +1123,7 @@ public Task&lt;ActionResult&gt; GetSubtitle([FromRoute, Required] Guid routeItem
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesPlaylistFile]
-public Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute, Required] Guid itemId, [FromRoute, Required] int index, [FromRoute, Required] string mediaSourceId, [FromQuery, Required] int segmentLength)</code></pre>
+public async Task&lt;ActionResult&gt; GetSubtitlePlaylist([FromRoute, Required] Guid itemId, [FromRoute, Required] int index, [FromRoute, Required] string mediaSourceId, [FromQuery, Required] int segmentLength)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1319,7 +1319,7 @@ public Task&lt;ActionResult&gt; GetSubtitleWithTicks([FromRoute, Required] Guid 
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Items/{itemId}/RemoteSearch/Subtitles/{language}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; SearchRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string language, [FromQuery] bool? isPerfectMatch)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; SearchRemoteSubtitles([FromRoute, Required] Guid itemId, [FromRoute, Required] string language, [FromQuery] bool? isPerfectMatch)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1384,7 +1384,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSubtitleInfo&gt;&gt;&gt; Sea
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Videos/{itemId}/Subtitles&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; UploadSubtitle([FromRoute, Required] Guid itemId, [FromBody, Required] UploadSubtitleDto body)</code></pre>
+public async Task&lt;ActionResult&gt; UploadSubtitle([FromRoute, Required] Guid itemId, [FromBody, Required] UploadSubtitleDto body)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1446,7 +1446,8 @@ public Task&lt;ActionResult&gt; UploadSubtitle([FromRoute, Required] Guid itemId
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

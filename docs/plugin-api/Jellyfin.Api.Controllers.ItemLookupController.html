@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ItemLookupController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -717,7 +717,7 @@ public class ItemLookupController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Apply/{itemId}&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; ApplySearchCriteria([FromRoute, Required] Guid itemId, [FromBody, Required] RemoteSearchResult searchResult, [FromQuery] bool replaceAllImages = true)</code></pre>
+public async Task&lt;ActionResult&gt; ApplySearchCriteria([FromRoute, Required] Guid itemId, [FromBody, Required] RemoteSearchResult searchResult, [FromQuery] bool replaceAllImages = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -781,7 +781,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Book&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetBookRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;BookInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetBookRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;BookInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -833,7 +833,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/BoxSet&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetBoxSetRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;BoxSetInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetBoxSetRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;BoxSetInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -939,7 +939,7 @@ public ActionResult&lt;IEnumerable&lt;ExternalIdInfo&gt;&gt; GetExternalIdInfos(
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Movie&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMovieRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;MovieInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMovieRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;MovieInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -991,7 +991,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/MusicAlbum&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicAlbumRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;AlbumInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicAlbumRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;AlbumInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1043,7 +1043,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/MusicArtist&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicArtistRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;ArtistInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicArtistRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;ArtistInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1095,7 +1095,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/MusicVideo&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicVideoRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;MusicVideoInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetMusicVideoRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;MusicVideoInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1148,7 +1148,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Person&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetPersonRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;PersonLookupInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetPersonRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;PersonLookupInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1200,7 +1200,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Series&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetSeriesRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;SeriesInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetSeriesRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;SeriesInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1252,7 +1252,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Items/RemoteSearch/Trailer&quot;)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetTrailerRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;TrailerInfo&gt; query)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;RemoteSearchResult&gt;&gt;&gt; GetTrailerRemoteSearchResults([FromBody, Required] RemoteSearchQuery&lt;TrailerInfo&gt; query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1309,7 +1309,8 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

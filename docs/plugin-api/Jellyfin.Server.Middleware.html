@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Namespace Jellyfin.Server.Middleware
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -102,6 +102,9 @@
       <h4><a class="xref" href="Jellyfin.Server.Middleware.LegacyEmbyRouteRewriteMiddleware.html">LegacyEmbyRouteRewriteMiddleware</a></h4>
       <section><p>Removes /emby and /mediabrowser from requested route.</p>
 </section>
+      <h4><a class="xref" href="Jellyfin.Server.Middleware.QueryStringDecodingMiddleware.html">QueryStringDecodingMiddleware</a></h4>
+      <section><p>URL decodes the querystring before binding.</p>
+</section>
       <h4><a class="xref" href="Jellyfin.Server.Middleware.ResponseTimeMiddleware.html">ResponseTimeMiddleware</a></h4>
       <section><p>Response time middleware.</p>
 </section>
@@ -110,6 +113,9 @@
 </section>
       <h4><a class="xref" href="Jellyfin.Server.Middleware.ServerStartupMessageMiddleware.html">ServerStartupMessageMiddleware</a></h4>
       <section><p>Shows a custom message during server startup.</p>
+</section>
+      <h4><a class="xref" href="Jellyfin.Server.Middleware.UrlDecodeQueryFeature.html">UrlDecodeQueryFeature</a></h4>
+      <section><p>Defines the <a class="xref" href="Jellyfin.Server.Middleware.UrlDecodeQueryFeature.html">UrlDecodeQueryFeature</a>.</p>
 </section>
       <h4><a class="xref" href="Jellyfin.Server.Middleware.WebSocketHandlerMiddleware.html">WebSocketHandlerMiddleware</a></h4>
       <section><p>Handles WebSocket requests.</p>
@@ -124,7 +130,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

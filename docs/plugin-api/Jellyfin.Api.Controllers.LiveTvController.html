@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class LiveTvController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -739,7 +739,7 @@
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ListingProviders&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;ListingsProviderInfo&gt;&gt; AddListingProvider([FromQuery] string pw, [FromBody] ListingsProviderInfo listingsProviderInfo, [FromQuery] bool validateListings = false, [FromQuery] bool validateLogin = false)</code></pre>
+public async Task&lt;ActionResult&lt;ListingsProviderInfo&gt;&gt; AddListingProvider([FromQuery] string pw, [FromBody] ListingsProviderInfo listingsProviderInfo, [FromQuery] bool validateListings = false, [FromQuery] bool validateLogin = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -810,7 +810,7 @@ public Task&lt;ActionResult&lt;ListingsProviderInfo&gt;&gt; AddListingProvider([
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;TunerHosts&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;TunerHostInfo&gt;&gt; AddTunerHost([FromBody] TunerHostInfo tunerHostInfo)</code></pre>
+public async Task&lt;ActionResult&lt;TunerHostInfo&gt;&gt; AddTunerHost([FromBody] TunerHostInfo tunerHostInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -863,7 +863,7 @@ public Task&lt;ActionResult&lt;TunerHostInfo&gt;&gt; AddTunerHost([FromBody] Tun
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;SeriesTimers/{timerId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; CancelSeriesTimer([FromRoute, Required] string timerId)</code></pre>
+public async Task&lt;ActionResult&gt; CancelSeriesTimer([FromRoute, Required] string timerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -916,7 +916,7 @@ public Task&lt;ActionResult&gt; CancelSeriesTimer([FromRoute, Required] string t
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Timers/{timerId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; CancelTimer([FromRoute, Required] string timerId)</code></pre>
+public async Task&lt;ActionResult&gt; CancelTimer([FromRoute, Required] string timerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -969,7 +969,7 @@ public Task&lt;ActionResult&gt; CancelTimer([FromRoute, Required] string timerId
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;SeriesTimers&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; CreateSeriesTimer([FromBody] SeriesTimerInfoDto seriesTimerInfo)</code></pre>
+public async Task&lt;ActionResult&gt; CreateSeriesTimer([FromBody] SeriesTimerInfoDto seriesTimerInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1022,7 +1022,7 @@ public Task&lt;ActionResult&gt; CreateSeriesTimer([FromBody] SeriesTimerInfoDto 
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Timers&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; CreateTimer([FromBody] TimerInfoDto timerInfo)</code></pre>
+public async Task&lt;ActionResult&gt; CreateTimer([FromBody] TimerInfoDto timerInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1236,7 +1236,7 @@ public ActionResult DeleteTunerHost([FromQuery] string id)</code></pre>
 [HttpGet(&quot;Tuners/Discover&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;TunerHostInfo&gt;&gt;&gt; DiscoverTuners([FromQuery] bool newDevicesOnly = false)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;TunerHostInfo&gt;&gt;&gt; DiscoverTuners([FromQuery] bool newDevicesOnly = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1348,7 +1348,7 @@ public ActionResult&lt;BaseItemDto&gt; GetChannel([FromRoute, Required] Guid cha
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;ChannelMappingOptions&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;ChannelMappingOptionsDto&gt;&gt; GetChannelMappingOptions([FromQuery] string providerId)</code></pre>
+public async Task&lt;ActionResult&lt;ChannelMappingOptionsDto&gt;&gt; GetChannelMappingOptions([FromQuery] string providerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1436,7 +1436,7 @@ public ActionResult&lt;ListingsProviderInfo&gt; GetDefaultListingProvider()</cod
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Timers/Defaults&quot;)]
 [ProducesResponseType(200)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public Task&lt;ActionResult&lt;SeriesTimerInfoDto&gt;&gt; GetDefaultTimer([FromQuery] string programId)</code></pre>
+public async Task&lt;ActionResult&lt;SeriesTimerInfoDto&gt;&gt; GetDefaultTimer([FromQuery] string programId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1524,7 +1524,7 @@ public ActionResult&lt;GuideInfo&gt; GetGuideInfo()</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;ListingProviders/Lineups&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;IEnumerable&lt;NameIdPair&gt;&gt;&gt; GetLineups([FromQuery] string id, [FromQuery] string type, [FromQuery] string location, [FromQuery] string country)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;NameIdPair&gt;&gt;&gt; GetLineups([FromQuery] string id, [FromQuery] string type, [FromQuery] string location, [FromQuery] string country)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1596,7 +1596,7 @@ public Task&lt;ActionResult&lt;IEnumerable&lt;NameIdPair&gt;&gt;&gt; GetLineups(
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesVideoFile]
-public Task&lt;ActionResult&gt; GetLiveRecordingFile([FromRoute, Required] string recordingId)</code></pre>
+public async Task&lt;ActionResult&gt; GetLiveRecordingFile([FromRoute, Required] string recordingId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1651,7 +1651,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesVideoFile]
-public Task&lt;ActionResult&gt; GetLiveStreamFile([FromRoute, Required] string streamId, [FromRoute, Required] string container)</code></pre>
+public async Task&lt;ActionResult&gt; GetLiveStreamFile([FromRoute, Required] string streamId, [FromRoute, Required] string container)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1919,7 +1919,7 @@ public ActionResult&lt;LiveTvInfo&gt; GetLiveTvInfo()</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Programs&quot;)]
 [ProducesResponseType(200)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLiveTvPrograms([FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] channelIds, [FromQuery] Guid? userId, [FromQuery] DateTime? minStartDate, [FromQuery] bool? hasAired, [FromQuery] bool? isAiring, [FromQuery] DateTime? maxStartDate, [FromQuery] DateTime? minEndDate, [FromQuery] DateTime? maxEndDate, [FromQuery] bool? isMovie, [FromQuery] bool? isSeries, [FromQuery] bool? isNews, [FromQuery] bool? isKids, [FromQuery] bool? isSports, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] sortBy, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] SortOrder[] sortOrder, [FromQuery, ModelBinder(typeof(PipeDelimitedArrayModelBinder))] string[] genres, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] genreIds, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] string seriesTimerId, [FromQuery] Guid? librarySeriesId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] bool enableTotalRecordCount = true)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLiveTvPrograms([FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] channelIds, [FromQuery] Guid? userId, [FromQuery] DateTime? minStartDate, [FromQuery] bool? hasAired, [FromQuery] bool? isAiring, [FromQuery] DateTime? maxStartDate, [FromQuery] DateTime? minEndDate, [FromQuery] DateTime? maxEndDate, [FromQuery] bool? isMovie, [FromQuery] bool? isSeries, [FromQuery] bool? isNews, [FromQuery] bool? isKids, [FromQuery] bool? isSports, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] string[] sortBy, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] SortOrder[] sortOrder, [FromQuery, ModelBinder(typeof(PipeDelimitedArrayModelBinder))] string[] genres, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] genreIds, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] string seriesTimerId, [FromQuery] Guid? librarySeriesId, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] bool enableTotalRecordCount = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2128,7 +2128,7 @@ public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetLiveTvP
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Programs/{programId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetProgram([FromRoute, Required] string programId, [FromQuery] Guid? userId)</code></pre>
+public async Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetProgram([FromRoute, Required] string programId, [FromQuery] Guid? userId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2187,7 +2187,7 @@ public Task&lt;ActionResult&lt;BaseItemDto&gt;&gt; GetProgram([FromRoute, Requir
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Programs&quot;)]
 [ProducesResponseType(200)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetPrograms([FromBody] GetProgramsDto body)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetPrograms([FromBody] GetProgramsDto body)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2897,7 +2897,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetRecordingsSeries([F
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesFile(new string[]{&quot;application/json&quot;})]
-public Task&lt;ActionResult&gt; GetSchedulesDirectCountries()</code></pre>
+public async Task&lt;ActionResult&gt; GetSchedulesDirectCountries()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2933,7 +2933,7 @@ public Task&lt;ActionResult&gt; GetSchedulesDirectCountries()</code></pre>
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
-public Task&lt;ActionResult&lt;SeriesTimerInfoDto&gt;&gt; GetSeriesTimer([FromRoute, Required] string timerId)</code></pre>
+public async Task&lt;ActionResult&lt;SeriesTimerInfoDto&gt;&gt; GetSeriesTimer([FromRoute, Required] string timerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2986,7 +2986,7 @@ public Task&lt;ActionResult&lt;SeriesTimerInfoDto&gt;&gt; GetSeriesTimer([FromRo
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;SeriesTimers&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;QueryResult&lt;SeriesTimerInfoDto&gt;&gt;&gt; GetSeriesTimers([FromQuery] string sortBy, [FromQuery] SortOrder? sortOrder)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;SeriesTimerInfoDto&gt;&gt;&gt; GetSeriesTimers([FromQuery] string sortBy, [FromQuery] SortOrder? sortOrder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3045,7 +3045,7 @@ public Task&lt;ActionResult&lt;QueryResult&lt;SeriesTimerInfoDto&gt;&gt;&gt; Get
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Timers/{timerId}&quot;)]
 [ProducesResponseType(200)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public Task&lt;ActionResult&lt;TimerInfoDto&gt;&gt; GetTimer([FromRoute, Required] string timerId)</code></pre>
+public async Task&lt;ActionResult&lt;TimerInfoDto&gt;&gt; GetTimer([FromRoute, Required] string timerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3098,7 +3098,7 @@ public Task&lt;ActionResult&lt;TimerInfoDto&gt;&gt; GetTimer([FromRoute, Require
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Timers&quot;)]
 [ProducesResponseType(200)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public Task&lt;ActionResult&lt;QueryResult&lt;TimerInfoDto&gt;&gt;&gt; GetTimers([FromQuery] string channelId, [FromQuery] string seriesTimerId, [FromQuery] bool? isActive, [FromQuery] bool? isScheduled)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;TimerInfoDto&gt;&gt;&gt; GetTimers([FromQuery] string channelId, [FromQuery] string seriesTimerId, [FromQuery] bool? isActive, [FromQuery] bool? isScheduled)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3257,7 +3257,7 @@ public ActionResult ResetTuner([FromRoute, Required] string tunerId)</code></pre
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;ChannelMappings&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public Task&lt;ActionResult&lt;TunerChannelMapping&gt;&gt; SetChannelMapping([FromBody, Required] SetChannelMappingDto setChannelMappingDto)</code></pre>
+public async Task&lt;ActionResult&lt;TunerChannelMapping&gt;&gt; SetChannelMapping([FromBody, Required] SetChannelMappingDto setChannelMappingDto)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3310,7 +3310,7 @@ public Task&lt;ActionResult&lt;TunerChannelMapping&gt;&gt; SetChannelMapping([Fr
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;SeriesTimers/{timerId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; UpdateSeriesTimer([FromRoute, Required] string timerId, [FromBody] SeriesTimerInfoDto seriesTimerInfo)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateSeriesTimer([FromRoute, Required] string timerId, [FromBody] SeriesTimerInfoDto seriesTimerInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3369,7 +3369,7 @@ public Task&lt;ActionResult&gt; UpdateSeriesTimer([FromRoute, Required] string t
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Timers/{timerId}&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public Task&lt;ActionResult&gt; UpdateTimer([FromRoute, Required] string timerId, [FromBody] TimerInfoDto timerInfo)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateTimer([FromRoute, Required] string timerId, [FromBody] TimerInfoDto timerInfo)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3431,7 +3431,8 @@ public Task&lt;ActionResult&gt; UpdateTimer([FromRoute, Required] string timerId
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

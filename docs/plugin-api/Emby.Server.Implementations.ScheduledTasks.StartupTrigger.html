@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class StartupTrigger
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -123,43 +123,61 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class StartupTrigger : ITaskTrigger</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class StartupTrigger : ITaskTrigger</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger__ctor.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger__ctor_MediaBrowser_Model_Tasks_TaskOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.%23ctor(MediaBrowser.Model.Tasks.TaskOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L29">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L21">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger__ctor_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger__ctor" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.#ctor">StartupTrigger()</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger__ctor_MediaBrowser_Model_Tasks_TaskOptions_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.#ctor(MediaBrowser.Model.Tasks.TaskOptions)">StartupTrigger(TaskOptions)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.html">StartupTrigger</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public StartupTrigger()</code></pre>
+    <pre><code class="lang-csharp hljs">public StartupTrigger(TaskOptions taskOptions)</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Tasks.TaskOptions.html">TaskOptions</a></td>
+        <td><span class="parametername">taskOptions</span></td>
+        <td><p>The options of this task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger_DelayMs.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.DelayMs%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L15">View Source</a>
   </span>
-  <a id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_DelayMs_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.DelayMs*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_DelayMs" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.DelayMs">DelayMs</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int DelayMs { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public const int DelayMs = 3000</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -174,21 +192,23 @@
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger_TaskOptions.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.TaskOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L27">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L34">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_TaskOptions_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.TaskOptions*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_TaskOptions" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.TaskOptions">TaskOptions</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the options of this task.</p>
+  <div class="markdown level1 summary"><p>Gets the options of this task.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TaskOptions TaskOptions { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TaskOptions TaskOptions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,7 +232,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Start_MediaBrowser_Model_Tasks_TaskResult_Microsoft_Extensions_Logging_ILogger_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Start(MediaBrowser.Model.Tasks.TaskResult%2CMicrosoft.Extensions.Logging.ILogger%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L43">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Start_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Start*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Start_MediaBrowser_Model_Tasks_TaskResult_Microsoft_Extensions_Logging_ILogger_System_String_System_Boolean_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Start(MediaBrowser.Model.Tasks.TaskResult,Microsoft.Extensions.Logging.ILogger,System.String,System.Boolean)">Start(TaskResult, ILogger, String, Boolean)</h4>
@@ -221,7 +241,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Start(TaskResult lastResult, ILogger logger, string taskName, bool isApplicationStartup)</code></pre>
+    <pre><code class="lang-csharp hljs">public async void Start(TaskResult lastResult, ILogger logger, string taskName, bool isApplicationStartup)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -264,7 +284,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Stop.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L56">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Stop_" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Stop*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Stop" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Stop">Stop()</h4>
@@ -282,7 +302,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Triggered.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Triggered%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L29">View Source</a>
   </span>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_StartupTrigger_Triggered" data-uid="Emby.Server.Implementations.ScheduledTasks.StartupTrigger.Triggered">Triggered</h4>
   <div class="markdown level1 summary"><p>Occurs when [triggered].</p>
@@ -326,12 +346,13 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_StartupTrigger.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.StartupTrigger%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/StartupTrigger.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

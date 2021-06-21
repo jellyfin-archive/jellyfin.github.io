@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ApiApplicationBuilderExtensions
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseBaseUrlRedirection_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseBaseUrlRedirection(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L86">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L96">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseBaseUrlRedirection_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseBaseUrlRedirection*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseBaseUrlRedirection_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseBaseUrlRedirection(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseBaseUrlRedirection(IApplicationBuilder)</h4>
@@ -334,7 +334,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UsePathTrim_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UsePathTrim(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L129">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L139">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UsePathTrim_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UsePathTrim*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UsePathTrim_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UsePathTrim(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UsePathTrim(IApplicationBuilder)</h4>
@@ -384,10 +384,60 @@
 </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseQueryStringDecoding_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseQueryStringDecoding(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L86">View Source</a>
+  </span>
+  <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseQueryStringDecoding_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseQueryStringDecoding*"></a>
+  <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseQueryStringDecoding_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseQueryStringDecoding(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseQueryStringDecoding(IApplicationBuilder)</h4>
+  <div class="markdown level1 summary"><p>Enables url decoding before binding to the application pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IApplicationBuilder UseQueryStringDecoding(this IApplicationBuilder appBuilder)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder">IApplicationBuilder</a></td>
+        <td><span class="parametername">appBuilder</span></td>
+        <td><p>The <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder">IApplicationBuilder</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.builder.iapplicationbuilder">IApplicationBuilder</a></td>
+        <td><p>The updated application builder.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseRobotsRedirection_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseRobotsRedirection(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L116">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L126">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseRobotsRedirection_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseRobotsRedirection*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseRobotsRedirection_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseRobotsRedirection(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseRobotsRedirection(IApplicationBuilder)</h4>
@@ -437,7 +487,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseServerStartupMessage_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseServerStartupMessage(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L96">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L106">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseServerStartupMessage_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseServerStartupMessage*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseServerStartupMessage_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseServerStartupMessage(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseServerStartupMessage(IApplicationBuilder)</h4>
@@ -487,7 +537,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseWebSocketHandler_Microsoft_AspNetCore_Builder_IApplicationBuilder_.md&amp;value=---%0Auid%3A%20Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseWebSocketHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L106">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Server/Extensions/ApiApplicationBuilderExtensions.cs/#L116">View Source</a>
   </span>
   <a id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseWebSocketHandler_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseWebSocketHandler*"></a>
   <h4 id="Jellyfin_Server_Extensions_ApiApplicationBuilderExtensions_UseWebSocketHandler_Microsoft_AspNetCore_Builder_IApplicationBuilder_" data-uid="Jellyfin.Server.Extensions.ApiApplicationBuilderExtensions.UseWebSocketHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder)">UseWebSocketHandler(IApplicationBuilder)</h4>
@@ -548,7 +598,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

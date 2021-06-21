@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MediaSourceManager
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.48.1.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -61,11 +61,11 @@
       <div class="container body-content">
         
         <div id="search-results">
-          <div class="search-list"></div>
+          <div class="search-list">Search Results for <span></span></div>
           <div class="sr-items">
             <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
           </div>
-          <ul id="pagination"></ul>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
         </div>
       </div>
       <div role="main" class="container body-content hide-when-search">
@@ -206,7 +206,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_AddMediaInfoWithProbe_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.AddMediaInfoWithProbe(MediaBrowser.Model.Dto.MediaSourceInfo%2CSystem.Boolean%2CSystem.String%2CSystem.Boolean%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L631">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L628">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_AddMediaInfoWithProbe_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.AddMediaInfoWithProbe*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_AddMediaInfoWithProbe_MediaBrowser_Model_Dto_MediaSourceInfo_System_Boolean_System_String_System_Boolean_System_Boolean_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.AddMediaInfoWithProbe(MediaBrowser.Model.Dto.MediaSourceInfo,System.Boolean,System.String,System.Boolean,System.Boolean,System.Threading.CancellationToken)">AddMediaInfoWithProbe(MediaSourceInfo, Boolean, String, Boolean, Boolean, CancellationToken)</h4>
@@ -214,7 +214,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddMediaInfoWithProbe(MediaSourceInfo mediaSource, bool isAudio, string cacheKey, bool addProbeDelay, bool isLiveStream, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task AddMediaInfoWithProbe(MediaSourceInfo mediaSource, bool isAudio, string cacheKey, bool addProbeDelay, bool isLiveStream, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -310,7 +310,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_CloseLiveStream_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.CloseLiveStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L811">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L808">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_CloseLiveStream_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.CloseLiveStream*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_CloseLiveStream_System_String_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.CloseLiveStream(System.String)">CloseLiveStream(String)</h4>
@@ -318,7 +318,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task CloseLiveStream(string id)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task CloseLiveStream(string id)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -357,7 +357,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L865">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L862">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_Dispose_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_Dispose" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.Dispose">Dispose()</h4>
@@ -373,7 +373,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L875">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L872">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_Dispose_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_Dispose_System_Boolean_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -407,7 +407,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_GetDirectStreamProviderByUniqueId_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.GetDirectStreamProviderByUniqueId(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L593">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L590">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_GetDirectStreamProviderByUniqueId_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetDirectStreamProviderByUniqueId*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_GetDirectStreamProviderByUniqueId_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetDirectStreamProviderByUniqueId(System.String,System.Threading.CancellationToken)">GetDirectStreamProviderByUniqueId(String, CancellationToken)</h4>
@@ -459,7 +459,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStream_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStream(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L805">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L802">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStream_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStream*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStream_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStream(System.String,System.Threading.CancellationToken)">GetLiveStream(String, CancellationToken)</h4>
@@ -467,7 +467,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;MediaSourceInfo&gt; GetLiveStream(string id, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;MediaSourceInfo&gt; GetLiveStream(string id, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -511,7 +511,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamMediaInfo_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamMediaInfo(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L606">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L603">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamMediaInfo_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamMediaInfo*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamMediaInfo_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamMediaInfo(System.String,System.Threading.CancellationToken)">GetLiveStreamMediaInfo(String, CancellationToken)</h4>
@@ -519,7 +519,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;MediaSourceInfo&gt; GetLiveStreamMediaInfo(string id, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;MediaSourceInfo&gt; GetLiveStreamMediaInfo(string id, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -563,7 +563,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamWithDirectStreamProvider_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamWithDirectStreamProvider(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L777">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L774">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamWithDirectStreamProvider_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamWithDirectStreamProvider*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_GetLiveStreamWithDirectStreamProvider_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.GetLiveStreamWithDirectStreamProvider(System.String,System.Threading.CancellationToken)">GetLiveStreamWithDirectStreamProvider(String, CancellationToken)</h4>
@@ -571,7 +571,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Tuple&lt;MediaSourceInfo, IDirectStreamProvider&gt;&gt; GetLiveStreamWithDirectStreamProvider(string id, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;Tuple&lt;MediaSourceInfo, IDirectStreamProvider&gt;&gt; GetLiveStreamWithDirectStreamProvider(string id, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -723,7 +723,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;MediaSourceInfo&gt; GetMediaSource(BaseItem item, string mediaSourceId, string liveStreamId, bool enablePathSubstitution, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;MediaSourceInfo&gt; GetMediaSource(BaseItem item, string mediaSourceId, string liveStreamId, bool enablePathSubstitution, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -978,7 +978,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;List&lt;MediaSourceInfo&gt;&gt; GetPlaybackMediaSources(BaseItem item, User user, bool allowMediaProbe, bool enablePathSubstitution, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;List&lt;MediaSourceInfo&gt;&gt; GetPlaybackMediaSources(BaseItem item, User user, bool allowMediaProbe, bool enablePathSubstitution, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1094,7 +1094,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStream_MediaBrowser_Model_MediaInfo_LiveStreamRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStream(MediaBrowser.Model.MediaInfo.LiveStreamRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L600">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L597">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStream_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStream*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStream_MediaBrowser_Model_MediaInfo_LiveStreamRequest_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStream(MediaBrowser.Model.MediaInfo.LiveStreamRequest,System.Threading.CancellationToken)">OpenLiveStream(LiveStreamRequest, CancellationToken)</h4>
@@ -1102,7 +1102,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;LiveStreamResponse&gt; OpenLiveStream(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;LiveStreamResponse&gt; OpenLiveStream(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1146,7 +1146,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStreamInternal_MediaBrowser_Model_MediaInfo_LiveStreamRequest_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStreamInternal(MediaBrowser.Model.MediaInfo.LiveStreamRequest%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L467">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L464">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStreamInternal_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStreamInternal*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_OpenLiveStreamInternal_MediaBrowser_Model_MediaInfo_LiveStreamRequest_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.OpenLiveStreamInternal(MediaBrowser.Model.MediaInfo.LiveStreamRequest,System.Threading.CancellationToken)">OpenLiveStreamInternal(LiveStreamRequest, CancellationToken)</h4>
@@ -1154,7 +1154,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;Tuple&lt;LiveStreamResponse, IDirectStreamProvider&gt;&gt; OpenLiveStreamInternal(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task&lt;Tuple&lt;LiveStreamResponse, IDirectStreamProvider&gt;&gt; OpenLiveStreamInternal(LiveStreamRequest request, CancellationToken cancellationToken)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1198,7 +1198,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_MediaSourceManager_SetDefaultAudioAndSubtitleStreamIndexes_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_MediaSourceInfo_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.MediaSourceManager.SetDefaultAudioAndSubtitleStreamIndexes(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Dto.MediaSourceInfo%2CJellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L421">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/MediaSourceManager.cs/#L418">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_MediaSourceManager_SetDefaultAudioAndSubtitleStreamIndexes_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.SetDefaultAudioAndSubtitleStreamIndexes*"></a>
   <h4 id="Emby_Server_Implementations_Library_MediaSourceManager_SetDefaultAudioAndSubtitleStreamIndexes_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_MediaSourceInfo_Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.Library.MediaSourceManager.SetDefaultAudioAndSubtitleStreamIndexes(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.MediaSourceInfo,Jellyfin.Data.Entities.User)">SetDefaultAudioAndSubtitleStreamIndexes(BaseItem, MediaSourceInfo, User)</h4>
@@ -1314,7 +1314,8 @@
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
