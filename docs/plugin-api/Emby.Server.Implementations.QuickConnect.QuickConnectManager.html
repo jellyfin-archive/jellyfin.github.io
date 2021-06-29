@@ -130,20 +130,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_QuickConnect_QuickConnectManager__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Security_IAuthenticationRepository_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.QuickConnect.QuickConnectManager%7D%2CMediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Security.IAuthenticationRepository)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_QuickConnect_QuickConnectManager__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Security_IAuthenticationRepository_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.%23ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.QuickConnect.QuickConnectManager%7D%2CMediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.Security.IAuthenticationRepository)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L53">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager__ctor_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_QuickConnect_QuickConnectManager__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Security_IAuthenticationRepository_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.QuickConnect.QuickConnectManager},MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Security.IAuthenticationRepository)">QuickConnectManager(IServerConfigurationManager, ILogger&lt;QuickConnectManager&gt;, IServerApplicationHost, IAuthorizationContext, IAuthenticationRepository)</h4>
+  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager__ctor_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_QuickConnect_QuickConnectManager__MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Security_IAuthenticationRepository_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.#ctor(MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.QuickConnect.QuickConnectManager},MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.Security.IAuthenticationRepository)">QuickConnectManager(IServerConfigurationManager, ILogger&lt;QuickConnectManager&gt;, IServerApplicationHost, IAuthenticationRepository)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.QuickConnect.QuickConnectManager.html">QuickConnectManager</a> class.
 Should only be called at server startup when a singleton is created.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QuickConnectManager(IServerConfigurationManager config, ILogger&lt;QuickConnectManager&gt; logger, IServerApplicationHost appHost, IAuthorizationContext authContext, IAuthenticationRepository authenticationRepository)</code></pre>
+    <pre><code class="lang-csharp hljs">public QuickConnectManager(IServerConfigurationManager config, ILogger&lt;QuickConnectManager&gt; logger, IServerApplicationHost appHost, IAuthenticationRepository authenticationRepository)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,12 +174,6 @@ Should only be called at server startup when a singleton is created.</p>
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Net.IAuthorizationContext.html">IAuthorizationContext</a></td>
-        <td><span class="parametername">authContext</span></td>
-        <td><p>Authentication context.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Security.IAuthenticationRepository.html">IAuthenticationRepository</a></td>
         <td><span class="parametername">authenticationRepository</span></td>
         <td><p>Authentication repository.</p>
@@ -191,50 +185,19 @@ Should only be called at server startup when a singleton is created.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_CodeLength.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.CodeLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L60">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_CodeLength_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.CodeLength*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_CodeLength" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.CodeLength">CodeLength</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the length of user facing codes.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int CodeLength { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_State.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_IsEnabled.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.IsEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L66">View Source</a>
   </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_State_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.State*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_State" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.State">State</h4>
-  <div class="markdown level1 summary"><p>Gets the current state of quick connect.</p>
+  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_IsEnabled_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.IsEnabled*"></a>
+  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_IsEnabled" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.IsEnabled">IsEnabled</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether quick connect is enabled or not.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public QuickConnectState State { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsEnabled { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -246,69 +209,7 @@ Should only be called at server startup when a singleton is created.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.QuickConnect.QuickConnectState.html">QuickConnectState</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_Timeout.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.Timeout%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L69">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Timeout_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Timeout*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Timeout" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Timeout">Timeout</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the time (in minutes) before quick connect will automatically deactivate.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Timeout { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_TokenName.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.TokenName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L63">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_TokenName_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.TokenName*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_TokenName" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.TokenName">TokenName</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the name of internal access tokens.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string TokenName { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -317,42 +218,10 @@ Should only be called at server startup when a singleton is created.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_Activate.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.Activate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L83">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Activate_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Activate*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Activate" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Activate">Activate()</h4>
-  <div class="markdown level1 summary"><p>Temporarily activates quick connect for a short amount of time.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Activate()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_AssertActive.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.AssertActive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L74">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_AssertActive_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.AssertActive*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_AssertActive" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.AssertActive">AssertActive()</h4>
-  <div class="markdown level1 summary"><p>Assert that quick connect is currently active and throws an exception if it is not.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AssertActive()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_AuthorizeRequest_System_Guid_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.AuthorizeRequest(System.Guid%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L162">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L132">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_AuthorizeRequest_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.AuthorizeRequest*"></a>
   <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_AuthorizeRequest_System_Guid_System_String_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.AuthorizeRequest(System.Guid,System.String)">AuthorizeRequest(Guid, String)</h4>
@@ -408,7 +277,7 @@ Should only be called at server startup when a singleton is created.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_CheckRequestStatus_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.CheckRequestStatus(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L127">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L94">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_CheckRequestStatus_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.CheckRequestStatus*"></a>
   <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_CheckRequestStatus_System_String_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.CheckRequestStatus(System.String)">CheckRequestStatus(String)</h4>
@@ -455,60 +324,10 @@ Should only be called at server startup when a singleton is created.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_DeleteAllDevices_System_Guid_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.DeleteAllDevices(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L200">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_DeleteAllDevices_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.DeleteAllDevices*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_DeleteAllDevices_System_Guid_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.DeleteAllDevices(System.Guid)">DeleteAllDevices(Guid)</h4>
-  <div class="markdown level1 summary"><p>Deletes all quick connect access tokens for the provided user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int DeleteAllDevices(Guid user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>Guid of the user to delete tokens for.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><p>A count of the deleted tokens.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L224">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L172">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose">Dispose()</h4>
@@ -524,7 +343,7 @@ Should only be called at server startup when a singleton is created.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L234">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L182">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_Dispose_System_Boolean_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -555,110 +374,10 @@ Should only be called at server startup when a singleton is created.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_ExpireRequests_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.ExpireRequests(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L251">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_ExpireRequests_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.ExpireRequests*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_ExpireRequests_System_Boolean_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.ExpireRequests(System.Boolean)">ExpireRequests(Boolean)</h4>
-  <div class="markdown level1 summary"><p>Expire quick connect requests that are over the time limit. If <code data-dev-comment-type="paramref" class="paramref">expireAll</code> is true, all requests are unconditionally expired.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void ExpireRequests(bool expireAll = false)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">expireAll</span></td>
-        <td><p>If true, all requests will be expired.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_GenerateCode.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.GenerateCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L143">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_GenerateCode_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.GenerateCode*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_GenerateCode" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.GenerateCode">GenerateCode()</h4>
-  <div class="markdown level1 summary"><p>Generates a short code to display to the user to uniquely identify this request.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GenerateCode()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><p>A short, unique alphanumeric string.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_SetState_MediaBrowser_Model_QuickConnect_QuickConnectState_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.SetState(MediaBrowser.Model.QuickConnect.QuickConnectState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L90">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_SetState_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.SetState*"></a>
-  <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_SetState_MediaBrowser_Model_QuickConnect_QuickConnectState_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.SetState(MediaBrowser.Model.QuickConnect.QuickConnectState)">SetState(QuickConnectState)</h4>
-  <div class="markdown level1 summary"><p>Changes the state of quick connect.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetState(QuickConnectState newState)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.QuickConnect.QuickConnectState.html">QuickConnectState</a></td>
-        <td><span class="parametername">newState</span></td>
-        <td><p>New state to change to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager_TryConnect.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager.TryConnect%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L104">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L80">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_TryConnect_" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.TryConnect*"></a>
   <h4 id="Emby_Server_Implementations_QuickConnect_QuickConnectManager_TryConnect" data-uid="Emby.Server.Implementations.QuickConnect.QuickConnectManager.TryConnect">TryConnect()</h4>
@@ -707,7 +426,7 @@ Should only be called at server startup when a singleton is created.</p>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_QuickConnect_QuickConnectManager.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.QuickConnect.QuickConnectManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/QuickConnect/QuickConnectManager.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

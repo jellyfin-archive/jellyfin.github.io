@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_Model_QuickConnect_QuickConnectResult" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult" class="text-break">Class QuickConnectResult
   </h1>
-  <div class="markdown level0 summary"><p>Stores the result of an incoming quick connect request.</p>
+  <div class="markdown level0 summary"><p>Stores the state of an quick connect request.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -121,6 +121,54 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class QuickConnectResult</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult__ctor_System_String_System_String_System_DateTime_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.%23ctor(System.String%2CSystem.String%2CSystem.DateTime)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L16">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult__ctor_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.#ctor*"></a>
+  <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult__ctor_System_String_System_String_System_DateTime_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.#ctor(System.String,System.String,System.DateTime)">QuickConnectResult(String, String, DateTime)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Model.QuickConnect.QuickConnectResult.html">QuickConnectResult</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public QuickConnectResult(string secret, string code, DateTime dateAdded)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">secret</span></td>
+        <td><p>The secret used to query the request state.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">code</span></td>
+        <td><p>The code used to allow the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
+        <td><span class="parametername">dateAdded</span></td>
+        <td><p>The time when the request was created.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -128,7 +176,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_Authenticated.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.Authenticated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L13">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L26">View Source</a>
   </span>
   <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Authenticated_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Authenticated*"></a>
   <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Authenticated" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Authenticated">Authenticated</h4>
@@ -159,7 +207,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_Authentication.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.Authentication%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L28">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L41">View Source</a>
   </span>
   <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Authentication_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Authentication*"></a>
   <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Authentication" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Authentication">Authentication</h4>
@@ -168,7 +216,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Authentication { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Guid? Authentication { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,7 +228,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -190,16 +238,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_Code.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.Code%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L36">View Source</a>
   </span>
   <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Code_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Code*"></a>
   <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Code" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Code">Code</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the user facing code used so the user can quickly differentiate this request from others.</p>
+  <div class="markdown level1 summary"><p>Gets the user facing code used so the user can quickly differentiate this request from others.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Code { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Code { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -221,7 +269,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_DateAdded.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.DateAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L46">View Source</a>
   </span>
   <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_DateAdded_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.DateAdded*"></a>
   <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_DateAdded" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.DateAdded">DateAdded</h4>
@@ -230,7 +278,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DateTime? DateAdded { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public DateTime DateAdded { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -242,38 +290,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_Error.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.Error%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L33">View Source</a>
-  </span>
-  <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Error_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Error*"></a>
-  <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Error" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Error">Error</h4>
-  <div class="markdown level1 summary"><p>Gets or sets an error message.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Error { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.datetime">DateTime</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -283,16 +300,16 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_QuickConnect_QuickConnectResult_Secret.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.QuickConnect.QuickConnectResult.Secret%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/QuickConnect/QuickConnectResult.cs/#L31">View Source</a>
   </span>
   <a id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Secret_" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Secret*"></a>
   <h4 id="MediaBrowser_Model_QuickConnect_QuickConnectResult_Secret" data-uid="MediaBrowser.Model.QuickConnect.QuickConnectResult.Secret">Secret</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the secret value used to uniquely identify this request. Can be used to retrieve authentication information.</p>
+  <div class="markdown level1 summary"><p>Gets the secret value used to uniquely identify this request. Can be used to retrieve authentication information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Secret { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public string Secret { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">

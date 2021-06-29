@@ -87,7 +87,24 @@
 <p>Overriding the default <code>config.json</code> can be done with an additional volume parameter to your <code>docker run</code> command, e.g.</p>
 <pre><code class="lang-sh">--volume /path/to/config/web-config.json:/jellyfin/jellyfin-web/config.json
 </code></pre><p>We would recommend obtaining the <a href="https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json">latest copy of the file</a> to pre-populate your configuration directory before starting Jellyfin for the first time; unlike most other components of this directory, it will not be created automatically on first run.</p>
-<h2 id="privacy-focused-changes">Privacy-focused changes</h2>
+<h2 id="customizations">Customizations</h2>
+<h3 id="custom-menu-links">Custom Menu Links</h3>
+<p>Jellyfin 10.8 adds the ability to specify custom links to be inserted in the navigation menu via the <code>config.json</code> file.
+Links are configured with a <code>name</code>, <code>url</code>, and optional <code>icon</code> property.
+The icon is specified using the name of an icon from the <a href="https://jossef.github.io/material-design-icons-iconfont/">Material Design Icons</a> used in Jellyfin Web.
+By default the &quot;link&quot; icon will be used.</p>
+<pre><code class="lang-json">&quot;menuLinks&quot;: [
+    {
+        &quot;name&quot;: &quot;Custom Link&quot;,
+        &quot;url&quot;: &quot;https://jellyfin.org&quot;
+    },
+    {
+        &quot;name&quot;: &quot;Custom Link w. Custom Icon&quot;,
+        &quot;icon&quot;: &quot;attach_money&quot;,
+        &quot;url&quot;: &quot;https://demo.jellyfin.org/stable&quot;
+    }
+]
+</code></pre><h2 id="privacy-focused-changes">Privacy-focused changes</h2>
 <p>Our default settings for the Jellyfin Web <code>config.json</code> file include some features that privacy-focused or completely-offline users may with to disable. Each option is detailed below.</p>
 <h3 id="google-chromecast">Google Chromecast</h3>
 <p>By default, Jellyfin Web includes Chromecast-from-browser support. This requires downloading files from Google servers to support this functionality.</p>
