@@ -711,7 +711,7 @@ public class MediaInfoController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L292">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L297">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_CloseLiveStream_System_String_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.CloseLiveStream(System.String)">CloseLiveStream(String)</h4>
@@ -763,7 +763,7 @@ public async Task&lt;ActionResult&gt; CloseLiveStream([FromQuery, Required] stri
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L307">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L311">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_GetBitrateTestBytes_System_Int32_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.GetBitrateTestBytes(System.Int32)">GetBitrateTestBytes(Int32)</h4>
@@ -774,10 +774,8 @@ public async Task&lt;ActionResult&gt; CloseLiveStream([FromQuery, Required] stri
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Playback/BitrateTest&quot;)]
 [ProducesResponseType(200)]
-[ProducesResponseType(400)]
-[Produces(&quot;application/octet-stream&quot;, new string[]{})]
 [ProducesFile(new string[]{&quot;application/octet-stream&quot;})]
-public ActionResult GetBitrateTestBytes([FromQuery] int size = 102400)</code></pre>
+public ActionResult GetBitrateTestBytes([FromQuery, Range(1, 100000000, ErrorMessage = &quot;The requested size must be greater than or equal to {1} and less than or equal to {2}&quot;)] int size = 102400)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1022,7 +1020,7 @@ Query parameters are obsolete.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Guid__Jellyfin_Api_Models_MediaInfoDtos_OpenLiveStreamDto_System_Nullable_System_Boolean__System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream(System.String%2CSystem.Nullable%7BSystem.Guid%7D%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int64%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Guid%7D%2CJellyfin.Api.Models.MediaInfoDtos.OpenLiveStreamDto%2CSystem.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L251">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/MediaInfoController.cs/#L256">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_" data-uid="Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream*"></a>
   <h4 id="Jellyfin_Api_Controllers_MediaInfoController_OpenLiveStream_System_String_System_Nullable_System_Guid__System_String_System_Nullable_System_Int32__System_Nullable_System_Int64__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Guid__Jellyfin_Api_Models_MediaInfoDtos_OpenLiveStreamDto_System_Nullable_System_Boolean__System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.MediaInfoController.OpenLiveStream(System.String,System.Nullable{System.Guid},System.String,System.Nullable{System.Int32},System.Nullable{System.Int64},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Guid},Jellyfin.Api.Models.MediaInfoDtos.OpenLiveStreamDto,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">OpenLiveStream(String, Nullable&lt;Guid&gt;, String, Nullable&lt;Int32&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Guid&gt;, OpenLiveStreamDto, Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)</h4>
