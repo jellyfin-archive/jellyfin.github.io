@@ -432,6 +432,8 @@ sudo systemctl restart jellyfin
 </ol>
 <div class="NOTE"><h5>Note</h5><p>RPi4 currently doesn&#39;t support HWA HEVC decoding, only encode and decode H.264. <a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding. Only Raspbian OS works so far. For docker, only the linuxserver image works. For more tips see <a href="https://www.reddit.com/r/jellyfin/comments/ei6ew6/rpi4_hardware_acceleration_guide/">here</a>.</p>
 </div>
+<div class="NOTE"><h5>Note</h5><p>As per <a href="https://github.com/jellyfin/jellyfin/issues/4023">this issue</a>, hardware acceleration is not yet supported on 64-bit Raspberry Pi OS (and likely on derivative builds e.g. DietPi), as some libraries in the 32-bit build are still missing from the 64-bit build.</p>
+</div>
 <div class="NOTE"><h5>Note</h5><p>For RPi3 in testing, transcoding was not working fast enough to run in real time because the video was being resized.</p>
 </div>
 <h2 id="verifying-transcodes">Verifying Transcodes</h2>
