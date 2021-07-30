@@ -86,7 +86,7 @@ Fail2ban operates by monitoring log files (e.g. /var/log/auth.log, /var/log/apac
 <ul>
 <li>Jellyfin remotely accessible</li>
 <li>Fail2ban installed and running</li>
-<li>Knowing where the logs for Jellyfin are stored: by default /var/log/jellyfin/</li>
+<li>Knowing where the logs for Jellyfin are stored: by default <code>/var/log/jellyfin/</code></li>
 </ul>
 <h3 id="step-one-create-a-jail">Step one: create a jail</h3>
 <p>You need to create a jail for Fail2ban.
@@ -108,9 +108,9 @@ logpath = /var/log/jellyfin/jellyfin*.log
 <h3 id="step-two-create-a-filter">Step two: create a filter</h3>
 <p>The filter explains to Fail2ban where to look in the log file. This is the tricky part.</p>
 <pre><code class="lang-bash">sudo nano /etc/fail2ban/filter.d/jellyfin.conf
-</code></pre><p>And add this to the new file (thanks to @sebres from F2B):</p>
+</code></pre><p>And add this to the new file:</p>
 <pre><code class="lang-bash">[Definition]
-failregex = ^(?:\[\]\s+)?\[INF\] Authentication request for &quot;[^&quot;]*&quot; has been denied \(IP: &quot;&lt;HOST&gt;&quot;\)\.$
+failregex = ^.*Authentication request for &quot;.*&quot; has been denied \(IP: &quot;&lt;ADDR&gt;&quot;\)\.
 </code></pre><p>Save and exit, then reload Fail2ban:</p>
 <pre><code class="lang-bash">sudo systemctl restart fail2ban
 </code></pre><p>You&#39;re done.</p>
