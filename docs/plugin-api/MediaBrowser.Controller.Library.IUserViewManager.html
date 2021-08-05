@@ -98,11 +98,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserViewManager_GetLatestItems_MediaBrowser_Model_Querying_LatestItemsQuery_MediaBrowser_Controller_Dto_DtoOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserViewManager.GetLatestItems(MediaBrowser.Model.Querying.LatestItemsQuery%2CMediaBrowser.Controller.Dto.DtoOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L20">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L39">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserViewManager_GetLatestItems_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetLatestItems*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserViewManager_GetLatestItems_MediaBrowser_Model_Querying_LatestItemsQuery_MediaBrowser_Controller_Dto_DtoOptions_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetLatestItems(MediaBrowser.Model.Querying.LatestItemsQuery,MediaBrowser.Controller.Dto.DtoOptions)">GetLatestItems(LatestItemsQuery, DtoOptions)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets latest items.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -121,12 +122,14 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Querying.LatestItemsQuery.html">LatestItemsQuery</a></td>
         <td><span class="parametername">request</span></td>
-        <td></td>
+        <td><p>Query to use.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Dto.DtoOptions.html">DtoOptions</a></td>
         <td><span class="parametername">options</span></td>
-        <td></td>
+        <td><p>Options to use.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -141,7 +144,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;&gt;&gt;</td>
-        <td></td>
+        <td><p>Set of items.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -150,11 +154,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserViewManager_GetUserSubView_System_Guid_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserViewManager.GetUserSubView(System.Guid%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L31">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserViewManager_GetUserSubView_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetUserSubView*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserViewManager_GetUserSubView_System_Guid_System_String_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetUserSubView(System.Guid,System.String,System.String,System.String)">GetUserSubView(Guid, String, String, String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets user sub views.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -173,22 +178,26 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">parentId</span></td>
-        <td></td>
+        <td><p>Parent to use.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">type</span></td>
-        <td></td>
+        <td><p>Type to use.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">localizationKey</span></td>
-        <td></td>
+        <td><p>Localization key to use.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">sortName</span></td>
-        <td></td>
+        <td><p>Sort to use.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -203,7 +212,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.UserView.html">UserView</a></td>
-        <td></td>
+        <td><p>User view.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -212,11 +222,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserViewManager_GetUserViews_MediaBrowser_Model_Library_UserViewQuery_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserViewManager.GetUserViews(MediaBrowser.Model.Library.UserViewQuery)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserViewManager.cs/#L21">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserViewManager_GetUserViews_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetUserViews*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserViewManager_GetUserViews_MediaBrowser_Model_Library_UserViewQuery_" data-uid="MediaBrowser.Controller.Library.IUserViewManager.GetUserViews(MediaBrowser.Model.Library.UserViewQuery)">GetUserViews(UserViewQuery)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets user views.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -235,7 +246,8 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Library.UserViewQuery.html">UserViewQuery</a></td>
         <td><span class="parametername">query</span></td>
-        <td></td>
+        <td><p>Query to use.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -250,7 +262,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.Folder.html">Folder</a>[]</td>
-        <td></td>
+        <td><p>Set of folders.</p>
+</td>
       </tr>
     </tbody>
   </table>
