@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ApplicationHost
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -1531,7 +1531,7 @@ Note: if passing non-null scheme or port it is up to the caller to ensure they f
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetLocalApiUrl(string hostname, string scheme = null, int? port = default(int? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetLocalApiUrl(string hostname, string scheme = null, int? port = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1675,7 +1675,7 @@ over HTTP (not HTTPS).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(HttpRequest request, int? port = default(int? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(HttpRequest request, int? port = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1731,7 +1731,7 @@ over HTTP (not HTTPS).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(IPAddress remoteAddr, int? port = default(int? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(IPAddress remoteAddr, int? port = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1787,7 +1787,7 @@ over HTTP (not HTTPS).</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(string hostname, int? port = default(int? ))</code></pre>
+    <pre><code class="lang-csharp hljs">public string GetSmartApiUrl(string hostname, int? port = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

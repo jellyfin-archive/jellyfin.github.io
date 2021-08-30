@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SessionManager
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -975,7 +975,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
+        <td><p>Throws if an argument is null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1520,12 +1521,14 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a></td>
         <td><span class="parametername">userId</span></td>
-        <td></td>
+        <td><p>User ID.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">currentAccessToken</span></td>
-        <td></td>
+        <td><p>Current access token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1762,7 +1765,7 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name.</p>
+        <td><p>Message type name.</p>
 </td>
       </tr>
       <tr>
@@ -1806,7 +1809,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1845,7 +1849,7 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td><p>The name.</p>
+        <td><p>Message type name.</p>
 </td>
       </tr>
       <tr>
@@ -1889,7 +1893,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1922,22 +1927,26 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td><span class="parametername">userIds</span></td>
-        <td></td>
+        <td><p>Users to send messages to.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>Message type name.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">T</span></td>
         <td><span class="parametername">data</span></td>
-        <td></td>
+        <td><p>The data.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1968,7 +1977,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1981,7 +1991,8 @@
   </span>
   <a id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserSessions_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserSessions*"></a>
   <h4 id="Emby_Server_Implementations_Session_SessionManager_SendMessageToUserSessions__1_System_Collections_Generic_List_System_Guid__MediaBrowser_Model_Session_SessionMessageType_System_Func___0__System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.Session.SessionManager.SendMessageToUserSessions``1(System.Collections.Generic.List{System.Guid},MediaBrowser.Model.Session.SessionMessageType,System.Func{``0},System.Threading.CancellationToken)">SendMessageToUserSessions&lt;T&gt;(List&lt;Guid&gt;, SessionMessageType, Func&lt;T&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sends the message to user sessions.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -2000,22 +2011,26 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
         <td><span class="parametername">userIds</span></td>
-        <td></td>
+        <td><p>Users to send messages to.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Session.SessionMessageType.html">SessionMessageType</a></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>Message type name.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.func-1">Func</a>&lt;T&gt;</td>
         <td><span class="parametername">dataFn</span></td>
-        <td></td>
+        <td><p>Data function.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2030,7 +2045,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>Task.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2045,7 +2061,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of data.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2470,7 +2487,8 @@
     <tbody>
       <tr>
         <td><span class="parametername">T</span></td>
-        <td></td>
+        <td><p>Type of group.</p>
+</td>
       </tr>
     </tbody>
   </table>

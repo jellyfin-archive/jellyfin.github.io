@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ImageController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -867,7 +867,7 @@ public async Task&lt;ActionResult&gt; DeleteItemImageByIndex([FromRoute, Require
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public async Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
+public async Task&lt;ActionResult&gt; DeleteUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3350,7 +3350,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [AcceptsImageFile]
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
-public async Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = default(int? ))</code></pre>
+public async Task&lt;ActionResult&gt; PostUserImage([FromRoute, Required] Guid userId, [FromRoute, Required] ImageType imageType, [FromQuery] int? index = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

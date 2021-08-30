@@ -8,7 +8,7 @@
     <title>Hardware Acceleration | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Hardware Acceleration | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -79,8 +79,8 @@
             <article class="content wrap" id="_content" data-uid="admin-hardware-acceleration">
 <h1 id="hardware-acceleration">Hardware Acceleration</h1>
 
-<p>Jellyfin supports <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro">hardware acceleration</a> (HWA) of video encoding/decoding using FFMpeg. FFMpeg and Jellyfin can support multiple hardware acceleration implementations such as Intel Quicksync (QSV), AMD AMF, nVidia NVENC/NVDEC, OpenMax OMX and MediaCodec through Video Acceleration API&#39;s.</p>
-<p><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">VAAPI</a> is a Video Acceleration API that uses <a href="https://github.com/intel/libva/blob/master/README.md">libva</a> to interface with local drivers to provide HWA. <a href="https://trac.ffmpeg.org/wiki/Hardware/QuickSync">QSV</a> uses a modified (forked) version of VAAPI and interfaces it with <a href="https://github.com/intel/media-driver/blob/master/README.md">libmfx</a> and their proprietary drivers <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">(list of supported processors for QSV)</a>.</p>
+<p>Jellyfin supports <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro">hardware acceleration (HWA) of video encoding/decoding using FFMpeg</a>. FFMpeg and Jellyfin can support multiple hardware acceleration implementations such as Intel Quicksync (QSV), AMD AMF, nVidia NVENC/NVDEC, OpenMax OMX and MediaCodec through Video Acceleration API&#39;s.</p>
+<p><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">VA-API</a> is a Video Acceleration API that uses <a href="https://github.com/intel/libva/blob/master/README.md">libva</a> to interface with local drivers to provide HWA. <a href="https://trac.ffmpeg.org/wiki/Hardware/QuickSync">QSV</a> uses a modified (forked) version of VA-API and interfaces it with <a href="https://github.com/intel/media-driver/blob/master/README.md">libmfx</a> and their proprietary drivers <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">(list of supported processors for QSV)</a>.</p>
 <table>
 <thead>
 <tr>
@@ -91,7 +91,7 @@
 <tbody>
 <tr>
 <td>Linux</td>
-<td>QSV, NVENC, AMF, VAAPI</td>
+<td>QSV, NVENC, AMF, VA-API</td>
 </tr>
 <tr>
 <td>Windows</td>
@@ -112,19 +112,59 @@
 </tbody>
 </table>
 <p><a href="https://www.elpamsoft.com/?p=Plex-Hardware-Transcoding">Graphics Cards comparison using HWA</a></p>
-<h2 id="nvidia-nvenc">NVIDIA NVENC</h2>
+<p>Based on hardware vendor:</p>
+<table>
+<thead>
+<tr>
+<th>Vendor</th>
+<th>Supported HW Acceleration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVIDIA</td>
+<td>NVENC, VA-API</td>
+</tr>
+<tr>
+<td>AMD</td>
+<td>AMF, VA-API</td>
+</tr>
+<tr>
+<td>Intel</td>
+<td>QSV, VA-API</td>
+</tr>
+<tr>
+<td>Apple</td>
+<td>VideoToolbox</td>
+</tr>
+<tr>
+<td>Other</td>
+<td>OMX, MediaCodec</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
+<p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section of the <strong>Playback</strong> tab. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>Enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
+<p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>
+<p>On Linux you can check available GPU using:</p>
+<pre><code class="lang-sh">lspci -nn | egrep -i &quot;3d|display|vga&quot;
+</code></pre><p>or using <code>lshw</code>:</p>
+<pre><code class="lang-sh">lshw -C display
+</code></pre><h2 id="supported-acceleration-methods">Supported Acceleration Methods</h2>
+<h3 id="nvidia-nvenc">NVIDIA NVENC</h3>
 <p><a href="https://developer.nvidia.com/ffmpeg">NVIDIA using ffmpeg official list</a>. Not every card has been tested. These <a href="https://github.com/keylase/nvidia-patch">drivers</a> are recommended for Linux and Windows. Here is the official list of <a href="https://developer.nvidia.com/video-encode-decode-gpu-support-matrix">NVIDIA Graphics Cards</a> for supported codecs. Example of Ubuntu working with <a href="https://www.reddit.com/r/jellyfin/comments/amuyba/nvenc_nvdec_working_in_jellyfin_on_ubuntu_server/">NVENC</a>. H264 10-bit is <a href="https://devtalk.nvidia.com/default/topic/1039388/video-codec-and-optical-flow-sdk/is-there-nvidia-encoder-decoder-which-supports-hdr-10-bpp-for-avc-h-264-/">not supported</a> by NVIDIA acceleration. <strong>The minimum required driver version is: Linux: 418.30, Windows: 450.51.</strong></p>
-<h2 id="vaapi">VAAPI</h2>
-<p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VAAPI</a>. Both Intel iGPU and AMD GPU can use VAAPI.</p>
+<p>On Linux use <code>nvidia-smi</code> to check driver and GPU card version.</p>
+<h3 id="va-api">VA-API</h3>
+<p>List of supported codecs for <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">VA-API</a>. Intel iGPU, AMD GPU and NVIDIA (only via the open-source Nouveau drivers) can use VA-API.</p>
 <div class="NOTE"><h5>Note</h5><p>AMD GPU requires open source driver Mesa 20.1 or higher to support hardware decoding HEVC.</p>
 </div>
 <div class="NOTE"><h5>Note</h5><p>As of 10.7.1, the Docker image uses Debian 10 and thus Mesa 18.3.6. To upgrade it, you&#39;ll need to make your own image based on a more recent distribution.</p>
 </div>
-<h2 id="amd-amf">AMD AMF</h2>
+<h3 id="amd-amf">AMD AMF</h3>
 <p>AMF is now available on Windows and Linux, but since AMD has not implemented the HW decoder and scaler in ffmpeg, the decoding speed may not be as expected. The closed source driver <code>amdgpu-pro</code> is required when using AMF on Linux.</p>
 <div class="NOTE"><h5>Note</h5><p>Most Zen CPUs do not come with integrated graphics. You will need a dedicated GPU (dGPU) or a Zen CPU with integrated graphics for hardware acceleration. If your Zen CPU is suffixed with a &quot;G&quot; or &quot;GE&quot; in model name, you have integrated graphics.</p>
 </div>
-<h2 id="intel-quicksync">Intel QuickSync</h2>
+<h3 id="intel-quicksync">Intel QuickSync</h3>
 <p>Intel QSV Benchmarks on <a href="https://www.intel.com/content/www/us/en/architecture-and-technology/quick-sync-video/quick-sync-video-installation.html">Linux</a>.</p>
 <p>On Windows, you can use the DXVA2/D3D11VA libraries for decoding and the libmfx library for encoding.</p>
 <div class="NOTE"><h5>Note</h5><p>To use QSV on Windows, please do not install Jellyfin as a system service.</p>
@@ -133,13 +173,10 @@
 <p>CentOS may require <a href="https://www.getpagespeed.com/server-setup/how-to-enable-intel-hardware-acceleration-for-video-playback-in-rhel-centos-8">additional drivers</a> for QSV.</p>
 <p>Here&#39;s <a href="https://github.com/Artiume/jellyfin-docs/blob/master/general/wiki/main.md">additional information</a> to learn more.</p>
 <p>If your Jellyfin server does not support hardware acceleration, but you have another machine that does, you can leverage <a href="https://github.com/joshuaboniface/rffmpeg">rffmpeg</a> to delegate the transcoding to another machine. Currently Linux-only and requires SSH between the machines, as well as shared storage both for media and for the Jellyfin data directory.</p>
-<h2 id="enabling-hardware-acceleration">Enabling Hardware Acceleration</h2>
-<p>Hardware acceleration options can be found in the Admin Dashboard under the <strong>Transcoding</strong> section of the <strong>Playback</strong> tab. Select a valid hardware acceleration option from the drop-down menu, indicate a device if applicable, and check <code>enable hardware encoding</code> to enable encoding as well as decoding, if your hardware supports this.</p>
-<p>The hardware acceleration is available immediately for media playback. No server restart is required.</p>
-<h2 id="setup">Setup</h2>
-<p>Each hardware acceleration type, as well as each Jellyfin installation type, requires different setup options before it can be used. It is always best to consult the FFMpeg documentation on the acceleration type you choose for the latest information.</p>
+<h2 id="common-setup">Common setup</h2>
+<p>Each hardware acceleration type, as well as each Jellyfin installation type, requires different setup options before it can be used. It is always best to consult <a href="(https://trac.ffmpeg.org/wiki/HWAccelIntro)">the FFMpeg documentation</a> on the acceleration type you choose for the latest information.</p>
 <h3 id="acceleration-on-docker">Acceleration on Docker</h3>
-<p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine. VAAPI may require the <code>render</code> group added to the docker permissions. The <code>render</code> group id can be discovered in /etc/group such as <code>render:x:122:</code>.</p>
+<p>In order to use hardware acceleration in Docker, the devices must be passed to the container. To see what video devices are available, you can run <code>sudo lshw -c video</code> or <code>vainfo</code> on your machine. VA-API may require the <code>render</code> group added to the docker permissions. The <code>render</code> group id can be discovered in /etc/group such as <code>render:x:122:</code>.</p>
 <p>You can use <code>docker run</code> to start the server with a command like the one below.</p>
 <pre><code class="lang-sh">docker run -d \
  --volume /path/to/config:/config \
@@ -172,7 +209,7 @@ services:
       # RPi 4
       - /dev/vchiq:/dev/vchiq
 </code></pre><h3 id="linux-docker-nvidia-nvenc">Linux Docker NVIDIA NVENC</h3>
-<p>In order to achieve hardware acceleration using docker, several steps are required.</p>
+<p>In order to achieve hardware acceleration using Docker, several steps are required.</p>
 <p>Prerequisites:</p>
 <p><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#getting-started">NVIDIA Container Toolkit installation</a></p>
 <ul>
@@ -222,16 +259,16 @@ services:
 <pre><code class="lang-sh">docker exec -it jellyfin ldconfig
 </code></pre><p>After that, you should ensure the NVIDIA driver loads correctly.</p>
 <h3 id="configuring-opencl-acceleratedvpp-tone-mapping">Configuring OpenCL Accelerated/VPP Tone Mapping</h3>
-<p>OpenCL tone mapping with NVIDIA NVENC, AMD AMF, and Intel VAAPI is through OpenCL image support.</p>
-<p>Full hardware based VPP tonemapping is supported on Intel VAAPI and QSV on Linux.</p>
+<p>OpenCL tone mapping with NVIDIA NVENC, AMD AMF, and Intel VA-API is through OpenCL image support.</p>
+<p>Full hardware based VPP tonemapping is supported on Intel VA-API and QSV on Linux.</p>
 <table>
 <thead>
 <tr>
 <th>OS/Platform</th>
 <th>NVIDIA NVENC</th>
 <th>AMD AMF</th>
-<th>Intel VAAPI</th>
-<th>AMD VAAPI</th>
+<th>Intel VA-API</th>
+<th>AMD VA-API</th>
 <th>Intel QSV</th>
 <th>Software</th>
 </tr>
@@ -288,7 +325,7 @@ sudo apt install nvidia-opencl-icd
 <p>Method VPP: Install <code>intel-media-va-driver-non-free</code> 20.1 and <code>jellyfin-ffmpeg</code> 4.3.1-4 or newer.</p>
 </li>
 </ul>
-<div class="NOTE"><h5>Note</h5><p>Tone mapping on Intel VAAPI and QSV needs an iGPU that supports 10-bit decoding, such as i3-7100 and J4105.
+<div class="NOTE"><h5>Note</h5><p>Tone mapping on Intel VA-API and QSV needs an iGPU that supports 10-bit decoding, such as i3-7100 and J4105.
 Do not use the <code>intel-opencl-icd</code> package from the repository since they were not build with RELEASE_WITH_REGKEYS enabled for P010 pixel interop flags.</p>
 </div>
 </li>
@@ -301,14 +338,14 @@ Do not use the <code>intel-opencl-icd</code> package from the repository since t
 </ul>
 </li>
 </ol>
-<h3 id="configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages">Configuring VAAPI acceleration on Debian/Ubuntu from <code>.deb</code> packages</h3>
-<p>Configuring VAAPI on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
-<p>To check information about VAAPI on your system install and run <code>vainfo</code> from the command line.</p>
-<div class="NOTE"><h5>Note</h5><p>For Intel Comet Lake or newer iGPUs, the legacy i965 VAAPI driver is incompatible with your hardware.
+<h3 id="configuring-va-api-acceleration-on-debianubuntu">Configuring VA-API acceleration on Debian/Ubuntu</h3>
+<p>Configuring VA-API on Debian/Ubuntu requires some additional configuration to ensure permissions are correct.</p>
+<p>To check information about VA-API on your system install and run <code>vainfo</code> from the command line.</p>
+<div class="NOTE"><h5>Note</h5><p>For Intel Comet Lake or newer iGPUs, the legacy i965 VA-API driver is incompatible with your hardware.
 Please follow the instructions from <strong>Configuring Intel QuickSync(QSV) on Debian/Ubuntu</strong> to get the newer iHD driver.</p>
 </div>
 <ol>
-<li><p>Configure VAAPI for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</p>
+<li><p>Configure VA-API for your system by following the <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration">relevant documentation</a>. Verify that a <code>render</code> device is now present in <code>/dev/dri</code>, and note the permissions and group available to write to it, in this case <code>render</code>:</p>
 <pre><code class="lang-sh">$ ls -l /dev/dri
 total 0
 drwxr-xr-x 2 root root        100 Apr 13 16:37 by-path
@@ -322,14 +359,14 @@ crw-rw---- 1 root render 226, 128 Apr 13 16:37 renderD128
 <pre><code class="lang-sh">sudo usermod -aG render jellyfin
 sudo systemctl restart jellyfin
 </code></pre></li>
-<li><p>Configure VAAPI acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
+<li><p>Configure VA-API acceleration in the &quot;Transcoding&quot; page of the Admin Dashboard. Enter the <code>/dev/dri/renderD128</code> device above as the <code>VA API Device</code> value.</p>
 </li>
 <li><p>Watch a movie, and verify that transcoding is occurring by watching the <code>ffmpeg-transcode-*.txt</code> logs under <code>/var/log/jellyfin</code> and using <code>radeontop</code> or similar tools.</p>
 </li>
 </ol>
 <h3 id="configuring-intel-quicksyncqsv-on-debianubuntu">Configuring Intel QuickSync(QSV) on Debian/Ubuntu</h3>
 <ol>
-<li><p>QSV is based on VAAPI device on Linux, so please confirm whether you have completed the VAAPI configuration first.</p>
+<li><p>QSV is based on VA-API device on Linux, so please confirm whether you have completed the VA-API configuration first.</p>
 </li>
 <li><p>Make sure that <code>jellyfin-ffmpeg 4.3.1-1</code> or higher is installed.</p>
 </li>

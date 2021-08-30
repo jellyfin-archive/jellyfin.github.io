@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AggregateFolder
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.0.0">
+    <meta name="generator" content="docfx 2.58.2.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -84,7 +84,7 @@
   <h1 id="MediaBrowser_Controller_Entities_AggregateFolder" data-uid="MediaBrowser.Controller.Entities.AggregateFolder" class="text-break">Class AggregateFolder
   </h1>
   <div class="markdown level0 summary"><p>Specialized folder that can have items added to it&apos;s children by external entities.
-Used for our RootFolder so plug-ins can add items.</p>
+Used for our RootFolder so plugins can add items.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -157,6 +157,9 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_SupportsUserDataFromChildren">Folder.SupportsUserDataFromChildren</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CollectionManager">Folder.CollectionManager</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_IsAllowTagFilterEnforced">Folder.IsAllowTagFilterEnforced()</a>
     </div>
     <div>
@@ -200,9 +203,6 @@ Used for our RootFolder so plug-ins can add items.</p>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_GetItemsInternal_MediaBrowser_Controller_Entities_InternalItemsQuery_">Folder.GetItemsInternal(InternalItemsQuery)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_CollectionManager">Folder.CollectionManager</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_PostFilterAndSort_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__MediaBrowser_Controller_Entities_InternalItemsQuery_System_Boolean_">Folder.PostFilterAndSort(IEnumerable&lt;BaseItem&gt;, InternalItemsQuery, Boolean)</a>
@@ -265,15 +265,6 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.Folder.html#MediaBrowser_Controller_Entities_Folder_FillUserDataDtoValues_MediaBrowser_Model_Dto_UserItemDataDto_MediaBrowser_Controller_Entities_UserItemData_MediaBrowser_Model_Dto_BaseItemDto_Jellyfin_Data_Entities_User_MediaBrowser_Controller_Dto_DtoOptions_">Folder.FillUserDataDtoValues(UserItemDataDto, UserItemData, BaseItemDto, User, DtoOptions)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailerFolderName">BaseItem.TrailerFolderName</a>
     </div>
     <div>
@@ -310,7 +301,19 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FeaturettesFolderName">BaseItem.FeaturettesFolderName</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportedImageExtensions">BaseItem.SupportedImageExtensions</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllExtrasTypesFolderNames">BaseItem.AllExtrasTypesFolderNames</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
@@ -415,16 +418,10 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetOwner">BaseItem.GetOwner()</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LocationType">BaseItem.LocationType</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PathProtocol">BaseItem.PathProtocol</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_">BaseItem.IsPathProtocol(MediaProtocol)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsFileProtocol">BaseItem.IsFileProtocol</a>
@@ -439,25 +436,25 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableAlphaNumericSorting">BaseItem.EnableAlphaNumericSorting</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsShortcut">BaseItem.IsShortcut</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ShortcutPath">BaseItem.ShortcutPath</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Width">BaseItem.Width</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Height">BaseItem.Height</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtraIds">BaseItem.ExtraIds</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PrimaryImagePath">BaseItem.PrimaryImagePath</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__">BaseItem.IsAuthorizedToDelete(User, List&lt;Folder&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__">BaseItem.CanDelete(User, List&lt;Folder&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_Jellyfin_Data_Entities_User_">BaseItem.CanDelete(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDownload_Jellyfin_Data_Entities_User_">BaseItem.IsAuthorizedToDownload(User)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload_Jellyfin_Data_Entities_User_">BaseItem.CanDownload(User)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateCreated">BaseItem.DateCreated</a>
@@ -470,6 +467,21 @@ Used for our RootFolder so plug-ins can add items.</p>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DateLastRefreshed">BaseItem.DateLastRefreshed</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocked">BaseItem.IsLocked</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LockedFields">BaseItem.LockedFields</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaType">BaseItem.MediaType</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableMediaSourceDisplay">BaseItem.EnableMediaSourceDisplay</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentId">BaseItem.ParentId</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Logger">BaseItem.Logger</a>
@@ -502,49 +514,10 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaSourceManager">BaseItem.MediaSourceManager</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToString">BaseItem.ToString()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsLocked">BaseItem.IsLocked</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LockedFields">BaseItem.LockedFields</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_MediaType">BaseItem.MediaType</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ForcedSortName">BaseItem.ForcedSortName</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SortName">BaseItem.SortName</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath">BaseItem.GetInternalMetadataPath()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_">BaseItem.GetInternalMetadataPath(String)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName">BaseItem.CreateSortName()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableMediaSourceDisplay">BaseItem.EnableMediaSourceDisplay</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ParentId">BaseItem.ParentId</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_">BaseItem.SetParent(Folder)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParent">BaseItem.GetParent()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParents">BaseItem.GetParents()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FindParent__1">BaseItem.FindParent&lt;T&gt;()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayParentId">BaseItem.DisplayParentId</a>
@@ -613,6 +586,87 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CustomRatingForComparison">BaseItem.CustomRatingForComparison</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderIds">BaseItem.ProviderIds</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LatestItemsIndexContainer">BaseItem.LatestItemsIndexContainer</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PresentationUniqueKey">BaseItem.PresentationUniqueKey</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableRememberingTrackSelections">BaseItem.EnableRememberingTrackSelections</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsTopParent">BaseItem.IsTopParent</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_StopRefreshIfLocalMetadataFound">BaseItem.StopRefreshIfLocalMetadataFound</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers">BaseItem.RemoteTrailers</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExternalTransfer">BaseItem.SupportsExternalTransfer</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_">BaseItem.IsPathProtocol(MediaProtocol)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__">BaseItem.IsAuthorizedToDelete(User, List&lt;Folder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetOwner">BaseItem.GetOwner()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__">BaseItem.CanDelete(User, List&lt;Folder&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete_Jellyfin_Data_Entities_User_">BaseItem.CanDelete(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload">BaseItem.CanDownload()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsAuthorizedToDownload_Jellyfin_Data_Entities_User_">BaseItem.IsAuthorizedToDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDownload_Jellyfin_Data_Entities_User_">BaseItem.CanDownload(User)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ToString">BaseItem.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath">BaseItem.GetInternalMetadataPath()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetInternalMetadataPath_System_String_">BaseItem.GetInternalMetadataPath(String)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreateSortName">BaseItem.CreateSortName()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParent">BaseItem.GetParent()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetParents">BaseItem.GetParents()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_FindParent__1">BaseItem.FindParent&lt;T&gt;()</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPlayAccess_Jellyfin_Data_Entities_User_">BaseItem.GetPlayAccess(User)</a>
     </div>
     <div>
@@ -637,22 +691,10 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(MetadataRefreshOptions, CancellationToken)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsPeople">BaseItem.SupportsPeople</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_Jellyfin_Data_Entities_User_System_Boolean_">BaseItem.IsVisibleStandaloneInternal(User, Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ProviderIds">BaseItem.ProviderIds</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LatestItemsIndexContainer">BaseItem.LatestItemsIndexContainer</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetDefaultPrimaryImageAspectRatio">BaseItem.GetDefaultPrimaryImageAspectRatio()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PresentationUniqueKey">BaseItem.PresentationUniqueKey</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SetParent_MediaBrowser_Controller_Entities_Folder_">BaseItem.SetParent(Folder)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetPresentationUniqueKey">BaseItem.GetPresentationUniqueKey()</a>
@@ -694,9 +736,6 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandalone_Jellyfin_Data_Entities_User_">BaseItem.IsVisibleStandalone(User)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsVisibleStandaloneInternal_Jellyfin_Data_Entities_User_System_Boolean_">BaseItem.IsVisibleStandaloneInternal(User, Boolean)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetClientTypeName">BaseItem.GetClientTypeName()</a>
     </div>
     <div>
@@ -704,9 +743,6 @@ Used for our RootFolder so plug-ins can add items.</p>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetLinkedChild_MediaBrowser_Controller_Entities_LinkedChild_">BaseItem.GetLinkedChild(LinkedChild)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_EnableRememberingTrackSelections">BaseItem.EnableRememberingTrackSelections</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddStudio_System_String_">BaseItem.AddStudio(String)</a>
@@ -805,15 +841,6 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTopParent">BaseItem.GetTopParent()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsTopParent">BaseItem.IsTopParent</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsAncestors">BaseItem.SupportsAncestors</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_StopRefreshIfLocalMetadataFound">BaseItem.StopRefreshIfLocalMetadataFound</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetIdsForAncestorQuery">BaseItem.GetIdsForAncestorQuery()</a>
     </div>
     <div>
@@ -832,9 +859,6 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetThemeVideos">BaseItem.GetThemeVideos()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoteTrailers">BaseItem.RemoteTrailers</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras">BaseItem.GetExtras()</a>
     </div>
     <div>
@@ -844,31 +868,7 @@ Used for our RootFolder so plug-ins can add items.</p>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHD">BaseItem.IsHD</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsShortcut">BaseItem.IsShortcut</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ShortcutPath">BaseItem.ShortcutPath</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Width">BaseItem.Width</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Height">BaseItem.Height</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExtraIds">BaseItem.ExtraIds</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRunTimeTicksForPlayState">BaseItem.GetRunTimeTicksForPlayState()</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SupportsExternalTransfer">BaseItem.SupportsExternalTransfer</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_Equals_System_Object_">BaseItem.Equals(Object)</a>
@@ -905,7 +905,7 @@ Used for our RootFolder so plug-ins can add items.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L27">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder__ctor_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.#ctor*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder__ctor" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.#ctor">AggregateFolder()</h4>
@@ -922,7 +922,7 @@ Used for our RootFolder so plug-ins can add items.</p>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_IsPhysicalRoot.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.IsPhysicalRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L45">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_IsPhysicalRoot_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.IsPhysicalRoot*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_IsPhysicalRoot" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.IsPhysicalRoot">IsPhysicalRoot</h4>
@@ -955,7 +955,7 @@ public override bool IsPhysicalRoot { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocations.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocations%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L54">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocations_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocations*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocations" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocations">PhysicalLocations</h4>
@@ -988,7 +988,7 @@ public override string[] PhysicalLocations { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocationsList.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocationsList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L57">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L54">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocationsList_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocationsList*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_PhysicalLocationsList" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.PhysicalLocationsList">PhysicalLocationsList</h4>
@@ -1018,7 +1018,7 @@ public override string[] PhysicalLocations { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_SupportsPlayedStatus.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.SupportsPlayedStatus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L40">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L48">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_SupportsPlayedStatus_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.SupportsPlayedStatus*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_SupportsPlayedStatus" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.SupportsPlayedStatus">SupportsPlayedStatus</h4>
@@ -1051,7 +1051,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_VirtualChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.VirtualChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L43">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_VirtualChildren_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.VirtualChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_VirtualChildren" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.VirtualChildren">VirtualChildren</h4>
@@ -1085,7 +1085,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_AddVirtualChild_MediaBrowser_Controller_Entities_BaseItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.AddVirtualChild(MediaBrowser.Controller.Entities.BaseItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L173">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L172">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_AddVirtualChild_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.AddVirtualChild*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_AddVirtualChild_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.AddVirtualChild(MediaBrowser.Controller.Entities.BaseItem)">AddVirtualChild(BaseItem)</h4>
@@ -1125,7 +1125,8 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td></td>
+        <td><p>Throws if child is null.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1134,7 +1135,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_BeforeMetadataRefresh_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.BeforeMetadataRefresh(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L109">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L108">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.BeforeMetadataRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
@@ -1183,7 +1184,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_CanDelete.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.CanDelete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L35">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L56">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_CanDelete_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.CanDelete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_CanDelete" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.CanDelete">CanDelete()</h4>
@@ -1215,7 +1216,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_FindVirtualChild_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.FindVirtualChild(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L189">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L188">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_FindVirtualChild_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.FindVirtualChild*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_FindVirtualChild_System_Guid_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.FindVirtualChild(System.Guid)">FindVirtualChild(Guid)</h4>
@@ -1281,7 +1282,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.GetFileSystemChildren(MediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L59">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L61">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_GetFileSystemChildren_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.GetFileSystemChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_GetFileSystemChildren_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.GetFileSystemChildren(MediaBrowser.Controller.Providers.IDirectoryService)">GetFileSystemChildren(IDirectoryService)</h4>
@@ -1330,7 +1331,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L153">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L152">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_GetNonCachedChildren_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.GetNonCachedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)">GetNonCachedChildren(IDirectoryService)</h4>
@@ -1379,7 +1380,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_LoadChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.LoadChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L66">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_LoadChildren_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.LoadChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_LoadChildren" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.LoadChildren">LoadChildren()</h4>
@@ -1411,7 +1412,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_RequiresRefresh.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.RequiresRefresh%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L90">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L89">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_RequiresRefresh_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.RequiresRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_RequiresRefresh" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.RequiresRefresh">RequiresRefresh()</h4>
@@ -1443,7 +1444,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_AggregateFolder_ValidateChildrenInternal_System_IProgress_System_Double__System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.AggregateFolder.ValidateChildrenInternal(System.IProgress%7BSystem.Double%7D%2CSystem.Boolean%2CSystem.Boolean%2CMediaBrowser.Controller.Providers.MetadataRefreshOptions%2CMediaBrowser.Controller.Providers.IDirectoryService%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L158">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/AggregateFolder.cs/#L157">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_AggregateFolder_ValidateChildrenInternal_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.ValidateChildrenInternal*"></a>
   <h4 id="MediaBrowser_Controller_Entities_AggregateFolder_ValidateChildrenInternal_System_IProgress_System_Double__System_Boolean_System_Boolean_MediaBrowser_Controller_Providers_MetadataRefreshOptions_MediaBrowser_Controller_Providers_IDirectoryService_System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.AggregateFolder.ValidateChildrenInternal(System.IProgress{System.Double},System.Boolean,System.Boolean,MediaBrowser.Controller.Providers.MetadataRefreshOptions,MediaBrowser.Controller.Providers.IDirectoryService,System.Threading.CancellationToken)">ValidateChildrenInternal(IProgress&lt;Double&gt;, Boolean, Boolean, MetadataRefreshOptions, IDirectoryService, CancellationToken)</h4>
@@ -1524,6 +1525,9 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
+      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
+  </div>
+  <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItemExtensions.html#MediaBrowser_Controller_Entities_BaseItemExtensions_GetImagePath_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_">BaseItemExtensions.GetImagePath(BaseItem, ImageType)</a>
   </div>
   <div>
@@ -1546,9 +1550,6 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
   </div>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>
-  </div>
-  <div>
-      <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
   </div>
 </article>
           </div>
