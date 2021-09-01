@@ -81,12 +81,14 @@
 
 <h2 id="editing">Editing</h2>
 <p>The Jellyfin Web default interface can be configured using the <code>config.json</code> file in the webroot. Where this is and how to edit it depends on the installation method.</p>
+<p>We recommend obtaining the <a href="https://github.com/jellyfin/jellyfin-web/blob/release-10.7.z/src/config.json">stable</a> or the <a href="https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json">unstable</a> default version of the file to pre-populate your configuration directory before starting Jellyfin for the first time; unlike most other components of this directory, it will not be created automatically.</p>
 <h3 id="debianubuntufedoracentos-packages">Debian/Ubuntu/Fedora/CentOS Packages</h3>
 <p>The configuration can be found at <code>/usr/share/jellyfin/web/config.json</code>. This file is registered as a configuration file by the Debian packages, and any changes to the defaults will be handled by <code>apt</code> on upgrade.</p>
 <h3 id="docker">Docker</h3>
 <p>Overriding the default <code>config.json</code> can be done with an additional volume parameter to your <code>docker run</code> command, e.g.</p>
 <pre><code class="lang-sh">--volume /path/to/config/web-config.json:/jellyfin/jellyfin-web/config.json
-</code></pre><p>We would recommend obtaining the <a href="https://github.com/jellyfin/jellyfin-web/blob/master/src/config.json">latest copy of the file</a> to pre-populate your configuration directory before starting Jellyfin for the first time; unlike most other components of this directory, it will not be created automatically on first run.</p>
+</code></pre><div class="NOTE"><h5>Note</h5><p>If the config.json file doesn&#39;t exist on the first run, Docker will map it to a directory instead of a file, which won&#39;t work.</p>
+</div>
 <h2 id="customizations">Customizations</h2>
 <h3 id="custom-menu-links">Custom Menu Links</h3>
 <p>Jellyfin 10.8 adds the ability to specify custom links to be inserted in the navigation menu via the <code>config.json</code> file.
