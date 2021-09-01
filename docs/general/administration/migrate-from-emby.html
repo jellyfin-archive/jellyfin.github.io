@@ -113,6 +113,9 @@
 <li><p>Correct ownership on the new data directory:</p>
 <pre><code class="lang-sh">sudo chown -R jellyfin:jellyfin /var/lib/jellyfin
 </code></pre></li>
+<li><p>Mark Startup Wizard as completed - if not marked as completed then it can be a security risk especially if remote access is enabled:</p>
+<pre><code class="lang-sh">sudo sed -i &#39;/IsStartupWizardCompleted/s/false/true/&#39; /etc/jellyfin/system.xml
+</code></pre></li>
 <li><p>Start the <code>jellyfin</code> daemon:</p>
 <pre><code class="lang-sh">sudo service jellyfin start
 </code></pre></li>
