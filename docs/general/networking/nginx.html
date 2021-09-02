@@ -228,7 +228,23 @@ server {
     }
 }
 </code></pre><h2 id="extra-nginx-configurations">Extra Nginx Configurations</h2>
-<h3 id="cache-video-streams">Cache Video Streams</h3>
+<h3 id="censor-sensitive-information-in-logs">Censor sensitive information in logs</h3>
+<p>This censors any <code>api_key</code> URL parameter from the logfile.</p>
+<pre><code class="lang-conf">#Must be in HTTP block
+log_format stripsecrets &#39;$remote_addr $host - $remote_user [$time_local] &#39;
+                    &#39;&quot;$secretfilter&quot; $status $body_bytes_sent &#39;
+                    &#39;$request_length $request_time $upstream_response_time &#39;
+                    &#39;&quot;$http_referer&quot; &quot;$http_user_agent&quot;&#39;;
+
+map $request $secretfilter {
+    ~*^(?&lt;prefix1&gt;.*[\?&amp;]api_key=)([^&amp;]*)(?&lt;suffix1&gt;.*)$  &quot;${prefix1}***$suffix1&quot;;
+    default                                               $request;
+}
+
+#Must be inside server block
+#Insert into all servers where you want filtering (e.g HTTP + HTTPS block)
+access_log /var/log/nginx/access.log stripsecrets;
+</code></pre><h3 id="cache-video-streams">Cache Video Streams</h3>
 <pre><code class="lang-conf">#Must be in HTTP block
 proxy_cache_path  /home/cache/web levels=1:2 keys_zone=cWEB:50m inactive=90d max_size=35000m;
 map $request_uri $h264Level { ~(h264-level=)(.+?)&amp; $2; }
