@@ -124,18 +124,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ResolutionNormalizer_Normalize_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Int32_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ResolutionNormalizer.Normalize(System.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Int32%2CSystem.String%2CSystem.String%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ResolutionNormalizer_Normalize_System_Nullable_System_Int32__System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ResolutionNormalizer.Normalize(System.Nullable%7BSystem.Int32%7D%2CSystem.Int32%2CSystem.Nullable%7BSystem.Int32%7D%2CSystem.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs/#L22">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_ResolutionNormalizer_Normalize_" data-uid="MediaBrowser.Model.Dlna.ResolutionNormalizer.Normalize*"></a>
-  <h4 id="MediaBrowser_Model_Dlna_ResolutionNormalizer_Normalize_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Int32_System_String_System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MediaBrowser.Model.Dlna.ResolutionNormalizer.Normalize(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32,System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">Normalize(Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;, Int32, String, String, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
+  <h4 id="MediaBrowser_Model_Dlna_ResolutionNormalizer_Normalize_System_Nullable_System_Int32__System_Int32_System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="MediaBrowser.Model.Dlna.ResolutionNormalizer.Normalize(System.Nullable{System.Int32},System.Int32,System.Nullable{System.Int32},System.Nullable{System.Int32})">Normalize(Nullable&lt;Int32&gt;, Int32, Nullable&lt;Int32&gt;, Nullable&lt;Int32&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static ResolutionOptions Normalize(int? inputBitrate, int? unused1, int? unused2, int outputBitrate, string inputCodec, string outputCodec, int? maxWidth, int? maxHeight)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ResolutionOptions Normalize(int? inputBitrate, int outputBitrate, int? maxWidth, int? maxHeight)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -153,28 +153,8 @@
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><span class="parametername">unused1</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a>&gt;</td>
-        <td><span class="parametername">unused2</span></td>
-        <td></td>
-      </tr>
-      <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
         <td><span class="parametername">outputBitrate</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">inputCodec</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">outputCodec</span></td>
         <td></td>
       </tr>
       <tr>
@@ -209,7 +189,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_Dlna_ResolutionNormalizer_ScaleBitrate_System_Int32_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.Dlna.ResolutionNormalizer.ScaleBitrate(System.Int32%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/Dlna/ResolutionNormalizer.cs/#L89">View Source</a>
   </span>
   <a id="MediaBrowser_Model_Dlna_ResolutionNormalizer_ScaleBitrate_" data-uid="MediaBrowser.Model.Dlna.ResolutionNormalizer.ScaleBitrate*"></a>
   <h4 id="MediaBrowser_Model_Dlna_ResolutionNormalizer_ScaleBitrate_System_Int32_System_String_System_String_" data-uid="MediaBrowser.Model.Dlna.ResolutionNormalizer.ScaleBitrate(System.Int32,System.String,System.String)">ScaleBitrate(Int32, String, String)</h4>
