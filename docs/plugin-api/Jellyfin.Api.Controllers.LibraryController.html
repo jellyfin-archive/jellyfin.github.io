@@ -747,7 +747,7 @@ public class LibraryController : BaseJellyfinApiController</code></pre>
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(401)]
-public ActionResult DeleteItem(Guid itemId)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteItem(Guid itemId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -777,7 +777,7 @@ public ActionResult DeleteItem(Guid itemId)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>
@@ -801,7 +801,7 @@ public ActionResult DeleteItem(Guid itemId)</code></pre>
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(401)]
-public ActionResult DeleteItems([FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] ids)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteItems([FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] ids)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -831,7 +831,7 @@ public ActionResult DeleteItems([FromQuery, ModelBinder(typeof(CommaDelimitedArr
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>

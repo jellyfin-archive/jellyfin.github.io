@@ -1129,7 +1129,7 @@ public ActionResult DeleteListingProvider([FromQuery] string id)</code></pre>
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
 [ProducesResponseType(404)]
-public ActionResult DeleteRecording([FromRoute, Required] Guid recordingId)</code></pre>
+public async Task&lt;ActionResult&gt; DeleteRecording([FromRoute, Required] Guid recordingId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1159,7 +1159,7 @@ public ActionResult DeleteRecording([FromRoute, Required] Guid recordingId)</cod
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> on success, or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if item not found.</p>
 </td>
       </tr>
@@ -3204,7 +3204,7 @@ public ActionResult&lt;IEnumerable&lt;NameIdPair&gt;&gt; GetTunerHostTypes()</co
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Tuners/{tunerId}/Reset&quot;)]
 [ProducesResponseType(204)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
-public ActionResult ResetTuner([FromRoute, Required] string tunerId)</code></pre>
+public async Task&lt;ActionResult&gt; ResetTuner([FromRoute, Required] string tunerId)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3234,7 +3234,7 @@ public ActionResult ResetTuner([FromRoute, Required] string tunerId)</code></pre
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>

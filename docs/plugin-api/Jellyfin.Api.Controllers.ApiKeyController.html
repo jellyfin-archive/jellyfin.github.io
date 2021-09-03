@@ -641,19 +641,19 @@ public class ApiKeyController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Security_IAuthenticationRepository_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController.%23ctor(MediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Controller.IServerApplicationHost%2CMediaBrowser.Controller.Security.IAuthenticationRepository)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController__ctor_MediaBrowser_Controller_Security_IAuthenticationManager_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController.%23ctor(MediaBrowser.Controller.Security.IAuthenticationManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L25">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ApiKeyController__ctor_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ApiKeyController__ctor_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Controller_IServerApplicationHost_MediaBrowser_Controller_Security_IAuthenticationRepository_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.#ctor(MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Controller.IServerApplicationHost,MediaBrowser.Controller.Security.IAuthenticationRepository)">ApiKeyController(ISessionManager, IServerApplicationHost, IAuthenticationRepository)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ApiKeyController__ctor_MediaBrowser_Controller_Security_IAuthenticationManager_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.#ctor(MediaBrowser.Controller.Security.IAuthenticationManager)">ApiKeyController(IAuthenticationManager)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.ApiKeyController.html">ApiKeyController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ApiKeyController(ISessionManager sessionManager, IServerApplicationHost appHost, IAuthenticationRepository authRepo)</code></pre>
+    <pre><code class="lang-csharp hljs">public ApiKeyController(IAuthenticationManager authenticationManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -666,21 +666,9 @@ public class ApiKeyController : BaseJellyfinApiController</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a></td>
-        <td><span class="parametername">sessionManager</span></td>
-        <td><p>Instance of <a class="xref" href="MediaBrowser.Controller.Session.ISessionManager.html">ISessionManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a></td>
-        <td><span class="parametername">appHost</span></td>
-        <td><p>Instance of <a class="xref" href="MediaBrowser.Controller.IServerApplicationHost.html">IServerApplicationHost</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Security.IAuthenticationRepository.html">IAuthenticationRepository</a></td>
-        <td><span class="parametername">authRepo</span></td>
-        <td><p>Instance of <a class="xref" href="MediaBrowser.Controller.Security.IAuthenticationRepository.html">IAuthenticationRepository</a> interface.</p>
+        <td><a class="xref" href="MediaBrowser.Controller.Security.IAuthenticationManager.html">IAuthenticationManager</a></td>
+        <td><span class="parametername">authenticationManager</span></td>
+        <td><p>Instance of <a class="xref" href="MediaBrowser.Controller.Security.IAuthenticationManager.html">IAuthenticationManager</a> interface.</p>
 </td>
       </tr>
     </tbody>
@@ -692,7 +680,7 @@ public class ApiKeyController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController_CreateKey_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController.CreateKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L55">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ApiKeyController_CreateKey_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.CreateKey*"></a>
   <h4 id="Jellyfin_Api_Controllers_ApiKeyController_CreateKey_System_String_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.CreateKey(System.String)">CreateKey(String)</h4>
@@ -704,7 +692,7 @@ public class ApiKeyController : BaseJellyfinApiController</code></pre>
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Keys&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
-public ActionResult CreateKey([FromQuery, Required] string app)</code></pre>
+public async Task&lt;ActionResult&gt; CreateKey([FromQuery, Required] string app)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -734,7 +722,7 @@ public ActionResult CreateKey([FromQuery, Required] string app)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>
@@ -745,7 +733,7 @@ public ActionResult CreateKey([FromQuery, Required] string app)</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController_GetKeys.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController.GetKeys%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L35">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ApiKeyController_GetKeys_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.GetKeys*"></a>
   <h4 id="Jellyfin_Api_Controllers_ApiKeyController_GetKeys" data-uid="Jellyfin.Api.Controllers.ApiKeyController.GetKeys">GetKeys()</h4>
@@ -757,7 +745,7 @@ public ActionResult CreateKey([FromQuery, Required] string app)</code></pre>
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Keys&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;AuthenticationInfo&gt;&gt; GetKeys()</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;AuthenticationInfo&gt;&gt;&gt; GetKeys()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -769,7 +757,7 @@ public ActionResult&lt;QueryResult&lt;AuthenticationInfo&gt;&gt; GetKeys()</code
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Security.AuthenticationInfo.html">AuthenticationInfo</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Security.AuthenticationInfo.html">AuthenticationInfo</a>&gt;&gt;&gt;</td>
         <td><p>A <a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult&lt;T&gt;</a> with all keys.</p>
 </td>
       </tr>
@@ -780,7 +768,7 @@ public ActionResult&lt;QueryResult&lt;AuthenticationInfo&gt;&gt; GetKeys()</code
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController_RevokeKey_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController.RevokeKey(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L88">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L71">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ApiKeyController_RevokeKey_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.RevokeKey*"></a>
   <h4 id="Jellyfin_Api_Controllers_ApiKeyController_RevokeKey_System_String_" data-uid="Jellyfin.Api.Controllers.ApiKeyController.RevokeKey(System.String)">RevokeKey(String)</h4>
@@ -792,7 +780,7 @@ public ActionResult&lt;QueryResult&lt;AuthenticationInfo&gt;&gt; GetKeys()</code
     <pre><code class="lang-csharp hljs">[HttpDelete(&quot;Keys/{key}&quot;)]
 [Authorize(Policy = &quot;RequiresElevation&quot;)]
 [ProducesResponseType(204)]
-public ActionResult RevokeKey([FromRoute, Required] string key)</code></pre>
+public async Task&lt;ActionResult&gt; RevokeKey([FromRoute, Required] string key)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -822,7 +810,7 @@ public ActionResult RevokeKey([FromRoute, Required] string key)</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a>.</p>
 </td>
       </tr>
@@ -843,7 +831,7 @@ public ActionResult RevokeKey([FromRoute, Required] string key)</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ApiKeyController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ApiKeyController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ApiKeyController.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

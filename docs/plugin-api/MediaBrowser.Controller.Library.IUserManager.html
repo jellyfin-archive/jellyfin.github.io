@@ -165,7 +165,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_AuthenticateUser_System_String_System_String_System_String_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.AuthenticateUser(System.String%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L148">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L142">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_AuthenticateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.AuthenticateUser*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_AuthenticateUser_System_String_System_String_System_String_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.AuthenticateUser(System.String,System.String,System.String,System.String,System.Boolean)">AuthenticateUser(String, String, String, String, Boolean)</h4>
@@ -239,7 +239,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_Jellyfin_Data_Entities_User_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword(Jellyfin.Data.Entities.User%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L129">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L123">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangeEasyPassword_Jellyfin_Data_Entities_User_System_String_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangeEasyPassword(Jellyfin.Data.Entities.User,System.String,System.String)">ChangeEasyPassword(User, String, String)</h4>
@@ -248,7 +248,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ChangeEasyPassword(User user, string newPassword, string newPasswordSha1)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ChangeEasyPassword(User user, string newPassword, string newPasswordSha1)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -280,12 +280,28 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_ChangePassword_Jellyfin_Data_Entities_User_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.ChangePassword(Jellyfin.Data.Entities.User%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L121">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L114">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ChangePassword_Jellyfin_Data_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.ChangePassword(Jellyfin.Data.Entities.User,System.String)">ChangePassword(User, String)</h4>
@@ -341,7 +357,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_ClearProfileImageAsync_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.ClearProfileImageAsync(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L194">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L188">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_ClearProfileImageAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.ClearProfileImageAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ClearProfileImageAsync_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ClearProfileImageAsync(Jellyfin.Data.Entities.User)">ClearProfileImageAsync(User)</h4>
@@ -391,7 +407,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_CreateUserAsync_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.CreateUserAsync(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L85">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_CreateUserAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.CreateUserAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_CreateUserAsync_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.CreateUserAsync(System.String)">CreateUserAsync(String)</h4>
@@ -462,7 +478,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_DeleteUserAsync_System_Guid_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.DeleteUserAsync(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L100">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L92">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_DeleteUserAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteUserAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_DeleteUserAsync_System_Guid_" data-uid="MediaBrowser.Controller.Library.IUserManager.DeleteUserAsync(System.Guid)">DeleteUserAsync(Guid)</h4>
@@ -512,7 +528,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_GetAuthenticationProviders.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.GetAuthenticationProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L165">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L159">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_GetAuthenticationProviders_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetAuthenticationProviders*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_GetAuthenticationProviders" data-uid="MediaBrowser.Controller.Library.IUserManager.GetAuthenticationProviders">GetAuthenticationProviders()</h4>
@@ -542,7 +558,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_GetPasswordResetProviders.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.GetPasswordResetProviders%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L167">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L161">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_GetPasswordResetProviders_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetPasswordResetProviders*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_GetPasswordResetProviders" data-uid="MediaBrowser.Controller.Library.IUserManager.GetPasswordResetProviders">GetPasswordResetProviders()</h4>
@@ -688,7 +704,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_GetUserDto_Jellyfin_Data_Entities_User_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.GetUserDto(Jellyfin.Data.Entities.User%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L137">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L131">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_GetUserDto_Jellyfin_Data_Entities_User_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.GetUserDto(Jellyfin.Data.Entities.User,System.String)">GetUserDto(User, String)</h4>
@@ -776,7 +792,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L163">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L157">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_RedeemPasswordResetPin_System_String_" data-uid="MediaBrowser.Controller.Library.IUserManager.RedeemPasswordResetPin(System.String)">RedeemPasswordResetPin(String)</h4>
@@ -903,7 +919,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L106">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ResetEasyPassword_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetEasyPassword(Jellyfin.Data.Entities.User)">ResetEasyPassword(User)</h4>
@@ -912,7 +928,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void ResetEasyPassword(User user)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ResetEasyPassword(User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -932,12 +948,28 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td><p>Task.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_ResetPassword_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.ResetPassword(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L107">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L99">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_ResetPassword_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetPassword*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_ResetPassword_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.ResetPassword(Jellyfin.Data.Entities.User)">ResetPassword(User)</h4>
@@ -987,7 +1019,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L156">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L150">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_StartForgotPasswordProcess_System_String_System_Boolean_" data-uid="MediaBrowser.Controller.Library.IUserManager.StartForgotPasswordProcess(System.String,System.Boolean)">StartForgotPasswordProcess(String, Boolean)</h4>
@@ -1043,13 +1075,13 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_UpdateConfigurationAsync_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.UpdateConfigurationAsync(System.Guid%2CMediaBrowser.Model.Configuration.UserConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L177">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L171">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_UpdateConfigurationAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfigurationAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateConfigurationAsync_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateConfigurationAsync(System.Guid,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateConfigurationAsync(Guid, UserConfiguration)</h4>
   <div class="markdown level1 summary"><p>This method updates the user&apos;s configuration.
 This is only included as a stopgap until the new API, using this internally is not recommended.
-Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_">UpdateUser(User)</a>.</p>
+Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUserAsync_Jellyfin_Data_Entities_User_">UpdateUserAsync(User)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1101,13 +1133,13 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_UpdatePolicyAsync_System_Guid_MediaBrowser_Model_Users_UserPolicy_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.UpdatePolicyAsync(System.Guid%2CMediaBrowser.Model.Users.UserPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L187">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L181">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_UpdatePolicyAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdatePolicyAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdatePolicyAsync_System_Guid_MediaBrowser_Model_Users_UserPolicy_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdatePolicyAsync(System.Guid,MediaBrowser.Model.Users.UserPolicy)">UpdatePolicyAsync(Guid, UserPolicy)</h4>
   <div class="markdown level1 summary"><p>This method updates the user&apos;s policy.
 This is only included as a stopgap until the new API, using this internally is not recommended.
-Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_">UpdateUser(User)</a>.</p>
+Instead, modify the user object directly, then call <a class="xref" href="MediaBrowser.Controller.Library.IUserManager.html#MediaBrowser_Controller_Library_IUserManager_UpdateUserAsync_Jellyfin_Data_Entities_User_">UpdateUserAsync(User)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1156,65 +1188,10 @@ Instead, modify the user object directly, then call <a class="xref" href="MediaB
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.UpdateUser(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L75">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser*"></a>
-  <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateUser_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUser(Jellyfin.Data.Entities.User)">UpdateUser(User)</h4>
-  <div class="markdown level1 summary"><p>Updates the user.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void UpdateUser(User user)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Jellyfin.Data.Entities.User.html">User</a></td>
-        <td><span class="parametername">user</span></td>
-        <td><p>The user.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></td>
-        <td><p>If user is <code>null</code>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
-        <td><p>If the provided user doesn&apos;t exist.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Library_IUserManager_UpdateUserAsync_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Library.IUserManager.UpdateUserAsync(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/IUserManager.cs/#L76">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_IUserManager_UpdateUserAsync_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUserAsync*"></a>
   <h4 id="MediaBrowser_Controller_Library_IUserManager_UpdateUserAsync_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Library.IUserManager.UpdateUserAsync(Jellyfin.Data.Entities.User)">UpdateUserAsync(User)</h4>

@@ -641,19 +641,19 @@ public class UserController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_UserController__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Common.Net.INetworkManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.UserController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_UserController__MediaBrowser_Controller_QuickConnect_IQuickConnect_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.%23ctor(MediaBrowser.Controller.Library.IUserManager%2CMediaBrowser.Controller.Session.ISessionManager%2CMediaBrowser.Common.Net.INetworkManager%2CMediaBrowser.Controller.Devices.IDeviceManager%2CMediaBrowser.Controller.Net.IAuthorizationContext%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.UserController%7D%2CMediaBrowser.Controller.QuickConnect.IQuickConnect)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L55">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController__ctor_" data-uid="Jellyfin.Api.Controllers.UserController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_UserController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_UserController__" data-uid="Jellyfin.Api.Controllers.UserController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Common.Net.INetworkManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.UserController})">UserController(IUserManager, ISessionManager, INetworkManager, IDeviceManager, IAuthorizationContext, IServerConfigurationManager, ILogger&lt;UserController&gt;)</h4>
+  <h4 id="Jellyfin_Api_Controllers_UserController__ctor_MediaBrowser_Controller_Library_IUserManager_MediaBrowser_Controller_Session_ISessionManager_MediaBrowser_Common_Net_INetworkManager_MediaBrowser_Controller_Devices_IDeviceManager_MediaBrowser_Controller_Net_IAuthorizationContext_MediaBrowser_Controller_Configuration_IServerConfigurationManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_UserController__MediaBrowser_Controller_QuickConnect_IQuickConnect_" data-uid="Jellyfin.Api.Controllers.UserController.#ctor(MediaBrowser.Controller.Library.IUserManager,MediaBrowser.Controller.Session.ISessionManager,MediaBrowser.Common.Net.INetworkManager,MediaBrowser.Controller.Devices.IDeviceManager,MediaBrowser.Controller.Net.IAuthorizationContext,MediaBrowser.Controller.Configuration.IServerConfigurationManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.UserController},MediaBrowser.Controller.QuickConnect.IQuickConnect)">UserController(IUserManager, ISessionManager, INetworkManager, IDeviceManager, IAuthorizationContext, IServerConfigurationManager, ILogger&lt;UserController&gt;, IQuickConnect)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.UserController.html">UserController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UserController(IUserManager userManager, ISessionManager sessionManager, INetworkManager networkManager, IDeviceManager deviceManager, IAuthorizationContext authContext, IServerConfigurationManager config, ILogger&lt;UserController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public UserController(IUserManager userManager, ISessionManager sessionManager, INetworkManager networkManager, IDeviceManager deviceManager, IAuthorizationContext authContext, IServerConfigurationManager config, ILogger&lt;UserController&gt; logger, IQuickConnect quickConnectManager)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -707,6 +707,12 @@ public class UserController : BaseJellyfinApiController</code></pre>
         <td><p>Instance of the <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.extensions.logging.ilogger">ILogger</a> interface.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.QuickConnect.IQuickConnect.html">IQuickConnect</a></td>
+        <td><span class="parametername">quickConnectManager</span></td>
+        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.QuickConnect.IQuickConnect.html">IQuickConnect</a> interface.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -716,7 +722,7 @@ public class UserController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_AuthenticateUser_System_Guid_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.AuthenticateUser(System.Guid%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L159">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L164">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_AuthenticateUser_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateUser*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_AuthenticateUser_System_Guid_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateUser(System.Guid,System.String,System.String)">AuthenticateUser(Guid, String, String)</h4>
@@ -782,7 +788,7 @@ public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUs
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_AuthenticateUserByName_Jellyfin_Api_Models_UserDtos_AuthenticateUserByName_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.AuthenticateUserByName(Jellyfin.Api.Models.UserDtos.AuthenticateUserByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L194">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L199">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_AuthenticateUserByName_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateUserByName*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_AuthenticateUserByName_Jellyfin_Api_Models_UserDtos_AuthenticateUserByName_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateUserByName(Jellyfin.Api.Models.UserDtos.AuthenticateUserByName)">AuthenticateUserByName(AuthenticateUserByName)</h4>
@@ -834,7 +840,7 @@ public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUs
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_AuthenticateWithQuickConnect_Jellyfin_Api_Models_UserDtos_QuickConnectDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.AuthenticateWithQuickConnect(Jellyfin.Api.Models.UserDtos.QuickConnectDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L229">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L234">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_AuthenticateWithQuickConnect_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateWithQuickConnect*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_AuthenticateWithQuickConnect_Jellyfin_Api_Models_UserDtos_QuickConnectDto_" data-uid="Jellyfin.Api.Controllers.UserController.AuthenticateWithQuickConnect(Jellyfin.Api.Models.UserDtos.QuickConnectDto)">AuthenticateWithQuickConnect(QuickConnectDto)</h4>
@@ -845,7 +851,7 @@ public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateUs
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;AuthenticateWithQuickConnect&quot;)]
 [ProducesResponseType(200)]
-public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWithQuickConnect([FromBody, Required] QuickConnectDto request)</code></pre>
+public ActionResult&lt;AuthenticationResult&gt; AuthenticateWithQuickConnect([FromBody, Required] QuickConnectDto request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -875,7 +881,7 @@ public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWi
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Authentication.AuthenticationResult.html">AuthenticationResult</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Controller.Authentication.AuthenticationResult.html">AuthenticationResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> containing an <a class="xref" href="MediaBrowser.Controller.Session.AuthenticationRequest.html">AuthenticationRequest</a> with information about the new session.</p>
 </td>
       </tr>
@@ -886,7 +892,7 @@ public async Task&lt;ActionResult&lt;AuthenticationResult&gt;&gt; AuthenticateWi
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_CreateUserByName_Jellyfin_Api_Models_UserDtos_CreateUserByName_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.CreateUserByName(Jellyfin.Api.Models.UserDtos.CreateUserByName)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L475">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L468">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_CreateUserByName_" data-uid="Jellyfin.Api.Controllers.UserController.CreateUserByName*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_CreateUserByName_Jellyfin_Api_Models_UserDtos_CreateUserByName_" data-uid="Jellyfin.Api.Controllers.UserController.CreateUserByName(Jellyfin.Api.Models.UserDtos.CreateUserByName)">CreateUserByName(CreateUserByName)</h4>
@@ -939,7 +945,7 @@ public async Task&lt;ActionResult&lt;UserDto&gt;&gt; CreateUserByName([FromBody,
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_DeleteUser_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.DeleteUser(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L137">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L142">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_DeleteUser_" data-uid="Jellyfin.Api.Controllers.UserController.DeleteUser*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_DeleteUser_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserController.DeleteUser(System.Guid)">DeleteUser(Guid)</h4>
@@ -993,7 +999,7 @@ public async Task&lt;ActionResult&gt; DeleteUser([FromRoute, Required] Guid user
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_ForgotPassword_Jellyfin_Api_Models_UserDtos_ForgotPasswordDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.ForgotPassword(Jellyfin.Api.Models.UserDtos.ForgotPasswordDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L499">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L492">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_ForgotPassword_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPassword*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_ForgotPassword_Jellyfin_Api_Models_UserDtos_ForgotPasswordDto_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPassword(Jellyfin.Api.Models.UserDtos.ForgotPasswordDto)">ForgotPassword(ForgotPasswordDto)</h4>
@@ -1045,7 +1051,7 @@ public async Task&lt;ActionResult&lt;ForgotPasswordResult&gt;&gt; ForgotPassword
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_Jellyfin_Api_Models_UserDtos_ForgotPasswordPinDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(Jellyfin.Api.Models.UserDtos.ForgotPasswordPinDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L523">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L516">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPasswordPin*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_ForgotPasswordPin_Jellyfin_Api_Models_UserDtos_ForgotPasswordPinDto_" data-uid="Jellyfin.Api.Controllers.UserController.ForgotPasswordPin(Jellyfin.Api.Models.UserDtos.ForgotPasswordPinDto)">ForgotPasswordPin(ForgotPasswordPinDto)</h4>
@@ -1097,7 +1103,7 @@ public async Task&lt;ActionResult&lt;PinRedeemResult&gt;&gt; ForgotPasswordPin([
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetCurrentUser.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetCurrentUser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L537">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L530">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_GetCurrentUser_" data-uid="Jellyfin.Api.Controllers.UserController.GetCurrentUser*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_GetCurrentUser" data-uid="Jellyfin.Api.Controllers.UserController.GetCurrentUser">GetCurrentUser()</h4>
@@ -1133,7 +1139,7 @@ public ActionResult&lt;UserDto&gt; GetCurrentUser()</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetPublicUsers.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetPublicUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L98">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_GetPublicUsers_" data-uid="Jellyfin.Api.Controllers.UserController.GetPublicUsers*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_GetPublicUsers" data-uid="Jellyfin.Api.Controllers.UserController.GetPublicUsers">GetPublicUsers()</h4>
@@ -1144,7 +1150,7 @@ public ActionResult&lt;UserDto&gt; GetCurrentUser()</code></pre>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Public&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetPublicUsers()</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt;&gt; GetPublicUsers()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1156,7 +1162,7 @@ public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetPublicUsers()</code></p
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a>&gt;&gt;&gt;</td>
         <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> containing the public users.</p>
 </td>
       </tr>
@@ -1167,7 +1173,7 @@ public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetPublicUsers()</code></p
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetUserById_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetUserById(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L113">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L118">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_GetUserById_" data-uid="Jellyfin.Api.Controllers.UserController.GetUserById*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_GetUserById_System_Guid_" data-uid="Jellyfin.Api.Controllers.UserController.GetUserById(System.Guid)">GetUserById(Guid)</h4>
@@ -1221,7 +1227,7 @@ public ActionResult&lt;UserDto&gt; GetUserById([FromRoute, Required] Guid userId
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_GetUsers_System_Nullable_System_Boolean__System_Nullable_System_Boolean__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.GetUsers(System.Nullable%7BSystem.Boolean%7D%2CSystem.Nullable%7BSystem.Boolean%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L77">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L82">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_GetUsers_" data-uid="Jellyfin.Api.Controllers.UserController.GetUsers*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_GetUsers_System_Nullable_System_Boolean__System_Nullable_System_Boolean__" data-uid="Jellyfin.Api.Controllers.UserController.GetUsers(System.Nullable{System.Boolean},System.Nullable{System.Boolean})">GetUsers(Nullable&lt;Boolean&gt;, Nullable&lt;Boolean&gt;)</h4>
@@ -1233,7 +1239,7 @@ public ActionResult&lt;UserDto&gt; GetUserById([FromRoute, Required] Guid userId
     <pre><code class="lang-csharp hljs">[HttpGet]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetUsers([FromQuery] bool? isHidden, [FromQuery] bool? isDisabled)</code></pre>
+public async Task&lt;ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt;&gt; GetUsers([FromQuery] bool? isHidden, [FromQuery] bool? isDisabled)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1269,7 +1275,7 @@ public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetUsers([FromQuery] bool?
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.UserDto.html">UserDto</a>&gt;&gt;&gt;</td>
         <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable&lt;T&gt;</a> containing the users.</p>
 </td>
       </tr>
@@ -1280,7 +1286,7 @@ public ActionResult&lt;IEnumerable&lt;UserDto&gt;&gt; GetUsers([FromQuery] bool?
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_UpdateUser_System_Guid_MediaBrowser_Model_Dto_UserDto_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.UpdateUser(System.Guid%2CMediaBrowser.Model.Dto.UserDto)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L365">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L358">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_UpdateUser_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUser*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_UpdateUser_System_Guid_MediaBrowser_Model_Dto_UserDto_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUser(System.Guid,MediaBrowser.Model.Dto.UserDto)">UpdateUser(Guid, UserDto)</h4>
@@ -1341,7 +1347,7 @@ public async Task&lt;ActionResult&gt; UpdateUser([FromRoute, Required] Guid user
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_UpdateUserConfiguration_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.UpdateUserConfiguration(System.Guid%2CMediaBrowser.Model.Configuration.UserConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L451">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L444">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_UpdateUserConfiguration_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserConfiguration*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_UpdateUserConfiguration_System_Guid_MediaBrowser_Model_Configuration_UserConfiguration_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserConfiguration(System.Guid,MediaBrowser.Model.Configuration.UserConfiguration)">UpdateUserConfiguration(Guid, UserConfiguration)</h4>
@@ -1401,7 +1407,7 @@ public async Task&lt;ActionResult&gt; UpdateUserConfiguration([FromRoute, Requir
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_UpdateUserEasyPassword_System_Guid_Jellyfin_Api_Models_UserDtos_UpdateUserEasyPassword_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.UpdateUserEasyPassword(System.Guid%2CJellyfin.Api.Models.UserDtos.UpdateUserEasyPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L323">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L316">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_UpdateUserEasyPassword_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserEasyPassword*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_UpdateUserEasyPassword_System_Guid_Jellyfin_Api_Models_UserDtos_UpdateUserEasyPassword_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserEasyPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserEasyPassword)">UpdateUserEasyPassword(Guid, UpdateUserEasyPassword)</h4>
@@ -1415,7 +1421,7 @@ public async Task&lt;ActionResult&gt; UpdateUserConfiguration([FromRoute, Requir
 [ProducesResponseType(204)]
 [ProducesResponseType(403)]
 [ProducesResponseType(404)]
-public ActionResult UpdateUserEasyPassword([FromRoute, Required] Guid userId, [FromBody, Required] UpdateUserEasyPassword request)</code></pre>
+public async Task&lt;ActionResult&gt; UpdateUserEasyPassword([FromRoute, Required] Guid userId, [FromBody, Required] UpdateUserEasyPassword request)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1451,7 +1457,7 @@ public ActionResult UpdateUserEasyPassword([FromRoute, Required] Guid userId, [F
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.nocontentresult">NoContentResult</a> indicating success or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.forbidresult">ForbidResult</a> or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> on failure.</p>
 </td>
       </tr>
@@ -1462,7 +1468,7 @@ public ActionResult UpdateUserEasyPassword([FromRoute, Required] Guid userId, [F
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_UpdateUserPassword_System_Guid_Jellyfin_Api_Models_UserDtos_UpdateUserPassword_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Guid%2CJellyfin.Api.Models.UserDtos.UpdateUserPassword)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L265">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L258">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_UpdateUserPassword_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserPassword*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_UpdateUserPassword_System_Guid_Jellyfin_Api_Models_UserDtos_UpdateUserPassword_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserPassword(System.Guid,Jellyfin.Api.Models.UserDtos.UpdateUserPassword)">UpdateUserPassword(Guid, UpdateUserPassword)</h4>
@@ -1523,7 +1529,7 @@ public async Task&lt;ActionResult&gt; UpdateUserPassword([FromRoute, Required] G
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController_UpdateUserPolicy_System_Guid_MediaBrowser_Model_Users_UserPolicy_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController.UpdateUserPolicy(System.Guid%2CMediaBrowser.Model.Users.UserPolicy)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L400">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L393">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_UserController_UpdateUserPolicy_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserPolicy*"></a>
   <h4 id="Jellyfin_Api_Controllers_UserController_UpdateUserPolicy_System_Guid_MediaBrowser_Model_Users_UserPolicy_" data-uid="Jellyfin.Api.Controllers.UserController.UpdateUserPolicy(System.Guid,MediaBrowser.Model.Users.UserPolicy)">UpdateUserPolicy(Guid, UserPolicy)</h4>
@@ -1594,7 +1600,7 @@ public async Task&lt;ActionResult&gt; UpdateUserPolicy([FromRoute, Required] Gui
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_UserController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.UserController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L31" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/UserController.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
