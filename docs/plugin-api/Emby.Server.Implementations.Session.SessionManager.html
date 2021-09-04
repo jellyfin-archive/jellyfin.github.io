@@ -727,7 +727,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async Task Logout(Device existing)</code></pre>
+    <pre><code class="lang-csharp hljs">public async Task Logout(Device device)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -741,7 +741,7 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Jellyfin.Data.Entities.Security.Device.html">Device</a></td>
-        <td><span class="parametername">existing</span></td>
+        <td><span class="parametername">device</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1162,7 +1162,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void OnSessionControllerConnected(SessionInfo info)</code></pre>
+    <pre><code class="lang-csharp hljs">public void OnSessionControllerConnected(SessionInfo session)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1176,8 +1176,9 @@
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Session.SessionInfo.html">SessionInfo</a></td>
-        <td><span class="parametername">info</span></td>
-        <td></td>
+        <td><span class="parametername">session</span></td>
+        <td><p>The session.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -2425,7 +2426,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateDeviceName(string sessionId, string deviceName)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateDeviceName(string sessionId, string reportedDeviceName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2444,7 +2445,7 @@
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">deviceName</span></td>
+        <td><span class="parametername">reportedDeviceName</span></td>
         <td></td>
       </tr>
     </tbody>
