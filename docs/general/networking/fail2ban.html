@@ -105,6 +105,14 @@ bantime = 86400
 findtime = 43200
 logpath = /var/log/jellyfin/jellyfin*.log
 </code></pre><p>Save and exit nano.</p>
+<p>Note:</p>
+<ol>
+<li><p>If jellyfin is running in a docker container, then add the following to jellyfin.local file</p>
+<pre><code class="lang-bash">action = iptables-allports[name=jellyin, chain=DOCKER-USER]
+</code></pre></li>
+<li><p>If you are running Jellyfin on a non-standard port, then change the port from 80,443 to the relevant port say 8096 8920</p>
+</li>
+</ol>
 <h3 id="step-two-create-a-filter">Step two: create a filter</h3>
 <p>The filter explains to Fail2ban where to look in the log file. This is the tricky part.</p>
 <pre><code class="lang-bash">sudo nano /etc/fail2ban/filter.d/jellyfin.conf
