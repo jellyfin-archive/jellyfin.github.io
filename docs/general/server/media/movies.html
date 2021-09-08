@@ -8,7 +8,7 @@
     <title>Movies | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Movies | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.2.0">
+    <meta name="generator" content="docfx 2.58.3.0">
     
     <link rel="shortcut icon" href="../../../images/favicon.png">
     <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
@@ -80,6 +80,8 @@
 <h1 id="movies">Movies</h1>
 
 <p>Movies should usually be in the library root directory or in a subfolder for the individual films. The subfolders allow for organization of metadata and images. Adding the year at the end in parentheses will yield the best results when scraping metadata.</p>
+<div class="TIP"><h5>Tip</h5><p>In order to help with identifying a movie, Jellyfin can make use of media provider identifiers. This can be specified in your movie&#39;s folder name, for example: <code>Film (2010) [imdbid-tt0106145]</code> or <code>Film (2018) [tmdbid-65567]</code></p>
+</div>
 <pre><code class="lang-txt">Movies
 ├── Film (1990).mp4
 ├── Film (1994).mp4

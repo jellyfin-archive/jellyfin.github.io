@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Group
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.2.0">
+    <meta name="generator" content="docfx 2.58.3.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -479,7 +479,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_AddToPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__MediaBrowser_Model_SyncPlay_GroupQueueMode_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.AddToPlayQueue(System.Collections.Generic.IReadOnlyList%7BSystem.Guid%7D%2CMediaBrowser.Model.SyncPlay.GroupQueueMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L569">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L579">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_AddToPlayQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.AddToPlayQueue*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_AddToPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__MediaBrowser_Model_SyncPlay_GroupQueueMode_" data-uid="Emby.Server.Implementations.SyncPlay.Group.AddToPlayQueue(System.Collections.Generic.IReadOnlyList{System.Guid},MediaBrowser.Model.SyncPlay.GroupQueueMode)">AddToPlayQueue(IReadOnlyList&lt;Guid&gt;, GroupQueueMode)</h4>
@@ -526,6 +526,40 @@
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><p><code>true</code> if the play queue has been changed; <code>false</code> if something went wrong.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_ClearPlayQueue_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.ClearPlayQueue(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L540">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_SyncPlay_Group_ClearPlayQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.ClearPlayQueue*"></a>
+  <h4 id="Emby_Server_Implementations_SyncPlay_Group_ClearPlayQueue_System_Boolean_" data-uid="Emby.Server.Implementations.SyncPlay.Group.ClearPlayQueue(System.Boolean)">ClearPlayQueue(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Clears the play queue.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ClearPlayQueue(bool clearPlayingItem)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">clearPlayingItem</span></td>
+        <td><p>Whether to remove the playing item as well.</p>
 </td>
       </tr>
     </tbody>
@@ -645,7 +679,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_GetPlayQueueUpdate_MediaBrowser_Model_SyncPlay_PlayQueueUpdateReason_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.GetPlayQueueUpdate(MediaBrowser.Model.SyncPlay.PlayQueueUpdateReason)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L649">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L659">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_GetPlayQueueUpdate_" data-uid="Emby.Server.Implementations.SyncPlay.Group.GetPlayQueueUpdate*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_GetPlayQueueUpdate_MediaBrowser_Model_SyncPlay_PlayQueueUpdateReason_" data-uid="Emby.Server.Implementations.SyncPlay.Group.GetPlayQueueUpdate(MediaBrowser.Model.SyncPlay.PlayQueueUpdateReason)">GetPlayQueueUpdate(PlayQueueUpdateReason)</h4>
@@ -855,7 +889,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_MoveItemInPlayQueue_System_Guid_System_Int32_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.MoveItemInPlayQueue(System.Guid%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L563">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L573">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_MoveItemInPlayQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.MoveItemInPlayQueue*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_MoveItemInPlayQueue_System_Guid_System_Int32_" data-uid="Emby.Server.Implementations.SyncPlay.Group.MoveItemInPlayQueue(System.Guid,System.Int32)">MoveItemInPlayQueue(Guid, Int32)</h4>
@@ -1033,7 +1067,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_NextItemInQueue.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.NextItemInQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L603">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L613">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_NextItemInQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.NextItemInQueue*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_NextItemInQueue" data-uid="Emby.Server.Implementations.SyncPlay.Group.NextItemInQueue">NextItemInQueue()</h4>
@@ -1065,7 +1099,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_PreviousItemInQueue.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.PreviousItemInQueue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L620">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L630">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_PreviousItemInQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.PreviousItemInQueue*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_PreviousItemInQueue" data-uid="Emby.Server.Implementations.SyncPlay.Group.PreviousItemInQueue">PreviousItemInQueue()</h4>
@@ -1097,7 +1131,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_RemoveFromPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.RemoveFromPlayQueue(System.Collections.Generic.IReadOnlyList%7BSystem.Guid%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L540">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L550">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_RemoveFromPlayQueue_" data-uid="Emby.Server.Implementations.SyncPlay.Group.RemoveFromPlayQueue*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_RemoveFromPlayQueue_System_Collections_Generic_IReadOnlyList_System_Guid__" data-uid="Emby.Server.Implementations.SyncPlay.Group.RemoveFromPlayQueue(System.Collections.Generic.IReadOnlyList{System.Guid})">RemoveFromPlayQueue(IReadOnlyList&lt;Guid&gt;)</h4>
@@ -1147,7 +1181,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_RestartCurrentItem.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.RestartCurrentItem%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L596">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L606">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_RestartCurrentItem_" data-uid="Emby.Server.Implementations.SyncPlay.Group.RestartCurrentItem*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_RestartCurrentItem" data-uid="Emby.Server.Implementations.SyncPlay.Group.RestartCurrentItem">RestartCurrentItem()</h4>
@@ -1683,7 +1717,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_SetRepeatMode_MediaBrowser_Model_SyncPlay_GroupRepeatMode_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.SetRepeatMode(MediaBrowser.Model.SyncPlay.GroupRepeatMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L637">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L647">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_SetRepeatMode_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SetRepeatMode*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_SetRepeatMode_MediaBrowser_Model_SyncPlay_GroupRepeatMode_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SetRepeatMode(MediaBrowser.Model.SyncPlay.GroupRepeatMode)">SetRepeatMode(GroupRepeatMode)</h4>
@@ -1717,7 +1751,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_SyncPlay_Group_SetShuffleMode_MediaBrowser_Model_SyncPlay_GroupShuffleMode_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.SyncPlay.Group.SetShuffleMode(MediaBrowser.Model.SyncPlay.GroupShuffleMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L643">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/SyncPlay/Group.cs/#L653">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_SyncPlay_Group_SetShuffleMode_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SetShuffleMode*"></a>
   <h4 id="Emby_Server_Implementations_SyncPlay_Group_SetShuffleMode_MediaBrowser_Model_SyncPlay_GroupShuffleMode_" data-uid="Emby.Server.Implementations.SyncPlay.Group.SetShuffleMode(MediaBrowser.Model.SyncPlay.GroupShuffleMode)">SetShuffleMode(GroupShuffleMode)</h4>
