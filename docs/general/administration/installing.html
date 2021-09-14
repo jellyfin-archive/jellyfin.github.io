@@ -8,7 +8,7 @@
     <title>Installing Jellyfin | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Installing Jellyfin | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.3.0">
+    <meta name="generator" content="docfx 2.58.4.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -99,17 +99,17 @@
 <pre><code class="lang-sh">docker pull jellyfin/jellyfin
 </code></pre></li>
 <li><p>Create persistent storage for configuration and cache data.</p>
-<p>Either create two persistent volumes:</p>
-<pre><code class="lang-sh">docker volume create jellyfin-config
-docker volume create jellyfin-cache
-</code></pre><p>Or create two directories on the host and use bind mounts:</p>
+<p>Either create two directories on the host and use bind mounts:</p>
 <pre><code class="lang-sh">mkdir /path/to/config
 mkdir /path/to/cache
+</code></pre><p>Or create two persistent volumes:</p>
+<pre><code class="lang-sh">docker volume create jellyfin-config
+docker volume create jellyfin-cache
 </code></pre></li>
 <li><p>Create and run a container in one of the following ways.</p>
 </li>
 </ol>
-<div class="NOTE"><h5>Note</h5><p>The default network mode for Docker is bridge mode. Bridge mode will be used if host mode is omitted. Use host mode for networking in order to use DLNA or an HDHomeRun.</p>
+<div class="NOTE"><h5>Note</h5><p>The default network mode for Docker is bridge mode. Bridge mode will be used if host mode is omitted. Use host mode for networking in order to use DLNA.</p>
 </div>
 <p><strong>Using Docker command line interface:</strong></p>
 <pre><code class="lang-sh">docker run -d \
@@ -121,7 +121,7 @@ mkdir /path/to/cache
  --mount type=bind,source=/path/to/media,target=/media \
  --restart=unless-stopped \
  jellyfin/jellyfin
-</code></pre><p>Using host networking (<code>--net=host</code>) is optional but required in order to use DLNA or HDHomeRun.</p>
+</code></pre><p>Using host networking (<code>--net=host</code>) is optional but required in order to use DLNA.</p>
 <p>Bind Mounts are needed to pass folders from the host OS to the container OS whereas volumes are maintained by Docker and can be considered easier to backup and control by external programs. For a simple setup, it&#39;s considered easier to use Bind Mounts instead of volumes. Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts. Multiple media libraries can be bind mounted if needed:</p>
 <pre><code class="lang-sh">--mount type=bind,source=/path/to/media1,target=/media1
 --mount type=bind,source=/path/to/media2,target=/media2,readonly
