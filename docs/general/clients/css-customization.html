@@ -123,17 +123,17 @@ It can also be used to disable code without deleting it.</p>
 <pre><code class="lang-css">/* Make watched icon dark and transparent */
 .playedIndicator {background: #00000058;}
 </code></pre><p><img src="../../images/custom-css-transparentwatched.png" alt="Screenshot of watched indicators with a custom transparent color applied"></p>
-<h3 id="remove-home-icon-from-header">Remove Home Icon from Header</h3>
+<h3 id="hide-home-icon-from-header">Hide Home Icon from Header</h3>
 <pre><code class="lang-css">.headerHomeButton { display: none; }
 
 .headerButton.headerButtonRight.headerUserButton.paper-icon-button-light { display: none; }
-</code></pre><h3 id="remove-cast-icon-from-header">Remove Cast Icon from Header</h3>
+</code></pre><h3 id="hide-cast-icon-from-header">Hide Cast Icon from Header</h3>
 <pre><code class="lang-css">.headerCastButton { display: none; }
-</code></pre><h3 id="remove-sync-icon-from-header">Remove Sync Icon from Header</h3>
+</code></pre><h3 id="hide-sync-icon-from-header">Hide Sync Icon from Header</h3>
 <pre><code class="lang-css">.headerSyncButton { display: none; }
-</code></pre><h3 id="remove-user-settings-from-header">Remove User Settings from Header</h3>
+</code></pre><h3 id="hide-user-settings-from-header">Hide User Settings from Header</h3>
 <pre><code class="lang-css">.material-icons.person { display: none; }
-</code></pre><h3 id="remove-live-tv-channel-listings">Remove Live TV Channel Listings</h3>
+</code></pre><h3 id="hide-live-tv-channel-listings">Hide Live TV Channel Listings</h3>
 <pre><code class="lang-css">.guideChannelNumber { display: none; }
 </code></pre><h3 id="reduce-live-tv-channel-width">Reduce Live TV Channel Width</h3>
 <pre><code class="lang-css">.channelsContainer { max-width: 8em; }
@@ -145,6 +145,22 @@ It can also be used to disable code without deleting it.</p>
 <pre><code class="lang-css">div.nextUpSection { display: none; }
 </code></pre><h3 id="hide-star-ratings">Hide Star Ratings</h3>
 <pre><code class="lang-css">div.starRatingContainer { display: none; }
+</code></pre><h3 id="replace-latest-movies-text-with-custom-text-such-as-recently-added-movies">Replace &quot;Latest Movies&quot; text with Custom Text such as &quot;Recently Added Movies&quot;</h3>
+<pre><code class="lang-css">#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(1) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a &gt; h2 {display: none;}
+#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(1) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a &gt; span {display: none;}
+#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(1) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a:after {
+content: &#39;Recently Added Movies ›&#39;;
+font-size: 24px;
+font-weight: normal;
+}
+</code></pre><h3 id="replace-latest-tv-shows-text-with-custom-text-such-as-recently-added-tv-shows">Replace Latest TV Shows text with Custom Text such as &quot;Recently Added TV Shows&quot;</h3>
+<pre><code class="lang-css">#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(2) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a &gt; h2 {display: none;}
+#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(2) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a &gt; span {display: none;}
+#homeTab &gt; div &gt; div.section2 &gt; div:nth-child(2) &gt; div.sectionTitleContainer.sectionTitleContainer-cards.padded-left &gt; a:after {
+content: &#39;Recently Added TV Shows ›&#39;;
+font-size: 24px;
+font-weight: normal;
+}
 </code></pre><h3 id="background-image-on-login-page">Background Image on Login Page</h3>
 <pre><code class="lang-css">#loginPage {
   background: url(&quot;https://i.ytimg.com/vi/avCWDDox1nE/maxresdefault.jpg&quot;);
