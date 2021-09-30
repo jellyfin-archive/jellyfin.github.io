@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  />
+  <title>Android TV v0.12 - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
+  <link rel="stylesheet" href="/css/juxtapose.css">
+</head>
+
+	<body>
+		
+<div class="navbar navbar--extended navfix">
+  <nav class="nav__mobile"></nav>
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
+      </a>
+      <nav class="navbar__menu">
+        
+        <ul>
+          
+          <li><a href="/posts">Blog</a></li>
+          
+          <li><a href="/clients">Clients</a></li>
+          
+          <li><a href="/downloads">Downloads</a></li>
+          
+          <li><a href="/contribute">Contribute</a></li>
+          
+          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
+          
+          <li><a href="/contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+      
+      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+    </div>
+  </div>
+</div>
+
+
+		
+
+<div class="page__header">
+	<div class="hero__overlay hero__overlay--gradient"></div>
+	<div class="hero__mask"></div>
+	<div class="page__header__inner">
+		<div class="container">
+			<div class="page__header__content">
+				<div class="page__header__content__inner" id="navConverter">
+					<h1 class="page__header__title">Android TV v0.12</h1>
+					<p class="page__header__text">Our biggest app update to date.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page">
+	<div class="container">
+		<div class="page__inner">
+			<div class="page__main">
+				
+				<div class="text-container text-container--center">
+					<div>
+						<time class="article-date" datetime="2021-09-30T00:00:00Z">
+							<span>30 Sep 2021</span>
+						</time>
+						<span> by </span>
+						
+						<a href="https://github.com/nielsvanvelzen">Niels van Velzen</a>
+						<img class="github" src="https://github.com/nielsvanvelzen.png?size=40"/>
+						
+					</div>
+					<div><!-- markdownlint-disable MD033 MD036 -->
+<p>Today we're bringing the Android TV app to 2021 with a modern design and tons of other changes.</p>
+<p>Over 400 <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> pull requests containing 2400+ commits, 750+ changed files with 54000+ changed lines of code by roughly 50 contributors<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. This is the biggest update to the app we ever worked on. I'll talk a bit about why it is this big and why it took so long later in the post. But let's start with the part you probably came for: <strong>new features!</strong></p>
+<h2 id="new-authentication-flow">New authentication flow</h2>
+<p>We got a lot of complaints about our authentication flow. It wasn't obvious how to enable the auto-login option and managing multiple servers or users was not an easy task. We also didn't like this part of the app, and decided to completely revamp it! The rewritten sign-in screen looks more modern and is much easier to use. There is a new help section that links to our documentation to help new users get started with Jellyfin. The auto-discovery feature of the app now shows all servers instead of the first one, you can select one of those or manually enter your server address to connect. You can then proceed to add a user and start using the app. Users are automatically saved now with auto-login enabled by default.</p>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-user-select.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-user-select.png" />
+</div>
+<h2 id="updated-user-interface-design">Updated user interface design</h2>
+<p>After logging in you will be presented with a modern look and feel in our refreshed user interface. A new toolbar is added to the top-right corner of the screen to open the search page, settings or to switch to a different user. No need to scroll down to the bottom of the home screen anymore.
+Beneath this new toolbar is your media, like it always was, but the cards got a new look with the debatable colored backgrounds removed.</p>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-home.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-home.png" />
+</div>
+<p>The settings screen got a refresh too. It allows you to more easily change settings. Some new settings got added to customize the app to your own taste.</p>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-settings.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-settings.png" />
+</div>
+<p>The user interface when browsing inside libraries got some slight changes too. We're hoping to completely revamp this part of the app at some point, but that didn't stop us from making it slightly better now.</p>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-browse.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-browse.png" />
+</div>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-details.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-details.png" />
+</div>
+<h3 id="themes">Themes</h3>
+<p>The web client supported theming since forever but the Android TV app did not. That changes today with the introduction of three themes: Muted Purple together with Dark (Default) and Classic Emerald are now available in the app to supports basic theming. We're planning to expand this feature in the future with more themes and more variety between them. <em>Maybe we should add a light theme?</em></p>
+<h3 id="new-video-player-design">New video player design</h3>
+<p>The video player was completely redesigned to remove a lot of clutter and make it easier to use. The new design is bigger so you can more easily see the information on a television.</p>
+<div class="juxtapose">
+    <img data-label="0.11" src="/images/posts/androidtv-0-12-0/11-player.png" />
+    <img data-label="0.12" src="/images/posts/androidtv-0-12-0/12-player.png" />
+</div>
+<p>The new video player design is just the beginning. A project to rewrite the playback code behind it is already in the works. This rewrite should help with the crashes and unnecessary transcoding that happens sometimes. It will also give us the opportunity to add new features like SyncPlay. But this doesn't mean the current code isn't being worked on anymore! We did fix some issues with the current video player code. Notable are changes for Fire TV to direct play more often and a lot of crashes got fixed.</p>
+<h2 id="fixed-that-bug">Fixed that bug</h2>
+<p>Together with all the visible changes we've made tons of fixes to the code. We're now using <a href="https://kotlinlang.org">Kotlin</a> as our primary language to help us writing type-safe code, migrated completely to <a href="https://developer.android.com/jetpack/androidx/">AndroidX</a> for better device compatibility and made a brand new <a href="https://github.com/jellyfin/jellyfin-sdk-kotlin">SDK</a> that is slowly being integrated for a more secure and stable connetion with your server. All of these modernizations in the code allow us to more frequently release updates.</p>
+<p>A complete list of all the fixed bugs can be found in our changelog linked below. It's a big list!</p>
+<h2 id="going-forward">Going forward</h2>
+<p>It took some time to get this release out. We didn't feel like the state of the app was good enough for a release for a while.
+Fortunately we've worked hard to make sure we did feel confident and here we are! Starting from this release we're changing some things
+to make sure the next release won't take this long. Our brand new SDK that is already used in our Android app and third party apps is one of the tools helping us with faster releases. By having a more type-safe base we can prevent tons of crashes, allowing us to focus on actual features and bugs.</p>
+<p>We're already working on some new stuff like the earlier mentioned rewrite of the playback code. We're using feature flags for this so we can work on this code while still being able to publish new versions. Other changes that we're looking into are more improvements to the user interface, better Live TV, better music support and more bugfixes!</p>
+<h2 id="contributors">Contributors</h2>
+<p>Like all releases, we couldn't do it without our contributors and your donations! Jellyfin is made entirely by volunteers that don't get paid for their work. A big shout-out to the following contributors that made this release possible:</p>
+<p><strong>Jellyfin Team</strong></p>
+<ul>
+<li><a href="https://github.com/nielsvanvelzen">@nielsvanvelzen</a> - Donate via <a href="https://github.com/sponsors/nielsvanvelzen">GitHub sponsors</a></li>
+<li><a href="https://github.com/thornbill">@thornbill</a> - Donate via <a href="https://github.com/sponsors/thornbill">GitHub sponsors</a></li>
+<li><a href="https://github.com/MrChip53">@MrChip53</a></li>
+<li><a href="https://github.com/AndreasGB">@AndreasGB</a></li>
+</ul>
+<p><strong>Other contributors</strong></p>
+<ul>
+<li><a href="https://github.com/linetrimmer">@linetrimmer</a></li>
+<li><a href="https://github.com/Froghut">@Froghut</a></li>
+<li><a href="https://github.com/koying">@koying</a></li>
+<li><a href="https://github.com/Florianisme">@Florianisme</a></li>
+<li><a href="https://github.com/jassycliq">@jassycliq</a></li>
+<li><a href="https://github.com/tukilo">@tukilo</a></li>
+<li><a href="https://github.com/vnidens">@vnidens</a></li>
+<li><a href="https://github.com/Vardex">@Vardex</a></li>
+<li><a href="https://github.com/MrLemur">@MrLemur</a></li>
+<li><a href="https://github.com/willtrking">@willtrking</a></li>
+<li><a href="https://github.com/sachk">@sachk</a></li>
+<li><a href="https://github.com/PalAditya">@PalAditya</a></li>
+<li><a href="https://github.com/okan35">@okan35</a></li>
+<li><a href="https://github.com/jemlule">@jemlule</a></li>
+<li><a href="https://github.com/jsquyres">@jsquyres</a></li>
+<li><a href="https://github.com/ferferga">@ferferga</a></li>
+<li><a href="https://github.com/Aerion">@Aerion</a></li>
+<li><a href="https://github.com/dhiaayachi">@dhiaayachi</a></li>
+<li><a href="https://github.com/jakeapp">@jakeapp</a></li>
+<li><a href="https://github.com/GodTamIt">@GodTamIt</a></li>
+<li><a href="https://github.com/JannikHoelling">@JannikHoelling</a></li>
+</ul>
+<h2 id="changelog">Changelog</h2>
+<p>Full changelog with all pull requests available on <a href="https://github.com/jellyfin/jellyfin-androidtv/releases/tag/v0.12.0">GitHub</a>.</p>
+<h2 id="download-now">Download Now</h2>
+<a class="NoLinkLook" href="https://play.google.com/store/apps/details?id=org.jellyfin.androidtv">
+  <img width="153" alt='Jellyfin for Android TV on Google Play' src="/images/store-icons/google-play.png" />
+</a>
+<a class="NoLinkLook" href="https://www.amazon.com/gp/product/B07TX7Z725">
+  <img width="153" alt="Jellyfin for Fire TV at Amazon App Store" src="/images/store-icons/amazon.png" />
+</a>
+<p>Direct downloads are always available from <a href="https://repo.jellyfin.org/releases/client/androidtv/">our repository</a>.
+You can also join our <a href="https://play.google.com/apps/testing/org.jellyfin.androidtv">beta program on Google Play</a> to test new versions.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p><a href="https://github.com/jellyfin/jellyfin-androidtv/projects/2?card_filter_query=is%3Apr+is%3Amerged">v0.12.0 project filtered by merged pull requests</a><a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="https://github.com/jellyfin/jellyfin-androidtv/compare/v0.11.5...v0.12.0-beta.7">Git comparison between v0.11.5 and v0.12.0-beta.7</a><a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#8617;</a></p>
+</li>
+</ol>
+</section></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="footer footer--dark">
+    <div class="container">
+        <div class="footer__inner">
+            <p class="footer__textLogo">Jellyfin</p>
+            <div class="footer__data">
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
+                    
+                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
+                    
+                </div>
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
+                    
+                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
+                    
+                </div>
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"
+></script>
+
+<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+
+<script src="/js/juxtapose.min.js"></script>
+
+<div class="scripts">
+	
+	
+	
+	
+	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
+</div>
+
+	</body>
+</html>

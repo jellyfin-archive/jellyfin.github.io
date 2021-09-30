@@ -9,6 +9,115 @@
     <atom:link href="https://jellyfin.org/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Android TV v0.12</title>
+      <link>https://jellyfin.org/posts/android-tv-12/</link>
+      <pubDate>Thu, 30 Sep 2021 00:00:00 +0000</pubDate>
+      <guid>https://jellyfin.org/posts/android-tv-12/</guid>
+      <description>&lt;!-- markdownlint-disable MD033 MD036 --&gt;
+&lt;p&gt;Today we&#39;re bringing the Android TV app to 2021 with a modern design and tons of other changes.&lt;/p&gt;
+&lt;p&gt;Over 400 &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; pull requests containing 2400+ commits, 750+ changed files with 54000+ changed lines of code by roughly 50 contributors&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. This is the biggest update to the app we ever worked on. I&#39;ll talk a bit about why it is this big and why it took so long later in the post. But let&#39;s start with the part you probably came for: &lt;strong&gt;new features!&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;new-authentication-flow&#34;&gt;New authentication flow&lt;/h2&gt;
+&lt;p&gt;We got a lot of complaints about our authentication flow. It wasn&#39;t obvious how to enable the auto-login option and managing multiple servers or users was not an easy task. We also didn&#39;t like this part of the app, and decided to completely revamp it! The rewritten sign-in screen looks more modern and is much easier to use. There is a new help section that links to our documentation to help new users get started with Jellyfin. The auto-discovery feature of the app now shows all servers instead of the first one, you can select one of those or manually enter your server address to connect. You can then proceed to add a user and start using the app. Users are automatically saved now with auto-login enabled by default.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-user-select.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-user-select.png&#34; /&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;updated-user-interface-design&#34;&gt;Updated user interface design&lt;/h2&gt;
+&lt;p&gt;After logging in you will be presented with a modern look and feel in our refreshed user interface. A new toolbar is added to the top-right corner of the screen to open the search page, settings or to switch to a different user. No need to scroll down to the bottom of the home screen anymore.
+Beneath this new toolbar is your media, like it always was, but the cards got a new look with the debatable colored backgrounds removed.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-home.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-home.png&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;The settings screen got a refresh too. It allows you to more easily change settings. Some new settings got added to customize the app to your own taste.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-settings.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-settings.png&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;The user interface when browsing inside libraries got some slight changes too. We&#39;re hoping to completely revamp this part of the app at some point, but that didn&#39;t stop us from making it slightly better now.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-browse.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-browse.png&#34; /&gt;
+&lt;/div&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-details.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-details.png&#34; /&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;themes&#34;&gt;Themes&lt;/h3&gt;
+&lt;p&gt;The web client supported theming since forever but the Android TV app did not. That changes today with the introduction of three themes: Muted Purple together with Dark (Default) and Classic Emerald are now available in the app to supports basic theming. We&#39;re planning to expand this feature in the future with more themes and more variety between them. &lt;em&gt;Maybe we should add a light theme?&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;new-video-player-design&#34;&gt;New video player design&lt;/h3&gt;
+&lt;p&gt;The video player was completely redesigned to remove a lot of clutter and make it easier to use. The new design is bigger so you can more easily see the information on a television.&lt;/p&gt;
+&lt;div class=&#34;juxtapose&#34;&gt;
+    &lt;img data-label=&#34;0.11&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/11-player.png&#34; /&gt;
+    &lt;img data-label=&#34;0.12&#34; src=&#34;https://jellyfin.org/images/posts/androidtv-0-12-0/12-player.png&#34; /&gt;
+&lt;/div&gt;
+&lt;p&gt;The new video player design is just the beginning. A project to rewrite the playback code behind it is already in the works. This rewrite should help with the crashes and unnecessary transcoding that happens sometimes. It will also give us the opportunity to add new features like SyncPlay. But this doesn&#39;t mean the current code isn&#39;t being worked on anymore! We did fix some issues with the current video player code. Notable are changes for Fire TV to direct play more often and a lot of crashes got fixed.&lt;/p&gt;
+&lt;h2 id=&#34;fixed-that-bug&#34;&gt;Fixed that bug&lt;/h2&gt;
+&lt;p&gt;Together with all the visible changes we&#39;ve made tons of fixes to the code. We&#39;re now using &lt;a href=&#34;https://kotlinlang.org&#34;&gt;Kotlin&lt;/a&gt; as our primary language to help us writing type-safe code, migrated completely to &lt;a href=&#34;https://developer.android.com/jetpack/androidx/&#34;&gt;AndroidX&lt;/a&gt; for better device compatibility and made a brand new &lt;a href=&#34;https://github.com/jellyfin/jellyfin-sdk-kotlin&#34;&gt;SDK&lt;/a&gt; that is slowly being integrated for a more secure and stable connetion with your server. All of these modernizations in the code allow us to more frequently release updates.&lt;/p&gt;
+&lt;p&gt;A complete list of all the fixed bugs can be found in our changelog linked below. It&#39;s a big list!&lt;/p&gt;
+&lt;h2 id=&#34;going-forward&#34;&gt;Going forward&lt;/h2&gt;
+&lt;p&gt;It took some time to get this release out. We didn&#39;t feel like the state of the app was good enough for a release for a while.
+Fortunately we&#39;ve worked hard to make sure we did feel confident and here we are! Starting from this release we&#39;re changing some things
+to make sure the next release won&#39;t take this long. Our brand new SDK that is already used in our Android app and third party apps is one of the tools helping us with faster releases. By having a more type-safe base we can prevent tons of crashes, allowing us to focus on actual features and bugs.&lt;/p&gt;
+&lt;p&gt;We&#39;re already working on some new stuff like the earlier mentioned rewrite of the playback code. We&#39;re using feature flags for this so we can work on this code while still being able to publish new versions. Other changes that we&#39;re looking into are more improvements to the user interface, better Live TV, better music support and more bugfixes!&lt;/p&gt;
+&lt;h2 id=&#34;contributors&#34;&gt;Contributors&lt;/h2&gt;
+&lt;p&gt;Like all releases, we couldn&#39;t do it without our contributors and your donations! Jellyfin is made entirely by volunteers that don&#39;t get paid for their work. A big shout-out to the following contributors that made this release possible:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Jellyfin Team&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/nielsvanvelzen&#34;&gt;@nielsvanvelzen&lt;/a&gt; - Donate via &lt;a href=&#34;https://github.com/sponsors/nielsvanvelzen&#34;&gt;GitHub sponsors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/thornbill&#34;&gt;@thornbill&lt;/a&gt; - Donate via &lt;a href=&#34;https://github.com/sponsors/thornbill&#34;&gt;GitHub sponsors&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MrChip53&#34;&gt;@MrChip53&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/AndreasGB&#34;&gt;@AndreasGB&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Other contributors&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/linetrimmer&#34;&gt;@linetrimmer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Froghut&#34;&gt;@Froghut&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/koying&#34;&gt;@koying&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Florianisme&#34;&gt;@Florianisme&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jassycliq&#34;&gt;@jassycliq&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tukilo&#34;&gt;@tukilo&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/vnidens&#34;&gt;@vnidens&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Vardex&#34;&gt;@Vardex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/MrLemur&#34;&gt;@MrLemur&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/willtrking&#34;&gt;@willtrking&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/sachk&#34;&gt;@sachk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/PalAditya&#34;&gt;@PalAditya&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/okan35&#34;&gt;@okan35&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jemlule&#34;&gt;@jemlule&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jsquyres&#34;&gt;@jsquyres&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ferferga&#34;&gt;@ferferga&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Aerion&#34;&gt;@Aerion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dhiaayachi&#34;&gt;@dhiaayachi&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jakeapp&#34;&gt;@jakeapp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/GodTamIt&#34;&gt;@GodTamIt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/JannikHoelling&#34;&gt;@JannikHoelling&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;changelog&#34;&gt;Changelog&lt;/h2&gt;
+&lt;p&gt;Full changelog with all pull requests available on &lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv/releases/tag/v0.12.0&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;download-now&#34;&gt;Download Now&lt;/h2&gt;
+&lt;a class=&#34;NoLinkLook&#34; href=&#34;https://play.google.com/store/apps/details?id=org.jellyfin.androidtv&#34;&gt;
+  &lt;img width=&#34;153&#34; alt=&#39;Jellyfin for Android TV on Google Play&#39; src=&#34;https://jellyfin.org/images/store-icons/google-play.png&#34; /&gt;
+&lt;/a&gt;
+&lt;a class=&#34;NoLinkLook&#34; href=&#34;https://www.amazon.com/gp/product/B07TX7Z725&#34;&gt;
+  &lt;img width=&#34;153&#34; alt=&#34;Jellyfin for Fire TV at Amazon App Store&#34; src=&#34;https://jellyfin.org/images/store-icons/amazon.png&#34; /&gt;
+&lt;/a&gt;
+&lt;p&gt;Direct downloads are always available from &lt;a href=&#34;https://repo.jellyfin.org/releases/client/androidtv/&#34;&gt;our repository&lt;/a&gt;.
+You can also join our &lt;a href=&#34;https://play.google.com/apps/testing/org.jellyfin.androidtv&#34;&gt;beta program on Google Play&lt;/a&gt; to test new versions.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv/projects/2?card_filter_query=is%3Apr+is%3Amerged&#34;&gt;v0.12.0 project filtered by merged pull requests&lt;/a&gt;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jellyfin/jellyfin-androidtv/compare/v0.11.5...v0.12.0-beta.7&#34;&gt;Git comparison between v0.11.5 and v0.12.0-beta.7&lt;/a&gt;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</description>
+    </item>
+    
+    <item>
       <title>Jellyfin Android v2.3.0 - Improved Integrated Player</title>
       <link>https://jellyfin.org/posts/android-v2.3.0/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
