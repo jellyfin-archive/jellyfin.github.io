@@ -90,7 +90,7 @@
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><a class="xref" href="Emby.Server.Implementations.Library.Resolvers.ItemResolver-1.html">ItemResolver</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.TV.Series.html">Series</a>&gt;</div>
-    <div class="level2"><a class="xref" href="Emby.Server.Implementations.Library.Resolvers.FolderResolver-1.html">FolderResolver</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.TV.Series.html">Series</a>&gt;</div>
+    <div class="level2"><a class="xref" href="Emby.Server.Implementations.Library.Resolvers.GenericFolderResolver-1.html">GenericFolderResolver</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.TV.Series.html">Series</a>&gt;</div>
     <div class="level3"><span class="xref">SeriesResolver</span></div>
   </div>
   <div classs="implements">
@@ -128,7 +128,7 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_Library_Resolvers_TV_SeriesResolver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SeriesResolver : FolderResolver&lt;Series&gt;, IItemResolver</code></pre>
+    <pre><code class="lang-csharp hljs">public class SeriesResolver : GenericFolderResolver&lt;Series&gt;, IItemResolver</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -370,7 +370,7 @@
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">Emby.Server.Implementations.Library.Resolvers.FolderResolver&lt;MediaBrowser.Controller.Entities.TV.Series&gt;.SetInitialItemValues(MediaBrowser.Controller.Entities.TV.Series, MediaBrowser.Controller.Library.ItemResolveArgs)</span></div>
+  <div><span class="xref">Emby.Server.Implementations.Library.Resolvers.GenericFolderResolver&lt;MediaBrowser.Controller.Entities.TV.Series&gt;.SetInitialItemValues(MediaBrowser.Controller.Entities.TV.Series, MediaBrowser.Controller.Library.ItemResolveArgs)</span></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Resolvers.IItemResolver.html">IItemResolver</a>

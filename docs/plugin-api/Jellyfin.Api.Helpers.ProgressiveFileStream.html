@@ -170,6 +170,12 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream.synchronized#System_IO_Stream_Synchronized_System_IO_Stream_">Stream.Synchronized(Stream)</a>
     </div>
     <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream.validatebufferarguments#System_IO_Stream_ValidateBufferArguments_System_Byte___System_Int32_System_Int32_">Stream.ValidateBufferArguments(Byte[], Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream.validatecopytoarguments#System_IO_Stream_ValidateCopyToArguments_System_IO_Stream_System_Int32_">Stream.ValidateCopyToArguments(Stream, Int32)</a>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream.write#System_IO_Stream_Write_System_ReadOnlySpan_System_Byte__">Stream.Write(ReadOnlySpan&lt;Byte&gt;)</a>
     </div>
     <div>
@@ -234,10 +240,50 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_System_IO_Stream_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.%23ctor(System.IO.Stream%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L44">View Source</a>
+  </span>
+  <a id="Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.#ctor*"></a>
+  <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_System_IO_Stream_System_Int32_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.#ctor(System.IO.Stream,System.Int32)">ProgressiveFileStream(Stream, Int32)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Helpers.ProgressiveFileStream.html">ProgressiveFileStream</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ProgressiveFileStream(Stream stream, int timeoutMs = 30000)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.stream">Stream</a></td>
+        <td><span class="parametername">stream</span></td>
+        <td><p>The stream to progressively copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td><span class="parametername">timeoutMs</span></td>
+        <td><p>The timeout duration in milliseconds.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_System_String_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.%23ctor(System.String%2CJellyfin.Api.Models.PlaybackDtos.TranscodingJobDto%2CJellyfin.Api.Helpers.TranscodingJobHelper%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L30">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.#ctor*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream__ctor_System_String_Jellyfin_Api_Models_PlaybackDtos_TranscodingJobDto_Jellyfin_Api_Helpers_TranscodingJobHelper_System_Int32_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.#ctor(System.String,Jellyfin.Api.Models.PlaybackDtos.TranscodingJobDto,Jellyfin.Api.Helpers.TranscodingJobHelper,System.Int32)">ProgressiveFileStream(String, TranscodingJobDto, TranscodingJobHelper, Int32)</h4>
@@ -291,7 +337,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_CanRead.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.CanRead%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L53">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanRead_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanRead*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanRead" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanRead">CanRead</h4>
@@ -323,7 +369,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_CanSeek.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.CanSeek%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L56">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanSeek_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanSeek*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanSeek" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanSeek">CanSeek</h4>
@@ -355,7 +401,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_CanWrite.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.CanWrite%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L59">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanWrite_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanWrite*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_CanWrite" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.CanWrite">CanWrite</h4>
@@ -387,7 +433,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Length.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L61">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L62">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Length_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Length*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Length" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Length">Length</h4>
@@ -419,7 +465,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Position.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L64">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L65">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Position_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Position*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Position" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Position">Position</h4>
@@ -453,7 +499,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L144">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L137">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Dispose_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Dispose*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Dispose_System_Boolean_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -487,7 +533,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Flush.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Flush%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L71">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L72">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Flush_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Flush*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Flush" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Flush">Flush()</h4>
@@ -504,7 +550,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Read_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Read(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L77">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L78">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Read_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Read*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Read_System_Byte___System_Int32_System_Int32_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Read(System.Byte[],System.Int32,System.Int32)">Read(Byte[], Int32, Int32)</h4>
@@ -563,7 +609,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.ReadAsync(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L84">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_ReadAsync_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.ReadAsync*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_ReadAsync_System_Byte___System_Int32_System_Int32_System_Threading_CancellationToken_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken)">ReadAsync(Byte[], Int32, Int32, CancellationToken)</h4>
@@ -627,7 +673,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Seek_System_Int64_System_IO_SeekOrigin_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Seek(System.Int64%2CSystem.IO.SeekOrigin)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L132">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L125">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Seek_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Seek*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Seek_System_Int64_System_IO_SeekOrigin_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Seek(System.Int64,System.IO.SeekOrigin)">Seek(Int64, SeekOrigin)</h4>
@@ -681,7 +727,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_SetLength_System_Int64_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.SetLength(System.Int64)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L136">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L129">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_SetLength_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.SetLength*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_SetLength_System_Int64_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.SetLength(System.Int64)">SetLength(Int64)</h4>
@@ -715,7 +761,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Helpers_ProgressiveFileStream_Write_System_Byte___System_Int32_System_Int32_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Helpers.ProgressiveFileStream.Write(System.Byte%5B%5D%2CSystem.Int32%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L140">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Helpers/ProgressiveFileStream.cs/#L133">View Source</a>
   </span>
   <a id="Jellyfin_Api_Helpers_ProgressiveFileStream_Write_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Write*"></a>
   <h4 id="Jellyfin_Api_Helpers_ProgressiveFileStream_Write_System_Byte___System_Int32_System_Int32_" data-uid="Jellyfin.Api.Helpers.ProgressiveFileStream.Write(System.Byte[],System.Int32,System.Int32)">Write(Byte[], Int32, Int32)</h4>

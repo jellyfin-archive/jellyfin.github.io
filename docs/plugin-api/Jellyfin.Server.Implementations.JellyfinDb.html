@@ -97,9 +97,9 @@
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies</span></div>
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbSetCache</span></div>
     <div><span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">IResettableService</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
     <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
-    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">IResettableService</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -119,6 +119,9 @@
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.onconfiguring#Microsoft_EntityFrameworkCore_DbContext_OnConfiguring_Microsoft_EntityFrameworkCore_DbContextOptionsBuilder_">DbContext.OnConfiguring(DbContextOptionsBuilder)</a>
     </div>
     <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.ConfigureConventions(Microsoft.EntityFrameworkCore.ModelConfigurationBuilder)</span>
+    </div>
+    <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.savechanges#Microsoft_EntityFrameworkCore_DbContext_SaveChanges_System_Boolean_">DbContext.SaveChanges(Boolean)</a>
     </div>
     <div>
@@ -132,6 +135,9 @@
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-setlease#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_SetLease_Microsoft_EntityFrameworkCore_Internal_DbContextLease_">DbContext.IDbContextPoolable.SetLease(DbContextLease)</a>
+    </div>
+    <div>
+      <span class="xref">Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable.SetLeaseAsync(Microsoft.EntityFrameworkCore.Internal.DbContextLease, System.Threading.CancellationToken)</span>
     </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.dbcontext.microsoft-entityframeworkcore-internal-idbcontextpoolable-snapshotconfiguration#Microsoft_EntityFrameworkCore_DbContext_Microsoft_EntityFrameworkCore_Internal_IDbContextPoolable_SnapshotConfiguration">DbContext.IDbContextPoolable.SnapshotConfiguration()</a>
@@ -309,7 +315,7 @@
   <h6><strong>Assembly</strong>: Jellyfin.Server.Implementations.dll</h6>
   <h5 id="Jellyfin_Server_Implementations_JellyfinDb_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class JellyfinDb : DbContext, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IDisposable, IAsyncDisposable, IResettableService</code></pre>
+    <pre><code class="lang-csharp hljs">public class JellyfinDb : DbContext, IInfrastructure&lt;IServiceProvider&gt;, IDbContextDependencies, IDbSetCache, IDbContextPoolable, IResettableService, IDisposable, IAsyncDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -822,13 +828,13 @@
       <span class="xref">Microsoft.EntityFrameworkCore.Internal.IDbContextPoolable</span>
   </div>
   <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">Microsoft.EntityFrameworkCore.Infrastructure.IResettableService</a>
+  </div>
+  <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
   <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.iasyncdisposable">System.IAsyncDisposable</a>
-  </div>
-  <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.entityframeworkcore.infrastructure.iresettableservice">Microsoft.EntityFrameworkCore.Infrastructure.IResettableService</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>

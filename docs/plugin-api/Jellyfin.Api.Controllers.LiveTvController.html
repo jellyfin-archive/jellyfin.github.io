@@ -1651,7 +1651,7 @@ or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspne
 [ProducesResponseType(200)]
 [ProducesResponseType(404)]
 [ProducesVideoFile]
-public async Task&lt;ActionResult&gt; GetLiveStreamFile([FromRoute, Required] string streamId, [FromRoute, Required] string container)</code></pre>
+public ActionResult GetLiveStreamFile([FromRoute, Required] string streamId, [FromRoute, Required] string container)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1687,7 +1687,7 @@ public async Task&lt;ActionResult&gt; GetLiveStreamFile([FromRoute, Required] st
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult">ActionResult</a></td>
         <td><p>An <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.okresult">OkResult</a> containing the channel stream on success,
 or a <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.notfoundresult">NotFoundResult</a> if stream not found.</p>
 </td>

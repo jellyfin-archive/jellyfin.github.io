@@ -125,20 +125,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile_UseAsyncIO.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile.UseAsyncIO%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile_ReadOptions.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile.ReadOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L13">View Source</a>
   </span>
-  <a id="MediaBrowser_Model_IO_AsyncFile_UseAsyncIO_" data-uid="MediaBrowser.Model.IO.AsyncFile.UseAsyncIO*"></a>
-  <h4 id="MediaBrowser_Model_IO_AsyncFile_UseAsyncIO" data-uid="MediaBrowser.Model.IO.AsyncFile.UseAsyncIO">UseAsyncIO</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether we should use async IO on this platform.
-<a href="https://github.com/dotnet/runtime/issues/16354">https://github.com/dotnet/runtime/issues/16354</a>.</p>
+  <a id="MediaBrowser_Model_IO_AsyncFile_ReadOptions_" data-uid="MediaBrowser.Model.IO.AsyncFile.ReadOptions*"></a>
+  <h4 id="MediaBrowser_Model_IO_AsyncFile_ReadOptions" data-uid="MediaBrowser.Model.IO.AsyncFile.ReadOptions">ReadOptions</h4>
+  <div class="markdown level1 summary"><p>Gets the default <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.filestreamoptions">FileStreamOptions</a> for reading files async.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool UseAsyncIO { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public static FileStreamOptions ReadOptions { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,9 +149,39 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><p>Returns <code>false</code> on Windows; otherwise <code>true</code>.</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.filestreamoptions">FileStreamOptions</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile_WriteOptions.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile.WriteOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L21">View Source</a>
+  </span>
+  <a id="MediaBrowser_Model_IO_AsyncFile_WriteOptions_" data-uid="MediaBrowser.Model.IO.AsyncFile.WriteOptions*"></a>
+  <h4 id="MediaBrowser_Model_IO_AsyncFile_WriteOptions" data-uid="MediaBrowser.Model.IO.AsyncFile.WriteOptions">WriteOptions</h4>
+  <div class="markdown level1 summary"><p>Gets the default <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.filestreamoptions">FileStreamOptions</a> for writing files async.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static FileStreamOptions WriteOptions { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.io.filestreamoptions">FileStreamOptions</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -163,7 +192,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile_OpenRead_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile.OpenRead(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L34">View Source</a>
   </span>
   <a id="MediaBrowser_Model_IO_AsyncFile_OpenRead_" data-uid="MediaBrowser.Model.IO.AsyncFile.OpenRead*"></a>
   <h4 id="MediaBrowser_Model_IO_AsyncFile_OpenRead_System_String_" data-uid="MediaBrowser.Model.IO.AsyncFile.OpenRead(System.String)">OpenRead(String)</h4>
@@ -213,7 +242,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile_OpenWrite_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile.OpenWrite(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L42">View Source</a>
   </span>
   <a id="MediaBrowser_Model_IO_AsyncFile_OpenWrite_" data-uid="MediaBrowser.Model.IO.AsyncFile.OpenWrite*"></a>
   <h4 id="MediaBrowser_Model_IO_AsyncFile_OpenWrite_System_String_" data-uid="MediaBrowser.Model.IO.AsyncFile.OpenWrite(System.String)">OpenWrite(String)</h4>
@@ -269,7 +298,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Model_IO_AsyncFile.md&amp;value=---%0Auid%3A%20MediaBrowser.Model.IO.AsyncFile%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Model/IO/AsyncFile.cs/#L8" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

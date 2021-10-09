@@ -98,7 +98,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_GetOutputPath_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.GetOutputPath(MediaBrowser.Model.Dto.MediaSourceInfo%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/EmbyTV/IRecorder.cs/#L18">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/EmbyTV/IRecorder.cs/#L25">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_GetOutputPath_" data-uid="Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.GetOutputPath*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_GetOutputPath_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_" data-uid="Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.GetOutputPath(MediaBrowser.Model.Dto.MediaSourceInfo,System.String)">GetOutputPath(MediaSourceInfo, String)</h4>
@@ -150,7 +150,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_Record_MediaBrowser_Controller_Library_IDirectStreamProvider_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_TimeSpan_System_Action_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.Record(MediaBrowser.Controller.Library.IDirectStreamProvider%2CMediaBrowser.Model.Dto.MediaSourceInfo%2CSystem.String%2CSystem.TimeSpan%2CSystem.Action%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/EmbyTV/IRecorder.cs/#L16">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/EmbyTV/IRecorder.cs/#L23">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_Record_" data-uid="Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.Record*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_EmbyTV_IRecorder_Record_MediaBrowser_Controller_Library_IDirectStreamProvider_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_TimeSpan_System_Action_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.EmbyTV.IRecorder.Record(MediaBrowser.Controller.Library.IDirectStreamProvider,MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.TimeSpan,System.Action,System.Threading.CancellationToken)">Record(IDirectStreamProvider, MediaSourceInfo, String, TimeSpan, Action, CancellationToken)</h4>
@@ -174,32 +174,38 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Library.IDirectStreamProvider.html">IDirectStreamProvider</a></td>
         <td><span class="parametername">directStreamProvider</span></td>
-        <td></td>
+        <td><p>The direct stream provider, or <code>null</code>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
         <td><span class="parametername">mediaSource</span></td>
-        <td></td>
+        <td><p>The media source.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">targetFile</span></td>
-        <td></td>
+        <td><p>The target file.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.timespan">TimeSpan</a></td>
         <td><span class="parametername">duration</span></td>
-        <td></td>
+        <td><p>The duration to record.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.action">Action</a></td>
         <td><span class="parametername">onStarted</span></td>
-        <td></td>
+        <td><p>An action to perform when recording starts.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -214,7 +220,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
-        <td></td>
+        <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> that represents the recording operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
