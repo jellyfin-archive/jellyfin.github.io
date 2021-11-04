@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1"
+  />
+  <title>Jellyfin Android v2.4.0 - More audio codecs, stability improvements and various tweaks - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
+  <link rel="stylesheet" href="/css/juxtapose.css">
+</head>
+
+	<body>
+		
+<div class="navbar navbar--extended navfix">
+  <nav class="nav__mobile"></nav>
+  <div class="container">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
+      </a>
+      <nav class="navbar__menu">
+        
+        <ul>
+          
+          <li><a href="/posts">Blog</a></li>
+          
+          <li><a href="/clients">Clients</a></li>
+          
+          <li><a href="/downloads">Downloads</a></li>
+          
+          <li><a href="/contribute">Contribute</a></li>
+          
+          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
+          
+          <li><a href="/contact">Contact</a></li>
+          
+        </ul>
+      </nav>
+      
+      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
+    </div>
+  </div>
+</div>
+
+
+		
+
+<div class="page__header">
+	<div class="hero__overlay hero__overlay--gradient"></div>
+	<div class="hero__mask"></div>
+	<div class="page__header__inner">
+		<div class="container">
+			<div class="page__header__content">
+				<div class="page__header__content__inner" id="navConverter">
+					<h1 class="page__header__title">Jellyfin Android v2.4.0 - More audio codecs, stability improvements and various tweaks</h1>
+					<p class="page__header__text">Enjoy a more polished Jellyfin experience on your phone</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="page">
+	<div class="container">
+		<div class="page__inner">
+			<div class="page__main">
+				
+				<div class="text-container text-container--center">
+					<div>
+						<time class="article-date" datetime="2021-11-04T00:00:00Z">
+							<span>4 Nov 2021</span>
+						</time>
+						<span> by </span>
+						
+						<a href="https://github.com/Maxr1998">Max Rumpf</a>
+						<img class="github" src="https://github.com/Maxr1998.png?size=40"/>
+						
+					</div>
+					<div><p>Compared to the last major release, Jellyfin Android 2.4.0 isn't as feature packed, but it still includes some useful changes and various fixes. Read on to learn more!</p>
+<p>The biggest improvement right of the start is support for additional audio codecs in the integrated video player, allowing even more media to direct play on your device. Specifically, that includes Dolby Digital, Digital Plus and TrueHD, as well as DTS and Linear PCM audio, all commonly found on DVDs and Blu-rays, but also a more universal AAC support.</p>
+<p>Additionally, The integrated player now follows the rewind/fast forward preferences selected in the Jellyfin settings.</p>
+<p>Apart from that, connection reliability was again improved, handling timeouts properly now and showing a progress indicator while the app connects (thus it won't be stuck on black screen anymore).</p>
+<h2 id="download-now">Download Now</h2>
+<a class="NoLinkLook" href="https://play.google.com/store/apps/details?id=org.jellyfin.mobile">
+  <img width="153" alt="Jellyfin on Google Play" src="/images/store-icons/google-play.png" />
+</a>
+<a class="NoLinkLook" href="https://www.amazon.com/gp/product/B081RFTTQ9">
+  <img width="153" alt="Jellyfin on Amazon App Store" src="/images/store-icons/amazon.png" />
+</a>
+<a class="NoLinkLook" href="https://f-droid.org/en/packages/org.jellyfin.mobile/">
+  <img width="153" alt="Jellyfin on F-Droid" src="/images/store-icons/fdroid.png" />
+</a>
+<p>Direct downloads are always available from <a href="https://repo.jellyfin.org/releases/client/android/">our repository</a>.</p>
+<h2 id="full-release-notes">Full Release Notes</h2>
+<p>The full (technical) release notes are available on <a href="https://github.com/jellyfin/jellyfin-android/releases/tag/v2.4.0">GitHub</a>.</p>
+<h2 id="contributors">Contributors</h2>
+<p>As always, lots of great people contributed in this release:</p>
+<h3 id="jellyfin-team">Jellyfin Team</h3>
+<ul>
+<li><a href="https://github.com/nielsvanvelzen">@nielsvanvelzen</a> - <a href="https://github.com/sponsors/nielsvanvelzen">Sponsor</a></li>
+<li><a href="https://github.com/Maxr1998">@Maxr1998</a> - <a href="https://github.com/sponsors/Maxr1998">Sponsor</a></li>
+</ul>
+<h3 id="others">Others</h3>
+<ul>
+<li><a href="https://github.com/CarlosOlivo">@CarlosOlivo</a></li>
+</ul>
+<h3 id="contribute">Contribute</h3>
+<p>If you have some experience with Android development and are interested in contributing yourself, feel free to dive into the source code <a href="https://github.com/jellyfin/jellyfin-android">on GitHub</a> and open pull requests!</p>
+<p>Alternatively, you can help translating the app into your language on our <a href="https://translate.jellyfin.org/projects/jellyfin-android/jellyfin-android/">Weblate</a>.</p></div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="footer footer--dark">
+    <div class="container">
+        <div class="footer__inner">
+            <p class="footer__textLogo">Jellyfin</p>
+            <div class="footer__data">
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
+                    
+                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
+                    
+                </div>
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
+                    
+                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
+                    
+                </div>
+                <div class="footer__data__item">
+                    
+                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+		<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"
+></script>
+
+<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+
+<script src="/js/juxtapose.min.js"></script>
+
+<div class="scripts">
+	
+	
+	
+	
+	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
+</div>
+
+	</body>
+</html>
