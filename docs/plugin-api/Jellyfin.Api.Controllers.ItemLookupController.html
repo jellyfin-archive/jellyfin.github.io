@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ItemLookupController
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -642,19 +642,19 @@ public class ItemLookupController : BaseJellyfinApiController</code></pre>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ItemLookupController__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.%23ctor(MediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.ItemLookupController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ItemLookupController__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.%23ctor(MediaBrowser.Controller.Providers.IProviderManager%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager%2CMicrosoft.Extensions.Logging.ILogger%7BJellyfin.Api.Controllers.ItemLookupController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L42">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController__ctor_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.#ctor*"></a>
-  <h4 id="Jellyfin_Api_Controllers_ItemLookupController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ItemLookupController__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.#ctor(MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.ItemLookupController})">ItemLookupController(IProviderManager, IServerConfigurationManager, IFileSystem, ILibraryManager, ILogger&lt;ItemLookupController&gt;)</h4>
+  <h4 id="Jellyfin_Api_Controllers_ItemLookupController__ctor_MediaBrowser_Controller_Providers_IProviderManager_MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_Microsoft_Extensions_Logging_ILogger_Jellyfin_Api_Controllers_ItemLookupController__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.#ctor(MediaBrowser.Controller.Providers.IProviderManager,MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager,Microsoft.Extensions.Logging.ILogger{Jellyfin.Api.Controllers.ItemLookupController})">ItemLookupController(IProviderManager, IFileSystem, ILibraryManager, ILogger&lt;ItemLookupController&gt;)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Jellyfin.Api.Controllers.ItemLookupController.html">ItemLookupController</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ItemLookupController(IProviderManager providerManager, IServerConfigurationManager serverConfigurationManager, IFileSystem fileSystem, ILibraryManager libraryManager, ILogger&lt;ItemLookupController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public ItemLookupController(IProviderManager providerManager, IFileSystem fileSystem, ILibraryManager libraryManager, ILogger&lt;ItemLookupController&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -670,12 +670,6 @@ public class ItemLookupController : BaseJellyfinApiController</code></pre>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a></td>
         <td><span class="parametername">providerManager</span></td>
         <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Providers.IProviderManager.html">IProviderManager</a> interface.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
-        <td><span class="parametername">serverConfigurationManager</span></td>
-        <td><p>Instance of the <a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a> interface.</p>
 </td>
       </tr>
       <tr>
@@ -705,7 +699,7 @@ public class ItemLookupController : BaseJellyfinApiController</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_ApplySearchCriteria_System_Guid_MediaBrowser_Model_Providers_RemoteSearchResult_System_Boolean_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.ApplySearchCriteria(System.Guid%2CMediaBrowser.Model.Providers.RemoteSearchResult%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L247">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L241">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_ApplySearchCriteria_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.ApplySearchCriteria*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_ApplySearchCriteria_System_Guid_MediaBrowser_Model_Providers_RemoteSearchResult_System_Boolean_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.ApplySearchCriteria(System.Guid,MediaBrowser.Model.Providers.RemoteSearchResult,System.Boolean)">ApplySearchCriteria(Guid, RemoteSearchResult, Boolean)</h4>
@@ -771,7 +765,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetBookRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_BookInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetBookRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.BookInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L228">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L222">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetBookRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetBookRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetBookRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_BookInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetBookRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.BookInfo})">GetBookRemoteSearchResults(RemoteSearchQuery&lt;BookInfo&gt;)</h4>
@@ -823,7 +817,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetBoxSetRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_BoxSetInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetBoxSetRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.BoxSetInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L159">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L153">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetBoxSetRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetBoxSetRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetBoxSetRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_BoxSetInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetBoxSetRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.BoxSetInfo})">GetBoxSetRemoteSearchResults(RemoteSearchQuery&lt;BoxSetInfo&gt;)</h4>
@@ -875,7 +869,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetExternalIdInfos_System_Guid_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetExternalIdInfos(System.Guid)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L67">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L61">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetExternalIdInfos_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetExternalIdInfos*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetExternalIdInfos_System_Guid_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetExternalIdInfos(System.Guid)">GetExternalIdInfos(Guid)</h4>
@@ -929,7 +923,7 @@ public ActionResult&lt;IEnumerable&lt;ExternalIdInfo&gt;&gt; GetExternalIdInfos(
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetMovieRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_MovieInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetMovieRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.MovieInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L91">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L85">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetMovieRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMovieRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetMovieRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_MovieInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMovieRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.MovieInfo})">GetMovieRemoteSearchResults(RemoteSearchQuery&lt;MovieInfo&gt;)</h4>
@@ -981,7 +975,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetMusicAlbumRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_AlbumInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetMusicAlbumRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.AlbumInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L193">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L187">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicAlbumRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicAlbumRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicAlbumRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_AlbumInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicAlbumRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.AlbumInfo})">GetMusicAlbumRemoteSearchResults(RemoteSearchQuery&lt;AlbumInfo&gt;)</h4>
@@ -1033,7 +1027,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetMusicArtistRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_ArtistInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetMusicArtistRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.ArtistInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L176">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L170">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicArtistRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicArtistRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicArtistRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_ArtistInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicArtistRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.ArtistInfo})">GetMusicArtistRemoteSearchResults(RemoteSearchQuery&lt;ArtistInfo&gt;)</h4>
@@ -1085,7 +1079,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetMusicVideoRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_MusicVideoInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetMusicVideoRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.MusicVideoInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L125">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L119">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicVideoRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicVideoRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetMusicVideoRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_MusicVideoInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetMusicVideoRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.MusicVideoInfo})">GetMusicVideoRemoteSearchResults(RemoteSearchQuery&lt;MusicVideoInfo&gt;)</h4>
@@ -1137,7 +1131,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetPersonRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_PersonLookupInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetPersonRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.PersonLookupInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L210">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L204">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetPersonRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetPersonRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetPersonRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_PersonLookupInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetPersonRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.PersonLookupInfo})">GetPersonRemoteSearchResults(RemoteSearchQuery&lt;PersonLookupInfo&gt;)</h4>
@@ -1190,7 +1184,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetSeriesRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_SeriesInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetSeriesRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.SeriesInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L142">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L136">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetSeriesRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetSeriesRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetSeriesRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_SeriesInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetSeriesRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.SeriesInfo})">GetSeriesRemoteSearchResults(RemoteSearchQuery&lt;SeriesInfo&gt;)</h4>
@@ -1242,7 +1236,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController_GetTrailerRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_TrailerInfo__.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController.GetTrailerRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery%7BMediaBrowser.Controller.Providers.TrailerInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L108">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L102">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_ItemLookupController_GetTrailerRemoteSearchResults_" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetTrailerRemoteSearchResults*"></a>
   <h4 id="Jellyfin_Api_Controllers_ItemLookupController_GetTrailerRemoteSearchResults_MediaBrowser_Controller_Providers_RemoteSearchQuery_MediaBrowser_Controller_Providers_TrailerInfo__" data-uid="Jellyfin.Api.Controllers.ItemLookupController.GetTrailerRemoteSearchResults(MediaBrowser.Controller.Providers.RemoteSearchQuery{MediaBrowser.Controller.Providers.TrailerInfo})">GetTrailerRemoteSearchResults(RemoteSearchQuery&lt;TrailerInfo&gt;)</h4>
@@ -1304,7 +1298,7 @@ The task result contains an <a class="xref" href="https://docs.microsoft.com/dot
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_ItemLookupController.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.ItemLookupController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L28" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/ItemLookupController.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

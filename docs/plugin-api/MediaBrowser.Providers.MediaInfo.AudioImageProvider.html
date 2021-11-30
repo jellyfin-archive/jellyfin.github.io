@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class AudioImageProvider
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -83,7 +83,7 @@
   
   <h1 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider" class="text-break">Class AudioImageProvider
   </h1>
-  <div class="markdown level0 summary"><p>Uses ffmpeg to create video images.</p>
+  <div class="markdown level0 summary"><p>Uses <a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a> to extract embedded images.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -130,18 +130,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider__ctor_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.%23ctor(MediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.%23ctor(MediaBrowser.Controller.Library.IMediaSourceManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Controller.Configuration.IServerConfigurationManager%2CMediaBrowser.Model.IO.IFileSystem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L40">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider__ctor_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider__ctor_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.#ctor(MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem)">AudioImageProvider(IMediaEncoder, IServerConfigurationManager, IFileSystem)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider__ctor_MediaBrowser_Controller_Library_IMediaSourceManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Controller_Configuration_IServerConfigurationManager_MediaBrowser_Model_IO_IFileSystem_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.#ctor(MediaBrowser.Controller.Library.IMediaSourceManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Controller.Configuration.IServerConfigurationManager,MediaBrowser.Model.IO.IFileSystem)">AudioImageProvider(IMediaSourceManager, IMediaEncoder, IServerConfigurationManager, IFileSystem)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Providers.MediaInfo.AudioImageProvider.html">AudioImageProvider</a> class.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AudioImageProvider(IMediaEncoder mediaEncoder, IServerConfigurationManager config, IFileSystem fileSystem)</code></pre>
+    <pre><code class="lang-csharp hljs">public AudioImageProvider(IMediaSourceManager mediaSourceManager, IMediaEncoder mediaEncoder, IServerConfigurationManager config, IFileSystem fileSystem)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -154,19 +155,28 @@
     </thead>
     <tbody>
       <tr>
+        <td><a class="xref" href="MediaBrowser.Controller.Library.IMediaSourceManager.html">IMediaSourceManager</a></td>
+        <td><span class="parametername">mediaSourceManager</span></td>
+        <td><p>The media source manager for fetching item streams.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.MediaEncoding.IMediaEncoder.html">IMediaEncoder</a></td>
         <td><span class="parametername">mediaEncoder</span></td>
-        <td></td>
+        <td><p>The media encoder for extracting embedded images.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Configuration.IServerConfigurationManager.html">IServerConfigurationManager</a></td>
         <td><span class="parametername">config</span></td>
-        <td></td>
+        <td><p>The server configuration manager for getting image paths.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
         <td><span class="parametername">fileSystem</span></td>
-        <td></td>
+        <td><p>The filesystem.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -174,44 +184,15 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_AudioImagesPath.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.AudioImagesPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L39">View Source</a>
-  </span>
-  <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_AudioImagesPath_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.AudioImagesPath*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_AudioImagesPath" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.AudioImagesPath">AudioImagesPath</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string AudioImagesPath { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_Name.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L51">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_Name_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.Name*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_Name" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the name.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -228,7 +209,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
+        <td><p>The name.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -236,71 +218,15 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_MediaBrowser_Controller_Entities_Audio_Audio_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage(MediaBrowser.Controller.Entities.Audio.Audio%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.Entities.MediaStream%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L66">View Source</a>
-  </span>
-  <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_MediaBrowser_Controller_Entities_Audio_Audio_System_Collections_Generic_List_MediaBrowser_Model_Entities_MediaStream__System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage(MediaBrowser.Controller.Entities.Audio.Audio,System.Collections.Generic.List{MediaBrowser.Model.Entities.MediaStream},System.Threading.CancellationToken)">GetImage(Audio, List&lt;MediaStream&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async Task&lt;DynamicImageResponse&gt; GetImage(Audio item, List&lt;MediaStream&gt; imageStreams, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Audio.Audio.html">Audio</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
-        <td><span class="parametername">imageStreams</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.DynamicImageResponse.html">DynamicImageResponse</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage(MediaBrowser.Controller.Entities.BaseItem%2CMediaBrowser.Model.Entities.ImageType%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L60">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetImage_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Entities_ImageType_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetImage(MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Entities.ImageType,System.Threading.CancellationToken)">GetImage(BaseItem, ImageType, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the image.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -319,17 +245,20 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a></td>
         <td><span class="parametername">type</span></td>
-        <td></td>
+        <td><p>The type.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
+        <td><p>The cancellation token.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -344,7 +273,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="MediaBrowser.Controller.Providers.DynamicImageResponse.html">DynamicImageResponse</a>&gt;</td>
-        <td></td>
+        <td><p>Task{DynamicImageResponse}.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -353,11 +283,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetSupportedImages_MediaBrowser_Controller_Entities_BaseItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetSupportedImages(MediaBrowser.Controller.Entities.BaseItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L54">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetSupportedImages_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetSupportedImages*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_GetSupportedImages_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.GetSupportedImages(MediaBrowser.Controller.Entities.BaseItem)">GetSupportedImages(BaseItem)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets the supported images.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -376,7 +307,8 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -391,7 +323,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ImageType.html">ImageType</a>&gt;</td>
-        <td></td>
+        <td><p>IEnumerable{ImageType}.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -400,11 +333,12 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioImageProvider_Supports_MediaBrowser_Controller_Entities_BaseItem_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioImageProvider.Supports(MediaBrowser.Controller.Entities.BaseItem)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L130">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioImageProvider.cs/#L142">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_Supports_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.Supports*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_AudioImageProvider_Supports_MediaBrowser_Controller_Entities_BaseItem_" data-uid="MediaBrowser.Providers.MediaInfo.AudioImageProvider.Supports(MediaBrowser.Controller.Entities.BaseItem)">Supports(BaseItem)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Supports the specified item.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -423,7 +357,8 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a></td>
         <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><p>The item.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -438,7 +373,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td></td>
+        <td><p><code>true</code> if the provider supports the item.</p>
+</td>
       </tr>
     </tbody>
   </table>

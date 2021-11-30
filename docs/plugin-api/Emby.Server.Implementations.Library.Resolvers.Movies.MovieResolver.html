@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MovieResolver
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -101,7 +101,7 @@
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <a class="xref" href="Emby.Server.Implementations.Library.Resolvers.BaseVideoResolver-1.html#Emby_Server_Implementations_Library_Resolvers_BaseVideoResolver_1_LibraryManager">BaseVideoResolver&lt;Video&gt;.LibraryManager</a>
+      <a class="xref" href="Emby.Server.Implementations.Library.Resolvers.BaseVideoResolver-1.html#Emby_Server_Implementations_Library_Resolvers_BaseVideoResolver_1_NamingOptions">BaseVideoResolver&lt;Video&gt;.NamingOptions</a>
     </div>
     <div>
       <a class="xref" href="Emby.Server.Implementations.Library.Resolvers.BaseVideoResolver-1.html#Emby_Server_Implementations_Library_Resolvers_BaseVideoResolver_1_ResolveVideo__1_MediaBrowser_Controller_Library_ItemResolveArgs_System_Boolean_">BaseVideoResolver&lt;Video&gt;.ResolveVideo&lt;TVideoType&gt;(ItemResolveArgs, Boolean)</a>
@@ -165,19 +165,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Drawing_IImageProcessor_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.%23ctor(MediaBrowser.Controller.Library.ILibraryManager%2CMediaBrowser.Controller.Drawing.IImageProcessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver__ctor_MediaBrowser_Controller_Drawing_IImageProcessor_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.%23ctor(MediaBrowser.Controller.Drawing.IImageProcessor%2CEmby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L45">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver__ctor_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver__ctor_MediaBrowser_Controller_Library_ILibraryManager_MediaBrowser_Controller_Drawing_IImageProcessor_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.#ctor(MediaBrowser.Controller.Library.ILibraryManager,MediaBrowser.Controller.Drawing.IImageProcessor)">MovieResolver(ILibraryManager, IImageProcessor)</h4>
+  <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver__ctor_MediaBrowser_Controller_Drawing_IImageProcessor_Emby_Naming_Common_NamingOptions_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.#ctor(MediaBrowser.Controller.Drawing.IImageProcessor,Emby.Naming.Common.NamingOptions)">MovieResolver(IImageProcessor, NamingOptions)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.html">MovieResolver</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MovieResolver(ILibraryManager libraryManager, IImageProcessor imageProcessor)</code></pre>
+    <pre><code class="lang-csharp hljs">public MovieResolver(IImageProcessor imageProcessor, NamingOptions namingOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -190,15 +190,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
-        <td><span class="parametername">libraryManager</span></td>
-        <td><p>The library manager.</p>
-</td>
-      </tr>
-      <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Drawing.IImageProcessor.html">IImageProcessor</a></td>
         <td><span class="parametername">imageProcessor</span></td>
         <td><p>The image processor.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
+        <td><span class="parametername">namingOptions</span></td>
+        <td><p>The naming options.</p>
 </td>
       </tr>
     </tbody>
@@ -210,7 +210,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Priority.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Priority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L53">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L56">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Priority_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Priority*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Priority" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Priority">Priority</h4>
@@ -246,7 +246,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Resolve_MediaBrowser_Controller_Library_ItemResolveArgs_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Resolve(MediaBrowser.Controller.Library.ItemResolveArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L80">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L83">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Resolve_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Resolve*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_Resolve_MediaBrowser_Controller_Library_ItemResolveArgs_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.Resolve(MediaBrowser.Controller.Library.ItemResolveArgs)">Resolve(ItemResolveArgs)</h4>
@@ -298,7 +298,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_String_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CSystem.String%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L56">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L59">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_ResolveMultiple_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.ResolveMultiple*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_ResolveMultiple_MediaBrowser_Controller_Entities_Folder_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_String_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.ResolveMultiple(MediaBrowser.Controller.Entities.Folder,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.String,MediaBrowser.Controller.Providers.IDirectoryService)">ResolveMultiple(Folder, List&lt;FileSystemMetadata&gt;, String, IDirectoryService)</h4>
@@ -360,7 +360,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_SetInitialItemValues_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Library_ItemResolveArgs_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.SetInitialItemValues(MediaBrowser.Controller.Entities.Video%2CMediaBrowser.Controller.Library.ItemResolveArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L330">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L329">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_SetInitialItemValues_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.SetInitialItemValues*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver_SetInitialItemValues_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Library_ItemResolveArgs_" data-uid="Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver.SetInitialItemValues(MediaBrowser.Controller.Entities.Video,MediaBrowser.Controller.Library.ItemResolveArgs)">SetInitialItemValues(Video, ItemResolveArgs)</h4>
@@ -419,7 +419,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Movies_MovieResolver.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Movies.MovieResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L25" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Movies/MovieResolver.cs/#L26" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

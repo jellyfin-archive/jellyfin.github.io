@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class MusicAlbumResolver
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -136,19 +136,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver%7D%2CMediaBrowser.Model.IO.IFileSystem%2CMediaBrowser.Controller.Library.ILibraryManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver%7D%2CEmby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L33">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__ctor_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.#ctor*"></a>
-  <h4 id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__MediaBrowser_Model_IO_IFileSystem_MediaBrowser_Controller_Library_ILibraryManager_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver},MediaBrowser.Model.IO.IFileSystem,MediaBrowser.Controller.Library.ILibraryManager)">MusicAlbumResolver(ILogger&lt;MusicAlbumResolver&gt;, IFileSystem, ILibraryManager)</h4>
+  <h4 id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver__Emby_Naming_Common_NamingOptions_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver},Emby.Naming.Common.NamingOptions)">MusicAlbumResolver(ILogger&lt;MusicAlbumResolver&gt;, NamingOptions)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.html">MusicAlbumResolver</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MusicAlbumResolver(ILogger&lt;MusicAlbumResolver&gt; logger, IFileSystem fileSystem, ILibraryManager libraryManager)</code></pre>
+    <pre><code class="lang-csharp hljs">public MusicAlbumResolver(ILogger&lt;MusicAlbumResolver&gt; logger, NamingOptions namingOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,15 +167,9 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
-        <td><span class="parametername">fileSystem</span></td>
-        <td><p>The file system.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Library.ILibraryManager.html">ILibraryManager</a></td>
-        <td><span class="parametername">libraryManager</span></td>
-        <td><p>The library manager.</p>
+        <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
+        <td><span class="parametername">namingOptions</span></td>
+        <td><p>The naming options.</p>
 </td>
       </tr>
     </tbody>
@@ -187,7 +181,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Priority.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Priority%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L45">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L43">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Priority_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Priority*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Priority" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Priority">Priority</h4>
@@ -223,7 +217,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_IsMusicAlbum_System_String_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.IsMusicAlbum(System.String%2CMediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L88">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L86">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_IsMusicAlbum_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.IsMusicAlbum*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_IsMusicAlbum_System_String_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.IsMusicAlbum(System.String,MediaBrowser.Controller.Providers.IDirectoryService)">IsMusicAlbum(String, IDirectoryService)</h4>
@@ -279,7 +273,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Resolve_MediaBrowser_Controller_Library_ItemResolveArgs_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Resolve(MediaBrowser.Controller.Library.ItemResolveArgs)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L50">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Resolve_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Resolve*"></a>
   <h4 id="Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver_Resolve_MediaBrowser_Controller_Library_ItemResolveArgs_" data-uid="Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver.Resolve(MediaBrowser.Controller.Library.ItemResolveArgs)">Resolve(ItemResolveArgs)</h4>
@@ -345,7 +339,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Library_Resolvers_Audio_MusicAlbumResolver.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Library.Resolvers.Audio.MusicAlbumResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Library/Resolvers/Audio/MusicAlbumResolver.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

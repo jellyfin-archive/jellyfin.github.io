@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class Audio
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -125,9 +125,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_DisplayExtraTypes">BaseItem.DisplayExtraTypes</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugReplaceChars">BaseItem.SlugReplaceChars</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AllExtrasTypesFolderNames">BaseItem.AllExtrasTypesFolderNames</a>
     </div>
     <div>
@@ -225,9 +222,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExternalSeriesId">BaseItem.ExternalSeriesId</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ExternalEtag">BaseItem.ExternalEtag</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsHidden">BaseItem.IsHidden</a>
@@ -440,9 +434,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CreatePresentationUniqueKey">BaseItem.CreatePresentationUniqueKey()</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_IsPathProtocol_MediaBrowser_Model_MediaInfo_MediaProtocol_">BaseItem.IsPathProtocol(MediaProtocol)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_CanDelete">BaseItem.CanDelete()</a>
     </div>
     <div>
@@ -605,7 +596,10 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.RemoveImage(ItemImageInfo)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_List_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(List&lt;ItemImageInfo&gt;)</a>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RemoveImages_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_ItemImageInfo__">BaseItem.RemoveImages(IEnumerable&lt;ItemImageInfo&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_AddImage_MediaBrowser_Controller_Entities_ItemImageInfo_">BaseItem.AddImage(ItemImageInfo)</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_UpdateToRepositoryAsync_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">BaseItem.UpdateToRepositoryAsync(ItemUpdateType, CancellationToken)</a>
@@ -711,9 +705,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetExtras_System_Collections_Generic_IReadOnlyCollection_MediaBrowser_Model_Entities_ExtraType__">BaseItem.GetExtras(IReadOnlyCollection&lt;ExtraType&gt;)</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetTrailers">BaseItem.GetTrailers()</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRunTimeTicksForPlayState">BaseItem.GetRunTimeTicksForPlayState()</a>
@@ -1166,7 +1157,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Audio_Audio_GetAllItemsForMediaSources.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Audio.Audio.GetAllItemsForMediaSources%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Audio/Audio.cs/#L149">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Audio/Audio.cs/#L140">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Audio_Audio_GetAllItemsForMediaSources_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetAllItemsForMediaSources*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Audio_Audio_GetAllItemsForMediaSources" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetAllItemsForMediaSources">GetAllItemsForMediaSources()</h4>
@@ -1174,7 +1165,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override List&lt;Tuple&lt;BaseItem, MediaSourceType&gt;&gt; GetAllItemsForMediaSources()</code></pre>
+    <pre><code class="lang-csharp hljs">protected override IEnumerable&lt;(BaseItem, MediaSourceType)&gt; GetAllItemsForMediaSources()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1186,7 +1177,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.valuetuple-2">(T1, T2)</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>, <a class="xref" href="MediaBrowser.Model.Dto.MediaSourceType.html">MediaSourceType</a>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -1262,7 +1253,7 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Audio_Audio_GetLookupInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Audio.Audio.GetLookupInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Audio/Audio.cs/#L138">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Audio/Audio.cs/#L129">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Audio_Audio_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Audio_Audio_GetLookupInfo" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetLookupInfo">GetLookupInfo()</h4>
@@ -1283,53 +1274,6 @@ public override bool SupportsPlayedStatus { get; }</code></pre>
     <tbody>
       <tr>
         <td><a class="xref" href="MediaBrowser.Controller.Providers.SongInfo.html">SongInfo</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Audio_Audio_GetMediaStreams_MediaBrowser_Model_Entities_MediaStreamType_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Audio.Audio.GetMediaStreams(MediaBrowser.Model.Entities.MediaStreamType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Audio/Audio.cs/#L129">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_Audio_Audio_GetMediaStreams_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetMediaStreams*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Audio_Audio_GetMediaStreams_MediaBrowser_Model_Entities_MediaStreamType_" data-uid="MediaBrowser.Controller.Entities.Audio.Audio.GetMediaStreams(MediaBrowser.Model.Entities.MediaStreamType)">GetMediaStreams(MediaStreamType)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public List&lt;MediaStream&gt; GetMediaStreams(MediaStreamType type)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Model.Entities.MediaStreamType.html">MediaStreamType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CryptographyProvider
    | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.5.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="../images/favicon.png">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -132,7 +132,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_DefaultHashMethod.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.DefaultHashMethod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L38">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L37">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_DefaultHashMethod_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.DefaultHashMethod*"></a>
   <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_DefaultHashMethod" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.DefaultHashMethod">DefaultHashMethod</h4>
@@ -161,18 +161,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHash_System_String_System_Byte___System_Byte___.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHash(System.String%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_CreatePasswordHash_System_ReadOnlySpan_System_Char__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.CreatePasswordHash(System.ReadOnlySpan%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L40">View Source</a>
   </span>
-  <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHash_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHash*"></a>
-  <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHash_System_String_System_Byte___System_Byte___" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHash(System.String,System.Byte[],System.Byte[])">ComputeHash(String, Byte[], Byte[])</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_CreatePasswordHash_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.CreatePasswordHash*"></a>
+  <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_CreatePasswordHash_System_ReadOnlySpan_System_Char__" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.CreatePasswordHash(System.ReadOnlySpan{System.Char})">CreatePasswordHash(ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="MediaBrowser.Model.Cryptography.PasswordHash.html">PasswordHash</a> instance.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] ComputeHash(string hashMethod, byte[] bytes, byte[] salt)</code></pre>
+    <pre><code class="lang-csharp hljs">public PasswordHash CreatePasswordHash(ReadOnlySpan&lt;char&gt; password)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -185,19 +186,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">hashMethod</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td><span class="parametername">bytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td><span class="parametername">salt</span></td>
-        <td></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">password</span></td>
+        <td><p>The password that will be hashed.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -211,60 +203,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHashWithDefaultMethod_System_Byte___System_Byte___.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHashWithDefaultMethod(System.Byte%5B%5D%2CSystem.Byte%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L83">View Source</a>
-  </span>
-  <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHashWithDefaultMethod_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHashWithDefaultMethod*"></a>
-  <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_ComputeHashWithDefaultMethod_System_Byte___System_Byte___" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.ComputeHashWithDefaultMethod(System.Byte[],System.Byte[])">ComputeHashWithDefaultMethod(Byte[], Byte[])</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public byte[] ComputeHashWithDefaultMethod(byte[] bytes, byte[] salt)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td><span class="parametername">bytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td><span class="parametername">salt</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.byte">Byte</a>[]</td>
-        <td></td>
+        <td><a class="xref" href="MediaBrowser.Model.Cryptography.PasswordHash.html">PasswordHash</a></td>
+        <td><p>A <a class="xref" href="MediaBrowser.Model.Cryptography.PasswordHash.html">PasswordHash</a> instance with the hash method, hash, salt and number of iterations.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -273,7 +214,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L87">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L102">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt*"></a>
   <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt">GenerateSalt()</h4>
@@ -303,7 +244,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt_System_Int32_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L91">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L106">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt*"></a>
   <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GenerateSalt_System_Int32_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GenerateSalt(System.Int32)">GenerateSalt(Int32)</h4>
@@ -347,19 +288,41 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_GetSupportedHashMethods.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.GetSupportedHashMethods%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider_Verify_MediaBrowser_Model_Cryptography_PasswordHash_System_ReadOnlySpan_System_Char__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider.Verify(MediaBrowser.Model.Cryptography.PasswordHash%2CSystem.ReadOnlySpan%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L41">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L59">View Source</a>
   </span>
-  <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GetSupportedHashMethods_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GetSupportedHashMethods*"></a>
-  <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_GetSupportedHashMethods" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.GetSupportedHashMethods">GetSupportedHashMethods()</h4>
+  <a id="Emby_Server_Implementations_Cryptography_CryptographyProvider_Verify_" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.Verify*"></a>
+  <h4 id="Emby_Server_Implementations_Cryptography_CryptographyProvider_Verify_MediaBrowser_Model_Cryptography_PasswordHash_System_ReadOnlySpan_System_Char__" data-uid="Emby.Server.Implementations.Cryptography.CryptographyProvider.Verify(MediaBrowser.Model.Cryptography.PasswordHash,System.ReadOnlySpan{System.Char})">Verify(PasswordHash, ReadOnlySpan&lt;Char&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetSupportedHashMethods()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Verify(PasswordHash hash, ReadOnlySpan&lt;char&gt; password)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Cryptography.PasswordHash.html">PasswordHash</a></td>
+        <td><span class="parametername">hash</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">password</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -370,7 +333,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -380,9 +343,6 @@
       <a class="xref" href="MediaBrowser.Model.Cryptography.ICryptoProvider.html">ICryptoProvider</a>
   </div>
   <h3 id="extensionmethods">Extension Methods</h3>
-  <div>
-      <a class="xref" href="MediaBrowser.Common.Cryptography.CryptoExtensions.html#MediaBrowser_Common_Cryptography_CryptoExtensions_CreatePasswordHash_MediaBrowser_Model_Cryptography_ICryptoProvider_System_String_">CryptoExtensions.CreatePasswordHash(ICryptoProvider, String)</a>
-  </div>
   <div>
       <a class="xref" href="Jellyfin.Api.Helpers.ClassMigrationHelper.html#Jellyfin_Api_Helpers_ClassMigrationHelper_CopyProperties_System_Object_System_Object_">ClassMigrationHelper.CopyProperties(Object, Object)</a>
   </div>
@@ -397,7 +357,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_Cryptography_CryptographyProvider.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.Cryptography.CryptographyProvider%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/Cryptography/CryptographyProvider.cs/#L15" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
