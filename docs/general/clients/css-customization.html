@@ -123,7 +123,13 @@ It can also be used to disable code without deleting it.</p>
 <pre><code class="lang-css">/* Make watched icon dark and transparent */
 .playedIndicator {background: #00000058;}
 </code></pre><p><img src="../../images/custom-css-transparentwatched.png" alt="Screenshot of watched indicators with a custom transparent color applied"></p>
-<h3 id="hide-home-icon-from-header">Hide Home Icon from Header</h3>
+<h3 id="display-external-links-in-mobile-layout">Display external links in mobile layout</h3>
+<p>The mobile app disables display of external links to IMDb, TheMovieDB, Trakt, etc by default.
+To enable the external links again, add the following snippet:</p>
+<pre><code class="lang-css">.layout-mobile .itemExternalLinks {
+    display: block !important;
+}
+</code></pre><h3 id="hide-home-icon-from-header">Hide Home Icon from Header</h3>
 <pre><code class="lang-css">.headerHomeButton { display: none; }
 
 .headerButton.headerButtonRight.headerUserButton.paper-icon-button-light { display: none; }
