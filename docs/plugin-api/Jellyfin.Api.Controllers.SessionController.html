@@ -754,13 +754,13 @@ public ActionResult AddUserToSession([FromRoute, Required] string sessionId, [Fr
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SessionController_DisplayContent_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SessionController.DisplayContent(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Jellyfin_Api_Controllers_SessionController_DisplayContent_System_String_Jellyfin_Data_Enums_BaseItemKind_System_String_System_String_.md&amp;value=---%0Auid%3A%20Jellyfin.Api.Controllers.SessionController.DisplayContent(System.String%2CJellyfin.Data.Enums.BaseItemKind%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Jellyfin.Api/Controllers/SessionController.cs/#L125">View Source</a>
   </span>
   <a id="Jellyfin_Api_Controllers_SessionController_DisplayContent_" data-uid="Jellyfin.Api.Controllers.SessionController.DisplayContent*"></a>
-  <h4 id="Jellyfin_Api_Controllers_SessionController_DisplayContent_System_String_System_String_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.SessionController.DisplayContent(System.String,System.String,System.String,System.String)">DisplayContent(String, String, String, String)</h4>
+  <h4 id="Jellyfin_Api_Controllers_SessionController_DisplayContent_System_String_Jellyfin_Data_Enums_BaseItemKind_System_String_System_String_" data-uid="Jellyfin.Api.Controllers.SessionController.DisplayContent(System.String,Jellyfin.Data.Enums.BaseItemKind,System.String,System.String)">DisplayContent(String, BaseItemKind, String, String)</h4>
   <div class="markdown level1 summary"><p>Instructs a session to browse to an item or view.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -769,7 +769,7 @@ public ActionResult AddUserToSession([FromRoute, Required] string sessionId, [Fr
     <pre><code class="lang-csharp hljs">[HttpPost(&quot;Sessions/{sessionId}/Viewing&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(204)]
-public async Task&lt;ActionResult&gt; DisplayContent([FromRoute, Required] string sessionId, [FromQuery, Required] string itemType, [FromQuery, Required] string itemId, [FromQuery, Required] string itemName)</code></pre>
+public async Task&lt;ActionResult&gt; DisplayContent([FromRoute, Required] string sessionId, [FromQuery, Required] BaseItemKind itemType, [FromQuery, Required] string itemId, [FromQuery, Required] string itemName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -788,7 +788,7 @@ public async Task&lt;ActionResult&gt; DisplayContent([FromRoute, Required] strin
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><a class="xref" href="Jellyfin.Data.Enums.BaseItemKind.html">BaseItemKind</a></td>
         <td><span class="parametername">itemType</span></td>
         <td><p>The type of item to browse to.</p>
 </td>
