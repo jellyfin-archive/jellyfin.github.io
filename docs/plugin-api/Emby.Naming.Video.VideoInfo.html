@@ -128,7 +128,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoInfo__ctor_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoInfo.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L16">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoInfo__ctor_" data-uid="Emby.Naming.Video.VideoInfo.#ctor*"></a>
   <h4 id="Emby_Naming_Video_VideoInfo__ctor_System_String_" data-uid="Emby.Naming.Video.VideoInfo.#ctor(System.String)">VideoInfo(String)</h4>
@@ -164,7 +164,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoInfo_AlternateVersions.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoInfo.AlternateVersions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L46">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoInfo_AlternateVersions_" data-uid="Emby.Naming.Video.VideoInfo.AlternateVersions*"></a>
   <h4 id="Emby_Naming_Video_VideoInfo_AlternateVersions" data-uid="Emby.Naming.Video.VideoInfo.AlternateVersions">AlternateVersions</h4>
@@ -193,19 +193,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoInfo_Extras.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoInfo.Extras%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoInfo_ExtraType.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoInfo.ExtraType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L51">View Source</a>
   </span>
-  <a id="Emby_Naming_Video_VideoInfo_Extras_" data-uid="Emby.Naming.Video.VideoInfo.Extras*"></a>
-  <h4 id="Emby_Naming_Video_VideoInfo_Extras" data-uid="Emby.Naming.Video.VideoInfo.Extras">Extras</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the extras.</p>
+  <a id="Emby_Naming_Video_VideoInfo_ExtraType_" data-uid="Emby.Naming.Video.VideoInfo.ExtraType*"></a>
+  <h4 id="Emby_Naming_Video_VideoInfo_ExtraType" data-uid="Emby.Naming.Video.VideoInfo.ExtraType">ExtraType</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the extra type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;VideoFileInfo&gt; Extras { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public ExtraType? ExtraType { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -217,9 +217,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Emby.Naming.Video.VideoFileInfo.html">VideoFileInfo</a>&gt;</td>
-        <td><p>The extras.</p>
-</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.ExtraType.html">ExtraType</a>&gt;</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -330,7 +329,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoInfo.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoInfo.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

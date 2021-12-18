@@ -232,6 +232,9 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_GetAdditionalParts">Video.GetAdditionalParts()</a>
     </div>
     <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">Video.RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a>
+    </div>
+    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_UpdateToRepositoryAsync_MediaBrowser_Controller_Library_ItemUpdateType_System_Threading_CancellationToken_">Video.UpdateToRepositoryAsync(ItemUpdateType, CancellationToken)</a>
     </div>
     <div>
@@ -242,6 +245,9 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_GetAllItemsForMediaSources">Video.GetAllItemsForMediaSources()</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailerFileName">BaseItem.TrailerFileName</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_TrailersFolderName">BaseItem.TrailersFolderName</a>
@@ -266,12 +272,6 @@
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_SlugChar">BaseItem.SlugChar</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeSongIds">BaseItem.ThemeSongIds</a>
-    </div>
-    <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_ThemeVideoIds">BaseItem.ThemeVideoIds</a>
     </div>
     <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_PreferredMetadataCountryCode">BaseItem.PreferredMetadataCountryCode</a>
@@ -601,9 +601,6 @@
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetMediaSources_System_Boolean_">BaseItem.GetMediaSources(Boolean)</a>
     </div>
     <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_LoadExtras_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__MediaBrowser_Controller_Providers_IDirectoryService_">BaseItem.LoadExtras(List&lt;FileSystemMetadata&gt;, IDirectoryService)</a>
-    </div>
-    <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_RefreshMetadata_System_Threading_CancellationToken_">BaseItem.RefreshMetadata(CancellationToken)</a>
     </div>
     <div>
@@ -838,23 +835,6 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class Movie : Video, IHasLookupInfo&lt;ItemLookupInfo&gt;, IEquatable&lt;BaseItem&gt;, IHasAspectRatio, ISupportsPlaceHolders, IHasMediaSources, IHasSpecialFeatures, IHasTrailers, IHasProviderIds, IHasLookupInfo&lt;MovieInfo&gt;, ISupportsBoxSetGrouping</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie__ctor.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L25">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_Movies_Movie__ctor_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.#ctor*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Movies_Movie__ctor" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.#ctor">Movie()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Movie()</code></pre>
-  </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -862,7 +842,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_CollectionName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.CollectionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L48">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L52">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_CollectionName_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.CollectionName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_CollectionName" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.CollectionName">CollectionName</h4>
@@ -890,19 +870,19 @@ public string CollectionName { get; set; }</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailerIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailerIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailers.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L37">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L42">View Source</a>
   </span>
-  <a id="MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailerIds_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailerIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailerIds" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailerIds">LocalTrailerIds</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the local trailer ids.</p>
+  <a id="MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailers_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailers*"></a>
+  <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_LocalTrailers" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.LocalTrailers">LocalTrailers</h4>
+  <div class="markdown level1 summary"><p>Gets the local trailers.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Guid&gt; LocalTrailerIds { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;BaseItem&gt; LocalTrailers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -914,40 +894,8 @@ public string CollectionName { get; set; }</code></pre>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
-        <td><p>The local trailer ids.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_RemoteTrailerIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.RemoteTrailerIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L40">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_Movies_Movie_RemoteTrailerIds_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.RemoteTrailerIds*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_RemoteTrailerIds" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.RemoteTrailerIds">RemoteTrailerIds</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the remote trailer ids.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;Guid&gt; RemoteTrailerIds { get; set; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.guid">Guid</a>&gt;</td>
-        <td><p>The remote trailer ids.</p>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html">BaseItem</a>&gt;</td>
+        <td><p>The local trailers.</p>
 </td>
       </tr>
     </tbody>
@@ -957,7 +905,7 @@ public string CollectionName { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_SpecialFeatureIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.SpecialFeatureIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L34">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L25">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_SpecialFeatureIds_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.SpecialFeatureIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_SpecialFeatureIds" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.SpecialFeatureIds">SpecialFeatureIds</h4>
@@ -989,7 +937,7 @@ public string CollectionName { get; set; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_StopRefreshIfLocalMetadataFound.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.StopRefreshIfLocalMetadataFound%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L59">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_StopRefreshIfLocalMetadataFound_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.StopRefreshIfLocalMetadataFound*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_StopRefreshIfLocalMetadataFound" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.StopRefreshIfLocalMetadataFound">StopRefreshIfLocalMetadataFound</h4>
@@ -1022,7 +970,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_TmdbCollectionName.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.TmdbCollectionName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L50">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_TmdbCollectionName_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.TmdbCollectionName*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_TmdbCollectionName" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.TmdbCollectionName">TmdbCollectionName</h4>
@@ -1056,7 +1004,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_BeforeMetadataRefresh_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.BeforeMetadataRefresh(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L147">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L103">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_BeforeMetadataRefresh_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.BeforeMetadataRefresh*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_BeforeMetadataRefresh_System_Boolean_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.BeforeMetadataRefresh(System.Boolean)">BeforeMetadataRefresh(Boolean)</h4>
@@ -1108,7 +1056,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_GetBlockUnratedType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.GetBlockUnratedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L118">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L74">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetBlockUnratedType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetBlockUnratedType">GetBlockUnratedType()</h4>
@@ -1140,7 +1088,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_GetDefaultPrimaryImageAspectRatio.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.GetDefaultPrimaryImageAspectRatio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L58">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L62">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetDefaultPrimaryImageAspectRatio*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
@@ -1172,7 +1120,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_GetLookupInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.GetLookupInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L123">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L79">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_GetLookupInfo" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetLookupInfo">GetLookupInfo()</h4>
@@ -1202,7 +1150,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_GetRelatedUrls.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.GetRelatedUrls%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L184">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L140">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_Movie_GetRelatedUrls_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetRelatedUrls*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_GetRelatedUrls" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.GetRelatedUrls">GetRelatedUrls()</h4>
@@ -1229,65 +1177,6 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><a class="xref" href="MediaBrowser.Controller.Entities.BaseItem.html#MediaBrowser_Controller_Entities_BaseItem_GetRelatedUrls">BaseItem.GetRelatedUrls()</a></div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions%2CSystem.Collections.Generic.List%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L69">View Source</a>
-  </span>
-  <a id="MediaBrowser_Controller_Entities_Movies_Movie_RefreshedOwnedItems_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.RefreshedOwnedItems*"></a>
-  <h4 id="MediaBrowser_Controller_Entities_Movies_Movie_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_" data-uid="MediaBrowser.Controller.Entities.Movies.Movie.RefreshedOwnedItems(MediaBrowser.Controller.Providers.MetadataRefreshOptions,System.Collections.Generic.List{MediaBrowser.Model.IO.FileSystemMetadata},System.Threading.CancellationToken)">RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected override async Task&lt;bool&gt; RefreshedOwnedItems(MetadataRefreshOptions options, List&lt;FileSystemMetadata&gt; fileSystemChildren, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.MetadataRefreshOptions.html">MetadataRefreshOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
-        <td><span class="parametername">fileSystemChildren</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><a class="xref" href="MediaBrowser.Controller.Entities.Video.html#MediaBrowser_Controller_Entities_Video_RefreshedOwnedItems_MediaBrowser_Controller_Providers_MetadataRefreshOptions_System_Collections_Generic_List_MediaBrowser_Model_IO_FileSystemMetadata__System_Threading_CancellationToken_">Video.RefreshedOwnedItems(MetadataRefreshOptions, List&lt;FileSystemMetadata&gt;, CancellationToken)</a></div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IHasLookupInfo-1.html">IHasLookupInfo&lt;TLookupInfoType&gt;</a>
@@ -1345,12 +1234,6 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
       <a class="xref" href="MediaBrowser.Controller.Entities.HasTrailerExtensions.html#MediaBrowser_Controller_Entities_HasTrailerExtensions_GetTrailerCount_MediaBrowser_Controller_Entities_IHasTrailers_">HasTrailerExtensions.GetTrailerCount(IHasTrailers)</a>
   </div>
   <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.HasTrailerExtensions.html#MediaBrowser_Controller_Entities_HasTrailerExtensions_GetTrailerIds_MediaBrowser_Controller_Entities_IHasTrailers_">HasTrailerExtensions.GetTrailerIds(IHasTrailers)</a>
-  </div>
-  <div>
-      <a class="xref" href="MediaBrowser.Controller.Entities.HasTrailerExtensions.html#MediaBrowser_Controller_Entities_HasTrailerExtensions_GetTrailers_MediaBrowser_Controller_Entities_IHasTrailers_">HasTrailerExtensions.GetTrailers(IHasTrailers)</a>
-  </div>
-  <div>
       <a class="xref" href="MediaBrowser.Controller.Entities.TagExtensions.html#MediaBrowser_Controller_Entities_TagExtensions_AddTag_MediaBrowser_Controller_Entities_BaseItem_System_String_">TagExtensions.AddTag(BaseItem, String)</a>
   </div>
 </article>
@@ -1364,7 +1247,7 @@ public override bool StopRefreshIfLocalMetadataFound { get; }</code></pre>
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_Movie.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.Movie%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L23" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/Movie.cs/#L20" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

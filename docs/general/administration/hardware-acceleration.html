@@ -386,14 +386,16 @@ sudo apt install vainfo intel-media-va-driver-non-free -y
 <li><p>QSV in docker. Due to incompatible licenses, we will not integrate non-free drivers in the docker image. You need to perform the above operations manually in docker and add <code>--privileged</code> to the docker configuration.</p>
 </li>
 </ol>
-<h3 id="lxc-or-lxd-container">LXC or LXD Container</h3>
+<h3 id="lxc-or-lxd-container-intel-igpu">LXC or LXD Container (Intel iGPU)</h3>
 <p>This has been tested with LXC 3.0 and may or may not work with older versions.</p>
 <p>Follow the steps above to add the jellyfin user to the <code>video</code> or <code>render</code> group, depending on your circumstances.</p>
 <ol>
+<li><p>Install the required drivers on the host OS</p>
+</li>
 <li><p>Add your GPU to the container.</p>
 <pre><code class="lang-sh">lxc config device add &lt;container name&gt; gpu gpu gid=&lt;gid of your video or render group&gt;
 </code></pre></li>
-<li><p>Make sure you have the card within the container:</p>
+<li><p>Make sure you have the required devices within the container:</p>
 <pre><code class="lang-sh">$ lxc exec jellyfin -- ls -l /dev/dri
 total 0
 crw-rw---- 1 root video 226,   0 Jun  4 02:13 card0
@@ -408,11 +410,46 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
 </li>
 </ol>
-<p>Useful Resources:</p>
+<p>Useful resources:</p>
 <ul>
 <li><a href="https://github.com/lxc/lxd/blob/master/doc/instances.md#type-gpu">LXD Documentation - GPU instance configuration</a></li>
 <li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">NVidia CUDA inside a LXD container</a></li>
 </ul>
+<h3 id="lxc-container-on-proxmox">LXC Container on Proxmox</h3>
+<p>This has been tested on Proxmox VE 7.1 - on previous versions you may need to change <code>cgroup2</code> to <code>cgroup</code>.</p>
+<p>It is highly recommended to use the same OS as your Proxmox host as the container OS to prevent driver version missmatches.</p>
+<ol>
+<li><p>Install the required drivers on the Proxmox host</p>
+</li>
+<li><p>Add your GPU to the container by editing <code>/etc/pve/lxc/&lt;container-id&gt;.conf</code> (you may need to change the GIDs in the examples below to match those used on you host).</p>
+<p>Intel iGPU:</p>
+<pre><code class="lang-conf">lxc.cgroup2.devices.allow: c 226:0 rwm
+lxc.cgroup2.devices.allow: c 226:128 rwm
+lxc.mount.entry: /dev/dri/card0 dev/dri/card0 none bind,optional,create=file
+lxc.mount.entry: /dev/dri/renderD128 dev/dri/renderD128 none bind,optional,create=file
+</code></pre><p>NVidia GPU:</p>
+<pre><code class="lang-conf">lxc.cgroup2.devices.allow: c 195:* rwm
+lxc.cgroup2.devices.allow: c 243:* rwm
+lxc.mount.entry: /dev/nvidia0 dev/nvidia0 none bind,optional,create=file
+lxc.mount.entry: /dev/nvidiactl dev/nvidiactl none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm dev/nvidia-uvm none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-modeset dev/nvidia-modeset none bind,optional,create=file
+lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,create=file
+</code></pre></li>
+<li><p>Shutdown and start your container.</p>
+</li>
+<li><p>Install the required drivers in your container.</p>
+</li>
+<li><p>Add the jellyfin user to the <code>video</code>, <code>render</code> and/or <code>input</code> groups depending on who owns the device inside the container.</p>
+</li>
+<li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
+</li>
+<li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
+<pre><code class="lang-sh">ps aux | grep ffmpeg | grep accel
+</code></pre></li>
+<li><p>You can also try playing a video that requires transcoding, and if it plays you&#39;re good.</p>
+</li>
+</ol>
 <h3 id="configuring-amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</h3>
 <ol>
 <li><p>Install <code>amdgpu-pro</code> closed source graphics driver by following the <a href="https://amdgpu-install.readthedocs.io/en/latest/">installation instructions</a>.</p>

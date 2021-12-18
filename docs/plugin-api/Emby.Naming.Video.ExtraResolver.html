@@ -119,61 +119,25 @@
   <h6><strong>Assembly</strong>: Emby.Naming.dll</h6>
   <h5 id="Emby_Naming_Video_ExtraResolver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ExtraResolver</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ExtraResolver</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_ExtraResolver__ctor_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.ExtraResolver.%23ctor(Emby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L21">View Source</a>
-  </span>
-  <a id="Emby_Naming_Video_ExtraResolver__ctor_" data-uid="Emby.Naming.Video.ExtraResolver.#ctor*"></a>
-  <h4 id="Emby_Naming_Video_ExtraResolver__ctor_Emby_Naming_Common_NamingOptions_" data-uid="Emby.Naming.Video.ExtraResolver.#ctor(Emby.Naming.Common.NamingOptions)">ExtraResolver(NamingOptions)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Emby.Naming.Video.ExtraResolver.html">ExtraResolver</a> class.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ExtraResolver(NamingOptions options)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
-        <td><span class="parametername">options</span></td>
-        <td><p><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a> object containing VideoExtraRules and passed to <a class="xref" href="Emby.Naming.Audio.AudioFileParser.html">AudioFileParser</a> and <a class="xref" href="Emby.Naming.Video.VideoResolver.html">VideoResolver</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_ExtraResolver_GetExtraInfo_System_String_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.ExtraResolver.GetExtraInfo(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_ExtraResolver_GetExtraInfo_System_String_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.ExtraResolver.GetExtraInfo(System.String%2CEmby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L31">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L24">View Source</a>
   </span>
   <a id="Emby_Naming_Video_ExtraResolver_GetExtraInfo_" data-uid="Emby.Naming.Video.ExtraResolver.GetExtraInfo*"></a>
-  <h4 id="Emby_Naming_Video_ExtraResolver_GetExtraInfo_System_String_" data-uid="Emby.Naming.Video.ExtraResolver.GetExtraInfo(System.String)">GetExtraInfo(String)</h4>
+  <h4 id="Emby_Naming_Video_ExtraResolver_GetExtraInfo_System_String_Emby_Naming_Common_NamingOptions_" data-uid="Emby.Naming.Video.ExtraResolver.GetExtraInfo(System.String,Emby.Naming.Common.NamingOptions)">GetExtraInfo(String, NamingOptions)</h4>
   <div class="markdown level1 summary"><p>Attempts to resolve if file is extra.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ExtraResult GetExtraInfo(string path)</code></pre>
+    <pre><code class="lang-csharp hljs">public static ExtraResult GetExtraInfo(string path, NamingOptions namingOptions)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -189,6 +153,12 @@
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">path</span></td>
         <td><p>Path to file.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
+        <td><span class="parametername">namingOptions</span></td>
+        <td><p>The naming options.</p>
 </td>
       </tr>
     </tbody>
@@ -209,6 +179,68 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_ExtraResolver_GetExtras_System_Collections_Generic_IReadOnlyList_Emby_Naming_Video_VideoInfo__Emby_Naming_Video_VideoFileInfo_System_ReadOnlySpan_System_Char__.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.ExtraResolver.GetExtras(System.Collections.Generic.IReadOnlyList%7BEmby.Naming.Video.VideoInfo%7D%2CEmby.Naming.Video.VideoFileInfo%2CSystem.ReadOnlySpan%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L97">View Source</a>
+  </span>
+  <a id="Emby_Naming_Video_ExtraResolver_GetExtras_" data-uid="Emby.Naming.Video.ExtraResolver.GetExtras*"></a>
+  <h4 id="Emby_Naming_Video_ExtraResolver_GetExtras_System_Collections_Generic_IReadOnlyList_Emby_Naming_Video_VideoInfo__Emby_Naming_Video_VideoFileInfo_System_ReadOnlySpan_System_Char__" data-uid="Emby.Naming.Video.ExtraResolver.GetExtras(System.Collections.Generic.IReadOnlyList{Emby.Naming.Video.VideoInfo},Emby.Naming.Video.VideoFileInfo,System.ReadOnlySpan{System.Char})">GetExtras(IReadOnlyList&lt;VideoInfo&gt;, VideoFileInfo, ReadOnlySpan&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Finds extras matching the video info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VideoFileInfo&gt; GetExtras(IReadOnlyList&lt;VideoInfo&gt; files, VideoFileInfo videoInfo, ReadOnlySpan&lt;char&gt; videoFlagDelimiters)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Emby.Naming.Video.VideoInfo.html">VideoInfo</a>&gt;</td>
+        <td><span class="parametername">files</span></td>
+        <td><p>The list of file video infos.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Emby.Naming.Video.VideoFileInfo.html">VideoFileInfo</a></td>
+        <td><span class="parametername">videoInfo</span></td>
+        <td><p>The video to compare against.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.readonlyspan-1">ReadOnlySpan</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.char">Char</a>&gt;</td>
+        <td><span class="parametername">videoFlagDelimiters</span></td>
+        <td><p>The video flag delimiters.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Emby.Naming.Video.VideoFileInfo.html">VideoFileInfo</a>&gt;</td>
+        <td><p>A list of video extras for [videoInfo].</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -220,7 +252,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_ExtraResolver.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.ExtraResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/ExtraResolver.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
