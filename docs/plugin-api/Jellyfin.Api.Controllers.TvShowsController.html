@@ -847,7 +847,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetEpisodes([FromRoute
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;NextUp&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetNextUp([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] string seriesId, [FromQuery] Guid? parentId, [FromQuery] bool? enableImges, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] DateTime? nextUpDateCutoff, [FromQuery] bool enableTotalRecordCount = true, [FromQuery] bool disableFirstEpisode = false)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetNextUp([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] string seriesId, [FromQuery] Guid? parentId, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData, [FromQuery] DateTime? nextUpDateCutoff, [FromQuery] bool enableTotalRecordCount = true, [FromQuery] bool disableFirstEpisode = false)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -897,7 +897,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetNextUp([FromQuery] 
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">enableImges</span></td>
+        <td><span class="parametername">enableImages</span></td>
         <td><p>Optional. Include image information in output.</p>
 </td>
       </tr>
@@ -1078,7 +1078,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetSeasons([FromRoute,
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Upcoming&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUpcomingEpisodes([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] Guid? parentId, [FromQuery] bool? enableImges, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData)</code></pre>
+public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUpcomingEpisodes([FromQuery] Guid? userId, [FromQuery] int? startIndex, [FromQuery] int? limit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] Guid? parentId, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery] bool? enableUserData)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1122,7 +1122,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetUpcomingEpisodes([F
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.nullable-1">Nullable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a>&gt;</td>
-        <td><span class="parametername">enableImges</span></td>
+        <td><span class="parametername">enableImages</span></td>
         <td><p>Optional. Include image information in output.</p>
 </td>
       </tr>
