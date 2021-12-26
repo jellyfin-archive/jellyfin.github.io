@@ -125,19 +125,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__Emby_Naming_Common_NamingOptions_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.IEnumerable%7BMediaBrowser.Model.IO.FileSystemMetadata%7D%2CEmby.Naming.Common.NamingOptions%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_IReadOnlyList_Emby_Naming_Video_VideoFileInfo__Emby_Naming_Common_NamingOptions_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.IReadOnlyList%7BEmby.Naming.Video.VideoFileInfo%7D%2CEmby.Naming.Common.NamingOptions%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Naming/Video/VideoListResolver.cs/#L24">View Source</a>
   </span>
   <a id="Emby_Naming_Video_VideoListResolver_Resolve_" data-uid="Emby.Naming.Video.VideoListResolver.Resolve*"></a>
-  <h4 id="Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_IEnumerable_MediaBrowser_Model_IO_FileSystemMetadata__Emby_Naming_Common_NamingOptions_System_Boolean_System_Boolean_" data-uid="Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.IEnumerable{MediaBrowser.Model.IO.FileSystemMetadata},Emby.Naming.Common.NamingOptions,System.Boolean,System.Boolean)">Resolve(IEnumerable&lt;FileSystemMetadata&gt;, NamingOptions, Boolean, Boolean)</h4>
+  <h4 id="Emby_Naming_Video_VideoListResolver_Resolve_System_Collections_Generic_IReadOnlyList_Emby_Naming_Video_VideoFileInfo__Emby_Naming_Common_NamingOptions_System_Boolean_System_Boolean_" data-uid="Emby.Naming.Video.VideoListResolver.Resolve(System.Collections.Generic.IReadOnlyList{Emby.Naming.Video.VideoFileInfo},Emby.Naming.Common.NamingOptions,System.Boolean,System.Boolean)">Resolve(IReadOnlyList&lt;VideoFileInfo&gt;, NamingOptions, Boolean, Boolean)</h4>
   <div class="markdown level1 summary"><p>Resolves alternative versions and extras from list of video files.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VideoInfo&gt; Resolve(IEnumerable&lt;FileSystemMetadata&gt; files, NamingOptions namingOptions, bool supportMultiVersion = true, bool parseName = true)</code></pre>
+    <pre><code class="lang-csharp hljs">public static IReadOnlyList&lt;VideoInfo&gt; Resolve(IReadOnlyList&lt;VideoFileInfo&gt; videoInfos, NamingOptions namingOptions, bool supportMultiVersion = true, bool parseName = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,8 +150,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.IO.FileSystemMetadata.html">FileSystemMetadata</a>&gt;</td>
-        <td><span class="parametername">files</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Emby.Naming.Video.VideoFileInfo.html">VideoFileInfo</a>&gt;</td>
+        <td><span class="parametername">videoInfos</span></td>
         <td><p>List of related video files.</p>
 </td>
       </tr>

@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Comics | Documentation - Jellyfin Project </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Comics | Documentation - Jellyfin Project ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.png">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/header-icon.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="server-media-comics">
+<h1 id="comics--mangas">Comics / Mangas</h1>
+
+<p>Comics and mangas, from now on referred to as comics, should usually be in the library root directory or in a subfolder for the individual comics. The subfolders allow for organization of metadata and images.</p>
+<p>For best results, it is recommended to name the files similar to the following schema where the volume number and issue number are used <strong>interchangeable</strong>.</p>
+<pre><code class="lang-txt">Series_Name #IssueNumber (of Count) (PubYear).ext
+Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
+</code></pre><ul>
+<li>Count = Total number of issues</li>
+<li>PubYear = Publication year of the issue</li>
+<li>SeriesYear = Start year of the series</li>
+<li>.ext = file extension, e.g. <code>.cbz</code> or <code>.cbr</code></li>
+</ul>
+<p>Take a look at the following example:</p>
+<pre><code class="lang-txt">Comics
+├── Plastic Man #002 (1944).cbz
+├── Attack on Titan #001 (2012).cbz
+└── Comic (2008)
+    ├── ComicInfo.xml
+    └── Comic #001 (2008).cbr
+</code></pre><p>Placing comics into a subfolder allows the placement of a <code>ComicInfo.xml</code> file for metadata parsing. Currently, Jellyfin does not support this for a series as a whole, but only for individual comics.</p>
+<h2 id="local-metadata-for-comic-book-archives">Local Metadata for &quot;Comic Book Archive&#39;s&quot;</h2>
+<p>Should your files not correspond to either <code>.cbz</code> or <code>.cbr</code> files, please refer to the <a class="xref" href="books.html">section on books</a> to see what is supported.</p>
+<p>The following metadata formats are supported:</p>
+<ul>
+<li>ComicInfo (from ComicRack)</li>
+<li>ComicBookInfo (from ComicBookLover)</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>However, there are some limitations regarding the support of the ComicInfo format. <code>ComicInfo.xml</code> files can be parsed when they are placed in the same folder as the comic itself or when they are bundled within a <code>.cbz</code> file. <code>ComicInfo.xml</code> files bundled with any other archive format are not supported.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/jellyfin/jellyfin-docs/blob/master/general/server/media/comics.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
