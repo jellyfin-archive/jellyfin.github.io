@@ -166,13 +166,13 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/LiveTv/ILiveTvManager.cs/#L295">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddChannelInfo_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddChannelInfo*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddChannelInfo_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_LiveTv_LiveTvChannel___MediaBrowser_Controller_Dto_DtoOptions_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddChannelInfo(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.LiveTv.LiveTvChannel}},MediaBrowser.Controller.Dto.DtoOptions,Jellyfin.Data.Entities.User)">AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto, LiveTvChannel)&gt;, DtoOptions, User)</h4>
+  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddChannelInfo_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_LiveTv_LiveTvChannel___MediaBrowser_Controller_Dto_DtoOptions_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddChannelInfo(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.LiveTv.LiveTvChannel}},MediaBrowser.Controller.Dto.DtoOptions,Jellyfin.Data.Entities.User)">AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto ItemDto, LiveTvChannel Channel)&gt;, DtoOptions, User)</h4>
   <div class="markdown level1 summary"><p>Adds the channel information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">void AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto, LiveTvChannel)&gt; items, DtoOptions options, User user)</code></pre>
+    <pre><code class="lang-csharp hljs">void AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto ItemDto, LiveTvChannel Channel)&gt; items, DtoOptions options, User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -212,13 +212,13 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/LiveTv/ILiveTvManager.cs/#L254">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddInfoToProgramDto_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddInfoToProgramDto*"></a>
-  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddInfoToProgramDto_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_BaseItemDto___System_Collections_Generic_IReadOnlyList_MediaBrowser_Model_Querying_ItemFields__Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddInfoToProgramDto(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.BaseItemDto}},System.Collections.Generic.IReadOnlyList{MediaBrowser.Model.Querying.ItemFields},Jellyfin.Data.Entities.User)">AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem, BaseItemDto)&gt;, IReadOnlyList&lt;ItemFields&gt;, User)</h4>
+  <h4 id="MediaBrowser_Controller_LiveTv_ILiveTvManager_AddInfoToProgramDto_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_BaseItemDto___System_Collections_Generic_IReadOnlyList_MediaBrowser_Model_Querying_ItemFields__Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.LiveTv.ILiveTvManager.AddInfoToProgramDto(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.BaseItemDto}},System.Collections.Generic.IReadOnlyList{MediaBrowser.Model.Querying.ItemFields},Jellyfin.Data.Entities.User)">AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem Item, BaseItemDto ItemDto)&gt;, IReadOnlyList&lt;ItemFields&gt;, User)</h4>
   <div class="markdown level1 summary"><p>Adds the information to program dto.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem, BaseItemDto)&gt; programs, IReadOnlyList&lt;ItemFields&gt; fields, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">Task AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem Item, BaseItemDto ItemDto)&gt; programs, IReadOnlyList&lt;ItemFields&gt; fields, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

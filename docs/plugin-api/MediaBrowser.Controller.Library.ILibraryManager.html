@@ -830,7 +830,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetAlbumArtists(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetAlbumArtists(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -877,7 +877,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetAllArtists(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetAllArtists(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1058,7 +1058,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetArtists(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetArtists(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1501,7 +1501,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetGenres(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetGenres(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2106,7 +2106,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetMusicGenres(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetMusicGenres(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3102,7 +3102,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem, ItemCounts)&gt; GetStudios(InternalItemsQuery query)</code></pre>
+    <pre><code class="lang-csharp hljs">QueryResult&lt;(BaseItem Item, ItemCounts ItemCounts)&gt; GetStudios(InternalItemsQuery query)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3972,12 +3972,12 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Library/ILibraryManager.cs/#L215">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Library_ILibraryManager_Sort_" data-uid="MediaBrowser.Controller.Library.ILibraryManager.Sort*"></a>
-  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_Sort_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__Jellyfin_Data_Entities_User_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_Jellyfin_Data_Enums_SortOrder___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.Sort(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Entities.BaseItem},Jellyfin.Data.Entities.User,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,Jellyfin.Data.Enums.SortOrder}})">Sort(IEnumerable&lt;BaseItem&gt;, User, IEnumerable&lt;(String, SortOrder)&gt;)</h4>
+  <h4 id="MediaBrowser_Controller_Library_ILibraryManager_Sort_System_Collections_Generic_IEnumerable_MediaBrowser_Controller_Entities_BaseItem__Jellyfin_Data_Entities_User_System_Collections_Generic_IEnumerable_System_ValueTuple_System_String_Jellyfin_Data_Enums_SortOrder___" data-uid="MediaBrowser.Controller.Library.ILibraryManager.Sort(System.Collections.Generic.IEnumerable{MediaBrowser.Controller.Entities.BaseItem},Jellyfin.Data.Entities.User,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,Jellyfin.Data.Enums.SortOrder}})">Sort(IEnumerable&lt;BaseItem&gt;, User, IEnumerable&lt;(String OrderBy, SortOrder SortOrder)&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">IEnumerable&lt;BaseItem&gt; Sort(IEnumerable&lt;BaseItem&gt; items, User user, IEnumerable&lt;(string, SortOrder)&gt; orderBy)</code></pre>
+    <pre><code class="lang-csharp hljs">IEnumerable&lt;BaseItem&gt; Sort(IEnumerable&lt;BaseItem&gt; items, User user, IEnumerable&lt;(string OrderBy, SortOrder SortOrder)&gt; orderBy)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">

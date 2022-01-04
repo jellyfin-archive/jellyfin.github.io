@@ -438,7 +438,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdDx11VidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdDx11VidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L2969">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L2970">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdDx11VidFiltersPrefered_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdDx11VidFiltersPrefered*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdDx11VidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdDx11VidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String,System.String)">GetAmdDx11VidFiltersPrefered(EncodingJobInfo, EncodingOptions, String, String)</h4>
@@ -446,7 +446,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetAmdDx11VidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetAmdDx11VidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -500,7 +500,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L2941">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L2942">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdVidFilterChain_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdVidFilterChain*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetAmdVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetAmdVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String)">GetAmdVidFilterChain(EncodingJobInfo, EncodingOptions, String)</h4>
@@ -509,7 +509,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetAmdVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetAmdVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1125,7 +1125,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static (int? width, int? height) GetFixedOutputSize(int? videoWidth, int? videoHeight, int? requestedWidth, int? requestedHeight, int? requestedMaxWidth, int? requestedMaxHeight)</code></pre>
+    <pre><code class="lang-csharp hljs">public static (int? Width, int? Height) GetFixedOutputSize(int? videoWidth, int? videoHeight, int? requestedWidth, int? requestedHeight, int? requestedMaxWidth, int? requestedMaxHeight)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2159,7 +2159,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvDx11VidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvDx11VidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3185">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3186">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvDx11VidFiltersPrefered_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvDx11VidFiltersPrefered*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvDx11VidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvDx11VidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String,System.String)">GetIntelQsvDx11VidFiltersPrefered(EncodingJobInfo, EncodingOptions, String, String)</h4>
@@ -2167,7 +2167,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetIntelQsvDx11VidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetIntelQsvDx11VidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2221,7 +2221,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvVaapiVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvVaapiVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3377">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3378">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvVaapiVidFiltersPrefered_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvVaapiVidFiltersPrefered*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelQsvVaapiVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelQsvVaapiVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String,System.String)">GetIntelQsvVaapiVidFiltersPrefered(EncodingJobInfo, EncodingOptions, String, String)</h4>
@@ -2229,7 +2229,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetIntelQsvVaapiVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetIntelQsvVaapiVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2283,7 +2283,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3140">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelVidFilterChain_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelVidFilterChain*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetIntelVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetIntelVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String)">GetIntelVidFilterChain(EncodingJobInfo, EncodingOptions, String)</h4>
@@ -2292,7 +2292,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetIntelVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetIntelVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2658,7 +2658,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetNvidiaVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetNvidiaVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2719,7 +2719,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetNvidiaVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetNvidiaVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3523,7 +3523,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetSwVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetSwVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3688,7 +3688,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiFullVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiFullVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3641">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3642">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiFullVidFiltersPrefered_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiFullVidFiltersPrefered*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiFullVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiFullVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String,System.String)">GetVaapiFullVidFiltersPrefered(EncodingJobInfo, EncodingOptions, String, String)</h4>
@@ -3696,7 +3696,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetVaapiFullVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetVaapiFullVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3750,7 +3750,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiLimitedVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiLimitedVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3837">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3838">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiLimitedVidFiltersPrefered_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiLimitedVidFiltersPrefered*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiLimitedVidFiltersPrefered_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiLimitedVidFiltersPrefered(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String,System.String)">GetVaapiLimitedVidFiltersPrefered(EncodingJobInfo, EncodingOptions, String, String)</h4>
@@ -3758,7 +3758,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetVaapiLimitedVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetVaapiLimitedVidFiltersPrefered(EncodingJobInfo state, EncodingOptions options, string vidDecoder, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -3874,7 +3874,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3592">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L3593">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiVidFilterChain_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiVidFilterChain*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVaapiVidFilterChain_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVaapiVidFilterChain(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String)">GetVaapiVidFilterChain(EncodingJobInfo, EncodingOptions, String)</h4>
@@ -3883,7 +3883,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public (List&lt;string&gt;, List&lt;string&gt;, List&lt;string&gt;) GetVaapiVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
+    <pre><code class="lang-csharp hljs">public (List&lt;string&gt; MainFilters, List&lt;string&gt; SubFilters, List&lt;string&gt; OverlayFilters) GetVaapiVidFilterChain(EncodingJobInfo state, EncodingOptions options, string vidEncoder)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -4148,7 +4148,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVideoProcessingFilterParam_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVideoProcessingFilterParam(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo%2CMediaBrowser.Model.Configuration.EncodingOptions%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L4019">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/MediaEncoding/EncodingHelper.cs/#L4020">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVideoProcessingFilterParam_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVideoProcessingFilterParam*"></a>
   <h4 id="MediaBrowser_Controller_MediaEncoding_EncodingHelper_GetVideoProcessingFilterParam_MediaBrowser_Controller_MediaEncoding_EncodingJobInfo_MediaBrowser_Model_Configuration_EncodingOptions_System_String_" data-uid="MediaBrowser.Controller.MediaEncoding.EncodingHelper.GetVideoProcessingFilterParam(MediaBrowser.Controller.MediaEncoding.EncodingJobInfo,MediaBrowser.Model.Configuration.EncodingOptions,System.String)">GetVideoProcessingFilterParam(EncodingJobInfo, EncodingOptions, String)</h4>

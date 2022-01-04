@@ -99,7 +99,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IWebSocketListener_ProcessMessageAsync_MediaBrowser_Controller_Net_WebSocketMessageInfo_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IWebSocketListener.ProcessMessageAsync(MediaBrowser.Controller.Net.WebSocketMessageInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L15">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L16">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IWebSocketListener_ProcessMessageAsync_" data-uid="MediaBrowser.Controller.Net.IWebSocketListener.ProcessMessageAsync*"></a>
   <h4 id="MediaBrowser_Controller_Net_IWebSocketListener_ProcessMessageAsync_MediaBrowser_Controller_Net_WebSocketMessageInfo_" data-uid="MediaBrowser.Controller.Net.IWebSocketListener.ProcessMessageAsync(MediaBrowser.Controller.Net.WebSocketMessageInfo)">ProcessMessageAsync(WebSocketMessageInfo)</h4>
@@ -146,19 +146,19 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IWebSocketListener_ProcessWebSocketConnectedAsync_MediaBrowser_Controller_Net_IWebSocketConnection_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IWebSocketListener.ProcessWebSocketConnectedAsync(MediaBrowser.Controller.Net.IWebSocketConnection)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IWebSocketListener_ProcessWebSocketConnectedAsync_MediaBrowser_Controller_Net_IWebSocketConnection_Microsoft_AspNetCore_Http_HttpContext_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IWebSocketListener.ProcessWebSocketConnectedAsync(MediaBrowser.Controller.Net.IWebSocketConnection%2CMicrosoft.AspNetCore.Http.HttpContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L22">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L24">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Net_IWebSocketListener_ProcessWebSocketConnectedAsync_" data-uid="MediaBrowser.Controller.Net.IWebSocketListener.ProcessWebSocketConnectedAsync*"></a>
-  <h4 id="MediaBrowser_Controller_Net_IWebSocketListener_ProcessWebSocketConnectedAsync_MediaBrowser_Controller_Net_IWebSocketConnection_" data-uid="MediaBrowser.Controller.Net.IWebSocketListener.ProcessWebSocketConnectedAsync(MediaBrowser.Controller.Net.IWebSocketConnection)">ProcessWebSocketConnectedAsync(IWebSocketConnection)</h4>
+  <h4 id="MediaBrowser_Controller_Net_IWebSocketListener_ProcessWebSocketConnectedAsync_MediaBrowser_Controller_Net_IWebSocketConnection_Microsoft_AspNetCore_Http_HttpContext_" data-uid="MediaBrowser.Controller.Net.IWebSocketListener.ProcessWebSocketConnectedAsync(MediaBrowser.Controller.Net.IWebSocketConnection,Microsoft.AspNetCore.Http.HttpContext)">ProcessWebSocketConnectedAsync(IWebSocketConnection, HttpContext)</h4>
   <div class="markdown level1 summary"><p>Processes a new web socket connection.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">Task ProcessWebSocketConnectedAsync(IWebSocketConnection connection)</code></pre>
+    <pre><code class="lang-csharp hljs">Task ProcessWebSocketConnectedAsync(IWebSocketConnection connection, HttpContext httpContext)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +174,12 @@
         <td><a class="xref" href="MediaBrowser.Controller.Net.IWebSocketConnection.html">IWebSocketConnection</a></td>
         <td><span class="parametername">connection</span></td>
         <td><p>An instance of the <a class="xref" href="MediaBrowser.Controller.Net.IWebSocketConnection.html">IWebSocketConnection</a> interface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.http.httpcontext">HttpContext</a></td>
+        <td><span class="parametername">httpContext</span></td>
+        <td><p>The current http context.</p>
 </td>
       </tr>
     </tbody>
@@ -205,7 +211,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Net_IWebSocketListener.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Net.IWebSocketListener%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L8" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Net/IWebSocketListener.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -319,12 +319,12 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1871">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddChannelInfo_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddChannelInfo*"></a>
-  <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddChannelInfo_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_LiveTv_LiveTvChannel___MediaBrowser_Controller_Dto_DtoOptions_Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddChannelInfo(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.LiveTv.LiveTvChannel}},MediaBrowser.Controller.Dto.DtoOptions,Jellyfin.Data.Entities.User)">AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto, LiveTvChannel)&gt;, DtoOptions, User)</h4>
+  <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddChannelInfo_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Model_Dto_BaseItemDto_MediaBrowser_Controller_LiveTv_LiveTvChannel___MediaBrowser_Controller_Dto_DtoOptions_Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddChannelInfo(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Model.Dto.BaseItemDto,MediaBrowser.Controller.LiveTv.LiveTvChannel}},MediaBrowser.Controller.Dto.DtoOptions,Jellyfin.Data.Entities.User)">AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto ItemDto, LiveTvChannel Channel)&gt;, DtoOptions, User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto, LiveTvChannel)&gt; items, DtoOptions options, User user)</code></pre>
+    <pre><code class="lang-csharp hljs">public void AddChannelInfo(IReadOnlyCollection&lt;(BaseItemDto ItemDto, LiveTvChannel Channel)&gt; items, DtoOptions options, User user)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -361,12 +361,12 @@
     <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1426">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddInfoToProgramDto_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddInfoToProgramDto*"></a>
-  <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddInfoToProgramDto_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_BaseItemDto___System_Collections_Generic_IReadOnlyList_MediaBrowser_Model_Querying_ItemFields__Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddInfoToProgramDto(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.BaseItemDto}},System.Collections.Generic.IReadOnlyList{MediaBrowser.Model.Querying.ItemFields},Jellyfin.Data.Entities.User)">AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem, BaseItemDto)&gt;, IReadOnlyList&lt;ItemFields&gt;, User)</h4>
+  <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_AddInfoToProgramDto_System_Collections_Generic_IReadOnlyCollection_System_ValueTuple_MediaBrowser_Controller_Entities_BaseItem_MediaBrowser_Model_Dto_BaseItemDto___System_Collections_Generic_IReadOnlyList_MediaBrowser_Model_Querying_ItemFields__Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.AddInfoToProgramDto(System.Collections.Generic.IReadOnlyCollection{System.ValueTuple{MediaBrowser.Controller.Entities.BaseItem,MediaBrowser.Model.Dto.BaseItemDto}},System.Collections.Generic.IReadOnlyList{MediaBrowser.Model.Querying.ItemFields},Jellyfin.Data.Entities.User)">AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem Item, BaseItemDto ItemDto)&gt;, IReadOnlyList&lt;ItemFields&gt;, User)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem, BaseItemDto)&gt; programs, IReadOnlyList&lt;ItemFields&gt; fields, User user = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public Task AddInfoToProgramDto(IReadOnlyCollection&lt;(BaseItem Item, BaseItemDto ItemDto)&gt; programs, IReadOnlyList&lt;ItemFields&gt; fields, User user = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -602,7 +602,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_CreateSeriesTimer_MediaBrowser_Model_LiveTv_SeriesTimerInfoDto_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.CreateSeriesTimer(MediaBrowser.Model.LiveTv.SeriesTimerInfoDto%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2060">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2057">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_CreateSeriesTimer_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.CreateSeriesTimer*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_CreateSeriesTimer_MediaBrowser_Model_LiveTv_SeriesTimerInfoDto_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.CreateSeriesTimer(MediaBrowser.Model.LiveTv.SeriesTimerInfoDto,System.Threading.CancellationToken)">CreateSeriesTimer(SeriesTimerInfoDto, CancellationToken)</h4>
@@ -654,7 +654,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_CreateTimer_MediaBrowser_Model_LiveTv_TimerInfoDto_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.CreateTimer(MediaBrowser.Model.LiveTv.TimerInfoDto%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2027">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2024">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_CreateTimer_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.CreateTimer*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_CreateTimer_MediaBrowser_Model_LiveTv_TimerInfoDto_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.CreateTimer(MediaBrowser.Model.LiveTv.TimerInfoDto,System.Threading.CancellationToken)">CreateTimer(TimerInfoDto, CancellationToken)</h4>
@@ -706,7 +706,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_DeleteListingsProvider_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.DeleteListingsProvider(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2310">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2307">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_DeleteListingsProvider_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.DeleteListingsProvider*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_DeleteListingsProvider_System_String_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.DeleteListingsProvider(System.String)">DeleteListingsProvider(String)</h4>
@@ -790,7 +790,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2119">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2116">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose">Dispose()</h4>
@@ -805,7 +805,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2129">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2126">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_Dispose_System_Boolean_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -938,7 +938,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsForListingsProvider_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsForListingsProvider(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2410">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2407">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsForListingsProvider_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsForListingsProvider*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsForListingsProvider_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsForListingsProvider(System.String,System.Threading.CancellationToken)">GetChannelsForListingsProvider(String, CancellationToken)</h4>
@@ -990,7 +990,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsFromListingsProviderData_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsFromListingsProviderData(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2416">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2413">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsFromListingsProviderData_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsFromListingsProviderData*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetChannelsFromListingsProviderData_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetChannelsFromListingsProviderData(System.String,System.Threading.CancellationToken)">GetChannelsFromListingsProviderData(String, CancellationToken)</h4>
@@ -1151,7 +1151,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetEnabledUsers.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetEnabledUsers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2183">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2180">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetEnabledUsers_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetEnabledUsers*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetEnabledUsers" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetEnabledUsers">GetEnabledUsers()</h4>
@@ -1181,7 +1181,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetGuideInfo.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetGuideInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2106">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2103">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetGuideInfo_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetGuideInfo*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetGuideInfo" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetGuideInfo">GetGuideInfo()</h4>
@@ -1211,7 +1211,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalChannelId_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalChannelId(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2423">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2420">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalChannelId_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalChannelId*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalChannelId_System_String_System_String_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalChannelId(System.String,System.String)">GetInternalChannelId(String, String)</h4>
@@ -1320,7 +1320,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalLiveTvFolder_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalLiveTvFolder(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2220">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2217">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalLiveTvFolder_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalLiveTvFolder*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalLiveTvFolder_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalLiveTvFolder(System.Threading.CancellationToken)">GetInternalLiveTvFolder(CancellationToken)</h4>
@@ -1367,7 +1367,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalProgramId_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalProgramId(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2428">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2425">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalProgramId_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalProgramId*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetInternalProgramId_System_String_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetInternalProgramId(System.String)">GetInternalProgramId(String)</h4>
@@ -1414,7 +1414,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetLineups_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetLineups(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2380">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2377">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetLineups_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetLineups*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetLineups_System_String_System_String_System_String_System_String_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetLineups(System.String,System.String,System.String,System.String)">GetLineups(String, String, String, String)</h4>
@@ -1528,7 +1528,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetLiveTvInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetLiveTvInfo(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2161">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2158">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetLiveTvInfo_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetLiveTvInfo*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetLiveTvInfo_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetLiveTvInfo(System.Threading.CancellationToken)">GetLiveTvInfo(CancellationToken)</h4>
@@ -1575,7 +1575,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1998">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1995">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults(System.String,System.Threading.CancellationToken)">GetNewTimerDefaults(String, CancellationToken)</h4>
@@ -1627,7 +1627,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults(System.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1991">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L1988">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetNewTimerDefaults_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetNewTimerDefaults(System.Threading.CancellationToken)">GetNewTimerDefaults(CancellationToken)</h4>
@@ -1902,7 +1902,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetRecordingFolders_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetRecordingFolders(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2433">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2430">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetRecordingFolders_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetRecordingFolders*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetRecordingFolders_Jellyfin_Data_Entities_User_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetRecordingFolders(Jellyfin.Data.Entities.User)">GetRecordingFolders(User)</h4>
@@ -2209,7 +2209,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_GetTunerChannelMapping_MediaBrowser_Controller_LiveTv_ChannelInfo_MediaBrowser_Model_Dto_NameValuePair___System_Collections_Generic_List_MediaBrowser_Controller_LiveTv_ChannelInfo__.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.GetTunerChannelMapping(MediaBrowser.Controller.LiveTv.ChannelInfo%2CMediaBrowser.Model.Dto.NameValuePair%5B%5D%2CSystem.Collections.Generic.List%7BMediaBrowser.Controller.LiveTv.ChannelInfo%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2356">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2353">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetTunerChannelMapping_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetTunerChannelMapping*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_GetTunerChannelMapping_MediaBrowser_Controller_LiveTv_ChannelInfo_MediaBrowser_Model_Dto_NameValuePair___System_Collections_Generic_List_MediaBrowser_Controller_LiveTv_ChannelInfo__" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.GetTunerChannelMapping(MediaBrowser.Controller.LiveTv.ChannelInfo,MediaBrowser.Model.Dto.NameValuePair[],System.Collections.Generic.List{MediaBrowser.Controller.LiveTv.ChannelInfo})">GetTunerChannelMapping(ChannelInfo, NameValuePair[], List&lt;ChannelInfo&gt;)</h4>
@@ -2296,7 +2296,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_ResetTuner_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.ResetTuner(System.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2195">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2192">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_ResetTuner_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.ResetTuner*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_ResetTuner_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.ResetTuner(System.String,System.Threading.CancellationToken)">ResetTuner(String, CancellationToken)</h4>
@@ -2352,7 +2352,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_SaveListingProvider_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.SaveListingProvider(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2268">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2265">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_SaveListingProvider_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SaveListingProvider*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_SaveListingProvider_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Boolean_System_Boolean_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SaveListingProvider(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.Boolean,System.Boolean)">SaveListingProvider(ListingsProviderInfo, Boolean, Boolean)</h4>
@@ -2409,7 +2409,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_SaveTunerHost_MediaBrowser_Model_LiveTv_TunerHostInfo_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.SaveTunerHost(MediaBrowser.Model.LiveTv.TunerHostInfo%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2226">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2223">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_SaveTunerHost_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SaveTunerHost*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_SaveTunerHost_MediaBrowser_Model_LiveTv_TunerHostInfo_System_Boolean_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SaveTunerHost(MediaBrowser.Model.LiveTv.TunerHostInfo,System.Boolean)">SaveTunerHost(TunerHostInfo, Boolean)</h4>
@@ -2461,7 +2461,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_SetChannelMapping_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.SetChannelMapping(System.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2320">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2317">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_SetChannelMapping_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SetChannelMapping*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_SetChannelMapping_System_String_System_String_System_String_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.SetChannelMapping(System.String,System.String,System.String)">SetChannelMapping(String, String, String)</h4>
@@ -2518,7 +2518,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateSeriesTimer_MediaBrowser_Model_LiveTv_SeriesTimerInfoDto_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateSeriesTimer(MediaBrowser.Model.LiveTv.SeriesTimerInfoDto%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2097">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2094">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateSeriesTimer_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateSeriesTimer*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateSeriesTimer_MediaBrowser_Model_LiveTv_SeriesTimerInfoDto_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateSeriesTimer(MediaBrowser.Model.LiveTv.SeriesTimerInfoDto,System.Threading.CancellationToken)">UpdateSeriesTimer(SeriesTimerInfoDto, CancellationToken)</h4>
@@ -2570,7 +2570,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateTimer_MediaBrowser_Model_LiveTv_TimerInfoDto_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateTimer(MediaBrowser.Model.LiveTv.TimerInfoDto%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2088">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/LiveTvManager.cs/#L2085">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateTimer_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateTimer*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_LiveTvManager_UpdateTimer_MediaBrowser_Model_LiveTv_TimerInfoDto_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.LiveTvManager.UpdateTimer(MediaBrowser.Model.LiveTv.TimerInfoDto,System.Threading.CancellationToken)">UpdateTimer(TimerInfoDto, CancellationToken)</h4>
