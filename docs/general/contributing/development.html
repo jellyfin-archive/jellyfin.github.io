@@ -109,14 +109,11 @@ cd projectname/
 <li><p>Add the &quot;upstream&quot; remote, which allows you to pull down changes from the main project easily:</p>
 <pre><code class="lang-sh">git remote add upstream git@github.com:jellyfin/projectname.git
 </code></pre></li>
-<li><p>Initialize the Git submodules; most projects have at least one:</p>
-<pre><code class="lang-sh">git submodule update --init
-</code></pre><div class="NOTE"><h5>Note</h5><p>Avoid editing files inside of submodules. Doing so may result in unintended side effects, including overwriting of your work. Always modify the submodule in its own cloned repository elsewhere.</p>
-</div>
-</li>
 <li><p>To get the <code>Jellyfin.Server</code> project to run successfully, checkout both the <a href="https://github.com/jellyfin/jellyfin">server</a>, as well as the <a href="https://github.com/jellyfin/jellyfin-web">web client</a> project.</p>
 </li>
-<li><p>Build the Jellyfin Web project with Yarn or NPM, and copy the location of the resulting <code>dist</code> folder. In your <code>Jellyfin.Server</code> project add an environment variable named <code>JELLYFIN_WEB_DIR</code> with the value set to the full path of your <code>dist</code> folder.</p>
+<li><p>Build the Jellyfin Web project with NPM, and copy the location of the resulting <code>dist</code> folder.</p>
+</li>
+<li><p>In your <code>Jellyfin.Server</code> project add an environment variable named <code>JELLYFIN_WEB_DIR</code> with the value set to the full path of your <code>dist</code> folder.</p>
 </li>
 </ol>
 <p>You will now be ready to begin building or modifying the project.</p>
@@ -220,7 +217,7 @@ kill -15 $(pidof jellyfin)
 cd /opt/jellyfin
 git fetch origin pull/&lt;PR_ID&gt;/head:my-testing-branch
 git merge my-testing-branch
-dotnet publish --disable-parallel Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+dotnet build
 kill -15 $(pidof jellyfin)
 </code></pre></article>
           </div>
