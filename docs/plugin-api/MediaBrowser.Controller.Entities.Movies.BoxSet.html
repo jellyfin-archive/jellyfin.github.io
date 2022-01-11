@@ -855,7 +855,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_DisplayOrder.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.DisplayOrder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L44">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L45">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_DisplayOrder_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.DisplayOrder*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_DisplayOrder" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.DisplayOrder">DisplayOrder</h4>
@@ -920,7 +920,7 @@ protected override bool FilterLinkedChildrenPerUser { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_IsPreSorted.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.IsPreSorted%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L65">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L66">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsPreSorted_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsPreSorted*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsPreSorted" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsPreSorted">IsPreSorted</h4>
@@ -953,7 +953,7 @@ public override bool IsPreSorted { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_LibraryFolderIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.LibraryFolderIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L68">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L69">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_LibraryFolderIds_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.LibraryFolderIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_LibraryFolderIds" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.LibraryFolderIds">LibraryFolderIds</h4>
@@ -992,7 +992,8 @@ public override bool IsPreSorted { get; }</code></pre>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;BaseItem&gt; LocalTrailers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">[JsonIgnore]
+public IReadOnlyList&lt;BaseItem&gt; LocalTrailers { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1083,7 +1084,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedType.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L78">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L79">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedType_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedType*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedType" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedType">GetBlockUnratedType()</h4>
@@ -1115,7 +1116,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedValue_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedValue(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L70">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L71">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedValue_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedValue*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetBlockUnratedValue_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetBlockUnratedValue(Jellyfin.Data.Entities.User)">GetBlockUnratedValue(User)</h4>
@@ -1164,7 +1165,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetChildren_Jellyfin_Data_Entities_User_System_Boolean_MediaBrowser_Controller_Entities_InternalItemsQuery_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetChildren(Jellyfin.Data.Entities.User%2CSystem.Boolean%2CMediaBrowser.Controller.Entities.InternalItemsQuery)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L114">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L115">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetChildren_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetChildren_Jellyfin_Data_Entities_User_System_Boolean_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetChildren(Jellyfin.Data.Entities.User,System.Boolean,MediaBrowser.Controller.Entities.InternalItemsQuery)">GetChildren(User, Boolean, InternalItemsQuery)</h4>
@@ -1223,7 +1224,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetDefaultPrimaryImageAspectRatio.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetDefaultPrimaryImageAspectRatio%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L75">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L76">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetDefaultPrimaryImageAspectRatio_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetDefaultPrimaryImageAspectRatio*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetDefaultPrimaryImageAspectRatio" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetDefaultPrimaryImageAspectRatio">GetDefaultPrimaryImageAspectRatio()</h4>
@@ -1255,7 +1256,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetLibraryFolderIds.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetLibraryFolderIds%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L197">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L198">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetLibraryFolderIds_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetLibraryFolderIds*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetLibraryFolderIds" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetLibraryFolderIds">GetLibraryFolderIds()</h4>
@@ -1285,7 +1286,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetLookupInfo.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetLookupInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L147">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L148">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetLookupInfo_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetLookupInfo*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetLookupInfo" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetLookupInfo">GetLookupInfo()</h4>
@@ -1315,7 +1316,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L83">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L84">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetNonCachedChildren_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetNonCachedChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetNonCachedChildren_MediaBrowser_Controller_Providers_IDirectoryService_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetNonCachedChildren(MediaBrowser.Controller.Providers.IDirectoryService)">GetNonCachedChildren(IDirectoryService)</h4>
@@ -1364,7 +1365,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_GetRecursiveChildren_Jellyfin_Data_Entities_User_MediaBrowser_Controller_Entities_InternalItemsQuery_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.GetRecursiveChildren(Jellyfin.Data.Entities.User%2CMediaBrowser.Controller.Entities.InternalItemsQuery)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L134">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L135">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetRecursiveChildren_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetRecursiveChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_GetRecursiveChildren_Jellyfin_Data_Entities_User_MediaBrowser_Controller_Entities_InternalItemsQuery_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.GetRecursiveChildren(Jellyfin.Data.Entities.User,MediaBrowser.Controller.Entities.InternalItemsQuery)">GetRecursiveChildren(User, InternalItemsQuery)</h4>
@@ -1418,7 +1419,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_IsAuthorizedToDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.IsAuthorizedToDelete(Jellyfin.Data.Entities.User%2CSystem.Collections.Generic.List%7BMediaBrowser.Controller.Entities.Folder%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L104">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L105">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsAuthorizedToDelete_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsAuthorizedToDelete*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsAuthorizedToDelete_Jellyfin_Data_Entities_User_System_Collections_Generic_List_MediaBrowser_Controller_Entities_Folder__" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsAuthorizedToDelete(Jellyfin.Data.Entities.User,System.Collections.Generic.List{MediaBrowser.Controller.Entities.Folder})">IsAuthorizedToDelete(User, List&lt;Folder&gt;)</h4>
@@ -1472,7 +1473,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_IsSaveLocalMetadataEnabled.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.IsSaveLocalMetadataEnabled%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L109">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L110">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsSaveLocalMetadataEnabled_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsSaveLocalMetadataEnabled*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsSaveLocalMetadataEnabled" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsSaveLocalMetadataEnabled">IsSaveLocalMetadataEnabled()</h4>
@@ -1504,7 +1505,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisible_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisible(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L152">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L153">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisible_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisible*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisible_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisible(Jellyfin.Data.Entities.User)">IsVisible(User)</h4>
@@ -1553,7 +1554,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisibleStandalone_Jellyfin_Data_Entities_User_.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisibleStandalone(Jellyfin.Data.Entities.User)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L180">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L181">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisibleStandalone_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisibleStandalone*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_IsVisibleStandalone_Jellyfin_Data_Entities_User_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.IsVisibleStandalone(Jellyfin.Data.Entities.User)">IsVisibleStandalone(User)</h4>
@@ -1602,7 +1603,7 @@ public override bool SupportsPeople { get; }</code></pre>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Controller_Entities_Movies_BoxSet_LoadChildren.md&amp;value=---%0Auid%3A%20MediaBrowser.Controller.Entities.Movies.BoxSet.LoadChildren%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L93">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Controller/Entities/Movies/BoxSet.cs/#L94">View Source</a>
   </span>
   <a id="MediaBrowser_Controller_Entities_Movies_BoxSet_LoadChildren_" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.LoadChildren*"></a>
   <h4 id="MediaBrowser_Controller_Entities_Movies_BoxSet_LoadChildren" data-uid="MediaBrowser.Controller.Entities.Movies.BoxSet.LoadChildren">LoadChildren()</h4>

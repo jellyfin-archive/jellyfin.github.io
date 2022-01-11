@@ -84,7 +84,7 @@
 <p>There are many projects within the <a href="https://github.com/jellyfin">organization</a> to browse through for contributions.
 Summarized here are the two biggest ones, one for backend devs and another for frontend devs.</p>
 <ul>
-<li><a href="https://github.com/jellyfin/jellyfin">Jellyfin Server</a>: The server portion, built using .NET 5 and C#.</li>
+<li><a href="https://github.com/jellyfin/jellyfin">Jellyfin Server</a>: The server portion, built using .NET 6 and C#.</li>
 <li><a href="https://github.com/jellyfin/jellyfin-web">Jellyfin Web</a>: The main client application built for browsers, but also used in some of our other clients that are just wrappers.</li>
 </ul>
 <p>Note that each of the repositories also has its own documentation on how to get started with that project, generally found in the repository README. You can also view the organization <a class="xref" href="source-tree.html">source tree</a> to see how some of the bigger projects are structured.</p>
@@ -203,11 +203,10 @@ git branch -D my-testing-branch
 apt-get update &amp;&amp; apt-get install git gnupg wget apt-transport-https curl autoconf g++ make libpng-dev gifsicle automake libtool make gcc musl-dev nasm
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor &gt; microsoft.asc.gpg &amp;&amp; mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/debian/10/prod.list &amp;&amp; mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - &amp;&amp; echo &quot;deb https://dl.yarnpkg.com/debian/ stable main&quot; | tee /etc/apt/sources.list.d/yarn.list
-apt-get update &amp;&amp; apt-get install dotnet-sdk-5.0 yarn
+apt-get update &amp;&amp; apt-get install dotnet-sdk-6.0 npm
 cd /opt &amp;&amp; git clone https://github.com/jellyfin/jellyfin.git &amp;&amp; git clone https://github.com/jellyfin/jellyfin-web.git
-mv /jellyfin/ /jellyfin.bak &amp;&amp; cd /opt/jellyfin &amp;&amp; dotnet publish --disable-parallel Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
-cd /opt/jellyfin-web &amp;&amp; yarn install &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
+cd jellyfin/ &amp;&amp; DOTNET_CLI_TELEMETRY_OPTOUT=1 dotnet publish --disable-parallel Jellyfin.Server --configuration Debug --output=&quot;/jellyfin&quot; --self-contained --runtime linux-x64
+cd /opt/jellyfin-web &amp;&amp; npm install &amp;&amp; cp -r /opt/jellyfin-web/dist /jellyfin/jellyfin-web
 kill -15 $(pidof jellyfin)
 </code></pre><h3 id="pull-request">Pull Request</h3>
 <p>First, complete the steps above to setup your container to build the master branch.</p>
