@@ -423,6 +423,8 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <h3 id="lxc-container-on-proxmox">LXC Container on Proxmox</h3>
 <p>This has been tested on Proxmox VE 7.1 - on previous versions you may need to change <code>cgroup2</code> to <code>cgroup</code>.</p>
 <p>It is highly recommended to use the same OS as your Proxmox host as the container OS to prevent driver version missmatches.</p>
+<p>Jellyfin needs to run in a <strong>privileged</strong> container.</p>
+<p>You can convert an existing unprivileged container to a privileged container by taking a backup and restoring it as priviledged,</p>
 <ol>
 <li><p>Install the required drivers on the Proxmox host</p>
 </li>
@@ -447,7 +449,7 @@ lxc.mount.entry: /dev/nvidia-uvm-tools dev/nvidia-uvm-tools none bind,optional,c
 </li>
 <li><p>Add the jellyfin user to the <code>video</code>, <code>render</code> and/or <code>input</code> groups depending on who owns the device inside the container.</p>
 </li>
-<li><p>Configure Jellyfin to use video acceleration and point it at the right device if the default option is wrong.</p>
+<li><p>Configure Jellyfin to use hardware acceleration and point it at the right device if the default option is wrong.</p>
 </li>
 <li><p>Try and play a video that requires transcoding and run the following, you should get a hit.</p>
 <pre><code class="lang-sh">ps aux | grep ffmpeg | grep accel
