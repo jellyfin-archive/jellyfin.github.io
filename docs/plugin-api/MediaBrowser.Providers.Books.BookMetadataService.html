@@ -268,7 +268,8 @@
   </span>
   <a id="MediaBrowser_Providers_Books_BookMetadataService_MergeData_" data-uid="MediaBrowser.Providers.Books.BookMetadataService.MergeData*"></a>
   <h4 id="MediaBrowser_Providers_Books_BookMetadataService_MergeData_MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_Book__MediaBrowser_Controller_Providers_MetadataResult_MediaBrowser_Controller_Entities_Book__MediaBrowser_Model_Entities_MetadataField___System_Boolean_System_Boolean_" data-uid="MediaBrowser.Providers.Books.BookMetadataService.MergeData(MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.Book},MediaBrowser.Controller.Providers.MetadataResult{MediaBrowser.Controller.Entities.Book},MediaBrowser.Model.Entities.MetadataField[],System.Boolean,System.Boolean)">MergeData(MetadataResult&lt;Book&gt;, MetadataResult&lt;Book&gt;, MetadataField[], Boolean, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Merges metadata from source into target.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -297,22 +298,41 @@
       <tr>
         <td><a class="xref" href="MediaBrowser.Model.Entities.MetadataField.html">MetadataField</a>[]</td>
         <td><span class="parametername">lockedFields</span></td>
-        <td></td>
+        <td><p>The fields that are locked and should not be updated.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">replaceData</span></td>
-        <td></td>
+        <td><p><code>true</code> if existing data should be replaced.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">mergeMetadataSettings</span></td>
-        <td></td>
+        <td><p><code>true</code> if the metadata settings in target should be updated to match source.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">MediaBrowser.Providers.Manager.MetadataService&lt;MediaBrowser.Controller.Entities.Book, MediaBrowser.Controller.Providers.BookInfo&gt;.MergeData(MediaBrowser.Controller.Providers.MetadataResult&lt;MediaBrowser.Controller.Entities.Book&gt;, MediaBrowser.Controller.Providers.MetadataResult&lt;MediaBrowser.Controller.Entities.Book&gt;, MediaBrowser.Model.Entities.MetadataField[], System.Boolean, System.Boolean)</span></div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></td>
+        <td><p>Thrown if source or target are null.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.Providers.IMetadataService.html">IMetadataService</a>
