@@ -8,7 +8,7 @@
     <title>Nginx | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Nginx | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.59.0.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -126,7 +126,8 @@ server {
     #add_header Content-Security-Policy &quot;default-src https: data: blob: http://image.tmdb.org; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://www.gstatic.com/cv/js/sender/v1/cast_sender.js https://www.gstatic.com/eureka/clank/95/cast_sender.js https://www.gstatic.com/eureka/clank/96/cast_sender.js https://www.gstatic.com/eureka/clank/97/cast_sender.js https://www.youtube.com blob:; worker-src &#39;self&#39; blob:; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;self&#39;&quot;;
 
     location = / {
-        return 302 https://$host/web/;
+        return 302 http://$host/web/;
+        #return 302 https://$host/web/;
     }
 
     location / {
