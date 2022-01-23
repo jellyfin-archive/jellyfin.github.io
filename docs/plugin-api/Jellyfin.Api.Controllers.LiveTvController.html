@@ -2240,7 +2240,7 @@ public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetP
     <pre><code class="lang-csharp hljs">[HttpGet(&quot;Programs/Recommended&quot;)]
 [Authorize(Policy = &quot;DefaultAuthorization&quot;)]
 [ProducesResponseType(200)]
-public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetRecommendedPrograms([FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] bool? isAiring, [FromQuery] bool? hasAired, [FromQuery] bool? isSeries, [FromQuery] bool? isMovie, [FromQuery] bool? isNews, [FromQuery] bool? isKids, [FromQuery] bool? isSports, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] genreIds, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] bool? enableUserData, [FromQuery] bool enableTotalRecordCount = true)</code></pre>
+public async Task&lt;ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt;&gt; GetRecommendedPrograms([FromQuery] Guid? userId, [FromQuery] int? limit, [FromQuery] bool? isAiring, [FromQuery] bool? hasAired, [FromQuery] bool? isSeries, [FromQuery] bool? isMovie, [FromQuery] bool? isNews, [FromQuery] bool? isKids, [FromQuery] bool? isSports, [FromQuery] bool? enableImages, [FromQuery] int? imageTypeLimit, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ImageType[] enableImageTypes, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] Guid[] genreIds, [FromQuery, ModelBinder(typeof(CommaDelimitedArrayModelBinder))] ItemFields[] fields, [FromQuery] bool? enableUserData, [FromQuery] bool enableTotalRecordCount = true)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2360,7 +2360,7 @@ public ActionResult&lt;QueryResult&lt;BaseItemDto&gt;&gt; GetRecommendedPrograms
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.BaseItemDto.html">BaseItemDto</a>&gt;&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.actionresult-1">ActionResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Querying.QueryResult-1.html">QueryResult</a>&lt;<a class="xref" href="MediaBrowser.Model.Dto.BaseItemDto.html">BaseItemDto</a>&gt;&gt;&gt;</td>
         <td><p>A <a class="xref" href="https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.mvc.okresult">OkResult</a> containing the queryresult of recommended epgs.</p>
 </td>
       </tr>
