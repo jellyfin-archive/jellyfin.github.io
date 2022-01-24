@@ -80,6 +80,9 @@
 <h1 id="comics--mangas">Comics / Mangas</h1>
 
 <p>Comics and mangas, from now on referred to as comics, should usually be in the library root directory or in a subfolder for the individual comics. The subfolders allow for organization of metadata and images.</p>
+<div class="NOTE"><h5>Note</h5><p>For the best reading experience, it is recommended to store comics in the comic book archive or pdf format. This is due to issues when trying to read comics stored in the epub format. Please note, that Jellyfin saves your reading position for comics in the comic book archive format, but does not save whether you finished the comic or not.</p>
+</div>
+<h2 id="naming">Naming</h2>
 <p>For best results, it is recommended to name the files similar to the following schema where the volume number and issue number are used <strong>interchangeable</strong>.</p>
 <pre><code class="lang-txt">Series_Name #IssueNumber (of Count) (PubYear).ext
 Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
@@ -87,7 +90,7 @@ Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
 <li>Count = Total number of issues</li>
 <li>PubYear = Publication year of the issue</li>
 <li>SeriesYear = Start year of the series</li>
-<li>.ext = file extension, e.g. <code>.cbz</code> or <code>.cbr</code></li>
+<li>.ext = file extension, e.g. <code>.cbz</code> or <code>.cbr</code>. For a list of supported file extensions, please refer to the <a class="xref" href="books.html">section on books</a>.</li>
 </ul>
 <p>Take a look at the following example:</p>
 <pre><code class="lang-txt">Comics
