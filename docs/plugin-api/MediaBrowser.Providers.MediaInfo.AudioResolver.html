@@ -83,16 +83,23 @@
   
   <h1 id="MediaBrowser_Providers_MediaInfo_AudioResolver" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver" class="text-break">Class AudioResolver
   </h1>
-  <div class="markdown level0 summary"><p>Resolves external audios for videos.</p>
+  <div class="markdown level0 summary"><p>Resolves external audio files for <a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">AudioResolver</span></div>
+    <div class="level1"><a class="xref" href="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.html">MediaInfoResolver</a></div>
+    <div class="level2"><span class="xref">AudioResolver</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.html#MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalStreamsAsync_MediaBrowser_Controller_Entities_Video_System_Int32_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_System_Threading_CancellationToken_">MediaInfoResolver.GetExternalStreamsAsync(Video, Int32, IDirectoryService, Boolean, CancellationToken)</a>
+    </div>
+    <div>
+      <a class="xref" href="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.html#MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalFiles_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_">MediaInfoResolver.GetExternalFiles(Video, IDirectoryService, Boolean)</a>
+    </div>
     <div>
       <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">Object.Equals(Object)</a>
     </div>
@@ -119,7 +126,7 @@
   <h6><strong>Assembly</strong>: MediaBrowser.Providers.dll</h6>
   <h5 id="MediaBrowser_Providers_MediaInfo_AudioResolver_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AudioResolver</code></pre>
+    <pre><code class="lang-csharp hljs">public class AudioResolver : MediaInfoResolver</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -128,11 +135,11 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_Emby_Naming_Common_NamingOptions_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioResolver.%23ctor(MediaBrowser.Model.Globalization.ILocalizationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CEmby.Naming.Common.NamingOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L36">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L20">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_AudioResolver__ctor_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.#ctor*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_AudioResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_Emby_Naming_Common_NamingOptions_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.#ctor(MediaBrowser.Model.Globalization.ILocalizationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,Emby.Naming.Common.NamingOptions)">AudioResolver(ILocalizationManager, IMediaEncoder, NamingOptions)</h4>
-  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Providers.MediaInfo.AudioResolver.html">AudioResolver</a> class.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Providers.MediaInfo.AudioResolver.html">AudioResolver</a> class for external audio file processing.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -164,145 +171,7 @@
       <tr>
         <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
         <td><span class="parametername">namingOptions</span></td>
-        <td><p>The naming options.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioFiles_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioFiles(MediaBrowser.Controller.Entities.Video%2CMediaBrowser.Controller.Providers.IDirectoryService%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L111">View Source</a>
-  </span>
-  <a id="MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioFiles_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioFiles*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioFiles_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioFiles(MediaBrowser.Controller.Entities.Video,MediaBrowser.Controller.Providers.IDirectoryService,System.Boolean)">GetExternalAudioFiles(Video, IDirectoryService, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Returns the external audio file paths for the given video.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerable&lt;string&gt; GetExternalAudioFiles(Video video, IDirectoryService directoryService, bool clearCache)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a></td>
-        <td><span class="parametername">video</span></td>
-        <td><p>The video to get the external audio file paths from.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
-        <td><span class="parametername">directoryService</span></td>
-        <td><p>The directory service to search for files.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">clearCache</span></td>
-        <td><p>True if the directory service cache should be cleared before searching.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td><p>A list of external audio file paths.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioStreams_MediaBrowser_Controller_Entities_Video_System_Int32_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioStreams(MediaBrowser.Controller.Entities.Video%2CSystem.Int32%2CMediaBrowser.Controller.Providers.IDirectoryService%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L55">View Source</a>
-  </span>
-  <a id="MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioStreams_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioStreams*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_AudioResolver_GetExternalAudioStreams_MediaBrowser_Controller_Entities_Video_System_Int32_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.MediaInfo.AudioResolver.GetExternalAudioStreams(MediaBrowser.Controller.Entities.Video,System.Int32,MediaBrowser.Controller.Providers.IDirectoryService,System.Boolean,System.Threading.CancellationToken)">GetExternalAudioStreams(Video, Int32, IDirectoryService, Boolean, CancellationToken)</h4>
-  <div class="markdown level1 summary"><p>Returns the audio streams found in the external audio files for the given video.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public async IAsyncEnumerable&lt;MediaStream&gt; GetExternalAudioStreams(Video video, int startIndex, IDirectoryService directoryService, bool clearCache, CancellationToken cancellationToken)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Entities.Video.html">Video</a></td>
-        <td><span class="parametername">video</span></td>
-        <td><p>The video to get the external audio streams from.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
-        <td><span class="parametername">startIndex</span></td>
-        <td><p>The stream index to start adding audio streams at.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="MediaBrowser.Controller.Providers.IDirectoryService.html">IDirectoryService</a></td>
-        <td><span class="parametername">directoryService</span></td>
-        <td><p>The directory service to search for files.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
-        <td><span class="parametername">clearCache</span></td>
-        <td><p>True if the directory service cache should be cleared before searching.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
-        <td><span class="parametername">cancellationToken</span></td>
-        <td><p>The cancellation token to cancel operation.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.iasyncenumerable-1">IAsyncEnumerable</a>&lt;<a class="xref" href="MediaBrowser.Model.Entities.MediaStream.html">MediaStream</a>&gt;</td>
-        <td><p>A list of external audio streams.</p>
+        <td><p>The <a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a> object containing FileExtensions, MediaDefaultFlags, MediaForcedFlags and MediaFlagDelimiters.</p>
 </td>
       </tr>
     </tbody>
@@ -318,7 +187,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_AudioResolver.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.AudioResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/AudioResolver.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

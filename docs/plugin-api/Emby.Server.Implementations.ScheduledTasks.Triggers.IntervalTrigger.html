@@ -94,6 +94,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Model.Tasks.ITaskTrigger.html">ITaskTrigger</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -123,7 +124,7 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public sealed class IntervalTrigger : ITaskTrigger</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class IntervalTrigger : ITaskTrigger, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -132,7 +133,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger__ctor_System_TimeSpan_MediaBrowser_Model_Tasks_TaskOptions_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.%23ctor(System.TimeSpan%2CMediaBrowser.Model.Tasks.TaskOptions)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L23">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L24">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger__ctor_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.#ctor*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger__ctor_System_TimeSpan_MediaBrowser_Model_Tasks_TaskOptions_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.#ctor(System.TimeSpan,MediaBrowser.Model.Tasks.TaskOptions)">IntervalTrigger(TimeSpan, TaskOptions)</h4>
@@ -174,7 +175,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_TaskOptions.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.TaskOptions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L37">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L38">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_TaskOptions_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.TaskOptions*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_TaskOptions" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.TaskOptions">TaskOptions</h4>
@@ -204,10 +205,25 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L111">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Dispose_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Dispose*"></a>
+  <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Dispose" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Start_MediaBrowser_Model_Tasks_TaskResult_Microsoft_Extensions_Logging_ILogger_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Start(MediaBrowser.Model.Tasks.TaskResult%2CMicrosoft.Extensions.Logging.ILogger%2CSystem.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L46">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L47">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Start_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Start*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Start_MediaBrowser_Model_Tasks_TaskResult_Microsoft_Extensions_Logging_ILogger_System_String_System_Boolean_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Start(MediaBrowser.Model.Tasks.TaskResult,Microsoft.Extensions.Logging.ILogger,System.String,System.Boolean)">Start(TaskResult, ILogger, String, Boolean)</h4>
@@ -259,7 +275,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Stop.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Stop%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L81">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L82">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Stop_" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Stop*"></a>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Stop" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Stop">Stop()</h4>
@@ -277,7 +293,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Triggered.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Triggered%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L32">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/ScheduledTasks/Triggers/IntervalTrigger.cs/#L33">View Source</a>
   </span>
   <h4 id="Emby_Server_Implementations_ScheduledTasks_Triggers_IntervalTrigger_Triggered" data-uid="Emby.Server.Implementations.ScheduledTasks.Triggers.IntervalTrigger.Triggered">Triggered</h4>
   <div class="markdown level1 summary"><p>Occurs when [triggered].</p>
@@ -305,6 +321,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Model.Tasks.ITaskTrigger.html">ITaskTrigger</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 </article>
           </div>

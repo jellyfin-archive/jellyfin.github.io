@@ -93,6 +93,7 @@
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="MediaBrowser.Controller.LiveTv.IListingsProvider.html">IListingsProvider</a></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -122,7 +123,7 @@
   <h6><strong>Assembly</strong>: Emby.Server.Implementations.dll</h6>
   <h5 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class SchedulesDirect : IListingsProvider</code></pre>
+    <pre><code class="lang-csharp hljs">public class SchedulesDirect : IListingsProvider, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -131,7 +132,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect__System_Net_Http_IHttpClientFactory_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.%23ctor(Microsoft.Extensions.Logging.ILogger%7BEmby.Server.Implementations.LiveTv.Listings.SchedulesDirect%7D%2CSystem.Net.Http.IHttpClientFactory)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L43">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L44">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect__ctor_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.#ctor*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect__ctor_Microsoft_Extensions_Logging_ILogger_Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect__System_Net_Http_IHttpClientFactory_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.#ctor(Microsoft.Extensions.Logging.ILogger{Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect},System.Net.Http.IHttpClientFactory)">SchedulesDirect(ILogger&lt;SchedulesDirect&gt;, IHttpClientFactory)</h4>
@@ -170,7 +171,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Name.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L52">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L53">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Name_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Name*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Name" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Name">Name</h4>
@@ -200,7 +201,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Type.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Type%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L55">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L56">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Type_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Type*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Type" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Type">Type</h4>
@@ -229,10 +230,59 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L828">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose*"></a>
+  <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L838">View Source</a>
+  </span>
+  <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose*"></a>
+  <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Dispose_System_Boolean_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Dispose(System.Boolean)">Dispose(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Releases unmanaged and optionally managed resources.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Dispose(bool disposing)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
+        <td><span class="parametername">disposing</span></td>
+        <td><p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetChannels_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetChannels(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L765">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L766">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetChannels_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetChannels*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetChannels_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetChannels(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.Threading.CancellationToken)">GetChannels(ListingsProviderInfo, CancellationToken)</h4>
@@ -284,7 +334,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetHeadends_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetHeadends(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.String%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L495">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L496">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetHeadends_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetHeadends*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetHeadends_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_String_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetHeadends(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.String,System.String,System.Threading.CancellationToken)">GetHeadends(ListingsProviderInfo, String, String, CancellationToken)</h4>
@@ -346,7 +396,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetLineups_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_String_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetLineups(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L760">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L761">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetLineups_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetLineups*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetLineups_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_String_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetLineups(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.String,System.String)">GetLineups(ListingsProviderInfo, String, String)</h4>
@@ -403,7 +453,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetProgramsAsync_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_DateTime_System_DateTime_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetProgramsAsync(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.String%2CSystem.DateTime%2CSystem.DateTime%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L73">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L74">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetProgramsAsync_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetProgramsAsync*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_GetProgramsAsync_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_String_System_DateTime_System_DateTime_System_Threading_CancellationToken_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.GetProgramsAsync(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.String,System.DateTime,System.DateTime,System.Threading.CancellationToken)">GetProgramsAsync(ListingsProviderInfo, String, DateTime, DateTime, CancellationToken)</h4>
@@ -470,7 +520,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Validate_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Validate(MediaBrowser.Model.LiveTv.ListingsProviderInfo%2CSystem.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L729">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/Emby.Server.Implementations/LiveTv/Listings/SchedulesDirect.cs/#L730">View Source</a>
   </span>
   <a id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Validate_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Validate*"></a>
   <h4 id="Emby_Server_Implementations_LiveTv_Listings_SchedulesDirect_Validate_MediaBrowser_Model_LiveTv_ListingsProviderInfo_System_Boolean_System_Boolean_" data-uid="Emby.Server.Implementations.LiveTv.Listings.SchedulesDirect.Validate(MediaBrowser.Model.LiveTv.ListingsProviderInfo,System.Boolean,System.Boolean)">Validate(ListingsProviderInfo, Boolean, Boolean)</h4>
@@ -525,6 +575,9 @@
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="MediaBrowser.Controller.LiveTv.IListingsProvider.html">IListingsProvider</a>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 </article>
           </div>
