@@ -84,11 +84,17 @@
 <p>The easiest way to check for issues is by checking the logs, which can be accessed through the console for the web client or in the log directory on your server.</p>
 <p>If media is unable transcode, first check the ffmpeg logs.</p>
 <h2 id="networking-issues">Networking Issues</h2>
-<p>If you can access the web interface over HTTP but not HTTPS, then you likely have an error with the certificate. Jellyfin uses a PFX file to handle HTTPS traffic. If you created the file with a password, then you will have to enter that value on the <strong>Networking</strong> page in the settings.</p>
-<p>If you can access the server locally but not outside of your LAN, then you likely have an issue with the router configuration. Check the port forwarding settings on your router to ensure the server is visible from outside your local network. You can also enable the &quot;Enable automatic port mapping&quot; option on the  <strong>Networking</strong> page of the server settings to have the server attempt to configure port forwarding on the router automatically if your router supports it.</p>
-<p>If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet. This would indicate either an incorrect address or an issue somewhere else on the network.</p>
+<p>If you can access the web interface over HTTP but not HTTPS, then you likely have an error with the certificate.
+Jellyfin uses a PFX file to handle HTTPS traffic.
+If you created the file with a password, then you will have to enter that value on the <strong>Networking</strong> page in the settings.</p>
+<p>If you can access the server locally but not outside of your LAN, then you likely have an issue with the router configuration.
+Check the port forwarding settings on your router to ensure the server is visible from outside your local network.
+You can also enable the &quot;Enable automatic port mapping&quot; option on the  <strong>Networking</strong> page of the server settings to have the server attempt to configure port forwarding on the router automatically if your router supports it.</p>
+<p>If there are no logs at all relating to web traffic, even over a LAN connection, then the server hasn&#39;t been reached at all yet.
+This would indicate either an incorrect address or an issue somewhere else on the network.</p>
 <h2 id="debug-logging">Debug Logging</h2>
-<p>To enable debug (much more verbose) logging, it is currently required to manually edit config files since no options exist yet on the frontend. Go to the Jellyfin configuration directory, find the <code>logging.default.json</code> file, and change the minimum level to debug as seen below.</p>
+<p>To enable debug (much more verbose) logging, it is currently required to manually edit config files since no options exist yet on the frontend.
+Go to the Jellyfin configuration directory, find the <code>logging.default.json</code> file, and change the minimum level to debug as seen below.</p>
 <pre><code class="lang-json">{
     &quot;Serilog&quot;: {
         &quot;MinimumLevel&quot;: {
@@ -96,25 +102,31 @@
         }
     }
 }
-</code></pre><p>Jellyfin will automatically reload the new configuration without needing to restart. The debug messages show up in the log with the <code>DBG</code> tag.</p>
+</code></pre><p>Jellyfin will automatically reload the new configuration without needing to restart.
+The debug messages show up in the log with the <code>DBG</code> tag.</p>
 <h2 id="real-time-monitoring">Real Time Monitoring</h2>
-<p>This will let Jellyfin automatically update libraries when files are added or modified. Unfortunately this feature is only supported on certain filesystems.</p>
-<p>For Linux systems, this is performed by <a href="https://en.wikipedia.org/wiki/Inotify">inotify</a>. NFS and rclone do not support inotify, but support can be provided by using a union file system such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a> with your networked file systems.</p>
+<p>This will let Jellyfin automatically update libraries when files are added or modified.
+Unfortunately this feature is only supported on certain filesystems.</p>
+<p>For Linux systems, this is performed by <a href="https://en.wikipedia.org/wiki/Inotify">inotify</a>.
+NFS and rclone do not support inotify, but support can be provided by using a union file system such as <a href="https://github.com/trapexit/mergerfs">mergerfs</a> with your networked file systems.</p>
 <p>Due to the library size, you can receive an error such as this:</p>
-<pre><code class="lang-log">[2019-12-31 09:11:36.652 -05:00]  [ERR] Error in Directory watcher for: &quot;/media/movies&quot;  System.IO.IOException: The configured user limit (8192) on the number of  inotify watches has been reached.
+<pre><code class="lang-log">[2019-12-31 09:11:36.652 -05:00]  [ERR] Error in Directory watcher for: &quot;/media/movies&quot;  System.IO.IOException: The configured user limit (8192) on the number of inotify watches has been reached.
 </code></pre><p>If you are running Debian, RedHat, or another similar Linux distribution, run the following in a terminal:</p>
-<pre><code class="lang-sh">echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p
+<pre><code class="lang-sh">echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.d/40-max-user-watches.conf &amp;&amp; sudo sysctl -p
 </code></pre><p>If you are running ArchLinux, run the following command instead:</p>
 <pre><code class="lang-sh">echo fs.inotify.max_user_watches=524288 | sudo tee /etc/sysctl.d/40-max-user-watches.conf &amp;&amp; sudo sysctl --system
-</code></pre><p>Then paste it in your terminal and press on enter to run it. For Docker, this needs to be done on the host, not the container. See <a href="https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers">here</a> for more information.</p>
+</code></pre><p>Then paste it in your terminal and press on enter to run it. For Docker, this needs to be done on the host, not the container.
+See <a href="https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers">here</a> for more information.</p>
 <h2 id="uninstall-macos">Uninstall MacOS</h2>
 <p>To fully remove all data of Jellyfin from MacOS, run these commands:</p>
 <pre><code class="lang-bash">rm -Rfv ~/.config/jellyfin
 rm -Rfv ~/.cache/jellyfin
 rm -Rfv ~/.local/share/jellyfin
 </code></pre><h2 id="unlock-locked-user-account">Unlock locked user account</h2>
-<p>When the admin account is locked out and the Forgot Password feature is not working, you have to unlock the user manually. To do that, you need to find the <code>jellyfin.db</code> file on your system. The default location on Linux is: <code>/var/lib/jellyfin/data/</code>.
-For paths in other environments, see <a href="https://jellyfin.org/docs/general/administration/configuration.html#server-paths">server paths</a>.</p>
+<p>When the admin account is locked out and the Forgot Password feature is not working, you have to unlock the user manually.
+To do that, you need to find the <code>jellyfin.db</code> file on your system.
+The default location on Linux is: <code>/var/lib/jellyfin/data/</code>.
+For paths in other environments, see <a class="xref" href="configuration.html#server-paths">server paths</a>.</p>
 <h3 id="linux-cli">Linux CLI</h3>
 <p>Before continuing, make sure that you have sqlite3 installed.
 When sqlite3 is not installed, you can install it under Debian based systems with <code>apt install sqlite3</code>.
@@ -125,7 +137,8 @@ update Permissions set Value = 0 where Kind = 2 and Permission_Permissions_Guid 
 .exit
 </code></pre><h3 id="sqlitebrowser">SQLiteBrowser</h3>
 <p>It is also possible to use <a href="https://sqlitebrowser.org">SQLiteBrowser</a> on systems with a desktop environment.
-Start by opening the database inside the SQLite Browser. After opening the database, navigate to the Execute SQL Tab and execute the following query:</p>
+Start by opening the database inside the SQLite Browser.
+After opening the database, navigate to the Execute SQL Tab and execute the following query:</p>
 <pre><code class="lang-sql">UPDATE Users SET InvalidLoginAttemptCount = 0 WHERE Username = &#39;LockedUserName&#39;;
 update Permissions set Value = 0 where Kind = 2 and Permission_Permissions_Guid in (select Id from Users where Username = &#39;LockedUserName&#39;);
 </code></pre></article>

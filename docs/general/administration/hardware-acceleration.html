@@ -444,7 +444,7 @@ V..... h264_amf             AMD AMF H.264 Encoder (codec h264)
 <pre><code class="lang-bash">cd amdgpu-pro-installer
 makepkg -si
 </code></pre></li>
-<li><p>Go to step 3 of <a class="xref" href="hardware-acceleration.html#amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</a> above.</p>
+<li><p>Go to step 3 of <a href="#amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</a> above.</p>
 </li>
 </ol>
 <h3 id="openmax-omx-encoding-on-raspberry-pi-3-and-4">OpenMAX OMX encoding on Raspberry Pi 3 and 4</h3>
@@ -533,7 +533,7 @@ VPP is prefered when both two tone-mapping options are checked on Intel.</p>
 <li><p><strong>On Linux or Docker:</strong></p>
 <ul>
 <li>For <strong>NVIDIA cards</strong> no further configuration is necessary.</li>
-<li><p>For <strong>AMD cards</strong>, install <code>amdgpu-pro</code> with opencl arguments (see <a class="xref" href="hardware-acceleration.html#amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</a> for more details):</p>
+<li><p>For <strong>AMD cards</strong>, install <code>amdgpu-pro</code> with opencl arguments (see <a href="#amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</a> for more details):</p>
 <pre><code class="lang-sh">sudo ./amdgpu-pro-install -y --opencl=pal,legacy
 sudo usermod -aG video $LOGNAME
 sudo usermod -aG render $LOGNAME
@@ -543,6 +543,10 @@ sudo usermod -aG render $LOGNAME
 If you are using the official Docker image or the one from linuxserver this step can be skipped.</p>
 <p><strong>VPP:</strong> Make sure <code>jellyfin-ffmpeg</code> 4.4.1-2 or higher is installed.
 Previous versions did not ship <code>intel-media-driver</code> thus it was required to be installed manually.</p>
+<ul>
+<li>When running on docker, the <strong>privileged</strong> flag is required for the OpenCL device to be recognized.
+You can do this by adding <code>--privileged</code> to your docker command or <code>privileged: true</code> to your docker compose file.</li>
+</ul>
 </li>
 </ul>
 <div class="WARNING"><h5>Warning</h5><p>Tone mapping on Intel VA-API and QSV <strong>requires an iGPU that supports 10-bit decoding</strong>, such as i3-7100 or J4105.</p>
