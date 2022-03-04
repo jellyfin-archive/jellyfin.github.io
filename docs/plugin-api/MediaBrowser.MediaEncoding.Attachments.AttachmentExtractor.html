@@ -186,7 +186,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Attachments/AttachmentExtractor.cs/#L255">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Attachments/AttachmentExtractor.cs/#L379">View Source</a>
   </span>
   <a id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose_" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose*"></a>
   <h4 id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose">Dispose()</h4>
@@ -201,7 +201,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Attachments/AttachmentExtractor.cs/#L265">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Attachments/AttachmentExtractor.cs/#L389">View Source</a>
   </span>
   <a id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose_" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose*"></a>
   <h4 id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_Dispose_System_Boolean_" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.Dispose(System.Boolean)">Dispose(Boolean)</h4>
@@ -227,6 +227,68 @@
         <td><span class="parametername">disposing</span></td>
         <td><p><code>true</code> to release both managed and unmanaged resources; <code>false</code> to release only unmanaged resources.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_ExtractAllAttachments_System_String_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.ExtractAllAttachments(System.String%2CMediaBrowser.Model.Dto.MediaSourceInfo%2CSystem.String%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.MediaEncoding/Attachments/AttachmentExtractor.cs/#L86">View Source</a>
+  </span>
+  <a id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_ExtractAllAttachments_" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.ExtractAllAttachments*"></a>
+  <h4 id="MediaBrowser_MediaEncoding_Attachments_AttachmentExtractor_ExtractAllAttachments_System_String_MediaBrowser_Model_Dto_MediaSourceInfo_System_String_System_Threading_CancellationToken_" data-uid="MediaBrowser.MediaEncoding.Attachments.AttachmentExtractor.ExtractAllAttachments(System.String,MediaBrowser.Model.Dto.MediaSourceInfo,System.String,System.Threading.CancellationToken)">ExtractAllAttachments(String, MediaSourceInfo, String, CancellationToken)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task ExtractAllAttachments(string inputFile, MediaSourceInfo mediaSource, string outputPath, CancellationToken cancellationToken)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">inputFile</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="MediaBrowser.Model.Dto.MediaSourceInfo.html">MediaSourceInfo</a></td>
+        <td><span class="parametername">mediaSource</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">outputPath</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
+        <td><span class="parametername">cancellationToken</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

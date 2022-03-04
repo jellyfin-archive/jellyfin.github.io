@@ -127,19 +127,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_MediaInfoResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_Emby_Naming_Common_NamingOptions_MediaBrowser_Model_Dlna_DlnaProfileType_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.MediaInfoResolver.%23ctor(MediaBrowser.Model.Globalization.ILocalizationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CEmby.Naming.Common.NamingOptions%2CMediaBrowser.Model.Dlna.DlnaProfileType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_MediaInfoResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_Emby_Naming_Common_NamingOptions_MediaBrowser_Model_Dlna_DlnaProfileType_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.MediaInfoResolver.%23ctor(MediaBrowser.Model.Globalization.ILocalizationManager%2CMediaBrowser.Controller.MediaEncoding.IMediaEncoder%2CMediaBrowser.Model.IO.IFileSystem%2CEmby.Naming.Common.NamingOptions%2CMediaBrowser.Model.Dlna.DlnaProfileType)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L63">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L67">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver__ctor_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.#ctor*"></a>
-  <h4 id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_Emby_Naming_Common_NamingOptions_MediaBrowser_Model_Dlna_DlnaProfileType_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.#ctor(MediaBrowser.Model.Globalization.ILocalizationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,Emby.Naming.Common.NamingOptions,MediaBrowser.Model.Dlna.DlnaProfileType)">MediaInfoResolver(ILocalizationManager, IMediaEncoder, NamingOptions, DlnaProfileType)</h4>
+  <h4 id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver__ctor_MediaBrowser_Model_Globalization_ILocalizationManager_MediaBrowser_Controller_MediaEncoding_IMediaEncoder_MediaBrowser_Model_IO_IFileSystem_Emby_Naming_Common_NamingOptions_MediaBrowser_Model_Dlna_DlnaProfileType_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.#ctor(MediaBrowser.Model.Globalization.ILocalizationManager,MediaBrowser.Controller.MediaEncoding.IMediaEncoder,MediaBrowser.Model.IO.IFileSystem,Emby.Naming.Common.NamingOptions,MediaBrowser.Model.Dlna.DlnaProfileType)">MediaInfoResolver(ILocalizationManager, IMediaEncoder, IFileSystem, NamingOptions, DlnaProfileType)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.html">MediaInfoResolver</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected MediaInfoResolver(ILocalizationManager localizationManager, IMediaEncoder mediaEncoder, NamingOptions namingOptions, DlnaProfileType type)</code></pre>
+    <pre><code class="lang-csharp hljs">protected MediaInfoResolver(ILocalizationManager localizationManager, IMediaEncoder mediaEncoder, IFileSystem fileSystem, NamingOptions namingOptions, DlnaProfileType type)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,6 +164,12 @@
 </td>
       </tr>
       <tr>
+        <td><a class="xref" href="MediaBrowser.Model.IO.IFileSystem.html">IFileSystem</a></td>
+        <td><span class="parametername">fileSystem</span></td>
+        <td><p>The file system.</p>
+</td>
+      </tr>
+      <tr>
         <td><a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a></td>
         <td><span class="parametername">namingOptions</span></td>
         <td><p>The <a class="xref" href="Emby.Naming.Common.NamingOptions.html">NamingOptions</a> object containing FileExtensions, MediaDefaultFlags, MediaForcedFlags and MediaFlagDelimiters.</p>
@@ -184,7 +190,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalFiles_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalFiles(MediaBrowser.Controller.Entities.Video%2CMediaBrowser.Controller.Providers.IDirectoryService%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L139">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L145">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalFiles_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalFiles*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalFiles_MediaBrowser_Controller_Entities_Video_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalFiles(MediaBrowser.Controller.Entities.Video,MediaBrowser.Controller.Providers.IDirectoryService,System.Boolean)">GetExternalFiles(Video, IDirectoryService, Boolean)</h4>
@@ -246,7 +252,7 @@
     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalStreamsAsync_MediaBrowser_Controller_Entities_Video_System_Int32_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_System_Threading_CancellationToken_.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalStreamsAsync(MediaBrowser.Controller.Entities.Video%2CSystem.Int32%2CMediaBrowser.Controller.Providers.IDirectoryService%2CSystem.Boolean%2CSystem.Threading.CancellationToken)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L84">View Source</a>
+    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L90">View Source</a>
   </span>
   <a id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalStreamsAsync_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalStreamsAsync*"></a>
   <h4 id="MediaBrowser_Providers_MediaInfo_MediaInfoResolver_GetExternalStreamsAsync_MediaBrowser_Controller_Entities_Video_System_Int32_MediaBrowser_Controller_Providers_IDirectoryService_System_Boolean_System_Threading_CancellationToken_" data-uid="MediaBrowser.Providers.MediaInfo.MediaInfoResolver.GetExternalStreamsAsync(MediaBrowser.Controller.Entities.Video,System.Int32,MediaBrowser.Controller.Providers.IDirectoryService,System.Boolean,System.Threading.CancellationToken)">GetExternalStreamsAsync(Video, Int32, IDirectoryService, Boolean, CancellationToken)</h4>
@@ -326,7 +332,7 @@
                     <a href="https://github.com/jellyfin/jellyfin-docs/new/master/apispec/new?filename=MediaBrowser_Providers_MediaInfo_MediaInfoResolver.md&amp;value=---%0Auid%3A%20MediaBrowser.Providers.MediaInfo.MediaInfoResolver%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L24" class="contribution-link">View Source</a>
+                    <a href="https://github.com/jellyfin/jellyfin/blob/master/MediaBrowser.Providers/MediaInfo/MediaInfoResolver.cs/#L25" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
