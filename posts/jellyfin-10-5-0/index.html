@@ -1,233 +1,54 @@
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
-  <title>Jellyfin Release - v10.5.0 - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
-  <link rel="stylesheet" href="/css/juxtapose.css">
-</head>
-
-	<body>
-		
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Jellyfin Release - v10.5.0 - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href=/favicon.ico>
+<link rel=stylesheet type=text/css href=/css/style.a84552485ad6a5c98068dddb3080a6c9e5e5fa07fbb9dc245dd2fcf40d70faa7.min.css>
+<link rel=stylesheet href=/css/juxtapose.css>
+</head><body>
 <div class="navbar navbar--extended navfix">
-  <nav class="nav__mobile"></nav>
-  <div class="container">
-    <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
-        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
-      </a>
-      <nav class="navbar__menu">
-        
-        <ul>
-          
-          <li><a href="/posts">Blog</a></li>
-          
-          <li><a href="/clients">Clients</a></li>
-          
-          <li><a href="/downloads">Downloads</a></li>
-          
-          <li><a href="/contribute">Contribute</a></li>
-          
-          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
-          
-          <li><a href="/contact">Contact</a></li>
-          
-        </ul>
-      </nav>
-      
-      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-    </div>
-  </div>
-</div>
-
-
-		
-
-<div class="page__header">
-	<div class="hero__overlay hero__overlay--gradient"></div>
-	<div class="hero__mask"></div>
-	<div class="page__header__inner">
-		<div class="container">
-			<div class="page__header__content">
-				<div class="page__header__content__inner" id="navConverter">
-					<h1 class="page__header__title">Jellyfin Release - v10.5.0</h1>
-					<p class="page__header__text">Our biggest release yet</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="page">
-	<div class="container">
-		<div class="page__inner">
-			<div class="page__main">
-				
-				<div class="text-container text-container--center">
-					<div>
-						<time class="article-date" datetime="2020-03-07T08:11:42&#43;01:00">
-							<span>7 Mar 2020</span>
-						</time>
-						<span> by </span>
-						
-						<a href="https://github.com/MrTimscampi">Julien Machiels</a>
-						<img class="github" src="https://github.com/MrTimscampi.png?size=40"/>
-						
-					</div>
-					<div><p>A myriad of improvements, bugfixes, and a look towards the future.</p>
-<p>With <strong>over 200 contributions</strong> and <strong>over 500 issues closed</strong>, this is our biggest release yet. We're releasing a bit before the expected Christmas deadline, but our anniversary release packs a lot of new features.</p>
-<p><a href="/downloads/" class="button button__accent">Download Jellyfin 10.5.0</a> <a href="https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0" class="button hero__button">Read the full release notes</a></p>
-<p>This post will feature some of the main enhancements available in Jellyfin version 10.5.0. For an exhaustive list of all the changes, you can find a complete list on <a href="https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0">GitHub</a>.</p>
-<h2 id="web-client">Web client</h2>
-<p>This cycle, part of our focus was on improving the look and feel of the web client.</p>
-<div class="juxtapose">
-    <img data-label="10.4.3" src="/images/posts/jellyfin-10-5-0/old-home.jpg" name="" />
-    <img data-label="10.5.0" src="/images/posts/jellyfin-10-5-0/new-home.jpg" name="" />
-</div>
-<p>The web client now uses the <strong>Noto Sans</strong> font for all the languages we ship with. This makes for a more consistent experience and ensures that <strong>multilingual libraries look unified</strong>.</p>
-<p>Jellyfin 10.5.0 ships with the Latin, Greek, Chinese, Japanese, Korean, Arabic, Cyrillic, Hebrew, Vietnamese and Devanagari versions of the Noto font, optimized for the web.</p>
-<div class="juxtapose">
-    <img data-label="10.4.3" src="/images/posts/jellyfin-10-5-0/old-details.png" name="" />
-    <img data-label="10.5.0" src="/images/posts/jellyfin-10-5-0/new-details.png" name="" />
-</div>
-<p>The most noticeable visual change is the <strong>new details page layout</strong>. It puts the artwork of your library front and center while looking more modern and polished.</p>
-<p>We have also completely <strong>overhauled SSA/ASS subtitle support</strong>. Through the use of asm.js and Web Assembly, we now provide improved rendering for these formats, fixing some long-standing issues for anime lovers. Note that this feature is still experimental. If you notice lag in the rendering of complex effects, you can enable burn-in by selecting <em>All complex formats</em> in <em>User Settings &gt; Subtitles &gt; Burn subtitles</em>.</p>
-<p>However, most of the new developments in the web client are not immediately visible. We spent a lot of time preparing and cleaning the code for future improvements.</p>
-<p><img data-label="10.5.0" src="/images/posts/jellyfin-10-5-0/webos-icons.png" name="" /></p>
-<p>A few long-standing issues for WebOS have been fixed as well, bringing us a bit closer to the release of the WebOS app. Among these, icons are now properly working and the client has been reported to work on both WebOS 3 and WebOS 4. We also have plans for the next release that should improve compatibility with earlier WebOS versions and streamline the support of clients using older browser versions as a base. Navigation in the TV layout has also been substantially improved, paving the way for navigation using a remote.</p>
-<p>Finally, several performance and responsiveness issues have been addressed. A rogue gamepad input loop is now properly handled, which prevents unnecessary repaintings by the browser and should improve performance. A previously disabled fade-in effect for images has also been enabled, making loading into a new page look smoother. It is now also possible to upload artwork in WEBP format.</p>
-<h2 id="server">Server</h2>
-<p>This cycle, our server team ported the code over to .NET Core 3.1. This move makes new features available to our developers, including support for ARM64 for Linux, compatibility with TLS v1.3 and better garbage collection on Docker, allowing for better memory usage when running in a container.</p>
-<p><strong>Support for AMD AMF hardware encoding</strong> is now available on Windows and Linux. We also improved DVD support when added as folders. The metadata provider for TheMovieDB now handles season images. Furthermore, various issues with media scanning, base URLs and DLNA were fixed. <strong>Full hardware acceleration</strong> for Raspberry Pi is also now supported for older models. For Raspeberry Pi 4, hardware-accelerated encoding for H264 is now supported on Raspbian, both using the LinuxServer.io Docker and the repository package.</p>
-<p>As part of a project to move the core metadata providers to plugins, MusicBrainz is now a default plugin and allows you to configure the URL of the instance you want to pull data from. This allows you to host an instance of MusicBrainz and sidestep the global rate limiting enforced by the main service.</p>
-<p>In addition to all these improvements, more tests have been added on the server-side to help developers track down issues with new and existing code. This ensures a faster development time and helps prevents regressions, which will now be caught earlier through automated testing.</p>
-<h2 id="documentation">Documentation</h2>
-<p>Our documentation team has also been hard at work improving both the user and developer documentation.</p>
-<p>Of note recently are the overhauls to the <a href="https://jellyfin.org/docs/general/networking/index.html">Networking</a> and <a href="https://jellyfin.org/docs/general/administration/hardware-acceleration.html">Hardware Acceleration</a> sections.</p>
-<p>We now provide an extensive <a href="https://jellyfin.org/docs/general/clients/codec-support.html">Codec Support</a> list and help on <a href="https://jellyfin.org/docs/general/clients/css-customization.html">CSS Customization</a>, with examples of useful CSS customizations to apply to your server via the Administration dashboard.</p>
-<h2 id="looking-towards-the-future">Looking towards the future</h2>
-<p>A lot is happening in the world of Jellyfin recently. Since the release of Jellyfin 10.4.0, we have seen a lot of new contributors joining the team and the speed of development has tremendously accelerated.</p>
-<p>With the influx of contributors, we have a few large scale projects for both the server and the web client that should bring a ton of improvements to Jellyfin. More information is already available on <a href="https://github.com/jellyfin/">GitHub</a> if you want to take part in the discussion or implementation.</p>
-<p>We'd like to thank all the contributors to this release for their hard work and dedication to making the best FOSS media server possible.</p>
+<nav class=nav__mobile></nav><div class=container>
+<div class=navbar__inner>
+<a href=/ class=navbar__logo>
+<img src=/images/banner-dark.svg alt="Jellyfin Banner">
+</a>
+<nav class=navbar__menu>
 <ul>
-<li><a href="https://github.com/Abbe98/">Abbe98</a></li>
-<li><a href="https://github.com/anthonylavado/">anthonylavado</a></li>
-<li><a href="https://github.com/Artiume/">Artiume</a></li>
-<li><a href="https://github.com/Bond-009/">Bond-009</a></li>
-<li><a href="https://github.com/bugfixin/">bugfixin</a></li>
-<li><a href="https://github.com/cvium/">cvium</a></li>
-<li><a href="https://github.com/dhartung/">dhartung</a></li>
-<li><a href="https://github.com/dinki/">dinki</a></li>
-<li><a href="https://github.com/dkanada/">dkanada</a></li>
-<li><a href="https://github.com/dmitrylyzo/">dmitrylyzo</a></li>
-<li><a href="https://github.com/DrPandemic/">DrPandemic</a></li>
-<li><a href="https://github.com/EraYaN/">EraYaN</a></li>
-<li><a href="https://github.com/ferferga/">ferferga</a></li>
-<li><a href="https://github.com/grafixeyehero/">grafixeyehero</a></li>
-<li><a href="https://github.com/joshuaboniface/">joshuaboniface</a></li>
-<li><a href="https://github.com/JustAMan/">JustAMan</a></li>
-<li><a href="https://github.com/LogicalPhallacy/">LogicalPhallacy</a></li>
-<li><a href="https://github.com/mark-monteiro/">mark-monteiro</a></li>
-<li><a href="https://github.com/MrTimscampi/">MrTimscampi</a></li>
-<li><a href="https://github.com/Narfinger/">Narfinger</a></li>
-<li><a href="https://github.com/Nickbert7/">Nickbert7</a></li>
-<li><a href="https://github.com/nvllsvm/">nvllsvm</a></li>
-<li><a href="https://github.com/nyanmisaka/">nyanmisaka</a></li>
-<li><a href="https://github.com/oddstr13/">oddstr13</a></li>
-<li><a href="https://github.com/ploughpuff/">ploughpuff</a></li>
-<li><a href="https://github.com/redSpoutnik/">redSpoutnik</a></li>
-<li><a href="https://github.com/sparky8251/">sparky8251</a></li>
-<li><a href="https://github.com/thornbill/">thornbill</a></li>
-<li><a href="https://github.com/vitorsemeano/">vitorsemeano</a></li>
-<li><a href="https://github.com/Wunax/">Wunax</a></li>
-<li><a href="https://github.com/YouKnowBlom/">YouKnowBlom</a></li>
-</ul>
-<p>If you'd like to take part in the development of Jellyfin, most of the contributors are available on <a href="https://github.com/jellyfin/">GitHub</a> or via <a href="/contact/">any of the ways on our contact page</a>.</p></div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-		<div class="footer footer--dark">
-    <div class="container">
-        <div class="footer__inner">
-            <p class="footer__textLogo">Jellyfin</p>
-            <div class="footer__data">
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
-                    
-                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
-                    
-                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-		<script
-	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"
-></script>
-
-<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-
-<script src="/js/juxtapose.min.js"></script>
-
-<div class="scripts">
-	
-	
-	
-	
-	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
-</div>
-
-	</body>
-</html>
+<li><a href=/posts>Blog</a></li><li><a href=/clients>Clients</a></li><li><a href=/downloads>Downloads</a></li><li><a href=/contribute>Contribute</a></li><li><a href=https://docs.jellyfin.org>Documentation</a></li><li><a href=/contact>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header>
+<div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner>
+<div class=container>
+<div class=page__header__content>
+<div class=page__header__content__inner id=navConverter>
+<h1 class=page__header__title>Jellyfin Release - v10.5.0</h1><p class=page__header__text>Our biggest release yet</p></div></div></div></div></div><div class=page>
+<div class=container>
+<div class=page__inner>
+<div class=page__main>
+<div class="text-container text-container--center">
+<div>
+<time class=article-date datetime=2020-03-07T08:11:42+01:00>
+<span>7 Mar 2020</span>
+</time>
+<span> by </span>
+<a href=https://github.com/MrTimscampi>Julien Machiels</a>
+<img class=github src="https://github.com/MrTimscampi.png?size=40">
+</div><div><p>A myriad of improvements, bugfixes, and a look towards the future.</p><p>With <strong>over 200 contributions</strong> and <strong>over 500 issues closed</strong>, this is our biggest release yet. We&rsquo;re releasing a bit before the expected Christmas deadline, but our anniversary release packs a lot of new features.</p><p><a href=/downloads/ class="button button__accent">Download Jellyfin 10.5.0</a> <a href=https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0 class="button hero__button">Read the full release notes</a></p><p>This post will feature some of the main enhancements available in Jellyfin version 10.5.0. For an exhaustive list of all the changes, you can find a complete list on <a href=https://github.com/jellyfin/jellyfin/releases/tag/v10.5.0>GitHub</a>.</p><h2 id=web-client>Web client</h2><p>This cycle, part of our focus was on improving the look and feel of the web client.</p><div class=juxtapose>
+<img data-label=10.4.3 src=/images/posts/jellyfin-10-5-0/old-home.jpg>
+<img data-label=10.5.0 src=/images/posts/jellyfin-10-5-0/new-home.jpg>
+</div><p>The web client now uses the <strong>Noto Sans</strong> font for all the languages we ship with. This makes for a more consistent experience and ensures that <strong>multilingual libraries look unified</strong>.</p><p>Jellyfin 10.5.0 ships with the Latin, Greek, Chinese, Japanese, Korean, Arabic, Cyrillic, Hebrew, Vietnamese and Devanagari versions of the Noto font, optimized for the web.</p><div class=juxtapose>
+<img data-label=10.4.3 src=/images/posts/jellyfin-10-5-0/old-details.png>
+<img data-label=10.5.0 src=/images/posts/jellyfin-10-5-0/new-details.png>
+</div><p>The most noticeable visual change is the <strong>new details page layout</strong>. It puts the artwork of your library front and center while looking more modern and polished.</p><p>We have also completely <strong>overhauled SSA/ASS subtitle support</strong>. Through the use of asm.js and Web Assembly, we now provide improved rendering for these formats, fixing some long-standing issues for anime lovers. Note that this feature is still experimental. If you notice lag in the rendering of complex effects, you can enable burn-in by selecting <em>All complex formats</em> in <em>User Settings > Subtitles > Burn subtitles</em>.</p><p>However, most of the new developments in the web client are not immediately visible. We spent a lot of time preparing and cleaning the code for future improvements.</p><img data-label=10.5.0 src=/images/posts/jellyfin-10-5-0/webos-icons.png>
+<p>A few long-standing issues for WebOS have been fixed as well, bringing us a bit closer to the release of the WebOS app. Among these, icons are now properly working and the client has been reported to work on both WebOS 3 and WebOS 4. We also have plans for the next release that should improve compatibility with earlier WebOS versions and streamline the support of clients using older browser versions as a base. Navigation in the TV layout has also been substantially improved, paving the way for navigation using a remote.</p><p>Finally, several performance and responsiveness issues have been addressed. A rogue gamepad input loop is now properly handled, which prevents unnecessary repaintings by the browser and should improve performance. A previously disabled fade-in effect for images has also been enabled, making loading into a new page look smoother. It is now also possible to upload artwork in WEBP format.</p><h2 id=server>Server</h2><p>This cycle, our server team ported the code over to .NET Core 3.1. This move makes new features available to our developers, including support for ARM64 for Linux, compatibility with TLS v1.3 and better garbage collection on Docker, allowing for better memory usage when running in a container.</p><p><strong>Support for AMD AMF hardware encoding</strong> is now available on Windows and Linux. We also improved DVD support when added as folders. The metadata provider for TheMovieDB now handles season images. Furthermore, various issues with media scanning, base URLs and DLNA were fixed. <strong>Full hardware acceleration</strong> for Raspberry Pi is also now supported for older models. For Raspeberry Pi 4, hardware-accelerated encoding for H264 is now supported on Raspbian, both using the LinuxServer.io Docker and the repository package.</p><p>As part of a project to move the core metadata providers to plugins, MusicBrainz is now a default plugin and allows you to configure the URL of the instance you want to pull data from. This allows you to host an instance of MusicBrainz and sidestep the global rate limiting enforced by the main service.</p><p>In addition to all these improvements, more tests have been added on the server-side to help developers track down issues with new and existing code. This ensures a faster development time and helps prevents regressions, which will now be caught earlier through automated testing.</p><h2 id=documentation>Documentation</h2><p>Our documentation team has also been hard at work improving both the user and developer documentation.</p><p>Of note recently are the overhauls to the <a href=https://jellyfin.org/docs/general/networking/index.html>Networking</a> and <a href=https://jellyfin.org/docs/general/administration/hardware-acceleration.html>Hardware Acceleration</a> sections.</p><p>We now provide an extensive <a href=https://jellyfin.org/docs/general/clients/codec-support.html>Codec Support</a> list and help on <a href=https://jellyfin.org/docs/general/clients/css-customization.html>CSS Customization</a>, with examples of useful CSS customizations to apply to your server via the Administration dashboard.</p><h2 id=looking-towards-the-future>Looking towards the future</h2><p>A lot is happening in the world of Jellyfin recently. Since the release of Jellyfin 10.4.0, we have seen a lot of new contributors joining the team and the speed of development has tremendously accelerated.</p><p>With the influx of contributors, we have a few large scale projects for both the server and the web client that should bring a ton of improvements to Jellyfin. More information is already available on <a href=https://github.com/jellyfin/>GitHub</a> if you want to take part in the discussion or implementation.</p><p>We&rsquo;d like to thank all the contributors to this release for their hard work and dedication to making the best FOSS media server possible.</p><ul>
+<li><a href=https://github.com/Abbe98/>Abbe98</a></li><li><a href=https://github.com/anthonylavado/>anthonylavado</a></li><li><a href=https://github.com/Artiume/>Artiume</a></li><li><a href=https://github.com/Bond-009/>Bond-009</a></li><li><a href=https://github.com/bugfixin/>bugfixin</a></li><li><a href=https://github.com/cvium/>cvium</a></li><li><a href=https://github.com/dhartung/>dhartung</a></li><li><a href=https://github.com/dinki/>dinki</a></li><li><a href=https://github.com/dkanada/>dkanada</a></li><li><a href=https://github.com/dmitrylyzo/>dmitrylyzo</a></li><li><a href=https://github.com/DrPandemic/>DrPandemic</a></li><li><a href=https://github.com/EraYaN/>EraYaN</a></li><li><a href=https://github.com/ferferga/>ferferga</a></li><li><a href=https://github.com/grafixeyehero/>grafixeyehero</a></li><li><a href=https://github.com/joshuaboniface/>joshuaboniface</a></li><li><a href=https://github.com/JustAMan/>JustAMan</a></li><li><a href=https://github.com/LogicalPhallacy/>LogicalPhallacy</a></li><li><a href=https://github.com/mark-monteiro/>mark-monteiro</a></li><li><a href=https://github.com/MrTimscampi/>MrTimscampi</a></li><li><a href=https://github.com/Narfinger/>Narfinger</a></li><li><a href=https://github.com/Nickbert7/>Nickbert7</a></li><li><a href=https://github.com/nvllsvm/>nvllsvm</a></li><li><a href=https://github.com/nyanmisaka/>nyanmisaka</a></li><li><a href=https://github.com/oddstr13/>oddstr13</a></li><li><a href=https://github.com/ploughpuff/>ploughpuff</a></li><li><a href=https://github.com/redSpoutnik/>redSpoutnik</a></li><li><a href=https://github.com/sparky8251/>sparky8251</a></li><li><a href=https://github.com/thornbill/>thornbill</a></li><li><a href=https://github.com/vitorsemeano/>vitorsemeano</a></li><li><a href=https://github.com/Wunax/>Wunax</a></li><li><a href=https://github.com/YouKnowBlom/>YouKnowBlom</a></li></ul><p>If you&rsquo;d like to take part in the development of Jellyfin, most of the contributors are available on <a href=https://github.com/jellyfin/>GitHub</a> or via <a href=/contact/>any of the ways on our contact page</a>.</p></div></div></div></div></div></div><div class="footer footer--dark">
+<div class=container>
+<div class=footer__inner>
+<p class=footer__textLogo>Jellyfin</p><div class=footer__data>
+<div class=footer__data__item>
+<div class=footer__row>Site content is licensed <a href=http://creativecommons.org/licenses/by-nd/4.0/>CC-BY-ND-4.0</a></div><div class=footer__row>Website hosted on <a href=https://github.com/jellyfin/jellyfin-blog>GitHub</a></div></div><div class=footer__data__item>
+<div class=footer__row>Check us out on <a href=https://github.com/jellyfin>GitHub</a></div><div class=footer__row>See our <a href=/docs/>Documentation</a></div></div><div class=footer__data__item>
+<div class=footer__row>Subscribe to our <a href=https://jellyfin.org/index.xml>RSS Feed</a></div></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script>
+<script src=/js/juxtapose.min.js></script>
+<div class=scripts>
+<script type=text/javascript src=/js/scripts.min.0df72b33226f78599b5b9820a5229c55eb02d9596691cf516423d7093b633023.js></script>
+</div></body></html>

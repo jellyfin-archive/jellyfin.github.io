@@ -1,299 +1,53 @@
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
-  <title>Jellyfin Release - v10.6.0 - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
-  <link rel="stylesheet" href="/css/juxtapose.css">
-</head>
-
-	<body>
-		
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Jellyfin Release - v10.6.0 - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href=/favicon.ico>
+<link rel=stylesheet type=text/css href=/css/style.a84552485ad6a5c98068dddb3080a6c9e5e5fa07fbb9dc245dd2fcf40d70faa7.min.css>
+<link rel=stylesheet href=/css/juxtapose.css>
+</head><body>
 <div class="navbar navbar--extended navfix">
-  <nav class="nav__mobile"></nav>
-  <div class="container">
-    <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
-        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
-      </a>
-      <nav class="navbar__menu">
-        
-        <ul>
-          
-          <li><a href="/posts">Blog</a></li>
-          
-          <li><a href="/clients">Clients</a></li>
-          
-          <li><a href="/downloads">Downloads</a></li>
-          
-          <li><a href="/contribute">Contribute</a></li>
-          
-          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
-          
-          <li><a href="/contact">Contact</a></li>
-          
-        </ul>
-      </nav>
-      
-      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-    </div>
-  </div>
-</div>
-
-
-		
-
-<div class="page__header">
-	<div class="hero__overlay hero__overlay--gradient"></div>
-	<div class="hero__mask"></div>
-	<div class="page__header__inner">
-		<div class="container">
-			<div class="page__header__content">
-				<div class="page__header__content__inner" id="navConverter">
-					<h1 class="page__header__title">Jellyfin Release - v10.6.0</h1>
-					<p class="page__header__text">Party together while social distancing</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="page">
-	<div class="container">
-		<div class="page__inner">
-			<div class="page__main">
-				
-				<div class="text-container text-container--center">
-					<div>
-						<time class="article-date" datetime="2020-07-19T11:42:00&#43;01:00">
-							<span>19 Jul 2020</span>
-						</time>
-						<span> by </span>
-						
-						<a href="https://github.com/MrTimscampi">Julien Machiels</a>
-						<img class="github" src="https://github.com/MrTimscampi.png?size=40"/>
-						
-					</div>
-					<div><p>After months of work, here comes another behemoth of a release, this time with over 30 major improvements and tons of fixes.</p>
-<p><a href="/downloads/" class="button button__accent">Download Jellyfin 10.6.0</a> <a href="https://github.com/jellyfin/jellyfin/releases/tag/v10.6.0" class="button hero__button">Read the full release notes</a></p>
-<p>At <strong>more than 500 pull requests</strong> merged between the server and the web client, Jellyfin 10.6.0 brings an incredible number of new features, improvements and bug fixes. It's a huge release and we have a lot to cover, so let's get to it!</p>
-<h1 id="syncplay">SyncPlay</h1>
-<p>Other services have recently launched various ways to view your content together with friends. With the current global situation, it makes a lot of sense, and Jellyfin isn't lagging behind.</p>
-<p>We're proud to announce Jellyfin 10.6's headline feature: <strong>SyncPlay</strong>.</p>
-<p>SyncPlay allows you to create rooms that other users or clients can join in order to share a common viewing experience. There is no limit on the number of users in a room and you are free to join the same room with the same user from multiple clients as well.</p>
-<p>Thanks to first-time contributor <a href="https://github.com/OancaAndrei">OancaAndrei</a>, who submitted pull requests to both the server and the web client (<a href="https://github.com/jellyfin/jellyfin/pull/2733">jf#2733</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1011">jf-web#1011</a>) in order to lay out the foundations for this, you can now watch movies together with friends and family, from the comfort of your respective homes.</p>
-<p>The feature is expected to be improved in future versions of Jellyfin, but has already been used by multiple users during the development cycle, with a delay between clients of only a couple of milliseconds.</p>
-<h1 id="migration-to-entity-framework-core">Migration to Entity Framework Core</h1>
-<p>It's been on our plate for a while, but thanks to new team member <a href="https://github.com/barronpm">barronpm</a>, we can finally say that the rewrite of our database model is progressing at a steady pace!</p>
-<p>Previously, Jellyfin used a combination of SQLite databases (yes, multiple ones), XML files and C# spaghetti to perform database operations. Information was split in multiple places, sometimes even duplicated and generally filtered in C# instead of using the database engine's faster processing.</p>
-<p>Over the course of this cycle, <a href="https://github.com/barronpm">barronpm</a> has been deciphering and untangling this mess, and managed to successfully migrate the ActivityDB (<a href="https://github.com/jellyfin/jellyfin/pull/2970">jf#2970</a>) and the UserDB (<a href="https://github.com/jellyfin/jellyfin/pull/3148">jf3148</a>) to EF Core.</p>
-<p>While there is still a ways to go, EF Core should bring faster database queries, support for multiple database engines, cleaner code, and significantly reduced memory usage. Currently, there is still a bridge to make the link between the new EF Core databases and the existing code, which will be cleaned up down the line.</p>
-<p>Part of the improved memory usage is due to our current inherited custom ORM caching everything in memory to make up for its slowness. For large databases, this could result in hundreds of megabytes of memory lost to caching. With EF Core, however, we leave the heavy lifting to the database engine, leading to better response times and less memory usage overall.</p>
-<p>Your databases will be automatically migrated when you first launch Jellyfin 10.6. While the migration process has been well tested over the past few months, issues may arise during the migration process. To prevent any data loss, please <strong>backup your existing data files</strong> before starting the migration process.</p>
-<h1 id="a-more-modern-web-client">A more modern web client</h1>
-<p>Our web client has long suffered of a massive amount of technical debt, due to the project we forked from only providing minified versions of the source and using antiquated web technologies. Some of these old technologies have, until recently, prevented us from being able to use modern JavaScript tooling, which would allow us to significantly clean the source.</p>
-<p>Thankfully, this is now behind us, as <a href="https://github.com/MrTimscampi">MrTimscampi</a> worked on improving the way we build the web client by using Gulp to perform various tasks necessary for building our current code structure with modern tools. (<a href="https://github.com/jellyfin/jellyfin-web/pull/862">jf-web#862</a>). This allows us to use bleeding edge JavaScript thanks to Babel, but also simplifies greatly our support for legacy clients (Most notably early WebOS and Tizen versions).</p>
-<p>Among the benefits of this move to Gulp for building the client, we have started moving away from <a href="https://requirejs.org/">RequireJS</a> and towards using standard <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules">EcmaScript Modules</a>, thanks to <a href="https://github.com/Camc314">Camc314</a>, <a href="https://github.com/cromefire/">cromefire</a>, <a href="https://github.com/delgan">Delgan</a>, <a href="https://github.com/dkanada/">dkanada</a>, <a href="https://github.com/grafixeyehero/">grafixeyehero</a>, <a href="https://github.com/MrTimscampi">MrTimscampi</a>, and <a href="https://github.com/sarab97/">sarab97</a>.</p>
-<p>This massive change, once it is complete, will allow us to simplify the web client build process, which will in turn allow us to start our migration to <a href="https://vuejs.org/">Vue</a> and significantly clean up our code. This should also bring some noticeable performance improvements to the web client down the line, as we tackle technical debt and remove deprecated practices and libraries from the code.</p>
-<h1 id="server-performance-bug-fixes-and-better-networking">Server performance, bug fixes and better networking</h1>
-<p>Our resident C# performance wizard, <a href="https://github.com/Bond-009">Bond-009</a> continues his quest to rid the server source of warnings and generally improve server performance, fixing multiple bugs in the process.</p>
-<p><a href="https://github.com/mark-monteiro">mark-monteiro</a> worked on multiple fixes for 10.6, including reworking the network settings accessible through the administration dashboard (<a href="https://github.com/jellyfin/jellyfin/pull/2774">jf#2774</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1140">jf-web#1140</a>).</p>
-<p>Team member <a href="https://github.com/nyanmisaka">nyanmisaka</a>, with some help from <a href="https://github.com/artiume/">artiume</a>, brings a number of improvements to transcoding (<a href="https://github.com/jellyfin/jellyfin/pull/2809">jf#2809</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1046">jf-web#1046</a>, <a href="https://github.com/jellyfin/jellyfin/pull/2821">jf#2821</a>, <a href="https://github.com/jellyfin/jellyfin/pull/2715">jf#2715</a>), with format toggles, options for toggling transcoding for HEVC and 10-bit VP9 videos off for older GPUs, providing support for the VP8/VP9 QSV and NVDEC decoders in FFmpeg 4.3, better support for UTF-16 subtitles and a host of other improvements.</p>
-<p>Further changes to the server include fixes for collection metadata issues (<a href="https://github.com/jellyfin/jellyfin/pull/3117">jf#3117</a>), improvements to the metadata providers (<a href="https://github.com/jellyfin/jellyfin/pull/3071">jf#3071</a>, <a href="https://github.com/jellyfin/jellyfin/pull/3056">jf#3056</a>, <a href="https://github.com/jellyfin/jellyfin/pull/3289">jf#3289</a>), and more core providers moved to plugins (<a href="https://github.com/jellyfin/jellyfin/pull/3208">jf#3208</a>).</p>
-<h1 id="more-web-client-improvements">More web client improvements</h1>
-<p><a href="https://github.com/itegulov">Itegulov</a> and <a href="https://github.com/dkanada/">dkanada</a> have improved support for ebooks by adding an EPUB reader based on <a href="https://github.com/futurepress/epub.js/">epub.js</a> (<a href="https://github.com/jellyfin/jellyfin-web/pull/1263">jf-web#1263</a>). Reader support for more formats is in progress for future versions, including CBZ/CBR and PDF.</p>
-<p>As we used the new 10.5 details screen over the last few months, we noticed some improvements we could make to the experience. Team member <a href="https://github.com/MrTimscampi">MrTimscampi</a>, along with input from the rest of the web team and some of our users, did a second pass on that screen (<a href="https://github.com/jellyfin/jellyfin-web/pull/949">jf-web#949</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1206">jf-web#1206</a>), tightening the design and cleaning some visual issues along the way. <a href="https://github.com/jellyfin/jellyfin-web/pull/1406">Delgan</a> put in the final touches to the page by avoiding a jump in the content when rendering the track selectors on the page (<a href="https://github.com/jellyfin/jellyfin-web/pull/1406">jf-web#1406</a>)</p>
-<div class="juxtapose">
-    <img data-label="10.5.5" src="/images/posts/jellyfin-10-6-0/details-10-5.png" name="" />
-    <img data-label="10.6.0" src="/images/posts/jellyfin-10-6-0/details-10-6.png" name="" />
-</div>
-<p>Team member <a href="https://github.com/ferferga">ferferga</a> and contributor <a href="https://github.com/samuel9554">samuel9554</a> have been working on redesigning our music experience. For 10.6, they overhauled our mobile music player interface and made significant changes to the mini player and the remote player UI (<a href="https://github.com/jellyfin/jellyfin-web/pull/1056">jf-web#1056</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1430">jf-web#1430</a>).</p>
-<div class="juxtapose">
-    <img data-label="10.5.5" src="/images/posts/jellyfin-10-6-0/player-10-5.png" name="" />
-    <img data-label="10.6.0" src="/images/posts/jellyfin-10-6-0/player-10-6.png" name="" />
-</div>
-<p><a href="https://github.com/MrTimscampi">MrTimscampi</a> also reworked the image loading system (<a href="https://github.com/jellyfin/jellyfin-web/pull/1065">jf-web#1065</a>), fixing some visual issues and improving memory usage by unloading out of view images. Along with this improvement, <a href="https://github.com/ferferga">ferferga</a>, <a href="https://github.com/GranPC">GranPC</a>, <a href="https://github.com/JustAMan">JustAMan</a> and <a href="https://github.com/Bond-009">Bond-009</a> have implemented <a href="https://blurha.sh/">Blurhash</a> placeholder support on both the server and the web client, which brings further visual refinement to the user interface.</p>
-<p><a href="https://github.com/JustAMan">JustAMan</a> went back over our new SSA/ASS subtitle rendering system and significantly improved performance for subtitles with heavy effects (<a href="https://github.com/jellyfin/jellyfin-web/pull/1144">jf-web#1144</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1095">jf-web#1095</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1048">jf-web#1048</a>, <a href="https://github.com/jellyfin/jellyfin-web/pull/1005">jf-web#1005</a>). While we still consider the feature experimental, it should now be able to render most subtitles accurately and with correct performance.</p>
-<p>Other improvements to the web client include a rewritten image viewer (<a href="https://github.com/jellyfin/jellyfin-web/pull/967">jf-web#967</a>), a configuration option for the number of items per page in libraries (<a href="https://github.com/jellyfin/jellyfin-web/pull/983">jf-web#983</a>), a toggle for the nightly version of the Chromecast client (<a href="https://github.com/jellyfin/jellyfin-web/pull/1242">jf-web#1242</a>), and support for multiple plugin repositories (<a href="https://github.com/jellyfin/jellyfin-web/pull/1393">jf-web#1393</a>, <a href="https://github.com/jellyfin/jellyfin/pull/3244">jf#3244</a>).</p>
-<h1 id="patreons-and-github-sponsors">Patreons and Github Sponsors</h1>
-<p>With the increased amount of activity on the project, we would like to give a signal boost to some ways to support the people working daily on Jellyfin.</p>
-<p>We want to stress that, while some of our contributors individually accept financial donations, Jellyfin and its features will <strong>never</strong> be hidden behind a paywall. Supporting the developers financially is entirely voluntary and won't give you any exclusive access to features or support, nor will it change the priority of your feature requests or issues.</p>
-<p><a href="https://github.com/anthonylavado">anthonylavado</a>, our wonderful PR and developer relation person, accepts donations through <a href="https://github.com/sponsors/anthonylavado">Github Sponsors</a>.</p>
-<p><a href="https://github.com/barronpm">barronpm</a>, whose main work is on the server portion of Jellyfin and who has been spearheading the migration to EF Core has recently opened <a href="https://www.patreon.com/barronpm">a Patreon page</a>.</p>
-<p><a href="https://github.com/dkanada/">dkanada</a>, whose work spreads from server to web client, accepts donations through <a href="https://github.com/sponsors/dkanada">Github Sponsors</a></p>
-<p><a href="https://github.com/ferferga">ferferga</a>, web client contributor, localization aficionado and all-around awesome person accepts donations through <a href="https://github.com/sponsors/ferferga">Github Sponsors</a>.</p>
-<p><a href="https://github.com/nielsvanvelzen">nielsvanvelzen</a>, who has been working hard on the Android TV client, can be supported on <a href="https://github.com/sponsors/nielsvanvelzen">Github Sponsors</a>.</p>
-<p><a href="https://github.com/MrTimscampi">MrTimscampi</a>, whose main work has been cleaning up and modernizing the web client, also recently opened <a href="https://www.patreon.com/mrtimscampi">a Patreon page</a>.</p>
-<p><a href="https://github.com/oddstr13">oddstr13</a>, one of the developers of Jellyfin for Kodi also accepts donations on <a href="https://github.com/sponsors/oddstr13">Github Sponsors</a>.</p>
-<p><a href="https://github.com/thornbill">thornbill</a> who handles the iOS and Android clients, and also contributes to the Android TV client, can be supported on <a href="https://github.com/sponsors/thornbill">Github Sponsors</a></p>
-<h1 id="contributors">Contributors</h1>
-<p>As an final note, we would like to thank all the contributors who worked on making Jellyfin 10.6 a reality:</p>
+<nav class=nav__mobile></nav><div class=container>
+<div class=navbar__inner>
+<a href=/ class=navbar__logo>
+<img src=/images/banner-dark.svg alt="Jellyfin Banner">
+</a>
+<nav class=navbar__menu>
 <ul>
-<li><a href="https://github.com/adavier/">adavier</a></li>
-<li><a href="https://github.com/aled/">aled</a></li>
-<li><a href="https://github.com/alset333/">alset333</a></li>
-<li><a href="https://github.com/anthonylavado/">anthonylavado</a></li>
-<li><a href="https://github.com/Artiume/">Artiume</a></li>
-<li><a href="https://github.com/balu92/">balu92</a></li>
-<li><a href="https://github.com/BaronGreenback/">BaronGreenback</a></li>
-<li><a href="https://github.com/barronpm/">barronpm</a></li>
-<li><a href="https://github.com/bendardenne/">bendardenne</a></li>
-<li><a href="https://github.com/Bond-009">Bond-009</a></li>
-<li><a href="https://github.com/Brissot/">Brissot</a></li>
-<li><a href="https://github.com/Camc314/">Camc314</a></li>
-<li><a href="https://github.com/ConfusedPolarBear/">ConfusedPolarBear</a></li>
-<li><a href="https://github.com/crobibero/">crobibero</a></li>
-<li><a href="https://github.com/cromefire/">cromefire</a></li>
-<li><a href="https://github.com/cvium/">cvium</a></li>
-<li><a href="https://github.com/dafo90/">dafo90</a></li>
-<li><a href="https://github.com/danieladov/">danieladov</a></li>
-<li><a href="https://github.com/Delgan/">Delgan</a></li>
-<li><a href="https://github.com/dkanada/">dkanada</a></li>
-<li><a href="https://github.com/dmitrylyzo/">dmitrylyzo</a></li>
-<li><a href="https://github.com/dtparr/">dtparr</a></li>
-<li><a href="https://github.com/EraYaN/">EraYaN</a></li>
-<li><a href="https://github.com/ferferga/">ferferga</a></li>
-<li><a href="https://github.com/fhriley/">fhriley</a></li>
-<li><a href="https://github.com/grafixeyehero/">grafixeyehero</a></li>
-<li><a href="https://github.com/GranPC/">GranPC</a></li>
-<li><a href="https://github.com/h1nk/">h1nk</a></li>
-<li><a href="https://github.com/hauntingEcho/">hauntingEcho</a></li>
-<li><a href="https://github.com/itegulov/">itegulov</a></li>
-<li><a href="https://github.com/iwalton3/">iwalton3</a></li>
-<li><a href="https://github.com/jairbubbles/">jairbubbles</a></li>
-<li><a href="https://github.com/joshuaboniface/">joshuaboniface</a></li>
-<li><a href="https://github.com/JustAMan/">JustAMan</a></li>
-<li><a href="https://github.com/kesslern/">kesslern</a></li>
-<li><a href="https://github.com/KGT1/">KGT1</a></li>
-<li><a href="https://github.com/KristupasSavickas/">KristupasSavickas</a></li>
-<li><a href="https://github.com/KucharczykL/">KucharczykL</a></li>
-<li><a href="https://github.com/lfoust/">lfoust</a></li>
-<li><a href="https://github.com/lyonzy/">lyonzy</a></li>
-<li><a href="https://github.com/macr/">macr</a></li>
-<li><a href="https://github.com/mark-monteiro">mark-monteiro</a></li>
-<li><a href="https://github.com/masterkoppa/">masterkoppa</a></li>
-<li><a href="https://github.com/mijofa/">mijofa</a></li>
-<li><a href="https://github.com/MrTimscampi/">MrTimscampi</a></li>
-<li><a href="https://github.com/Nazar78/">Nazar78</a></li>
-<li><a href="https://github.com/neilsb/">neilsb</a></li>
-<li><a href="https://github.com/Nickbert7/">Nickbert7</a></li>
-<li><a href="https://github.com/nielsvanvelzen/">nielsvanvelzen</a></li>
-<li><a href="https://github.com/nyanmisaka/">nyanmisaka</a></li>
-<li><a href="https://github.com/OancaAndrei/">OancaAndrei</a></li>
-<li><a href="https://github.com/oddstr13">oddstr13</a></li>
-<li><a href="https://github.com/ox0spy/">ox0spy</a></li>
-<li><a href="https://github.com/Polpetta/">Polpetta</a></li>
-<li><a href="https://github.com/PrplHaz4/">PrplHaz4</a></li>
-<li><a href="https://github.com/puschie286/">puschie286</a></li>
-<li><a href="https://github.com/pusta/">pusta</a></li>
-<li><a href="https://github.com/randrey/">randrey</a></li>
-<li><a href="https://github.com/redSpoutnik/">redSpoutnik</a></li>
-<li><a href="https://github.com/rexbron/">rexbron</a></li>
-<li><a href="https://github.com/rigtorp/">rigtorp</a></li>
-<li><a href="https://github.com/rotvel/">rotvel</a></li>
-<li><a href="https://github.com/samuel9554/">samuel9554</a></li>
-<li><a href="https://github.com/sarab97/">sarab97</a></li>
-<li><a href="https://github.com/Shawmon/">Shawmon</a></li>
-<li><a href="https://github.com/shayaantx/">shayaantx</a></li>
-<li><a href="https://github.com/sparky8251/">sparky8251</a></li>
-<li><a href="https://github.com/Stampede10343/">Stampede10343</a></li>
-<li><a href="https://github.com/telans/">telans</a></li>
-<li><a href="https://github.com/ThibaultNocchi/">ThibaultNocchi</a></li>
-<li><a href="https://github.com/thornbill/">thornbill</a></li>
-<li><a href="https://github.com/twinkybot/">twinkybot</a></li>
-<li><a href="https://github.com/Ullmie02/">Ullmie02</a></li>
-<li><a href="https://github.com/viaregio/">viaregio</a></li>
-<li><a href="https://github.com/villagra/">villagra</a></li>
-<li><a href="https://github.com/whooo/">whooo</a></li>
-<li><a href="https://github.com/xumix/">xumix</a></li>
-<li><a href="https://github.com/YouKnowBlom/">YouKnowBlom</a></li>
-<li><a href="https://github.com/ZadenRB/">ZadenRB</a></li>
-</ul></div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-		<div class="footer footer--dark">
-    <div class="container">
-        <div class="footer__inner">
-            <p class="footer__textLogo">Jellyfin</p>
-            <div class="footer__data">
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
-                    
-                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
-                    
-                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-		<script
-	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"
-></script>
-
-<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-
-<script src="/js/juxtapose.min.js"></script>
-
-<div class="scripts">
-	
-	
-	
-	
-	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
-</div>
-
-	</body>
-</html>
+<li><a href=/posts>Blog</a></li><li><a href=/clients>Clients</a></li><li><a href=/downloads>Downloads</a></li><li><a href=/contribute>Contribute</a></li><li><a href=https://docs.jellyfin.org>Documentation</a></li><li><a href=/contact>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header>
+<div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner>
+<div class=container>
+<div class=page__header__content>
+<div class=page__header__content__inner id=navConverter>
+<h1 class=page__header__title>Jellyfin Release - v10.6.0</h1><p class=page__header__text>Party together while social distancing</p></div></div></div></div></div><div class=page>
+<div class=container>
+<div class=page__inner>
+<div class=page__main>
+<div class="text-container text-container--center">
+<div>
+<time class=article-date datetime=2020-07-19T11:42:00+01:00>
+<span>19 Jul 2020</span>
+</time>
+<span> by </span>
+<a href=https://github.com/MrTimscampi>Julien Machiels</a>
+<img class=github src="https://github.com/MrTimscampi.png?size=40">
+</div><div><p>After months of work, here comes another behemoth of a release, this time with over 30 major improvements and tons of fixes.</p><p><a href=/downloads/ class="button button__accent">Download Jellyfin 10.6.0</a> <a href=https://github.com/jellyfin/jellyfin/releases/tag/v10.6.0 class="button hero__button">Read the full release notes</a></p><p>At <strong>more than 500 pull requests</strong> merged between the server and the web client, Jellyfin 10.6.0 brings an incredible number of new features, improvements and bug fixes. It&rsquo;s a huge release and we have a lot to cover, so let&rsquo;s get to it!</p><h1 id=syncplay>SyncPlay</h1><p>Other services have recently launched various ways to view your content together with friends. With the current global situation, it makes a lot of sense, and Jellyfin isn&rsquo;t lagging behind.</p><p>We&rsquo;re proud to announce Jellyfin 10.6&rsquo;s headline feature: <strong>SyncPlay</strong>.</p><p>SyncPlay allows you to create rooms that other users or clients can join in order to share a common viewing experience. There is no limit on the number of users in a room and you are free to join the same room with the same user from multiple clients as well.</p><p>Thanks to first-time contributor <a href=https://github.com/OancaAndrei>OancaAndrei</a>, who submitted pull requests to both the server and the web client (<a href=https://github.com/jellyfin/jellyfin/pull/2733>jf#2733</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1011>jf-web#1011</a>) in order to lay out the foundations for this, you can now watch movies together with friends and family, from the comfort of your respective homes.</p><p>The feature is expected to be improved in future versions of Jellyfin, but has already been used by multiple users during the development cycle, with a delay between clients of only a couple of milliseconds.</p><h1 id=migration-to-entity-framework-core>Migration to Entity Framework Core</h1><p>It&rsquo;s been on our plate for a while, but thanks to new team member <a href=https://github.com/barronpm>barronpm</a>, we can finally say that the rewrite of our database model is progressing at a steady pace!</p><p>Previously, Jellyfin used a combination of SQLite databases (yes, multiple ones), XML files and C# spaghetti to perform database operations. Information was split in multiple places, sometimes even duplicated and generally filtered in C# instead of using the database engine&rsquo;s faster processing.</p><p>Over the course of this cycle, <a href=https://github.com/barronpm>barronpm</a> has been deciphering and untangling this mess, and managed to successfully migrate the ActivityDB (<a href=https://github.com/jellyfin/jellyfin/pull/2970>jf#2970</a>) and the UserDB (<a href=https://github.com/jellyfin/jellyfin/pull/3148>jf3148</a>) to EF Core.</p><p>While there is still a ways to go, EF Core should bring faster database queries, support for multiple database engines, cleaner code, and significantly reduced memory usage. Currently, there is still a bridge to make the link between the new EF Core databases and the existing code, which will be cleaned up down the line.</p><p>Part of the improved memory usage is due to our current inherited custom ORM caching everything in memory to make up for its slowness. For large databases, this could result in hundreds of megabytes of memory lost to caching. With EF Core, however, we leave the heavy lifting to the database engine, leading to better response times and less memory usage overall.</p><p>Your databases will be automatically migrated when you first launch Jellyfin 10.6. While the migration process has been well tested over the past few months, issues may arise during the migration process. To prevent any data loss, please <strong>backup your existing data files</strong> before starting the migration process.</p><h1 id=a-more-modern-web-client>A more modern web client</h1><p>Our web client has long suffered of a massive amount of technical debt, due to the project we forked from only providing minified versions of the source and using antiquated web technologies. Some of these old technologies have, until recently, prevented us from being able to use modern JavaScript tooling, which would allow us to significantly clean the source.</p><p>Thankfully, this is now behind us, as <a href=https://github.com/MrTimscampi>MrTimscampi</a> worked on improving the way we build the web client by using Gulp to perform various tasks necessary for building our current code structure with modern tools. (<a href=https://github.com/jellyfin/jellyfin-web/pull/862>jf-web#862</a>). This allows us to use bleeding edge JavaScript thanks to Babel, but also simplifies greatly our support for legacy clients (Most notably early WebOS and Tizen versions).</p><p>Among the benefits of this move to Gulp for building the client, we have started moving away from <a href=https://requirejs.org/>RequireJS</a> and towards using standard <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules>EcmaScript Modules</a>, thanks to <a href=https://github.com/Camc314>Camc314</a>, <a href=https://github.com/cromefire/>cromefire</a>, <a href=https://github.com/delgan>Delgan</a>, <a href=https://github.com/dkanada/>dkanada</a>, <a href=https://github.com/grafixeyehero/>grafixeyehero</a>, <a href=https://github.com/MrTimscampi>MrTimscampi</a>, and <a href=https://github.com/sarab97/>sarab97</a>.</p><p>This massive change, once it is complete, will allow us to simplify the web client build process, which will in turn allow us to start our migration to <a href=https://vuejs.org/>Vue</a> and significantly clean up our code. This should also bring some noticeable performance improvements to the web client down the line, as we tackle technical debt and remove deprecated practices and libraries from the code.</p><h1 id=server-performance-bug-fixes-and-better-networking>Server performance, bug fixes and better networking</h1><p>Our resident C# performance wizard, <a href=https://github.com/Bond-009>Bond-009</a> continues his quest to rid the server source of warnings and generally improve server performance, fixing multiple bugs in the process.</p><p><a href=https://github.com/mark-monteiro>mark-monteiro</a> worked on multiple fixes for 10.6, including reworking the network settings accessible through the administration dashboard (<a href=https://github.com/jellyfin/jellyfin/pull/2774>jf#2774</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1140>jf-web#1140</a>).</p><p>Team member <a href=https://github.com/nyanmisaka>nyanmisaka</a>, with some help from <a href=https://github.com/artiume/>artiume</a>, brings a number of improvements to transcoding (<a href=https://github.com/jellyfin/jellyfin/pull/2809>jf#2809</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1046>jf-web#1046</a>, <a href=https://github.com/jellyfin/jellyfin/pull/2821>jf#2821</a>, <a href=https://github.com/jellyfin/jellyfin/pull/2715>jf#2715</a>), with format toggles, options for toggling transcoding for HEVC and 10-bit VP9 videos off for older GPUs, providing support for the VP8/VP9 QSV and NVDEC decoders in FFmpeg 4.3, better support for UTF-16 subtitles and a host of other improvements.</p><p>Further changes to the server include fixes for collection metadata issues (<a href=https://github.com/jellyfin/jellyfin/pull/3117>jf#3117</a>), improvements to the metadata providers (<a href=https://github.com/jellyfin/jellyfin/pull/3071>jf#3071</a>, <a href=https://github.com/jellyfin/jellyfin/pull/3056>jf#3056</a>, <a href=https://github.com/jellyfin/jellyfin/pull/3289>jf#3289</a>), and more core providers moved to plugins (<a href=https://github.com/jellyfin/jellyfin/pull/3208>jf#3208</a>).</p><h1 id=more-web-client-improvements>More web client improvements</h1><p><a href=https://github.com/itegulov>Itegulov</a> and <a href=https://github.com/dkanada/>dkanada</a> have improved support for ebooks by adding an EPUB reader based on <a href=https://github.com/futurepress/epub.js/>epub.js</a> (<a href=https://github.com/jellyfin/jellyfin-web/pull/1263>jf-web#1263</a>). Reader support for more formats is in progress for future versions, including CBZ/CBR and PDF.</p><p>As we used the new 10.5 details screen over the last few months, we noticed some improvements we could make to the experience. Team member <a href=https://github.com/MrTimscampi>MrTimscampi</a>, along with input from the rest of the web team and some of our users, did a second pass on that screen (<a href=https://github.com/jellyfin/jellyfin-web/pull/949>jf-web#949</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1206>jf-web#1206</a>), tightening the design and cleaning some visual issues along the way. <a href=https://github.com/jellyfin/jellyfin-web/pull/1406>Delgan</a> put in the final touches to the page by avoiding a jump in the content when rendering the track selectors on the page (<a href=https://github.com/jellyfin/jellyfin-web/pull/1406>jf-web#1406</a>)</p><div class=juxtapose>
+<img data-label=10.5.5 src=/images/posts/jellyfin-10-6-0/details-10-5.png>
+<img data-label=10.6.0 src=/images/posts/jellyfin-10-6-0/details-10-6.png>
+</div><p>Team member <a href=https://github.com/ferferga>ferferga</a> and contributor <a href=https://github.com/samuel9554>samuel9554</a> have been working on redesigning our music experience. For 10.6, they overhauled our mobile music player interface and made significant changes to the mini player and the remote player UI (<a href=https://github.com/jellyfin/jellyfin-web/pull/1056>jf-web#1056</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1430>jf-web#1430</a>).</p><div class=juxtapose>
+<img data-label=10.5.5 src=/images/posts/jellyfin-10-6-0/player-10-5.png>
+<img data-label=10.6.0 src=/images/posts/jellyfin-10-6-0/player-10-6.png>
+</div><p><a href=https://github.com/MrTimscampi>MrTimscampi</a> also reworked the image loading system (<a href=https://github.com/jellyfin/jellyfin-web/pull/1065>jf-web#1065</a>), fixing some visual issues and improving memory usage by unloading out of view images. Along with this improvement, <a href=https://github.com/ferferga>ferferga</a>, <a href=https://github.com/GranPC>GranPC</a>, <a href=https://github.com/JustAMan>JustAMan</a> and <a href=https://github.com/Bond-009>Bond-009</a> have implemented <a href=https://blurha.sh/>Blurhash</a> placeholder support on both the server and the web client, which brings further visual refinement to the user interface.</p><p><a href=https://github.com/JustAMan>JustAMan</a> went back over our new SSA/ASS subtitle rendering system and significantly improved performance for subtitles with heavy effects (<a href=https://github.com/jellyfin/jellyfin-web/pull/1144>jf-web#1144</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1095>jf-web#1095</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1048>jf-web#1048</a>, <a href=https://github.com/jellyfin/jellyfin-web/pull/1005>jf-web#1005</a>). While we still consider the feature experimental, it should now be able to render most subtitles accurately and with correct performance.</p><p>Other improvements to the web client include a rewritten image viewer (<a href=https://github.com/jellyfin/jellyfin-web/pull/967>jf-web#967</a>), a configuration option for the number of items per page in libraries (<a href=https://github.com/jellyfin/jellyfin-web/pull/983>jf-web#983</a>), a toggle for the nightly version of the Chromecast client (<a href=https://github.com/jellyfin/jellyfin-web/pull/1242>jf-web#1242</a>), and support for multiple plugin repositories (<a href=https://github.com/jellyfin/jellyfin-web/pull/1393>jf-web#1393</a>, <a href=https://github.com/jellyfin/jellyfin/pull/3244>jf#3244</a>).</p><h1 id=patreons-and-github-sponsors>Patreons and Github Sponsors</h1><p>With the increased amount of activity on the project, we would like to give a signal boost to some ways to support the people working daily on Jellyfin.</p><p>We want to stress that, while some of our contributors individually accept financial donations, Jellyfin and its features will <strong>never</strong> be hidden behind a paywall. Supporting the developers financially is entirely voluntary and won&rsquo;t give you any exclusive access to features or support, nor will it change the priority of your feature requests or issues.</p><p><a href=https://github.com/anthonylavado>anthonylavado</a>, our wonderful PR and developer relation person, accepts donations through <a href=https://github.com/sponsors/anthonylavado>Github Sponsors</a>.</p><p><a href=https://github.com/barronpm>barronpm</a>, whose main work is on the server portion of Jellyfin and who has been spearheading the migration to EF Core has recently opened <a href=https://www.patreon.com/barronpm>a Patreon page</a>.</p><p><a href=https://github.com/dkanada/>dkanada</a>, whose work spreads from server to web client, accepts donations through <a href=https://github.com/sponsors/dkanada>Github Sponsors</a></p><p><a href=https://github.com/ferferga>ferferga</a>, web client contributor, localization aficionado and all-around awesome person accepts donations through <a href=https://github.com/sponsors/ferferga>Github Sponsors</a>.</p><p><a href=https://github.com/nielsvanvelzen>nielsvanvelzen</a>, who has been working hard on the Android TV client, can be supported on <a href=https://github.com/sponsors/nielsvanvelzen>Github Sponsors</a>.</p><p><a href=https://github.com/MrTimscampi>MrTimscampi</a>, whose main work has been cleaning up and modernizing the web client, also recently opened <a href=https://www.patreon.com/mrtimscampi>a Patreon page</a>.</p><p><a href=https://github.com/oddstr13>oddstr13</a>, one of the developers of Jellyfin for Kodi also accepts donations on <a href=https://github.com/sponsors/oddstr13>Github Sponsors</a>.</p><p><a href=https://github.com/thornbill>thornbill</a> who handles the iOS and Android clients, and also contributes to the Android TV client, can be supported on <a href=https://github.com/sponsors/thornbill>Github Sponsors</a></p><h1 id=contributors>Contributors</h1><p>As an final note, we would like to thank all the contributors who worked on making Jellyfin 10.6 a reality:</p><ul>
+<li><a href=https://github.com/adavier/>adavier</a></li><li><a href=https://github.com/aled/>aled</a></li><li><a href=https://github.com/alset333/>alset333</a></li><li><a href=https://github.com/anthonylavado/>anthonylavado</a></li><li><a href=https://github.com/Artiume/>Artiume</a></li><li><a href=https://github.com/balu92/>balu92</a></li><li><a href=https://github.com/BaronGreenback/>BaronGreenback</a></li><li><a href=https://github.com/barronpm/>barronpm</a></li><li><a href=https://github.com/bendardenne/>bendardenne</a></li><li><a href=https://github.com/Bond-009>Bond-009</a></li><li><a href=https://github.com/Brissot/>Brissot</a></li><li><a href=https://github.com/Camc314/>Camc314</a></li><li><a href=https://github.com/ConfusedPolarBear/>ConfusedPolarBear</a></li><li><a href=https://github.com/crobibero/>crobibero</a></li><li><a href=https://github.com/cromefire/>cromefire</a></li><li><a href=https://github.com/cvium/>cvium</a></li><li><a href=https://github.com/dafo90/>dafo90</a></li><li><a href=https://github.com/danieladov/>danieladov</a></li><li><a href=https://github.com/Delgan/>Delgan</a></li><li><a href=https://github.com/dkanada/>dkanada</a></li><li><a href=https://github.com/dmitrylyzo/>dmitrylyzo</a></li><li><a href=https://github.com/dtparr/>dtparr</a></li><li><a href=https://github.com/EraYaN/>EraYaN</a></li><li><a href=https://github.com/ferferga/>ferferga</a></li><li><a href=https://github.com/fhriley/>fhriley</a></li><li><a href=https://github.com/grafixeyehero/>grafixeyehero</a></li><li><a href=https://github.com/GranPC/>GranPC</a></li><li><a href=https://github.com/h1nk/>h1nk</a></li><li><a href=https://github.com/hauntingEcho/>hauntingEcho</a></li><li><a href=https://github.com/itegulov/>itegulov</a></li><li><a href=https://github.com/iwalton3/>iwalton3</a></li><li><a href=https://github.com/jairbubbles/>jairbubbles</a></li><li><a href=https://github.com/joshuaboniface/>joshuaboniface</a></li><li><a href=https://github.com/JustAMan/>JustAMan</a></li><li><a href=https://github.com/kesslern/>kesslern</a></li><li><a href=https://github.com/KGT1/>KGT1</a></li><li><a href=https://github.com/KristupasSavickas/>KristupasSavickas</a></li><li><a href=https://github.com/KucharczykL/>KucharczykL</a></li><li><a href=https://github.com/lfoust/>lfoust</a></li><li><a href=https://github.com/lyonzy/>lyonzy</a></li><li><a href=https://github.com/macr/>macr</a></li><li><a href=https://github.com/mark-monteiro>mark-monteiro</a></li><li><a href=https://github.com/masterkoppa/>masterkoppa</a></li><li><a href=https://github.com/mijofa/>mijofa</a></li><li><a href=https://github.com/MrTimscampi/>MrTimscampi</a></li><li><a href=https://github.com/Nazar78/>Nazar78</a></li><li><a href=https://github.com/neilsb/>neilsb</a></li><li><a href=https://github.com/Nickbert7/>Nickbert7</a></li><li><a href=https://github.com/nielsvanvelzen/>nielsvanvelzen</a></li><li><a href=https://github.com/nyanmisaka/>nyanmisaka</a></li><li><a href=https://github.com/OancaAndrei/>OancaAndrei</a></li><li><a href=https://github.com/oddstr13>oddstr13</a></li><li><a href=https://github.com/ox0spy/>ox0spy</a></li><li><a href=https://github.com/Polpetta/>Polpetta</a></li><li><a href=https://github.com/PrplHaz4/>PrplHaz4</a></li><li><a href=https://github.com/puschie286/>puschie286</a></li><li><a href=https://github.com/pusta/>pusta</a></li><li><a href=https://github.com/randrey/>randrey</a></li><li><a href=https://github.com/redSpoutnik/>redSpoutnik</a></li><li><a href=https://github.com/rexbron/>rexbron</a></li><li><a href=https://github.com/rigtorp/>rigtorp</a></li><li><a href=https://github.com/rotvel/>rotvel</a></li><li><a href=https://github.com/samuel9554/>samuel9554</a></li><li><a href=https://github.com/sarab97/>sarab97</a></li><li><a href=https://github.com/Shawmon/>Shawmon</a></li><li><a href=https://github.com/shayaantx/>shayaantx</a></li><li><a href=https://github.com/sparky8251/>sparky8251</a></li><li><a href=https://github.com/Stampede10343/>Stampede10343</a></li><li><a href=https://github.com/telans/>telans</a></li><li><a href=https://github.com/ThibaultNocchi/>ThibaultNocchi</a></li><li><a href=https://github.com/thornbill/>thornbill</a></li><li><a href=https://github.com/twinkybot/>twinkybot</a></li><li><a href=https://github.com/Ullmie02/>Ullmie02</a></li><li><a href=https://github.com/viaregio/>viaregio</a></li><li><a href=https://github.com/villagra/>villagra</a></li><li><a href=https://github.com/whooo/>whooo</a></li><li><a href=https://github.com/xumix/>xumix</a></li><li><a href=https://github.com/YouKnowBlom/>YouKnowBlom</a></li><li><a href=https://github.com/ZadenRB/>ZadenRB</a></li></ul></div></div></div></div></div></div><div class="footer footer--dark">
+<div class=container>
+<div class=footer__inner>
+<p class=footer__textLogo>Jellyfin</p><div class=footer__data>
+<div class=footer__data__item>
+<div class=footer__row>Site content is licensed <a href=http://creativecommons.org/licenses/by-nd/4.0/>CC-BY-ND-4.0</a></div><div class=footer__row>Website hosted on <a href=https://github.com/jellyfin/jellyfin-blog>GitHub</a></div></div><div class=footer__data__item>
+<div class=footer__row>Check us out on <a href=https://github.com/jellyfin>GitHub</a></div><div class=footer__row>See our <a href=/docs/>Documentation</a></div></div><div class=footer__data__item>
+<div class=footer__row>Subscribe to our <a href=https://jellyfin.org/index.xml>RSS Feed</a></div></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script>
+<script src=/js/juxtapose.min.js></script>
+<div class=scripts>
+<script type=text/javascript src=/js/scripts.min.0df72b33226f78599b5b9820a5229c55eb02d9596691cf516423d7093b633023.js></script>
+</div></body></html>

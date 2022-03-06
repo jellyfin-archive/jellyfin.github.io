@@ -1,239 +1,106 @@
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
-  <title>Plugin Repositories - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
-  <link rel="stylesheet" href="/css/juxtapose.css">
-</head>
-
-	<body>
-		
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Plugin Repositories - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href=/favicon.ico>
+<link rel=stylesheet type=text/css href=/css/style.a84552485ad6a5c98068dddb3080a6c9e5e5fa07fbb9dc245dd2fcf40d70faa7.min.css>
+<link rel=stylesheet href=/css/juxtapose.css>
+</head><body>
 <div class="navbar navbar--extended navfix">
-  <nav class="nav__mobile"></nav>
-  <div class="container">
-    <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
-        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
-      </a>
-      <nav class="navbar__menu">
-        
-        <ul>
-          
-          <li><a href="/posts">Blog</a></li>
-          
-          <li><a href="/clients">Clients</a></li>
-          
-          <li><a href="/downloads">Downloads</a></li>
-          
-          <li><a href="/contribute">Contribute</a></li>
-          
-          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
-          
-          <li><a href="/contact">Contact</a></li>
-          
-        </ul>
-      </nav>
-      
-      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-    </div>
-  </div>
-</div>
-
-
-		
-
-<div class="page__header">
-	<div class="hero__overlay hero__overlay--gradient"></div>
-	<div class="hero__mask"></div>
-	<div class="page__header__inner">
-		<div class="container">
-			<div class="page__header__content">
-				<div class="page__header__content__inner" id="navConverter">
-					<h1 class="page__header__title">Plugin Repositories</h1>
-					<p class="page__header__text">Install Plugins from Anywhere!</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="page">
-	<div class="container">
-		<div class="page__inner">
-			<div class="page__main">
-				
-				<div class="text-container text-container--center">
-					<div>
-						<time class="article-date" datetime="2020-07-17T00:00:00Z">
-							<span>17 Jul 2020</span>
-						</time>
-						<span> by </span>
-						
-						<a href="https://github.com/dkanada">dkanada</a>
-						<img class="github" src="https://github.com/dkanada.png?size=40"/>
-						
-					</div>
-					<div><p>There have been several changes to plugins for the new release.
-Here's a quick post going over the biggest updates for developers and users alike.</p>
-<p>The most noticable change for everyone is that third party plugin repositories are now available!
-You can access the current list at Dashboard -&gt; Plugins -&gt; Repositories, and items can be added or removed as desired.
-Even the official repository can be removed if you'd prefer to avoid external calls to our server.</p>
-<h1 id="manifest">Manifest</h1>
-<p>For developers, the only required change is a JSON manifest at <em>any</em> location with versions that point to binary releases at <em>any</em> location.
-We don't require any specific method for hosting these files, as that would go against the ideals of the project.
+<nav class=nav__mobile></nav><div class=container>
+<div class=navbar__inner>
+<a href=/ class=navbar__logo>
+<img src=/images/banner-dark.svg alt="Jellyfin Banner">
+</a>
+<nav class=navbar__menu>
+<ul>
+<li><a href=/posts>Blog</a></li><li><a href=/clients>Clients</a></li><li><a href=/downloads>Downloads</a></li><li><a href=/contribute>Contribute</a></li><li><a href=https://docs.jellyfin.org>Documentation</a></li><li><a href=/contact>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header>
+<div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner>
+<div class=container>
+<div class=page__header__content>
+<div class=page__header__content__inner id=navConverter>
+<h1 class=page__header__title>Plugin Repositories</h1><p class=page__header__text>Install Plugins from Anywhere!</p></div></div></div></div></div><div class=page>
+<div class=container>
+<div class=page__inner>
+<div class=page__main>
+<div class="text-container text-container--center">
+<div>
+<time class=article-date datetime=2020-07-17T00:00:00Z>
+<span>17 Jul 2020</span>
+</time>
+<span> by </span>
+<a href=https://github.com/dkanada>dkanada</a>
+<img class=github src="https://github.com/dkanada.png?size=40">
+</div><div><p>There have been several changes to plugins for the new release.
+Here&rsquo;s a quick post going over the biggest updates for developers and users alike.</p><p>The most noticable change for everyone is that third party plugin repositories are now available!
+You can access the current list at Dashboard -> Plugins -> Repositories, and items can be added or removed as desired.
+Even the official repository can be removed if you&rsquo;d prefer to avoid external calls to our server.</p><h1 id=manifest>Manifest</h1><p>For developers, the only required change is a JSON manifest at <em>any</em> location with versions that point to binary releases at <em>any</em> location.
+We don&rsquo;t require any specific method for hosting these files, as that would go against the ideals of the project.
 The official repository uses nginx for the manifest and GitHub Releases for the binaries, but you could potentially host the manifest on GitHub as well.
-Here's an example manifest with all the properties.
-Please note that the GUID must be unique (both in the manifest and the plugin itself) if you want to avoid conflicts with other plugins.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
-    {
-        <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Metadata&#34;</span>,
-        <span style="color:#f92672">&#34;guid&#34;</span>: <span style="color:#e6db74">&#34;a4df60c5-6ab4-412a-8f79-2cab93fb2bc5&#34;</span>,
-        <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Anime&#34;</span>,
-        <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;This plugin supports several different metadata providers and options for organizing your collection.&#34;</span>,
-        <span style="color:#f92672">&#34;owner&#34;</span>: <span style="color:#e6db74">&#34;jellyfin&#34;</span>,
-        <span style="color:#f92672">&#34;overview&#34;</span>: <span style="color:#e6db74">&#34;Manage Your Anime in Jellyfin&#34;</span>,
-        <span style="color:#f92672">&#34;versions&#34;</span>: [
-            {
-                <span style="color:#f92672">&#34;checksum&#34;</span>: <span style="color:#e6db74">&#34;ad6db5175f4732308b5dd166f79a1c2d&#34;</span>,
-                <span style="color:#f92672">&#34;changelog&#34;</span>: <span style="color:#e6db74">&#34;bug fixes and improvements&#34;</span>,
-                <span style="color:#f92672">&#34;targetAbi&#34;</span>: <span style="color:#e6db74">&#34;10.6.0.0&#34;</span>,
-                <span style="color:#f92672">&#34;sourceUrl&#34;</span>: <span style="color:#e6db74">&#34;https://repo.jellyfin.org/releases/other/whats-this-plugin.zip.gif&#34;</span>,
-                <span style="color:#f92672">&#34;timestamp&#34;</span>: <span style="color:#e6db74">&#34;2020-03-27 06:02:58&#34;</span>,
-                <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.3.0&#34;</span>
-            }
-        ]
-    }
-]
-</code></pre></div><p>The official repository manifest for <a href="https://repo.jellyfin.org/releases/plugin/manifest-stable.json">stable plugins</a> can be used for more examples.
-You can also find the <a href="https://repo.jellyfin.org/releases/plugin/manifest.json">deprecated manifest</a> on the same domain for the old format.
-However, all new plugin updates (on the official repository) will go to the new manifest, so older verions of Jellyfin won't receive plugin updates.
-Plugins do have <a href="https://jellyfin.org/docs/plugin-api/MediaBrowser.Model.Updates.html">official documentation</a> on our DocFX instance.
+Here&rsquo;s an example manifest with all the properties.
+Please note that the GUID must be unique (both in the manifest and the plugin itself) if you want to avoid conflicts with other plugins.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json><span style=display:flex><span>[
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;category&#34;</span>: <span style=color:#e6db74>&#34;Metadata&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;guid&#34;</span>: <span style=color:#e6db74>&#34;a4df60c5-6ab4-412a-8f79-2cab93fb2bc5&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;Anime&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;description&#34;</span>: <span style=color:#e6db74>&#34;This plugin supports several different metadata providers and options for organizing your collection.&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;owner&#34;</span>: <span style=color:#e6db74>&#34;jellyfin&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;overview&#34;</span>: <span style=color:#e6db74>&#34;Manage Your Anime in Jellyfin&#34;</span>,
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&#34;versions&#34;</span>: [
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;checksum&#34;</span>: <span style=color:#e6db74>&#34;ad6db5175f4732308b5dd166f79a1c2d&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;changelog&#34;</span>: <span style=color:#e6db74>&#34;bug fixes and improvements&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;targetAbi&#34;</span>: <span style=color:#e6db74>&#34;10.6.0.0&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;sourceUrl&#34;</span>: <span style=color:#e6db74>&#34;https://repo.jellyfin.org/releases/other/whats-this-plugin.zip.gif&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;timestamp&#34;</span>: <span style=color:#e6db74>&#34;2020-03-27 06:02:58&#34;</span>,
+</span></span><span style=display:flex><span>                <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#e6db74>&#34;1.0.3.0&#34;</span>
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        ]
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>]
+</span></span></code></pre></div><p>The official repository manifest for <a href=https://repo.jellyfin.org/releases/plugin/manifest-stable.json>stable plugins</a> can be used for more examples.
+You can also find the <a href=https://repo.jellyfin.org/releases/plugin/manifest.json>deprecated manifest</a> on the same domain for the old format.
+However, all new plugin updates (on the official repository) will go to the new manifest, so older verions of Jellyfin won&rsquo;t receive plugin updates.
+Plugins do have <a href=https://jellyfin.org/docs/plugin-api/MediaBrowser.Model.Updates.html>official documentation</a> on our DocFX instance.
 Please be aware that our documentation is still a work in progress, since a lot of the C# code still has very little information for tools like this.
-Things are improving thanks to the diligent server team though, who have been slowly adding information throughout the codebase.</p>
-<h1 id="tools">Tools</h1>
-<p>One excellent tool that might help with repository management is <a href="https://github.com/oddstr13/jellyfin-plugin-repository-manager">jellyfin-plugin-repository-manager</a> by Oddstr13, a frequent contributor.
+Things are improving thanks to the diligent server team though, who have been slowly adding information throughout the codebase.</p><h1 id=tools>Tools</h1><p>One excellent tool that might help with repository management is <a href=https://github.com/oddstr13/jellyfin-plugin-repository-manager>jellyfin-plugin-repository-manager</a> by Oddstr13, a frequent contributor.
 He did mention that his tool works much better with nginx than GitHub releases, but feel free to check it out!
-Another useful tool might be the <a href="https://github.com/jellyfin/jellyfin-build">jellyfin-build</a> repository, which used to be the method used for updates on the official repository.
-We'll probably be migrating to the repository manager linked above though, since most of the other build systems have moved to Azure.</p>
-<h1 id="code">Code</h1>
-<p>There are always a few changes to the ABI you might want to know about if you maintain a plugin.
-I'll include the most important ones for 10.6.0 here to hopefully reduce any issues with the update.</p>
-<p>The first batch comes from the HTML for settings on the web client, which has been going through an overhaul lately.
-One of the long term goals we have is deprecating jQuery entirely, since it's not 2008 anymore and better tools have come along.
-That does mean plugin pages will have to migrate off it at some point, but we haven't made the full transition yet, don't worry.
-Although jQuery will stick around a bit longer, we did remove two custom scripts in the web source that&hellip;extended the functionality a bit.
-There was one for <a href="https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/selectmenu.js">select menus</a> and yet another for <a href="https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/fnchecked.js">checkbox</a> elements.
-I can only assume the goal was compatibility with older browsers or clients at the time, but we've been pushing extremely hard to modernize the web client.
-That means avoiding abandoned libraries, ancient JavaScript practices, and definitely custom extensions for dependencies we don't even want in the code.
-The easiest fix for this change is to migrate from jQuery to vanilla JavaScript for checkboxes and select menus in the HTML source.</p>
-<p>There were also several changes to the C# ABI that might affect your plugin.
+Another useful tool might be the <a href=https://github.com/jellyfin/jellyfin-build>jellyfin-build</a> repository, which used to be the method used for updates on the official repository.
+We&rsquo;ll probably be migrating to the repository manager linked above though, since most of the other build systems have moved to Azure.</p><h1 id=code>Code</h1><p>There are always a few changes to the ABI you might want to know about if you maintain a plugin.
+I&rsquo;ll include the most important ones for 10.6.0 here to hopefully reduce any issues with the update.</p><p>The first batch comes from the HTML for settings on the web client, which has been going through an overhaul lately.
+One of the long term goals we have is deprecating jQuery entirely, since it&rsquo;s not 2008 anymore and better tools have come along.
+That does mean plugin pages will have to migrate off it at some point, but we haven&rsquo;t made the full transition yet, don&rsquo;t worry.
+Although jQuery will stick around a bit longer, we did remove two custom scripts in the web source that&mldr;extended the functionality a bit.
+There was one for <a href=https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/selectmenu.js>select menus</a> and yet another for <a href=https://github.com/jellyfin/jellyfin-web/blob/release-10.5.z/src/legacy/fnchecked.js>checkbox</a> elements.
+I can only assume the goal was compatibility with older browsers or clients at the time, but we&rsquo;ve been pushing extremely hard to modernize the web client.
+That means avoiding abandoned libraries, ancient JavaScript practices, and definitely custom extensions for dependencies we don&rsquo;t even want in the code.
+The easiest fix for this change is to migrate from jQuery to vanilla JavaScript for checkboxes and select menus in the HTML source.</p><p>There were also several changes to the C# ABI that might affect your plugin.
 The most troublesome is probably the ILogger tweaks, which were made to improve the server logs by appending the class name to every line.
-You'll also find quite a few changes caused by the new database migration (Jellyfin.Data is the new namespace for these objects) and a few unrelated items.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">IExternalID.Name -&gt; IExternalID.ProviderName
-MediaBrowser.Controller.Entities.User -&gt; Jellyfin.Data.Entities.User
-MetadataProviders -&gt; MetadataProvider
-CompressionMethod -&gt; CompressionMethods
-RequestContentBytes <span style="color:#f92672">=</span> request -&gt; RequestContent <span style="color:#f92672">=</span> Encoding.UTF8.GetString<span style="color:#f92672">(</span>request<span style="color:#f92672">)</span>
-User.Name -&gt; User.Username
-item.GetDisplayExtras<span style="color:#f92672">(</span><span style="color:#f92672">)</span> -&gt; item.GetExtras<span style="color:#f92672">(</span>BaseItem.DisplayExtraTypes<span style="color:#f92672">)</span>
-user.RootFolder -&gt; libraryManager.GetUserRootFolder<span style="color:#f92672">(</span><span style="color:#f92672">)</span>
-</code></pre></div><h1 id="future">Future</h1>
-<p>Third party repositories are the first step in a larger plan to vastly increase plugin usage within the codebase.
+You&rsquo;ll also find quite a few changes caused by the new database migration (Jellyfin.Data is the new namespace for these objects) and a few unrelated items.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>IExternalID.Name -&gt; IExternalID.ProviderName
+</span></span><span style=display:flex><span>MediaBrowser.Controller.Entities.User -&gt; Jellyfin.Data.Entities.User
+</span></span><span style=display:flex><span>MetadataProviders -&gt; MetadataProvider
+</span></span><span style=display:flex><span>CompressionMethod -&gt; CompressionMethods
+</span></span><span style=display:flex><span>RequestContentBytes <span style=color:#f92672>=</span> request -&gt; RequestContent <span style=color:#f92672>=</span> Encoding.UTF8.GetString<span style=color:#f92672>(</span>request<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>User.Name -&gt; User.Username
+</span></span><span style=display:flex><span>item.GetDisplayExtras<span style=color:#f92672>()</span> -&gt; item.GetExtras<span style=color:#f92672>(</span>BaseItem.DisplayExtraTypes<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>user.RootFolder -&gt; libraryManager.GetUserRootFolder<span style=color:#f92672>()</span>
+</span></span></code></pre></div><h1 id=future>Future</h1><p>Third party repositories are the first step in a larger plan to vastly increase plugin usage within the codebase.
 They will allow anyone to maintain their own plugin and push updates as quickly as they want, without having to deal with a centralized system.
-It also gives users the power to reduce their reliance on an internet connection by allowing all repositories to be removed at will.</p>
-<p>We understand some of these changes might be annoying to update within your plugin, but hopefully that will also see an improvement very soon.
+It also gives users the power to reduce their reliance on an internet connection by allowing all repositories to be removed at will.</p><p>We understand some of these changes might be annoying to update within your plugin, but hopefully that will also see an improvement very soon.
 The next goal (now that more than one repository can be used at the same time) will be an unstable repository for plugins.
 This will fix the long-standing request for better plugin support on the unstable version, which has been a blocker for many users.
-It will also have the side effect of requiring an unstable NuGet repository for the C# ABI, thus helping third party plugin developers test their plugins against any changes to the ABI before a server update has landed.</p>
-<p>If you develop a plugin (or client) and would like to be included in our mailing list for third party developers, please contact us through Matrix or send an email to get the details.
+It will also have the side effect of requiring an unstable NuGet repository for the C# ABI, thus helping third party plugin developers test their plugins against any changes to the ABI before a server update has landed.</p><p>If you develop a plugin (or client) and would like to be included in our mailing list for third party developers, please contact us through Matrix or send an email to get the details.
 The main goal here is excellent support for plugins and unofficial clients, so if you have any suggestions definitely contact us on one of our public forums.
-Hopefully, the C# ABI will stabilize over time and huge changes will become more infrequent so we can focus on making plugins as great as possible!</p></div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-		<div class="footer footer--dark">
-    <div class="container">
-        <div class="footer__inner">
-            <p class="footer__textLogo">Jellyfin</p>
-            <div class="footer__data">
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
-                    
-                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
-                    
-                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-		<script
-	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"
-></script>
-
-<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-
-<script src="/js/juxtapose.min.js"></script>
-
-<div class="scripts">
-	
-	
-	
-	
-	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
-</div>
-
-	</body>
-</html>
+Hopefully, the C# ABI will stabilize over time and huge changes will become more infrequent so we can focus on making plugins as great as possible!</p></div></div></div></div></div></div><div class="footer footer--dark">
+<div class=container>
+<div class=footer__inner>
+<p class=footer__textLogo>Jellyfin</p><div class=footer__data>
+<div class=footer__data__item>
+<div class=footer__row>Site content is licensed <a href=http://creativecommons.org/licenses/by-nd/4.0/>CC-BY-ND-4.0</a></div><div class=footer__row>Website hosted on <a href=https://github.com/jellyfin/jellyfin-blog>GitHub</a></div></div><div class=footer__data__item>
+<div class=footer__row>Check us out on <a href=https://github.com/jellyfin>GitHub</a></div><div class=footer__row>See our <a href=/docs/>Documentation</a></div></div><div class=footer__data__item>
+<div class=footer__row>Subscribe to our <a href=https://jellyfin.org/index.xml>RSS Feed</a></div></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script>
+<script src=/js/juxtapose.min.js></script>
+<div class=scripts>
+<script type=text/javascript src=/js/scripts.min.0df72b33226f78599b5b9820a5229c55eb02d9596691cf516423d7093b633023.js></script>
+</div></body></html>

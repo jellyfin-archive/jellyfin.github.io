@@ -1,117 +1,38 @@
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
-  <title>Please refresh your Jellyfin Apt key on Debian/Ubuntu - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
-  <link rel="stylesheet" href="/css/juxtapose.css">
-</head>
-
-	<body>
-		
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Please refresh your Jellyfin Apt key on Debian/Ubuntu - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href=/favicon.ico>
+<link rel=stylesheet type=text/css href=/css/style.a84552485ad6a5c98068dddb3080a6c9e5e5fa07fbb9dc245dd2fcf40d70faa7.min.css>
+<link rel=stylesheet href=/css/juxtapose.css>
+</head><body>
 <div class="navbar navbar--extended navfix">
-  <nav class="nav__mobile"></nav>
-  <div class="container">
-    <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
-        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
-      </a>
-      <nav class="navbar__menu">
-        
-        <ul>
-          
-          <li><a href="/posts">Blog</a></li>
-          
-          <li><a href="/clients">Clients</a></li>
-          
-          <li><a href="/downloads">Downloads</a></li>
-          
-          <li><a href="/contribute">Contribute</a></li>
-          
-          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
-          
-          <li><a href="/contact">Contact</a></li>
-          
-        </ul>
-      </nav>
-      
-      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-    </div>
-  </div>
-</div>
-
-
-		
-
-<div class="page__header">
-	<div class="hero__overlay hero__overlay--gradient"></div>
-	<div class="hero__mask"></div>
-	<div class="page__header__inner">
-		<div class="container">
-			<div class="page__header__content">
-				<div class="page__header__content__inner" id="navConverter">
-					<h1 class="page__header__title">Please refresh your Jellyfin Apt key on Debian/Ubuntu</h1>
-					<p class="page__header__text">Our old key is expiring December 15th, read on to find out how to update</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="page">
-	<div class="container">
-		<div class="page__inner">
-			<div class="page__main">
-				
-				<div class="text-container text-container--center">
-					<div>
-						<time class="article-date" datetime="2020-11-24T00:00:00Z">
-							<span>24 Nov 2020</span>
-						</time>
-						<span> by </span>
-						
-						<a href="https://github.com/joshuaboniface">Joshua Boniface</a>
-						<img class="github" src="https://github.com/joshuaboniface.png?size=40"/>
-						
-					</div>
-					<div><p>Our GPG key for signing our Debian and Ubuntu repositories (<code>https://repo.jellyfin.org/debian</code> and <code>https://repo.jellyfin.org/ubuntu</code>) is set to expire next month.</p>
-<p>Unfortunately this was an oversight when we first set up this repo, and we never provided any convenient way to update this. As a remedy, we've removed the expiry on the key and put a new version on the repo. This brings us into line with numerous other 3rd-party Debian repositories, such as the Microsoft .NET and Docker repositories which also use an expiry-less key, and should avoid any such issues again, barring a need to rotate it. This does however require manually refreshing the key on your system.</p>
-<p>Doing this is as easy as re-running the command from the install docs; it will overwrite the old key with the new one:</p>
-<pre><code>wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
-</code></pre><p>You can verify this worked by checking the <code>apt-key</code> output like so; this is a good practice anyways to verify that the key has not been altered, as its signatures and fingerprint should all match:</p>
-<pre><code>$ apt-key list | grep -C2 jellyfin  # Notice the expires: field
+<nav class=nav__mobile></nav><div class=container>
+<div class=navbar__inner>
+<a href=/ class=navbar__logo>
+<img src=/images/banner-dark.svg alt="Jellyfin Banner">
+</a>
+<nav class=navbar__menu>
+<ul>
+<li><a href=/posts>Blog</a></li><li><a href=/clients>Clients</a></li><li><a href=/downloads>Downloads</a></li><li><a href=/contribute>Contribute</a></li><li><a href=https://docs.jellyfin.org>Documentation</a></li><li><a href=/contact>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header>
+<div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner>
+<div class=container>
+<div class=page__header__content>
+<div class=page__header__content__inner id=navConverter>
+<h1 class=page__header__title>Please refresh your Jellyfin Apt key on Debian/Ubuntu</h1><p class=page__header__text>Our old key is expiring December 15th, read on to find out how to update</p></div></div></div></div></div><div class=page>
+<div class=container>
+<div class=page__inner>
+<div class=page__main>
+<div class="text-container text-container--center">
+<div>
+<time class=article-date datetime=2020-11-24T00:00:00Z>
+<span>24 Nov 2020</span>
+</time>
+<span> by </span>
+<a href=https://github.com/joshuaboniface>Joshua Boniface</a>
+<img class=github src="https://github.com/joshuaboniface.png?size=40">
+</div><div><p>Our GPG key for signing our Debian and Ubuntu repositories (<code>https://repo.jellyfin.org/debian</code> and <code>https://repo.jellyfin.org/ubuntu</code>) is set to expire next month.</p><p>Unfortunately this was an oversight when we first set up this repo, and we never provided any convenient way to update this. As a remedy, we&rsquo;ve removed the expiry on the key and put a new version on the repo. This brings us into line with numerous other 3rd-party Debian repositories, such as the Microsoft .NET and Docker repositories which also use an expiry-less key, and should avoid any such issues again, barring a need to rotate it. This does however require manually refreshing the key on your system.</p><p>Doing this is as easy as re-running the command from the install docs; it will overwrite the old key with the new one:</p><pre tabindex=0><code>wget -O- https://repo.jellyfin.org/jellyfin_team.gpg.key | sudo apt-key add -
+</code></pre><p>You can verify this worked by checking the <code>apt-key</code> output like so; this is a good practice anyways to verify that the key has not been altered, as its signatures and fingerprint should all match:</p><pre tabindex=0><code>$ apt-key list | grep -C2 jellyfin  # Notice the expires: field
 Warning: apt-key output should not be parsed (stdout is not a terminal)
 pub   rsa3072 2018-12-16 [SC] [expires: 2020-12-15]
       4918 AABC 486C A052 358D  778D 4902 3CD0 1DE2 1A7B
@@ -127,69 +48,19 @@ pub   rsa3072 2018-12-16 [SC]
       4918 AABC 486C A052 358D  778D 4902 3CD0 1DE2 1A7B
 uid           [ unknown] Jellyfin Team &lt;team@jellyfin.org&gt;
 sub   rsa3072 2018-12-16 [E]
-</code></pre><p>If you find this didn't work, try removing the key first with this command, then re-add it again:</p>
-<pre><code>sudo apt-key remove 1DE21A7B
-</code></pre><p>We've also published the key to the Ubuntu keyserver as a backup, just in case, or if you prefer this method. Our docs will retain the direct-file method however. You can use this command to obtain the key directly from the Ubuntu keyserver:</p>
-<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 1DE21A7B
-</code></pre><p><strong>Please ensure you refresh the key before December 15th, or you will find that <code>apt update</code> no longer works!</strong></p>
-<p>GitHub Issue for reference: <a href="https://github.com/jellyfin/jellyfin/issues/4528">https://github.com/jellyfin/jellyfin/issues/4528</a></p>
-<p>Reddit thread for reference: <a href="https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/">https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/</a></p>
-<p>Thanks,
-Joshua</p>
-</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-		<div class="footer footer--dark">
-    <div class="container">
-        <div class="footer__inner">
-            <p class="footer__textLogo">Jellyfin</p>
-            <div class="footer__data">
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
-                    
-                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
-                    
-                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-		<script
-	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"
-></script>
-
-<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-
-<script src="/js/juxtapose.min.js"></script>
-
-<div class="scripts">
-	
-	
-	
-	
-	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
-</div>
-
-	</body>
-</html>
+</code></pre><p>If you find this didn&rsquo;t work, try removing the key first with this command, then re-add it again:</p><pre tabindex=0><code>sudo apt-key remove 1DE21A7B
+</code></pre><p>We&rsquo;ve also published the key to the Ubuntu keyserver as a backup, just in case, or if you prefer this method. Our docs will retain the direct-file method however. You can use this command to obtain the key directly from the Ubuntu keyserver:</p><pre tabindex=0><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 1DE21A7B
+</code></pre><p><strong>Please ensure you refresh the key before December 15th, or you will find that <code>apt update</code> no longer works!</strong></p><p>GitHub Issue for reference: <a href=https://github.com/jellyfin/jellyfin/issues/4528>https://github.com/jellyfin/jellyfin/issues/4528</a></p><p>Reddit thread for reference: <a href=https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/>https://www.reddit.com/r/jellyfin/comments/jz6u9o/debian_ubuntu_repo_users_our_key_is_expiring/</a></p><p>Thanks,
+Joshua</p></div></div></div></div></div></div><div class="footer footer--dark">
+<div class=container>
+<div class=footer__inner>
+<p class=footer__textLogo>Jellyfin</p><div class=footer__data>
+<div class=footer__data__item>
+<div class=footer__row>Site content is licensed <a href=http://creativecommons.org/licenses/by-nd/4.0/>CC-BY-ND-4.0</a></div><div class=footer__row>Website hosted on <a href=https://github.com/jellyfin/jellyfin-blog>GitHub</a></div></div><div class=footer__data__item>
+<div class=footer__row>Check us out on <a href=https://github.com/jellyfin>GitHub</a></div><div class=footer__row>See our <a href=/docs/>Documentation</a></div></div><div class=footer__data__item>
+<div class=footer__row>Subscribe to our <a href=https://jellyfin.org/index.xml>RSS Feed</a></div></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script>
+<script src=/js/juxtapose.min.js></script>
+<div class=scripts>
+<script type=text/javascript src=/js/scripts.min.0df72b33226f78599b5b9820a5229c55eb02d9596691cf516423d7093b633023.js></script>
+</div></body></html>

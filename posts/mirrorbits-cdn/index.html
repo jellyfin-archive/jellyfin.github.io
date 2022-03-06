@@ -1,124 +1,37 @@
-<!DOCTYPE html>
-<html lang="en-us">
-	<head>
-  <meta charset="utf-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1"
-  />
-  <title>The Jellyfin CDN: Mirrorbits for the masses - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href="/favicon.ico" />
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-  
-
-  <link rel="stylesheet" type="text/css" href="/css/style.79c4627e16e6b5717d51c1e6c0ef0ab8cb01e80aa069efc97e91ea6abb7ed4eb.min.css" />
-  <link rel="stylesheet" href="/css/juxtapose.css">
-</head>
-
-	<body>
-		
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>The Jellyfin CDN: Mirrorbits for the masses - Jellyfin: The Free Software Media System</title><link rel="shortcut icon" href=/favicon.ico>
+<link rel=stylesheet type=text/css href=/css/style.a84552485ad6a5c98068dddb3080a6c9e5e5fa07fbb9dc245dd2fcf40d70faa7.min.css>
+<link rel=stylesheet href=/css/juxtapose.css>
+</head><body>
 <div class="navbar navbar--extended navfix">
-  <nav class="nav__mobile"></nav>
-  <div class="container">
-    <div class="navbar__inner">
-      <a href="/" class="navbar__logo">
-        <img src="/images/banner-dark.svg" alt="Jellyfin Banner"/>
-      </a>
-      <nav class="navbar__menu">
-        
-        <ul>
-          
-          <li><a href="/posts">Blog</a></li>
-          
-          <li><a href="/clients">Clients</a></li>
-          
-          <li><a href="/downloads">Downloads</a></li>
-          
-          <li><a href="/contribute">Contribute</a></li>
-          
-          <li><a href="https://docs.jellyfin.org">Documentation</a></li>
-          
-          <li><a href="/contact">Contact</a></li>
-          
-        </ul>
-      </nav>
-      
-      <div class="navbar__menu-mob"><a href="" id='toggle'><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z" class=""></path></svg></a></div>
-    </div>
-  </div>
-</div>
-
-
-		
-
-<div class="page__header">
-	<div class="hero__overlay hero__overlay--gradient"></div>
-	<div class="hero__mask"></div>
-	<div class="page__header__inner">
-		<div class="container">
-			<div class="page__header__content">
-				<div class="page__header__content__inner" id="navConverter">
-					<h1 class="page__header__title">The Jellyfin CDN: Mirrorbits for the masses</h1>
-					<p class="page__header__text">How Jellyfin distributes binary packages</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="page">
-	<div class="container">
-		<div class="page__inner">
-			<div class="page__main">
-				
-				<div class="text-container text-container--center">
-					<div>
-						<time class="article-date" datetime="2021-04-12T00:00:00Z">
-							<span>12 Apr 2021</span>
-						</time>
-						<span> by </span>
-						
-						<a href="https://github.com/joshuaboniface">Joshua Boniface</a>
-						<img class="github" src="https://github.com/joshuaboniface.png?size=40"/>
-						
-					</div>
-					<div><p>For many projects, distributing binary assets is easy: put the files on GitHub and you're done. It's not something many think about. But at Jellyfin, we needed something more robust, something able to handle our needs more elegantly than GitHub or a basic web server could. And both for those interested, and for those supporting other similar projects, I'd like to share how we do it.</p>
-<h2 id="prelude--pre1060">Prelude - Pre-10.6.0</h2>
-<p>Before our 10.6.0 release, we had a fairly simple repository setup: everything would build on a VPS, running Debian, called <code>build1</code>, in response to a GitHub web-hook. This server, located on Digital Ocean in the Toronto zone, housed both the build process as well as our main repository, served directly via NGiNX.</p>
-<p>But this release was the first where we noticed a problem. Jellyfin is a global project, and while I'm personally located in Ontario, Canada, the very vast majority of our users are not. And users, especially users in Europe and Asia, were having trouble downloading our releases. The main complaint was abysmally slow download speeds, and occasionally even full-on timeouts. We had to come up with a better solution.</p>
-<p>As a DIYer at heart, and leading a project built by and for DIYers, I wasn't content to simply throw CloudFlare in front of the repo - my concerns with that provider notwithstanding. I wanted something we could control, and I went looking for a solution - how to effectively create a CDN for file downloads.</p>
-<h2 id="enter-mirrorbits">Enter Mirrorbits</h2>
-<p>Luckily, I wasn't alone. Many years before, another FLOSS project had encountered the same problem. VideoLAN, creators of the fantastic VLC Media Player, had the same issue of distributing files. So one of their talented developers created a solution: Mirrorbits.</p>
-<p><a href="https://github.com/etix/mirrorbits">Mirrorbits</a> is a Go program with a single goal: provide a way to distribute requests from a single central repository to multiple geo-diverse repositories, based on the client's GeoIP information, handling availability and freshness seamlessly. It seemed to fit the bill exactly.</p>
-<p>But there was a problem: documentation on how to actually run Mirrorbits was sparse, so it took quite a bit of trial-and-error to determine how to use it. I hope the following will help avoid this trouble for anyone else.</p>
-<h2 id="file-layout">File Layout</h2>
-<p>The first thing to consider is the layout of the files. In Jellyfin's case, our repository is large and sprawling, constituting many different components including the server, clients, plugins, and various secondary files. Mirrorbits requires everything to be housed under one directory, and we needed a way to synchronize this whole directory easily. We also had a problem of our &ldquo;archives&rdquo;, old stable releases that we did not need or want synchronized to all of our mirror servers wasting space.</p>
-<p>The solution I came up with was the following directory structure:</p>
-<pre><code>/srv/repository
+<nav class=nav__mobile></nav><div class=container>
+<div class=navbar__inner>
+<a href=/ class=navbar__logo>
+<img src=/images/banner-dark.svg alt="Jellyfin Banner">
+</a>
+<nav class=navbar__menu>
+<ul>
+<li><a href=/posts>Blog</a></li><li><a href=/clients>Clients</a></li><li><a href=/downloads>Downloads</a></li><li><a href=/contribute>Contribute</a></li><li><a href=https://docs.jellyfin.org>Documentation</a></li><li><a href=/contact>Contact</a></li></ul></nav><div class=navbar__menu-mob><a href id=toggle><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentcolor" d="M16 132h416c8.837.0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163.0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837.0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837.0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg></a></div></div></div></div><div class=page__header>
+<div class="hero__overlay hero__overlay--gradient"></div><div class=hero__mask></div><div class=page__header__inner>
+<div class=container>
+<div class=page__header__content>
+<div class=page__header__content__inner id=navConverter>
+<h1 class=page__header__title>The Jellyfin CDN: Mirrorbits for the masses</h1><p class=page__header__text>How Jellyfin distributes binary packages</p></div></div></div></div></div><div class=page>
+<div class=container>
+<div class=page__inner>
+<div class=page__main>
+<div class="text-container text-container--center">
+<div>
+<time class=article-date datetime=2021-04-12T00:00:00Z>
+<span>12 Apr 2021</span>
+</time>
+<span> by </span>
+<a href=https://github.com/joshuaboniface>Joshua Boniface</a>
+<img class=github src="https://github.com/joshuaboniface.png?size=40">
+</div><div><p>For many projects, distributing binary assets is easy: put the files on GitHub and you&rsquo;re done. It&rsquo;s not something many think about. But at Jellyfin, we needed something more robust, something able to handle our needs more elegantly than GitHub or a basic web server could. And both for those interested, and for those supporting other similar projects, I&rsquo;d like to share how we do it.</p><h2 id=prelude---pre-1060>Prelude - Pre-10.6.0</h2><p>Before our 10.6.0 release, we had a fairly simple repository setup: everything would build on a VPS, running Debian, called <code>build1</code>, in response to a GitHub web-hook. This server, located on Digital Ocean in the Toronto zone, housed both the build process as well as our main repository, served directly via NGiNX.</p><p>But this release was the first where we noticed a problem. Jellyfin is a global project, and while I&rsquo;m personally located in Ontario, Canada, the very vast majority of our users are not. And users, especially users in Europe and Asia, were having trouble downloading our releases. The main complaint was abysmally slow download speeds, and occasionally even full-on timeouts. We had to come up with a better solution.</p><p>As a DIYer at heart, and leading a project built by and for DIYers, I wasn&rsquo;t content to simply throw CloudFlare in front of the repo - my concerns with that provider notwithstanding. I wanted something we could control, and I went looking for a solution - how to effectively create a CDN for file downloads.</p><h2 id=enter-mirrorbits>Enter Mirrorbits</h2><p>Luckily, I wasn&rsquo;t alone. Many years before, another FLOSS project had encountered the same problem. VideoLAN, creators of the fantastic VLC Media Player, had the same issue of distributing files. So one of their talented developers created a solution: Mirrorbits.</p><p><a href=https://github.com/etix/mirrorbits>Mirrorbits</a> is a Go program with a single goal: provide a way to distribute requests from a single central repository to multiple geo-diverse repositories, based on the client&rsquo;s GeoIP information, handling availability and freshness seamlessly. It seemed to fit the bill exactly.</p><p>But there was a problem: documentation on how to actually run Mirrorbits was sparse, so it took quite a bit of trial-and-error to determine how to use it. I hope the following will help avoid this trouble for anyone else.</p><h2 id=file-layout>File Layout</h2><p>The first thing to consider is the layout of the files. In Jellyfin&rsquo;s case, our repository is large and sprawling, constituting many different components including the server, clients, plugins, and various secondary files. Mirrorbits requires everything to be housed under one directory, and we needed a way to synchronize this whole directory easily. We also had a problem of our &ldquo;archives&rdquo;, old stable releases that we did not need or want synchronized to all of our mirror servers wasting space.</p><p>The solution I came up with was the following directory structure:</p><pre tabindex=0><code>/srv/repository
                /mirror
                       /releases
                                /client
@@ -136,23 +49,8 @@
                /releases --symlink--&gt; /mirror/releases
                /debian   --symlink--&gt; /mirror/debian
                etc.
-</code></pre><p>In effect, everything is under a <code>/mirror</code> directory, with external symlinks to provide the root links we wanted.</p>
-<h2 id="additional-vpses-and-synchronization">Additional VPSes and Synchronization</h2>
-<p>The next step after crafting a usable file layout was to create some additional VPSes and determine how to synchronize the files.</p>
-<p>Since our origin server is in Toronto, I wanted to ensure we had wide geographic coverage. as well as a dedicated CDN for the same region as the origin server, just in case it got overloaded. Thus, I created 4 additional VPSes:</p>
-<ul>
-<li><code>tor1.mirror.jellyfin.org</code>: Toronto, Ontario, Canada for North/South America East</li>
-<li><code>sfo1.mirror.jellyfin.org</code>: San Francisco, California, USA for North/South America West</li>
-<li><code>fra1.mirror.jellyfin.org</code>: Frankfurt, Germany (not France as commonly assumed!) for Europe and Africa</li>
-<li><code>sgp1.mirror.jellyfin.org</code>: Singapore for Asia and Pacific</li>
-</ul>
-<p>One worry when first setting up these 4 VPSes was that they would not be enough, but so far, through another major release and several minor releases, we've had the complaints about download speed completely stop, so they must be working. In future, as Digital Ocean expands, we'd also be able to add other locations as well, for instance Bangalore, India, Africa, and perhaps additional Europe and South America instances.</p>
-<p>With the VPSes created, I then looked into file synchronization, and there was only one program on my mind: <code>rsync</code>. But while most users know <code>rsync</code> for it's <code>scp</code>-replacement functionality over SSH, I wanted something more robust without the need for handling SSH keys, and able to be extended further in the future, perhaps to untrusted (and untrusting) 3rd-party mirrors.</p>
-<p>I thus opted to use the <code>rsync</code> daemon mode. Listening on port 873, it's able to do everything <code>rsync</code>-over-SSH can do, only without encryption overhead or requiring SSH/shell authentication.</p>
-<p>I first prepared the the local <code>/etc/rsyncd.conf</code> on the origin server (<code>build1</code>). By default, the Debian <code>rsync</code> package does not install the daemon service unless this file exists, but after adding it the daemon can be started.</p>
-<p>To handle the aforementioned &ldquo;archives&rdquo;, I split the repository into two &ldquo;components&rdquo;: one with the archives, and one without. This would allow a given mirror to pull either the entire archive, or just the current stable repositories. And once we started offering the &ldquo;unstable&rdquo; builds that can be generated many dozens of times per day, I opted to include them in the &ldquo;archive&rdquo; component as well.</p>
-<p>Here is our configuration:</p>
-<pre><code># /etc/rsyncd.conf
+</code></pre><p>In effect, everything is under a <code>/mirror</code> directory, with external symlinks to provide the root links we wanted.</p><h2 id=additional-vpses-and-synchronization>Additional VPSes and Synchronization</h2><p>The next step after crafting a usable file layout was to create some additional VPSes and determine how to synchronize the files.</p><p>Since our origin server is in Toronto, I wanted to ensure we had wide geographic coverage. as well as a dedicated CDN for the same region as the origin server, just in case it got overloaded. Thus, I created 4 additional VPSes:</p><ul>
+<li><code>tor1.mirror.jellyfin.org</code>: Toronto, Ontario, Canada for North/South America East</li><li><code>sfo1.mirror.jellyfin.org</code>: San Francisco, California, USA for North/South America West</li><li><code>fra1.mirror.jellyfin.org</code>: Frankfurt, Germany (not France as commonly assumed!) for Europe and Africa</li><li><code>sgp1.mirror.jellyfin.org</code>: Singapore for Asia and Pacific</li></ul><p>One worry when first setting up these 4 VPSes was that they would not be enough, but so far, through another major release and several minor releases, we&rsquo;ve had the complaints about download speed completely stop, so they must be working. In future, as Digital Ocean expands, we&rsquo;d also be able to add other locations as well, for instance Bangalore, India, Africa, and perhaps additional Europe and South America instances.</p><p>With the VPSes created, I then looked into file synchronization, and there was only one program on my mind: <code>rsync</code>. But while most users know <code>rsync</code> for it&rsquo;s <code>scp</code>-replacement functionality over SSH, I wanted something more robust without the need for handling SSH keys, and able to be extended further in the future, perhaps to untrusted (and untrusting) 3rd-party mirrors.</p><p>I thus opted to use the <code>rsync</code> daemon mode. Listening on port 873, it&rsquo;s able to do everything <code>rsync</code>-over-SSH can do, only without encryption overhead or requiring SSH/shell authentication.</p><p>I first prepared the the local <code>/etc/rsyncd.conf</code> on the origin server (<code>build1</code>). By default, the Debian <code>rsync</code> package does not install the daemon service unless this file exists, but after adding it the daemon can be started.</p><p>To handle the aforementioned &ldquo;archives&rdquo;, I split the repository into two &ldquo;components&rdquo;: one with the archives, and one without. This would allow a given mirror to pull either the entire archive, or just the current stable repositories. And once we started offering the &ldquo;unstable&rdquo; builds that can be generated many dozens of times per day, I opted to include them in the &ldquo;archive&rdquo; component as well.</p><p>Here is our configuration:</p><pre tabindex=0><code># /etc/rsyncd.conf
 [mirror]
     path = /srv/repository/mirror
     comment = Jellyfin mirror (stable only)
@@ -161,17 +59,9 @@
 [mirror-full]
     path = /srv/repository/mirror
     comment = Jellyfin mirror (all)
-</code></pre><p>In many cases, it would be prudent to secure this, but since we wanted to open this up to anyone, I left the <code>rsync</code> endpoint completely exposed. Thus, if you want to host a local Jellyfin mirror - you can. Simply clone this rsync target and you'll have a full copy of the Jellyfin mirror!</p>
-<p>On the mirror servers, we still needed to get the content however. Ultimately, I decided that every &ldquo;official&rdquo; mirror copying the <em>full</em> content (including archives and unstable builds) was more prudent, so all of them synchronize the <code>mirror-full</code> source.</p>
-<p>Each node thus has a simple cron job, set to run every 15 minutes, that downloads an updated copy of the repository from the origin:</p>
-<pre><code># /etc/cron.d/mirror-sync
+</code></pre><p>In many cases, it would be prudent to secure this, but since we wanted to open this up to anyone, I left the <code>rsync</code> endpoint completely exposed. Thus, if you want to host a local Jellyfin mirror - you can. Simply clone this rsync target and you&rsquo;ll have a full copy of the Jellyfin mirror!</p><p>On the mirror servers, we still needed to get the content however. Ultimately, I decided that every &ldquo;official&rdquo; mirror copying the <em>full</em> content (including archives and unstable builds) was more prudent, so all of them synchronize the <code>mirror-full</code> source.</p><p>Each node thus has a simple cron job, set to run every 15 minutes, that downloads an updated copy of the repository from the origin:</p><pre tabindex=0><code># /etc/cron.d/mirror-sync
 12,27,42,57 *  * * *  root  rsync -au --delete rsync://build1.jellyfin.org/mirror-full/ /srv/repository/mirror/
-</code></pre><p>The slightly odd times were chosen specifically - the goal for 3rd parties, if and when we officially support them, would be to synchronize every X minutes on even intervals, e.g. at <code>00</code>, <code>30</code>, etc., from these &ldquo;official&rdquo; mirrors, instead of from build1 directly. This therefore ensures they would always be up-to-date before that time comes around, ensuring no additional delays for 3rd party mirrors. We don't officially support this <em>yet</em>, but if our traffic continues to grow, we will probably expand to 3rd parties as well as additional Digital Ocean locations.</p>
-<p>The <code>rsync</code> command should create the destination directory automatically, but to be prudent, I ensured it was created manually first. Thus, we now have 5 servers with exactly the same content, with the mirrors synchronizing from the origin every 15 minutes.</p>
-<h2 id="web-server-configuration">Web server Configuration</h2>
-<p>From the very beginning we have used NGiNX as the web server. The reasons are simple: maximum configuration flexibility, and performance. Apache has its place, but we didn't need its additional features, and early on budget was tight. I've been so satisfied with it, I haven't even considered a change.</p>
-<p>On the mirrors, the configuration is dead-simple. Only a single &ldquo;site&rdquo; is configured, providing full access to the repository directory. SSL is provided by Let's Encrypt.</p>
-<pre><code># /etc/nginx/sites-enabled/jellyfin-mirror (from fra1.mirror.jellyfin.org)
+</code></pre><p>The slightly odd times were chosen specifically - the goal for 3rd parties, if and when we officially support them, would be to synchronize every X minutes on even intervals, e.g. at <code>00</code>, <code>30</code>, etc., from these &ldquo;official&rdquo; mirrors, instead of from build1 directly. This therefore ensures they would always be up-to-date before that time comes around, ensuring no additional delays for 3rd party mirrors. We don&rsquo;t officially support this <em>yet</em>, but if our traffic continues to grow, we will probably expand to 3rd parties as well as additional Digital Ocean locations.</p><p>The <code>rsync</code> command should create the destination directory automatically, but to be prudent, I ensured it was created manually first. Thus, we now have 5 servers with exactly the same content, with the mirrors synchronizing from the origin every 15 minutes.</p><h2 id=web-server-configuration>Web server Configuration</h2><p>From the very beginning we have used NGiNX as the web server. The reasons are simple: maximum configuration flexibility, and performance. Apache has its place, but we didn&rsquo;t need its additional features, and early on budget was tight. I&rsquo;ve been so satisfied with it, I haven&rsquo;t even considered a change.</p><p>On the mirrors, the configuration is dead-simple. Only a single &ldquo;site&rdquo; is configured, providing full access to the repository directory. SSL is provided by Let&rsquo;s Encrypt.</p><pre tabindex=0><code># /etc/nginx/sites-enabled/jellyfin-mirror (from fra1.mirror.jellyfin.org)
 server {
     listen [::]:80 default_server ipv6only=on;
     listen 80 default_server;
@@ -199,16 +89,14 @@ server {
 
     location ~ [^/]\.php(/|$) {
         fastcgi_split_path_info ^(.+?\.php)(/.*)$;
-        fastcgi_param HTTP_PROXY &quot;&quot;;
+        fastcgi_param HTTP_PROXY &#34;&#34;;
         fastcgi_pass unix:/run/php/php7.3-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 }
-</code></pre><p>During testing, we did notice one thing that might be of use to other admins. We were finding that performance, when many requests for large files came in at once, would drop significantly. I ended up tracing the problem to the I/O stack within NGiNX, which appeared to be a bottleneck. I was able to find some documentation about this problem, and thus have set the <code>aio threads</code>, <code>directio</code>, <code>output_buffers</code>, and <code>sendfile</code> options above. These ensure NGiNX will use direct I/O for any file larger than 1M, and provide 3 output buffers with a maximum chunk size of 0, increasing performance under load.</p>
-<p>On the origin, the NGiNX configuration is much more complicated. Because Mirrorbits will only distribute the actual large files themselves, I need to handle any pre-file redirection first on the origin. Thus clients are directed to the right file location, and the Mirrorbits directs <em>that</em> request to the mirrors.</p>
-<pre><code># /etc/nginx/sites-enabled/jellyfin-origin (on build1.jellyfin.org)
+</code></pre><p>During testing, we did notice one thing that might be of use to other admins. We were finding that performance, when many requests for large files came in at once, would drop significantly. I ended up tracing the problem to the I/O stack within NGiNX, which appeared to be a bottleneck. I was able to find some documentation about this problem, and thus have set the <code>aio threads</code>, <code>directio</code>, <code>output_buffers</code>, and <code>sendfile</code> options above. These ensure NGiNX will use direct I/O for any file larger than 1M, and provide 3 output buffers with a maximum chunk size of 0, increasing performance under load.</p><p>On the origin, the NGiNX configuration is much more complicated. Because Mirrorbits will only distribute the actual large files themselves, I need to handle any pre-file redirection first on the origin. Thus clients are directed to the right file location, and the Mirrorbits directs <em>that</em> request to the mirrors.</p><pre tabindex=0><code># /etc/nginx/sites-enabled/jellyfin-origin (on build1.jellyfin.org)
 server {
     listen 80 default_server proxy_protocol;
     listen [::]:80 default_server proxy_protocol;
@@ -245,17 +133,17 @@ server {
     }
     location ^~ /releases/client/kodi {
         # Kodi 20
-        if ($http_user_agent ~* &quot;(Kodi.*/20.*)&quot;) {
+        if ($http_user_agent ~* &#34;(Kodi.*/20.*)&#34;) {
             rewrite ^/releases/client/kodi/(.*)$ /releases/client/kodi/py3/$1 last;
         }
 
         # Kodi 19
-        if ($http_user_agent ~* &quot;(Kodi.*/19.*)&quot;) {
+        if ($http_user_agent ~* &#34;(Kodi.*/19.*)&#34;) {
             rewrite ^/releases/client/kodi/(.*)$ /releases/client/kodi/py3/$1 last;
         }
 
         # Kodi 18 and older
-        if ($http_user_agent ~* &quot;(Kodi.*)&quot;) {
+        if ($http_user_agent ~* &#34;(Kodi.*)&#34;) {
             rewrite ^/releases/client/kodi/(.*)$ /releases/client/kodi/py2/$1 last;
         }
 
@@ -307,23 +195,14 @@ server {
     #
     location ~ \.php$ {
         fastcgi_split_path_info ^(.+?\.php)(/.*)$;
-        fastcgi_param HTTP_PROXY &quot;&quot;;
+        fastcgi_param HTTP_PROXY &#34;&#34;;
         fastcgi_pass unix:/run/php/php7.3-fpm.sock;
         fastcgi_index index.php;
         include fastcgi_params;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
     }
 }
-</code></pre><p>Some of the configuration here is worthy of describing in detail.</p>
-<p>The Kodi selector is used due to the Kodi backend transition from Python 2 to Python 3. Thus, some versions require assets for Python 2, and newer versions for Python 3. This selector operates based on the sent user agent of the client, deciding which version of Kodi they are using, and thus directing them to the right location.</p>
-<p>The main locations are <code>/archive</code>, <code>/releases</code>, and <code>/master</code>. The first contains archives and is not forwarded on to the Mirrorbits process (despite the files being synced above) due to the <code>try_files</code> directive. The second is the main repository directory, and the third is a duplicate location that is used for fallback and also does not redirect to Mirrorbits.</p>
-<p>Next is the main Mirrorbits handler. The forwarding is based off the file extension of the requested file. Thus, when loading, e.g. the PHP index pages, the requests are not forwarded; only requests for the listed file types are forwarded on to the Mirrorbits process to be distributed to mirrors.</p>
-<p>The next 3 options are for Mirrorbits status pages, which provide information on the currently available mirrors. For any file (e.g. <a href="https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb">https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb</a>), one can append the <code>/mirrorlist</code> or <code>/mirrorinfo</code> locations to show information about the available mirrors. Try it yourself: <a href="https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb/mirrorlist">https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb/mirrorlist</a>. Finally the <code>/mirrorstats</code> page, whether on a file or at the root of the domain (<a href="https://repo.jellyfin.org/mirrorstats">https://repo.jellyfin.org/mirrorstats</a>) shows the current status of the mirrors in general, including if any are offline.</p>
-<p>All together, these NGiNX configs provide the foundation for Mirrorbits to work, and this was the part that actually took the longest. Thanks to <a href="https://github.com/PalinuroSec">@PalinuroSec</a> on GitHub for his <a href="https://gist.github.com/PalinuroSec/f0bfb815240573ab1b0b58f3c76620d4">fantastic example gist</a>.</p>
-<h2 id="mirrorbits-the-workhorse">Mirrorbits: The Workhorse</h2>
-<p>Installing Mirrorbits is quite straightforward: I simply downloaded the latest binary release (<code>0.5.1</code>) from the Mirrorbits repository, installed the <code>mirrorbits</code> binary to <code>/usr/local/bin</code>, the sample configuration to <code>/etc/mirrorbits.conf</code>, and the templates to <code>/usr/local/share/mirrorbits</code>. Unfortunately, Mirrorbits development seems to have stalled since 2018, including documentation. <a href="https://github.com/etix/mirrorbits/issues/105">I opened an issue</a> during my troubleshooting that is still unanswered, which is unfortunate, and I hope this blog post will be able to resolve that issue.</p>
-<p>The basic configuration of Mirrorbits is quite simple. Most of the configuration options are explained well in the sample configuration file, and it was simply a matter of tuning them to our needs. Here is our configuration stripped of comments/explanations:</p>
-<pre><code># /etc/mirrorbits.conf (on build1.jellyfin.org)
+</code></pre><p>Some of the configuration here is worthy of describing in detail.</p><p>The Kodi selector is used due to the Kodi backend transition from Python 2 to Python 3. Thus, some versions require assets for Python 2, and newer versions for Python 3. This selector operates based on the sent user agent of the client, deciding which version of Kodi they are using, and thus directing them to the right location.</p><p>The main locations are <code>/archive</code>, <code>/releases</code>, and <code>/master</code>. The first contains archives and is not forwarded on to the Mirrorbits process (despite the files being synced above) due to the <code>try_files</code> directive. The second is the main repository directory, and the third is a duplicate location that is used for fallback and also does not redirect to Mirrorbits.</p><p>Next is the main Mirrorbits handler. The forwarding is based off the file extension of the requested file. Thus, when loading, e.g. the PHP index pages, the requests are not forwarded; only requests for the listed file types are forwarded on to the Mirrorbits process to be distributed to mirrors.</p><p>The next 3 options are for Mirrorbits status pages, which provide information on the currently available mirrors. For any file (e.g. <a href=https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb)>https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb)</a>, one can append the <code>/mirrorlist</code> or <code>/mirrorinfo</code> locations to show information about the available mirrors. Try it yourself: <a href=https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb/mirrorlist>https://repo.jellyfin.org/releases/server/debian/stable/meta/jellyfin_10.7.2-1_all.deb/mirrorlist</a>. Finally the <code>/mirrorstats</code> page, whether on a file or at the root of the domain (<a href=https://repo.jellyfin.org/mirrorstats>https://repo.jellyfin.org/mirrorstats</a>) shows the current status of the mirrors in general, including if any are offline.</p><p>All together, these NGiNX configs provide the foundation for Mirrorbits to work, and this was the part that actually took the longest. Thanks to <a href=https://github.com/PalinuroSec>@PalinuroSec</a> on GitHub for his <a href=https://gist.github.com/PalinuroSec/f0bfb815240573ab1b0b58f3c76620d4>fantastic example gist</a>.</p><h2 id=mirrorbits-the-workhorse>Mirrorbits: The Workhorse</h2><p>Installing Mirrorbits is quite straightforward: I simply downloaded the latest binary release (<code>0.5.1</code>) from the Mirrorbits repository, installed the <code>mirrorbits</code> binary to <code>/usr/local/bin</code>, the sample configuration to <code>/etc/mirrorbits.conf</code>, and the templates to <code>/usr/local/share/mirrorbits</code>. Unfortunately, Mirrorbits development seems to have stalled since 2018, including documentation. <a href=https://github.com/etix/mirrorbits/issues/105>I opened an issue</a> during my troubleshooting that is still unanswered, which is unfortunate, and I hope this blog post will be able to resolve that issue.</p><p>The basic configuration of Mirrorbits is quite simple. Most of the configuration options are explained well in the sample configuration file, and it was simply a matter of tuning them to our needs. Here is our configuration stripped of comments/explanations:</p><pre tabindex=0><code># /etc/mirrorbits.conf (on build1.jellyfin.org)
 Repository: /srv/repository/mirror
 Templates: /usr/local/share/mirrorbits/
 LogDir: /var/log/mirrorbits
@@ -345,17 +224,7 @@ Fallbacks:
      - URL: https://repo.jellyfin.org/master/
        CountryCode: ca
        ContinentCode: na
-</code></pre><p>A few options are worth mentioning as they differ from the obvious defaults.</p>
-<p><code>Repository</code> points towards the local repository path, the exact file(s) that are synchronized with <code>rsync</code> above.</p>
-<p><code>GeoipDatabasePath</code> is a path to a local copy of the GeoIP database; this will be discussed later.</p>
-<p><code>OutputMode</code> is set to <code>redirect</code> to give clients an HTTP 302 redirect to the file path. There are several options here, but the 302 seemed like the most robust, being well-supported by most HTTP-speaking programs and preventing caching of the response.</p>
-<p><code>TraceFileLocation</code> points to a file which is used to judge the &ldquo;freshness&rdquo; of the mirrors. It should be a file which guarantees that the remote copies of the repository are in sync with the local instance, and must be under the <code>Repository</code> location.</p>
-<p><code>Hashes</code> provides several options, but we use SHA256 hashing for simplicity and to match our own provided hashes.</p>
-<p><code>RedisAddress</code> points to a local Redis instance that Mirrorbits uses to handle state.</p>
-<p><code>ConcurrentSync</code>, <code>RepositoryScanInterval</code>, <code>ScanInterval</code>, and <code>CheckInterval</code> are times in minutes that Mirrorbits <em>should</em> be checking and synchronizing itself, but I've found these to be unreliable; I used a cron task to do these tasks manually instead.</p>
-<p>Finally, <code>Fallbacks</code> provides a list of fallback mirrors. As mentioned above, the <code>/master</code> path provides the exact same content as <code>/releases</code>, only without being forwarded back to Mirrorbits and creating a loop. Without this fallback, if all mirrors are unavailable for any given file, either due to its newness or due to mirror failures, clients would not be able to download files at all. The fallback ensures there is still at least one source - the origin - that is not normally used, but can be just in case.</p>
-<p>The next step was creating a SystemD service for Mirrorbits. The process requires some special options for reloads and stopping, so these are included here. Note also that I run Mirrorbits as <code>www-data</code>, the same user as NGiNX itself:</p>
-<pre><code># /etc/systemd/system/mirorrbits.service
+</code></pre><p>A few options are worth mentioning as they differ from the obvious defaults.</p><p><code>Repository</code> points towards the local repository path, the exact file(s) that are synchronized with <code>rsync</code> above.</p><p><code>GeoipDatabasePath</code> is a path to a local copy of the GeoIP database; this will be discussed later.</p><p><code>OutputMode</code> is set to <code>redirect</code> to give clients an HTTP 302 redirect to the file path. There are several options here, but the 302 seemed like the most robust, being well-supported by most HTTP-speaking programs and preventing caching of the response.</p><p><code>TraceFileLocation</code> points to a file which is used to judge the &ldquo;freshness&rdquo; of the mirrors. It should be a file which guarantees that the remote copies of the repository are in sync with the local instance, and must be under the <code>Repository</code> location.</p><p><code>Hashes</code> provides several options, but we use SHA256 hashing for simplicity and to match our own provided hashes.</p><p><code>RedisAddress</code> points to a local Redis instance that Mirrorbits uses to handle state.</p><p><code>ConcurrentSync</code>, <code>RepositoryScanInterval</code>, <code>ScanInterval</code>, and <code>CheckInterval</code> are times in minutes that Mirrorbits <em>should</em> be checking and synchronizing itself, but I&rsquo;ve found these to be unreliable; I used a cron task to do these tasks manually instead.</p><p>Finally, <code>Fallbacks</code> provides a list of fallback mirrors. As mentioned above, the <code>/master</code> path provides the exact same content as <code>/releases</code>, only without being forwarded back to Mirrorbits and creating a loop. Without this fallback, if all mirrors are unavailable for any given file, either due to its newness or due to mirror failures, clients would not be able to download files at all. The fallback ensures there is still at least one source - the origin - that is not normally used, but can be just in case.</p><p>The next step was creating a SystemD service for Mirrorbits. The process requires some special options for reloads and stopping, so these are included here. Note also that I run Mirrorbits as <code>www-data</code>, the same user as NGiNX itself:</p><pre tabindex=0><code># /etc/systemd/system/mirorrbits.service
 [Unit]
 Description=Mirrorbits redirector
 Documentation=https://github.com/etix/mirrorbits
@@ -377,82 +246,29 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-</code></pre><p>Finally, I added some cron jobs to ensure that the <code>TraceFileLocation</code> is updated regularly, and that the mirror is scanned and refreshed regularly - the things that Mirrorbits itself didn't seem to be handling properly. The trace file is always updated 1 minute before the sync happens, while the mirror scan happens 1 minute after, to give the sync time to complete. The local repository is refreshed every minute to catch any new files as quickly as possible.</p>
-<pre><code># /etc/cron.d/mirror-sync
+</code></pre><p>Finally, I added some cron jobs to ensure that the <code>TraceFileLocation</code> is updated regularly, and that the mirror is scanned and refreshed regularly - the things that Mirrorbits itself didn&rsquo;t seem to be handling properly. The trace file is always updated 1 minute before the sync happens, while the mirror scan happens 1 minute after, to give the sync time to complete. The local repository is refreshed every minute to catch any new files as quickly as possible.</p><pre tabindex=0><code># /etc/cron.d/mirror-sync
 11,26,41,56 *  * * *  root  /usr/bin/date +\%s | /usr/bin/tee /srv/repository/mirror/mirrorsync &amp;&gt;/dev/null
 13,28,42,58 *  * * *  root  /usr/local/bin/mirrorbits scan -all
 *           *  * * *  root  /usr/local/bin/mirrorbits refresh
-</code></pre><h2 id="adding-mirrors-to-mirrorbits">Adding Mirrors to Mirrorbits</h2>
-<p>Once all the setup was completed and Mirrorbits running, I added the mirrors to the Mirrorbits system. This is a straightforward process using the Mirrorbits binary:</p>
-<pre><code>mirrorbits add -http https://fra1.mirror.jellyfin.org -rsync rsync://fra1.mirror.jellyfin.org/mirror fra1
+</code></pre><h2 id=adding-mirrors-to-mirrorbits>Adding Mirrors to Mirrorbits</h2><p>Once all the setup was completed and Mirrorbits running, I added the mirrors to the Mirrorbits system. This is a straightforward process using the Mirrorbits binary:</p><pre tabindex=0><code>mirrorbits add -http https://fra1.mirror.jellyfin.org -rsync rsync://fra1.mirror.jellyfin.org/mirror fra1
 mirrorbits scan --enable fra1
 mirrorbits refresh
-</code></pre><p>Once scanned, enabled, and refreshed, the mirror became active and and visible in the <code>/mirrorstats</code> output or on the CLI, ready to serve requests.</p>
-<pre><code>joshua@build1.jellyfin.org ~ $ mirrorbits list
+</code></pre><p>Once scanned, enabled, and refreshed, the mirror became active and and visible in the <code>/mirrorstats</code> output or on the CLI, ready to serve requests.</p><pre tabindex=0><code>joshua@build1.jellyfin.org ~ $ mirrorbits list
 Identifier      STATE   SINCE
 fra1            up      (Mon, 12 Apr 2021 07:15:29 UTC)
 sgp1            up      (Mon, 12 Apr 2021 06:51:03 UTC)
 tor1            up      (Sun, 11 Apr 2021 21:48:48 UTC)
 sfo1            up      (Sun, 11 Apr 2021 17:43:27 UTC)
-</code></pre><h2 id="geoip">GeoIP</h2>
-<p>One complication of using Mirrorbits is requiring a GeoIP database. It specifically requires the <code>GeoLite2` </code>mmdb` format to operate correctly. Unfortunately, this is no longer something that is provided freely. You must obtain this yourself, or find an alternative; I would prefer to use a freely available database, but I have yet to be able to find one that works with Mirrorbits. If you know of one, please let me know!</p>
-<p>This database is extracted to the <code>GeoipDatabasePath</code> location and is loaded by Mirrorbits at runtime, providing the GeoIP information it then uses to direct clients to the nearest mirror server.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>All together, we hope this setup allows us to continue to scale our downloads for our users across the world. And I hope this post will help another admin of a small project who needs to distribute their downloads across many geo-diverse servers. Good luck!</p>
-</div>
-				</div>
-				
-			</div>
-		</div>
-	</div>
-</div>
-
-		<div class="footer footer--dark">
-    <div class="container">
-        <div class="footer__inner">
-            <p class="footer__textLogo">Jellyfin</p>
-            <div class="footer__data">
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Site content is licensed <a href="http://creativecommons.org/licenses/by-nd/4.0/">CC-BY-ND-4.0</a></div>
-                    
-                    <div class="footer__row">Website hosted on <a href="https://github.com/jellyfin/jellyfin-blog">GitHub</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Check us out on <a href="https://github.com/jellyfin">GitHub</a></div>
-                    
-                    <div class="footer__row">See our <a href="/docs/">Documentation</a></div>
-                    
-                </div>
-                <div class="footer__data__item">
-                    
-                    <div class="footer__row">Subscribe to our <a href="https://jellyfin.org/index.xml">RSS Feed</a></div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-		<script
-	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-	crossorigin="anonymous"
-></script>
-
-<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
-
-<script src="/js/juxtapose.min.js"></script>
-
-<div class="scripts">
-	
-	
-	
-	
-	<script type="text/javascript" src="/js/scripts.min.0f9f4fec0c415e95a1762dceb1224a97306194bfdb70e56982f9342c0feeabea.js"></script>
-</div>
-
-	</body>
-</html>
+</code></pre><h2 id=geoip>GeoIP</h2><p>One complication of using Mirrorbits is requiring a GeoIP database. It specifically requires the <code>GeoLite2</code> <code>mmdb</code> format to operate correctly. Unfortunately, this is no longer something that is provided freely. You must obtain this yourself, or find an alternative; I would prefer to use a freely available database, but I have yet to be able to find one that works with Mirrorbits. If you know of one, please let me know!</p><p>This database is extracted to the <code>GeoipDatabasePath</code> location and is loaded by Mirrorbits at runtime, providing the GeoIP information it then uses to direct clients to the nearest mirror server.</p><h2 id=conclusion>Conclusion</h2><p>All together, we hope this setup allows us to continue to scale our downloads for our users across the world. And I hope this post will help another admin of a small project who needs to distribute their downloads across many geo-diverse servers. Good luck!</p></div></div></div></div></div></div><div class="footer footer--dark">
+<div class=container>
+<div class=footer__inner>
+<p class=footer__textLogo>Jellyfin</p><div class=footer__data>
+<div class=footer__data__item>
+<div class=footer__row>Site content is licensed <a href=http://creativecommons.org/licenses/by-nd/4.0/>CC-BY-ND-4.0</a></div><div class=footer__row>Website hosted on <a href=https://github.com/jellyfin/jellyfin-blog>GitHub</a></div></div><div class=footer__data__item>
+<div class=footer__row>Check us out on <a href=https://github.com/jellyfin>GitHub</a></div><div class=footer__row>See our <a href=/docs/>Documentation</a></div></div><div class=footer__data__item>
+<div class=footer__row>Subscribe to our <a href=https://jellyfin.org/index.xml>RSS Feed</a></div></div></div></div></div></div><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous></script>
+<script src=https://unpkg.com/ionicons@4.4.7/dist/ionicons.js></script>
+<script src=/js/juxtapose.min.js></script>
+<div class=scripts>
+<script type=text/javascript src=/js/scripts.min.0df72b33226f78599b5b9820a5229c55eb02d9596691cf516423d7093b633023.js></script>
+</div></body></html>
