@@ -80,7 +80,7 @@
 <h1 id="comics--mangas">Comics / Mangas</h1>
 
 <p>Comics and mangas, from now on referred to as comics, should usually be in the library root directory or in a subfolder for the individual comics. The subfolders allow for organization of metadata and images.</p>
-<div class="NOTE"><h5>Note</h5><p>For the best reading experience, it is recommended to store comics in the comic book archive or pdf format. This is due to issues when trying to read comics stored in the epub format. Please note, that Jellyfin saves your reading position for comics in the comic book archive format, but does not save whether you finished the comic or not.</p>
+<div class="NOTE"><h5>Note</h5><p>For the best reading experience, it is recommended to store comics in the comic book archive or pdf format. This is due to issues when trying to read comics stored in the epub format. Please note, that Jellyfin 10.8 and later saves your reading position for comics in the comic book archive format, but does not save whether you finished the comic or not.</p>
 </div>
 <h2 id="naming">Naming</h2>
 <p>For best results, it is recommended to name the files similar to the following schema where the volume number and issue number are used <strong>interchangeable</strong>.</p>
@@ -107,7 +107,8 @@ Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
 <li>ComicInfo (from ComicRack)</li>
 <li>ComicBookInfo (from ComicBookLover)</li>
 </ul>
-<div class="NOTE"><h5>Note</h5><p>However, there are some limitations regarding the support of the ComicInfo format. <code>ComicInfo.xml</code> files can be parsed when they are placed in the same folder as the comic itself or when they are bundled within a <code>.cbz</code> file. <code>ComicInfo.xml</code> files bundled with any other archive format are not supported.</p>
+<div class="NOTE"><h5>Note</h5><p>The ComicBookInfo format is supported when using the Bookshelf plugin version 8 or later.
+The following limitations apply regarding the support of the ComicInfo format. <code>ComicInfo.xml</code> files can be parsed when they are placed in the same folder as the comic itself or when they are bundled within a <code>.cbz</code> file. <code>ComicInfo.xml</code> files bundled with any other archive format are not supported.</p>
 </div>
 </article>
           </div>
