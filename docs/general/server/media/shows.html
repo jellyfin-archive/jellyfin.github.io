@@ -84,6 +84,10 @@
 </div>
 <pre><code class="lang-txt">Shows
 ├── Series (2010)
+│   ├── Season 00
+│   │   ├── Some Special.mkv
+│   │   ├── Episode S00E01.mkv
+│   │   └── Episode S00E02.mkv
 │   ├── Season 01
 │   │   ├── Episode S01E01-E02.mkv
 │   │   ├── Episode S01E03.mkv
@@ -99,6 +103,10 @@
 </code></pre><div class="NOTE"><h5>Note</h5><p>Avoid special characters such as * in M*A*S*H, use MASH instead.</p>
 </div>
 <div class="NOTE"><h5>Note</h5><p>Season folders shouldn&#39;t contain the series name, otherwise Jellyfin can in certain cases (Stargate SG-1 due to the dash and one, for instance) misdetect your episodes and put them all under the same season.</p>
+</div>
+<h2 id="show-extras">Show Extras</h2>
+<p>Show extras, sometimes called specials, can be added in the <code>Season 00</code> folder. If supported by your metadata provider those files will be matched. In case your metadata provider does not provide information about the extra, it is recommended to use a name which describes the content of the special instead of naming it <code>Episode S00Exy.mkv</code>. This is done to avoid wrong metadata being pulled for the extra and to provide a proper presentation.</p>
+<div class="NOTE"><h5>Note</h5><p>Episode numbering for specials may vary from metadata provider to metadata provider.</p>
 </div>
 <h2 id="images">Images</h2>
 <h3 id="poster">Poster</h3>
