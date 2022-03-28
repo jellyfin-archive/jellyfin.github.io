@@ -79,10 +79,12 @@
             <article class="content wrap" id="_content" data-uid="server-media-comics">
 <h1 id="comics--mangas">Comics / Mangas</h1>
 
-<p>Comics and mangas, from now on referred to as comics, should usually be in the library root directory or in a subfolder for the individual comics. The subfolders allow for organization of metadata and images.</p>
+<p>Comics and mangas, from now on referred to as comics, should usually be in the library root directory or in a subfolder for the individual comics. The subfolders allow for organization of metadata and images. They use the &quot;Books&quot; library type and metadata is provided with the Bookshelf plugin.</p>
 <div class="NOTE"><h5>Note</h5><p>For the best reading experience, it is recommended to store comics in the comic book archive or pdf format. This is due to issues when trying to read comics stored in the epub format. Please note, that Jellyfin 10.8 and later saves your reading position for comics in the comic book archive format, but does not save whether you finished the comic or not.</p>
 </div>
 <h2 id="naming">Naming</h2>
+<div class="NOTE"><h5>Note</h5><p>The Bookshelf plugin does not provide an online metadata provider that is specific to comics. Metadata can either be provided from the same providers used for books or from local files.</p>
+</div>
 <p>For best results, it is recommended to name the files similar to the following schema where the volume number and issue number are used <strong>interchangeable</strong>.</p>
 <pre><code class="lang-txt">Series_Name #IssueNumber (of Count) (PubYear).ext
 Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
@@ -101,14 +103,16 @@ Series_Name (SeriesYear) #IssueNum (of Count) (PubYear).ext
     └── Comic #001 (2008).cbr
 </code></pre><p>Placing comics into a subfolder allows the placement of a <code>ComicInfo.xml</code> file for metadata parsing. Currently, Jellyfin does not support this for a series as a whole, but only for individual comics.</p>
 <h2 id="local-metadata-for-comic-book-archives">Local Metadata for &quot;Comic Book Archive&#39;s&quot;</h2>
-<p>Should your files not correspond to either <code>.cbz</code> or <code>.cbr</code> files, please refer to the <a class="xref" href="books.html">section on books</a> to see what is supported.</p>
+<p>Should your files <strong>not</strong> correspond to either <code>.cbz</code> or <code>.cbr</code> files, please refer to the <a class="xref" href="books.html">section on books</a> to see what is supported.</p>
 <p>The following metadata formats are supported:</p>
 <ul>
 <li>ComicInfo (from ComicRack)</li>
 <li>ComicBookInfo (from ComicBookLover)</li>
 </ul>
-<div class="NOTE"><h5>Note</h5><p>The ComicBookInfo format is supported when using the Bookshelf plugin version 8 or later.
-The following limitations apply regarding the support of the ComicInfo format. <code>ComicInfo.xml</code> files can be parsed when they are placed in the same folder as the comic itself or when they are bundled within a <code>.cbz</code> file. <code>ComicInfo.xml</code> files bundled with any other archive format are not supported.</p>
+<div class="NOTE"><h5>Note</h5><p>The ComicBookInfo format is supported when using the Bookshelf plugin version 8 or later.</p>
+</div>
+<p>Should the ComicInfo be used, please make sure that the comic provides the metadata. If it does not, a <code>ComicInfo.xml</code> file can be placed in the same folder as the comic and the metadata will be parsed from this file.</p>
+<div class="NOTE"><h5>Note</h5><p>For comics using the <code>.cbr</code> format, it is required to place a <code>ComicInfo.xml</code> file inside the folder. This file should contain the metadata of that comic.</p>
 </div>
 </article>
           </div>
