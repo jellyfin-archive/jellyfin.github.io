@@ -128,6 +128,22 @@
 &lt;/IfModule&gt;
 </code></pre><p>If you encouter errors, you may have to enable <code>mod_proxy</code>, <code>mod_ssl</code>, <code>proxy_wstunnel</code>, <code>http2</code> and <code>remoteip</code> support manually.</p>
 <pre><code class="lang-bash">sudo a2enmod proxy proxy_http ssl proxy_wstunnel remoteip http2
+</code></pre><h2 id="apache-with-subpath-exampleorgjellyfin">Apache with Subpath (example.org/jellyfin)</h2>
+<p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
+<p>Set the <a class="xref" href="index.html#base-url">base URL</a> field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
+<div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS. <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>.</p>
+</div>
+<p>The following configuration can be saved in <code>/etc/httpd/conf/extra/jellyfin.conf</code> and included in your vhost.</p>
+<pre><code class="lang-conf"># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
+&lt;Location /jellyfin/socket&gt;
+    ProxyPreserveHost On
+    ProxyPass &quot;ws://127.0.0.1:8096/jellyfin/socket&quot;
+    ProxyPassReverse &quot;ws://127.0.0.1:8096/jellyfin/socket&quot;
+&lt;/Location&gt;
+&lt;Location /jellyfin&gt;
+    ProxyPass &quot;http://127.0.0.1:8096/jellyfin&quot;
+    ProxyPassReverse &quot;http://127.0.0.1:8096/jellyfin&quot;
+&lt;/Location&gt;
 </code></pre></article>
           </div>
           
