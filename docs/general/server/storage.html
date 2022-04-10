@@ -8,7 +8,7 @@
     <title>Storage | Documentation - Jellyfin Project </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Storage | Documentation - Jellyfin Project ">
-    <meta name="generator" content="docfx 2.59.0.0">
+    <meta name="generator" content="docfx 2.59.1.0">
     
     <link rel="shortcut icon" href="../../images/favicon.png">
     <link rel="stylesheet" href="../../styles/docfx.vendor.css">
@@ -80,6 +80,15 @@
 <h2 id="storage">Storage</h2>
 
 <p>Jellyfin is designed to directly read media from the filesystem. This means to pass a network storage device that is using samba or NFS must be directly mounted to the OS. The Jellyfin database also should be stored locally and not on a network storage device.</p>
+<h3 id="nfs">NFS</h3>
+<p>In case you encounter performance issues where files take a long time to start playing while using NFSv3, you might be running in a issue with .NET locking without NFSv3 having locking enabled.</p>
+<p>To solve this you have the following options:</p>
+<ul>
+<li>Disable .NET locking using DOTNET_SYSTEM_IO_DISABLEFILELOCKING (introduced in .NET 6).</li>
+<li>Disable locking for the mount using the nolock option.</li>
+<li>Enable the lock service.</li>
+<li>Use NFSv4 which has built-in lock support.</li>
+</ul>
 <h2 id="docker-or-vms">Docker or VM&#39;s</h2>
 <p>For storage, a moderate size library database can grow anywhere from 10 to 100 GB. The <a class="xref" href="transcoding.html">transcoding</a> folder needs roughly the same size as the original media if it&#39;s being transcoded at the same bitrate. A single 50GB Blu-Ray Remux by itself can take up to approximately 60GB or as little as 15GB, depending on the quality selected. If the transcoding folder is held on the same storage as the database, this must be taken into consideration.</p>
 <h2 id="cloud">Cloud</h2>
