@@ -291,12 +291,12 @@ services:
 <pre><code class="lang-yaml">services:
   jellyfin:
     image: jellyfin/jellyfin
-  # ... your Jellyfin config
-  deploy:
-    resources:
-      reservations:
-        devices:
-        - capabilities: [gpu]
+    # ... your Jellyfin config
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
 </code></pre><p>There are some special steps when running with the following option:</p>
 <pre><code class="lang-sh">--user 1000:1000
 </code></pre><p>You may need to add this user to the video group on your host machine:</p>
