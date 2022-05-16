@@ -92,9 +92,9 @@
 <th>Firefox</th>
 <th>Safari</th>
 <th>Android</th>
+<th>Android TV</th>
 <th>iOS</th>
 <th>SwiftFin (iOS)</th>
-<th>AndroidTV</th>
 <th><a href="https://developer.roku.com/docs/specs/media/streaming-specifications.md">Roku</a></th>
 <th>Kodi</th>
 <th><a href="https://docs.jellyfin.org/general/clients/index.html#jellyfin-desktop">Desktop</a></th>
@@ -108,9 +108,9 @@
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td></td>
 <td>✅</td>
-<td>❌</td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -122,9 +122,9 @@
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
+<td>❌</td>
 <td></td>
 <td>✅</td>
-<td>❌</td>
 <td></td>
 <td>✅</td>
 <td>✅</td>
@@ -136,8 +136,8 @@
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
-<td></td>
 <td>✅</td>
+<td></td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -150,8 +150,8 @@
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
-<td></td>
 <td>✅</td>
+<td></td>
 <td>✅</td>
 <td>❌</td>
 <td>✅</td>
@@ -164,9 +164,9 @@
 <td>❌</td>
 <td>❌<sup>1</sup></td>
 <td>🔶<sup>2</sup></td>
+<td>✅<sup>5</sup></td>
 <td></td>
 <td>✅<sup>6</sup></td>
-<td>✅<sup>5</sup></td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -178,9 +178,9 @@
 <td>❌</td>
 <td>❌<sup>1</sup></td>
 <td>🔶<sup>2</sup></td>
+<td>🔶<sup>5</sup></td>
 <td></td>
 <td>✅<sup>6</sup></td>
-<td>🔶<sup>5</sup></td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -192,9 +192,9 @@
 <td>✅</td>
 <td>❌</td>
 <td>✅<sup>3</sup></td>
+<td>🔶<sup>3</sup></td>
 <td></td>
 <td>❌</td>
-<td>🔶<sup>3</sup></td>
 <td>✅</td>
 <td>✅</td>
 <td>✅</td>
@@ -207,8 +207,8 @@
 <td>❌</td>
 <td></td>
 <td></td>
-<td>❌</td>
 <td></td>
+<td>❌</td>
 <td>❌</td>
 <td></td>
 <td></td>
@@ -217,7 +217,7 @@
 </table>
 <p><sup>1</sup>HEVC support is potentially available by offloading to the operating system, but this has not been tested.</p>
 <p><sup>2</sup>Android playback is currently broken. Client reports that HEVC is supported and attempts to Direct Stream.</p>
-<p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). Most new Android phones in the higher price range and many &quot;4K&quot; AndroidTV devices have VP9 hardware decoding support. Refer to you manufacturer for supported codecs.</p>
+<p><sup>3</sup>May be (partially) dependent on Hardware support (can be compensated with CPU decoding on Android). Most new Android phones in the higher price range and many &quot;4K&quot; Android TV devices have VP9 hardware decoding support. Refer to you manufacturer for supported codecs.</p>
 <p><sup>4</sup>AV1 support is experimental and often too slow for CPU decoding. As of writing this (05.2020) there is no hardware support on most devices yet. Support for AV1 in Jellyfin is tracked in <a href="https://github.com/jellyfin/jellyfin/issues/3129">jellyfin#3129</a>.</p>
 <p><sup>5</sup>As of <a href="https://github.com/jellyfin/jellyfin-androidtv/pull/671">version 0.12</a>, HEVC is enabled on all devices running Android 5.0+, but early generations of the Amazon Fire may not work yet. 10Bit may be supported depending on your device. Before Client 0.12, HEVC support was enabled on specific devices.</p>
 <p><sup>6</sup>HEVC decoding is supported on Apple devices with the A8X chip or newer and at least iOS 14</p>
@@ -270,7 +270,7 @@
 <th style="text-align:center">Firefox</th>
 <th style="text-align:center">Safari</th>
 <th style="text-align:center">Android</th>
-<th style="text-align:center">AndroidTV</th>
+<th style="text-align:center">Android TV</th>
 <th style="text-align:center">iOS</th>
 <th style="text-align:center">SwiftFin (iOS)</th>
 <th style="text-align:center">Roku</th>
@@ -523,7 +523,7 @@
 <th style="text-align:center">Firefox</th>
 <th style="text-align:center">Safari</th>
 <th style="text-align:center">Android</th>
-<th style="text-align:center">AndroidTV</th>
+<th style="text-align:center">Android TV</th>
 <th style="text-align:center">Kodi</th>
 <th style="text-align:center">Roku</th>
 </tr>
