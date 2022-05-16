@@ -80,9 +80,11 @@
 <h1 id="hardware-acceleration">Hardware Acceleration</h1>
 
 <p>Jellyfin supports <a href="https://trac.ffmpeg.org/wiki/HWAccelIntro">hardware acceleration (HWA) of video encoding/decoding using FFMpeg</a>.
-FFMpeg and Jellyfin can support multiple hardware acceleration implementations such as Intel Quicksync (QSV), AMD AMF, nVidia NVENC/NVDEC, OpenMax OMX and MediaCodec through Video Acceleration API&#39;s.</p>
-<p><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">VA-API</a> is a Video Acceleration API that uses <a href="https://github.com/intel/libva/blob/master/README.md">libva</a> to interface with local drivers to provide HWA.
-<a href="https://trac.ffmpeg.org/wiki/Hardware/QuickSync">QSV</a> uses a modified (forked) version of VA-API and interfaces it with <a href="https://github.com/intel/media-driver/blob/master/README.md">libmfx</a> and their proprietary drivers <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">(list of supported processors for QSV)</a>.</p>
+FFMpeg and Jellyfin can support multiple hardware acceleration implementations such as Intel Quicksync (QSV), AMD AMF and NVIDIA NVENC/NVDEC through Video Acceleration APIs.</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Video_Acceleration_API">VA-API</a> is a Video Acceleration API that uses <a href="https://github.com/intel/libva/blob/master/README.md">libva</a> to interface with local drivers to provide HWA.</li>
+<li><a href="https://trac.ffmpeg.org/wiki/Hardware/QuickSync">QSV</a> uses a modified (forked) version of VA-API and interfaces it with <a href="https://github.com/intel/media-driver/blob/master/README.md">libmfx</a> and their proprietary drivers <a href="https://ark.intel.com/content/www/us/en/ark.html#@Processors">(list of supported processors for QSV)</a>.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -105,7 +107,7 @@ FFMpeg and Jellyfin can support multiple hardware acceleration implementations s
 </tr>
 <tr>
 <td>RPi</td>
-<td>V4L2, OMX (deprecated)</td>
+<td>V4L2</td>
 </tr>
 </tbody>
 </table>
@@ -137,7 +139,7 @@ FFMpeg and Jellyfin can support multiple hardware acceleration implementations s
 </tr>
 <tr>
 <td>RPi</td>
-<td>V4L2, OMX (deprecated)</td>
+<td>V4L2</td>
 </tr>
 </tbody>
 </table>
@@ -160,12 +162,26 @@ Select a valid hardware acceleration option from the drop-down menu, indicate a 
 <li>ArchLinux: <a href="https://wiki.archlinux.org/title/intel_graphics#Enable_GuC_/_HuC_firmware_loading">Arch Wiki</a></li>
 <li>Debian/Ubuntu: <a href="https://gist.github.com/Brainiarc7/aa43570f512906e882ad6cdd835efe57">Brainiarc7&#39;s gist</a></li>
 </ul>
-<div class="WARNING"><h5>Warning</h5><p>For <strong>Jasper Lake and Elkhart Lake</strong> chips (such as N5095, N6005 and J6412), Low-Power encoding must be enabled.
-The linux-firmware support is not included in Ubuntu 20.04.3 LTS. Any Ubuntu from 21.10 does include the required drivers.</p>
+<div class="WARNING"><h5>Warning</h5><p>For <strong>Jasper Lake</strong> and <strong>Elkhart Lake</strong> chips (such as <code>N5095</code>, <code>N6005</code> and <code>J6412</code>), Low-Power encoding <strong>must</strong> be enabled.
+The linux-firmware support is <strong>not included</strong> in Ubuntu 20.04.3 LTS.
+Any Ubuntu from 21.10 <strong>does include</strong> the required drivers.</p>
 </div>
 <h2 id="supported-acceleration-methods">Supported Acceleration Methods</h2>
-<div class="IMPORTANT"><h5>Important</h5><p>In Jellyfin 10.8 full hardware-accelerated filtering (scaling, deinterlacing, tone mapping and subtitle burn-in) on Intel, AMD and NVIDIA hardware are available.</p>
-<p><strong><code>jellyfin-ffmpeg</code> version 4.4.1-2 or higher is required, using an older or original version of FFmpeg may disable some hardware filtering improvements.</strong></p>
+<div class="IMPORTANT"><h5>Important</h5><p>In Jellyfin 10.8 full hardware-accelerated filtering (scaling, deinterlacing, tone-mapping and subtitle burn-in) on Intel, AMD and NVIDIA hardware are available.</p>
+<p><strong>jellyfin-ffmpeg version 4.4.1-2 or higher is required</strong>, using an older or original version of FFmpeg may disable some hardware filtering improvements.</p>
+</div>
+<h3 id="va-api">VA-API</h3>
+<div class="NOTE"><h5>Note</h5><p>Intel iGPU and AMD GPU only.</p>
+</div>
+<p>A List of supported codecs for VA-API can be found <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">on the Archlinux wiki</a>.</p>
+<div class="WARNING"><h5>Warning</h5><p>As of <strong>Jellyfin 10.8</strong> the official Docker image uses Debian 11 which has a compatible version of Mesa for <strong>AMD GPU HEVC</strong> decoding.</p>
+<p>Earlier images do not provide a compatible version of Mesa.</p>
+</div>
+<h3 id="hardware-acceleration-on-raspberry-pi-3-and-4">Hardware acceleration on Raspberry Pi 3 and 4</h3>
+<div class="WARNING"><h5>Warning</h5><p>As of <strong>Jellyfin 10.8</strong> hardware acceleration on Raspberry Pi via <code>OpenMAX OMX</code> was dropped and is no longer available.</p>
+<p>This decision was made because Raspberry Pi is currently migrating to a <code>V4L2</code> based hardware acceleration, which is already available in Jellyfin but does not support all features other hardware acceleration methods provide due to lacking support in FFmpeg.
+Jellyfin will fallback to software de- and encoding for those usecases.</p>
+<p>The current state of hardware acceleration support in FFmpeg can be checked on the <a href="https://github.com/jc-kynesim/rpi-ffmpeg">rpi-ffmpeg repository</a>.</p>
 </div>
 <h3 id="nvidia-nvenc">NVIDIA NVENC</h3>
 <div class="NOTE"><h5>Note</h5><p><strong>Minimum required driver version since Jellyfin 10.8:</strong></p>
@@ -183,13 +199,6 @@ The patch is recommended for Linux and Windows but may break in the future, so c
 <li><a href="https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new">Official list of supported codecs for recent NVIDIA Graphics Cards</a>.</li>
 <li><a href="https://developer.nvidia.com/ffmpeg">Official NVIDIA ffmpeg development docs</a>.</li>
 </ul>
-<h3 id="va-api">VA-API</h3>
-<div class="NOTE"><h5>Note</h5><p>Intel iGPU and AMD GPU only.</p>
-</div>
-<p>A List of supported codecs for VA-API can be found <a href="https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Comparison_tables">on the Archlinux wiki</a>.</p>
-<div class="WARNING"><h5>Warning</h5><p>As of <strong>Jellyfin 10.8</strong> the official Docker image uses Debian 11 which has a compatible version of Mesa for <strong>AMD GPU HEVC</strong> decoding.</p>
-<p>Earlier images do not provide a compatible version of Mesa.</p>
-</div>
 <h3 id="amd-amf">AMD AMF</h3>
 <div class="NOTE"><h5>Note</h5><p>AMF is available on Windows and Linux.</p>
 </div>
@@ -379,7 +388,7 @@ crw-rw---- 1 root video 226, 128 Jun  4 02:13 renderD128
 <p>Useful resources:</p>
 <ul>
 <li><a href="https://github.com/lxc/lxd/blob/master/doc/instances.md#type-gpu">LXD Documentation - GPU instance configuration</a></li>
-<li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">NVidia CUDA inside a LXD container</a></li>
+<li><a href="https://stgraber.org/2017/03/21/cuda-in-lxd/">NVIDIA CUDA inside a LXD container</a></li>
 </ul>
 <h3 id="va-api-and-qsv-hardware-acceleration-on-lxc-on-proxmox">VA-API and QSV hardware acceleration on LXC on Proxmox</h3>
 <div class="IMPORTANT"><h5>Important</h5><p>Jellyfin needs to run in a <strong>privileged</strong> LXC container.
@@ -451,36 +460,6 @@ makepkg -si
 <li><p>Go to step 3 of <a href="#amd-amf-encoding-on-ubuntu-1804-or-2004-lts">Configuring AMD AMF encoding on Ubuntu 18.04 or 20.04 LTS</a> above.</p>
 </li>
 </ol>
-<h3 id="openmax-omx-encoding-on-raspberry-pi-3-and-4">OpenMAX OMX encoding on Raspberry Pi 3 and 4</h3>
-<div class="WARNING"><h5>Warning</h5><p>Since Jellyfin 10.8 hardware acceleration on Raspbetty Pi via OpenMAX OMX is deprecated and not further worked on because Raspberry Pi currently migrates to a <code>V4L2</code> based hardware acceleration.</p>
-</div>
-<ol>
-<li><p>Add the Jellyfin service user to the video group to allow Jellyfin&#39;s FFMpeg process access to the encoder, and restart Jellyfin.</p>
-<pre><code class="lang-sh">sudo usermod -aG video jellyfin
-sudo systemctl restart jellyfin
-</code></pre><div class="NOTE"><h5>Note</h5><p>If you are using a Raspberry Pi 4, you might need to run <code>sudo rpi-update</code> for kernel and firmware updates.</p>
-</div>
-</li>
-<li><p>Choose <code>OpenMAX OMX</code> as the Hardware acceleration on the Transcoding tab of the Server Dashboard.</p>
-</li>
-<li><p>Change the amount of memory allocated to the GPU. The GPU can&#39;t handle accelerated decoding and encoding simultaneously.</p>
-<pre><code class="lang-sh">sudo nano /boot/config.txt
-</code></pre><p> For RPi4, add the line <code>gpu_mem=320</code> <a href="https://www.raspberrypi.org/documentation/configuration/config-txt/">See more Here</a></p>
-<p> For RPi3, add the line <code>gpu_mem=256</code></p>
-<p> You can set any value, but 320 is recommended amount for <a href="https://github.com/CoreELEC/CoreELEC/blob/coreelec-9.2/projects/RPi/devices/RPi4/config/config.txt">4K HEVC</a>.</p>
-<p> Verify the split between CPU and GPU memory:</p>
-<pre><code class="lang-sh">vcgencmd get_mem arm &amp;&amp; vcgencmd get_mem gpu
-</code></pre><p> Monitor the temperature and clock speed of the CPU:</p>
-<pre><code class="lang-sh">vcgencmd measure_temp &amp;&amp; vcgencmd measure_clock arm
-</code></pre></li>
-</ol>
-<div class="WARNING"><h5>Warning</h5><p>RPi4 currently doesn&#39;t support HWA HEVC decoding, only encoding and decoding H.264 is supported.
-<a href="https://www.jeffgeerling.com/blog/2019/raspberry-pi-4-needs-fan-heres-why-and-how-you-can-add-one">Active cooling</a> is required, passive cooling is insufficient for transcoding.
-HWA only works on Raspbian OS. For docker, only the linuxserver image works.</p>
-<p>For more tips see <a href="https://www.reddit.com/r/jellyfin/comments/ei6ew6/rpi4_hardware_acceleration_guide/">here</a>.</p>
-</div>
-<div class="IMPORTANT"><h5>Important</h5><p>As per <a href="https://github.com/jellyfin/jellyfin/issues/4023">this issue</a>, hardware acceleration is not yet supported on 64-bit Raspberry Pi OS (and likely on derivative builds e.g. DietPi), as some libraries in the 32-bit build are still missing from the 64-bit build.</p>
-</div>
 <h3 id="opencl--cuda--intel-vpp-tone-mapping">OpenCL / CUDA / Intel VPP Tone-Mapping</h3>
 <p>Hardware based tone-mapping with NVIDIA NVENC, AMD AMF, Intel QSV and VA-API is done through OpenCL or CUDA.</p>
 <p>Intel hardware based VPP tone-mapping is supported on Intel QSV and VA-API on Linux.
@@ -553,7 +532,7 @@ You can do this by adding <code>--privileged</code> to your docker command or <c
 </ul>
 </li>
 </ul>
-<div class="WARNING"><h5>Warning</h5><p>Tone mapping on Intel VA-API and QSV <strong>requires an iGPU that supports 10-bit decoding</strong>, such as i3-7100 or J4105.</p>
+<div class="WARNING"><h5>Warning</h5><p>Tone-mapping on Intel VA-API and QSV <strong>requires an iGPU that supports 10-bit decoding</strong>, such as i3-7100 or J4105.</p>
 </div>
 <div class="IMPORTANT"><h5>Important</h5><p>Do <strong>not use</strong> the <code>intel-opencl-icd</code> package from your distro&#39;s repository since they were not built with <code>RELEASE_WITH_REGKEYS</code> enabled, which is required for P010 pixel interop flags.</p>
 </div>
@@ -574,13 +553,13 @@ This can be found at <code>Admin Dashboard &gt; Logs</code>, and <code>/var/log/
 </code></pre><p>This returned the following results.</p>
 <pre><code class="lang-data">...
 Stream mapping:
-Stream #0:0 -&gt; #0:0 (hevc (native) -&gt; h264 (h264_omx))
+Stream #0:0 -&gt; #0:0 (hevc (native) -&gt; h264 (h264_qsv))
 Stream #0:1 -&gt; #0:1 (aac (native) -&gt; mp3 (libmp3lame))
 ...
 </code></pre><p><code>Stream #0:0</code> used software (VAAPI Decode can also say native) to decode HEVC and used HWA to encode.</p>
 <pre><code class="lang-data">...
 Stream mapping:
-Stream #0:0 -&gt; #0:0 (h264 (h264_mmal) -&gt; h264 (h264_omx))
+Stream #0:0 -&gt; #0:0 (h264 (h264_mmal) -&gt; h264 (h264_qsv))
 Stream #0:1 -&gt; #0:1 (flac (native) -&gt; mp3 (libmp3lame))
 ...
 </code></pre><p><code>Stream #0:0</code> used HWA for both. <code>h264_mmal</code> to decode and <code>h264_omx</code> to encode.</p>
