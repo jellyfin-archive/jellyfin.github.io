@@ -1,4 +1,507 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts Jellyfin: The Free Software Media System</title><link>https://jellyfin.org/posts/</link><description> Posts Jellyfin: The Free Software Media System</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 08 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://jellyfin.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Updating our iOS App</title><link>https://jellyfin.org/posts/ios-update-150/</link><pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate><guid>https://jellyfin.org/posts/ios-update-150/</guid><description>&lt;p>With &lt;a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618?mt=8">Jellyfin Mobile&lt;/a>, our main iOS App, we have updated some frameworks that adjust our minimum iOS version.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts Jellyfin: The Free Software Media System</title><link>https://jellyfin.org/posts/</link><description> Posts Jellyfin: The Free Software Media System</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 10 Jun 2022 20:00:00 -0400</lastBuildDate><atom:link href="https://jellyfin.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Jellyfin Release - v10.8.0</title><link>https://jellyfin.org/posts/jellyfin-10-8-0/</link><pubDate>Fri, 10 Jun 2022 20:00:00 -0400</pubDate><guid>https://jellyfin.org/posts/jellyfin-10-8-0/</guid><description>&lt;p>After a rather long development cycle the Jellyfin team is proud to announce stable version 10.8! This release post will mostly cover the highlights with little prose, as there is so much to cover!&lt;/p>
+&lt;p>&lt;a href="https://jellyfin.org/downloads/" class="button button__accent">Download Jellyfin 10.8.0&lt;/a> &lt;a href="https://github.com/jellyfin/jellyfin/releases/tag/v10.8.0" class="button hero__button">Read the full release notes&lt;/a>&lt;/p>
+&lt;p>All of the changes, accumulated over nearly the last two years, are too many to easily list, so we&amp;rsquo;ll break them down in the sections below and hope all of you find something enjoyable.&lt;/p>
+&lt;p>The major highlighted changes are:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>numerous improvements to Hardware Acceleration (HWA), including:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Dolby Vision Profile 5 and 7 tone-mapping&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>CUDA-based tone-mapping for NVIDIA&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extended OpenCL tone-mapping for Intel&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>hardware based subtitle burn in&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Intel tone-mapping support for Windows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>full OpenCL filtering for AMF on Windows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>deprecation of OMX for raspberry pi, use V4L2 instead&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>proper network interface binding and handling of proxied requests&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>various fixes for DLNA, Sync-Play and m3u HTTP streams&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>DLNA disabled by default&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extended NFO metadata import&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>external audio and subtitle support including container (mks, mka)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extended plain folder parsing&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>enhanced detection and handling of DVD/BD ISOs and folders&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extend TMDb metadata provider (series state, season names, tags, logos, etc)&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="server">Server&lt;/h2>
+&lt;p>Some major fixes include a number of HWA improvements, explicit network interface binding, DLNA improvements, better NFO parsing, configuration cleanup (relics of the migrations in 10.7.z), and numerous metadata improvements, as well as the migration to .NET 6 which provides a nice stable language base for future improvements.&lt;/p>
+&lt;p>A point-form list of the changes compiled by the team is:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>General:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>automatically migrate and cleanup config files&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>reduce memory footprint by various optimizations (e.g. reducing memory traffic)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>rewrite QuickConnect&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>splashscreen in branding API (although not in use by any client yet)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>various HDHomerun fixes and improvments&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly read filesize from symlinks&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>create output directory on file extraction&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>return path to pinfile on password reset&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix ombi auth through Jellyfin&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>include genre in related media generation&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Implement more provider links for series, seasons, episodes and movies&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly handle gif&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>passwords are now hashed with 120000 iterations of PBKDF2-SHA512 instead of 1000 iterations of PBKDF2-SHA1, old passwords are migrated automatically on login&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add config option to disable automatic server discovery&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Networking:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>fix explicit IP/interface binding&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>disable UPnP by default (only applies to new setups)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper handling of published server URLs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>disable DLNA server by default to avoid security risks&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>HWA:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>implement CUDA-based tone-mapping for NVIDIA&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extend Intel OpenCL tone-mapping (speed-wise on-par with VPP tone-mapping and therefore preferable)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>implement full OpenCL HW filtering for AMD on Windows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>implement hardware-based subtitle burn-in (significantly faster)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>implement proper tone-mapping support on Windows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add CUDA &amp;amp; OpenCL tone-mapping support for Dolby Vision profile 5 and 8&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>various other fixes for NVIDIA and Intel hardware acceleration&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add support for AV1 hardware decoding on supported platforms&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>deprecate Raspberry Pi OMX/MMAL hardware acceleration in favour of V4L2&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Streaming/Transcoding:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>optimize and extend DLNA support&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fixes for DLNA PlayTo and DLNA folders&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fixes for DLNA seeking&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extraction of attached fonts for subtitle transcoding/burn-in&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>small fixes to SyncPlay&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add transcoding information to playback data&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix opus sampling rates on transcode&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly stream m3u over HTTP&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add keyframe extraction for better seeking (WARNING: this is a really long running task)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>overhaul streaming logic to only transcode incompatible streams&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>various fmp4 fixes&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>NFO:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>add parsing of additional ids&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper importing of watched state&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper parsing of ratings&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper handling of thumb tags&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add support for fanart tag&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper casting of NFO ids to internal ids&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Scanner/metadata providers:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>add ID parsing from folder names&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extend ID parsing from filenames&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>refactor extras parsing (way faster)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>refactor and harden parsing of plain folders (all movies in one folder)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>refactor and extend external subtitle and external audio parsing (now supports containers too)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly handle unprobed strm playback with external streams&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add support for TMDB absolute and TV order&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly pass language to TMDB search queries&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fetch TMDB parental rating for tvshows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>enable fetching additional series states from TMDb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly detect DolbyVision&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>enhance detection and handling of DVD/BD folders/ISOs&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>episode parser improvements&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add ability to disable adult content in TMDb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add ability to configure image scale in TMDb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>update artist split whitelist&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>make tag import and maxCastMembers configurable for TMDb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>improve metadata merging&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add ability to fetch logos with TMDb&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add option to configure season name importing for TMDb&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>
+&lt;p>Technical:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>upgrade to latest .NET 6 (fixes some of the quirks with network storage)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>bump all dependencies&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>upgrade analyzers and properly handle warnings&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>proper generation and publishing of OpenAPI spec&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add and extend tests for various subsystems&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>upgrade Docker images to Debian 11 Bullseye&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>include latest Intel Compute Runtime in Docker images&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add health check to Docker images&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>remove unused docker volume for /media from Docker images&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>make flushing to disk async if possible&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="web">Web&lt;/h2>
+&lt;p>Web has been moved completely to NPM (instead of Yarn), and several pages have been ported to React. Further many dozens of improvements and fixes have been made.&lt;/p>
+&lt;p>A point-form list of the changes compiled by the team is:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>switch to NPM&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>update all dependencies&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>introduce ReactJS and migrate some pages&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>redesign of mobile item detail views&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>SyncPlay improvements&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>user settings for custom CSS&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fixes for TV layouts&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>book player improvements and new Continue Reading section&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>change SyncPlay icon&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add support for custom links in sidebar (config file only)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add support for new QuickConnect&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>update settings to reflect server changes&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>properly name generated bundles for cache-invalidation on update&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>implement markdown for plugin changelog rendering&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add hardware transcoding info to playback data&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>enable buffering in the web player&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>switch volume slider to exponential instead of linear scaling&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>remove tag filter limit&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fixes for theme songs and videos&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>unify duration display&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add item count to playlists&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>expand metadata editor&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>various fixes for webOS&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix and extend multiselect&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>save playback speed between media&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>introduce WebWorker for blurhash decoding&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>update translations&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add apple device icon to activity log&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>save pdf &amp;ldquo;playback&amp;rdquo; on page finish&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>stack toasts&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add paging to list view&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>display series level extras on series page&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extend LiveTV pages&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>extend mediainfo dialogue&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>escape most HTML&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add rewatching to next up&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>allow markdown in login disclaimer&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix theme colors&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>tackle accessibility issues&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix album track sorting if audio files have SortName tags&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add track sorting for videos&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="ffmpeg">FFmpeg&lt;/h2>
+&lt;p>Our custom FFMpeg has been upgraded to version 5, along with numerous HWA enhancements and improvements.&lt;/p>
+&lt;p>A point-form list of the changes compiled by the team is:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>update to FFmpeg 5.0.x&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>rename Debuntu package to jellyfin-ffmpeg5 for backwards compatibility&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>update existing patches&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add patches for CUDA and Intel Quick Sync tone-mapping improvements&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add patches for AMD Vulkan-based HWA and tone-mapping&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add patches for CUDA &amp;amp; OpenCL tone-mapping support for Dolby Vision profiles 5 and 8&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>self-build and include latest Intel media-driver, required libraries and vainfo&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>migrate CI to Github Actions&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add build script for win64&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add required libs for QSV on 12th gen Intel hardware&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add chromaprint&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>remove deprecated distros, add newly released distros&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>add patch to support long path names on Windows&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="plugins">Plugins&lt;/h2>
+&lt;p>All plugins have been updated for Jellyfin 10.8.0, as well as numerous day to day enhancements.&lt;/p>
+&lt;p>A point-form list of (some of) the changes compiled by the team is:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>migrate CI to templated Github Action workflows&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>fix trakt.tv plugin to actually be useable&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="translations">Translations&lt;/h2>
+&lt;p>Thanks to the many dozens of generous volunteers over at our Weblate (&lt;a href="https://translate.jellyfin.org">https://translate.jellyfin.org&lt;/a>), thousands of new translations are available in Jellyfin 10.8.0 for over 3 dozen languages.&lt;/p>
+&lt;p>Happy watching!&lt;/p></description></item><item><title>Updating our iOS App</title><link>https://jellyfin.org/posts/ios-update-150/</link><pubDate>Wed, 08 Jun 2022 00:00:00 +0000</pubDate><guid>https://jellyfin.org/posts/ios-update-150/</guid><description>&lt;p>With &lt;a href="https://apps.apple.com/us/app/jellyfin-mobile/id1480192618?mt=8">Jellyfin Mobile&lt;/a>, our main iOS App, we have updated some frameworks that adjust our minimum iOS version.&lt;/p>
 &lt;p>Our main iOS app has been built using &lt;a href="http://expo.dev">Expo&lt;/a>. It offers a unique take on a &amp;ldquo;managed&amp;rdquo; React Native experience that allows anyone to develop an app for iOS, even without using a Mac. It allowed us to get an app out quickly, and use the web interface that is a part of every Jellyfin install.&lt;/p>
 &lt;p>As time goes on, we keep Expo up to date in order to take advantage of security fixes, and help us use new features in the app itself. With our next app release, we move to &lt;a href="https://blog.expo.dev/expo-sdk-43-aa9b3c7d5541">Expo 43&lt;/a>, which fully supports iOS 15, but must also drop support for iOS 10 and 11.&lt;/p>
 &lt;p>As a result, starting with version 1.5.0 of our Apple app, &lt;strong>iOS/iPadOS 12 or newer is required.&lt;/strong>&lt;/p>
