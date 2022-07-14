@@ -176,9 +176,10 @@ server {
 </code></pre><h2 id="nginx-with-subpath-exampleorgjellyfin">Nginx with Subpath (example.org/jellyfin)</h2>
 <p>When connecting to server from a client application, enter <code>http(s)://DOMAIN_NAME/jellyfin</code> in the address field.</p>
 <p>Set the <a class="xref" href="index.html#base-url">base URL</a> field in the Jellyfin server.  This can be done by navigating to the Admin Dashboard -&gt; Networking -&gt; Base URL in the web client.  Fill in this box with <code>/jellyfin</code> and click Save.  The server will need to be restarted before this change takes effect.</p>
-<div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS. <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>.</p>
+<h3 id="http-config-example">HTTP config example</h3>
+<div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS (see below for HTTPS configuration example). <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>.</p>
 </div>
-<pre><code class="lang-conf"># Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
+<pre><code class="lang-conf"># Jellyfin hosted on http://DOMAIN_NAME/jellyfin
 
 server {
     listen 80;
@@ -230,6 +231,70 @@ server {
         # Disable buffering when the nginx proxy gets very resource heavy upon streaming
         proxy_buffering off;
     }
+}
+</code></pre><h3 id="https-config-example">HTTPS config example</h3>
+<p>The following config is meant to work with Certbot / Let&#39;s Encrypt.</p>
+<pre><code class="lang-conf"># Jellyfin hosted on https://DOMAIN_NAME/jellyfin
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name DOMAIN_NAME;
+
+    # Uncomment to redirect HTTP to HTTPS
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+
+    server_name DOMAIN_NAME;
+    # You can specify multiple domain names if you want
+    #server_name jellyfin.local;
+    ssl_certificate /etc/letsencrypt/live/DOMAIN_NAME/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/DOMAIN_NAME/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    add_header Strict-Transport-Security &quot;max-age=31536000&quot; always;
+    ssl_trusted_certificate /etc/letsencrypt/live/DOMAIN_NAME/chain.pem;
+    ssl_stapling on;
+    ssl_stapling_verify on;
+    # use a variable to store the upstream proxy
+    # in this example we are using a hostname which is resolved via DNS
+    # (if you aren&#39;t using DNS remove the resolver line and change the variable to point to an IP address e.g `set $jellyfin 127.0.0.1`)
+    set $jellyfin jellyfin;
+    resolver 127.0.0.1 valid=30;
+
+    # Jellyfin
+    location /jellyfin {
+        return 302 $scheme://$host/jellyfin/;
+    }
+
+    location /jellyfin/ {
+        # Proxy main Jellyfin traffic
+
+        # The / at the end is significant.
+        # https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/
+
+        proxy_pass http://$jellyfin:8096;
+
+        proxy_pass_request_headers on;
+
+        proxy_set_header Host $host;
+
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host $http_host;
+
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+
+        # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+        proxy_buffering off;
+    }
+
 }
 </code></pre><h2 id="extra-nginx-configurations">Extra Nginx Configurations</h2>
 <h3 id="censor-sensitive-information-in-logs">Censor sensitive information in logs</h3>
