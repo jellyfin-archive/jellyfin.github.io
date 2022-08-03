@@ -83,6 +83,8 @@
 <h2 id="nginx-from-a-subdomain-jellyfinexampleorg">Nginx from a subdomain (jellyfin.example.org)</h2>
 <div class="WARNING"><h5>Warning</h5><p>HTTP is insecure. The following configuration is provided for ease of use only. If you are planning on exposing your server over the Internet you should setup HTTPS. <a href="https://letsencrypt.org/getting-started/">Let&#39;s Encrypt</a> can provide free TLS certificates which can be installed easily via <a href="https://certbot.eff.org/">certbot</a>. Using only HTTP will expose passwords and API keys.</p>
 </div>
+<div class="TIP"><h5>Tip</h5><p>The default X-Frame-Options header may cause issues with the webOS app, causing it to remain stuck at a black screen. If enabled, the default Content Security Policy may also cause issues.</p>
+</div>
 <p>Create the file <code>/etc/nginx/conf.d/jellyfin.conf</code> which will forward requests to Jellyfin.</p>
 <pre><code class="lang-config"># Uncomment the commented sections after you have acquired a SSL Certificate
 server {
@@ -118,6 +120,7 @@ server {
     #ssl_stapling_verify on;
 
     # Security / XSS Mitigation Headers
+    # NOTE: X-Frame-Options may cause issues with the webOS app
     add_header X-Frame-Options &quot;SAMEORIGIN&quot;;
     add_header X-XSS-Protection &quot;1; mode=block&quot;;
     add_header X-Content-Type-Options &quot;nosniff&quot;;
@@ -126,6 +129,7 @@ server {
     # See: https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP
     # Enforces https content and restricts JS/CSS to origin
     # External Javascript (such as cast_sender.js for Chromecast) must be whitelisted.
+    # NOTE: The default CSP headers may cause issues with the webOS app
     #add_header Content-Security-Policy &quot;default-src https: data: blob: http://image.tmdb.org; style-src &#39;self&#39; &#39;unsafe-inline&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39; https://www.gstatic.com/cv/js/sender/v1/cast_sender.js https://www.gstatic.com/eureka/clank/95/cast_sender.js https://www.gstatic.com/eureka/clank/96/cast_sender.js https://www.gstatic.com/eureka/clank/97/cast_sender.js https://www.youtube.com blob:; worker-src &#39;self&#39; blob:; connect-src &#39;self&#39;; object-src &#39;none&#39;; frame-ancestors &#39;self&#39;&quot;;
 
     location = / {
