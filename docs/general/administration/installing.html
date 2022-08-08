@@ -118,14 +118,13 @@ Using host networking (<code>--net=host</code>) is optional but required in orde
  --name jellyfin \
  --user uid:gid \
  --net=host \
- --volume /path/to/config:/config \
- --volume /path/to/cache:/cache \
+ --volume /path/to/config:/config \ # Alternatively --volume jellyfin-config:/config
+ --volume /path/to/cache:/cache \ # Alternatively --volume jellyfin-cache:/cache
  --mount type=bind,source=/path/to/media,target=/media \
  --restart=unless-stopped \
  jellyfin/jellyfin
 </code></pre><p>Bind Mounts are needed to pass folders from the host OS to the container OS whereas volumes are maintained by Docker and can be considered easier to backup and control by external programs.
 For a simple setup, it&#39;s considered easier to use Bind Mounts instead of volumes.
-Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> respectively if using bind mounts.
 Multiple media libraries can be bind mounted if needed:</p>
 <pre><code class="lang-sh">--mount type=bind,source=/path/to/media1,target=/media1
 --mount type=bind,source=/path/to/media2,target=/media2,readonly
@@ -190,6 +189,7 @@ Steps to run Jellyfin using Podman are similar to the Docker steps.</p>
  --userns keep-id \
  --volume jellyfin-cache:/cache:Z \
  --volume jellyfin-config:/config:Z \
+ --mount type=bind,source=/path/to/media,destination=/media,ro=true \
  docker.io/jellyfin/jellyfin:latest
 </code></pre></li>
 <li><p>Open the necessary ports in your machine&#39;s firewall if you wish to permit access to the Jellyfin server from outside the host.
@@ -199,16 +199,16 @@ If your distribution uses <code>firewalld</code>, the following commands save an
 sudo firewall-cmd --reload
 </code></pre></li>
 </ol>
-<p>Podman doesn&#39;t require root access to run containers.
+<p>Podman doesn&#39;t require root access to run containers, although there are some details to be mindful of; see <a href="https://docs.podman.io/en/latest/markdown/podman.1.html#rootless-mode">the relevant documentation</a>.
 For security, the Jellyfin container should be run using rootless Podman.
 Furthermore, it is safer to run as a non-root user within the container.
 The <code>--user</code> option will run with the provided user id and group id <em>inside</em> the container.
 The <code>--userns keep-id</code> flag ensures that current user&#39;s id is mapped to the non-root user&#39;s id inside the container.
 This ensures that the permissions for directories bind-mounted inside the container are mapped correctly between the user running Podman and the user running Jellyfin inside the container.</p>
 <p>Keep in mind that the <code>--label &quot;io.containers.autoupdate=image&quot;</code> flag will allow the container to be automatically updated via <code>podman auto-update</code>.</p>
-<p>The <code>z</code> (shared volume) or <code>Z</code> (private volume) volume option to allow Jellyfin to access the volumes on systems where SELinux is enabled.</p>
-<p>Replace <code>jellyfin-config</code>, <code>jellyfin-cache</code>, and <code>jellyfin-media</code> with <code>/path/to/config</code>, <code>/path/to/cache</code> and <code>/path/to/media</code> respectively if using bind mounts.</p>
-<p>This example mounts your media library read-only by appending &#39;:ro&#39; to the media volume. Remove this option if you wish to give Jellyfin write access to your media.</p>
+<p>The <code>z</code> (shared volume) or <code>Z</code> (private volume) volume option tells Podman to relabel files inside the volumes as appropriate, for systems running SELinux.</p>
+<p>Replace <code>jellyfin-config</code> and <code>jellyfin-cache</code> with <code>/path/to/config</code> and <code>/path/to/cache</code> if you wish to use bind mounts.</p>
+<p>This example mounts your media library read-only by setting <code>ro=true</code>; set this to <code>ro=false</code> if you wish to give Jellyfin write access to your media.</p>
 <h4 id="managing-via-systemd">Managing via Systemd</h4>
 <p>To run as a systemd service see <a href="https://www.redhat.com/sysadmin/podman-shareable-systemd-services">Running containers with Podman and shareable systemd services</a>.</p>
 <p>As always it is recommended to run the container rootless. Therefore we want to manage the container with the <code>systemd --user</code> flag.</p>
