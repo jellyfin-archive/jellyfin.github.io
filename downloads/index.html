@@ -20,7 +20,7 @@ sudo apt install jellyfin</code></pre><p><i>Note:</i> The third command should g
 cd jellyfin
 makepkg -si</code></pre></div><div id=arch_aur_nightly style=display:none><pre><code>git clone https://aur.archlinux.org/jellyfin-git.git
 cd jellyfin-git
-makepkg -si</code></pre></div></div><div class=fedora><h4>Fedora and CentOS</h4><p>RPM archives for both Fedora and CentOS are provided.</p><p><a href=https://repo.jellyfin.org/releases/server/fedora class="button button__accent">Stable Fedora</a>
+makepkg -si</code></pre></div></div><div class=gentoo><h4>Gentoo Linux</h4><p>Install Jellyfin via the Gentoo Repository.</p><p><div class="button button__accent" id=gentoo_stable_button>Stable</div></p><script type=text/javascript>document.getElementById("gentoo_stable_button").onclick=function(){document.getElementById("gentoo_stable").style.display=='none'?document.getElementById("gentoo_stable").style.display="block":document.getElementById("gentoo_stable").style.display="none"}</script><div id=gentoo_stable style=display:none><pre><code>emerge www-apps/jellyfin</code></pre><p>Once installed, Jellyfin will be running as a service. Manage it with<pre><code>sudo systemctl {action} jellyfin.service</code></pre>or<pre><code>sudo rc-service jellyfin {action}</code></pre></p></div></div><div class=fedora><h4>Fedora and CentOS</h4><p>RPM archives for both Fedora and CentOS are provided.</p><p><a href=https://repo.jellyfin.org/releases/server/fedora class="button button__accent">Stable Fedora</a>
 <a href=https://repo.jellyfin.org/releases/server/centos class="button button__accent">Stable CentOS</a>
 <a href=https://repo.jellyfin.org/releases/server/fedora/versions class="button button__accent">All Fedora
 Versions</a>
