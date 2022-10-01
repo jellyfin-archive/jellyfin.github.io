@@ -104,6 +104,10 @@
     # This line will tell apache to not to use the proxy for this folder.
     ProxyPass &quot;/.well-known/&quot; &quot;!&quot;
 
+    # Tell Jellyfin to forward that requests came from TLS connections
+    RequestHeader set X-Forwarded-Proto &quot;https&quot;
+    RequestHeader set X-Forwarded-Port &quot;443&quot;
+
     ProxyPass &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
     ProxyPassReverse &quot;/socket&quot; &quot;ws://SERVER_IP_ADDRESS:8096/socket&quot;
 
