@@ -118,7 +118,7 @@ logpath = /var/log/jellyfin/jellyfin*.log
 <pre><code class="lang-bash">sudo nano /etc/fail2ban/filter.d/jellyfin.conf
 </code></pre><p>And add this to the new file:</p>
 <pre><code class="lang-bash">[Definition]
-failregex = ^.*Authentication request for &quot;.*&quot; has been denied \(IP: &quot;&lt;ADDR&gt;&quot;\)\.
+failregex = ^.*Authentication request for .* has been denied \(IP: &lt;ADDR&gt;\)\.
 </code></pre><p>Save and exit, then reload Fail2ban:</p>
 <pre><code class="lang-bash">sudo systemctl restart fail2ban
 </code></pre><p>You&#39;re done.</p>
